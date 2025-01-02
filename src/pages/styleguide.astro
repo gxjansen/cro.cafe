@@ -1,0 +1,289 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ToggleTheme from '../components/common/ToggleTheme.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<Layout metadata={{ title: "CRO.cafe Style Guide" }}>
+  <main class="bg-page min-h-screen text-default relative transition-colors duration-300">
+    <div class="fixed top-4 right-4 z-50">
+      <ToggleTheme />
+    </div>
+    <div class="container mx-auto px-4 md:px-8 py-16">
+      <h1 class="text-4xl font-bold mb-12 text-heading">Style Guide</h1>
+
+      <!-- Typography -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-8 text-accent">Typography</h2>
+        <div class="space-y-4">
+          <p class="text-4xl">Heading 1 - 2.25rem (36px)</p>
+          <p class="text-3xl">Heading 2 - 1.875rem (30px)</p>
+          <p class="text-2xl">Heading 3 - 1.5rem (24px)</p>
+          <p class="text-xl">Heading 4 - 1.25rem (20px)</p>
+          <p class="text-lg">Large Text - 1.125rem (18px)</p>
+          <p class="text-base">Base Text - 1rem (16px)</p>
+          <p class="text-sm">Small Text - 0.875rem (14px)</p>
+          <p class="text-xs">Extra Small - 0.75rem (12px)</p>
+          <div class="mt-8">
+            <p class="font-normal">Font Weight Normal (400)</p>
+            <p class="font-medium">Font Weight Medium (500)</p>
+            <p class="font-semibold">Font Weight Semibold (600)</p>
+            <p class="font-bold">Font Weight Bold (700)</p>
+          </div>
+          <div class="mt-4">
+            <p class="font-mono">Monospace Text (JetBrains Mono)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Colors -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-8 text-accent">Colors</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="p-6 bg-primary rounded-lg text-white">Primary</div>
+          <div class="p-6 bg-secondary rounded-lg text-white">Secondary</div>
+          <div class="p-6 bg-accent rounded-lg text-white">Accent</div>
+          <div class="p-6 bg-page rounded-lg text-default">Background</div>
+          <div class="p-6 bg-white rounded-lg text-default dark:bg-slate-900">Light/Dark</div>
+          <div class="p-6 bg-slate-100 rounded-lg text-muted dark:bg-slate-800">Muted</div>
+        </div>
+      </section>
+
+      <!-- Buttons -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-8 text-accent">Buttons</h2>
+        <div class="space-y-4">
+          <div class="flex items-center gap-8">
+            <button class="btn btn-primary">
+              Primary Button
+            </button>
+            <p class="text-sm text-muted">Main call-to-action, hover lifts button and adds shadow</p>
+          </div>
+          
+          <div class="flex items-center gap-8">
+            <button class="btn btn-secondary">
+              Secondary Button
+            </button>
+            <p class="text-sm text-muted">Secondary actions, hover lifts button and adds shadow</p>
+          </div>
+          
+          <div class="flex items-center gap-8">
+            <button class="btn btn-outline">
+              Outline Button
+            </button>
+            <p class="text-sm text-muted">Subtle actions, hover fills background</p>
+          </div>
+          
+          <div class="flex items-center gap-8">
+            <button class="btn btn-inactive" disabled>
+              Inactive Button
+            </button>
+            <p class="text-sm text-muted">Disabled state, not clickable</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cards -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-8 text-accent">Cards</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white dark:bg-slate-900 p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-4 text-heading">Card Title</h3>
+            <p class="text-default">Card content with adaptive text.</p>
+          </div>
+          <div class="bg-primary p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-4 text-white">Card Title</h3>
+            <p class="text-white">Card content with light text.</p>
+          </div>
+          <div class="bg-slate-100 dark:bg-slate-800 p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-4 text-heading">Card Title</h3>
+            <p class="text-muted">Card content with muted text.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Spacing -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-8 text-accent">Spacing Scale</h2>
+        <div class="space-y-4">
+          <div class="bg-white dark:bg-slate-900 p-1 rounded text-default">0.25rem (4px)</div>
+          <div class="bg-white dark:bg-slate-900 p-2 rounded text-default">0.5rem (8px)</div>
+          <div class="bg-white dark:bg-slate-900 p-3 rounded text-default">0.75rem (12px)</div>
+          <div class="bg-white dark:bg-slate-900 p-4 rounded text-default">1rem (16px)</div>
+          <div class="bg-white dark:bg-slate-900 p-6 rounded text-default">1.5rem (24px)</div>
+          <div class="bg-white dark:bg-slate-900 p-8 rounded text-default">2rem (32px)</div>
+          <div class="bg-white dark:bg-slate-900 p-12 rounded text-default">3rem (48px)</div>
+          <div class="bg-white dark:bg-slate-900 p-16 rounded text-default">4rem (64px)</div>
+        </div>
+      </section>
+
+      <!-- Forms -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-8 text-accent">Form Elements</h2>
+        <form class="space-y-6">
+          <div>
+            <label class="block text-sm font-medium mb-2 text-heading">Input Field</label>
+            <input 
+              type="text" 
+              class="w-full px-4 py-2 bg-white dark:bg-slate-900 rounded-md border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none text-default"
+              placeholder="Placeholder text"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-2 text-heading">Select Field</label>
+            <select class="w-full px-4 py-2 bg-white dark:bg-slate-900 rounded-md border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none text-default">
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-2 text-heading">Textarea</label>
+            <textarea 
+              class="w-full px-4 py-2 bg-white dark:bg-slate-900 rounded-md border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-primary focus:border-primary focus:outline-none text-default"
+              rows="4"
+              placeholder="Placeholder text"
+            ></textarea>
+          </div>
+        </form>
+      </section>
+
+      <!-- Lists -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-8 text-accent">Lists</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-heading">Unordered List</h3>
+            <ul class="list-disc list-inside space-y-2 text-default">
+              <li>List item one</li>
+              <li>List item two</li>
+              <li>List item three</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-4 text-heading">Ordered List</h3>
+            <ol class="list-decimal list-inside space-y-2 text-default">
+              <li>List item one</li>
+              <li>List item two</li>
+              <li>List item three</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Badges -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-8 text-accent">Badges</h2>
+        <div class="space-y-4">
+          <div class="flex items-center gap-8">
+            <span class="badge-primary">Primary Badge</span>
+            <p class="text-sm text-muted">Brand color with 10% opacity background</p>
+          </div>
+          
+          <div class="flex items-center gap-8">
+            <span class="badge-secondary">Secondary Badge</span>
+            <p class="text-sm text-muted">Secondary color with 10% opacity background</p>
+          </div>
+          
+          <div class="flex items-center gap-8">
+            <span class="badge-accent">Accent Badge</span>
+            <p class="text-sm text-muted">Accent color with 10% opacity background</p>
+          </div>
+          
+          <div class="flex items-center gap-8">
+            <span class="badge-success">Success Badge</span>
+            <p class="text-sm text-muted">Green with light/dark mode support</p>
+          </div>
+          
+          <div class="flex items-center gap-8">
+            <span class="badge-warning">Warning Badge</span>
+            <p class="text-sm text-muted">Yellow with light/dark mode support</p>
+          </div>
+          
+          <div class="flex items-center gap-8">
+            <span class="badge-error">Error Badge</span>
+            <p class="text-sm text-muted">Red with light/dark mode support</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Alerts -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-8 text-accent">Alerts</h2>
+        <div class="space-y-4">
+          <div class="alert-info">
+            <Icon name="tabler:info-circle" class="w-5 h-5 inline-block mr-2" />
+            <strong>Info alert:</strong> This is an informational message.
+          </div>
+          
+          <div class="alert-success">
+            <Icon name="tabler:circle-check" class="w-5 h-5 inline-block mr-2" />
+            <strong>Success alert:</strong> Your action was completed successfully.
+          </div>
+          
+          <div class="alert-warning">
+            <Icon name="tabler:alert-triangle" class="w-5 h-5 inline-block mr-2" />
+            <strong>Warning alert:</strong> Please review this important notice.
+          </div>
+          
+          <div class="alert-error">
+            <Icon name="tabler:alert-circle" class="w-5 h-5 inline-block mr-2" />
+            <strong>Error alert:</strong> Something went wrong, please try again.
+          </div>
+        </div>
+      </section>
+
+      <!-- Podcast Buttons -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-8 text-accent">Podcast Buttons</h2>
+        <div class="space-y-4">
+          <div class="flex items-center gap-8">
+            <button class="btn-podcast">
+              <Icon name="mdi:apple" class="btn-podcast-icon text-[#933AC3]" />
+              <span class="btn-podcast-text">
+                <span class="btn-podcast-label">Listen on</span>
+                <span class="btn-podcast-platform">Apple Podcasts</span>
+              </span>
+            </button>
+          </div>
+
+          <div class="flex items-center gap-8">
+            <button class="btn-podcast">
+              <Icon name="mdi:spotify" class="btn-podcast-icon text-[#1DB954]" />
+              <span class="btn-podcast-text">
+                <span class="btn-podcast-label">Listen on</span>
+                <span class="btn-podcast-platform">Spotify</span>
+              </span>
+            </button>
+          </div>
+
+          <div class="flex items-center gap-8">
+            <button class="btn-podcast">
+              <Icon name="mdi:google" class="btn-podcast-icon text-[#4285F4]" />
+              <span class="btn-podcast-text">
+                <span class="btn-podcast-label">Listen on</span>
+                <span class="btn-podcast-platform">Google Podcasts</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Links -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-semibold mb-8 text-accent">Links</h2>
+        <div class="space-y-4">
+          <p>
+            <a href="#" class="link-primary">Primary Link</a>
+          </p>
+          <p>
+            <a href="#" class="link-secondary">Secondary Link</a>
+          </p>
+          <p>
+            <a href="#" class="link-muted">Muted Link</a>
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+</Layout>
