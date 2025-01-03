@@ -65,6 +65,28 @@
 - Hover state: 90% opacity
 - Transition: 150ms ease-in-out
 
+### Podcast Buttons
+- Background: White
+- Border: Light grey (#e5e7eb)
+- Border radius: 0.75rem
+- Shadow: Small drop shadow
+- Padding: 0.75rem 1.5rem
+- Layout: Flex with gap between icon and text
+- Text:
+  - Label: Small, muted text ("Listen on")
+  - Platform: Semibold text
+- Icons:
+  - Size: 1.5rem (24px)
+  - Colors:
+    - Apple Podcasts: #933AC3
+    - Spotify: #1DB954
+    - Google Podcasts: #4285F4
+- Hover state:
+  - Slightly larger shadow
+  - Darker border
+  - Subtle lift effect
+- Transition: 150ms ease-in-out all properties
+
 ### Cards
 - Background variants:
   - Light: #dadada (for contrast with dark text)

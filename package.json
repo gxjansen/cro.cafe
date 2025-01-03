@@ -33,6 +33,7 @@
     "astro-icon": "^1.1.4",
     "limax": "4.1.0",
     "lodash.merge": "^4.6.2",
+    "puppeteer": "^23.11.1",
     "unpic": "^3.22.0"
   },
   "devDependencies": {
