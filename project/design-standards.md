@@ -1,5 +1,9 @@
 # CRO.cafe Design Standards
 
+## Brand logo
+logo can be found at /public/crocafe-logo.svg 
+icon (also to be used as favicon) can be found at /public/crocafe-icon.png
+
 ## Brand Colors
 
 ```css
