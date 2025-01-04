@@ -4,11 +4,13 @@ import globals from 'globals';
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import typescriptParser from '@typescript-eslint/parser';
+import prettier from 'eslint-config-prettier';
 
 export default [
   js.configs.recommended,
   ...eslintPluginAstro.configs['flat/recommended'],
   ...tseslint.configs.recommended,
+  prettier,
   {
     languageOptions: {
       globals: {

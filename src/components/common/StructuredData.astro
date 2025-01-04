@@ -1,0 +1,44 @@
+---
+import { StructuredDataGenerator } from '~/utils/structured-data';
+import type { Episode, Person, Quote, Platform } from '~/types';
+
+interface Props {
+  type: 'episode' | 'person' | 'quote' | 'platform';
+  data: Episode | Person | Quote | Platform;
+  canonicalUrl?: string;
+}
+
+const { type, data, canonicalUrl } = Astro.props;
+
+let schema: Record<string, unknown>;
+
+switch (type) {
+  case 'episode':
+    schema = StructuredDataGenerator.generateEpisodeSchema(
+      data as Episode, 
+      { canonicalUrl }
+    );
+    break;
+  case 'person':
+    schema = StructuredDataGenerator.generatePersonSchema(
+      data as Person
+    );
+    break;
+  case 'quote':
+    schema = StructuredDataGenerator.generateQuoteSchema(
+      data as Quote
+    );
+    break;
+  case 'platform':
+    schema = StructuredDataGenerator.generatePlatformSchema(
+      data as Platform
+    );
+    break;
+  default:
+    throw new Error(`Unsupported structured data type: ${type}`);
+}
+
+const renderedSchema = StructuredDataGenerator.renderSchema(schema);
+---
+
+<Fragment set:html="{renderedSchema}" />
