@@ -27,7 +27,7 @@ implementation.md
 .env
 .env.*
 
-project/current site data/
+project/current-site-data/
 
 packages/astro/src/**/*.prebuilt.ts
 packages/astro/src/**/*.prebuilt-dev.ts
