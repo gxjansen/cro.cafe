@@ -1,2 +1,3 @@
-Quote Text,Author,Episode,Timestamp (s)
-"This is a sample quote.","Sample Author","Sample Episode",120
+Text,Episode Title,Timestamp (s),Guest Name
+"A test quote","Test Episode 1","300","John Doe"
+"Another test quote","Test Episode 2","450","Jane Smith"

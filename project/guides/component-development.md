@@ -5,6 +5,7 @@ This guide outlines the development standards and implementation details for CRO
 ## Component Organization
 
 ### Directory Structure
+
 ```
 src/components/
 ├── common/            # Shared components
@@ -56,8 +57,8 @@ const languages = [
 }
 
 .select-language {
-  @apply px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 
-         dark:border-gray-700 rounded-lg shadow-sm focus:ring-2 
+  @apply px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300
+         dark:border-gray-700 rounded-lg shadow-sm focus:ring-2
          focus:ring-blue-500 focus:border-blue-500;
 }
 </style>
@@ -91,7 +92,7 @@ const { episodeId, title } = Astro.props;
 
 <style>
 .episode-player {
-  @apply w-full max-w-3xl mx-auto my-4 rounded-lg overflow-hidden 
+  @apply w-full max-w-3xl mx-auto my-4 rounded-lg overflow-hidden
          shadow-lg bg-white dark:bg-gray-800;
 }
 </style>
@@ -170,11 +171,11 @@ const { name, title, company, bio, image, linkedin, twitter, website } = guest.d
       <p class="profile-company">{company}</p>
     </div>
   </div>
-  
+
   <div class="profile-bio">
     {bio}
   </div>
-  
+
   {showEpisodes && guest.data.episodes.length > 0 && (
     <div class="profile-episodes">
       <h3>Episodes</h3>
@@ -189,7 +190,7 @@ const { name, title, company, bio, image, linkedin, twitter, website } = guest.d
       </ul>
     </div>
   )}
-  
+
   <div class="profile-social">
     {linkedin && (
       <a href={linkedin} class="social-link linkedin">
@@ -211,7 +212,7 @@ const { name, title, company, bio, image, linkedin, twitter, website } = guest.d
 
 <style>
 .guest-profile {
-  @apply max-w-2xl mx-auto p-6 bg-white dark:bg-gray-800 
+  @apply max-w-2xl mx-auto p-6 bg-white dark:bg-gray-800
          rounded-lg shadow-lg;
 }
 
@@ -269,6 +270,7 @@ const { name, title, company, bio, image, linkedin, twitter, website } = guest.d
 ## Component Best Practices
 
 1. **TypeScript Types**
+
 ```typescript
 // src/types/components.ts
 import type { CollectionEntry } from 'astro:content';
@@ -286,6 +288,7 @@ export interface GuestProfileProps {
 ```
 
 2. **Prop Validation**
+
 ```typescript
 // Example component with prop validation
 ---
@@ -303,6 +306,7 @@ const validatedProps = PropSchema.parse(props);
 ```
 
 3. **Error Boundaries**
+
 ```typescript
 // src/components/common/ErrorBoundary.astro
 ---
@@ -327,6 +331,7 @@ const { fallback } = Astro.props;
 ## Accessibility Guidelines
 
 1. **ARIA Labels**
+
 ```typescript
 // Example of proper ARIA usage
 <button
@@ -339,6 +344,7 @@ const { fallback } = Astro.props;
 ```
 
 2. **Keyboard Navigation**
+
 ```typescript
 // Example of keyboard handling
 <div
@@ -374,7 +380,7 @@ describe('EpisodeCard', () => {
     };
 
     const { getByText } = await render(EpisodeCard, { episode });
-    
+
     expect(getByText('Test Episode')).toBeDefined();
     expect(getByText('Test description')).toBeDefined();
   });
@@ -384,21 +390,10 @@ describe('EpisodeCard', () => {
 ## Performance Optimization
 
 1. **Image Optimization**
-```typescript
-// Always use Astro's Image component
-import { Image } from 'astro:assets';
-
-<Image
-  src={imageSrc}
-  alt={imageAlt}
-  width={800}
-  height={600}
-  format="webp"
-  loading="lazy"
-/>
-```
+   Not needed, we use Astro's standard Image component.
 
 2. **Component Islands**
+
 ```typescript
 // Interactive components should use client:* directives sparingly
 <SearchBox client:visible />

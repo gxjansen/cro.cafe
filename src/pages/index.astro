@@ -1,5 +1,7 @@
+// prettier-ignore
 ---
-import Layout from '~/layouts/PageLayout.astro';
+import PageLayout from '~/layouts/PageLayout.astro';
+import { I18N } from 'astrowind:config';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
@@ -16,9 +18,12 @@ const metadata = {
   title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
   ignoreTitleTemplate: true,
 };
+
+const availableLanguages = ['en', 'es', 'fr']; // Example list of available languages
 ---
 
-<Layout metadata={metadata}>
+// prettier-ignore
+<PageLayout metadata={metadata} availableLanguages={availableLanguages}>
   <!-- Hero Widget ******************* -->
 
   <Hero
@@ -353,7 +358,7 @@ const metadata = {
       {
         title: 'What is something that you would like to try again?',
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+          'A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.',
       },
       {
         title: 'If you could only ask one question to each person you meet, what would that question be?',
@@ -396,4 +401,4 @@ const metadata = {
       waste more time! :P
     </Fragment>
   </CallToAction>
-</Layout>
+</PageLayout>

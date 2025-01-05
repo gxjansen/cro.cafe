@@ -1,4 +1,5 @@
 export interface Episode {
+  id: string;
   title: string;
   description: string;
   date: Date;
@@ -8,38 +9,55 @@ export interface Episode {
   guests: Person[];
   platforms: Platform[];
   quotes: Quote[];
+  language: string;
+  type: string;
+  canonicalUrl?: string;
 }
 
 export interface Person {
+  id: string;
   name: string;
   role: string;
   bio: string;
   image_url: string;
-  social_links: {
-    platform: string;
-    url: string;
-  }[];
-}
-
-export interface Platform {
-  name: string;
-  description: string;
-  url: string;
-  icon_url: string;
+  social_links: string[];
+  language: string;
+  type: string;
+  canonicalUrl?: string;
 }
 
 export interface Quote {
+  id: string;
   text: string;
   author: Person;
   episode: Episode;
   timestamp: number;
+  language: string;
+  type: string;
+  canonicalUrl?: string;
 }
 
-export interface BrandListener {
+export interface Platform {
+  id: string;
   name: string;
-  logo_url: string;
   description: string;
+  url: string;
+  icon_url: string;
+  language: string;
+  type: string;
+  canonicalUrl?: string;
+}
+
+export interface Brand {
+  id: string;
+  name: string;
+  description: string;
+  logo_url: string;
   website_url: string;
+  iconUrl: string;
+  language: string;
+  type: string;
+  canonicalUrl?: string;
 }
 
 export interface MetadataProps {
@@ -75,9 +93,26 @@ declare module 'satori' {
   }
 }
 
+interface ResvgOptions {
+  background?: string;
+  fitTo?: {
+    mode: 'width' | 'height' | 'zoom';
+    value: number;
+  };
+  font?: {
+    fontFiles?: string[];
+    loadSystemFonts?: boolean;
+    defaultFontFamily?: string;
+  };
+  logLevel?: 'off' | 'error' | 'warn' | 'info' | 'debug' | 'trace';
+  shapeRendering?: number;
+  textRendering?: number;
+  imageRendering?: number;
+}
+
 declare module '@resvg/resvg-js' {
   export class Resvg {
-    constructor(svg: string, options?: any);
+    constructor(svg: string, options?: ResvgOptions);
     render(): {
       asPng: () => Buffer;
     };

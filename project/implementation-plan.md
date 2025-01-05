@@ -34,13 +34,13 @@ After completing a task, mark it as complete by replacing the [ ] with [x].
 
 ## 2. Content Collections Setup
 
-- [ ] Define Zod schemas for all content types
-- [ ] Set up content collections for episodes, guests, quotes, brands, and platforms
-- [ ] Create folder structure for language-specific content
-- [ ] Implement type-safe content management
-- [ ] Set up image optimization pipeline
-- [ ] Configure canonical URLs and language references
-- [ ] Implement hreflang tags for all content types
+- [x] Define Zod schemas for all content types
+- [x] Set up content collections for episodes, guests, quotes, brands, and platforms
+- [x] Create folder structure for language-specific content
+- [x] Implement type-safe content management
+- [x] Set up image optimization pipeline
+- [x] Configure canonical URLs and language references
+- [x] Implement hreflang tags for all content types
 
 **Validation Checks:**
 
@@ -60,10 +60,10 @@ After completing a task, mark it as complete by replacing the [ ] with [x].
 
 - [x] Create RSS feed parser
 - [x] Develop CSV data import scripts
-- [ ] Set up image download and optimization pipeline
-- [ ] Implement slug generation and validation
-- [ ] Create GitHub Action for RSS sync
-- [ ] Implement OpenGraph image generation during import
+- [x] Set up image download and optimization pipeline
+- [x] Implement slug generation and validation
+- [x] Create GitHub Action for RSS sync
+- [x] Implement OpenGraph image generation during import
 
 **Validation Checks:**
 
@@ -211,3 +211,18 @@ After completing a task, mark it as complete by replacing the [ ] with [x].
 - Enhanced structured data for podcast episodes
 
 **Note:** Each section's reference files will be created separately with detailed technical specifications and implementation instructions for junior developers.
+
+# Technical Debt and Future Improvements
+
+## TypeScript Type Predicate Challenge in Permalinks Utility
+
+**Location:** `src/utils/permalinks.ts`
+
+**Issue:** Encountered a complex TypeScript type predicate challenge in the `generateHreflangTags` function. The current implementation struggles with type narrowing, specifically with the `language` property in the type predicate.
+
+**Potential Solutions to Investigate:**
+
+1. Refactor the type definition to make it more flexible
+2. Create a more robust type guard function
+3. Consider using a different approach to type validation
+4. Potentially simplify the function signature

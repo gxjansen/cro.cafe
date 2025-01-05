@@ -1,111 +1,40 @@
-import { isUnpicCompatible, unpicOptimizer, astroAsseetsOptimizer } from './images-optimization';
-import type { ImageMetadata } from 'astro';
-import type { OpenGraph } from '@astrolib/seo';
+import fs from 'fs';
+import path from 'path';
+import fetch from 'node-fetch';
 
-const load = async function () {
-  let images: Record<string, () => Promise<unknown>> | undefined = undefined;
+/**
+ * Downloads an image from a given URL and saves it to the specified directory.
+ * @param imageUrl The URL of the image to download.
+ * @param destinationDir The directory where the image should be saved.
+ * @param fileName The name to save the image as (optional, defaults to the original file name).
+ * @returns The path to the downloaded image.
+ */
+export async function downloadImage(
+  imageUrl: string,
+  destinationDir: string,
+  fileName?: string
+): Promise<string> {
   try {
-    images = import.meta.glob('~/assets/images/**/*.{jpeg,jpg,png,tiff,webp,gif,svg,JPEG,JPG,PNG,TIFF,WEBP,GIF,SVG}');
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const response = await fetch(imageUrl);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch image: ${response.statusText}`);
+    }
+
+    const imageBuffer = await response.buffer();
+    const parsedUrl = new URL(imageUrl);
+    const defaultFileName = path.basename(parsedUrl.pathname);
+    const finalFileName = fileName || defaultFileName;
+    const finalPath = path.join(destinationDir, finalFileName);
+
+    // Ensure the destination directory exists
+    fs.mkdirSync(destinationDir, { recursive: true });
+
+    // Write the image buffer to the file
+    fs.writeFileSync(finalPath, imageBuffer);
+
+    return finalPath;
   } catch (error) {
-    // continue regardless of error
+    console.error(`Error downloading image from ${imageUrl}:`, error);
+    throw error;
   }
-  return images;
-};
-
-let _images: Record<string, () => Promise<unknown>> | undefined = undefined;
-
-/** */
-export const fetchLocalImages = async () => {
-  _images = _images || (await load());
-  return _images;
-};
-
-/** */
-export const findImage = async (
-  imagePath?: string | ImageMetadata | null
-): Promise<string | ImageMetadata | undefined | null> => {
-  // Not string
-  if (typeof imagePath !== 'string') {
-    return imagePath;
-  }
-
-  // Absolute paths
-  if (imagePath.startsWith('http://') || imagePath.startsWith('https://') || imagePath.startsWith('/')) {
-    return imagePath;
-  }
-
-  // Relative paths or not "~/assets/"
-  if (!imagePath.startsWith('~/assets/images')) {
-    return imagePath;
-  }
-
-  const images = await fetchLocalImages();
-  const key = imagePath.replace('~/', '/src/');
-
-  return images && typeof images[key] === 'function'
-    ? ((await images[key]()) as { default: ImageMetadata })['default']
-    : null;
-};
-
-/** */
-export const adaptOpenGraphImages = async (
-  openGraph: OpenGraph = {},
-  astroSite: URL | undefined = new URL('')
-): Promise<OpenGraph> => {
-  if (!openGraph?.images?.length) {
-    return openGraph;
-  }
-
-  const images = openGraph.images;
-  const defaultWidth = 1200;
-  const defaultHeight = 626;
-
-  const adaptedImages = await Promise.all(
-    images.map(async (image) => {
-      if (image?.url) {
-        const resolvedImage = (await findImage(image.url)) as ImageMetadata | string | undefined;
-        if (!resolvedImage) {
-          return {
-            url: '',
-          };
-        }
-
-        let _image;
-
-        if (
-          typeof resolvedImage === 'string' &&
-          (resolvedImage.startsWith('http://') || resolvedImage.startsWith('https://')) &&
-          isUnpicCompatible(resolvedImage)
-        ) {
-          _image = (await unpicOptimizer(resolvedImage, [defaultWidth], defaultWidth, defaultHeight, 'jpg'))[0];
-        } else if (resolvedImage) {
-          const dimensions =
-            typeof resolvedImage !== 'string' && resolvedImage?.width <= defaultWidth
-              ? [resolvedImage?.width, resolvedImage?.height]
-              : [defaultWidth, defaultHeight];
-          _image = (
-            await astroAsseetsOptimizer(resolvedImage, [dimensions[0]], dimensions[0], dimensions[1], 'jpg')
-          )[0];
-        }
-
-        if (typeof _image === 'object') {
-          return {
-            url: 'src' in _image && typeof _image.src === 'string' ? String(new URL(_image.src, astroSite)) : '',
-            width: 'width' in _image && typeof _image.width === 'number' ? _image.width : undefined,
-            height: 'height' in _image && typeof _image.height === 'number' ? _image.height : undefined,
-          };
-        }
-        return {
-          url: '',
-        };
-      }
-
-      return {
-        url: '',
-      };
-    })
-  );
-
-  return { ...openGraph, ...(adaptedImages ? { images: adaptedImages } : {}) };
-};
+}

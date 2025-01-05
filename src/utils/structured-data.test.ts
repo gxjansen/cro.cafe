@@ -1,17 +1,21 @@
 import { describe, it, expect } from 'vitest';
 import { StructuredDataGenerator } from './structured-data';
-import type { Episode, Person, Quote, Platform } from '~/types';
+import type { Episode, Person, Quote, Platform, Brand } from '~/types';
 
 // Mock data for testing
 const mockPerson: Person = {
+  id: 'person-1',
   name: 'John Doe',
   role: 'Guest Expert',
   bio: 'A renowned expert in conversion optimization',
   image_url: 'https://example.com/john-doe.jpg',
   social_links: [{ platform: 'Twitter', url: 'https://twitter.com/johndoe' }],
+  language: 'en',
 };
 
 const mockEpisode: Episode = {
+  id: 'mastering-conversion-rates',
+  language: 'en',
   title: 'Mastering Conversion Rates',
   description: 'Deep dive into conversion rate optimization strategies',
   date: new Date('2023-01-15'),
@@ -21,20 +25,38 @@ const mockEpisode: Episode = {
   guests: [mockPerson],
   platforms: [],
   quotes: [],
+  type: 'episodes',
 };
 
 const mockQuote: Quote = {
+  id: 'conversion-is-all-about-understanding-user-behavior',
+  language: 'en',
   text: 'Conversion is all about understanding user behavior',
   author: mockPerson,
   episode: mockEpisode,
   timestamp: 1800, // 30 minutes into the episode
+  type: 'quotes',
 };
 
 const mockPlatform: Platform = {
+  id: 'spotify',
+  language: 'en',
   name: 'Spotify',
   description: 'Listen on Spotify',
   url: 'https://spotify.com/crocafe',
   icon_url: 'https://example.com/spotify-icon.png',
+  type: 'platforms',
+};
+
+const mockBrand: Brand = {
+  id: 'example-brand',
+  language: 'en',
+  name: 'Example Brand',
+  description: 'An example brand for testing',
+  logo_url: 'https://example.com/brand-logo.png',
+  website_url: 'https://example.com/brand',
+  iconUrl: 'https://example.com/brand-icon.png',
+  type: 'brands',
 };
 
 describe('Structured Data Generator', () => {
@@ -84,6 +106,19 @@ describe('Structured Data Generator', () => {
     });
   });
 
+  describe('Brand Schema', () => {
+    it('generates valid brand schema', () => {
+      const brandSchema = StructuredDataGenerator.generateBrandSchema(mockBrand);
+
+      expect(brandSchema).toHaveProperty('@context', 'https://schema.org');
+      expect(brandSchema).toHaveProperty('@type', 'Organization');
+      expect(brandSchema.name).toBe('Example Brand');
+      expect(brandSchema.description).toBe('An example brand for testing');
+      expect(brandSchema.url).toBe('https://example.com/brand');
+      expect(brandSchema.logo).toBe('https://example.com/brand-logo.png');
+    });
+  });
+
   describe('Schema Rendering', () => {
     it('renders schema as a script tag', () => {
       const personSchema = StructuredDataGenerator.generatePersonSchema(mockPerson);
@@ -101,8 +136,9 @@ describe('Structured Data Generator', () => {
       const episodeSchema = StructuredDataGenerator.generateEpisodeSchema(mockEpisode);
       const quoteSchema = StructuredDataGenerator.generateQuoteSchema(mockQuote);
       const platformSchema = StructuredDataGenerator.generatePlatformSchema(mockPlatform);
+      const brandSchema = StructuredDataGenerator.generateBrandSchema(mockBrand);
 
-      const schemas = [personSchema, episodeSchema, quoteSchema, platformSchema];
+      const schemas = [personSchema, episodeSchema, quoteSchema, platformSchema, brandSchema];
 
       schemas.forEach((schema) => {
         expect(schema).toHaveProperty('@context');

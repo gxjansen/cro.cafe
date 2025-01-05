@@ -1,134 +1,260 @@
-import slugify from 'limax';
+import type { Episode, Person, Quote, Platform, Brand } from '~/types';
+import slugify from 'slugify';
 
-import { SITE, APP_BLOG } from 'astrowind:config';
+/**
+ * Generates a canonical URL for a content entry.
+ * @param language The language of the content entry.
+ * @param contentType The type of the content entry (e.g., 'episodes', 'guests', 'quotes', 'brands', 'platforms').
+ * @param slug The slug of the content entry.
+ * @returns The canonical URL for the content entry.
+ */
+export function generateCanonicalUrl(language: string, contentType: string, slug: string): string {
+  return `https://cro.cafe/${language}/${contentType}/${slug}`;
+}
 
-import { trim } from '~/utils/utils';
+/**
+ * Updates an episode entry with canonical URL and language references.
+ * @param episode The episode entry to update.
+ * @param language The language of the episode entry.
+ * @returns The updated episode entry with canonical URL and language references.
+ */
+export function updateEpisodeWithLanguageReferences(episode: Episode, language: string): Episode {
+  return {
+    ...episode,
+    canonicalUrl: generateCanonicalUrl(language, 'episodes', episode.id),
+  };
+}
 
-export const trimSlash = (s: string) => trim(trim(s, '/'));
-const createPath = (...params: string[]) => {
-  const paths = params
-    .map((el) => trimSlash(el))
-    .filter((el) => !!el)
-    .join('/');
-  return '/' + paths + (SITE.trailingSlash && paths ? '/' : '');
-};
+/**
+ * Updates a guest entry with canonical URL and language references.
+ * @param guest The guest entry to update.
+ * @param language The language of the guest entry.
+ * @returns The updated guest entry with canonical URL and language references.
+ */
+export function updateGuestWithLanguageReferences(guest: Person, language: string): Person {
+  return {
+    ...guest,
+    canonicalUrl: generateCanonicalUrl(language, 'guests', guest.id),
+  };
+}
 
-const BASE_PATHNAME = SITE.base || '/';
+/**
+ * Updates a quote entry with canonical URL and language references.
+ * @param quote The quote entry to update.
+ * @param language The language of the quote entry.
+ * @returns The updated quote entry with canonical URL and language references.
+ */
+export function updateQuoteWithLanguageReferences(quote: Quote, language: string): Quote {
+  return {
+    ...quote,
+    canonicalUrl: generateCanonicalUrl(language, 'quotes', quote.id),
+  };
+}
 
-export const cleanSlug = (text = '') =>
-  trimSlash(text)
-    .split('/')
-    .map((slug) => slugify(slug))
-    .join('/');
+/**
+ * Updates a platform entry with canonical URL and language references.
+ * @param platform The platform entry to update.
+ * @param language The language of the platform entry.
+ * @returns The updated platform entry with canonical URL and language references.
+ */
+export function updatePlatformWithLanguageReferences(
+  platform: Platform,
+  language: string
+): Platform {
+  return {
+    ...platform,
+    canonicalUrl: generateCanonicalUrl(language, 'platforms', platform.id),
+  };
+}
 
-export const BLOG_BASE = cleanSlug(APP_BLOG?.list?.pathname);
-export const CATEGORY_BASE = cleanSlug(APP_BLOG?.category?.pathname);
-export const TAG_BASE = cleanSlug(APP_BLOG?.tag?.pathname) || 'tag';
+/**
+ * Updates a brand entry with canonical URL and language references.
+ * @param brand The brand entry to update.
+ * @param language The language of the brand entry.
+ * @returns The updated brand entry with canonical URL and language references.
+ */
+export function updateBrandWithLanguageReferences(brand: Brand, language: string): Brand {
+  return {
+    ...brand,
+    canonicalUrl: generateCanonicalUrl(language, 'brands', brand.id),
+  };
+}
 
-export const POST_PERMALINK_PATTERN = trimSlash(APP_BLOG?.post?.permalink || `${BLOG_BASE}/%slug%`);
+// Keep track of used slugs per content type and language
+const usedSlugs: Record<string, Set<string>> = {};
 
-/** */
-export const getCanonical = (path = ''): string | URL => {
-  const url = String(new URL(path, SITE.site));
-  if (SITE.trailingSlash == false && path && url.endsWith('/')) {
-    return url.slice(0, -1);
-  } else if (SITE.trailingSlash == true && path && !url.endsWith('/')) {
-    return url + '/';
-  }
-  return url;
-};
+/**
+ * Generates a unique slug from a given string.
+ * @param title The title to generate a slug from.
+ * @param contentType The content type (e.g., 'episodes', 'guests', 'quotes').
+ * @param language The language code.
+ * @returns A unique URL-friendly slug.
+ */
+export function generateSlug(title: string, contentType?: string, language?: string): string {
+  // Generate base slug
+  const slug = slugify(title, {
+    lower: true,
+    strict: true,
+    replacement: '-',
+  });
 
-/** */
-export const getPermalink = (slug = '', type = 'page'): string => {
-  let permalink: string;
-
-  if (
-    slug.startsWith('https://') ||
-    slug.startsWith('http://') ||
-    slug.startsWith('://') ||
-    slug.startsWith('#') ||
-    slug.startsWith('javascript:')
-  ) {
-    return slug;
-  }
-
-  switch (type) {
-    case 'home':
-      permalink = getHomePermalink();
-      break;
-
-    case 'blog':
-      permalink = getBlogPermalink();
-      break;
-
-    case 'asset':
-      permalink = getAsset(slug);
-      break;
-
-    case 'category':
-      permalink = createPath(CATEGORY_BASE, trimSlash(slug));
-      break;
-
-    case 'tag':
-      permalink = createPath(TAG_BASE, trimSlash(slug));
-      break;
-
-    case 'post':
-      permalink = createPath(trimSlash(slug));
-      break;
-
-    case 'page':
-    default:
-      permalink = createPath(slug);
-      break;
-  }
-
-  return definitivePermalink(permalink);
-};
-
-/** */
-export const getHomePermalink = (): string => getPermalink('/');
-
-/** */
-export const getBlogPermalink = (): string => getPermalink(BLOG_BASE);
-
-/** */
-export const getAsset = (path: string): string =>
-  '/' +
-  [BASE_PATHNAME, path]
-    .map((el) => trimSlash(el))
-    .filter((el) => !!el)
-    .join('/');
-
-/** */
-const definitivePermalink = (permalink: string): string => createPath(BASE_PATHNAME, permalink);
-
-/** */
-export const applyGetPermalinks = (menu: object = {}) => {
-  if (Array.isArray(menu)) {
-    return menu.map((item) => applyGetPermalinks(item));
-  } else if (typeof menu === 'object' && menu !== null) {
-    const obj = {};
-    for (const key in menu) {
-      if (key === 'href') {
-        if (typeof menu[key] === 'string') {
-          obj[key] = getPermalink(menu[key]);
-        } else if (typeof menu[key] === 'object') {
-          if (menu[key].type === 'home') {
-            obj[key] = getHomePermalink();
-          } else if (menu[key].type === 'blog') {
-            obj[key] = getBlogPermalink();
-          } else if (menu[key].type === 'asset') {
-            obj[key] = getAsset(menu[key].url);
-          } else if (menu[key].url) {
-            obj[key] = getPermalink(menu[key].url, menu[key].type);
-          }
-        }
-      } else {
-        obj[key] = applyGetPermalinks(menu[key]);
-      }
+  // If contentType and language are provided, ensure uniqueness
+  if (contentType && language) {
+    const key = `${contentType}-${language}`;
+    let slugSet = usedSlugs[key];
+    if (!slugSet) {
+      slugSet = new Set();
+      usedSlugs[key] = slugSet;
     }
-    return obj;
+
+    // Ensure uniqueness
+    if (slugSet.has(slug)) {
+      let counter = 1;
+      let newSlug = `${slug}-${counter}`;
+      while (slugSet.has(newSlug)) {
+        counter++;
+        newSlug = `${slug}-${counter}`;
+      }
+      slugSet.add(newSlug);
+      return newSlug;
+    }
+
+    // Track this slug
+    slugSet.add(slug);
   }
-  return menu;
-};
+
+  return slug;
+}
+
+/**
+ * Validates a slug to ensure it meets the required criteria.
+ * @param slug The slug to validate.
+ * @param contentType The content type to validate against.
+ * @param language The language code.
+ * @returns True if the slug is valid and unique, false otherwise.
+ */
+export function validateSlug(slug: string, contentType?: string, language?: string): boolean {
+  // Check format
+  if (!/^[a-z0-9-]+$/.test(slug)) {
+    return false;
+  }
+
+  // Check length
+  if (slug.length < 3 || slug.length > 100) {
+    return false;
+  }
+
+  // Check for consecutive hyphens
+  if (slug.includes('--')) {
+    return false;
+  }
+
+  // If contentType and language are provided, check uniqueness
+  if (contentType && language) {
+    const key = `${contentType}-${language}`;
+    let slugSet = usedSlugs[key];
+    if (!slugSet) {
+      slugSet = new Set();
+      usedSlugs[key] = slugSet;
+    }
+
+    // If the slug is already used, return false
+    if (slugSet.has(slug)) {
+      return false;
+    }
+
+    // Register the slug
+    slugSet.add(slug);
+  }
+
+  return true;
+}
+
+/**
+ * Clears the slug registry for testing purposes.
+ * @param contentType Optional content type to clear.
+ * @param language Optional language to clear.
+ */
+export function clearSlugRegistry(contentType?: string, language?: string): void {
+  if (contentType && language) {
+    delete usedSlugs[`${contentType}-${language}`];
+  } else {
+    Object.keys(usedSlugs).forEach((key) => {
+      usedSlugs[key].clear();
+    });
+  }
+}
+
+/**
+ * Content entry for hreflang tag generation.
+ */
+interface HreflangContent {
+  readonly id: string;
+  readonly contentType: string;
+  readonly language: string;
+}
+
+/**
+ * Generates hreflang tags for a content entry.
+ * @param content The content entry to generate hreflang tags for.
+ * @param availableLanguages The list of available languages for the content entry.
+ * @returns An array of hreflang tags.
+ */
+export function isValidHreflangContent(
+  content: HreflangContent
+): content is Required<HreflangContent> {
+  return (
+    content !== null &&
+    typeof content === 'object' &&
+    typeof content.id === 'string' &&
+    typeof content.contentType === 'string' &&
+    typeof content.language === 'string'
+  );
+}
+
+export function generateHreflangTags(
+  content: HreflangContent,
+  availableLanguages: readonly string[]
+): string[] {
+  // Validate input with explicit type guard
+  function assertValidContent(
+    c: HreflangContent
+  ): asserts c is { id: string; contentType: string } {
+    if (
+      typeof c !== 'object' ||
+      c === null ||
+      typeof c.id !== 'string' ||
+      typeof c.contentType !== 'string'
+    ) {
+      throw new Error('Invalid content');
+    }
+  }
+
+  // Early return for invalid input
+  if (!Array.isArray(availableLanguages)) {
+    return [];
+  }
+
+  try {
+    assertValidContent(content);
+  } catch {
+    return [];
+  }
+
+  return availableLanguages
+    .map((lang): string => {
+      if (!lang || typeof lang !== 'string') return '';
+      const url = generateCanonicalUrl(lang, content.contentType, content.id);
+      return `<link rel="alternate" hreflang="${lang}" href="${url}" />`;
+    })
+    .filter((tag): tag is string => tag !== '');
+}
+
+/**
+ * Render structured data as a script tag.
+ * @param schema The structured data schema to render.
+ * @returns An HTML script tag with JSON-LD content.
+ */
+export function renderSchema(schema: Record<string, unknown>): string {
+  return `<script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>`;
+}

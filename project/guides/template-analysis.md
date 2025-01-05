@@ -7,17 +7,20 @@ This guide helps you understand and adapt the existing Astro template for the CR
 ### Key Components to Keep
 
 1. **Layout Components** (`src/layouts/`)
+
 - `Layout.astro`: Base layout with meta tags and common scripts
 - `PageLayout.astro`: Standard page layout with header/footer
 - Modify these for language support and podcast-specific metadata
 
 2. **UI Components** (`src/components/ui/`)
+
 - `Button.astro`: Reusable button component
 - `Headline.astro`: Typography components
 - `ItemGrid.astro`: Grid layout component
 - Keep all UI components as they provide foundation for new features
 
 3. **Widget Components** (`src/components/widgets/`)
+
 - `Header.astro`: Navigation header (needs language switcher)
 - `Footer.astro`: Site footer (needs platform links)
 - `Hero.astro`: Hero section (adapt for podcast features)
@@ -25,6 +28,7 @@ This guide helps you understand and adapt the existing Astro template for the CR
 - Keep but modify for podcast-specific needs
 
 4. **Blog Components** (`src/components/blog/`)
+
 - Rename to `episode` and adapt for podcast content
 - Modify for RSS feed integration
 - Adapt pagination for episode listing
@@ -33,11 +37,13 @@ This guide helps you understand and adapt the existing Astro template for the CR
 ### Components to Remove
 
 1. **Unused Widgets**
+
 - `Pricing.astro`: Not needed for podcast site
 - `Steps.astro`: Not relevant for current needs
 - `Stats.astro`: May repurpose later for analytics
 
 2. **Demo Content**
+
 - All demo blog posts in `src/data/post/`
 - Sample images in `src/assets/images/`
 - Demo configuration files
@@ -45,6 +51,7 @@ This guide helps you understand and adapt the existing Astro template for the CR
 ### Required New Components
 
 1. **Podcast-Specific Components**
+
 - EpisodePlayer.astro: Transistor.FM embed wrapper
 - EpisodeGrid.astro: Language-specific episode grid
 - GuestProfile.astro: Guest information display
@@ -52,6 +59,7 @@ This guide helps you understand and adapt the existing Astro template for the CR
 - LanguageSwitcher.astro: Language selection UI
 
 2. **Content Display Components**
+
 - QuoteDisplay.astro: Listener testimonials
 - BrandGrid.astro: Brand listener showcase
 - SearchResults.astro: PageFind integration
@@ -59,6 +67,7 @@ This guide helps you understand and adapt the existing Astro template for the CR
 ## Template Cleanup Steps
 
 1. **Content Organization**
+
 ```bash
 # Create reference directory
 mkdir -p src/_reference
@@ -71,7 +80,9 @@ mv src/pages/landing/* src/_reference/landing-pages/
 ```
 
 2. **Component Preparation**
+
 - Create new component directories:
+
 ```
 src/components/
   ├── episode/     # Episode-related components
@@ -81,8 +92,10 @@ src/components/
 ```
 
 3. **Asset Management**
+
 - Clean up unused images
 - Organize assets by type:
+
 ```
 src/assets/
   ├── images/
@@ -95,17 +108,19 @@ src/assets/
 ## Configuration Updates
 
 1. **TypeScript Configuration**
+
 - Update `tsconfig.json` for strict mode
 - Add podcast-specific types
 - Configure path aliases
 
 2. **Astro Configuration**
+
 - Update `astro.config.ts`:
   - Configure i18n
-  - Set up image optimization
   - Configure content collections
 
-3. **Tailwind Configuration**
+1. **Tailwind Configuration**
+
 - Update `tailwind.config.js`:
   - Add podcast-specific colors
   - Configure custom components
@@ -119,7 +134,7 @@ src/assets/
 
 ## Validation Checklist
 
-- [ ] All demo content moved to _reference directory
+- [ ] All demo content moved to \_reference directory
 - [ ] Unused components removed
 - [ ] New component structure created
 - [ ] Asset directories organized

@@ -1,0 +1,46 @@
+name: RSS Sync
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs every day at midnight UTC
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  sync-rss:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run RSS sync script
+        run: npx tsx src/utils/rss-sync.ts
+        env:
+          NODE_ENV: production
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add src/content/rss/
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: update RSS content [skip ci]"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+
+      - name: Check for errors
+        if: failure()
+        run: |
+          echo "RSS sync failed. Check the logs for more details."
+          exit 1

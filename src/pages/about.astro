@@ -1,3 +1,4 @@
+// prettier-ignore
 ---
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
@@ -6,12 +7,22 @@ import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
+import type { MetaData } from '~/types';
+
+export interface Props {
+  metadata?: MetaData;
+  availableLanguages: string[];
+}
+
 const metadata = {
   title: 'About us',
 };
+
+const availableLanguages = ['en', 'es', 'fr']; // Example list of available languages
 ---
 
-<Layout metadata={metadata}>
+// prettier-ignore
+<Layout metadata={metadata} availableLanguages={availableLanguages}>
   <!-- Hero Widget ******************* -->
 
   <Hero

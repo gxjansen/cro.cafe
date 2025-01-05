@@ -1,4 +1,4 @@
-import type { Episode, Person, Quote, Platform } from '~/types';
+import type { Episode, Person, Quote, Platform, Brand } from '~/types';
 
 interface StructuredDataOptions {
   canonicalUrl?: string;
@@ -20,7 +20,7 @@ export class StructuredDataGenerator {
       '@type': 'PodcastEpisode',
       name: episode.title,
       description: episode.description,
-      url: options.canonicalUrl,
+      url: options.canonicalUrl || episode.canonicalUrl,
       duration: `PT${episode.duration}S`,
       datePublished: episode.date.toISOString(),
       audio: episode.audio_url,
@@ -78,8 +78,24 @@ export class StructuredDataGenerator {
       '@type': 'WebSite',
       name: platform.name,
       description: platform.description,
-      url: platform.url,
+      url: platform.canonicalUrl || platform.url,
       logo: platform.icon_url,
+    };
+  }
+
+  /**
+   * Generate JSON-LD structured data for a brand
+   * @param brand The brand to generate structured data for
+   * @returns JSON-LD object for the brand
+   */
+  static generateBrandSchema(brand: Brand): Record<string, unknown> {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: brand.name,
+      description: brand.description,
+      url: brand.canonicalUrl || brand.website_url,
+      logo: brand.logo_url,
     };
   }
 

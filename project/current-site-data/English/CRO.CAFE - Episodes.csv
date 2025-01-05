@@ -1,2 +1,3 @@
-Episode Title,Description,Date,Duration (min),Audio URL,Transcript URL
-Sample Episode,This is a sample episode description,2023-10-01,30,https://example.com/audio.mp3,https://example.com/transcript.txt
+Title,Description,Date,Duration,Audio URL,Transcript URL,Guests,Platforms,Quotes
+"Test Episode 1","A test episode description","2024-01-01","30","https://example.com/audio1.mp3","https://example.com/transcript1.txt","[]","[]","[]"
+"Test Episode 2","Another test episode","2024-01-02","45","https://example.com/audio2.mp3","https://example.com/transcript2.txt","[]","[]","[]"

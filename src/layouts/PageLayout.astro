@@ -1,3 +1,4 @@
+// prettier-ignore
 ---
 import Layout from '~/layouts/Layout.astro';
 import Header from '~/components/widgets/Header.astro';
@@ -10,12 +11,14 @@ import type { MetaData } from '~/types';
 
 export interface Props {
   metadata?: MetaData;
+  availableLanguages: string[];
 }
 
-const { metadata } = Astro.props;
+const { metadata, availableLanguages } = Astro.props;
 ---
 
-<Layout metadata={metadata}>
+// prettier-ignore
+<Layout metadata={metadata} availableLanguages={availableLanguages}>
   <slot name="announcement">
     <Announcement />
   </slot>
