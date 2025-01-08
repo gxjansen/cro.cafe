@@ -1,0 +1,9 @@
+{
+  "id": "rss",
+  "name": "RSS",
+  "description": "",
+  "url": "https://nl.cro.cafe/podcast/rss.xml",
+  "icon_url": "",
+  "language": "nl",
+  "type": "platform"
+}

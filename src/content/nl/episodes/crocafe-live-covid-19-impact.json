@@ -1,0 +1,56 @@
+{
+  "id": "crocafe-live-covid-19-impact",
+  "title": "CRO.CAFE Live: COVID-19 impact",
+  "description": "Livestream opgenomen op donderdag 19 maart over de impact van COVID-19 (en alle bijkomende maatregelen en gedragsveranderingen) op CRO en experimenteren.",
+  "date": "2025-01-08T20:07:07.532Z",
+  "duration": 0,
+  "audio_url": "https://chtbl.com/track/D992D/media.transistor.fm/d985e025/701c0c1b.mp3",
+  "transcript_url": "",
+  "show_notes": "<ul><li><a href=\"https://www.biimpact.com/marketing-during-the-corona-crisis/\">Marketing during the Corona Crisis</a></li><li><a href=\"https://neilpatel.com/blog/coronavirus/\">What The Coronavirus (COVID-19) Means For Marketers</a></li><li><a href=\"https://vwo.com/blog/covid-19-and-optimizing-for-trust/\">Trust is what you should optimize during the COVID-19 pandemic</a></li><li><a href=\"https://www.roirevolution.com/blog/2020/03/coronavirus-and-ecommerce/\">How Coronavirus Is Impacting Ecommerce</a></li><li><a href=\"https://techcrunch.com/2020/03/17/amazon-limiting-shipments-to-certain-types-of-products-due-to-covid-19-pandemic/\">Amazon limiting shipments to certain types of products due to COVID-19 pandemic</a></li><li><a href=\"https://www.thedrum.com/opinion/2020/03/18/preparing-your-marketing-plans-the-coronavirus-downturn\" target=\"_blank\">Preparing your marketing plans for the Corona downturn</a></li></ul>",
+  "guests": [
+    {
+      "id": "shirley-van-haalem",
+      "name": "shirley-van-haalem",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    },
+    {
+      "id": "tom-van-den-berg",
+      "name": "tom-van-den-berg",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    },
+    {
+      "id": "simon-vreeman",
+      "name": "simon-vreeman",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    },
+    {
+      "id": "jack-solcer",
+      "name": "jack-solcer",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "https://youtu.be/hmgNKC7v2pg",
+  "main_image": "src/assets/images/episodes/crocafe-live-covid-19-impact.jpeg",
+  "language": "nl",
+  "type": "podcast"
+}

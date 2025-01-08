@@ -1,0 +1,10 @@
+{
+  "id": "rick-molenaar",
+  "name": "Rick Molenaar",
+  "role": "Founder",
+  "bio": "",
+  "image_url": "src/assets/images/guests/rick-molenaar.jpeg",
+  "social_links": [],
+  "language": "nl",
+  "type": "guest"
+}

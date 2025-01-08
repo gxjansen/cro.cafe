@@ -1,0 +1,26 @@
+{
+  "id": "machine-learning-analisis-predictivo-y-conversion",
+  "title": "Machine learning, análisis predictivo y conversión",
+  "description": "Hablamos sobre el uso de técnicas de machine learning para predecir comportamientos de usuario y por tanto diseñar acciones que potencien la conversión.",
+  "date": "2025-01-08T20:07:07.547Z",
+  "duration": 0,
+  "audio_url": "https://chrt.fm/track/D992D/media.transistor.fm/0ee5b97a/06c4c4f5.mp3",
+  "transcript_url": "<p>En este episodio hablamos con Ricard Bonastre, co-fundador y CEO&nbsp;de Lead Ratings, de todos estos temas y de alguno más:</p><ul><li>Empecemos por el principio, ¿qué es el machine learning, en qué se diferencia del deep learning y de la IA y para qué podemos utilizarlo en un contexto de conversión?</li><li>Parece que los algoritmos son la respuesta a todo y que nos sirven para facilitarnos el trabajo, ¿cómo funciona un algoritmo y para qué puede utilizarse?</li><li>Tu trabajo se centra, básicamente, en identificar los grupos de usuarios que presentan una mayor probabilidad de comprar un producto o servicio, y en aislarlos para poder trabajar con ellos en grupos separados, ¿cuanto de importante es esto en una estrategia de marketing en cualquier organización?</li><li>¿Son los algoritmos el futuro del marketing, vamos hacia un modelo en el que muchas decisiones vendrán de los análisis automatizados de datos?</li><li>Explícanos de una forma accesible porque cualquier empresa debe considerar un proceso de scoring en sus leads, ¿por qué es importante entender que no debemos de tratar a todos los usuarios de la misma forma?</li><li>¿Cuales son las principales dificultades para poder realizar un proyecto de machine learning y análisis predictivo en una organización, su madurez, los perfiles técnicos, la necesidad de un retorno inmediato?</li><li>Tú llevas muchos años trabajando el mercado de los leads, ¿qué tipos de lead debe de buscar una empresa y por qué, qué puede esperar de cada tipo de lead?</li></ul><p>Esperamos que este episodio os haya enseñado y entretenido como el que más.</p>",
+  "show_notes": "<ul><li>https://lead-ratings.com/ </li><li>https://www.linkedin.com/in/ricard-bonastre/ </li></ul>",
+  "guests": [
+    {
+      "id": "ricard-bonastre",
+      "name": "ricard-bonastre",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "es",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "",
+  "main_image": "src/assets/images/episodes/machine-learning-analisis-predictivo-y-conversion.jpg",
+  "language": "es",
+  "type": "podcast"
+}

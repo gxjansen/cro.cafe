@@ -1,0 +1,263 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import Player from './Player.astro';
+import StructuredData from '../common/StructuredData.astro';
+import ErrorBoundary from '../common/ErrorBoundary.astro';
+import { validateProps, SingleEpisodePropsSchema } from '~/utils/component-validation';
+
+interface Props {
+  episode: CollectionEntry<'episodes'>;
+  availableLanguages: string[];
+}
+
+// Validate props
+const props = validateProps(SingleEpisodePropsSchema, Astro.props);
+const { episode, availableLanguages } = props;
+const { 
+  title, 
+  description, 
+  pubDate, 
+  image, 
+  guests, 
+  language,
+  episodeId,
+  duration,
+  transcript_url,
+  youtube_url,
+  show_notes
+} = episode.data;
+
+// Format date based on language
+const formattedDate = new Date(pubDate).toLocaleDateString(language, {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+// Format duration (assuming duration is in seconds)
+const formatDuration = (seconds: number) => {
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+  return hours > 0 
+    ? `${hours}h ${minutes}m` 
+    : `${minutes} minutes`;
+};
+
+// Prepare structured data
+const structuredData = {
+  '@type': 'PodcastEpisode',
+  name: title,
+  description: description,
+  datePublished: pubDate.toISOString(),
+  duration: `PT${Math.floor(duration / 60)}M${duration % 60}S`,
+  image: {
+    '@type': 'ImageObject',
+    url: image.src,
+  },
+  associatedMedia: {
+    '@type': 'MediaObject',
+    contentUrl: `https://share.transistor.fm/e/${episodeId}`,
+  },
+  ...(youtube_url && {
+    video: {
+      '@type': 'VideoObject',
+      url: youtube_url,
+    },
+  }),
+  ...(transcript_url && {
+    transcript: {
+      '@type': 'Text',
+      url: transcript_url,
+    },
+  }),
+};
+---
+
+<ErrorBoundary fallback="Sorry, we couldn't load this episode. Please try again later.">
+  <article class="single-episode">
+    <header class="episode-header">
+      <div class="header-content">
+        <h1>{title}</h1>
+        <time datetime={pubDate.toISOString()}>{formattedDate}</time>
+        <div class="episode-meta">
+          <span class="duration">{formatDuration(duration)}</span>
+          {transcript_url && (
+            <a href={transcript_url} class="transcript-link">
+              View Transcript
+            </a>
+          )}
+          {youtube_url && (
+            <a href={youtube_url} class="youtube-link">
+              Watch on YouTube
+            </a>
+          )}
+        </div>
+      </div>
+      <Image
+        src={image}
+        alt={title}
+        width={800}
+        height={450}
+        class="episode-image"
+      />
+    </header>
+
+    <ErrorBoundary fallback="Audio player unavailable. Please try again later.">
+      <Player 
+        episodeId={episodeId}
+        title={title}
+        description={description}
+      />
+    </ErrorBoundary>
+
+    <div class="episode-content">
+      <div class="description">
+        {description}
+      </div>
+
+      {guests.length > 0 && (
+        <div class="guests-section">
+          <h2>Featured Guests</h2>
+          <div class="guests-grid">
+            {guests.map((guest) => (
+              <div class="guest-card">
+                <Image
+                  src={guest.image}
+                  alt={guest.name}
+                  width={100}
+                  height={100}
+                  class="guest-image"
+                />
+                <div class="guest-info">
+                  <h3>{guest.name}</h3>
+                  <p>{guest.title}</p>
+                  {guest.company && <p class="company">{guest.company}</p>}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {show_notes && (
+        <div class="show-notes">
+          <h2>Show Notes</h2>
+          <div set:html={show_notes} />
+        </div>
+      )}
+    </div>
+
+    <ErrorBoundary fallback="Additional episode information unavailable.">
+      <StructuredData
+        type="PodcastEpisode"
+        data={structuredData}
+        canonicalUrl={`${Astro.site}${language}/episodes/${episode.slug}`}
+        availableLanguages={availableLanguages}
+      />
+    </ErrorBoundary>
+  </article>
+</ErrorBoundary>
+
+<style>
+.single-episode {
+  @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+}
+
+.episode-header {
+  @apply mb-8;
+}
+
+.header-content {
+  @apply mb-6;
+}
+
+.header-content h1 {
+  @apply text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4;
+}
+
+.episode-meta {
+  @apply flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400;
+}
+
+.duration {
+  @apply flex items-center;
+}
+
+.transcript-link,
+.youtube-link {
+  @apply flex items-center text-blue-600 dark:text-blue-400 hover:underline;
+}
+
+.episode-image {
+  @apply w-full rounded-lg shadow-lg object-cover;
+}
+
+.episode-content {
+  @apply mt-8;
+}
+
+.description {
+  @apply prose dark:prose-invert max-w-none mb-8;
+}
+
+.guests-section {
+  @apply mt-12;
+}
+
+.guests-section h2 {
+  @apply text-2xl font-bold mb-6 text-gray-900 dark:text-white;
+}
+
+.guests-grid {
+  @apply grid gap-6 md:grid-cols-2;
+}
+
+.guest-card {
+  @apply flex items-start gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg;
+}
+
+.guest-image {
+  @apply rounded-full;
+}
+
+.guest-info {
+  @apply flex-1;
+}
+
+.guest-info h3 {
+  @apply font-semibold text-gray-900 dark:text-white mb-1;
+}
+
+.guest-info p {
+  @apply text-sm text-gray-600 dark:text-gray-400;
+}
+
+.guest-info .company {
+  @apply text-gray-500 dark:text-gray-500;
+}
+
+.show-notes {
+  @apply mt-12;
+}
+
+.show-notes h2 {
+  @apply text-2xl font-bold mb-6 text-gray-900 dark:text-white;
+}
+
+.show-notes :global(a) {
+  @apply text-blue-600 dark:text-blue-400 hover:underline;
+}
+
+.show-notes :global(ul) {
+  @apply list-disc list-inside;
+}
+
+.show-notes :global(ol) {
+  @apply list-decimal list-inside;
+}
+
+.show-notes :global(p) {
+  @apply mb-4;
+}
+</style>

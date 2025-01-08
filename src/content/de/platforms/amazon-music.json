@@ -1,0 +1,9 @@
+{
+  "id": "amazon-music",
+  "name": "Amazon Music",
+  "description": "",
+  "url": "https://music.amazon.com/podcasts/1a81b8b8-5216-42d7-9b3e-fa17b3ee8fdf",
+  "icon_url": "",
+  "language": "de",
+  "type": "platform"
+}

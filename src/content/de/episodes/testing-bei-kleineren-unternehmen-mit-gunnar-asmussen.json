@@ -1,0 +1,26 @@
+{
+  "id": "testing-bei-kleineren-unternehmen-mit-gunnar-asmussen",
+  "title": "Testing bei kleineren Unternehmen mit Gunnar Asmussen",
+  "description": "Heute sprechen wir mit Gunnar Asmussen, CMO & CTO von kurz-mal-weg,de, über Experimentation bei Unternehmen mit weniger Traffic. ",
+  "date": "2025-01-08T20:07:07.540Z",
+  "duration": 0,
+  "audio_url": "https://audio.transistor.fm/m/shows/28592/da0f241195f4b44b3f9f453d4ef0a07b.mp3?download=testing-bei-kleineren-unternehmen",
+  "transcript_url": "",
+  "show_notes": "<p id=\"\">Gunnar Asmussen, CMO &amp; CTO von <a href=\"http://kurz-mal-weg.de\">kurz-mal-weg,de</a>, spricht in dieser Folge über seinen Wechsel in die Reisebranche und seine Best Practices im Testing. </p><p id=\"\">Außerdem klärt er auf, ob es bei kleineren Unternehmen Sinn macht, A/B Tests zur Optimierung zu nutzen und worauf man dabei achten sollte. </p><p>‍</p><p id=\"\">Viel Spaß beim Hören! </p><p>‍</p><p id=\"\"><strong>Gunnar's Tipps zum Thema CRO:</strong></p><ul id=\"\"><li>LinkedIn: Samuel Hess und Jakub Linowski</li><li><a href=\"http://Goodui.org\" id=\"\">Goodui.org</a> &nbsp;</li><li><a href=\"http://guessthetest.com\" id=\"\">guessthetest.com</a></li></ul><p>‍</p>",
+  "guests": [
+    {
+      "id": "gunnar-asmussen",
+      "name": "gunnar-asmussen",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "de",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "",
+  "main_image": "src/assets/images/episodes/testing-bei-kleineren-unternehmen-mit-gunnar-asmussen.png",
+  "language": "de",
+  "type": "podcast"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "bayesian-expected-loss-telling-a-complete-story-with-data",
+  "title": "Bayesian expected loss: Telling a complete story with data",
+  "description": "We learn about the challenges with (frequentist) statistical significance and how we can tell a (more) complete and clear story with data on expected losses.",
+  "date": "2025-01-08T20:07:07.493Z",
+  "duration": 0,
+  "audio_url": "https://chrt.fm/track/D992D/media.transistor.fm/cb86ade1/88fe63b5.mp3",
+  "transcript_url": "",
+  "show_notes": "<div data-rt-embed-type='true'><iframe src=\"https://www.slideshare.net/slideshow/embed_code/key/u7pZvebkeqZxH3\" width=\"100%\" height=\"356\" frameborder=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" style=\"border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;\" allowfullscreen> </iframe></div><p>‍</p><ul><li>Iqbals article about this topic: <a href=\"https://towardsdatascience.com/what-comics-can-teach-us-a-b-experiment-analysis-c1ba70e50d0c\" target=\"_blank\"><strong>What comics can teach us about A/B experiment analysis</strong></a><em>‍</em></li><li><em>Chris Stucchio’s Expected Loss write up: </em><a href=\"https://www.chrisstucchio.com/blog/2014/bayesian_ab_decision_rule.html\"><em>https://www.chrisstucchio.com/blog/2014/bayesian_ab_decision_rule.html</em></a><em>‍</em></li><li><em>Chris’s Expected loss whitepaper -- </em><a href=\"https://cdn2.hubspot.net/hubfs/310840/VWO_SmartStats_technical_whitepaper.pdf\"><em>https://cdn2.hubspot.net/hubfs/310840/VWO_SmartStats_technical_whitepaper.pdf</em></a></li></ul>",
+  "guests": [
+    {
+      "id": "iqbal-ali",
+      "name": "iqbal-ali",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "en",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "",
+  "main_image": "src/assets/images/episodes/bayesian-expected-loss-telling-a-complete-story-with-data.png",
+  "language": "en",
+  "type": "podcast"
+}

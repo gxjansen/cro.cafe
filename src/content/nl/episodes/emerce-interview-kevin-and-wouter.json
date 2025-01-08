@@ -1,0 +1,36 @@
+{
+  "id": "emerce-interview-kevin-and-wouter",
+  "title": "Emerce Interview: Kevin & Wouter",
+  "description": "Verslag van Emerce Conversion 2019. In dit segment praten Bart van der Meer en Guido met Wouter Wensing van ISM eCompany en Kevin Anderson van ING.\n",
+  "date": "2025-01-08T20:07:07.531Z",
+  "duration": 0,
+  "audio_url": "https://chtbl.com/track/D992D/media.transistor.fm/4350e9a8.mp3",
+  "transcript_url": "",
+  "show_notes": "<p><a href=\"https://www.cro.cafe/conversion19\">https://www.cro.cafe/conversion19</a></p>",
+  "guests": [
+    {
+      "id": "kevin-anderson",
+      "name": "kevin-anderson",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    },
+    {
+      "id": "wouter-wensing",
+      "name": "wouter-wensing",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "https://youtu.be/zL4RyyXkH94",
+  "main_image": "src/assets/images/episodes/emerce-interview-kevin-and-wouter.jpeg",
+  "language": "nl",
+  "type": "podcast"
+}

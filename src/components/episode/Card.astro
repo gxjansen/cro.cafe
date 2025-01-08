@@ -1,0 +1,108 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import ErrorBoundary from '../common/ErrorBoundary.astro';
+import { validateProps, EpisodeCardPropsSchema } from '~/utils/component-validation';
+
+interface Props {
+  episode: CollectionEntry<'episodes'>;
+  showGuests?: boolean;
+}
+
+// Validate props
+const props = validateProps(EpisodeCardPropsSchema, Astro.props);
+const { episode, showGuests = true } = props;
+const { title, description, pubDate, image, guests, language } = episode.data;
+
+// Format date based on language
+const formattedDate = new Date(pubDate).toLocaleDateString(language, {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+// Truncate description if it's too long
+const truncatedDescription = description.length > 150 
+  ? `${description.slice(0, 150)}...` 
+  : description;
+---
+
+<ErrorBoundary fallback="Episode information unavailable">
+  <article class="episode-card">
+  <a href={`/${language}/episodes/${episode.slug}`} class="card-link">
+    <div class="card-image">
+      <Image
+        src={image}
+        alt={title}
+        width={400}
+        height={225}
+        class="object-cover w-full h-full"
+      />
+    </div>
+    <div class="card-content">
+      <h3 class="card-title">{title}</h3>
+      <time datetime={pubDate.toISOString()} class="card-date">
+        {formattedDate}
+      </time>
+      <p class="card-description">{truncatedDescription}</p>
+      {showGuests && guests.length > 0 && (
+        <div class="card-guests">
+          <span class="guests-label">With:</span>
+          <span class="guests-names">
+            {guests.map((guest, index) => (
+              <>
+                {index > 0 && ', '}
+                {guest.name}
+              </>
+            ))}
+          </span>
+        </div>
+      )}
+    </div>
+  </a>
+  </article>
+</ErrorBoundary>
+
+<style>
+.episode-card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden
+         transition-transform duration-300 hover:transform hover:scale-[1.02];
+}
+
+.card-link {
+  @apply block h-full no-underline;
+}
+
+.card-image {
+  @apply relative w-full aspect-video overflow-hidden;
+}
+
+.card-content {
+  @apply p-4;
+}
+
+.card-title {
+  @apply text-xl font-bold mb-2 text-gray-900 dark:text-white
+         line-clamp-2 hover:text-blue-600 dark:hover:text-blue-400;
+}
+
+.card-date {
+  @apply block text-sm text-gray-500 dark:text-gray-400 mb-2;
+}
+
+.card-description {
+  @apply text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-3;
+}
+
+.card-guests {
+  @apply text-sm text-gray-500 dark:text-gray-400;
+}
+
+.guests-label {
+  @apply font-medium mr-1;
+}
+
+.guests-names {
+  @apply text-gray-700 dark:text-gray-300;
+}
+</style>

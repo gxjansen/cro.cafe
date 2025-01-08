@@ -1,0 +1,26 @@
+{
+  "id": "dutch-cro-awards-organisatie",
+  "title": "Dutch CRO Awards: organisatie",
+  "description": "Henk-Jan - oprichter van Fibéo - had zijn kantoor ter beschikking gesteld voor dit evenement en na afloop sprak Guido even met hem voor een korte evaluatie.",
+  "date": "2025-01-08T20:07:07.532Z",
+  "duration": 0,
+  "audio_url": "https://chtbl.com/track/D992D/media.transistor.fm/c8d54301/aa68e3c5.mp3",
+  "transcript_url": "",
+  "show_notes": "<p>In een eerdere aflevering spraken we al uitgebreid met Henk-Jan over het doen van gebruikersonderzoek, deze aflevering kun je hier terugvinden: <a href=\"https://gate.sc/?url=https%3A%2F%2Fwww.cro.cafe%2Fpodcast%2Fgebruikersonderzoek-met-fibeo&token=a33116-1-1570708922568\" target=\"_blank\">www.cro.cafe/podcast/gebruikersonderzoek-met-fibeo</a></p><p>Meer over de Dutch CRO Awards: <a href=\"https://gate.sc/?url=https%3A%2F%2Fdutchcroawards.nl%2F&token=b45d95-1-1570708922568\" target=\"_blank\">dutchcroawards.nl/</a></p>",
+  "guests": [
+    {
+      "id": "henk-jan-journee",
+      "name": "henk-jan-journee",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "",
+  "main_image": "src/assets/images/episodes/dutch-cro-awards-organisatie.jpeg",
+  "language": "nl",
+  "type": "podcast"
+}

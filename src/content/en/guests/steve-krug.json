@@ -1,0 +1,10 @@
+{
+  "id": "steve-krug",
+  "name": "Steve Krug",
+  "role": "Consultant",
+  "bio": "",
+  "image_url": "src/assets/images/guests/steve-krug.jpeg",
+  "social_links": [],
+  "language": "en",
+  "type": "guest"
+}

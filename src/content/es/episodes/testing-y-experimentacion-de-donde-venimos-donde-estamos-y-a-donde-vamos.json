@@ -1,0 +1,26 @@
+{
+  "id": "testing-y-experimentacion-de-donde-venimos-donde-estamos-y-a-donde-vamos",
+  "title": "Testing y experimentación, de donde venimos, donde estamos y a donde vamos",
+  "description": "En este episodio conversamos con Victor de la Iglesia sobre el actual estado de las herramientas de testing y experimentación que existen en el mercado",
+  "date": "2025-01-08T20:07:07.547Z",
+  "duration": 0,
+  "audio_url": "https://chtbl.com/track/D992D/media.transistor.fm/585c1fc7/78fe32ce.mp3",
+  "transcript_url": "<p>Victor de la Iglesia es Data &amp; Insights Solutions Consultant en Adobe, y con él hablamos en este episodio sobre testing y experimentación, de donde venimos, donde estamos y a donde vamos.</p><p>Algunas de las preguntas y cuestiones que tratamos en este episodio son:</p><ul><li>El testing y la experimentación se popularizaron en el ecosistema digital a partir de 2008, con la aparición de Google Webiste Optimizer. Tú trabajas en Adobe, que tiene soluciones como Target, ¿cuales son las diferencias entre las distintas herramientas que hay en el mercado y cómo ha sido su evolución?</li><li>¿Los test y los experimentos son necesarios en cualquier organización que apueste por un modelo de negocio digital?</li><li>La mayoría de herramientas de test han evolucionado a la personalización, y Target no es una excepción, ¿es la personalización el futuro inmediato de la experiencia digital?</li><li>¿Cómo funciona una herramienta de testing, cómo funciona Target? Que hay por debajo que no vemos.</li><li>Al trabajar para múltiples clientes que tienen las soluciones de Adobe implementadas, ¿cuales has visto que son los errores comunes?, ¿y los aciertos?</li><li>¿Cuales son los test o experimentos que una empresa no puede dejar de hacer y por qué?</li><li>La interpretación de los datos que nos ofrece un test o experimento es algo que puede marcar la diferencia entre sacar un apredizaje de valor o no, ¿estamos demasiado obsesionados con el dato como para dedicarnos al análisis del mismo?</li></ul>",
+  "show_notes": "<ul><li><a href=\"https://www.linkedin.com/in/victordelaiglesia/\"><em>https://www.linkedin.com/in/victordelaiglesia/ </em></a></li><li><a href=\"https://www.victordelaiglesia.com/\"><em>https://www.victordelaiglesia.com/ </em></a></li></ul>",
+  "guests": [
+    {
+      "id": "victor-de-la-iglesia",
+      "name": "victor-de-la-iglesia",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "es",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "",
+  "main_image": "src/assets/images/episodes/testing-y-experimentacion-de-donde-venimos-donde-estamos-y-a-donde-vamos.jpeg",
+  "language": "es",
+  "type": "podcast"
+}

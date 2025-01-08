@@ -1,0 +1,10 @@
+{
+  "id": "daniel-kahneman",
+  "name": "Daniel Kahneman",
+  "role": "Professor of Psychology",
+  "bio": "",
+  "image_url": "src/assets/images/guests/daniel-kahneman.jpeg",
+  "social_links": [],
+  "language": "en",
+  "type": "guest"
+}

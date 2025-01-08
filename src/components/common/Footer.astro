@@ -1,0 +1,251 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  currentLang: 'en' | 'de' | 'es' | 'nl';
+}
+
+const { currentLang } = Astro.props;
+
+// Get platforms for the current language
+const platforms = await getCollection('platforms', (entry) => entry.data.language === currentLang);
+
+// Footer navigation items
+const footerNavItems = [
+  { href: `/${currentLang}/about`, label: 'About' },
+  { href: `/${currentLang}/episodes`, label: 'Episodes' },
+  { href: `/${currentLang}/guests`, label: 'Guests' },
+  { href: `/${currentLang}/contact`, label: 'Contact' },
+];
+
+// Legal links
+const legalLinks = [
+  { href: `/${currentLang}/privacy`, label: 'Privacy Policy' },
+  { href: `/${currentLang}/terms`, label: 'Terms of Use' },
+  { href: `/${currentLang}/imprint`, label: 'Imprint' },
+];
+
+// Get current year for copyright
+const currentYear = new Date().getFullYear();
+
+// Translations for footer text
+const translations = {
+  en: {
+    listenOn: 'Listen on',
+    followUs: 'Follow us',
+    subscribe: 'Subscribe to our newsletter',
+    subscribeText: 'Get the latest episodes and CRO insights directly in your inbox.',
+    emailPlaceholder: 'Enter your email',
+    subscribeButton: 'Subscribe',
+  },
+  de: {
+    listenOn: 'Höre auf',
+    followUs: 'Folge uns',
+    subscribe: 'Newsletter abonnieren',
+    subscribeText: 'Erhalte die neuesten Episoden und CRO-Insights direkt in deinen Posteingang.',
+    emailPlaceholder: 'E-Mail eingeben',
+    subscribeButton: 'Abonnieren',
+  },
+  es: {
+    listenOn: 'Escucha en',
+    followUs: 'Síguenos',
+    subscribe: 'Suscríbete a nuestro boletín',
+    subscribeText: 'Recibe los últimos episodios y conocimientos de CRO directamente en tu bandeja de entrada.',
+    emailPlaceholder: 'Ingresa tu email',
+    subscribeButton: 'Suscribirse',
+  },
+  nl: {
+    listenOn: 'Luister op',
+    followUs: 'Volg ons',
+    subscribe: 'Abonneer op onze nieuwsbrief',
+    subscribeText: 'Ontvang de laatste afleveringen en CRO-inzichten direct in je inbox.',
+    emailPlaceholder: 'Voer je e-mail in',
+    subscribeButton: 'Abonneren',
+  },
+}[currentLang];
+---
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <!-- Main footer content -->
+    <div class="footer-main">
+      <!-- Logo and description -->
+      <div class="footer-brand">
+        <img 
+          src="/crocafe-logo.svg" 
+          alt="CRO.CAFE" 
+          width="160" 
+          height="53"
+          class="footer-logo"
+        />
+        <p class="footer-description">
+          CRO.CAFE - The Conversion Rate Optimization Podcast
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div class="footer-nav">
+        <h3>Navigation</h3>
+        <ul>
+          {footerNavItems.map(({ href, label }) => (
+            <li>
+              <a href={href} class="footer-link">{label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Platforms -->
+      <div class="footer-platforms">
+        <h3>{translations.listenOn}</h3>
+        <ul class="platform-grid">
+          {platforms.map((platform) => (
+            <li>
+              <a 
+                href={platform.data.url}
+                class="platform-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                title={platform.data.name}
+              >
+                <img 
+                  src={platform.data.icon_url} 
+                  alt={platform.data.name}
+                  width="32"
+                  height="32"
+                  class="platform-icon"
+                />
+                <span class="platform-name">{platform.data.name}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <h3>{translations.subscribe}</h3>
+        <p>{translations.subscribeText}</p>
+        <form class="newsletter-form" action="/api/subscribe" method="POST">
+          <input
+            type="email"
+            name="email"
+            placeholder={translations.emailPlaceholder}
+            required
+            class="email-input"
+          />
+          <button type="submit" class="subscribe-button">
+            {translations.subscribeButton}
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+      <div class="copyright">
+        © {currentYear} CRO.CAFE. All rights reserved.
+      </div>
+      <div class="legal-links">
+        {legalLinks.map(({ href, label }, index) => (
+          <>
+            {index > 0 && <span class="separator">·</span>}
+            <a href={href} class="legal-link">{label}</a>
+          </>
+        ))}
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+.site-footer {
+  @apply bg-gray-900 text-gray-300 py-12 mt-16;
+}
+
+.footer-content {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.footer-main {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8;
+}
+
+.footer-brand {
+  @apply space-y-4;
+}
+
+.footer-logo {
+  @apply h-8 w-auto;
+}
+
+.footer-description {
+  @apply text-sm text-gray-400;
+}
+
+.footer-nav,
+.footer-platforms,
+.footer-newsletter {
+  @apply space-y-4;
+}
+
+.footer-nav h3,
+.footer-platforms h3,
+.footer-newsletter h3 {
+  @apply text-white text-lg font-semibold mb-4;
+}
+
+.footer-link {
+  @apply text-gray-400 hover:text-white transition-colors block py-1;
+}
+
+.platform-grid {
+  @apply grid grid-cols-2 gap-3;
+}
+
+.platform-link {
+  @apply flex items-center space-x-2 text-gray-400 hover:text-white transition-colors;
+}
+
+.platform-icon {
+  @apply w-6 h-6;
+}
+
+.platform-name {
+  @apply text-sm;
+}
+
+.newsletter-form {
+  @apply flex flex-col space-y-2;
+}
+
+.email-input {
+  @apply px-4 py-2 bg-gray-800 border border-gray-700 rounded-md
+         text-white placeholder-gray-400 focus:outline-none
+         focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+.subscribe-button {
+  @apply px-4 py-2 bg-blue-600 text-white rounded-md
+         hover:bg-blue-700 transition-colors focus:outline-none
+         focus:ring-2 focus:ring-blue-500 focus:ring-offset-2
+         focus:ring-offset-gray-900;
+}
+
+.footer-bottom {
+  @apply flex flex-col sm:flex-row justify-between items-center
+         pt-8 mt-8 border-t border-gray-800 text-sm text-gray-400;
+}
+
+.legal-links {
+  @apply flex items-center space-x-2 mt-4 sm:mt-0;
+}
+
+.legal-link {
+  @apply hover:text-white transition-colors;
+}
+
+.separator {
+  @apply text-gray-600;
+}
+</style>

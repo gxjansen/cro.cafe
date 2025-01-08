@@ -1,7 +1,9 @@
 import { parse } from 'csv-parse/sync';
-import fs from 'fs';
+import * as fs from 'fs';
+import * as path from 'path';
 import type { Episode, Person, Platform, Quote } from '../types';
-import { generateSlug, validateSlug } from './permalinks';
+import { generateSlug } from './permalinks';
+import { downloadImage } from './images';
 
 const CSV_OPTIONS = {
   columns: true,
@@ -13,275 +15,317 @@ const CSV_OPTIONS = {
   bom: true,
 };
 
-// Define interfaces for CSV data
-interface EpisodeCSV {
-  Title: string;
-  Description: string;
-  Date: string;
-  Duration: string;
-  'Audio URL': string;
-  'Transcript URL': string;
-  Guests: string;
-  Platforms: string;
-  Quotes: string;
+// Define interfaces for CSV data with language-specific column names
+interface BaseCSV {
+  [key: string]: string;
 }
 
-interface PersonCSV {
-  Name: string;
-  Role: string;
-  Bio: string;
-  'Image URL': string;
-  'Social Links': string;
+interface EpisodeCSV extends BaseCSV {
+  Title?: string;
+  Título?: string; // Spanish
+  Titel?: string; // German/Dutch
+  Description?: string;
+  Descripción?: string; // Spanish
+  Beschreibung?: string; // German
+  Beschrijving?: string; // Dutch
+  Date?: string;
+  Fecha?: string; // Spanish
+  Datum?: string; // German/Dutch
+  Duration?: string;
+  Duración?: string; // Spanish
+  Dauer?: string; // German
+  Duur?: string; // Dutch
+  'Audio URL'?: string;
+  'Transcript URL'?: string;
+  'YouTube URL'?: string;
+  'Youtube URL'?: string;
+  'Main Image'?: string;
+  'Main image'?: string;
+  Image?: string;
+  'Show Notes'?: string;
+  'Show notes'?: string;
+  Notes?: string;
 }
 
-interface PlatformCSV {
-  Name: string;
-  Description: string;
-  URL: string;
-  'Icon URL': string;
+interface PersonCSV extends BaseCSV {
+  Name?: string;
+  Nombre?: string; // Spanish
+  Role?: string;
+  Rol?: string; // Spanish
+  Rolle?: string; // German
+  Bio?: string;
+  Biografía?: string; // Spanish
+  Biografie?: string; // German/Dutch
+  'Image URL'?: string;
+  'URL de imagen'?: string; // Spanish
+  'Bild URL'?: string; // German
+  'Afbeelding URL'?: string; // Dutch
+  'Social Links'?: string;
+  'Enlaces sociales'?: string; // Spanish
+  'Soziale Links'?: string; // German
+  'Sociale links'?: string; // Dutch
+  Picture?: string; // Alternative image field
 }
 
-interface QuoteCSV {
-  Text: string;
-  'Episode Title': string;
-  'Timestamp (s)': string;
-  'Guest Name': string;
+interface PlatformCSV extends BaseCSV {
+  Name?: string;
+  Nombre?: string; // Spanish
+  Description?: string;
+  Descripción?: string; // Spanish
+  Beschreibung?: string; // German
+  Beschrijving?: string; // Dutch
+  URL?: string;
+  'Icon URL'?: string;
+  'URL del icono'?: string; // Spanish
+  'Bild Icon URL'?: string; // German
+  'Icoon URL'?: string; // Dutch
 }
 
-// Type guards
-function isPersonArray(data: unknown): data is Person[] {
-  return (
-    Array.isArray(data) &&
-    data.every(
-      (item): item is Person =>
-        typeof item === 'object' &&
-        item !== null &&
-        'id' in item &&
-        'name' in item &&
-        'role' in item &&
-        'bio' in item &&
-        'image_url' in item &&
-        'social_links' in item &&
-        'language' in item &&
-        typeof item.id === 'string' &&
-        typeof item.name === 'string' &&
-        typeof item.role === 'string' &&
-        typeof item.bio === 'string' &&
-        typeof item.image_url === 'string' &&
-        Array.isArray(item.social_links) &&
-        typeof item.language === 'string'
-    )
-  );
+interface QuoteCSV extends BaseCSV {
+  Text?: string;
+  Texto?: string; // Spanish
+  'Episode Title'?: string;
+  'Título del episodio'?: string; // Spanish
+  Episodentitel?: string; // German
+  'Aflevering titel'?: string; // Dutch
+  'Timestamp (s)'?: string;
+  'Guest Name'?: string;
+  'Nombre del invitado'?: string; // Spanish
+  Gastname?: string; // German
+  Gastnaam?: string; // Dutch
 }
 
-function isPlatformArray(data: unknown): data is Platform[] {
-  return (
-    Array.isArray(data) &&
-    data.every(
-      (item): item is Platform =>
-        typeof item === 'object' &&
-        item !== null &&
-        'id' in item &&
-        'name' in item &&
-        'description' in item &&
-        'url' in item &&
-        'icon_url' in item &&
-        'language' in item &&
-        'type' in item &&
-        typeof item.id === 'string' &&
-        typeof item.name === 'string' &&
-        typeof item.description === 'string' &&
-        typeof item.url === 'string' &&
-        typeof item.icon_url === 'string' &&
-        typeof item.language === 'string' &&
-        typeof item.type === 'string'
-    )
-  );
-}
-
-function isQuoteArray(data: unknown): data is Quote[] {
-  return (
-    Array.isArray(data) &&
-    data.every(
-      (item): item is Quote =>
-        typeof item === 'object' &&
-        item !== null &&
-        'id' in item &&
-        'text' in item &&
-        'timestamp' in item &&
-        'episode' in item &&
-        'author' in item &&
-        'language' in item &&
-        'type' in item &&
-        typeof item.id === 'string' &&
-        typeof item.text === 'string' &&
-        typeof item.timestamp === 'number' &&
-        typeof item.language === 'string' &&
-        typeof item.type === 'string' &&
-        typeof item.episode === 'object' &&
-        typeof item.author === 'object'
-    )
-  );
-}
-
-/**
- * Generate a unique slug for a given title and type
- * @param title The title to generate a slug from
- * @param type The content type (e.g., 'episodes', 'guests', 'quotes')
- * @param language The language code
- * @returns A unique slug
- */
-function generateUniqueSlug(title: string, type: string, language: string): string {
-  const slug = generateSlug(title);
-  let counter = 1;
-  let currentSlug = slug;
-
-  // Keep trying until we find a unique slug
-  while (!validateSlug(currentSlug, type, language)) {
-    currentSlug = `${slug}-${counter}`;
-    counter++;
+// Helper function to get value from multilingual fields
+function getFieldValue(data: BaseCSV, fields: string[]): string {
+  for (const field of fields) {
+    if (data[field]) {
+      return data[field];
+    }
   }
-
-  return currentSlug;
+  return '';
 }
 
-export function importEpisodes(filePath: string): Episode[] {
+// Helper function to write content files
+function writeContentFile(
+  data: Episode | Person | Platform | Quote,
+  type: string,
+  language: string
+) {
+  const contentDir = `src/content/${language}/${type}`;
+  if (!fs.existsSync(contentDir)) {
+    fs.mkdirSync(contentDir, { recursive: true });
+  }
+  fs.writeFileSync(`${contentDir}/${data.id}.json`, JSON.stringify(data, null, 2));
+}
+
+function generateUniqueSlug(title: string, _type: string, _language: string): string {
+  return generateSlug(title);
+}
+
+export async function importEpisodes(filePath: string, language: string): Promise<Episode[]> {
   try {
     const content = fs.readFileSync(filePath, 'utf-8');
-    console.log('Raw content from episodes CSV:', content);
     const episodes = parse(content, CSV_OPTIONS) as EpisodeCSV[];
 
-    return episodes.map((episode) => {
-      const title = episode.Title;
-      if (!title) {
-        throw new Error('Episode title is required');
-      }
-
-      const slug = generateUniqueSlug(title, 'episodes', 'en');
-
-      // Parse and validate guests
-      let guests: Person[] = [];
-      try {
-        const parsedGuests = JSON.parse(episode.Guests || '[]');
-        if (!isPersonArray(parsedGuests)) {
-          throw new Error(`Invalid JSON format for Guests in episode: ${title}`);
+    return Promise.all(
+      episodes.map(async (episode) => {
+        const title = getFieldValue(episode, ['Title', 'Título', 'Titel', 'Name & SERP Title']);
+        if (!title) {
+          throw new Error('Episode title is required');
         }
-        guests = parsedGuests;
-      } catch (error) {
-        console.error(`Error parsing guests for episode ${title}:`, error);
-        guests = [];
-      }
 
-      // Parse and validate platforms
-      let platforms: Platform[] = [];
-      try {
-        const parsedPlatforms = JSON.parse(episode.Platforms || '[]');
-        if (!isPlatformArray(parsedPlatforms)) {
-          throw new Error(`Invalid JSON format for Platforms in episode: ${title}`);
+        const slug = generateUniqueSlug(title, 'episodes', language);
+
+        // Process guests into Person objects
+        const guestNames = getFieldValue(episode, [
+          'Guests',
+          'Invitados',
+          'Gäste',
+          'Gasten',
+          'All guests (incl main guest)',
+        ])
+          .split(/[,;]/)
+          .map((name) => name.trim())
+          .filter(Boolean);
+
+        const guests: Person[] = guestNames.map((name) => ({
+          id: generateUniqueSlug(name, 'guests', language),
+          name,
+          role: 'Guest',
+          bio: '',
+          image_url: '',
+          social_links: [],
+          language,
+          type: 'guest',
+        }));
+
+        // Get the remote image URL
+        const remoteImageUrl = getFieldValue(episode, ['Main Image', 'Main image', 'Image']) || '';
+
+        // Download and store the image locally if a URL is provided
+        let localImagePath = '';
+        if (remoteImageUrl) {
+          try {
+            const episodesImageDir = path.join('src', 'assets', 'images', 'episodes');
+            const fileName = `${slug}${path.extname(new URL(remoteImageUrl).pathname)}`;
+            localImagePath = await downloadImage(remoteImageUrl, episodesImageDir, fileName);
+            // Convert to relative path from project root
+            localImagePath = localImagePath.replace(/^.*?src\//, 'src/');
+          } catch (error) {
+            console.error(`Error downloading image for episode ${title}:`, error);
+            // Keep the remote URL if download fails
+            localImagePath = remoteImageUrl;
+          }
         }
-        platforms = parsedPlatforms;
-      } catch (error) {
-        console.error(`Error parsing platforms for episode ${title}:`, error);
-        platforms = [];
-      }
 
-      // Parse and validate quotes
-      let quotes: Quote[] = [];
-      try {
-        const parsedQuotes = JSON.parse(episode.Quotes || '[]');
-        if (!isQuoteArray(parsedQuotes)) {
-          throw new Error(`Invalid JSON format for Quotes in episode: ${title}`);
-        }
-        quotes = parsedQuotes;
-      } catch (error) {
-        console.error(`Error parsing quotes for episode ${title}:`, error);
-        quotes = [];
-      }
+        const episodeData = {
+          id: slug,
+          title,
+          description:
+            getFieldValue(episode, [
+              'Description',
+              'Descripción',
+              'Beschreibung',
+              'Beschrijving',
+              'Intro & SERP Meta Description',
+            ]) || '',
+          date: new Date(
+            getFieldValue(episode, ['Date', 'Fecha', 'Datum', 'Publication date']) ||
+              new Date().toISOString()
+          ),
+          duration:
+            Number(getFieldValue(episode, ['Duration', 'Duración', 'Dauer', 'Duur']) || '0') * 60,
+          audio_url: episode['directmp3link'] || episode['Audio URL'] || '',
+          transcript_url: episode['Transcript'] || '',
+          show_notes: episode['Shownotes/ extra info'] || '',
+          guests,
+          youtube_url: getFieldValue(episode, ['YouTube URL', 'Youtube URL', 'Youtube Embed code'])
+            ? `https://youtu.be/${getFieldValue(episode, ['YouTube URL', 'Youtube URL', 'Youtube Embed code'])}`
+            : '',
+          main_image: localImagePath,
+          language,
+          type: 'podcast',
+        };
 
-      return {
-        id: slug,
-        title: title,
-        description: episode.Description || '',
-        date: new Date(episode.Date || new Date().toISOString()),
-        duration: Number(episode.Duration || '0') * 60, // Convert minutes to seconds
-        audio_url: episode['Audio URL'] || '',
-        transcript_url: episode['Transcript URL'] || '',
-        guests,
-        platforms,
-        quotes,
-        language: 'en',
-        type: 'podcast',
-      };
-    });
+        console.log(`Episode: ${title}, YouTube URL: ${getFieldValue(episode, ['YouTube URL'])}`);
+
+        // Write episode content file
+        writeContentFile(episodeData, 'episodes', language);
+        return episodeData;
+      })
+    );
   } catch (error) {
     console.error(error);
     throw error;
   }
 }
 
-export function importPeople(filePath: string): Person[] {
+export async function importPeople(filePath: string, language: string): Promise<Person[]> {
   try {
     const content = fs.readFileSync(filePath, 'utf-8');
     const people = parse(content, CSV_OPTIONS) as PersonCSV[];
 
-    return people.map((person) => {
-      if (!person.Name) {
-        throw new Error('Person name is required');
-      }
-
-      const name = person.Name;
-      const slug = generateUniqueSlug(name, 'guests', 'en');
-
-      let socialLinks = [];
-      try {
-        socialLinks = JSON.parse(person['Social Links'] || '[]');
-        if (!Array.isArray(socialLinks)) {
-          throw new Error('Social links must be an array');
+    return Promise.all(
+      people.map(async (person) => {
+        const name = getFieldValue(person, ['Name', 'Nombre']);
+        if (!name) {
+          throw new Error('Person name is required');
         }
-      } catch (error) {
-        console.error(`Error parsing social links for ${person.Name}:`, error);
-        socialLinks = [];
-      }
 
-      return {
-        id: slug,
-        name: person.Name,
-        role: person.Role || 'Guest',
-        bio: person.Bio || '',
-        image_url: person['Image URL'] || '',
-        social_links: socialLinks,
-        language: 'en',
-        type: 'guest',
-      };
-    });
+        const slug = generateUniqueSlug(name, 'guests', language);
+
+        let socialLinks: string[] = [];
+        try {
+          const socialLinksData = getFieldValue(person, [
+            'Social Links',
+            'Enlaces sociales',
+            'Soziale Links',
+            'Sociale links',
+          ]);
+          socialLinks = JSON.parse(socialLinksData || '[]');
+          if (!Array.isArray(socialLinks)) {
+            throw new Error('Social links must be an array');
+          }
+        } catch (error) {
+          console.error(`Error parsing social links for ${name}:`, error);
+          socialLinks = [];
+        }
+
+        // Get the remote image URL
+        const remoteImageUrl =
+          person['Image URL'] ||
+          person.Picture ||
+          person['URL de imagen'] ||
+          person['Bild URL'] ||
+          person['Afbeelding URL'] ||
+          '';
+
+        // Download and store the image locally if a URL is provided
+        let localImagePath = '';
+        if (remoteImageUrl) {
+          try {
+            const guestsImageDir = path.join('src', 'assets', 'images', 'guests');
+            const fileName = `${slug}${path.extname(new URL(remoteImageUrl).pathname)}`;
+            localImagePath = await downloadImage(remoteImageUrl, guestsImageDir, fileName);
+            // Convert to relative path from project root
+            localImagePath = localImagePath.replace(/^.*?src\//, 'src/');
+          } catch (error) {
+            console.error(`Error downloading image for ${name}:`, error);
+            // Keep the remote URL if download fails
+            localImagePath = remoteImageUrl;
+          }
+        }
+
+        const personData = {
+          id: slug,
+          name,
+          role: getFieldValue(person, ['Role', 'Rol', 'Rolle', 'Function/Title']) || 'Guest',
+          bio: getFieldValue(person, ['Bio', 'Biografía', 'Biografie']) || '',
+          image_url: localImagePath,
+          social_links: socialLinks,
+          language,
+          type: 'guest',
+        };
+
+        // Write person content file
+        writeContentFile(personData, 'guests', language);
+        return personData;
+      })
+    );
   } catch (error) {
     console.error(`Error reading CSV file at ${filePath}:`, error);
     throw error;
   }
 }
 
-export function importPlatforms(filePath: string): Platform[] {
+export async function importPlatforms(filePath: string, language: string): Promise<Platform[]> {
   try {
     const content = fs.readFileSync(filePath, 'utf-8');
     const platforms = parse(content, CSV_OPTIONS) as PlatformCSV[];
 
     return platforms.map((platform) => {
-      if (!platform.Name) {
+      const name = getFieldValue(platform, ['Name', 'Nombre']);
+      if (!name) {
         throw new Error('Platform name is required');
       }
 
-      const name = platform.Name;
-      const slug = generateUniqueSlug(name, 'platforms', 'en');
+      const slug = generateUniqueSlug(name, 'platforms', language);
 
-      return {
+      const platformData = {
         id: slug,
-        name: platform.Name,
-        description: platform.Description || '',
+        name,
+        description:
+          getFieldValue(platform, ['Description', 'Descripción', 'Beschreibung', 'Beschrijving']) ||
+          '',
         url: platform.URL || '',
-        icon_url: platform['Icon URL'] || '',
-        language: 'en',
+        icon_url: getFieldValue(platform, ['Icon URL', 'URL del icono', 'Icoon URL']) || '',
+        language,
         type: 'platform',
       };
+
+      // Write platform content file
+      writeContentFile(platformData, 'platforms', language);
+      return platformData;
     });
   } catch (error) {
     console.error(`Error reading CSV file at ${filePath}:`, error);
@@ -289,56 +333,110 @@ export function importPlatforms(filePath: string): Platform[] {
   }
 }
 
-export function importQuotes(filePath: string): Quote[] {
+export async function importQuotes(filePath: string, language: string): Promise<Quote[]> {
   try {
     const content = fs.readFileSync(filePath, 'utf-8');
     const quotes = parse(content, CSV_OPTIONS) as QuoteCSV[];
 
-    const people = importPeople('project/current-site-data/English/CRO.CAFE - People.csv');
-    const episodes = importEpisodes('project/current-site-data/English/CRO.CAFE - Episodes.csv');
+    // Import people and episodes from the same language
+    const languageDir =
+      language === 'en'
+        ? 'English'
+        : language === 'es'
+          ? 'Spanish'
+          : language === 'de'
+            ? 'German'
+            : 'Dutch';
 
-    return quotes.map((quote) => {
-      if (!quote.Text) {
-        throw new Error('Quote text is required');
-      }
-      if (!quote['Episode Title']) {
-        throw new Error('Episode title is required');
-      }
-      if (!quote['Guest Name']) {
-        throw new Error('Guest name is required');
-      }
+    // Get the correct filename based on language
+    const peopleFileName =
+      language === 'en'
+        ? 'CRO.CAFE - People.csv'
+        : language === 'es'
+          ? 'CRO.CAFE Español - People.csv'
+          : language === 'de'
+            ? 'CRO.CAFE Deutsch - People.csv'
+            : 'CRO.CAFE Nederlands - Gasten.csv';
 
-      const episodeTitle = quote['Episode Title'];
-      const guestName = quote['Guest Name'];
-      const quoteText = quote.Text;
+    const people = await importPeople(
+      `project/current-site-data/${languageDir}/cleaned/${peopleFileName}`,
+      language
+    );
+    // Get the correct episodes filename based on language
+    const episodesFileName =
+      language === 'en'
+        ? 'CRO.CAFE - Episodes.csv'
+        : language === 'es'
+          ? 'CRO.CAFE Español - Episodes.csv'
+          : language === 'de'
+            ? 'CRO.CAFE Deutsch - Episodes.csv'
+            : 'CRO.CAFE Nederlands - Afleveringen (1).csv';
 
-      const slug = generateUniqueSlug(`${episodeTitle}-${quoteText}`, 'quotes', 'en');
+    const episodes = await importEpisodes(
+      `project/current-site-data/${languageDir}/cleaned/${episodesFileName}`,
+      language
+    );
 
-      const author = people.find((person) => person.name === guestName);
-      if (!author) {
-        throw new Error(`Author not found for quote: ${quoteText}`);
-      }
+    return quotes
+      .map((quote) => {
+        const text = getFieldValue(quote, ['Text', 'Texto']);
+        if (!text) {
+          console.warn('Skipping quote with empty text');
+          return null;
+        }
 
-      const episode = episodes.find((ep) => ep.title === episodeTitle);
-      if (!episode) {
-        throw new Error(`Episode not found for quote: ${quoteText}`);
-      }
+        const episodeTitle = getFieldValue(quote, [
+          'Episode Title',
+          'Título del episodio',
+          'Episodentitel',
+          'Aflevering titel',
+        ]);
+        if (!episodeTitle) {
+          throw new Error('Episode title is required');
+        }
 
-      const timestamp = Number(quote['Timestamp (s)'] || '0');
-      if (isNaN(timestamp)) {
-        console.warn(`Invalid timestamp for quote: ${quoteText}, defaulting to 0`);
-      }
+        const guestName = getFieldValue(quote, [
+          'Guest Name',
+          'Nombre del invitado',
+          'Gastname',
+          'Gastnaam',
+        ]);
+        if (!guestName) {
+          throw new Error('Guest name is required');
+        }
 
-      return {
-        id: slug,
-        text: quoteText,
-        timestamp: isNaN(timestamp) ? 0 : timestamp,
-        episode,
-        author,
-        language: 'en',
-        type: 'quote',
-      };
-    });
+        const slug = generateUniqueSlug(`${episodeTitle}-${text}`, 'quotes', language);
+
+        const author = people.find((person) => person.name === guestName);
+        if (!author) {
+          throw new Error(`Author not found for quote: ${text}`);
+        }
+
+        const episode = episodes.find((ep: Episode) => ep.title === episodeTitle) || {
+          id: generateUniqueSlug(episodeTitle, 'episodes', language),
+          title: episodeTitle,
+        };
+
+        const timestamp = Number(quote['Timestamp (s)'] || '0');
+        if (isNaN(timestamp)) {
+          console.warn(`Invalid timestamp for quote: ${text}, defaulting to 0`);
+        }
+
+        const quoteData = {
+          id: slug,
+          text,
+          timestamp: isNaN(timestamp) ? 0 : timestamp,
+          episode,
+          author,
+          language,
+          type: 'quote',
+        };
+
+        // Write quote content file
+        writeContentFile(quoteData, 'quotes', language);
+        return quoteData;
+      })
+      .filter((quote): quote is Quote => quote !== null);
   } catch (error) {
     console.error(error);
     throw error;

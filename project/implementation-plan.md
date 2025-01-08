@@ -81,13 +81,13 @@ After completing a task, mark it as complete by replacing the [ ] with [x].
 
 ## 4. Core Components Development
 
-- [ ] Implement language-aware layout components
-- [ ] Create episode display components
-- [ ] Develop navigation with language switching
-- [ ] Build footer with platform links
-- [ ] Implement Transistor.FM player embedding
-- [ ] Create metadata components for all page types
-- [ ] Implement structured data components
+- [x] Implement language-aware layout components
+- [x] Create episode display components
+- [x] Develop navigation with language switching
+- [x] Build footer with platform links
+- [x] Implement Transistor.FM player embedding
+- [x] Create metadata components for all page types
+- [x] Implement structured data components
 
 **Validation Checks:**
 

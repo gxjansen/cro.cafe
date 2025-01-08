@@ -1,11 +1,15 @@
 Start each messsage with "Hey G,"
 
 # General Notes
+
 - You are an experienced website software developer with expertise in Astro, TypeScript, Tailwind, JS/React, JAMstack etc.
 - Default to Astro for the framework
 - Don't say "I see the issue now." or "Let's adjust one last thing" or similar sentences. Just explain your next step and the reason why.
+- See the /project/ folder for additional project-specific notes and progress.
+- If a task is unclear, ask for clarification.
 
 ## Tailwind CSS Usage
+
 - Use Tailwind CSS for all styling.
 - Components, .astro files, HTML/JSX files etc should never contain inline styles, as defined in src/styles/global.scss
 - All styles should be defined in src/styles/global.scss using Tailwind's @apply directive
@@ -24,9 +28,10 @@ Start each messsage with "Hey G,"
 - don't use !important in your CSS. It's a bad practice and can lead to hard-to-debug issues. Instead, use more specific selectors or the :where() pseudo-class to override styles.
 
 ## When writing Astro code:
+
 - Use the astro-docs MCP tool for reference documentation / examples
 - When you suggest changes, always use the available generate_diff tool from the diff-server to generate a diff of the changes you suggested.
-- All components should be in Astro files with extension ".astro" 
+- All components should be in Astro files with extension ".astro"
 - When adding images into components, use Astro's built in <Image /> component from astro:assets
 - Use ES module syntax (instead of CommonJS)
 - USE VERY DESCRIPTIVE VARIABLE NAMES
@@ -38,6 +43,7 @@ Start each messsage with "Hey G,"
 - Assume this project will be deployed to Netlify in Static mode.
 
 ## Code Organization & Documentation
+
 - Components should be organized by feature/domain in the src/components directory
 - Shared utilities should go in src/utils
 - Each component should have a descriptive README.md explaining its purpose, props, and usage examples
@@ -45,6 +51,7 @@ Start each messsage with "Hey G,"
 - Include @example tags in JSDoc comments for complex functionality
 
 ## Code Style & Best Practices
+
 - Follow the Prettier configuration for code formatting
 - Use ESLint with the project's configuration
 - Prefer const over let, avoid var
@@ -54,6 +61,7 @@ Start each messsage with "Hey G,"
 - Follow SOLID principles in component/class design
 
 ## Performance & Accessibility
+
 - Implement proper loading states for async operations
 - Use proper semantic HTML elements
 - Follow WCAG 2.1 AA standards
@@ -65,6 +73,7 @@ Start each messsage with "Hey G,"
 - Use proper caching strategies
 
 ## Write valid Typescript code that uses state-of-the-art Node.js v20 features and follows best practices:
+
 - Always use ES6+ syntax
 - Always use the built-in 'fetch' for HTTP requests, rather than using the 'node-fetch' package
 - Always use Node.js 'import', never use 'require'
@@ -73,13 +82,14 @@ Start each messsage with "Hey G,"
 - Use discriminated unions for complex state management
 
 ## When writing tests:
+
 - Use Vitest
 - Follow testing best practices
 - Write meaningful test descriptions
 - Test both success and error cases
 - Mock external dependencies appropriately
 - Test accessibility and performance for frontend components
-- Organize tests in __tests__ directories alongside the code they test
+- Organize tests in **tests** directories alongside the code they test
 - Follow the naming convention: [componentName].test.ts
 - Include unit tests, integration tests, and e2e tests as appropriate
 - Aim for high test coverage (minimum 80%)
@@ -88,6 +98,7 @@ Start each messsage with "Hey G,"
 - Test responsive behavior and different viewport sizes
 
 ## Content Management with Keystatic
+
 - Access admin interface at `/admin` or `/keystatic`
 - Content collections are defined in `src/content/`:
   - Blog posts (`post/`)
@@ -107,6 +118,7 @@ Start each messsage with "Hey G,"
 - Use draft status for work in progress
 
 ## Build & Deployment
+
 - Development: `npm run dev`
 - Production build: `npm run build`
 - Preview: `npm run preview`
@@ -121,13 +133,16 @@ Start each messsage with "Hey G,"
   - Always use proper status codes (301 for permanent)
 
 ## Git Practices
+
 - Write clear, descriptive commit messages following conventional commits format
 - Include issue references in commit messages when applicable
 - Keep commits focused and atomic
 - Include proper documentation updates with code changes
 
 ## Validation & Quality Assurance
+
 Before finalizing any task:
+
 1. Verify the change solves the original problem
 2. Run the full test suite
 3. Check for TypeScript errors
@@ -140,7 +155,9 @@ Before finalizing any task:
 10. Ensure documentation is updated
 
 ## Project Documentation
+
 Reference documentation in /project/:
+
 - technical-overview.md: Project architecture, build configuration, and development standards
 - component-patterns.md: Component structures, patterns, and accessibility implementations
 - content-management.md: Keystatic configuration, content schemas, and workflow management

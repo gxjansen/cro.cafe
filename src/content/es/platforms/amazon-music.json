@@ -1,0 +1,9 @@
+{
+  "id": "amazon-music",
+  "name": "Amazon Music",
+  "description": "",
+  "url": "https://www.audible.com/pd/CROCAFE-Espanol-Podcast/B08JJMGJCS",
+  "icon_url": "",
+  "language": "es",
+  "type": "platform"
+}

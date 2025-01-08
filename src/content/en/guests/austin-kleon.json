@@ -1,0 +1,10 @@
+{
+  "id": "austin-kleon",
+  "name": "Austin Kleon",
+  "role": "Author",
+  "bio": "",
+  "image_url": "src/assets/images/guests/austin-kleon.jpeg",
+  "social_links": [],
+  "language": "en",
+  "type": "guest"
+}

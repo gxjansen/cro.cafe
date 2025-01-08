@@ -1,58 +1,37 @@
 ---
-import { StructuredDataGenerator, generateHreflangTags } from '~/utils/structured-data';
-import type { Episode, Person, Quote, Platform, Brand } from '~/types';
+import type { SchemaOrgObject } from '~/types';
 
 interface Props {
-  type: 'episode' | 'person' | 'quote' | 'platform' | 'brand';
-  data: Episode | Person | Quote | Platform | Brand;
-  canonicalUrl?: string;
+  type: string;
+  data: SchemaOrgObject;
+  canonicalUrl: string;
   availableLanguages: string[];
 }
 
 const { type, data, canonicalUrl, availableLanguages } = Astro.props;
 
-let schema: Record<string, unknown>;
-let hreflangTags: string[] = [];
+// Base structured data that's common across all types
+const baseStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': type,
+  url: canonicalUrl,
+};
 
-switch (type) {
-  case 'episode':
-    schema = StructuredDataGenerator.generateEpisodeSchema(
-      data as Episode, 
-      { canonicalUrl }
-    );
-    hreflangTags = generateHreflangTags(data as { id: string; language: string }, availableLanguages);
-    break;
-  case 'person':
-    schema = StructuredDataGenerator.generatePersonSchema(
-      data as Person
-    );
-    hreflangTags = generateHreflangTags(data as { id: string; language: string }, availableLanguages);
-    break;
-  case 'quote':
-    schema = StructuredDataGenerator.generateQuoteSchema(
-      data as Quote
-    );
-    hreflangTags = generateHreflangTags(data as { id: string; language: string }, availableLanguages);
-    break;
-  case 'platform':
-    schema = StructuredDataGenerator.generatePlatformSchema(
-      data as Platform
-    );
-    hreflangTags = generateHreflangTags(data as { id: string; language: string }, availableLanguages);
-    break;
-  case 'brand':
-    schema = StructuredDataGenerator.generateBrandSchema(
-      data as Brand
-    );
-    hreflangTags = generateHreflangTags(data as { id: string; language: string }, availableLanguages);
-    break;
-  default:
-    throw new Error(`Unsupported structured data type: ${type}`);
+// Add language alternates if available
+if (availableLanguages.length > 0) {
+  baseStructuredData['inLanguage'] = Astro.url.pathname.split('/')[1] || 'en';
+  baseStructuredData['availableLanguage'] = availableLanguages;
 }
 
-const renderedSchema = StructuredDataGenerator.renderSchema(schema);
+// Merge base data with provided data
+/* eslint-disable-next-line @typescript-eslint/no-unused-vars */
+const structuredData = {
+  ...baseStructuredData,
+  ...data,
+};
+
 ---
 
-<Fragment set:html="{renderedSchema}" />
-
-{hreflangTags.map((tag) => <Fragment set:html="{tag}" />)}
+<script type="application/ld+json">
+  {JSON.stringify(structuredData, null, 2)}
+</script>

@@ -6,9 +6,10 @@ export interface Episode {
   duration: number;
   audio_url: string;
   transcript_url: string;
+  youtube_url?: string;
+  main_image?: string;
+  show_notes?: string;
   guests: Person[];
-  platforms: Platform[];
-  quotes: Quote[];
   language: string;
   type: string;
   canonicalUrl?: string;
@@ -30,7 +31,10 @@ export interface Quote {
   id: string;
   text: string;
   author: Person;
-  episode: Episode;
+  episode: {
+    id: string;
+    title: string;
+  };
   timestamp: number;
   language: string;
   type: string;
@@ -78,6 +82,45 @@ export interface OpenGraphImageProps {
   type: 'episode' | 'guest' | 'quote';
   imageUrl?: string;
   logoUrl?: string;
+}
+
+export interface SchemaOrgObject {
+  '@type': string;
+  '@id'?: string;
+  name?: string;
+  description?: string;
+  url?: string;
+  image?:
+    | string
+    | {
+        '@type': 'ImageObject';
+        url: string;
+        width?: number;
+        height?: number;
+      };
+  datePublished?: string;
+  dateModified?: string;
+  author?: {
+    '@type': 'Person';
+    name: string;
+    url?: string;
+  };
+  publisher?: {
+    '@type': 'Organization';
+    name: string;
+    logo?: {
+      '@type': 'ImageObject';
+      url: string;
+    };
+  };
+  [key: string]:
+    | string
+    | number
+    | boolean
+    | null
+    | undefined
+    | Record<string, unknown>
+    | Array<unknown>; // Allow Schema.org properties with specific types
 }
 
 declare module 'satori' {

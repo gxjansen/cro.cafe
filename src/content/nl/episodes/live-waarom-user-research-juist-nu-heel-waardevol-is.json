@@ -1,0 +1,36 @@
+{
+  "id": "live-waarom-user-research-juist-nu-heel-waardevol-is",
+  "title": "Live: Waarom user research juist nu heel waardevol is",
+  "description": "Samen met Els Aerts en Karl Gilis van AGConsult praat ik over waarom het júist nu belangrijk is om gebruiksonderzoek te (blijven) doen.",
+  "date": "2025-01-08T20:07:07.532Z",
+  "duration": 0,
+  "audio_url": "https://chtbl.com/track/D992D/media.transistor.fm/e1f15356/9688e00b.mp3",
+  "transcript_url": "",
+  "show_notes": "<ul><li><a href=\"https://www.agconsult.com/nl/\">AGConsult</a></li><li><a href=\"https://actie2020.be\" target=\"_blank\">Actie2020</a></li><li>Els op <a href=\"https://twitter.com/els_aerts\">Twitter</a> en <a href=\"https://be.linkedin.com/in/elsaertswebusability\">LinkedIn</a></li><li>Karl op <a href=\"https://twitter.com/agconsult\">Twitter</a> en <a href=\"https://be.linkedin.com/in/webusability\" target=\"_blank\">LinkedIn</a></li></ul>",
+  "guests": [
+    {
+      "id": "els-aerts",
+      "name": "els-aerts",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    },
+    {
+      "id": "karl-gilis",
+      "name": "karl-gilis",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "https://youtu.be/pE38SWEl2H8",
+  "main_image": "src/assets/images/episodes/live-waarom-user-research-juist-nu-heel-waardevol-is.jpeg",
+  "language": "nl",
+  "type": "podcast"
+}

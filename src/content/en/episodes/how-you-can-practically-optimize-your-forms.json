@@ -1,0 +1,36 @@
+{
+  "id": "how-you-can-practically-optimize-your-forms",
+  "title": "How you can practically optimize your forms",
+  "description": "I got two of the main form optimization experts around a table and asked them everything you need in order to improve your on-site forms.",
+  "date": "2025-01-08T20:07:07.493Z",
+  "duration": 0,
+  "audio_url": "https://chrt.fm/track/D992D/media.transistor.fm/cdebdb67/a2f12d4b.mp3",
+  "transcript_url": "",
+  "show_notes": "<p>Both Craig and Alun will be at <a target=\"_blank\" href=\"http://www.experimentationelite.com\">www.experimentationelite.com</a> on April 27th in London. Tickets now sold out, but the next event will be 2nd December in London.</p><p>In the episode we touch upon the following topics:</p><ul><li>Mobile / Desktop - differences &amp; optimisation</li><li>The submit button - what insight you can gain from it</li><li>Mobile Keyboard Layouts &amp; Autocorrect</li><li>Inline Validation - why use it, when to trigger, how to minimise user stress</li><li>Confirming email / password - why do it?</li><li>Error messages - placement, style, how to make them informative &amp; useful</li><li>Password Rules - the fallacy of complex passwords being strong</li><li>Phone number fields - should you include them? formatting guidelines</li><li>Labels &amp; Field Design - using a design system</li><li>Dropdowns - why you should almost always use alternatives that work better</li><li>Contrast &amp; Font issues - (Craig)</li><li>Problem fields - how to identify on your form what drives abandonment</li><li>Time Savers - Address lookup, Native payment, Express checkout</li><li>Transition between stages - back button, forward, not wiping info, progress indicators that don't lie</li></ul><p>‍</p>",
+  "guests": [
+    {
+      "id": "craig-sullivan",
+      "name": "craig-sullivan",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "en",
+      "type": "guest"
+    },
+    {
+      "id": "alun-lucas",
+      "name": "alun-lucas",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "en",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "",
+  "main_image": "src/assets/images/episodes/how-you-can-practically-optimize-your-forms.png",
+  "language": "en",
+  "type": "podcast"
+}

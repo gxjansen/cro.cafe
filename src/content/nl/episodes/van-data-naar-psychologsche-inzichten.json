@@ -1,0 +1,36 @@
+{
+  "id": "van-data-naar-psychologsche-inzichten",
+  "title": "Van data naar psychologsche inzichten",
+  "description": "Samen met Anouk Erkens en Roos van Dam bespreek ik hoe je van (kwalitatieve en kwantitatieve) data naar psychologische inzichten kan komen.",
+  "date": "2025-01-08T20:07:07.532Z",
+  "duration": 0,
+  "audio_url": "https://chtbl.com/track/D992D/media.transistor.fm/7329e161/bfa2cc91.mp3",
+  "transcript_url": "",
+  "show_notes": "<ul><li><a href=\"https://onlinedialogue.nl/\" target=\"_blank\">Online Dialogue</a></li><li><a href=\"https://onlinedialogue.nl/artikelen/conversion-canvas/\" target=\"_blank\">Conversion Canvas</a></li></ul>",
+  "guests": [
+    {
+      "id": "anouk-erens",
+      "name": "anouk-erens",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    },
+    {
+      "id": "roos-van-dam",
+      "name": "roos-van-dam",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "",
+  "main_image": "src/assets/images/episodes/van-data-naar-psychologsche-inzichten.jpeg",
+  "language": "nl",
+  "type": "podcast"
+}

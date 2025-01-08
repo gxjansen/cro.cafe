@@ -1,0 +1,45 @@
+---
+interface Props {
+  currentLang: 'en' | 'de' | 'es' | 'nl';
+  currentPath?: string;
+}
+
+const { currentLang, currentPath = '' } = Astro.props;
+
+const languages = [
+  { code: 'en', label: 'English' },
+  { code: 'de', label: 'Deutsch' },
+  { code: 'es', label: 'Español' },
+  { code: 'nl', label: 'Nederlands' },
+];
+
+// Remove leading language code if present
+const pathWithoutLang = currentPath.replace(/^\/(en|de|es|nl)\//, '/');
+---
+
+<div class="language-switcher">
+  <select
+    onChange={`window.location.href = '/' + this.value + '${pathWithoutLang}'`}
+    value={currentLang}
+    class="select-language"
+    aria-label="Select language"
+  >
+    {languages.map(({ code, label }) => (
+      <option value={code} selected={code === currentLang}>
+        {label}
+      </option>
+    ))}
+  </select>
+</div>
+
+<style>
+.language-switcher {
+  @apply relative inline-block;
+}
+
+.select-language {
+  @apply px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300
+         dark:border-gray-700 rounded-lg shadow-sm focus:ring-2
+         focus:ring-blue-500 focus:border-blue-500;
+}
+</style>

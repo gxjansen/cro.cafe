@@ -1,0 +1,9 @@
+{
+  "id": "rss",
+  "name": "RSS",
+  "description": "",
+  "url": "https://feeds.transistor.fm/cro-cafe-es",
+  "icon_url": "",
+  "language": "es",
+  "type": "platform"
+}

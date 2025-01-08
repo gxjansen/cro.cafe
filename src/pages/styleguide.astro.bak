@@ -1,0 +1,146 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+
+import type { MetaData } from '~/types';
+
+export interface Props {
+  metadata?: MetaData;
+  availableLanguages: string[];
+}
+
+const metadata = {
+  title: 'Style Guide',
+};
+
+const availableLanguages = ['en', 'es', 'fr']; // Example list of available languages
+---
+
+<PageLayout metadata={metadata} availableLanguages={availableLanguages}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Style Guide"
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Style Guide Image',
+    }}
+  >
+    <Fragment slot="title">
+      Our <span class="text-accent dark:text-white highlight">Style Guide</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Follow our style guide to ensure consistency and quality in your website's design and development.
+    </Fragment>
+  </Hero>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="styleguide"
+    tagline="Style Guide"
+    title="Design Principles"
+    subtitle="Our design principles guide the creation of visually appealing and user-friendly websites."
+    items={[
+      {
+        title: 'Accessibility',
+        description:
+          'Ensure your website is accessible to all users, including those with disabilities, by following best practices and standards.',
+        icon: 'tabler:accessibility',
+      },
+      {
+        title: 'Responsive Design',
+        description:
+          'Create websites that look and function well on all devices and screen sizes, providing a seamless user experience.',
+        icon: 'tabler:device-mobile',
+      },
+      {
+        title: 'Consistency',
+        description:
+          'Maintain consistency in design elements, typography, and color schemes to create a cohesive and professional look.',
+        icon: 'tabler:align-center',
+      },
+      {
+        title: 'Performance',
+        description:
+          'Optimize your website for fast loading times and high performance, ensuring a smooth and engaging user experience.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'SEO',
+        description:
+          'Improve your website's visibility in search engine results by following SEO best practices and optimizing content.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'User Experience',
+        description:
+          'Focus on creating a user-friendly and intuitive website that meets the needs and expectations of your audience.',
+        icon: 'tabler:user',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Components"
+    tagline="Widgets"
+    columns={3}
+    items={[
+      {
+        title: 'Headers',
+        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Heros',
+        description:
+          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Features',
+        description:
+          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Content',
+        description:
+          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Call-to-Action',
+        description:
+          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Pricing',
+        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: 'Testimonial',
+        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Contact',
+        description:
+          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: 'Footers',
+        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
+        icon: 'flat-color-icons:database',
+      },
+    ]}
+  />
+</PageLayout>

@@ -1,0 +1,46 @@
+{
+  "id": "emerce-interview-karl-gilis-ton-wesseling-hazjier-pourkhalkhali",
+  "title": "Emerce Interview: Karl Gilis, Ton Wesseling, Hazjier Pourkhalkhali",
+  "description": "Verslag van Emerce Conversion 2019. In dit segment praten we met Karl Gilis - AgConsult, Hazjier Pourkhalkali - Optimizely en Ton Wesseling - Online Dialogue",
+  "date": "2025-01-08T20:07:07.531Z",
+  "duration": 0,
+  "audio_url": "https://chtbl.com/track/D992D/media.transistor.fm/e927e82f.mp3",
+  "transcript_url": "",
+  "show_notes": "<p><a href=\"https://www.cro.cafe/conversion19\">https://www.cro.cafe/conversion19</a></p>",
+  "guests": [
+    {
+      "id": "karl-gilis",
+      "name": "karl-gilis",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    },
+    {
+      "id": "ton-wesseling",
+      "name": "ton-wesseling",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    },
+    {
+      "id": "hazjier-pourkhalkhali",
+      "name": "hazjier-pourkhalkhali",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "https://youtu.be/YNRbAVqSHZo",
+  "main_image": "src/assets/images/episodes/emerce-interview-karl-gilis-ton-wesseling-hazjier-pourkhalkhali.jpeg",
+  "language": "nl",
+  "type": "podcast"
+}

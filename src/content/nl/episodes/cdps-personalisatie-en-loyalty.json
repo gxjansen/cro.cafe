@@ -1,0 +1,36 @@
+{
+  "id": "cdps-personalisatie-en-loyalty",
+  "title": "CDPs, personalisatie en loyalty",
+  "description": "We leren vandaag meer over Customer Data Platforms (CDPs), personalisatie en loyalty programma's, live vanag Emerce GAUC!",
+  "date": "2025-01-08T20:07:07.532Z",
+  "duration": 0,
+  "audio_url": "https://chtbl.com/track/D992D/media.transistor.fm/aa539016/fac7efce.mp3",
+  "transcript_url": "",
+  "show_notes": "<ul><li><a href=\"https://en.wikipedia.org/wiki/Customer_data_platform\" target=\"_blank\">Customer Data Platform (Wikipedia)</a></li><li><a href=\"https://cloudninedigital.nl/\" target=\"_blank\">Cloud Nine Digital</a></li><li><a href=\"https://www.deptagency.com/nl-nl/\" target=\"_blank\">Dept</a></li></ul>",
+  "guests": [
+    {
+      "id": "janus-de-visser",
+      "name": "janus-de-visser",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    },
+    {
+      "id": "cristian-van-nispen",
+      "name": "cristian-van-nispen",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "https://youtu.be/XnFdYKmQ4G4",
+  "main_image": "src/assets/images/episodes/cdps-personalisatie-en-loyalty.jpeg",
+  "language": "nl",
+  "type": "podcast"
+}

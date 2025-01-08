@@ -1,0 +1,72 @@
+---
+import { getCollection } from 'astro:content';
+import EpisodeCard from './Card.astro';
+import ErrorBoundary from '../common/ErrorBoundary.astro';
+import { validateProps, EpisodeGridPropsSchema } from '~/utils/component-validation';
+
+interface Props {
+  language: string;
+  limit?: number;
+  featured?: boolean;
+  showGuests?: boolean;
+  columns?: '2' | '3' | '4';
+}
+
+// Validate props
+const props = validateProps(EpisodeGridPropsSchema, Astro.props);
+const { 
+  language, 
+  limit, 
+  featured = false, 
+  showGuests = true,
+  columns = '3'
+} = props;
+
+// Get episodes and filter by language and featured status
+const episodes = await getCollection('episodes', (entry) => {
+  if (language && entry.data.language !== language) return false;
+  if (featured && !entry.data.featured) return false;
+  return true;
+});
+
+// Sort by publication date and apply limit if specified
+const sortedEpisodes = episodes
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, limit);
+
+// Define grid columns class based on prop
+const gridClass = {
+  '2': 'md:grid-cols-2',
+  '3': 'md:grid-cols-2 lg:grid-cols-3',
+  '4': 'md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
+}[columns];
+---
+
+<ErrorBoundary fallback="Unable to load episodes. Please try again later.">
+  <div class="episode-grid">
+    {sortedEpisodes.length > 0 ? (
+      <div class={`grid gap-6 ${gridClass}`}>
+        {sortedEpisodes.map((episode) => (
+          <EpisodeCard 
+            episode={episode} 
+            showGuests={showGuests}
+          />
+        ))}
+      </div>
+    ) : (
+      <div class="no-episodes">
+        <p>No episodes found.</p>
+      </div>
+    )}
+  </div>
+</ErrorBoundary>
+
+<style>
+.episode-grid {
+  @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+}
+
+.no-episodes {
+  @apply text-center text-gray-500 dark:text-gray-400 py-12;
+}
+</style>

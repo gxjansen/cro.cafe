@@ -1,0 +1,27 @@
+---
+interface Props {
+  availableLanguages: string[];
+  currentPath: string;
+}
+
+const { availableLanguages, currentPath } = Astro.props;
+
+// Remove leading language code if present
+const pathWithoutLang = currentPath.replace(/^\/(en|de|es|nl)\//, '/');
+
+// Generate URLs for each language
+const languageUrls = availableLanguages.map(lang => ({
+  lang,
+  url: `${Astro.site}${lang}${pathWithoutLang}`.replace(/\/+/g, '/'),
+}));
+---
+
+{/* Add x-default for homepage */}
+{currentPath === '/' && (
+  <link rel="alternate" href={Astro.site} hreflang="x-default" />
+)}
+
+{/* Add language alternates */}
+{languageUrls.map(({ lang, url }) => (
+  <link rel="alternate" hreflang={lang} href={url} />
+))}
