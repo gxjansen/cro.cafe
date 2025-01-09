@@ -9,15 +9,14 @@ const metadata = {
 };
 
 const availableLanguages = ['en', 'de', 'es', 'nl'];
-const currentLang = 'en'; // TODO: Get from URL/context
 ---
 
-<PageLayout {metadata} {availableLanguages} {currentLang}>
+<PageLayout {...{ metadata, availableLanguages, currentLang: 'en' }}>
   <Hero
     tagline="Guests"
     title="Our Expert Guests"
     subtitle="Meet our expert guests from the CRO.CAFE podcast, sharing their knowledge and experiences in Conversion Rate Optimization."
   />
 
-  <Grid />
+  <Grid language="en" />
 </PageLayout>

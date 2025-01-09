@@ -1,14 +1,35 @@
 ---
-import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
+import DOMPurify from 'isomorphic-dompurify';
 import Player from './Player.astro';
 import StructuredData from '../common/StructuredData.astro';
 import ErrorBoundary from '../common/ErrorBoundary.astro';
 import { validateProps, SingleEpisodePropsSchema } from '~/utils/component-validation';
 
 interface Props {
-  episode: CollectionEntry<'episodes'>;
-  availableLanguages: string[];
+  episode: {
+    title: string;
+    description: string;
+    date: string;
+    audio_url: string;
+    duration: number;
+    language: 'en' | 'de' | 'es' | 'nl';
+    guests?: Array<{
+      id: string;
+      name: string;
+      role: string;
+      bio: string;
+      image_url: string;
+      social_links: string[];
+      language: 'en' | 'de' | 'es' | 'nl';
+      type: string;
+    }>;
+    transcript_url?: string;
+    youtube_url?: string;
+    show_notes?: string;
+    main_image?: string;
+    type?: string;
+  };
+  availableLanguages: readonly ('en' | 'de' | 'es' | 'nl')[];
 }
 
 // Validate props
@@ -17,19 +38,36 @@ const { episode, availableLanguages } = props;
 const { 
   title, 
   description, 
-  pubDate, 
-  image, 
-  guests, 
+  date, 
+  audio_url,
+  guests = [], 
   language,
-  episodeId,
   duration,
   transcript_url,
   youtube_url,
-  show_notes
-} = episode.data;
+  show_notes,
+  main_image
+} = episode;
+
+// Get episode image
+const episodeImage = main_image 
+  ? `/images/episodes/${main_image.replace('src/assets/images/episodes/', '')}`
+  : '/images/default.png';
+
+// Get guest images
+const resolvedGuests = guests.map(guest => ({
+  ...guest,
+  resolvedImage: guest.image_url 
+    ? `/images/guests/${guest.image_url.replace('src/assets/images/guests/', '')}`
+    : '/images/default.png'
+}));
+
+// Sanitize HTML content
+const sanitizedDescription = DOMPurify.sanitize(description);
+const sanitizedShowNotes = show_notes ? DOMPurify.sanitize(show_notes) : null;
 
 // Format date based on language
-const formattedDate = new Date(pubDate).toLocaleDateString(language, {
+const formattedDate = new Date(date).toLocaleDateString(language, {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
@@ -48,16 +86,16 @@ const formatDuration = (seconds: number) => {
 const structuredData = {
   '@type': 'PodcastEpisode',
   name: title,
-  description: description,
-  datePublished: pubDate.toISOString(),
+  description: sanitizedDescription,
+  datePublished: date,
   duration: `PT${Math.floor(duration / 60)}M${duration % 60}S`,
   image: {
     '@type': 'ImageObject',
-    url: image.src,
+    url: episodeImage,
   },
   associatedMedia: {
     '@type': 'MediaObject',
-    contentUrl: `https://share.transistor.fm/e/${episodeId}`,
+    contentUrl: audio_url,
   },
   ...(youtube_url && {
     video: {
@@ -79,7 +117,7 @@ const structuredData = {
     <header class="episode-header">
       <div class="header-content">
         <h1>{title}</h1>
-        <time datetime={pubDate.toISOString()}>{formattedDate}</time>
+        <time datetime={date}>{formattedDate}</time>
         <div class="episode-meta">
           <span class="duration">{formatDuration(duration)}</span>
           {transcript_url && (
@@ -94,8 +132,8 @@ const structuredData = {
           )}
         </div>
       </div>
-      <Image
-        src={image}
+      <img
+        src={episodeImage}
         alt={title}
         width={800}
         height={450}
@@ -105,25 +143,23 @@ const structuredData = {
 
     <ErrorBoundary fallback="Audio player unavailable. Please try again later.">
       <Player 
-        episodeId={episodeId}
+        audio_url={audio_url}
         title={title}
-        description={description}
+        description={sanitizedDescription}
       />
     </ErrorBoundary>
 
     <div class="episode-content">
-      <div class="description">
-        {description}
-      </div>
+      <div class="description" set:html={sanitizedDescription} />
 
       {guests.length > 0 && (
         <div class="guests-section">
           <h2>Featured Guests</h2>
           <div class="guests-grid">
-            {guests.map((guest) => (
+            {resolvedGuests.map((guest) => (
               <div class="guest-card">
-                <Image
-                  src={guest.image}
+                <img
+                  src={guest.resolvedImage}
                   alt={guest.name}
                   width={100}
                   height={100}
@@ -131,8 +167,8 @@ const structuredData = {
                 />
                 <div class="guest-info">
                   <h3>{guest.name}</h3>
-                  <p>{guest.title}</p>
-                  {guest.company && <p class="company">{guest.company}</p>}
+                  <p>{guest.role}</p>
+                  <p class="guest-bio">{guest.bio}</p>
                 </div>
               </div>
             ))}
@@ -140,10 +176,10 @@ const structuredData = {
         </div>
       )}
 
-      {show_notes && (
+      {sanitizedShowNotes && (
         <div class="show-notes">
           <h2>Show Notes</h2>
-          <div set:html={show_notes} />
+          <div set:html={sanitizedShowNotes} />
         </div>
       )}
     </div>
@@ -152,7 +188,7 @@ const structuredData = {
       <StructuredData
         type="PodcastEpisode"
         data={structuredData}
-        canonicalUrl={`${Astro.site}${language}/episodes/${episode.slug}`}
+        canonicalUrl={`${Astro.site}${language}/episodes/${episode.id}`}
         availableLanguages={availableLanguages}
       />
     </ErrorBoundary>

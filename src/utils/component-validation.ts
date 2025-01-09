@@ -36,7 +36,7 @@ export const FooterPropsSchema = z.object({
 
 // Episode components props
 export const EpisodePlayerPropsSchema = z.object({
-  episodeId: z.string(),
+  audio_url: z.string().url(),
   title: z.string(),
   description: z.string().optional(),
 });
@@ -55,9 +55,9 @@ export const EpisodeSchema = z.object({
   title: z.string(),
   description: z.string(),
   date: z.string(),
-  audio_url: z.string().url(),
-  duration: z.number(),
-  language: LanguageSchema,
+  audio_url: z.string(),
+  duration: z.number().optional().default(0),
+  language: LanguageSchema.optional().default('en'),
   guests: z
     .array(
       z.object({
@@ -71,9 +71,14 @@ export const EpisodeSchema = z.object({
         type: z.string(),
       })
     )
-    .optional(),
-  tags: z.array(z.string()).optional(),
-  type: z.string().optional(),
+    .optional()
+    .default([]),
+  tags: z.array(z.string()).optional().default([]),
+  type: z.string().optional().default('episode'),
+  main_image: z.string().optional(),
+  transcript_url: z.string().optional(),
+  youtube_url: z.string().optional(),
+  show_notes: z.string().optional(),
 });
 
 export const EpisodeCardPropsSchema = z.object({

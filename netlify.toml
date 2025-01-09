@@ -1,9 +1,87 @@
 [build]
   publish = "dist"
   command = "npm run build"
+
 [build.processing.html]
   pretty_urls = false
+
 [[headers]]
   for = "/_astro/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# Only redirect homepage to language-specific versions for non-English browsers
+[[redirects]]
+  from = "/"
+  to = "/de/"
+  status = 302
+  force = true
+  conditions = {Language = ["de"], Cookie = ["!lang_redirect"]}
+
+[[redirects]]
+  from = "/"
+  to = "/es/"
+  status = 302
+  force = true
+  conditions = {Language = ["es"], Cookie = ["!lang_redirect"]}
+
+[[redirects]]
+  from = "/"
+  to = "/nl/"
+  status = 302
+  force = true
+  conditions = {Language = ["nl"], Cookie = ["!lang_redirect"]}
+
+# Set cookie after redirect
+[[headers]]
+  for = "/de/*"
+  [headers.values]
+    Set-Cookie = "lang_redirect=1; Path=/; SameSite=Lax"
+
+[[headers]]
+  for = "/es/*"
+  [headers.values]
+    Set-Cookie = "lang_redirect=1; Path=/; SameSite=Lax"
+
+[[headers]]
+  for = "/nl/*"
+  [headers.values]
+    Set-Cookie = "lang_redirect=1; Path=/; SameSite=Lax"
+
+# Redirect root-level pages to English versions
+[[redirects]]
+  from = "/episodes"
+  to = "/episodes/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/topics"
+  to = "/topics/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guests"
+  to = "/guests/"
+  status = 301
+  force = true
+
+# Handle 404s for non-existent language pages
+[[redirects]]
+  from = "/de/*"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/es/*"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/nl/*"
+  to = "/404"
+  status = 404
+  force = true

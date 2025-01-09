@@ -1,7 +1,19 @@
 ---
 import ErrorBoundary from '../common/ErrorBoundary.astro';
-// TODO: Add audio player component that will use audio_url
+import DOMPurify from 'isomorphic-dompurify';
 import { validateProps, EpisodeCardPropsSchema } from '~/utils/component-validation';
+
+// Helper function to strip HTML and truncate text
+function sanitizeAndTruncate(html: string, maxLength: number): string {
+  // First sanitize the HTML
+  const sanitized = DOMPurify.sanitize(html, { ALLOWED_TAGS: [] });
+  // Then truncate if needed
+  if (sanitized.length <= maxLength) return sanitized;
+  // Find the last space before maxLength to avoid cutting words
+  const truncated = sanitized.substring(0, maxLength);
+  const lastSpace = truncated.lastIndexOf(' ');
+  return `${truncated.substring(0, lastSpace)}...`;
+}
 
 interface Props {
   episode: {
@@ -40,10 +52,8 @@ const formattedDate = new Date(date).toLocaleDateString(language, {
   day: 'numeric',
 });
 
-// Truncate description if it's too long
-const truncatedDescription = description.length > 150 
-  ? `${description.slice(0, 150)}...` 
-  : description;
+// Sanitize and truncate description
+const cleanDescription = sanitizeAndTruncate(description, 150);
 ---
 
 <ErrorBoundary fallback="Episode information unavailable">
@@ -54,7 +64,7 @@ const truncatedDescription = description.length > 150
       <time datetime={date.toString()} class="card-date">
         {formattedDate}
       </time>
-      <p class="card-description">{truncatedDescription}</p>
+      <p class="card-description">{cleanDescription}</p>
       {showGuests && guests && guests.length > 0 && (
         <div class="card-guests">
           <span class="guests-label">With:</span>

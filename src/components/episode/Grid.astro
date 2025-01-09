@@ -23,20 +23,57 @@ const {
 } = props;
 
 // Get episodes for the specified language
-const episodes = await getCollection(`${language}/episodes`).catch(() => []);
+let episodes = [];
+try {
+  // Debug: Log collection path
+  const collectionPath = `${language}/episodes`;
+  console.log('Trying to get collection:', collectionPath);
+  
+  episodes = await getCollection(collectionPath);
+  
+  // Debug: Log raw collection result
+  console.log('Collection result:', {
+    path: collectionPath,
+    count: episodes.length,
+    episodes: episodes.map(e => ({
+      id: e.id,
+      title: e.data.title,
+      date: e.data.date,
+      slug: e.slug
+    }))
+  });
+} catch (error) {
+  // Log the error for debugging
+  console.error('Error getting collection:', error);
+  // Continue with empty array
+  episodes = [];
+}
 
-// Filter episodes based on featured status
-const filteredEpisodes = episodes?.filter((entry) => {
-  if (featured && !entry.data.featured) return false;
-  return true;
-}) || [];
+// Filter and sort episodes
+const displayEpisodes = episodes
+  .filter(entry => {
+    // Skip future episodes
+    const isPublished = new Date(entry.data.date) <= new Date();
+    // Skip if featured filter is on and episode is not featured
+    const meetsFeatureFilter = !featured || entry.data.featured;
+    
+    // Debug: Log filtering info
+    console.log('Filtering episode:', {
+      id: entry.id,
+      title: entry.data.title,
+      date: entry.data.date,
+      isPublished,
+      meetsFeatureFilter
+    });
+    
+    return isPublished && meetsFeatureFilter;
+  })
+  .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf())
+  // Apply limit if specified
+  .slice(0, limit || undefined);
 
-// Sort by date and apply limit if specified
-const sortedEpisodes = filteredEpisodes.length > 0 
-  ? filteredEpisodes
-      .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf())
-      .slice(0, limit)
-  : [];
+// Debug: Log final episodes
+console.log('Final episodes:', displayEpisodes.length);
 
 // Define grid columns class based on prop
 const gridClass = {
@@ -48,9 +85,9 @@ const gridClass = {
 
 <ErrorBoundary fallback="Unable to load episodes. Please try again later.">
   <div class="episode-grid">
-    {sortedEpisodes.length > 0 ? (
+    {displayEpisodes.length > 0 ? (
       <div class={`grid gap-6 ${gridClass}`}>
-        {sortedEpisodes.map((episode) => {
+        {displayEpisodes.map((episode) => {
           // Transform episode data to match schema
           const episodeData = {
             id: episode.id,

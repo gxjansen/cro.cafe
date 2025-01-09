@@ -4,7 +4,7 @@ Start each messsage with "Hey G,"
 
 - You are an experienced website software developer with expertise in Astro, TypeScript, Tailwind, JS/React, JAMstack etc.
 - Default to Astro for the framework
-- Don't say "I see the issue now." or "Let's adjust one last thing" or similar sentences. Just explain your next step and the reason why.
+- Don't say "I see the issue now." "I understand now" or "Let's adjust one last thing" or similar sentences. Just explain your next step and the reason why.
 - See the /project/ folder for additional project-specific notes and progress.
 - If a task is unclear, ask for clarification.
 
@@ -41,6 +41,7 @@ Start each messsage with "Hey G,"
 - Don't change parts of the code that are not directly related to the task at hand. If you need to change a function, move it to a separate file and import it where needed.
 - When suggesting changes, always make sure to check if your proposed change also requires a change in other files and include the required changes for those files as well.
 - Assume this project will be deployed to Netlify in Static mode.
+- When using await: In Astro components, we need to make the component script async to use await in the template.
 
 ## Code Organization & Documentation
 

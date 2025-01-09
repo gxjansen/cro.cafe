@@ -16,11 +16,7 @@ const metadata = {
 const availableLanguages = ['en', 'es', 'de', 'nl'];
 ---
 
-<PageLayout 
-  metadata={metadata} 
-  availableLanguages={availableLanguages}
-  currentLang="en"
->
+<PageLayout {...{ metadata, availableLanguages, currentLang: 'en' }}>
   <!-- Hero Widget -->
   <Hero
     actions={[

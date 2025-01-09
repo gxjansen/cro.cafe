@@ -1,0 +1,18 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+
+const metadata = {
+  title: 'CRO.CAFE - El Podcast de Optimización de Conversión',
+  description: 'Tu podcast sobre Optimización de Tasa de Conversión.',
+};
+
+const availableLanguages = ['en', 'de', 'es', 'nl'];
+---
+
+<PageLayout {...{ metadata, availableLanguages, currentLang: 'es' }}>
+  <Hero
+    title="Bienvenido a CRO.CAFE"
+    subtitle="Contenido en español próximamente."
+  />
+</PageLayout>

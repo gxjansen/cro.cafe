@@ -1,0 +1,90 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '~/layouts/PageLayout.astro';
+import SingleEpisode from '~/components/episode/SingleEpisode.astro';
+import { LanguageSchema } from '~/utils/component-validation';
+import type { z } from 'zod';
+
+export async function getStaticPaths() {
+  const allLanguages = ['en', 'de', 'es', 'nl'] as const;
+  const paths = [];
+
+  // Get episodes for each language
+  for (const lang of allLanguages) {
+    try {
+      const episodes = await getCollection(`${lang}/episodes`);
+      const guests = await getCollection(`${lang}/guests`);
+
+      // Create a map of guest data by ID
+      const guestMap = new Map(guests.map(guest => [guest.data.id, guest.data]));
+
+      const languagePaths = episodes.map(episode => {
+        // Merge guest data with episode guest references
+        const mergedGuests = episode.data.guests?.map(guest => ({
+          ...guest,
+          ...guestMap.get(guest.id),
+        })) || [];
+
+        return {
+          params: { lang, id: episode.id },
+          props: { 
+            episode: {
+              ...episode.data,
+              guests: mergedGuests,
+            }, 
+            availableLanguages: allLanguages 
+          }
+        };
+      });
+      paths.push(...languagePaths);
+    } catch {
+      // Skip if collection doesn't exist
+      continue;
+    }
+  }
+
+  return paths;
+}
+
+interface Props {
+  episode: {
+    title: string;
+    description: string;
+    date: string;
+    audio_url: string;
+    duration: number;
+    language: z.infer<typeof LanguageSchema>;
+    guests?: Array<{
+      id: string;
+      name: string;
+      role: string;
+      bio: string;
+      image_url: string;
+      social_links: string[];
+      language: z.infer<typeof LanguageSchema>;
+      type: string;
+    }>;
+    type?: string;
+  };
+  availableLanguages: readonly ('en' | 'de' | 'es' | 'nl')[];
+}
+
+const { episode, availableLanguages } = Astro.props;
+const { lang } = Astro.params;
+
+const metadata = {
+  title: `${episode.title} - CRO.CAFE`,
+  description: episode.description,
+};
+---
+
+<PageLayout 
+  metadata={metadata}
+  availableLanguages={availableLanguages}
+  currentLang={lang as z.infer<typeof LanguageSchema>}
+>
+  <SingleEpisode 
+    episode={episode}
+    availableLanguages={availableLanguages}
+  />
+</PageLayout>

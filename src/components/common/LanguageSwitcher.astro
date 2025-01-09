@@ -15,14 +15,14 @@ const languages = [
 
 // Remove leading language code if present
 const pathWithoutLang = currentPath.replace(/^\/(en|de|es|nl)\//, '/');
+
 ---
 
 <div class="language-switcher">
   <select
-    onChange={`window.location.href = '/' + this.value + '${pathWithoutLang}'`}
-    value={currentLang}
     class="select-language"
     aria-label="Select language"
+    value={currentLang}
   >
     {languages.map(({ code, label }) => (
       <option value={code} selected={code === currentLang}>
@@ -31,6 +31,14 @@ const pathWithoutLang = currentPath.replace(/^\/(en|de|es|nl)\//, '/');
     ))}
   </select>
 </div>
+
+<script define:vars={{ pathWithoutLang }}>
+document.querySelector('.select-language').addEventListener('change', (e) => {
+  const code = e.target.value;
+  const url = code === 'en' ? pathWithoutLang : `/${code}${pathWithoutLang}`;
+  window.location.href = url;
+});
+</script>
 
 <style>
 .language-switcher {

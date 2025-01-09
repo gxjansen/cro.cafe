@@ -3,14 +3,14 @@ import ErrorBoundary from '../common/ErrorBoundary.astro';
 import { validateProps, EpisodePlayerPropsSchema } from '~/utils/component-validation';
 
 interface Props {
-  episodeId: string;
+  audio_url: string;
   title: string;
   description?: string;
 }
 
 // Validate props
 const props = validateProps(EpisodePlayerPropsSchema, Astro.props);
-const { episodeId, title, description } = props;
+const { audio_url, title, description } = props;
 
 // Ensure the title is properly escaped for use in aria-label
 const escapedTitle = title.replace(/"/g, '&quot;');
@@ -18,17 +18,18 @@ const escapedTitle = title.replace(/"/g, '&quot;');
 
 <ErrorBoundary fallback="Audio player unavailable. Please try again later.">
   <div class="episode-player">
-    <iframe
-      width="100%"
-      height="180"
-      frameborder="no"
-      scrolling="no"
-      seamless
-      src={`https://share.transistor.fm/e/${episodeId}`}
-      title={title}
-      aria-label={`Podcast episode player: ${escapedTitle}`}
-      class="w-full"
-    />
+    <div class="audio-container">
+      <audio
+        controls
+        preload="metadata"
+        class="audio-player"
+        title={title}
+        aria-label={`Podcast episode player: ${escapedTitle}`}
+      >
+        <source src={audio_url} type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
     {description && (
       <div class="episode-description">
         <p>{description}</p>
@@ -41,6 +42,14 @@ const escapedTitle = title.replace(/"/g, '&quot;');
 .episode-player {
   @apply w-full max-w-3xl mx-auto my-4 rounded-lg overflow-hidden
          shadow-lg bg-white dark:bg-gray-800;
+}
+
+.audio-container {
+  @apply p-4;
+}
+
+.audio-player {
+  @apply w-full;
 }
 
 .episode-description {

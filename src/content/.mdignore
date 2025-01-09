@@ -1,0 +1,19 @@
+# Ignore root language directories
+de/*
+en/*
+es/*
+nl/*
+
+# But allow markdown files in content subdirectories
+!de/episodes/*
+!de/guests/*
+!de/platforms/*
+!en/episodes/*
+!en/guests/*
+!en/platforms/*
+!es/episodes/*
+!es/guests/*
+!es/platforms/*
+!nl/episodes/*
+!nl/guests/*
+!nl/platforms/*
