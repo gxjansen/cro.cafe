@@ -1,0 +1,26 @@
+{
+  "id": "experimentation-at-ecommerce-saas-company-shopify-with-casandra-campbell",
+  "title": "Experimentation at ecommerce SaaS company Shopify",
+  "description": "We learn how you can experiment on a SaaS product and learn how Shopify structures their optimization workflows.\n",
+  "date": "2025-01-09T14:36:18.243Z",
+  "duration": 2433,
+  "audio_url": "https://chtbl.com/track/D992D/media.transistor.fm/f772545e/7b0521cb.mp3",
+  "transcript_url": "",
+  "show_notes": "<ul><li><a href=\"https://www.shopify.com/\">Shopify</a></li><li><a href=\"https://www.youtube.com/watch?v=JxK5zyyJ6Y0&feature=emb_title\" target=\"_blank\">TLC session on Culture of Experimentation</a> with Casandra, Guido, Ben, Manuel and host Abi</li></ul><p>‍</p>",
+  "guests": [
+    {
+      "id": "casandra-campbell",
+      "name": "casandra-campbell",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "en",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "https://youtu.be/2DkkbqR4naM",
+  "main_image": "src/assets/images/episodes/experimentation-at-ecommerce-saas-company-shopify.jpeg",
+  "language": "en",
+  "type": "podcast"
+}

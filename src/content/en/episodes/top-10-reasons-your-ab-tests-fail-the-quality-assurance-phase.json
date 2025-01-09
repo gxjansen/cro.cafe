@@ -1,26 +1,15 @@
 {
   "id": "top-10-reasons-your-ab-tests-fail-the-quality-assurance-phase",
   "title": "Top 10 reasons your A/B tests fail the Quality Assurance phase",
-  "description": "Abi Hough is an experienced QA specialist for online experiments and she'll show us the Top 10 reasons A/B tests fail... even before they go live",
-  "date": "2025-01-08T20:07:07.493Z",
-  "duration": 0,
-  "audio_url": "https://chrt.fm/track/D992D/media.transistor.fm/db94d625/dae75518.mp3",
+  "description": "\n        Abi Hough is an experienced QA specialist for online experiments and she'll show us the Top 10 reasons A/B tests fail... even before they go live.\n      ",
+  "date": "2021-05-10T18:00:00.000Z",
+  "duration": 4183,
+  "audio_url": "https://media.transistor.fm/db94d625/dae75518.mp3",
   "transcript_url": "",
-  "show_notes": "<p>Our previous episode with Abi (and Craig Sullivan): <a href=\"https://www.cro.cafe/podcast/how-to-become-a-better-cro-professional\">\"How to become a better CRO professional\"</a></p>",
-  "guests": [
-    {
-      "id": "abi-hough",
-      "name": "abi-hough",
-      "role": "Guest",
-      "bio": "",
-      "image_url": "",
-      "social_links": [],
-      "language": "en",
-      "type": "guest"
-    }
-  ],
+  "show_notes": "",
+  "guests": [],
   "youtube_url": "",
-  "main_image": "src/assets/images/episodes/top-10-reasons-your-ab-tests-fail-the-quality-assurance-phase.jpg",
+  "main_image": "",
   "language": "en",
   "type": "podcast"
 }

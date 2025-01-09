@@ -1,0 +1,23 @@
+{
+  "id": "welcome-to-cro-cafe",
+  "title": "Welcome to CRO.CAFE",
+  "description": "In this first episode, we introduce CRO.CAFE and discuss what you can expect from this podcast about Conversion Rate Optimization.",
+  "date": "2024-01-09T12:00:00Z",
+  "duration": 1800,
+  "audio_url": "https://example.com/episodes/welcome-to-cro-cafe.mp3",
+  "guests": [
+    {
+      "id": "guido-jansen",
+      "name": "Guido Jansen",
+      "role": "Host",
+      "bio": "Founder of CRO.CAFE and experienced CRO practitioner",
+      "image_url": "/images/guests/guido-jansen.jpg",
+      "social_links": ["https://twitter.com/guidojansen", "https://linkedin.com/in/guidojansen"],
+      "language": "en",
+      "type": "host"
+    }
+  ],
+  "language": "en",
+  "type": "episode",
+  "tags": ["introduction", "cro", "podcast"]
+}

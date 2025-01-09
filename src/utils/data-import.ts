@@ -122,6 +122,36 @@ function generateUniqueSlug(title: string, _type: string, _language: string): st
   return generateSlug(title);
 }
 
+// Helper function to parse duration from RSS feed (always in seconds)
+function parseDuration(duration: string): number {
+  if (!duration?.trim()) return 0;
+
+  // Convert duration string to number
+  const seconds = Number(duration.trim());
+  if (!isNaN(seconds)) {
+    return Math.floor(seconds);
+  }
+
+  try {
+    // If direct conversion fails, try parsing time format (HH:MM:SS)
+    const parts = duration.split(':').map((part) => {
+      const num = Number(part?.trim() || '0');
+      return isNaN(num) ? 0 : num;
+    });
+
+    if (parts.length === 3) {
+      return Math.floor((parts[0] || 0) * 3600 + (parts[1] || 0) * 60 + (parts[2] || 0));
+    }
+    if (parts.length === 2) {
+      return Math.floor((parts[0] || 0) * 60 + (parts[1] || 0));
+    }
+  } catch (error) {
+    console.error(`Error parsing duration "${duration}":`, error);
+  }
+
+  return 0;
+}
+
 export async function importEpisodes(filePath: string, language: string): Promise<Episode[]> {
   try {
     const content = fs.readFileSync(filePath, 'utf-8');
@@ -193,8 +223,9 @@ export async function importEpisodes(filePath: string, language: string): Promis
             getFieldValue(episode, ['Date', 'Fecha', 'Datum', 'Publication date']) ||
               new Date().toISOString()
           ),
-          duration:
-            Number(getFieldValue(episode, ['Duration', 'Duración', 'Dauer', 'Duur']) || '0') * 60,
+          duration: parseDuration(
+            getFieldValue(episode, ['Duration', 'Duración', 'Dauer', 'Duur', 'duration']) || '0'
+          ),
           audio_url: episode['directmp3link'] || episode['Audio URL'] || '',
           transcript_url: episode['Transcript'] || '',
           show_notes: episode['Shownotes/ extra info'] || '',

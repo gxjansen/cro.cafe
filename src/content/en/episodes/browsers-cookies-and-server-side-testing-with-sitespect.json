@@ -1,26 +1,15 @@
 {
   "id": "browsers-cookies-and-server-side-testing-with-sitespect",
   "title": "Browsers, cookies & server-side testing with SiteSpect",
-  "description": "We learn from Erwin about the latest developments around browsers, (1st and 3rd party) cookies and server-side testing",
-  "date": "2025-01-08T20:07:07.493Z",
-  "duration": 0,
-  "audio_url": "https://chrt.fm/track/D992D/media.transistor.fm/7681b3a8/12797b20.mp3",
+  "description": "\n        We learn from Erwin about the latest developments around browsers, (1st and 3rd party) cookies and server-side testing\n      ",
+  "date": "2021-04-26T11:58:39.000Z",
+  "duration": 2442,
+  "audio_url": "https://media.transistor.fm/7681b3a8/12797b20.mp3",
   "transcript_url": "",
-  "show_notes": "<ul><li><a href=\"https://www.sitespect.com/\" target=\"_blank\">Sitespect.com</a></li><li><a href=\"https://www.sitespect.com/blog-an-update-on-googles-cookie-policy-2021/\" target=\"_blank\">An Update on Google’s Cookie Policy 2021</a></li><li>Free SiteSpect Ebook: <a href=\"https://info.sitespect.com/choosing-an-optimization-platform-in-2021\" target=\"_blank\">Choosing An Optimization Platform In 2021</a></li></ul>",
-  "guests": [
-    {
-      "id": "erwin-kerk",
-      "name": "erwin-kerk",
-      "role": "Guest",
-      "bio": "",
-      "image_url": "",
-      "social_links": [],
-      "language": "en",
-      "type": "guest"
-    }
-  ],
+  "show_notes": "",
+  "guests": [],
   "youtube_url": "",
-  "main_image": "src/assets/images/episodes/browsers-cookies-and-server-side-testing-with-sitespect.jpg",
+  "main_image": "",
   "language": "en",
   "type": "podcast"
 }

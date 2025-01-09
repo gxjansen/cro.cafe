@@ -1,0 +1,46 @@
+{
+  "id": "meer-itp-en-serverside-testing-met-ewrin-kerk-sitespect-twan-lammers-orangevalley-en-martijn-drijver-fosby-digital-agency",
+  "title": "Meer ITP en serverside testing!",
+  "description": "Er is niet aan te ontkomen vandaag op Emerce GAUC: ook deze discussie gaat over het onofficiële thema van de dag \"ITP en serverside testing.\"",
+  "date": "2025-01-09T14:26:30.811Z",
+  "duration": 1044,
+  "audio_url": "https://chtbl.com/track/D992D/media.transistor.fm/3e9f4066/795ab432.mp3",
+  "transcript_url": "",
+  "show_notes": "<ul><li><a href=\"https://www.sitespect.com/\" target=\"_blank\">SiteSpect</a></li><li><a href=\"https://orangevalley.nl/\" target=\"_blank\">OrangeValley</a></li><li><a href=\"https://fosby.nl/\" target=\"_blank\">Fosby</a></li></ul>",
+  "guests": [
+    {
+      "id": "erwin-kerk",
+      "name": "erwin-kerk",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    },
+    {
+      "id": "twan-lammers",
+      "name": "twan-lammers",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    },
+    {
+      "id": "martijn-drijver",
+      "name": "martijn-drijver",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "https://youtu.be/U6Mh3p9WXao",
+  "main_image": "src/assets/images/episodes/meer-itp-en-serverside-testing.jpeg",
+  "language": "nl",
+  "type": "podcast"
+}

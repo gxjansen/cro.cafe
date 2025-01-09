@@ -146,12 +146,13 @@ function cleanDate(dateField: string | undefined): string {
   return !isNaN(date.getTime()) ? date.toISOString() : new Date().toISOString();
 }
 
-// Helper function to clean duration (convert to seconds)
+// Helper function to clean duration (already in seconds from RSS feed)
 function cleanDuration(durationField: string | undefined): string {
   if (!durationField?.trim()) return '0';
 
-  const duration = parseInt(durationField, 10);
-  return !isNaN(duration) ? (duration * 60).toString() : '0';
+  // Remove any non-numeric characters and convert to number
+  const duration = Number(durationField.replace(/[^\d]/g, ''));
+  return !isNaN(duration) ? duration.toString() : '0';
 }
 
 async function cleanCSVFiles() {

@@ -1,26 +1,15 @@
 {
   "id": "understanding-the-why",
   "title": "Understanding the \"Why\"",
-  "description": "Eliza and I have a casual talk about how she got into CRO, how she is blending that with other disciplines and how she works towards understanding site visitors",
-  "date": "2025-01-08T20:07:07.493Z",
-  "duration": 0,
-  "audio_url": "https://chrt.fm/track/D992D/media.transistor.fm/62d2b15d/4defe2dd.mp3",
+  "description": "\n        Eliza and I have a casual talk about how she got into CRO, how she is blending that with other disciplines and how she works towards understanding site visitors.\n      ",
+  "date": "2022-04-21T17:55:38.000Z",
+  "duration": 1523,
+  "audio_url": "https://media.transistor.fm/62d2b15d/4defe2dd.mp3",
   "transcript_url": "",
-  "show_notes": "<ul><li>Book by <a href=\"https://www.cro.cafe/guest/peep-laja\">Peep Laja</a>: “Master The Essentials of Conversion Optimization” <a href=\"https://cxl.com/wp-content/uploads/2014/12/Master-the-CRO-Essentials.pdf\">https://cxl.com/wp-content/uploads/2014/12/Master-the-CRO-Essentials.pdf</a></li></ul>",
-  "guests": [
-    {
-      "id": "eliza-mukherjee",
-      "name": "eliza-mukherjee",
-      "role": "Guest",
-      "bio": "",
-      "image_url": "",
-      "social_links": [],
-      "language": "en",
-      "type": "guest"
-    }
-  ],
+  "show_notes": "",
+  "guests": [],
   "youtube_url": "",
-  "main_image": "src/assets/images/episodes/understanding-the-why.jpg",
+  "main_image": "",
   "language": "en",
   "type": "podcast"
 }

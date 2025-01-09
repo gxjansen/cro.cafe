@@ -1,26 +1,15 @@
 {
   "id": "cro-flywheel-how-microsoft-kickstarted-the-ab-testing-momentum-and-keeps-it-going",
   "title": "CRO Flywheel: How Microsoft Kickstarted the A/B testing Momentum and keeps it going",
-  "description": "We will learn how Microsoft enables employees to keep the experimentation flywheel turning faster and faster to support and motivate continued funding.",
-  "date": "2025-01-08T20:07:07.493Z",
-  "duration": 0,
-  "audio_url": "https://chrt.fm/track/D992D/media.transistor.fm/6e7e6bb5/ee84f596.mp3",
+  "description": "\n        We will learn how Microsoft enables employees to keep the experimentation flywheel turning faster and faster to support and motivate continued funding.\n      ",
+  "date": "2021-05-17T17:00:00.000Z",
+  "duration": 2669,
+  "audio_url": "https://media.transistor.fm/6e7e6bb5/ee84f596.mp3",
   "transcript_url": "",
-  "show_notes": "<ul><li><a href=\"https://www.microsoft.com/en-us/research/group/experimentation-platform-exp/articles/it-takes-a-flywheel-to-fly-kickstarting-and-keeping-the-a-b-testing-momentum/\" target=\"_blank\">It takes a Flywheel to Fly: Kickstarting and Keeping the A/B testing Momentum</a></li><li><a href=\"https://scholar.google.com/citations?user=gXOUJLQAAAAJ&hl=en\"><em>Aleksanders papers on Google Scholar</em></a></li><li><a href=\"https://www.microsoft.com/en-us/research/group/experimentation-platform-exp/articles/diagnosing-sample-ratio-mismatch-in-a-b-testing/\" target=\"_blank\">Diagnosing Sample Ratio Mismatch in A/B Testing</a></li><li><a href=\"https://www.researchgate.net/publication/317006885_The_Evolution_of_Continuous_Experimentation_in_Software_Product_Development‍\" target=\"_blank\">The Evolution of Continuous Experimentation in Software Product Development</a></li></ul>",
-  "guests": [
-    {
-      "id": "aleksander-fabijan",
-      "name": "aleksander-fabijan",
-      "role": "Guest",
-      "bio": "",
-      "image_url": "",
-      "social_links": [],
-      "language": "en",
-      "type": "guest"
-    }
-  ],
+  "show_notes": "",
+  "guests": [],
   "youtube_url": "",
-  "main_image": "src/assets/images/episodes/cro-flywheel-how-microsoft-kickstarted-the-ab-testing-momentum-and-keeps-it-going.png",
+  "main_image": "",
   "language": "en",
   "type": "podcast"
 }

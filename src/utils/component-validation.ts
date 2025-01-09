@@ -54,20 +54,26 @@ export const EpisodeSchema = z.object({
   id: z.string(),
   title: z.string(),
   description: z.string(),
-  publishDate: z.string(),
-  audioUrl: z.string(),
-  duration: z.string(),
+  date: z.string(),
+  audio_url: z.string().url(),
+  duration: z.number(),
   language: LanguageSchema,
   guests: z
     .array(
       z.object({
+        id: z.string(),
         name: z.string(),
-        role: z.string().optional(),
-        company: z.string().optional(),
+        role: z.string(),
+        bio: z.string(),
+        image_url: z.string(),
+        social_links: z.array(z.string()),
+        language: LanguageSchema,
+        type: z.string(),
       })
     )
     .optional(),
   tags: z.array(z.string()).optional(),
+  type: z.string().optional(),
 });
 
 export const EpisodeCardPropsSchema = z.object({

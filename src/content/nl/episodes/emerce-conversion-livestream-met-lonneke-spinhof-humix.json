@@ -1,0 +1,26 @@
+{
+  "id": "emerce-conversion-livestream-met-lonneke-spinhof-humix",
+  "title": "Emerce Interview: Bart van der Meer",
+  "description": "Co-host Bart van der Meer van Klik Process stelt zich even voor aan de CRO.CAFE luisteraars tijdens Emerce Conversion!",
+  "date": "2025-01-09T14:26:30.811Z",
+  "duration": 1571,
+  "audio_url": "https://chtbl.com/track/D992D/media.transistor.fm/2519f000.mp3",
+  "transcript_url": "",
+  "show_notes": "<p><a href=\"https://www.cro.cafe/conversion19\">https://www.cro.cafe/conversion19</a></p>",
+  "guests": [
+    {
+      "id": "bart-van-der-meer",
+      "name": "bart-van-der-meer",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "",
+  "main_image": "src/assets/images/episodes/emerce-interview-bart-van-der-meer.jpeg",
+  "language": "nl",
+  "type": "podcast"
+}

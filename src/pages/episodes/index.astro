@@ -1,0 +1,38 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Grid from '~/components/episode/Grid.astro';
+
+import { getCollection } from 'astro:content';
+
+const metadata = {
+  title: 'Episodes - CRO.CAFE',
+  description: 'Listen to all episodes of the CRO.CAFE podcast about Conversion Rate Optimization.',
+};
+
+const availableLanguages = ['en', 'de', 'es', 'nl'];
+const currentLang = 'en'; // TODO: Get from URL/context
+
+// Verify episodes exist for the current language
+const episodes = await getCollection(`${currentLang}/episodes`);
+console.log('Found episodes:', episodes);
+
+const pageProps = {
+  metadata,
+  availableLanguages,
+  currentLang,
+};
+
+const gridProps = {
+  language: currentLang,
+};
+---
+
+<PageLayout {...pageProps}>
+  <Hero
+    tagline="Episodes"
+    title="All Episodes"
+    subtitle="Listen to all episodes of the CRO.CAFE podcast about Conversion Rate Optimization."
+  />
+  <Grid {...gridProps} />
+</PageLayout>

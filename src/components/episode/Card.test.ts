@@ -8,19 +8,30 @@ describe('Card Component Validation', () => {
       id: 'test-123',
       title: 'Test Episode',
       description: 'Test description',
-      publishDate: new Date().toISOString(),
-      audioUrl: 'https://example.com/audio.mp3',
-      duration: '30:00',
+      date: new Date().toISOString(),
+      audio_url: 'https://example.com/audio.mp3',
+      duration: 1800, // 30 minutes in seconds
       language: 'en',
       guests: [
         {
+          id: 'guest-1',
           name: 'Guest 1',
           role: 'Developer',
-          company: 'Tech Co',
+          bio: 'Test bio',
+          image_url: 'https://example.com/guest1.jpg',
+          social_links: ['https://twitter.com/guest1'],
+          language: 'en',
+          type: 'guest',
         },
         {
+          id: 'guest-2',
           name: 'Guest 2',
           role: 'Designer',
+          bio: 'Test bio',
+          image_url: 'https://example.com/guest2.jpg',
+          social_links: ['https://twitter.com/guest2'],
+          language: 'en',
+          type: 'guest',
         },
       ],
       tags: ['tech', 'development'],
@@ -40,7 +51,7 @@ describe('Card Component Validation', () => {
     const invalidLanguageProps = {
       episode: {
         ...validProps.episode,
-        language: 123,
+        language: 'invalid' as unknown,
       },
     };
     expect(() => validateProps(EpisodeCardPropsSchema, invalidLanguageProps)).toThrow();

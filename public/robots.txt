@@ -1,2 +1,17 @@
+# Allow all crawlers
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap location
+Sitemap: https://cro.cafe/sitemap.xml
+
+# Crawl-delay to prevent server overload
+Crawl-delay: 10
+
+# Common directories to exclude
+Disallow: /admin/
+Disallow: /_astro/
+Disallow: /api/
+Disallow: /keystatic/
+
+# Language-specific sitemaps will be handled by the main sitemap.xml

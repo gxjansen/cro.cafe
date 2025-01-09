@@ -106,28 +106,75 @@ After completing a task, mark it as complete by replacing the [ ] with [x].
 
 ## 5. Routing & Language Management
 
-- [ ] Set up language-specific routes
-- [ ] Implement language detection and redirection
-- [ ] Configure canonical URLs
-- [ ] Set up cross-language linking
-- [ ] Implement hreflang tags
-- [ ] Configure browser language detection
-- [ ] Set up language-specific sitemaps
+- [x] Set up language-specific routes
+- [x] Implement language detection and redirection
+- [x] Configure canonical URLs
+- [x] Set up cross-language linking
+- [x] Implement hreflang tags
+- [x] Configure browser language detection
+- [x] Set up language-specific sitemaps
+- [x] Implement RSS feed sync for all languages
+- [x] Add episode cleanup and deduplication
+
+**Implementation Details:**
+
+- Created language utility (src/utils/language.ts) for:
+  - Language detection from URLs
+  - Browser language preference detection
+  - Language validation and type safety
+  - Cross-language URL generation
+- Implemented middleware (src/middleware.ts) for:
+  - Automatic language detection and redirection
+  - Language information in locals
+  - Proper caching headers
+- Set up sitemap generation (src/pages/sitemap.xml.ts) with:
+  - Support for all content types
+  - Language-specific URLs
+  - Proper change frequencies and priorities
+  - Last modified dates
+- Updated robots.txt with:
+  - Sitemap reference
+  - Crawl optimization settings
+  - Directory exclusions
+- Added comprehensive test coverage:
+  - Language utility tests (src/utils/language.test.ts):
+    - URL language detection
+    - Browser language preference parsing
+    - Language validation
+    - URL generation
+    - Redirection logic
+  - Sitemap generation tests (src/pages/sitemap.xml.test.ts):
+    - XML structure validation
+    - Content entry handling
+    - Empty collection handling
+    - Error handling
+    - Priority and frequency validation
+- Implemented RSS sync (src/utils/rss-sync.ts) with:
+  - Support for all podcast languages (en, nl, de, es)
+  - Episode duration extraction from RSS feeds
+  - Smart title normalization for matching episodes
+  - Duplicate episode detection and cleanup
+  - Short slug generation for consistent URLs
+  - CSV file generation for new episodes
 
 **Validation Checks:**
 
-- URLs follow specified structure
-- Language detection works correctly
-- Canonical tags are properly set
-- Cross-language navigation functions
-- SEO tags validate correctly
-- Browser language detection works across browsers
-- Sitemaps include all language versions
+- URLs follow specified structure ✓
+- Language detection works correctly ✓
+- Canonical tags are properly set ✓
+- Cross-language navigation functions ✓
+- SEO tags validate correctly ✓
+- Browser language detection works across browsers ✓
+- Sitemaps include all language versions ✓
 
 **Reference Files:**
 
-- [Routing Implementation Guide](./guides/routing.md)
-- [SEO Configuration Guide](./guides/seo.md)
+- src/utils/language.ts (Language utilities)
+- src/middleware.ts (Language middleware)
+- src/pages/sitemap.xml.ts (Sitemap generation)
+- public/robots.txt (Crawler configuration)
+- src/utils/language.test.ts (Language utility tests)
+- src/pages/sitemap.xml.test.ts (Sitemap generation tests)
 
 ## 6. Search Implementation
 

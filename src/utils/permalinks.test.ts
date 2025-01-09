@@ -34,8 +34,6 @@ const mockEpisode: Episode = {
   audio_url: 'https://example.com/podcast/episode1.mp3',
   transcript_url: 'https://example.com/podcast/episode1-transcript.txt',
   guests: [mockPerson],
-  platforms: [],
-  quotes: [],
   type: 'episodes',
 };
 

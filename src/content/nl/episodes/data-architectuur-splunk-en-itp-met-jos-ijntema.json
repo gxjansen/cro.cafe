@@ -1,0 +1,26 @@
+{
+  "id": "data-architectuur-splunk-en-itp-met-jos-ijntema",
+  "title": "Data architectuur, Splunk en ITP",
+  "description": "Data tools gemaakt om ons leven als CRO specialisten weer een stukje makkelijker moeten maken. Daar gaan we het over hebben!\n",
+  "date": "2025-01-09T14:26:30.811Z",
+  "duration": 2745,
+  "audio_url": "https://chtbl.com/track/D992D/media.transistor.fm/5c0fb4e3/71074267.mp3",
+  "transcript_url": "",
+  "show_notes": "<ul><li><a href=\"https://www.splunk.com/\">https://www.splunk.com/</a>&nbsp;</li><li><a href=\"https://www.karinslaughter.com/\">https://www.karinslaughter.com/</a></li></ul>",
+  "guests": [
+    {
+      "id": "jos-ijntema",
+      "name": "jos-ijntema",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "",
+  "main_image": "src/assets/images/episodes/data-architectuur-splunk-en-itp.jpeg",
+  "language": "nl",
+  "type": "podcast"
+}

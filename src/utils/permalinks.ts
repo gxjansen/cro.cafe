@@ -2,6 +2,27 @@ import type { Episode, Person, Quote, Platform, Brand } from '~/types';
 import slugify from 'slugify';
 
 /**
+ * Trim slashes from a string
+ */
+export function trimSlash(s: string) {
+  return s.replace(/^\/+|\/+$/g, '');
+}
+
+/**
+ * Get the home permalink
+ */
+export function getHomePermalink() {
+  return '/';
+}
+
+/**
+ * Get an asset URL
+ */
+export function getAsset(path: string) {
+  return `/${trimSlash(path)}`;
+}
+
+/**
  * Generates a canonical URL for a content entry.
  * @param language The language of the content entry.
  * @param contentType The type of the content entry (e.g., 'episodes', 'guests', 'quotes', 'brands', 'platforms').
@@ -180,7 +201,10 @@ export function clearSlugRegistry(contentType?: string, language?: string): void
     delete usedSlugs[`${contentType}-${language}`];
   } else {
     Object.keys(usedSlugs).forEach((key) => {
-      usedSlugs[key].clear();
+      const slugSet = usedSlugs[key];
+      if (slugSet) {
+        slugSet.clear();
+      }
     });
   }
 }
@@ -215,29 +239,9 @@ export function isValidHreflangContent(
 export function generateHreflangTags(
   content: HreflangContent,
   availableLanguages: readonly string[]
-): string[] {
-  // Validate input with explicit type guard
-  function assertValidContent(
-    c: HreflangContent
-  ): asserts c is { id: string; contentType: string } {
-    if (
-      typeof c !== 'object' ||
-      c === null ||
-      typeof c.id !== 'string' ||
-      typeof c.contentType !== 'string'
-    ) {
-      throw new Error('Invalid content');
-    }
-  }
-
+): readonly string[] {
   // Early return for invalid input
-  if (!Array.isArray(availableLanguages)) {
-    return [];
-  }
-
-  try {
-    assertValidContent(content);
-  } catch {
+  if (!Array.isArray(availableLanguages) || !isValidHreflangContent(content)) {
     return [];
   }
 

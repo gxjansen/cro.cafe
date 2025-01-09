@@ -5,7 +5,7 @@ import {
   importPeople,
   importPlatforms,
   importQuotes,
-} from '../src/utils/data-import';
+} from '../src/utils/data-import.ts';
 
 import * as fs from 'fs';
 

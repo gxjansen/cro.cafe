@@ -5,7 +5,7 @@ import ErrorBoundary from '../common/ErrorBoundary.astro';
 import { validateProps, EpisodeGridPropsSchema } from '~/utils/component-validation';
 
 interface Props {
-  language: string;
+  language: 'en' | 'de' | 'es' | 'nl';
   limit?: number;
   featured?: boolean;
   showGuests?: boolean;
@@ -22,17 +22,21 @@ const {
   columns = '3'
 } = props;
 
-// Get episodes and filter by language and featured status
-const episodes = await getCollection('episodes', (entry) => {
-  if (language && entry.data.language !== language) return false;
+// Get episodes for the specified language
+const episodes = await getCollection(`${language}/episodes`).catch(() => []);
+
+// Filter episodes based on featured status
+const filteredEpisodes = episodes?.filter((entry) => {
   if (featured && !entry.data.featured) return false;
   return true;
-});
+}) || [];
 
-// Sort by publication date and apply limit if specified
-const sortedEpisodes = episodes
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, limit);
+// Sort by date and apply limit if specified
+const sortedEpisodes = filteredEpisodes.length > 0 
+  ? filteredEpisodes
+      .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf())
+      .slice(0, limit)
+  : [];
 
 // Define grid columns class based on prop
 const gridClass = {
@@ -46,12 +50,27 @@ const gridClass = {
   <div class="episode-grid">
     {sortedEpisodes.length > 0 ? (
       <div class={`grid gap-6 ${gridClass}`}>
-        {sortedEpisodes.map((episode) => (
-          <EpisodeCard 
-            episode={episode} 
-            showGuests={showGuests}
-          />
-        ))}
+        {sortedEpisodes.map((episode) => {
+          // Transform episode data to match schema
+          const episodeData = {
+            id: episode.id,
+            title: episode.data.title,
+            description: episode.data.description,
+            date: episode.data.date,
+            audio_url: episode.data.audio_url,
+            duration: episode.data.duration,
+            language: episode.data.language,
+            guests: episode.data.guests || [],
+            type: episode.data.type || 'episode'
+          };
+          
+          return (
+            <EpisodeCard 
+              episode={episodeData} 
+              showGuests={showGuests}
+            />
+          );
+        })}
       </div>
     ) : (
       <div class="no-episodes">

@@ -2,6 +2,7 @@
 import { Icon } from 'astro-icon/components';
 import { SITE } from 'astrowind:config';
 import { getHomePermalink } from '~/utils/permalinks';
+import LanguageSwitcher from '~/components/common/LanguageSwitcher.astro';
 
 interface Link {
   text?: string;
@@ -21,9 +22,19 @@ export interface Props {
   socialLinks: Array<Link>;
   footNote?: string;
   theme?: string;
+  currentLang?: 'en' | 'de' | 'es' | 'nl';
+  currentPath?: string;
 }
 
-const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
+const { 
+  socialLinks = [], 
+  secondaryLinks = [], 
+  links = [], 
+  footNote = '', 
+  theme = 'light',
+  currentLang = 'en',
+  currentPath = '',
+} = Astro.props;
 ---
 
 <footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
@@ -96,8 +107,11 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
         )
       }
 
-      <div class="text-sm mr-4 dark:text-muted">
-        <Fragment set:html={footNote} />
+      <div class="flex items-center gap-4">
+        <LanguageSwitcher currentLang={currentLang} currentPath={currentPath} />
+        <div class="text-sm dark:text-muted">
+          <Fragment set:html={footNote} />
+        </div>
       </div>
     </div>
   </div>

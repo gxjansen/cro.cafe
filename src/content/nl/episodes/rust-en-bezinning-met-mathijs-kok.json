@@ -1,0 +1,26 @@
+{
+  "id": "rust-en-bezinning-met-mathijs-kok",
+  "title": "Rust en bezinning",
+  "description": "Mathijs bezocht Emerce Engage als bezoeker en kwam even bijpraten bij ons in het café over de sessies die hij heeft bezocht.",
+  "date": "2025-01-09T14:26:30.811Z",
+  "duration": 2695,
+  "audio_url": "https://chtbl.com/track/D992D/media.transistor.fm/c3877466/f4e05344.mp3",
+  "transcript_url": "",
+  "show_notes": "<ul><li><a href=\"https://emerce.nl/event/engage/\" target=\"_blank\">Emerce Engage</a></li></ul>",
+  "guests": [
+    {
+      "id": "mathijs-kok",
+      "name": "mathijs-kok",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "",
+  "main_image": "src/assets/images/episodes/rust-en-bezinning.jpeg",
+  "language": "nl",
+  "type": "podcast"
+}

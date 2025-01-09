@@ -1,27 +1,27 @@
 ---
 interface Props {
-  availableLanguages: string[];
-  currentPath: string;
+  availableLanguages?: string[];
+  currentPath?: string;
 }
 
-const { availableLanguages, currentPath } = Astro.props;
+const { availableLanguages = [], currentPath = '/' } = Astro.props;
 
-// Remove leading language code if present
-const pathWithoutLang = currentPath.replace(/^\/(en|de|es|nl)\//, '/');
+// Base URL for the site
+const baseUrl = 'https://cro.cafe';
 
 // Generate URLs for each language
-const languageUrls = availableLanguages.map(lang => ({
-  lang,
-  url: `${Astro.site}${lang}${pathWithoutLang}`.replace(/\/+/g, '/'),
-}));
+const languageUrls = Array.isArray(availableLanguages) 
+  ? availableLanguages.map(lang => ({
+      lang,
+      url: `${baseUrl}/${lang}${currentPath}`.replace(/\/+/g, '/'),
+    }))
+  : [];
 ---
 
-{/* Add x-default for homepage */}
 {currentPath === '/' && (
-  <link rel="alternate" href={Astro.site} hreflang="x-default" />
+  <link rel="alternate" href={baseUrl} hreflang="x-default" />
 )}
 
-{/* Add language alternates */}
 {languageUrls.map(({ lang, url }) => (
   <link rel="alternate" hreflang={lang} href={url} />
 ))}

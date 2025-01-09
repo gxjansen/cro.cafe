@@ -1,0 +1,23 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Grid from '~/components/guest/Grid.astro';
+
+const metadata = {
+  title: 'Guests - CRO.CAFE',
+  description: 'Meet our expert guests from the CRO.CAFE podcast, sharing their knowledge and experiences in Conversion Rate Optimization.',
+};
+
+const availableLanguages = ['en', 'de', 'es', 'nl'];
+const currentLang = 'en'; // TODO: Get from URL/context
+---
+
+<PageLayout {metadata} {availableLanguages} {currentLang}>
+  <Hero
+    tagline="Guests"
+    title="Our Expert Guests"
+    subtitle="Meet our expert guests from the CRO.CAFE podcast, sharing their knowledge and experiences in Conversion Rate Optimization."
+  />
+
+  <Grid />
+</PageLayout>

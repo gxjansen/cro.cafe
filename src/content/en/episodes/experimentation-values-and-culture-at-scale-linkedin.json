@@ -1,26 +1,15 @@
 {
   "id": "experimentation-values-and-culture-at-scale-linkedin",
   "title": "Experimentation values & culture at scale: Linkedin",
-  "description": "We learn from Alexander Ivaniuk about Linkedins values of experimentation, the experimentation culture and how they manage to experiment at a massive scale",
-  "date": "2025-01-08T20:07:07.493Z",
-  "duration": 0,
-  "audio_url": "https://cdn.transistor.fm/file/transistor/m/shows/5036/40d2577e7904e7842c8f139e2046988a.mp3",
+  "description": "\n        We learn from Alexander Ivaniuk about Linkedins values of experimentation, the experimentation culture and how they manage to experiment at a massive scale.\n      ",
+  "date": "2021-09-27T15:00:00.000Z",
+  "duration": 3424,
+  "audio_url": "https://media.transistor.fm/5562e843/f6b8967b.mp3",
   "transcript_url": "",
-  "show_notes": "<ul><li><a href=\"https://www.amazon.com/Trustworthy-Online-Controlled-Experiments-Practical/dp/1108724264/ref=sr_1_1?crid=3832B10TZ1I4D&dchild=1&keywords=trustworthy+online+controlled+experiments&qid=1608617071&sprefix=trustworthy+onlin%2Caps%2C455&sr=8-1\">Trustworthy Online Controlled Experiments (A Practical Guide to A/B Testing)</a> (Ron Kohavi MS/Air, Diane Tang &amp; Ya Xu)</li><li><a href=\"https://engineering.linkedin.com/blog/2020/our-evolution-towards-t-rex--the-prehistory-of-experimentation-i\">https://engineering.linkedin.com/blog/2020/our-evolution-towards-t-rex--the-prehistory-of-experimentation-i</a>&nbsp;</li><li><a href=\"https://engineering.linkedin.com/blog/2020/a-b-testing-variant-assignment\">https://engineering.linkedin.com/blog/2020/a-b-testing-variant-assignment</a>&nbsp;</li><li><a href=\"https://engineering.linkedin.com/blog/2020/making-the-linkedin-experimentation-engine-20x-faster\">https://engineering.linkedin.com/blog/2020/making-the-linkedin-experimentation-engine-20x-faster</a>&nbsp;</li><li><a href=\"https://www.youtube.com/watch?v=LY1aeOdr9jU\">https://www.youtube.com/watch?v=LY1aeOdr9jU</a>&nbsp;</li><li>https://engineering.linkedin.com/blog/2020/bringing-project-every-member-to-life</li><li><a href=\"https://engineering.linkedin.com/blog/2020/building-inclusive-products-through-a-b-testing%E2%80%A6\">https://engineering.linkedin.com/blog/2020/building-inclusive-products-through-a-b-testing…</a></li><li><a href=\"https://hdsr.mitpress.mit.edu/pub/wjhth9tr/release/1\">https://hdsr.mitpress.mit.edu/pub/wjhth9tr/release/1</a>&nbsp;</li><li><a href=\"https://www.cro.cafe/podcast/sequential-testing\">https://www.cro.cafe/podcast/sequential-testing</a>&nbsp;</li><li><a href=\"https://www.kdd.org/kdd2018/accepted-papers/view/sqr-balancing-speed-quality-and-risk-in-online-experiments\">https://www.kdd.org/kdd2018/accepted-papers/view/sqr-balancing-speed-quality-and-risk-in-online-experiments</a>&nbsp;</li><li><a href=\"https://en.wikipedia.org/wiki/Atkinson_index\" target=\"_blank\">Atkinson index</a></li></ul>",
-  "guests": [
-    {
-      "id": "alexander-ivaniuk",
-      "name": "alexander-ivaniuk",
-      "role": "Guest",
-      "bio": "",
-      "image_url": "",
-      "social_links": [],
-      "language": "en",
-      "type": "guest"
-    }
-  ],
+  "show_notes": "",
+  "guests": [],
   "youtube_url": "",
-  "main_image": "src/assets/images/episodes/experimentation-values-and-culture-at-scale-linkedin.jpg",
+  "main_image": "",
   "language": "en",
   "type": "podcast"
 }

@@ -1,0 +1,26 @@
+{
+  "id": "data-science-ai-en-informatica-met-lotte-cornelissen-online-dialogue",
+  "title": "Data Science, AI en Informatica",
+  "description": "Lotte schoof aan bij CRO.CAFE om onder andere te praten over AI, haar studie, het vakgebied en The Conference formerly known as Conversion Hotel.",
+  "date": "2025-01-09T14:26:30.811Z",
+  "duration": 1497,
+  "audio_url": "https://chtbl.com/track/D992D/media.transistor.fm/ff1de424/1138564b.mp3",
+  "transcript_url": "",
+  "show_notes": "<ul><li><a href=\"https://onlinedialogue.nl/\" target=\"_blank\">Online Dialogue</a></li><li><a href=\"https://conversionhotel.com/\" target=\"_blank\">Conversion Hotel</a></li></ul>",
+  "guests": [
+    {
+      "id": "lotte-cornelissen",
+      "name": "lotte-cornelissen",
+      "role": "Guest",
+      "bio": "",
+      "image_url": "",
+      "social_links": [],
+      "language": "nl",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "https://youtu.be/GauWk0QDUC8",
+  "main_image": "src/assets/images/episodes/data-science-ai-en-informatica.jpeg",
+  "language": "nl",
+  "type": "podcast"
+}

@@ -11,8 +11,9 @@ import Analytics from '~/components/common/Analytics.astro';
 import BasicScripts from '~/components/common/BasicScripts.astro';
 import HreflangTags from '~/components/common/HreflangTags.astro';
 import StructuredData from '~/components/common/StructuredData.astro';
-import Navigation from '~/components/common/Navigation.astro';
-import Footer from '~/components/common/Footer.astro';
+import Header from '~/components/widgets/Header.astro';
+import Footer from '~/components/widgets/Footer.astro';
+import { headerData, footerData } from '~/navigation';
 
 // Comment the line below to disable View Transitions
 import { ClientRouter } from 'astro:transitions';
@@ -62,7 +63,10 @@ const textDirection = 'ltr'; // All supported languages are LTR
   </head>
 
   <body class="antialiased text-default bg-page tracking-tight flex flex-col min-h-screen">
-    <Navigation 
+    <Header 
+      {...headerData}
+      isSticky
+      showToggleTheme
       currentLang={currentLang}
       currentPath={currentPath}
     />
@@ -72,7 +76,9 @@ const textDirection = 'ltr'; // All supported languages are LTR
     </main>
 
     <Footer 
+      {...footerData}
       currentLang={currentLang}
+      currentPath={currentPath}
     />
 
     <BasicScripts />
