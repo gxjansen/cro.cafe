@@ -110,14 +110,15 @@ function writeContentFile(
   data: Episode | Person | Platform | Quote,
   type: string,
   language: string
-) {
-  const contentDir = `src/content/${language}/${type}`;
+): void {
+  const contentDir = `src/content/${language}-${type}`;
   if (!fs.existsSync(contentDir)) {
     fs.mkdirSync(contentDir, { recursive: true });
   }
   fs.writeFileSync(`${contentDir}/${data.id}.json`, JSON.stringify(data, null, 2));
 }
 
+// Helper function to generate unique slugs
 function generateUniqueSlug(title: string, _type: string, _language: string): string {
   return generateSlug(title);
 }
@@ -152,105 +153,7 @@ function parseDuration(duration: string): number {
   return 0;
 }
 
-export async function importEpisodes(filePath: string, language: string): Promise<Episode[]> {
-  try {
-    const content = fs.readFileSync(filePath, 'utf-8');
-    const episodes = parse(content, CSV_OPTIONS) as EpisodeCSV[];
-
-    return Promise.all(
-      episodes.map(async (episode) => {
-        const title = getFieldValue(episode, ['Title', 'Título', 'Titel', 'Name & SERP Title']);
-        if (!title) {
-          throw new Error('Episode title is required');
-        }
-
-        const slug = generateUniqueSlug(title, 'episodes', language);
-
-        // Process guests into Person objects
-        const guestNames = getFieldValue(episode, [
-          'Guests',
-          'Invitados',
-          'Gäste',
-          'Gasten',
-          'All guests (incl main guest)',
-        ])
-          .split(/[,;]/)
-          .map((name) => name.trim())
-          .filter(Boolean);
-
-        const guests: Person[] = guestNames.map((name) => ({
-          id: generateUniqueSlug(name, 'guests', language),
-          name,
-          role: 'Guest',
-          bio: '',
-          image_url: '',
-          social_links: [],
-          language,
-          type: 'guest',
-        }));
-
-        // Get the remote image URL
-        const remoteImageUrl = getFieldValue(episode, ['Main Image', 'Main image', 'Image']) || '';
-
-        // Download and store the image locally if a URL is provided
-        let localImagePath = '';
-        if (remoteImageUrl) {
-          try {
-            const episodesImageDir = path.join('src', 'assets', 'images', 'episodes');
-            const fileName = `${slug}${path.extname(new URL(remoteImageUrl).pathname)}`;
-            localImagePath = await downloadImage(remoteImageUrl, episodesImageDir, fileName);
-            // Convert to relative path from project root
-            localImagePath = localImagePath.replace(/^.*?src\//, 'src/');
-          } catch (error) {
-            console.error(`Error downloading image for episode ${title}:`, error);
-            // Keep the remote URL if download fails
-            localImagePath = remoteImageUrl;
-          }
-        }
-
-        const episodeData = {
-          id: slug,
-          title,
-          description:
-            getFieldValue(episode, [
-              'Description',
-              'Descripción',
-              'Beschreibung',
-              'Beschrijving',
-              'Intro & SERP Meta Description',
-            ]) || '',
-          date: new Date(
-            getFieldValue(episode, ['Date', 'Fecha', 'Datum', 'Publication date']) ||
-              new Date().toISOString()
-          ),
-          duration: parseDuration(
-            getFieldValue(episode, ['Duration', 'Duración', 'Dauer', 'Duur', 'duration']) || '0'
-          ),
-          audio_url: episode['directmp3link'] || episode['Audio URL'] || '',
-          transcript_url: episode['Transcript'] || '',
-          show_notes: episode['Shownotes/ extra info'] || '',
-          guests,
-          youtube_url: getFieldValue(episode, ['YouTube URL', 'Youtube URL', 'Youtube Embed code'])
-            ? `https://youtu.be/${getFieldValue(episode, ['YouTube URL', 'Youtube URL', 'Youtube Embed code'])}`
-            : '',
-          main_image: localImagePath,
-          language,
-          type: 'podcast',
-        };
-
-        console.log(`Episode: ${title}, YouTube URL: ${getFieldValue(episode, ['YouTube URL'])}`);
-
-        // Write episode content file
-        writeContentFile(episodeData, 'episodes', language);
-        return episodeData;
-      })
-    );
-  } catch (error) {
-    console.error(error);
-    throw error;
-  }
-}
-
+// Import functions
 export async function importPeople(filePath: string, language: string): Promise<Person[]> {
   try {
     const content = fs.readFileSync(filePath, 'utf-8');
@@ -295,11 +198,11 @@ export async function importPeople(filePath: string, language: string): Promise<
         let localImagePath = '';
         if (remoteImageUrl) {
           try {
-            const guestsImageDir = path.join('src', 'assets', 'images', 'guests');
+            const guestsImageDir = path.join('public', 'images', 'guests');
             const fileName = `${slug}${path.extname(new URL(remoteImageUrl).pathname)}`;
             localImagePath = await downloadImage(remoteImageUrl, guestsImageDir, fileName);
-            // Convert to relative path from project root
-            localImagePath = localImagePath.replace(/^.*?src\//, 'src/');
+            // Store path relative to /images/guests/
+            localImagePath = fileName;
           } catch (error) {
             console.error(`Error downloading image for ${name}:`, error);
             // Keep the remote URL if download fails
@@ -325,6 +228,227 @@ export async function importPeople(filePath: string, language: string): Promise<
     );
   } catch (error) {
     console.error(`Error reading CSV file at ${filePath}:`, error);
+    throw error;
+  }
+}
+
+export async function importEpisodes(filePath: string, language: string): Promise<Episode[]> {
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8');
+    const episodes = parse(content, CSV_OPTIONS) as EpisodeCSV[];
+
+    // First import all guests to ensure we have their complete data
+    const languageDir =
+      language === 'en'
+        ? 'English'
+        : language === 'es'
+          ? 'Spanish'
+          : language === 'de'
+            ? 'German'
+            : 'Dutch';
+
+    const peopleFileName =
+      language === 'en'
+        ? 'CRO.CAFE - People.csv'
+        : language === 'es'
+          ? 'CRO.CAFE Español - People.csv'
+          : language === 'de'
+            ? 'CRO.CAFE Deutsch - People.csv'
+            : 'CRO.CAFE Nederlands - Gasten.csv';
+
+    const allGuests = await importPeople(
+      `project/current-site-data/${languageDir}/cleaned/${peopleFileName}`,
+      language
+    );
+
+    return Promise.all(
+      episodes.map(async (episode) => {
+        const title = getFieldValue(episode, ['Title', 'Título', 'Titel', 'Name & SERP Title']);
+        if (!title) {
+          throw new Error('Episode title is required');
+        }
+
+        const slug = generateUniqueSlug(title, 'episodes', language);
+
+        // Process guests from both the Guests column and extract from description
+        const guestNamesFromColumn = getFieldValue(episode, [
+          'Guests',
+          'Invitados',
+          'Gäste',
+          'Gasten',
+          'All guests (incl main guest)',
+        ])
+          .split(/[,;]/)
+          .map((name: string) => name.trim())
+          .filter(Boolean);
+
+        // Extract guest names from description using regex
+        const description = getFieldValue(episode, [
+          'Description',
+          'Descripción',
+          'Beschreibung',
+          'Beschrijving',
+          'Intro & SERP Meta Description',
+        ]);
+
+        // Extract guest names from title if it contains "with" or similar patterns
+        const titleMatch = title.match(/(?:with|met|con|mit)\s+([^()!.?]+?)(?:\s*\(|$)/i);
+        const guestNamesFromTitle = titleMatch?.[1]
+          ? titleMatch[1]
+              .split(/(?:,|\s+(?:and|en|y|und|&)\s+)/i)
+              .map((name: string) => name.trim())
+              .filter((name: string) => {
+                // Filter out common false positives
+                const blacklist = [
+                  'data',
+                  'analytics',
+                  'copy',
+                  'clients',
+                  'browsers',
+                  'privacy',
+                  'initiatives',
+                  'SiteSpect',
+                ];
+                return (
+                  name && !blacklist.some((term) => name.toLowerCase().includes(term.toLowerCase()))
+                );
+              })
+          : [];
+
+        // Extract guest names from description, looking for specific patterns
+        const descriptionMatch = description.match(
+          /(?:with|met|con|mit)\s+([^()!.?]+?)(?=\s*(?:about|we|learn|explore|discuss|talk|praat|habla|spricht)\s|$)/i
+        );
+        const guestNamesFromDescription = descriptionMatch?.[1]
+          ? descriptionMatch[1]
+              .split(/(?:,|\s+(?:and|en|y|und|&)\s+)/i)
+              .map((name: string) => name.trim())
+              .filter((name: string) => {
+                // Filter out common false positives
+                const blacklist = [
+                  'data',
+                  'analytics',
+                  'copy',
+                  'clients',
+                  'browsers',
+                  'privacy',
+                  'initiatives',
+                  'SiteSpect',
+                ];
+                return (
+                  name && !blacklist.some((term) => name.toLowerCase().includes(term.toLowerCase()))
+                );
+              })
+          : [];
+
+        // Combine guest names from all sources and remove duplicates
+        const allGuestNames = [
+          ...new Set([
+            ...guestNamesFromColumn,
+            ...guestNamesFromTitle,
+            ...guestNamesFromDescription,
+          ]),
+        ];
+
+        // Try to match guest names with people data
+        const guests = allGuestNames
+          .map((name: string) => {
+            // Normalize names for comparison
+            const normalizedName = name
+              .toLowerCase()
+              .normalize('NFD')
+              .replace(/[\u0300-\u036f]/g, ''); // Remove diacritics
+
+            // Try exact match first
+            let existingGuest = allGuests.find((g: Person) => {
+              const normalizedGuestName = g.name
+                .toLowerCase()
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '');
+              return normalizedGuestName === normalizedName;
+            });
+
+            // If no exact match, try partial match
+            if (!existingGuest) {
+              existingGuest = allGuests.find((g: Person) => {
+                const normalizedGuestName = g.name
+                  .toLowerCase()
+                  .normalize('NFD')
+                  .replace(/[\u0300-\u036f]/g, '');
+                // Split names into parts and check if any part matches
+                const guestNameParts = normalizedGuestName.split(/\s+/);
+                const nameParts = normalizedName.split(/\s+/);
+                return guestNameParts.some((part: string) => nameParts.includes(part));
+              });
+            }
+
+            if (!existingGuest) {
+              console.warn(`Guest not found in people data: ${name}`);
+              return null;
+            }
+
+            // Create a new guest object with properly formatted image path
+            return {
+              ...existingGuest,
+              image_url: existingGuest.image_url || '', // Ensure image_url exists
+            };
+          })
+          .filter((guest): guest is Person => guest !== null);
+
+        // Get the remote image URL
+        const remoteImageUrl = getFieldValue(episode, ['Main Image', 'Main image', 'Image']) || '';
+
+        // Download and store the image locally if a URL is provided
+        let localImagePath = '';
+        if (remoteImageUrl) {
+          try {
+            const episodesImageDir = path.join('public', 'images', 'episodes');
+            const fileName = `${slug}${path.extname(new URL(remoteImageUrl).pathname)}`;
+            localImagePath = await downloadImage(remoteImageUrl, episodesImageDir, fileName);
+            // Store path relative to /images/episodes/
+            localImagePath = fileName;
+          } catch (error) {
+            console.error(`Error downloading image for episode ${title}:`, error);
+            // Keep the remote URL if download fails
+            localImagePath = remoteImageUrl;
+          }
+        }
+
+        // Strip HTML tags from description
+        const cleanDescription = description.replace(/<[^>]*>/g, '');
+
+        const episodeData = {
+          id: slug,
+          title,
+          description: cleanDescription,
+          date: new Date(
+            getFieldValue(episode, ['Date', 'Fecha', 'Datum', 'Publication date']) ||
+              new Date().toISOString()
+          ),
+          duration: parseDuration(
+            getFieldValue(episode, ['Duration', 'Duración', 'Dauer', 'Duur', 'duration']) || '0'
+          ),
+          audio_url: episode['directmp3link'] || episode['Audio URL'] || '',
+          transcript_url: episode['Transcript'] || '',
+          show_notes: episode['Shownotes/ extra info'] || '',
+          guests,
+          youtube_url: getFieldValue(episode, ['YouTube URL', 'Youtube URL', 'Youtube Embed code'])
+            ? `https://youtu.be/${getFieldValue(episode, ['YouTube URL', 'Youtube URL', 'Youtube Embed code'])}`
+            : '',
+          main_image: localImagePath,
+          language,
+          type: 'podcast',
+        };
+
+        console.log(`Episode: ${title}, YouTube URL: ${getFieldValue(episode, ['YouTube URL'])}`);
+
+        // Write episode content file
+        writeContentFile(episodeData, 'episodes', language);
+        return episodeData;
+      })
+    );
+  } catch (error) {
+    console.error(error);
     throw error;
   }
 }

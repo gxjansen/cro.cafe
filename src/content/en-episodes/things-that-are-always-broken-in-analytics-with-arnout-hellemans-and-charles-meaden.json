@@ -1,0 +1,36 @@
+{
+  "id": "things-that-are-always-broken-in-analytics-with-arnout-hellemans-and-charles-meaden",
+  "title": "Things that are always broken in Analytics, with Arnout Hellemans & Charles Meaden",
+  "description": "\n        Shownotes: cro.cafe/podcast/things-that-are-always-broken-in-analyticsPartners:Convert: convert.com/featuresOnline Dialogue: onlinedialogue.nlSiteSpect: sitespect.comContentsquare: contentsquare.comOnline Invloed: onlineinvloed.nl\n      ",
+  "date": "2020-07-21T22:00:00.000Z",
+  "duration": 1815,
+  "audio_url": "https://media.transistor.fm/0c43f3d1/5e35cdab.mp3",
+  "transcript_url": "",
+  "show_notes": "",
+  "guests": [
+    {
+      "id": "arnout-hellemans",
+      "name": "Arnout Hellemans",
+      "role": "Owner",
+      "bio": "",
+      "image_url": "arnout-hellemans.jpeg",
+      "social_links": [],
+      "language": "en",
+      "type": "guest"
+    },
+    {
+      "id": "charles-meaden",
+      "name": "Charles Meaden",
+      "role": "Founder",
+      "bio": "",
+      "image_url": "charles-meaden.jpeg",
+      "social_links": [],
+      "language": "en",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "",
+  "main_image": "",
+  "language": "en",
+  "type": "podcast"
+}

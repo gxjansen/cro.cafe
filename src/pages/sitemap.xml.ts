@@ -85,7 +85,7 @@ async function getContentEntries(): Promise<SitemapEntry[]> {
   for (const lang of Object.keys(LANGUAGES) as Language[]) {
     try {
       // Episodes
-      const episodes = await getCollection(`${lang}/episodes`);
+      const episodes = await getCollection(`${lang}-episodes`);
       episodes.forEach((episode) => {
         entries.push({
           url: `${SITE_URL}/${lang}/episodes/${episode.data.id}`,
@@ -96,7 +96,7 @@ async function getContentEntries(): Promise<SitemapEntry[]> {
       });
 
       // Guests
-      const guests = await getCollection(`${lang}/guests`);
+      const guests = await getCollection(`${lang}-guests`);
       guests.forEach((guest) => {
         entries.push({
           url: `${SITE_URL}/${lang}/guests/${guest.data.id}`,
@@ -107,7 +107,7 @@ async function getContentEntries(): Promise<SitemapEntry[]> {
 
       // Platforms - only available in specific languages
       if (lang === 'en' || lang === 'de') {
-        const platforms = await getCollection(`${lang}/platforms` as const);
+        const platforms = await getCollection(`${lang}-platforms` as const);
         platforms.forEach((platform) => {
           if ('id' in platform.data) {
             entries.push({

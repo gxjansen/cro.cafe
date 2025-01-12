@@ -16,7 +16,7 @@ describe('Sitemap Generation', () => {
   it('generates valid XML sitemap with correct headers', async () => {
     // Mock content collections
     (getCollection as jest.Mock).mockImplementation((collection: string) => {
-      if (collection === 'en/episodes') {
+      if (collection === 'en-episodes') {
         return Promise.resolve([
           {
             data: {
@@ -34,7 +34,7 @@ describe('Sitemap Generation', () => {
           },
         ]);
       }
-      if (collection === 'en/guests') {
+      if (collection === 'en-guests') {
         return Promise.resolve([
           {
             data: {

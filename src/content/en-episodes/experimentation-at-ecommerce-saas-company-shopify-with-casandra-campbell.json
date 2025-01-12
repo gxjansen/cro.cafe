@@ -1,0 +1,26 @@
+{
+  "id": "experimentation-at-ecommerce-saas-company-shopify-with-casandra-campbell",
+  "title": "Experimentation at ecommerce SaaS company Shopify, with Casandra Campbell",
+  "description": "\n        We learn how you can experiment on a SaaS product and learn how Shopify structures their optimization workflows.\n      ",
+  "date": "2020-11-23T15:45:45.000Z",
+  "duration": 2433,
+  "audio_url": "https://media.transistor.fm/f772545e/162b2f80.mp3",
+  "transcript_url": "",
+  "show_notes": "",
+  "guests": [
+    {
+      "id": "casandra-campbell",
+      "name": "Casandra Campbell",
+      "role": "Testing and Experimentation Lead",
+      "bio": "",
+      "image_url": "casandra-campbell.jpeg",
+      "social_links": [],
+      "language": "en",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "",
+  "main_image": "",
+  "language": "en",
+  "type": "podcast"
+}

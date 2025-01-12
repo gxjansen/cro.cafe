@@ -18,13 +18,18 @@ const BaseEntitySchema = BaseContentSchema.extend({
 }).strict();
 
 // Nested object schemas
-const GuestSchema = BaseContentSchema.extend({
-  name: z.string(),
-  role: z.string(),
-  bio: z.string().default(''),
-  image_url: z.string().default(''),
-  social_links: z.array(z.string()).default([]),
-}).strict();
+const GuestSchema = z
+  .object({
+    id: z.string(),
+    name: z.string(),
+    role: z.string().optional(),
+    bio: z.string().optional(),
+    image_url: z.string().optional(),
+    social_links: z.array(z.string()).optional(),
+    language: LanguageEnum,
+    type: z.string().optional(),
+  })
+  .strict();
 
 const ReferenceSchema = z
   .object({

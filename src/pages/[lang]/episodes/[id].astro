@@ -12,25 +12,33 @@ export async function getStaticPaths() {
   // Get episodes for each language
   for (const lang of allLanguages) {
     try {
-      const episodes = await getCollection(`${lang}/episodes`);
-      const guests = await getCollection(`${lang}/guests`);
+      const episodes = await getCollection(`${lang}-episodes`);
+      const guests = await getCollection(`${lang}-guests`);
 
       // Create a map of guest data by ID
-      const guestMap = new Map(guests.map(guest => [guest.data.id, guest.data]));
+      const guestMap = new Map(guests.map(guest => [guest.id, guest.data]));
 
       const languagePaths = episodes.map(episode => {
         // Merge guest data with episode guest references
-        const mergedGuests = episode.data.guests?.map(guest => ({
-          ...guest,
-          ...guestMap.get(guest.id),
-        })) || [];
+        const mergedGuests = episode.data.guests?.map(guest => {
+          const guestData = guestMap.get(guest.id);
+          return {
+            ...guest,
+            ...guestData,
+            // Ensure image_url is included
+            image_url: guestData?.image_url || '',
+          };
+        }) || [];
 
         return {
           params: { lang, id: episode.id },
           props: { 
             episode: {
               ...episode.data,
+              id: episode.id,
               guests: mergedGuests,
+              // Ensure main_image is included
+              main_image: episode.data.main_image || '',
             }, 
             availableLanguages: allLanguages 
           }
@@ -48,6 +56,7 @@ export async function getStaticPaths() {
 
 interface Props {
   episode: {
+    id: string;
     title: string;
     description: string;
     date: string;
@@ -64,6 +73,10 @@ interface Props {
       language: z.infer<typeof LanguageSchema>;
       type: string;
     }>;
+    main_image?: string;
+    transcript_url?: string;
+    youtube_url?: string;
+    show_notes?: string;
     type?: string;
   };
   availableLanguages: readonly ('en' | 'de' | 'es' | 'nl')[];

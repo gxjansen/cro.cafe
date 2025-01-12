@@ -73,7 +73,7 @@ Start each messsage with "Hey G,"
 - Implement proper code splitting
 - Use proper caching strategies
 
-## Write valid Typescript code that uses state-of-the-art Node.js v20 features and follows best practices:
+## Write valid Typescript code that uses state-of-the-art Node.js > v23 features and follows best practices:
 
 - Always use ES6+ syntax
 - Always use the built-in 'fetch' for HTTP requests, rather than using the 'node-fetch' package

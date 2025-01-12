@@ -56,6 +56,7 @@
     "@iconify-json/flat-color-icons": "^1.2.0",
     "@iconify-json/tabler": "^1.2.10",
     "@tailwindcss/typography": "^0.5.15",
+    "@types/axios": "^0.9.36",
     "@types/eslint__js": "^8.42.3",
     "@types/js-yaml": "^4.0.9",
     "@types/jsdom": "^21.1.7",

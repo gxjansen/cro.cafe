@@ -49,16 +49,16 @@ const {
   main_image
 } = episode;
 
-// Get episode image
+// Get episode image - paths are now relative to /images/
 const episodeImage = main_image 
-  ? `/images/episodes/${main_image.replace('src/assets/images/episodes/', '')}`
+  ? `/images/episodes/${main_image}`
   : '/images/default.png';
 
-// Get guest images
+// Get guest images - paths are now relative to /images/
 const resolvedGuests = guests.map(guest => ({
   ...guest,
   resolvedImage: guest.image_url 
-    ? `/images/guests/${guest.image_url.replace('src/assets/images/guests/', '')}`
+    ? `/images/guests/${guest.image_url}`
     : '/images/default.png'
 }));
 

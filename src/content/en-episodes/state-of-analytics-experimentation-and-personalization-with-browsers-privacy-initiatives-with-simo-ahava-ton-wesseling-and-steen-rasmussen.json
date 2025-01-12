@@ -1,0 +1,46 @@
+{
+  "id": "state-of-analytics-experimentation-and-personalization-with-browsers-privacy-initiatives-with-simo-ahava-ton-wesseling-and-steen-rasmussen",
+  "title": "State of analytics, experimentation, and personalization with browsers’ privacy initiatives, with Simo Ahava, Ton Wesseling & Steen Rasmussen",
+  "description": "\n        Shownotes: www.cro.cafe/podcast/analytics-experimentation-personalization-browsers-privacy-simo-ahavaPartners:Convert: convert.com/featuresOnline Dialogue: onlinedialogue.nlSitespect: sitespect.com\n      ",
+  "date": "2020-02-19T15:30:00.000Z",
+  "duration": 2123,
+  "audio_url": "https://media.transistor.fm/4bd8f368/f4fccb37.mp3",
+  "transcript_url": "",
+  "show_notes": "",
+  "guests": [
+    {
+      "id": "simo-ahava",
+      "name": "Simo Ahava",
+      "role": "Sheep Analytics Officer",
+      "bio": "",
+      "image_url": "simo-ahava.jpeg",
+      "social_links": [],
+      "language": "en",
+      "type": "guest"
+    },
+    {
+      "id": "ton-wesseling",
+      "name": "Ton Wesseling",
+      "role": "Partner",
+      "bio": "",
+      "image_url": "ton-wesseling.jpeg",
+      "social_links": [],
+      "language": "en",
+      "type": "guest"
+    },
+    {
+      "id": "steen-rasmussen",
+      "name": "Steen Rasmussen",
+      "role": "Director of analysis, research and user motivation",
+      "bio": "",
+      "image_url": "steen-rasmussen.jpeg",
+      "social_links": [],
+      "language": "en",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "",
+  "main_image": "",
+  "language": "en",
+  "type": "podcast"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "server-side-experimentation-with-tom-van-den-berg-and-ruben-de-boer-online-dialogue",
+  "title": "Server-side experimentation, with Tom van den Berg & Ruben de Boer (Online Dialogue)",
+  "description": "\n        Partners:Convert: convert.com/featuresOnline Dialogue: onlinedialogue.nlSiteSpect: sitespect.comContentsquare: contentsquare.comOnline Invloed: onlineinvloed.nl\n      ",
+  "date": "2020-09-06T22:00:00.000Z",
+  "duration": 3010,
+  "audio_url": "https://media.transistor.fm/1542b3e8/d687cb27.mp3",
+  "transcript_url": "",
+  "show_notes": "",
+  "guests": [
+    {
+      "id": "tom-van-den-berg",
+      "name": "Tom van den Berg",
+      "role": "Conversion manager",
+      "bio": "",
+      "image_url": "tom-van-den-berg.jpeg",
+      "social_links": [],
+      "language": "en",
+      "type": "guest"
+    },
+    {
+      "id": "ruben-de-boer",
+      "name": "Ruben de Boer",
+      "role": "Conversion optimization manager",
+      "bio": "",
+      "image_url": "ruben-de-boer.jpeg",
+      "social_links": [],
+      "language": "en",
+      "type": "guest"
+    }
+  ],
+  "youtube_url": "",
+  "main_image": "",
+  "language": "en",
+  "type": "podcast"
+}
