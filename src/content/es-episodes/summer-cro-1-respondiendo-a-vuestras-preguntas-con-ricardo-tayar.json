@@ -1,0 +1,47 @@
+{
+  "id": "607793",
+  "type": "episode",
+  "attributes": {
+    "title": "Summer CRO #1, respondiendo a vuestras preguntas, con Ricardo Tayar",
+    "number": null,
+    "season": 1,
+    "status": "published",
+    "published_at": "2021-07-30T08:43:37.341Z",
+    "duration": 1823,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://es.cro.cafe/podcast/summer-cro-1-respondiendo-a-vuestras-preguntas-sobre-conversion-y-negocios-digitales",
+    "media_url": "https://media.transistor.fm/1af8613a/5ed82d34.mp3",
+    "image_url": "https://img.transistor.fm/XKA7P3jf0gMjvzrYGzWUD2w65Otz31aLS7j_UOQ0sqE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mNDA4/OGYxZjhiY2ZkNzll/OWFiZjM5ZDYyZGMx/ZmZkOC5qcGc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "En este primer episodio de verano respondemos a las preguntas que nos habéis hecho llegar por redes sociales sobre CRO y conversión. Gracias a vuestra participación tenemos preguntas para un total de tres estupendos y veraniegos episodios.",
+    "description": "En este primer episodio de verano respondemos a las preguntas que nos habéis hecho llegar por redes sociales sobre CRO y conversión. Gracias a vuestra participación tenemos preguntas para un total de tres estupendos y veraniegos episodios.\n\n\n\n<!-- GUESTS START -->\nGuest: Ricardo Tayar\nURL: https://es.cro.cafe/invitados/ricardo-tayar-lopez\n<!-- GUESTS END -->\n",
+    "slug": "summer-cro-1-respondiendo-a-vuestras-preguntas-con-ricardo-tayar",
+    "created_at": "2021-07-30T08:43:37.342Z",
+    "updated_at": "2025-01-13T11:35:40.703Z",
+    "formatted_published_at": "July 30, 2021",
+    "duration_in_mmss": "30:23",
+    "share_url": "https://share.transistor.fm/s/1af8613a",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "En este primer episodio de verano respondemos a las preguntas que nos habéis hecho llegar por redes sociales sobre CRO y conversión. Gracias a vuestra participación tenemos preguntas para un total de tres estupendos y veraniegos episodios.",
+    "formatted_description": "En este primer episodio de verano respondemos a las preguntas que nos habéis hecho llegar por redes sociales sobre CRO y conversión. Gracias a vuestra participación tenemos preguntas para un total de tres estupendos y veraniegos episodios.\n\n\n\n<!-- GUESTS START -->\nGuest: Ricardo Tayar\nURL: https://es.cro.cafe/invitados/ricardo-tayar-lopez\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/1af8613a\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/1af8613a/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16111",
+        "type": "show"
+      }
+    }
+  }
+}

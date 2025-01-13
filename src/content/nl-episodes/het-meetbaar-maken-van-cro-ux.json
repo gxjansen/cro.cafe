@@ -1,26 +1,47 @@
 {
-  "id": "het-meetbaar-maken-van-cro-ux",
-  "title": "Het meetbaar maken van CRO / UX",
-  "description": "Samen met Sjoerd Walinga praat ik over het hoe en waarom van het meetbaar maken van je CRO process en hoe dat jouw dagelijks werk als CROer makkelijker maakt",
-  "date": "2025-01-10T20:38:14.578Z",
-  "duration": 0,
-  "audio_url": "https://cdn.transistor.fm/file/transistor/m/shows/16113/d74e92ebf707b8b813957182b90dd3bc.mp3",
-  "transcript_url": "",
-  "show_notes": "<ul><li><a href=\"https://en.wikipedia.org/wiki/SMART_criteria\" target=\"_blank\">SMART Goals</a></li><li><a href=\"https://www.klipfolio.com/\" target=\"_blank\">Klipfolio</a></li><li><a href=\"https://www.geckoboard.com/\" target=\"_blank\">Geckoboard</a></li><li><a href=\"https://usabilla.com/blog/measure-cx-performance-looking-beyond-the-nps-score/\" target=\"_blank\">Usabilla Digital Customer Experience pyramid</a></li><li><a href=\"https://go.forrester.com/research/cx-index/\" target=\"_blank\">Forrester’s CX index score</a></li></ul><p><strong><em>KPI's voor UX</em></strong></p><p>Behavioral KPI’s</p><ul><li><em>Task Success Rate</em></li><li><em>Average Task Time</em></li><li><em>Task Level Satisfaction</em></li><li><em>User Error Rate</em></li><li><em>Search vs. Navigation</em></li><li><em>Form Completion Rate</em></li></ul><p>Attitudinal KPI’s</p><ul><li><em>Net Promoter Score (NPS)</em></li><li><em>Customer Satisfaction (CSAT)</em></li><li><em>Customer Effort Score (CES)</em></li><li><em>System Usability Scale (SUS)</em></li><li><em>Goal Completion Rate (GCR)</em></li></ul><p>‍</p>",
-  "guests": [
-    {
-      "id": "sjoerd-walinga",
-      "name": "Sjoerd Walinga",
-      "role": "Usability & User Experience expert",
-      "bio": "",
-      "image_url": "sjoerd-walinga.jpg",
-      "social_links": [],
-      "language": "nl",
-      "type": "guest"
+  "id": "565863",
+  "type": "episode",
+  "attributes": {
+    "title": "Het meetbaar maken van CRO / UX",
+    "number": 8,
+    "season": 3,
+    "status": "published",
+    "published_at": "2021-06-18T10:41:46.648Z",
+    "duration": 2226,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://nl.cro.cafe/podcast/het-meetbaar-maken-van-cro-ux",
+    "media_url": "https://media.transistor.fm/64918221/bc24f7cf.mp3",
+    "image_url": "https://img.transistor.fm/6gCsrBVSfJ2_ED99t22sSkWRKrY-ueXHU2-pbUL7SlY/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82NWU4/NTliYjVlZWM4NjY3/MThlOTFmMzA4ZjM5/NWM1ZC5qcGc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "Samen met Sjoerd Walinga praat ik over het hoe en waarom van het meetbaar maken van je CRO process en hoe dat jouw dagelijks werk als CROer makkelijker maakt",
+    "description": "Samen met Sjoerd Walinga praat ik over het hoe en waarom van het meetbaar maken van je CRO process en hoe dat jouw dagelijks werk als CROer makkelijker maakt.\n\n\n\n<!-- GUESTS START -->\nGuest: Sjoerd Walinga\nURL: https://nl.cro.cafe/gast/sjoerd-walinga\n<!-- GUESTS END -->\n",
+    "slug": "sjoerd-walinga",
+    "created_at": "2021-06-10T21:49:04.025Z",
+    "updated_at": "2025-01-12T23:47:47.926Z",
+    "formatted_published_at": "June 18, 2021",
+    "duration_in_mmss": "37:06",
+    "share_url": "https://share.transistor.fm/s/64918221",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Samen met Sjoerd Walinga praat ik over het hoe en waarom van het meetbaar maken van je CRO process en hoe dat jouw dagelijks werk als CROer makkelijker maakt",
+    "formatted_description": "Samen met Sjoerd Walinga praat ik over het hoe en waarom van het meetbaar maken van je CRO process en hoe dat jouw dagelijks werk als CROer makkelijker maakt.\n\n\n\n<!-- GUESTS START -->\nGuest: Sjoerd Walinga\nURL: https://nl.cro.cafe/gast/sjoerd-walinga\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/64918221\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/64918221/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
     }
-  ],
-  "youtube_url": "",
-  "main_image": "het-meetbaar-maken-van-cro-ux.jpg",
-  "language": "nl",
-  "type": "podcast"
+  }
 }

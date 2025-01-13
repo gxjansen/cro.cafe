@@ -1,0 +1,52 @@
+{
+  "id": "944219",
+  "type": "episode",
+  "attributes": {
+    "title": "Daten sind der Schlüssel zum Erfolg",
+    "number": 4,
+    "season": 1,
+    "status": "published",
+    "published_at": "2022-07-12T06:51:38.950Z",
+    "duration": 2252,
+    "explicit": false,
+    "keywords": [
+      "Conversion Rate",
+      "CRO",
+      "Data",
+      "datengestützt",
+      "E-Commerce",
+      "Podcast"
+    ],
+    "alternate_url": "https://de.cro.cafe/podcast/daten-sind-der-schlussel-zum-erfolg",
+    "media_url": "https://media.transistor.fm/aab4bdad/efdc968b.mp3",
+    "image_url": "https://img.transistor.fm/BxayH4Xm_2kfb9a2aiV3NwE02ZT-uviBqJXrLChoCJM/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS81ZDQ0/ZDMzMjAzZjhlZWJh/ZjgzM2M0ZjhkNmVk/ZGNkNi5wbmc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "In dieser Folge sprechen wir mit Karsten Wesch von möbel.de über die systematische Nutzung von Daten bei der Optimierung.",
+    "description": "In dieser Folge sprechen wir mit Karsten Wesch von <em>moebel.de</em> über die systematische Nutzung von Daten bei der Optimierung. Als Head of Business Intelligence verrät er euch, wie bei <em>moebel.de</em> Daten zur Entscheidungsfindung genutzt werden und gibt euch Tipps, wie auch ihr durch datengestütztes Handeln noch effizienter arbeiten könnt.<strong>Good to know:</strong>Das Team sucht momentan nach Verstärkung - wenn ihr Lust auf eine neue Herausforderung in einem erfolgreichen, datengetrieben Unternehmen habt, schaut gerne in die Ausschreibungen! Vielleicht ist das passende für euch dabei!<a href=\"https://moebel-de.jobs.personio.de/job/743531?display=de\">Junior Data Engineer</a><a href=\"https://moebel-de.jobs.personio.de/job/741804?display=de\">Head of Software Engineering</a><a href=\"https://moebel-de.jobs.personio.de/job/736048?display=de\">Head of App</a>.\n\n\n\n<!-- GUESTS START -->\nGuest: Karsten Wesch\nURL: https://de.cro.cafe/guest/karsten-wesch\n<!-- GUESTS END -->\n",
+    "slug": "daten-sind-der-schlussel-zum-erfolg",
+    "created_at": "2022-07-11T20:42:59.176Z",
+    "updated_at": "2025-01-13T00:29:55.432Z",
+    "formatted_published_at": "July 12, 2022",
+    "duration_in_mmss": "37:32",
+    "share_url": "https://share.transistor.fm/s/aab4bdad",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "In dieser Folge sprechen wir mit Karsten Wesch von möbel.de über die systematische Nutzung von Daten bei der Optimierung.",
+    "formatted_description": "In dieser Folge sprechen wir mit Karsten Wesch von <em>moebel.de</em> über die systematische Nutzung von Daten bei der Optimierung. Als Head of Business Intelligence verrät er euch, wie bei <em>moebel.de</em> Daten zur Entscheidungsfindung genutzt werden und gibt euch Tipps, wie auch ihr durch datengestütztes Handeln noch effizienter arbeiten könnt.<strong>Good to know:</strong>Das Team sucht momentan nach Verstärkung - wenn ihr Lust auf eine neue Herausforderung in einem erfolgreichen, datengetrieben Unternehmen habt, schaut gerne in die Ausschreibungen! Vielleicht ist das passende für euch dabei!<a href=\"https://moebel-de.jobs.personio.de/job/743531?display=de\">Junior Data Engineer</a><a href=\"https://moebel-de.jobs.personio.de/job/741804?display=de\">Head of Software Engineering</a><a href=\"https://moebel-de.jobs.personio.de/job/736048?display=de\">Head of App</a>.\n\n\n\n<!-- GUESTS START -->\nGuest: Karsten Wesch\nURL: https://de.cro.cafe/guest/karsten-wesch\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/aab4bdad\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/aab4bdad/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": "Conversion Rate, CRO, Data, datengestützt, E-Commerce, Podcast "
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "28592",
+        "type": "show"
+      }
+    }
+  }
+}

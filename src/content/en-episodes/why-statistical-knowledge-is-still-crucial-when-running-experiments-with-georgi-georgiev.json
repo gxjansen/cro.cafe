@@ -1,26 +1,47 @@
 {
-  "id": "why-statistical-knowledge-is-still-crucial-when-running-experiments-with-georgi-georgiev",
-  "title": "Why statistical knowledge is still crucial when running experiments, with Georgi Georgiev",
-  "description": "\n        Shownotes: cro.cafe/podcast/why-statistical-knowledge-is-still-crucial-when-running-experimentsPartners:Convert: convert.com/featuresOnline Dialogue: onlinedialogue.nlSiteSpect: sitespect.comContentsquare: contentsquare.comOnline Invloed: onlineinvloed.nl\n      ",
-  "date": "2020-07-26T22:00:00.000Z",
-  "duration": 2632,
-  "audio_url": "https://media.transistor.fm/0fc447bf/608d8503.mp3",
-  "transcript_url": "",
-  "show_notes": "",
-  "guests": [
-    {
-      "id": "georgi-georgiev",
-      "name": "Georgi Georgiev",
-      "role": "Owner",
-      "bio": "",
-      "image_url": "georgi-georgiev.jpeg",
-      "social_links": [],
-      "language": "en",
-      "type": "guest"
+  "id": "299094",
+  "type": "episode",
+  "attributes": {
+    "title": "Why statistical knowledge is still crucial when running experiments, with Georgi Georgiev",
+    "number": 16,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-07-26T22:00:00.000Z",
+    "duration": 2632,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://www.cro.cafe/podcast/why-statistical-knowledge-is-still-crucial-when-running-experiments",
+    "media_url": "https://media.transistor.fm/0fc447bf/608d8503.mp3",
+    "image_url": "https://img.transistor.fm/LTi2zMDZnqrsxYB4IZR75F3Id14PdiPyuGvXbeIKy2w/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS85MTBm/OWY0ZGZjODlmYTA1/MzFmZGJkOWI5OWU2/M2IxZC5qcGVn.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "What are the 'gaps' that experimentation tools don't (or can't?) tell us about when running experiments and making decisions? Today I talk about this with Georgi Georgiev, creator of Analytics-toolkit.com and author of the book \"Statistical Methods in Online A/B Testing\".",
+    "description": "<div>Shownotes: <a href=\"https://www.cro.cafe/podcast/why-statistical-knowledge-is-still-crucial-when-running-experiments\">cro.cafe/podcast/why-statistical-knowledge-is-still-crucial-when-running-experiments</a><strong>Partners:</strong></div><ul><li>Convert: <a href=\"https://www.convert.com/features?utm_source=crocafe&amp;utm_medium=shownoteslink\">convert.com/features</a></li><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl/?utm_source=crocafe&amp;utm_medium=shownoteslink\">onlinedialogue.nl</a></li><li>SiteSpect: <a href=\"https://www.sitespect.com/?utm_source=crocafe&amp;utm_medium=shownoteslink\">sitespect.com</a></li><li>Contentsquare: <a href=\"https://contentsquare.com/?utm_source=crocafe&amp;utm_medium=shownoteslink\">contentsquare.com</a></li><li>Online Invloed: <a href=\"https://onlineinvloed.nl/?utm_source=crocafe&amp;utm_medium=shownoteslink\">onlineinvloed.nl</a></li></ul><div>&nbsp;Guest: Georgi Georgiev URL: https://www.cro.cafe/guest/georgi-zdravkov-georgiev&nbsp;</div>",
+    "slug": "why-statistical-knowledge-is-still-crucial-when-running-experiments",
+    "created_at": "2020-07-19T19:03:07.926Z",
+    "updated_at": "2025-01-13T15:19:00.188Z",
+    "formatted_published_at": "July 26, 2020",
+    "duration_in_mmss": "43:52",
+    "share_url": "https://share.transistor.fm/s/0fc447bf",
+    "transcript_url": "https://share.transistor.fm/s/0fc447bf/transcript",
+    "transcripts": [],
+    "formatted_summary": "What are the 'gaps' that experimentation tools don't (or can't?) tell us about when running experiments and making decisions? Today I talk about this with Georgi Georgiev, creator of Analytics-toolkit.com and author of the book \"Statistical Methods in Online A/B Testing\".",
+    "formatted_description": "<div>Shownotes: <a href=\"https://www.cro.cafe/podcast/why-statistical-knowledge-is-still-crucial-when-running-experiments\">cro.cafe/podcast/why-statistical-knowledge-is-still-crucial-when-running-experiments</a><strong>Partners:</strong></div><ul><li>Convert: <a href=\"https://www.convert.com/features?utm_source=crocafe&amp;utm_medium=shownoteslink\">convert.com/features</a></li><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl/?utm_source=crocafe&amp;utm_medium=shownoteslink\">onlinedialogue.nl</a></li><li>SiteSpect: <a href=\"https://www.sitespect.com/?utm_source=crocafe&amp;utm_medium=shownoteslink\">sitespect.com</a></li><li>Contentsquare: <a href=\"https://contentsquare.com/?utm_source=crocafe&amp;utm_medium=shownoteslink\">contentsquare.com</a></li><li>Online Invloed: <a href=\"https://onlineinvloed.nl/?utm_source=crocafe&amp;utm_medium=shownoteslink\">onlineinvloed.nl</a></li></ul><div>&nbsp;Guest: Georgi Georgiev URL: https://www.cro.cafe/guest/georgi-zdravkov-georgiev&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/0fc447bf\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/0fc447bf/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
     }
-  ],
-  "youtube_url": "",
-  "main_image": "",
-  "language": "en",
-  "type": "podcast"
+  }
 }

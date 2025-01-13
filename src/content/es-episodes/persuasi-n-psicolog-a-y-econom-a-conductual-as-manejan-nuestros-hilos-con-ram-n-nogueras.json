@@ -1,0 +1,47 @@
+{
+  "id": "472824",
+  "type": "episode",
+  "attributes": {
+    "title": "Persuasión, psicología y economía conductual. Así manejan nuestros hilos, con Ramón Nogueras",
+    "number": 4,
+    "season": 1,
+    "status": "published",
+    "published_at": "2021-02-23T23:00:00.000Z",
+    "duration": 4310,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "",
+    "media_url": "https://media.transistor.fm/3ab70f9d/f467d42a.mp3",
+    "image_url": null,
+    "video_url": null,
+    "author": "",
+    "summary": "Charlamos con el psicólogo Ramón Nogueras sobre cómo los sesgos cognitivos son aprovechados por múltiples e-commerce y negocios digitales para vendernos más y mejor, explotando en nosotros técnicas de persuasión que generan que nos comportemos de forma menos racional de lo que quizá deberíamos.",
+    "description": "",
+    "slug": "persuasion-psicologia-y-economia-conductual-asi-manejan-nuestros-hilos-con-ramon-nogueras",
+    "created_at": "2021-02-23T20:36:36.208Z",
+    "updated_at": "2022-04-05T15:36:53.837Z",
+    "formatted_published_at": "February 23, 2021",
+    "duration_in_mmss": "71:50",
+    "share_url": "https://share.transistor.fm/s/3ab70f9d",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Charlamos con el psicólogo Ramón Nogueras sobre cómo los sesgos cognitivos son aprovechados por múltiples e-commerce y negocios digitales para vendernos más y mejor, explotando en nosotros técnicas de persuasión que generan que nos comportemos de forma menos racional de lo que quizá deberíamos.",
+    "formatted_description": "",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/3ab70f9d\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/3ab70f9d/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16111",
+        "type": "show"
+      }
+    }
+  }
+}

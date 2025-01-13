@@ -1,15 +1,47 @@
 {
-  "id": "emerce-conversion-livestream-daphne-tideman-bernadette-bijkerk-ruben-de-boer-online-dialogue",
-  "title": "Emerce Conversion Livestream: Daphne Tideman - Bernadette Bijkerk - Ruben de Boer (Online Dialogue)",
-  "description": "\n        Emerce Conversion Livestream: Daphne Tideman - Bernadette Bijkerk - Ruben de Boer by Guido Jansen\n      ",
-  "date": "2019-04-12T14:07:00.000Z",
-  "duration": 1964,
-  "audio_url": "https://media.transistor.fm/c0a65ec2/27e04935.mp3",
-  "transcript_url": "",
-  "show_notes": "",
-  "guests": [],
-  "youtube_url": "",
-  "main_image": "",
-  "language": "en",
-  "type": "podcast"
+  "id": "110415",
+  "type": "episode",
+  "attributes": {
+    "title": "Emerce Conversion Livestream: Daphne Tideman - Bernadette Bijkerk - Ruben de Boer (Online Dialogue)",
+    "number": null,
+    "season": 1,
+    "status": "draft",
+    "published_at": "2019-04-12T14:07:00.000Z",
+    "duration": 1964,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "",
+    "media_url": "https://media.transistor.fm/c0a65ec2/27e04935.mp3",
+    "image_url": "https://img.transistor.fm/tX3GlYgKygetdn4sMKbwZFD6CCiQuw-NNVP6TNXW1oE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzExMDQxNS8x/NjAyMDc1Nzk5LWFy/dHdvcmsuanBn.webp",
+    "video_url": "",
+    "author": "Guido Jansen",
+    "summary": "Emerce Conversion Livestream: Daphne Tideman - Bernadette Bijkerk - Ruben de Boer by Guido Jansen",
+    "description": "<div>Emerce Conversion Livestream: Daphne Tideman - Bernadette Bijkerk - Ruben de Boer by Guido Jansen</div>",
+    "slug": "emerce-conversion-livestream-daphne-tideman-bernadette-bijkerk-ruben-de-boer",
+    "created_at": "2019-10-15T13:20:11.475Z",
+    "updated_at": "2025-01-13T14:38:12.317Z",
+    "formatted_published_at": "April 12, 2019",
+    "duration_in_mmss": "32:44",
+    "share_url": "https://share.transistor.fm/s/c0a65ec2",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Emerce Conversion Livestream: Daphne Tideman - Bernadette Bijkerk - Ruben de Boer by Guido Jansen",
+    "formatted_description": "<div>Emerce Conversion Livestream: Daphne Tideman - Bernadette Bijkerk - Ruben de Boer by Guido Jansen</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/c0a65ec2\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/c0a65ec2/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
 }

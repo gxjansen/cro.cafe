@@ -1,15 +1,47 @@
 {
-  "id": "600-psychological-principles-for-driving-behavior-not-even-close",
-  "title": "600+ psychological principles for driving behavior? Not even close...",
-  "description": "\n        We learn why the whole concept of getting customers \"hooked\" is ludicrous and why there are way less behavioral principles than you might think.\n\nShownotes: https://www.cro.cafe/podcast/psychological-principles-for-driving-behavior\n      ",
-  "date": "2021-02-15T18:27:26.000Z",
-  "duration": 4455,
-  "audio_url": "https://media.transistor.fm/d4756fbb/08c9e915.mp3",
-  "transcript_url": "",
-  "show_notes": "",
-  "guests": [],
-  "youtube_url": "",
-  "main_image": "",
-  "language": "en",
-  "type": "podcast"
+  "id": "464213",
+  "type": "episode",
+  "attributes": {
+    "title": "600+ psychological principles for driving behavior? Not even close...",
+    "number": 4,
+    "season": 3,
+    "status": "published",
+    "published_at": "2021-02-15T18:27:26.023Z",
+    "duration": 4455,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://www.cro.cafe/podcast/psychological-principles-for-driving-behavior",
+    "media_url": "https://media.transistor.fm/d4756fbb/08c9e915.mp3",
+    "image_url": "https://img.transistor.fm/_VOJh1UFcxu2riNKAnEqFqMmPixxHBDnEfjUufdri3U/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80MTU1/Y2ExYTdmNzMzZmYy/MjA1NmZmZWI2YjEz/NTRkYi5qcGVn.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "We learn why the whole concept of getting customers \"hooked\" is ludicrous and why there are way less behavioral principles than you might think.\r\n\r\nShownotes: https://www.cro.cafe/podcast/psychological-principles-for-driving-behavior",
+    "description": "",
+    "slug": "600-psychological-principles-for-driving-behavior-not-even-close",
+    "created_at": "2021-02-15T18:27:26.024Z",
+    "updated_at": "2025-01-13T15:14:40.838Z",
+    "formatted_published_at": "February 15, 2021",
+    "duration_in_mmss": "74:15",
+    "share_url": "https://share.transistor.fm/s/d4756fbb",
+    "transcript_url": "https://share.transistor.fm/s/d4756fbb/transcript",
+    "transcripts": [],
+    "formatted_summary": "We learn why the whole concept of getting customers \"hooked\" is ludicrous and why there are way less behavioral principles than you might think.\r\n\r\nShownotes: https://www.cro.cafe/podcast/psychological-principles-for-driving-behavior",
+    "formatted_description": "",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/d4756fbb\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/d4756fbb/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
 }

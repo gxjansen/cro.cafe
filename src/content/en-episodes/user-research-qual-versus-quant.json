@@ -1,15 +1,47 @@
 {
-  "id": "user-research-qual-versus-quant",
-  "title": "User research: Qual versus Quant",
-  "description": "\n        Live recorded at CH2021: Which is better, what should you prioritize and what are some common mistakes?\n      ",
-  "date": "2021-12-23T23:05:02.000Z",
-  "duration": 1981,
-  "audio_url": "https://media.transistor.fm/4a93002b/fad46d87.mp3",
-  "transcript_url": "",
-  "show_notes": "",
-  "guests": [],
-  "youtube_url": "",
-  "main_image": "",
-  "language": "en",
-  "type": "podcast"
+  "id": "760752",
+  "type": "episode",
+  "attributes": {
+    "title": "User research: Qual versus Quant",
+    "number": null,
+    "season": 3,
+    "status": "published",
+    "published_at": "2021-12-23T23:05:02.429Z",
+    "duration": 1981,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://www.cro.cafe/podcast/user-research-qual-versus-quant",
+    "media_url": "https://media.transistor.fm/4a93002b/fad46d87.mp3",
+    "image_url": "https://img.transistor.fm/3OvwHTeeKJIgmgw8ylsdsTWQGwSKTDmt2gy1bHuCiHs/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mMDFl/MDE5MWEzZTgwMzUw/MzgzYjQ2ZTA4MTY5/YjhlOS5qcGc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "Live recorded at CH2021: Which is better, what should you prioritize and what are some common mistakes?",
+    "description": "Live recorded at CH2021: Which is better, what should you prioritize and what are some common mistakes?\n\n\n\n<!-- GUESTS START -->\nGuest 1: Els Aerts\nURL: https://www.cro.cafe/guest/els-aerts\n\n|\n\nGuest 2: Rianne van de Rijt\nURL: https://www.cro.cafe/guest/rianne-van-de-rijt\n<!-- GUESTS END -->\n",
+    "slug": "user-research-qual-versus-quant",
+    "created_at": "2021-12-23T22:22:38.212Z",
+    "updated_at": "2025-01-13T00:17:41.516Z",
+    "formatted_published_at": "December 23, 2021",
+    "duration_in_mmss": "33:01",
+    "share_url": "https://share.transistor.fm/s/4a93002b",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Live recorded at CH2021: Which is better, what should you prioritize and what are some common mistakes?",
+    "formatted_description": "Live recorded at CH2021: Which is better, what should you prioritize and what are some common mistakes?\n\n\n\n<!-- GUESTS START -->\nGuest 1: Els Aerts\nURL: https://www.cro.cafe/guest/els-aerts\n\n|\n\nGuest 2: Rianne van de Rijt\nURL: https://www.cro.cafe/guest/rianne-van-de-rijt\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/4a93002b\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/4a93002b/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
 }

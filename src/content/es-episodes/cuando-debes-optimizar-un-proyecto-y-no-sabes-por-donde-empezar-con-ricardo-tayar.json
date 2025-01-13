@@ -1,0 +1,47 @@
+{
+  "id": "706900",
+  "type": "episode",
+  "attributes": {
+    "title": "Cuando debes optimizar un proyecto y no sabes por donde empezar, con Ricardo Tayar",
+    "number": null,
+    "season": 1,
+    "status": "published",
+    "published_at": "2021-10-27T05:15:14.247Z",
+    "duration": 1130,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://es.cro.cafe/podcast/cuando-debes-trabajar-la-optimizacion-de-un-proyecto-y-no-sabes-por-donde-comenzar",
+    "media_url": "https://media.transistor.fm/57b7b371/bd9a0788.mp3",
+    "image_url": "https://img.transistor.fm/v4IKkwPclEd255MhsIMlyCjHwTdZVFChTEXIWyLk6mo/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8xZDRj/MmQ3ZDhjMGYwNGFi/ZDcyODk1NWRmMDBj/NTI0Ny5qcGc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "Te toca trabajar el CRO de un proyecto pero no sabes ni por donde empezar. En este episodio doy algunas pautas que pueden ayudarte.",
+    "description": "Te toca trabajar el CRO de un proyecto pero no sabes ni por donde empezar. En este episodio doy algunas pautas que pueden ayudarte.\n\n\n\n<!-- GUESTS START -->\nGuest: Ricardo Tayar\nURL: https://es.cro.cafe/invitados/ricardo-tayar-lopez\n<!-- GUESTS END -->\n",
+    "slug": "cuando-debes-optimizar-un-proyecto-y-no-sabes-por-donde-empezar-con-ricardo-tayar",
+    "created_at": "2021-10-27T05:15:14.248Z",
+    "updated_at": "2025-01-13T11:32:39.854Z",
+    "formatted_published_at": "October 27, 2021",
+    "duration_in_mmss": "18:50",
+    "share_url": "https://share.transistor.fm/s/57b7b371",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Te toca trabajar el CRO de un proyecto pero no sabes ni por donde empezar. En este episodio doy algunas pautas que pueden ayudarte.",
+    "formatted_description": "Te toca trabajar el CRO de un proyecto pero no sabes ni por donde empezar. En este episodio doy algunas pautas que pueden ayudarte.\n\n\n\n<!-- GUESTS START -->\nGuest: Ricardo Tayar\nURL: https://es.cro.cafe/invitados/ricardo-tayar-lopez\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/57b7b371\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/57b7b371/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16111",
+        "type": "show"
+      }
+    }
+  }
+}

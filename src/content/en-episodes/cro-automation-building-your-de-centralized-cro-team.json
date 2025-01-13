@@ -1,0 +1,47 @@
+{
+  "id": "760750",
+  "type": "episode",
+  "attributes": {
+    "title": "CRO Automation & building your (de)centralized CRO team",
+    "number": null,
+    "season": 3,
+    "status": "published",
+    "published_at": "2021-12-23T23:05:15.198Z",
+    "duration": 1916,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://www.cro.cafe/podcast/cro-automation-building-your-de-centralized-cro-team",
+    "media_url": "https://media.transistor.fm/c20cdd46/175a7ee5.mp3",
+    "image_url": "https://img.transistor.fm/sCOG8Vi3rwn9quOBdV6IdQ3WC_Cc8_Xj-PQbR162-po/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iZTZk/ODAwNTJmM2FlZDA1/ZjdmMjk2YWI0NzJl/YTYzMS5qcGc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "Live recorded at CH2021: We discuss some CRO automations and if you should build a centralized or decentralized CRO team",
+    "description": "Live recorded at CH2021: We discuss some CRO automations and if you should build a centralized or decentralized CRO team\n\n\n\n<!-- GUESTS START -->\nGuest 1: Arnout van Scherpenzeel\nURL: https://www.cro.cafe/guest/arnout-van-scherpenzeel\n\n|\n\nGuest 2: Annemarie Klaassen\nURL: https://www.cro.cafe/guest/annemarie-klaassen\n<!-- GUESTS END -->\n",
+    "slug": "cro-automation-building-your-de-centralized-cro-team",
+    "created_at": "2021-12-23T22:22:09.163Z",
+    "updated_at": "2025-01-13T09:23:15.669Z",
+    "formatted_published_at": "December 23, 2021",
+    "duration_in_mmss": "31:56",
+    "share_url": "https://share.transistor.fm/s/c20cdd46",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Live recorded at CH2021: We discuss some CRO automations and if you should build a centralized or decentralized CRO team",
+    "formatted_description": "Live recorded at CH2021: We discuss some CRO automations and if you should build a centralized or decentralized CRO team\n\n\n\n<!-- GUESTS START -->\nGuest 1: Arnout van Scherpenzeel\nURL: https://www.cro.cafe/guest/arnout-van-scherpenzeel\n\n|\n\nGuest 2: Annemarie Klaassen\nURL: https://www.cro.cafe/guest/annemarie-klaassen\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/c20cdd46\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/c20cdd46/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

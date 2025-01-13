@@ -1,15 +1,52 @@
 {
-  "id": "basics-hoe-ziet-het-cro-proces-er-uit",
-  "title": "Basics: hoe ziet het CRO proces er uit?",
-  "description": "Tijdens Emerce Engage afgelopen november hoort Bart tussen de gasten door Guido even uit over hoe een CRO proces er uit ziet.",
-  "date": "2025-01-10T20:38:14.580Z",
-  "duration": 0,
-  "audio_url": "https://chtbl.com/track/D992D/media.transistor.fm/10090193/c6d862b7.mp3",
-  "transcript_url": "",
-  "show_notes": "<ul><li><a href=\"https://en.wikipedia.org/wiki/Hierarchy_of_evidence\" target=\"_blank\">Hierarchy of evidence</a></li><li><a href=\"https://www.gui.do/post/model-for-your-ab-testing-workflow\" target=\"_blank\">WOW optimisation model</a></li></ul>",
-  "guests": [],
-  "youtube_url": "",
-  "main_image": "basics-hoe-ziet-het-cro-proces-er-uit.jpeg",
-  "language": "nl",
-  "type": "podcast"
+  "id": "397700",
+  "type": "episode",
+  "attributes": {
+    "title": "Basics: hoe ziet het CRO proces er uit?",
+    "number": null,
+    "season": 1,
+    "status": "published",
+    "published_at": "2019-12-09T15:00:00.000Z",
+    "duration": 4426,
+    "explicit": false,
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
+    "alternate_url": "https://nl.cro.cafe/podcast/basics-hoe-ziet-het-cro-proces-er-uit",
+    "media_url": "https://media.transistor.fm/10090193/c6d862b7.mp3",
+    "image_url": "https://img.transistor.fm/Pdg4zHbTkZjxMNEeluqB4Qg1k2bMJxXhtZdBpwvGLUg/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kOTgz/ZTE4YmNjNjdmNDNm/NTE0NDQyYWYzZmFm/ZDRiMS5qcGVn.webp",
+    "video_url": "",
+    "author": "Guido X Jansen",
+    "summary": "Tijdens Emerce Engage hoort Bart Guido uit over hoe een CRO proces er uit ziet.",
+    "description": "<div><strong>Partners:</strong></div><div>&nbsp;</div><ul><li>Effective Experiments: <a href=\"https://www.effectiveexperiments.com\">effectiveexperiments.com</a></li></ul><div><br></div><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li></ul><div><br></div><ul><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li></ul><div><br></div><ul><li>Braingineers: <a href=\"https://www.braingineers.com\">braingineers.com</a></li></ul><div>Guest: Bart van der Meer URL: https://nl.cro.cafe/gast/bart-van-der-meer&nbsp;</div>",
+    "slug": "basics-hoe-ziet-het-cro-proces-er-uit",
+    "created_at": "2020-11-10T20:45:30.268Z",
+    "updated_at": "2025-01-13T15:44:15.983Z",
+    "formatted_published_at": "December 9, 2019",
+    "duration_in_mmss": "73:46",
+    "share_url": "https://share.transistor.fm/s/10090193",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Tijdens Emerce Engage hoort Bart Guido uit over hoe een CRO proces er uit ziet.",
+    "formatted_description": "<div><strong>Partners:</strong></div><div>&nbsp;</div><ul><li>Effective Experiments: <a href=\"https://www.effectiveexperiments.com\">effectiveexperiments.com</a></li></ul><div><br></div><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li></ul><div><br></div><ul><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li></ul><div><br></div><ul><li>Braingineers: <a href=\"https://www.braingineers.com\">braingineers.com</a></li></ul><div>Guest: Bart van der Meer URL: https://nl.cro.cafe/gast/bart-van-der-meer&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/10090193\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/10090193/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
 }

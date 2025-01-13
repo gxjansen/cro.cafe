@@ -1,36 +1,47 @@
 {
-  "id": "how-to-embed-experimentation-into-agile-product-development-with-jonny-longden",
-  "title": "How to embed experimentation into Agile product development, with Jonny Longden",
-  "description": "\n        Today I talk with Jonny Longden from Journey Further about embedding experimentation into Agile product development\n      ",
-  "date": "2020-11-08T23:00:00.000Z",
-  "duration": 3563,
-  "audio_url": "https://media.transistor.fm/b5b35b1e/a0d9d116.mp3",
-  "transcript_url": "",
-  "show_notes": "",
-  "guests": [
-    {
-      "id": "jonny-longden",
-      "name": "Jonny Longden",
-      "role": "Co-Founder & Conversion Director",
-      "bio": "",
-      "image_url": "jonny-longden.jpeg",
-      "social_links": [],
-      "language": "en",
-      "type": "guest"
-    },
-    {
-      "id": "jonny-longden",
-      "name": "Jonny Longden",
-      "role": "Co-Founder & Conversion Director",
-      "bio": "",
-      "image_url": "jonny-longden.jpeg",
-      "social_links": [],
-      "language": "en",
-      "type": "guest"
+  "id": "395952",
+  "type": "episode",
+  "attributes": {
+    "title": "How to embed experimentation into Agile product development, with Jonny Longden",
+    "number": 28,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-11-08T23:00:00.000Z",
+    "duration": 3563,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://www.cro.cafe/podcast/how-to-embed-experimentation-into-agile-product-development",
+    "media_url": "https://media.transistor.fm/b5b35b1e/a0d9d116.mp3",
+    "image_url": "https://img.transistor.fm/h9Hqc8oaD6QWFKnl3lpMLzxQpcPN7sdpZTbJQtAErNc/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mNmFk/ZDBiMjMzNzQ3MTA0/MjQxZjYzOGVlNzE2/MWNlNS5qcGVn.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "Today I talk with Jonny Longden from Journey Further about embedding experimentation into Agile product development",
+    "description": "<div>Today I talk with Jonny Longden from Journey Further about embedding experimentation into Agile product development Guest: Jonny Longden URL: https://www.cro.cafe/guest/jonny-longden&nbsp;</div>",
+    "slug": "how-to-embed-experimentation-into-agile-product-development",
+    "created_at": "2020-11-08T15:46:55.342Z",
+    "updated_at": "2025-01-13T15:26:55.398Z",
+    "formatted_published_at": "November 8, 2020",
+    "duration_in_mmss": "59:23",
+    "share_url": "https://share.transistor.fm/s/b5b35b1e",
+    "transcript_url": "https://share.transistor.fm/s/b5b35b1e/transcript",
+    "transcripts": [],
+    "formatted_summary": "Today I talk with Jonny Longden from Journey Further about embedding experimentation into Agile product development",
+    "formatted_description": "<div>Today I talk with Jonny Longden from Journey Further about embedding experimentation into Agile product development Guest: Jonny Longden URL: https://www.cro.cafe/guest/jonny-longden&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/b5b35b1e\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/b5b35b1e/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
     }
-  ],
-  "youtube_url": "",
-  "main_image": "",
-  "language": "en",
-  "type": "podcast"
+  }
 }

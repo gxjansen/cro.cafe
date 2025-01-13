@@ -1,15 +1,47 @@
 {
-  "id": "multi-funnel-testing-einer-der-geheimwaffen-in-der-conversion-rate-optimierung",
-  "title": "Multi Funnel Testing: Einer der Geheimwaffen in der Conversion Rate Optimierung",
-  "description": "Carl Weische, CO-Founder von ACCELERATED, verrät für wen und in welchem Zeitraum Multi Funnel Testing sinnvoll ist.",
-  "date": "2025-01-10T20:38:14.600Z",
-  "duration": 0,
-  "audio_url": "https://audio.transistor.fm/m/shows/28592/487f4e40f7895bd97e7c56b327e727ed.mp3",
-  "transcript_url": "",
-  "show_notes": "<p id=\"\">Warum sich bei der Conversion Rate Optimierung auf eine bestimmte Seite beschränken, wenn man den kompletten Funnel testen kann? Multi Funnel Testing ist einer der effizientesten Wege, die Performance deines Marketing Funnels zu verbessern und eine Verbesserungsrate von 10 - 20 % zu erreichen. Ob sich das für jeden lohnt und wann der beste Zeitraum dafür ist, verrät uns Carl Weische, CO-Founder von ACCELERATED. Außerdem teilt er seine Meinung zum aktuellen Trend-Thema KI im Online-Marketing.</p><p>‍</p><p id=\"\">Haben wir dich neugierig gemacht? Viel Spaß beim Hören!</p><p>‍</p>",
-  "guests": [],
-  "youtube_url": "",
-  "main_image": "multi-funnel-testing-einer-der-geheimwaffen-in-der-conversion-rate-optimierung.png",
-  "language": "de",
-  "type": "podcast"
+  "id": "1246366",
+  "type": "episode",
+  "attributes": {
+    "title": "Multi Funnel Testing: Einer der Geheimwaffen in der Conversion Rate Optimierung ",
+    "number": 19,
+    "season": 1,
+    "status": "published",
+    "published_at": "2023-03-15T08:00:00.000Z",
+    "duration": 1868,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://de.cro.cafe/podcast/multi-funnel-testing-einer-der-geheimwaffen-in-der-conversion-rate-optimierung",
+    "media_url": "https://media.transistor.fm/9fbfb897/2c4911f8.mp3",
+    "image_url": "https://img.transistor.fm/Ki_FnxPQUX516VmS8_dI4x232flbGTCMxIp2qCeeuus/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82NWZl/OWNlY2U4NWI2ODFj/ZTViY2U0ZjFhZGYy/YzYwNi5wbmc.webp",
+    "video_url": "",
+    "author": "",
+    "summary": null,
+    "description": "Warum sich bei der Conversion Rate Optimierung auf eine bestimmte Seite beschränken, wenn man den kompletten Funnel testen kann? Multi Funnel Testing ist einer der effizientesten Wege, die Performance deines Marketing Funnels zu verbessern und eine Verbesserungsrate von 10 - 20 % zu erreichen. Ob sich das für jeden lohnt und wann der beste Zeitraum dafür ist, verrät uns Carl Weische, CO-Founder von ACCELERATED. Außerdem teilt er seine Meinung zum aktuellen Trend-Thema KI im Online-Marketing.Haben wir dich neugierig gemacht?Viel Spaß beim Hören!\n\n\n\n<!-- GUESTS START -->\nGuest: Carl Weische\nURL: https://de.cro.cafe/guest/carl-weische\n<!-- GUESTS END -->\n",
+    "slug": "multi-funnel-testing-einer-der-geheimwaffen-in-der-conversion-rate-optimierung",
+    "created_at": "2023-03-14T21:40:43.746Z",
+    "updated_at": "2025-01-13T00:28:55.546Z",
+    "formatted_published_at": "March 15, 2023",
+    "duration_in_mmss": "31:08",
+    "share_url": "https://share.transistor.fm/s/9fbfb897",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Warum sich bei der Conversion Rate Optimierung auf eine bestimmte Seite beschränken, wenn man den kompletten Funnel testen kann? Multi Funnel Testing ist einer der effizientesten Wege, die Performance deines Marketing Funnels zu verbessern und eine Verbesserungsrate von 10 - 20 % zu erreichen. Ob sich das für jeden lohnt und wann der beste Zeitraum dafür ist, verrät uns Carl Weische, CO-Founder von ACCELERATED. Außerdem teilt er seine Meinung zum aktuellen Trend-Thema KI im Online-Marketing.Haben wir dich neugierig gemacht?Viel Spaß beim Hören!\n\n\n\n\nGuest: Carl Weische\nURL: https://de.cro.cafe/guest/carl-weische",
+    "formatted_description": "Warum sich bei der Conversion Rate Optimierung auf eine bestimmte Seite beschränken, wenn man den kompletten Funnel testen kann? Multi Funnel Testing ist einer der effizientesten Wege, die Performance deines Marketing Funnels zu verbessern und eine Verbesserungsrate von 10 - 20 % zu erreichen. Ob sich das für jeden lohnt und wann der beste Zeitraum dafür ist, verrät uns Carl Weische, CO-Founder von ACCELERATED. Außerdem teilt er seine Meinung zum aktuellen Trend-Thema KI im Online-Marketing.Haben wir dich neugierig gemacht?Viel Spaß beim Hören!\n\n\n\n<!-- GUESTS START -->\nGuest: Carl Weische\nURL: https://de.cro.cafe/guest/carl-weische\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/9fbfb897\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/9fbfb897/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "28592",
+        "type": "show"
+      }
+    }
+  }
 }

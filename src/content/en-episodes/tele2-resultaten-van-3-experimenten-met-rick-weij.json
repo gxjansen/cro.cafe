@@ -1,36 +1,47 @@
 {
-  "id": "tele2-resultaten-van-3-experimenten-met-rick-weij",
-  "title": "Tele2: Resultaten van 3 experimenten, met Rick Weij",
-  "description": "\n         In deze aflevering vervolg ik mijn gesprek met Rick Weij van Tele2 en bespreken we 3 experimenten die Rick onlangs heeft uitgevoerd. Partners: &gt; Effective Experiments: www.effectiveexperiments.com &gt; Convert: www.convert.com/features Aanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/tele2-resultaten-van-3-experimenten\n      ",
-  "date": "2019-02-10T19:58:00.000Z",
-  "duration": 1710,
-  "audio_url": "https://media.transistor.fm/13b75ccb/76e4e0d1.mp3",
-  "transcript_url": "",
-  "show_notes": "",
-  "guests": [
-    {
-      "id": "rick-dronkers",
-      "name": "Rick Dronkers",
-      "role": "Consultant in Marketing & Analytics",
-      "bio": "",
-      "image_url": "rick-dronkers.jpeg",
-      "social_links": [],
-      "language": "en",
-      "type": "guest"
-    },
-    {
-      "id": "arnout-van-scherpenzeel",
-      "name": "Arnout van Scherpenzeel",
-      "role": "CXO Lead",
-      "bio": "",
-      "image_url": "arnout-van-scherpenzeel.jpg",
-      "social_links": [],
-      "language": "en",
-      "type": "guest"
+  "id": "110378",
+  "type": "episode",
+  "attributes": {
+    "title": "Tele2: Resultaten van 3 experimenten, met Rick Weij",
+    "number": 7,
+    "season": 1,
+    "status": "draft",
+    "published_at": "2019-02-10T19:58:00.000Z",
+    "duration": 1710,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "",
+    "media_url": "https://media.transistor.fm/13b75ccb/76e4e0d1.mp3",
+    "image_url": "https://img.transistor.fm/b4tA6XhHB7QAnuVURtRmrH9kyT1kfvO3MIX4OLXl7PE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzExMDM3OC8x/NjAxNTg4NzI5LWFy/dHdvcmsuanBn.webp",
+    "video_url": "",
+    "author": "Guido Jansen",
+    "summary": "In deze aflevering vervolg ik mijn gesprek met Rick Weij van Tele2 en bespreken we 3 experimenten die Rick onlangs heeft uitgevoerd.\r\n\r\nPartners:\r\n> Effective Experiments: www.effectiveexperiments.com\r\n> Convert: www.convert.com/features\r\n\r\nAanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/tele2-resultaten-van-3-experimenten",
+    "description": "<div>&nbsp;In deze aflevering vervolg ik mijn gesprek met Rick Weij van Tele2 en bespreken we 3 experimenten die Rick onlangs heeft uitgevoerd. Partners: &gt; Effective Experiments: www.effectiveexperiments.com &gt; Convert: www.convert.com/features Aanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/tele2-resultaten-van-3-experimenten</div>",
+    "slug": "s01e06-tele2-resultaten-van-3-experimenten",
+    "created_at": "2019-10-15T13:19:18.426Z",
+    "updated_at": "2025-01-13T14:35:31.083Z",
+    "formatted_published_at": "February 10, 2019",
+    "duration_in_mmss": "28:30",
+    "share_url": "https://share.transistor.fm/s/13b75ccb",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "In deze aflevering vervolg ik mijn gesprek met Rick Weij van Tele2 en bespreken we 3 experimenten die Rick onlangs heeft uitgevoerd.\r\n\r\nPartners:\r\n> Effective Experiments: www.effectiveexperiments.com\r\n> Convert: www.convert.com/features\r\n\r\nAanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/tele2-resultaten-van-3-experimenten",
+    "formatted_description": "<div>&nbsp;In deze aflevering vervolg ik mijn gesprek met Rick Weij van Tele2 en bespreken we 3 experimenten die Rick onlangs heeft uitgevoerd. Partners: &gt; Effective Experiments: www.effectiveexperiments.com &gt; Convert: www.convert.com/features Aanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/tele2-resultaten-van-3-experimenten</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/13b75ccb\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/13b75ccb/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
     }
-  ],
-  "youtube_url": "",
-  "main_image": "",
-  "language": "en",
-  "type": "podcast"
+  }
 }

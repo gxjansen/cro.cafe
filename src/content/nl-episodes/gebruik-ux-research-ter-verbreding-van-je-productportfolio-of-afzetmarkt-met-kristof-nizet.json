@@ -1,0 +1,52 @@
+{
+  "id": "397697",
+  "type": "episode",
+  "attributes": {
+    "title": "Gebruik UX research ter verbreding van je productportfolio of afzetmarkt, met Kristof Nizet",
+    "number": null,
+    "season": 1,
+    "status": "published",
+    "published_at": "2019-12-02T20:00:00.000Z",
+    "duration": 1010,
+    "explicit": false,
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
+    "alternate_url": "https://nl.cro.cafe/podcast/live-ch2019-kristof-nizet",
+    "media_url": "https://media.transistor.fm/2a290bc1/2a846cf8.mp3",
+    "image_url": "https://img.transistor.fm/k1aj87_ttKuUCn6txIlbIfIySRoCg2oCQzDCwCECT5A/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iMzdk/MWQ1NGY1YTkzZWJk/ZTIwMDBiN2RiMDlh/MDgxOC5qcGVn.webp",
+    "video_url": "",
+    "author": "Guido X Jansen",
+    "summary": "Op (The Conference Formerly Know As) Conversion Hotel sprak ik op de zaterdagavond met Kristof Nizet. Hij is freelance Conversion Optimization & E-commerce consultant en één van de mensen die een breakout sessie heeft gegeven. We spreken kort over zijn sessie - die ging over \"Yield growth beyond the local maximum\" - en de rest van de conferentie.",
+    "description": "<div><strong>Partners:</strong></div><div>&nbsp;</div><ul><li>Effective Experiments: <a href=\"https://www.effectiveexperiments.com\">effectiveexperiments.com</a></li></ul><div><br></div><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li></ul><div><br></div><ul><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li></ul><div><br></div><ul><li>Braingineers: <a href=\"https://www.braingineers.com\">braingineers.com</a></li></ul><div>Bekijk de shownotes op&nbsp;</div><div><a href=\"https://www.cro.cafe/podcast/live-ch2019-kristof-nizet\">cro.cafe/podcast/live-ch2019-kristof-nizet</a> Guest: Kristof Nizet URL: https://nl.cro.cafe/gast/kristof-nizet&nbsp;</div>",
+    "slug": "gebruik-ux-research-ter-verbreding-van-je-productportfolio-of-afzetmarkt-met-kristof-nizet",
+    "created_at": "2020-11-10T20:45:24.755Z",
+    "updated_at": "2025-01-13T15:44:23.250Z",
+    "formatted_published_at": "December 2, 2019",
+    "duration_in_mmss": "16:50",
+    "share_url": "https://share.transistor.fm/s/2a290bc1",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Op (The Conference Formerly Know As) Conversion Hotel sprak ik op de zaterdagavond met Kristof Nizet. Hij is freelance Conversion Optimization & E-commerce consultant en één van de mensen die een breakout sessie heeft gegeven. We spreken kort over zijn sessie - die ging over \"Yield growth beyond the local maximum\" - en de rest van de conferentie.",
+    "formatted_description": "<div><strong>Partners:</strong></div><div>&nbsp;</div><ul><li>Effective Experiments: <a href=\"https://www.effectiveexperiments.com\">effectiveexperiments.com</a></li></ul><div><br></div><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li></ul><div><br></div><ul><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li></ul><div><br></div><ul><li>Braingineers: <a href=\"https://www.braingineers.com\">braingineers.com</a></li></ul><div>Bekijk de shownotes op&nbsp;</div><div><a href=\"https://www.cro.cafe/podcast/live-ch2019-kristof-nizet\">cro.cafe/podcast/live-ch2019-kristof-nizet</a> Guest: Kristof Nizet URL: https://nl.cro.cafe/gast/kristof-nizet&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/2a290bc1\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/2a290bc1/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

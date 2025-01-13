@@ -1,0 +1,52 @@
+{
+  "id": "397635",
+  "type": "episode",
+  "attributes": {
+    "title": "CRO is geen quick fix maar een continu proces, met Rick Weij (Tele2)",
+    "number": 6,
+    "season": 1,
+    "status": "published",
+    "published_at": "2019-02-03T23:06:00.000Z",
+    "duration": 1987,
+    "explicit": false,
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
+    "alternate_url": "https://nl.cro.cafe/podcast/rick-weij-tele2-cro-is-geen-quick-fix-maar-een-continue-process",
+    "media_url": "https://media.transistor.fm/fd59edb6/068e0c32.mp3",
+    "image_url": "https://img.transistor.fm/gRpBivwcZif4MLZI83KnlCOWYrxItNXQlY-dfobK7yQ/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS84MWYw/ZjE3YWM0MDcxOGY3/M2RjZDE4ZWJlOTIw/NmRkYi5qcGVn.webp",
+    "video_url": null,
+    "author": "Guido Jansen",
+    "summary": "In deze aflevering praat ik met Rick Weij van Tele2 over hoe hij de transitie heeft gemaakt van webanalist naar CRO specialist en hoe hij het CRO proces in 2 jaar tijd bij Tele2 heeft neergezet. \n\nPartners:\n> Effective Experiments: www.effectiveexperiments.com\n> Convert: www.convert.com/features\n\nAanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/rick-weij-tele2-cro-is-geen-quick-fix-maar-een-continue-process",
+    "description": "In deze aflevering praat ik met Rick Weij van Tele2 over hoe hij de transitie heeft gemaakt van webanalist naar CRO specialist en hoe hij het CRO proces in 2 jaar tijd bij Tele2 heeft neergezet. Partners: > Effective Experiments: www.effectiveexperiments.com > Convert: www.convert.com/features Aanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/rick-weij-tele2-cro-is-geen-quick-fix-maar-een-continue-process\n\n\n\n<!-- GUESTS START -->\nGuest: Rick Weij\nURL: https://nl.cro.cafe/gast/rick-weij\n<!-- GUESTS END -->\n",
+    "slug": "cro-is-geen-quick-fix-maar-een-continu-proces-met-rick-weij-tele2",
+    "created_at": "2020-11-10T20:42:47.766Z",
+    "updated_at": "2025-01-13T10:22:56.337Z",
+    "formatted_published_at": "February 3, 2019",
+    "duration_in_mmss": "33:07",
+    "share_url": "https://share.transistor.fm/s/fd59edb6",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "In deze aflevering praat ik met Rick Weij van Tele2 over hoe hij de transitie heeft gemaakt van webanalist naar CRO specialist en hoe hij het CRO proces in 2 jaar tijd bij Tele2 heeft neergezet. \n\nPartners:\n> Effective Experiments: www.effectiveexperiments.com\n> Convert: www.convert.com/features\n\nAanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/rick-weij-tele2-cro-is-geen-quick-fix-maar-een-continue-process",
+    "formatted_description": "In deze aflevering praat ik met Rick Weij van Tele2 over hoe hij de transitie heeft gemaakt van webanalist naar CRO specialist en hoe hij het CRO proces in 2 jaar tijd bij Tele2 heeft neergezet. Partners: > Effective Experiments: www.effectiveexperiments.com > Convert: www.convert.com/features Aanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/rick-weij-tele2-cro-is-geen-quick-fix-maar-een-continue-process\n\n\n\n<!-- GUESTS START -->\nGuest: Rick Weij\nURL: https://nl.cro.cafe/gast/rick-weij\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/fd59edb6\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/fd59edb6/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

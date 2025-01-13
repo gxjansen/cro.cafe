@@ -1,0 +1,47 @@
+{
+  "id": "874241",
+  "type": "episode",
+  "attributes": {
+    "title": "Dark patterns, como nos engañan para hacer lo que no queremos hacer",
+    "number": null,
+    "season": 2,
+    "status": "published",
+    "published_at": "2022-04-26T22:00:00.000Z",
+    "duration": 1989,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://es.cro.cafe/podcast/dark-patterns-como-nos-enganan-para-hacer-lo-que-no-queremos-hacer",
+    "media_url": "https://media.transistor.fm/3249325d/8c6b9f6a.mp3",
+    "image_url": "https://img.transistor.fm/7AJK139uir4nfxn0xgBnflJT-O1N8kOebVuRs7lpU-s/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kZWNk/M2Y5ZWE4YTdlMGFl/OWY1N2RmMDhiNjNl/NDdmYS5qcGc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "En este episodio hablamos sobre los «dark patterns», técnicas de diseño engañoso que se emplean generalmente en UX para confundir a los usuarios o bien conseguir que ejecuten interacciones que no quieren realizar.",
+    "description": "En este episodio hablamos sobre los «dark patterns», técnicas de diseño engañoso que se emplean generalmente en UX para confundir a los usuarios o bien conseguir que ejecuten interacciones que no quieren realizar.Algunos ejemplos de estas técnicas son la ocultación deliberada de información relevante para el usuario, la preselección de opciones de compra, el añadido de productos o servicios que no pensabas comprar... la lista es larga y conviene conocerla para saber cuando estamos en presencia de este tipo de tácticas de engaño, que nada tienen que ver con el verdadero CRO.\n\n\n\n<!-- GUESTS START -->\nGuest: Ricardo Tayar\nURL: https://es.cro.cafe/invitados/ricardo-tayar-lopez\n<!-- GUESTS END -->\n",
+    "slug": "dark-patterns-como-nos-enganan-para-hacer-lo-que-no-queremos-hacer",
+    "created_at": "2022-04-26T20:38:32.022Z",
+    "updated_at": "2025-01-13T11:32:40.065Z",
+    "formatted_published_at": "April 26, 2022",
+    "duration_in_mmss": "33:09",
+    "share_url": "https://share.transistor.fm/s/3249325d",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "En este episodio hablamos sobre los «dark patterns», técnicas de diseño engañoso que se emplean generalmente en UX para confundir a los usuarios o bien conseguir que ejecuten interacciones que no quieren realizar.",
+    "formatted_description": "En este episodio hablamos sobre los «dark patterns», técnicas de diseño engañoso que se emplean generalmente en UX para confundir a los usuarios o bien conseguir que ejecuten interacciones que no quieren realizar.Algunos ejemplos de estas técnicas son la ocultación deliberada de información relevante para el usuario, la preselección de opciones de compra, el añadido de productos o servicios que no pensabas comprar... la lista es larga y conviene conocerla para saber cuando estamos en presencia de este tipo de tácticas de engaño, que nada tienen que ver con el verdadero CRO.\n\n\n\n<!-- GUESTS START -->\nGuest: Ricardo Tayar\nURL: https://es.cro.cafe/invitados/ricardo-tayar-lopez\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/3249325d\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/3249325d/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16111",
+        "type": "show"
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "397702",
+  "type": "episode",
+  "attributes": {
+    "title": "Bedrijven gaan schofterig om mensen, wat kunnen we daar aan doen? met Polle de Maagt en Lude Raedts",
+    "number": null,
+    "season": 1,
+    "status": "published",
+    "published_at": "2019-12-12T12:00:00.000Z",
+    "duration": 2062,
+    "explicit": false,
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
+    "alternate_url": "https://nl.cro.cafe/podcast/we-gaan-schofterig-om-mensen-wat-kunnen-we-daar-aan-doen",
+    "media_url": "https://media.transistor.fm/a24d8738/f8d8b854.mp3",
+    "image_url": "https://img.transistor.fm/VfPG50AaU6D-dtb9X06iLNDNY2sk5nAp0W8YAJSOscA/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iNjBh/MTIzNzhhYzZhNGQ3/ZjkzN2JiOWE3ZDBi/YzljOS5qcGVn.webp",
+    "video_url": "",
+    "author": "Guido Jansen en Bart van der Meer",
+    "summary": "Polle en Ludo vinden dat bedrijven wel eens wat beter mogen omgaan met klanten, hier hoor je wat ze allemaal mis vinden gaan en wat we er aan kunnen doen om die menselijkheid terug te krijgen.",
+    "description": "<div><strong>Partners:</strong></div><div>&nbsp;</div><ul><li>Effective Experiments: <a href=\"https://www.effectiveexperiments.com\">effectiveexperiments.com</a></li></ul><div><br></div><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li></ul><div><br></div><ul><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li></ul><div><br></div><ul><li>Braingineers: <a href=\"https://www.braingineers.com\">braingineers.com</a></li></ul><div>Voor alle shownotes kijk je op&nbsp;</div><div><a href=\"https://www.cro.cafe/podcast/we-gaan-schofterig-om-mensen-wat-kunnen-we-daar-aan-doen\">https://www.cro.cafe/podcast/we-gaan-schofterig-om-mensen-wat-kunnen-we-daar-aan-doen</a> Guest 1: Polle de Maagt URL: https://nl.cro.cafe/gast/polle-de-maagt | Guest 2: Ludo Raedts URL: https://nl.cro.cafe/gast/ludo-raedts&nbsp;</div>",
+    "slug": "bedrijven-gaan-schofterig-om-mensen-wat-kunnen-we-daar-aan-doen-met-polle-de-maagt-en-lude-raedts",
+    "created_at": "2020-11-10T20:45:35.365Z",
+    "updated_at": "2025-01-13T15:44:11.388Z",
+    "formatted_published_at": "December 12, 2019",
+    "duration_in_mmss": "34:22",
+    "share_url": "https://share.transistor.fm/s/a24d8738",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Polle en Ludo vinden dat bedrijven wel eens wat beter mogen omgaan met klanten, hier hoor je wat ze allemaal mis vinden gaan en wat we er aan kunnen doen om die menselijkheid terug te krijgen.",
+    "formatted_description": "<div><strong>Partners:</strong></div><div>&nbsp;</div><ul><li>Effective Experiments: <a href=\"https://www.effectiveexperiments.com\">effectiveexperiments.com</a></li></ul><div><br></div><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li></ul><div><br></div><ul><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li></ul><div><br></div><ul><li>Braingineers: <a href=\"https://www.braingineers.com\">braingineers.com</a></li></ul><div>Voor alle shownotes kijk je op&nbsp;</div><div><a href=\"https://www.cro.cafe/podcast/we-gaan-schofterig-om-mensen-wat-kunnen-we-daar-aan-doen\">https://www.cro.cafe/podcast/we-gaan-schofterig-om-mensen-wat-kunnen-we-daar-aan-doen</a> Guest 1: Polle de Maagt URL: https://nl.cro.cafe/gast/polle-de-maagt | Guest 2: Ludo Raedts URL: https://nl.cro.cafe/gast/ludo-raedts&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/a24d8738\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/a24d8738/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

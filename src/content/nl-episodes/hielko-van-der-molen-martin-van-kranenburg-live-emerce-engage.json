@@ -1,0 +1,47 @@
+{
+  "id": "440416",
+  "type": "episode",
+  "attributes": {
+    "title": "Hielko van der Molen & Martin van Kranenburg live @ Emerce Engage",
+    "number": null,
+    "season": 1,
+    "status": "published",
+    "published_at": "2019-12-27T14:00:00.000Z",
+    "duration": 2646,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "",
+    "media_url": "https://media.transistor.fm/992ae659/09789bbe.mp3",
+    "image_url": null,
+    "video_url": null,
+    "author": "",
+    "summary": "",
+    "description": "\n\n<!-- GUESTS START -->\nGuest: Hielko Van Der Molen Martin Van Kranenburg Live Emerce Engage | URL: https://nl.cro.cafe/gast/hielko-van-der-molen-martin-van-kranenburg-live-emerce-engage\n<!-- GUESTS END -->",
+    "slug": "hielko-van-der-molen-martin-van-kranenburg-live-emerce-engage",
+    "created_at": "2021-01-15T22:33:21.533Z",
+    "updated_at": "2025-01-12T22:29:20.979Z",
+    "formatted_published_at": "December 27, 2019",
+    "duration_in_mmss": "44:06",
+    "share_url": "https://share.transistor.fm/s/992ae659",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "\n\n\nGuest: Hielko Van Der Molen Martin Van Kranenburg Live Emerce Engage | URL: https://nl.cro.cafe/gast/hielko-van-der-molen-martin-van-kranenburg-live-emerce-engage",
+    "formatted_description": "\n\n<!-- GUESTS START -->\nGuest: Hielko Van Der Molen Martin Van Kranenburg Live Emerce Engage | URL: https://nl.cro.cafe/gast/hielko-van-der-molen-martin-van-kranenburg-live-emerce-engage\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/992ae659\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/992ae659/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

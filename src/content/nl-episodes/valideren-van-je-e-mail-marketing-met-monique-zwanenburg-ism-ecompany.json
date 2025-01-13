@@ -1,0 +1,52 @@
+{
+  "id": "397669",
+  "type": "episode",
+  "attributes": {
+    "title": "Valideren van je e-mail marketing, met Monique Zwanenburg (ISM eCompany)",
+    "number": 28,
+    "season": 1,
+    "status": "published",
+    "published_at": "2019-08-26T05:00:00.000Z",
+    "duration": 3067,
+    "explicit": false,
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
+    "alternate_url": "https://nl.cro.cafe/podcast/valideren-van-je-e-mail-marketing",
+    "media_url": "https://media.transistor.fm/eadb4869/b9f07035.mp3",
+    "image_url": "https://img.transistor.fm/pvSypkVHs8XOCyzMb9tXrrn_JEYGIIVyaow9ugbN0sU/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9jMWU4/MTg3NWQ2NmQ0NDI4/NWFmODBjYmZiOGM0/Zjk5Zi5qcGVn.webp",
+    "video_url": null,
+    "author": "Guido Jansen",
+    "summary": "Vandaag een onderwerp waar ik al een tijdje naar uitkijk: we gaan het namelijk hebben over experimenteren met e-mail marketing, iets waar ik zelf tot op heden nog nauwelijks iets mee heb gedaan. Ik praat daar over met Monique Zwanenburg, E-mailmarketing Consultant bij ISM ecompany uit Rotterdam. In haar dagelijks werk helpt ze klanten zoals Tommy Teleshopping, Xd Design en Sanitairwinkel met doorlopend meer resultaat halen uit e-mailmarketing, voornamelijk door het uitvoeren van A/B testen.\n\nPartners:\n> Effective Experiments: www.effectiveexperiments.com\n> Convert: www.convert.com/features\n> Online Dialogue: www.onlinedialogue.nl\n> Braingineers: www.braingineers.com",
+    "description": "Vandaag een onderwerp waar ik al een tijdje naar uitkijk: we gaan het namelijk hebben over experimenteren met e-mail marketing, iets waar ik zelf tot op heden nog nauwelijks iets mee heb gedaan. Ik praat daar over met Monique Zwanenburg, E-mailmarketing Consultant bij ISM ecompany uit Rotterdam. In haar dagelijks werk helpt ze klanten zoals Tommy Teleshopping, Xd Design en Sanitairwinkel met doorlopend meer resultaat halen uit e-mailmarketing, voornamelijk door het uitvoeren van A/B testen. Partners: > Effective Experiments: www.effectiveexperiments.com > Convert: www.convert.com/features > Online Dialogue: www.onlinedialogue.nl > Braingineers: www.braingineers.com\n\n\n\n<!-- GUESTS START -->\nGuest: Monique Zwanenburg\nURL: https://nl.cro.cafe/gast/monique-zwanenburg\n<!-- GUESTS END -->\n",
+    "slug": "valideren-van-je-e-mail-marketing-met-monique-zwanenburg-ism-ecompany",
+    "created_at": "2020-11-10T20:44:12.853Z",
+    "updated_at": "2025-01-13T10:25:55.301Z",
+    "formatted_published_at": "August 26, 2019",
+    "duration_in_mmss": "51:07",
+    "share_url": "https://share.transistor.fm/s/eadb4869",
+    "transcript_url": "https://share.transistor.fm/s/eadb4869/transcript",
+    "transcripts": [],
+    "formatted_summary": "Vandaag een onderwerp waar ik al een tijdje naar uitkijk: we gaan het namelijk hebben over experimenteren met e-mail marketing, iets waar ik zelf tot op heden nog nauwelijks iets mee heb gedaan. Ik praat daar over met Monique Zwanenburg, E-mailmarketing Consultant bij ISM ecompany uit Rotterdam. In haar dagelijks werk helpt ze klanten zoals Tommy Teleshopping, Xd Design en Sanitairwinkel met doorlopend meer resultaat halen uit e-mailmarketing, voornamelijk door het uitvoeren van A/B testen.\n\nPartners:\n> Effective Experiments: www.effectiveexperiments.com\n> Convert: www.convert.com/features\n> Online Dialogue: www.onlinedialogue.nl\n> Braingineers: www.braingineers.com",
+    "formatted_description": "Vandaag een onderwerp waar ik al een tijdje naar uitkijk: we gaan het namelijk hebben over experimenteren met e-mail marketing, iets waar ik zelf tot op heden nog nauwelijks iets mee heb gedaan. Ik praat daar over met Monique Zwanenburg, E-mailmarketing Consultant bij ISM ecompany uit Rotterdam. In haar dagelijks werk helpt ze klanten zoals Tommy Teleshopping, Xd Design en Sanitairwinkel met doorlopend meer resultaat halen uit e-mailmarketing, voornamelijk door het uitvoeren van A/B testen. Partners: > Effective Experiments: www.effectiveexperiments.com > Convert: www.convert.com/features > Online Dialogue: www.onlinedialogue.nl > Braingineers: www.braingineers.com\n\n\n\n<!-- GUESTS START -->\nGuest: Monique Zwanenburg\nURL: https://nl.cro.cafe/gast/monique-zwanenburg\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/eadb4869\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/eadb4869/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

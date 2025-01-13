@@ -1,0 +1,53 @@
+{
+  "id": "397693",
+  "type": "episode",
+  "attributes": {
+    "title": "Blijven we haken op data verzamelen of gaan we door naar \"the next step\"? met Frans Appels (Netprofiler) en Simon Vreeman (VanMoof)",
+    "number": null,
+    "season": 1,
+    "status": "published",
+    "published_at": "2019-11-04T15:35:00.000Z",
+    "duration": 1721,
+    "explicit": false,
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "dac19",
+      "moa",
+      "livestream"
+    ],
+    "alternate_url": "https://nl.cro.cafe/podcast/blijven-we-haken-op-data-verzamelen-of-gaan-we-door-naar-the-next-step",
+    "media_url": "https://media.transistor.fm/44ef1451/a0469824.mp3",
+    "image_url": "https://img.transistor.fm/N2yc4_7OXp45a6AD7e0ooJz1zq2dOXASGacsjc9uDpI/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80OGE3/MTY4NGI5ZTM2ZjA3/MGQzOGIyZmU2N2I1/YjBjNy5qcGVn.webp",
+    "video_url": "",
+    "author": "Guido Jansen & Bart van der Meer",
+    "summary": "In deze clip vanuit de livestream tijdens #DAC19 spraken Guido en Bart met Frans Appels van Netprofiler en Simon Vreeman van VanMoof.",
+    "description": "<div><strong>Partners:</strong></div><div>&nbsp;</div><ul><li>Effective Experiments: <a href=\"https://www.effectiveexperiments.com\">effectiveexperiments.com</a></li></ul><div><br></div><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li></ul><div><br></div><ul><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li></ul><div><br></div><ul><li>Braingineers: <a href=\"https://www.braingineers.com\">braingineers.com</a></li></ul><div>Het&nbsp;</div><div><strong>Digital Analytics Congres</strong> 2019 vond plaats op 8 oktober 2019 in de Jaarbeurs in Utrecht en wij deden live verslag vanaf de conferentie. Meer over het congres kun je vinden op <a href=\"https://www.digitalanalyticscongres.nl/\">https://www.digitalanalyticscongres.nl/</a>.DAC19 werd georganiseerd door het Expertise Center voor Marketing Insights, Onderzoek en Analytics beter bekend als <strong>MOA</strong>. Meer daarover kun je terugvinden op <a href=\"https://www.moaweb.nl/\">https://www.moaweb.nl/</a>. Guest 1: Frans Appels URL: https://nl.cro.cafe/gast/frans-appels | Guest 2: Simon Vreeman URL: https://nl.cro.cafe/gast/simon-vreeman&nbsp;</div>",
+    "slug": "blijven-we-haken-op-data-verzamelen-of-gaan-we-door-naar-the-next-step-met-frans-appels-netprofiler-en-simon-vreeman-vanmoof",
+    "created_at": "2020-11-10T20:45:09.809Z",
+    "updated_at": "2025-01-13T15:50:19.871Z",
+    "formatted_published_at": "November 4, 2019",
+    "duration_in_mmss": "28:41",
+    "share_url": "https://share.transistor.fm/s/44ef1451",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "In deze clip vanuit de livestream tijdens #DAC19 spraken Guido en Bart met Frans Appels van Netprofiler en Simon Vreeman van VanMoof.",
+    "formatted_description": "<div><strong>Partners:</strong></div><div>&nbsp;</div><ul><li>Effective Experiments: <a href=\"https://www.effectiveexperiments.com\">effectiveexperiments.com</a></li></ul><div><br></div><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li></ul><div><br></div><ul><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li></ul><div><br></div><ul><li>Braingineers: <a href=\"https://www.braingineers.com\">braingineers.com</a></li></ul><div>Het&nbsp;</div><div><strong>Digital Analytics Congres</strong> 2019 vond plaats op 8 oktober 2019 in de Jaarbeurs in Utrecht en wij deden live verslag vanaf de conferentie. Meer over het congres kun je vinden op <a href=\"https://www.digitalanalyticscongres.nl/\">https://www.digitalanalyticscongres.nl/</a>.DAC19 werd georganiseerd door het Expertise Center voor Marketing Insights, Onderzoek en Analytics beter bekend als <strong>MOA</strong>. Meer daarover kun je terugvinden op <a href=\"https://www.moaweb.nl/\">https://www.moaweb.nl/</a>. Guest 1: Frans Appels URL: https://nl.cro.cafe/gast/frans-appels | Guest 2: Simon Vreeman URL: https://nl.cro.cafe/gast/simon-vreeman&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/44ef1451\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/44ef1451/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "keywords_raw": "podcast, ecommerce, conversion, usability, dac19, moa, livestream"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

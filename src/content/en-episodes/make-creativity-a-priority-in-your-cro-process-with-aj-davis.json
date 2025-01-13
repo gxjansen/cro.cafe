@@ -1,26 +1,47 @@
 {
-  "id": "make-creativity-a-priority-in-your-cro-process-with-aj-davis",
-  "title": "Make creativity a priority in your CRO process, with AJ Davis",
-  "description": "\n        Shownotes: cro.cafe/podcast/make-creativity-a-priority-in-your-cro-processPartners:Convert: convert.com/featuresOnline Dialogue: onlinedialogue.nlSiteSpect: sitespect.comContentsquare: contentsquare.comOnline Invloed: onlineinvloed.nl\n      ",
-  "date": "2020-08-16T22:00:00.000Z",
-  "duration": 2216,
-  "audio_url": "https://media.transistor.fm/1721051f/26a56bb7.mp3",
-  "transcript_url": "",
-  "show_notes": "",
-  "guests": [
-    {
-      "id": "aj-davis",
-      "name": "AJ Davis",
-      "role": "Founder",
-      "bio": "",
-      "image_url": "aj-davis.jpeg",
-      "social_links": [],
-      "language": "en",
-      "type": "guest"
+  "id": "319493",
+  "type": "episode",
+  "attributes": {
+    "title": "Make creativity a priority in your CRO process, with AJ Davis",
+    "number": 18,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-08-16T22:00:00.000Z",
+    "duration": 2216,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://www.cro.cafe/podcast/make-creativity-a-priority-in-your-cro-process",
+    "media_url": "https://media.transistor.fm/1721051f/26a56bb7.mp3",
+    "image_url": "https://img.transistor.fm/ktWsuV_ZY7-YjtJWbrYmNgqdTdYngW-8zrEAkWgT7IQ/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9hMzQ5/MDU4MjM3OGEzYzUy/NWQ3NDAxMDllNWRm/ZjczOC5qcGVn.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "Today we are going to talk about how to Make creativity a priority in your CRO process and how to level up your CRO user research and we’ll be doing that together with AJ Davis. AJ is an industry expert in user experience strategy with a proven track record for delivering measurable value to clients. She’s the founder of the optimization agency  Experiment Zone and before that she led optimization strategy for Fortune 500 companies during her tenure at Clearhead and she was also the lead UX researcher for a product we all have at least played around with which is Google Optimize.",
+    "description": "<div>Shownotes: <a href=\"https://www.cro.cafe/podcast/make-creativity-a-priority-in-your-cro-process\">cro.cafe/podcast/make-creativity-a-priority-in-your-cro-process</a></div><div><br><strong>Partners:</strong></div><ul><li>Convert: <a href=\"https://www.convert.com/features?utm_source=crocafe&amp;utm_medium=shownoteslink\">convert.com/features</a></li><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl/?utm_source=crocafe&amp;utm_medium=shownoteslink\">onlinedialogue.nl</a></li><li>SiteSpect: <a href=\"https://www.sitespect.com/?utm_source=crocafe&amp;utm_medium=shownoteslink\">sitespect.com</a></li><li>Contentsquare: <a href=\"https://contentsquare.com/?utm_source=crocafe&amp;utm_medium=shownoteslink\">contentsquare.com</a></li><li>Online Invloed: <a href=\"https://onlineinvloed.nl/?utm_source=crocafe&amp;utm_medium=shownoteslink\">onlineinvloed.nl</a></li></ul>",
+    "slug": "make-creativity-a-priority-in-your-cro-process",
+    "created_at": "2020-08-15T14:13:07.583Z",
+    "updated_at": "2025-01-13T15:19:27.069Z",
+    "formatted_published_at": "August 16, 2020",
+    "duration_in_mmss": "36:56",
+    "share_url": "https://share.transistor.fm/s/1721051f",
+    "transcript_url": "https://share.transistor.fm/s/1721051f/transcript",
+    "transcripts": [],
+    "formatted_summary": "Today we are going to talk about how to Make creativity a priority in your CRO process and how to level up your CRO user research and we’ll be doing that together with AJ Davis. AJ is an industry expert in user experience strategy with a proven track record for delivering measurable value to clients. She’s the founder of the optimization agency  Experiment Zone and before that she led optimization strategy for Fortune 500 companies during her tenure at Clearhead and she was also the lead UX researcher for a product we all have at least played around with which is Google Optimize.",
+    "formatted_description": "<div>Shownotes: <a href=\"https://www.cro.cafe/podcast/make-creativity-a-priority-in-your-cro-process\">cro.cafe/podcast/make-creativity-a-priority-in-your-cro-process</a></div><div><br><strong>Partners:</strong></div><ul><li>Convert: <a href=\"https://www.convert.com/features?utm_source=crocafe&amp;utm_medium=shownoteslink\">convert.com/features</a></li><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl/?utm_source=crocafe&amp;utm_medium=shownoteslink\">onlinedialogue.nl</a></li><li>SiteSpect: <a href=\"https://www.sitespect.com/?utm_source=crocafe&amp;utm_medium=shownoteslink\">sitespect.com</a></li><li>Contentsquare: <a href=\"https://contentsquare.com/?utm_source=crocafe&amp;utm_medium=shownoteslink\">contentsquare.com</a></li><li>Online Invloed: <a href=\"https://onlineinvloed.nl/?utm_source=crocafe&amp;utm_medium=shownoteslink\">onlineinvloed.nl</a></li></ul>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/1721051f\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/1721051f/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
     }
-  ],
-  "youtube_url": "",
-  "main_image": "",
-  "language": "en",
-  "type": "podcast"
+  }
 }

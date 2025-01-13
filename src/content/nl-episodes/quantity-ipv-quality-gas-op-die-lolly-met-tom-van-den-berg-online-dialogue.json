@@ -1,0 +1,52 @@
+{
+  "id": "397644",
+  "type": "episode",
+  "attributes": {
+    "title": "Quantity ipv quality? Gas op die lolly!, met Tom van den Berg (Online Dialogue)",
+    "number": 15,
+    "season": 1,
+    "status": "published",
+    "published_at": "2019-04-10T10:09:00.000Z",
+    "duration": 2158,
+    "explicit": false,
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
+    "alternate_url": "https://nl.cro.cafe/podcast/quantity-ipv-quality-gas-op-die-lolly",
+    "media_url": "https://media.transistor.fm/320ef0d7/4811db35.mp3",
+    "image_url": "https://img.transistor.fm/EpFnZjyEtBoyvyFRBQ_L2fYNUJb36gH8bKN6zldAe5I/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kYWNk/MGNlMmUyOTAwMjZl/ZmJlNGRmMDYzOGMz/OTNiYy5qcGVn.webp",
+    "video_url": null,
+    "author": "Guido Jansen",
+    "summary": "Vandaag praat ik met Tom van den Berg. Hij werkt als conversie manager bij Online Dialogue en heeft daarvoor gewerkt voor o.a. T-mobile en Rituals. De afgelopen 5 jaar is hij betrokken geweest bij meer dan 500 A/B testen en heeft dus een berg aan kennis waar we hier in het CRO.CAFE graag gebruik van maken!\n\nPartners:\n> Effective Experiments: www.effectiveexperiments.com\n> Convert: www.convert.com/features\n> Buyerminds: www.buyerminds.com\n\nAanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/quantity-ipv-quality-gas-op-die-lolly",
+    "description": "Vandaag praat ik met Tom van den Berg. Hij werkt als conversie manager bij Online Dialogue en heeft daarvoor gewerkt voor o.a. T-mobile en Rituals. De afgelopen 5 jaar is hij betrokken geweest bij meer dan 500 A/B testen en heeft dus een berg aan kennis waar we hier in het CRO.CAFE graag gebruik van maken! Partners: > Effective Experiments: www.effectiveexperiments.com > Convert: www.convert.com/features > Buyerminds: www.buyerminds.com Aanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/quantity-ipv-quality-gas-op-die-lolly\n\n\n\n<!-- GUESTS START -->\nGuest: Tom van den Berg\nURL: https://nl.cro.cafe/gast/tom-van-den-berg\n<!-- GUESTS END -->\n",
+    "slug": "quantity-ipv-quality-gas-op-die-lolly-met-tom-van-den-berg-online-dialogue",
+    "created_at": "2020-11-10T20:43:10.554Z",
+    "updated_at": "2025-01-13T10:23:55.401Z",
+    "formatted_published_at": "April 10, 2019",
+    "duration_in_mmss": "35:58",
+    "share_url": "https://share.transistor.fm/s/320ef0d7",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Vandaag praat ik met Tom van den Berg. Hij werkt als conversie manager bij Online Dialogue en heeft daarvoor gewerkt voor o.a. T-mobile en Rituals. De afgelopen 5 jaar is hij betrokken geweest bij meer dan 500 A/B testen en heeft dus een berg aan kennis waar we hier in het CRO.CAFE graag gebruik van maken!\n\nPartners:\n> Effective Experiments: www.effectiveexperiments.com\n> Convert: www.convert.com/features\n> Buyerminds: www.buyerminds.com\n\nAanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/quantity-ipv-quality-gas-op-die-lolly",
+    "formatted_description": "Vandaag praat ik met Tom van den Berg. Hij werkt als conversie manager bij Online Dialogue en heeft daarvoor gewerkt voor o.a. T-mobile en Rituals. De afgelopen 5 jaar is hij betrokken geweest bij meer dan 500 A/B testen en heeft dus een berg aan kennis waar we hier in het CRO.CAFE graag gebruik van maken! Partners: > Effective Experiments: www.effectiveexperiments.com > Convert: www.convert.com/features > Buyerminds: www.buyerminds.com Aanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/quantity-ipv-quality-gas-op-die-lolly\n\n\n\n<!-- GUESTS START -->\nGuest: Tom van den Berg\nURL: https://nl.cro.cafe/gast/tom-van-den-berg\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/320ef0d7\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/320ef0d7/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

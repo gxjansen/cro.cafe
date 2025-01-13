@@ -1,0 +1,52 @@
+{
+  "id": "397641",
+  "type": "episode",
+  "attributes": {
+    "title": "Beginnen met personaliseren is makkelijker dan je denkt, met Ruben Teunissen (Centraal Beheer)",
+    "number": 12,
+    "season": 1,
+    "status": "published",
+    "published_at": "2019-03-20T17:56:00.000Z",
+    "duration": 2168,
+    "explicit": false,
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
+    "alternate_url": "https://nl.cro.cafe/podcast/beginnen-met-personaliseren-is-makkelijker-dan-je-denkt",
+    "media_url": "https://media.transistor.fm/940d323b/efd0e74c.mp3",
+    "image_url": "https://img.transistor.fm/5KkqCNejkiPwgKj3XFPNquMuPY1AhegpTHTTDJNJSTM/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9jMTBj/MzQ2NThkYjA5NDNh/M2M3MTFlYzZhMjFk/YjBhNC5qcGVn.webp",
+    "video_url": null,
+    "author": "Guido Jansen",
+    "summary": "Deze week praat ik met Ruben Teunissen van Centraal Beheer Achmea over personaliseren: hoe je eenvoudig kan starten, waar je op moet letten (zoals interactie effecten) en hoe ze het bij Centraal Beheer Achmea doen.\n\nOok deelt Ruben met ons de grootste uitdagingen bij het neerzetten van een experiment gedreven cultuur.\n\nPartners:\n> Effective Experiments: www.effectiveexperiments.com\n> Convert: www.convert.com/features\n\nAanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/beginnen-met-personaliseren-is-makkelijker-dan-je-denkt",
+    "description": "Deze week praat ik met Ruben Teunissen van Centraal Beheer Achmea over personaliseren: hoe je eenvoudig kan starten, waar je op moet letten (zoals interactie effecten) en hoe ze het bij Centraal Beheer Achmea doen. Ook deelt Ruben met ons de grootste uitdagingen bij het neerzetten van een experiment gedreven cultuur. Partners: > Effective Experiments: www.effectiveexperiments.com > Convert: www.convert.com/features Aanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/beginnen-met-personaliseren-is-makkelijker-dan-je-denkt\n\n\n\n<!-- GUESTS START -->\nGuest: Ruben Teunissen\nURL: https://nl.cro.cafe/gast/ruben-teunissen\n<!-- GUESTS END -->\n",
+    "slug": "beginnen-met-personaliseren-is-makkelijker-dan-je-denkt-met-ruben-teunissen-centraal-beheer",
+    "created_at": "2020-11-10T20:43:02.154Z",
+    "updated_at": "2025-01-13T10:23:54.918Z",
+    "formatted_published_at": "March 20, 2019",
+    "duration_in_mmss": "36:08",
+    "share_url": "https://share.transistor.fm/s/940d323b",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Deze week praat ik met Ruben Teunissen van Centraal Beheer Achmea over personaliseren: hoe je eenvoudig kan starten, waar je op moet letten (zoals interactie effecten) en hoe ze het bij Centraal Beheer Achmea doen.\n\nOok deelt Ruben met ons de grootste uitdagingen bij het neerzetten van een experiment gedreven cultuur.\n\nPartners:\n> Effective Experiments: www.effectiveexperiments.com\n> Convert: www.convert.com/features\n\nAanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/beginnen-met-personaliseren-is-makkelijker-dan-je-denkt",
+    "formatted_description": "Deze week praat ik met Ruben Teunissen van Centraal Beheer Achmea over personaliseren: hoe je eenvoudig kan starten, waar je op moet letten (zoals interactie effecten) en hoe ze het bij Centraal Beheer Achmea doen. Ook deelt Ruben met ons de grootste uitdagingen bij het neerzetten van een experiment gedreven cultuur. Partners: > Effective Experiments: www.effectiveexperiments.com > Convert: www.convert.com/features Aanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/beginnen-met-personaliseren-is-makkelijker-dan-je-denkt\n\n\n\n<!-- GUESTS START -->\nGuest: Ruben Teunissen\nURL: https://nl.cro.cafe/gast/ruben-teunissen\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/940d323b\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/940d323b/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

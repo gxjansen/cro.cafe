@@ -1,0 +1,47 @@
+{
+  "id": "173594",
+  "type": "episode",
+  "attributes": {
+    "title": "CH2019: Privacy, Analytics and CRO, with Aurélie Pols & Rick Dronkers",
+    "number": 5,
+    "season": 1,
+    "status": "published",
+    "published_at": "2020-01-10T03:00:00.000Z",
+    "duration": 1653,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "",
+    "media_url": "https://media.transistor.fm/25385e4e/0b68606a.mp3",
+    "image_url": "https://img.transistor.fm/guK5YEb1AYSrSRu57vZwEs3y00P4d2KJ_EQ9LSgIs0c/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzE3MzU5NC8x/NjAxNTg1NDM1LWFy/dHdvcmsuanBn.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "CH2019 with Aurélie Pols and Rick Dronkers",
+    "description": "<div><strong>Partners:</strong></div><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li><li>Braingineers: <a href=\"https://www.braingineers.com\">braingineers.com</a></li></ul>",
+    "slug": "privacy-analytics-and-cro",
+    "created_at": "2020-01-05T15:44:39.005Z",
+    "updated_at": "2025-01-13T14:44:58.277Z",
+    "formatted_published_at": "January 10, 2020",
+    "duration_in_mmss": "27:33",
+    "share_url": "https://share.transistor.fm/s/25385e4e",
+    "transcript_url": "https://share.transistor.fm/s/25385e4e/transcript",
+    "transcripts": [],
+    "formatted_summary": "CH2019 with Aurélie Pols and Rick Dronkers",
+    "formatted_description": "<div><strong>Partners:</strong></div><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li><li>Braingineers: <a href=\"https://www.braingineers.com\">braingineers.com</a></li></ul>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/25385e4e\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/25385e4e/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

@@ -1,10 +1,6 @@
-# CRO.CAFE Implementation Plan
+# CRO.CAFE Implementation Plan - MVP Focus
 
-This document outlines the step-by-step implementation plan for migrating four CRO.CAFE podcast websites into a single, unified platform using Astro 5.0. Each section includes validation checks to ensure proper implementation.
-
-After completing a task, mark it as complete by replacing the [ ] with [x].
-
-## 1. Project Setup & Template Analysis
+## Phase 1: Project Setup (Completed)
 
 - [x] Initialize Git repository with proper .gitignore
 - [x] Clean up template files and organize reference material
@@ -16,260 +12,223 @@ After completing a task, mark it as complete by replacing the [ ] with [x].
 - [x] Configure OpenGraph tags and image generation
 - [x] Set up structured data templates
 
-**Validation Checks:**
+## Phase 2: Transistor API Integration (Completed)
 
-- All template demo content moved to a reference folder
-- No TypeScript errors (`npm run typecheck`)
-- ESLint passes without errors (`npm run lint`)
-- Development server runs without errors (`npm run dev`)
-- Project builds successfully (`npm run build`)
-- OpenGraph tags validate in social media debuggers
-- Structured data validates in testing tools
-
-**Reference Files:**
-
-- [Template Analysis Guide](./guides/template-analysis.md)
-- [Project Structure Guide](./guides/project-structure.md)
-- [SEO & Metadata Guide](./guides/seo-metadata.md)
-
-## 2. Content Collections Setup
-
-- [x] Define Zod schemas for all content types
-- [x] Set up content collections for episodes, guests, quotes, brands, and platforms
-- [x] Create folder structure for language-specific content
-- [x] Implement type-safe content management
-- [x] Set up image optimization pipeline
-- [x] Configure canonical URLs and language references
-- [x] Implement hreflang tags for all content types
+- [x] Set up API client
+  - [x] Implement rate limiting (10 calls/minute)
+  - [x] Error handling for API failures
+  - [x] Graceful degradation for missing fields
+- [x] Create episode data structure
+  - [x] Define JSON schema for episode data
+  - [x] Clean existing episode folders
+  - [x] Set up automated data sync with language detection
+  - [x] Configure show IDs for all four languages
+- [x] Implement webhook/GitHub Action for updates
+  - [x] Create webhook endpoint
+  - [x] Set up GitHub Action for periodic sync
+  - [x] Handle rate limits in automation
+  - [x] Implement error notifications
+  - [x] Add monitoring for sync failures
 
 **Validation Checks:**
 
-- Content schemas compile without errors
-- Test content entries validate against schemas
-- Image optimization works as expected
-- Content queries work in test components
-- Canonical URLs properly reference primary language versions
-- hreflang tags validate for all language combinations
+- [x] API client respects rate limits
+- [x] Error handling works as expected
+- [x] Episode data validates against schema
+- [x] Webhook/GitHub Action updates content
+- [x] Missing fields handled gracefully
+- [x] All four languages properly detected and sorted
+- [x] Error notifications working
+- [x] Sync failures properly logged and monitored
 
-**Reference Files:**
+## Phase 3: Content Management (In Progress)
 
-- [Content Schema Definitions](./guides/content-schemas.md)
-- [Content Organization Guide](./guides/content-organization.md)
-
-## 3. Data Import System
-
-- [x] Create RSS feed parser
-- [x] Develop CSV data import scripts
-- [x] Set up image download and optimization pipeline
-- [x] Implement slug generation and validation
-- [x] Create GitHub Action for RSS sync
-- [x] Implement OpenGraph image generation during import
-
-**Validation Checks:**
-
-- RSS feeds parse correctly
-- CSV data imports successfully
-- Images download and optimize properly
-- Slugs generate uniquely without conflicts
-- GitHub Action runs successfully
-- OpenGraph images generate for all content types
-
-**Reference Files:**
-
-- [Data Import Guide](./guides/data-import.md)
-- [RSS Sync Implementation](./guides/rss-sync.md)
-
-## 4. Core Components Development
-
-- [x] Implement language-aware layout components
-- [x] Create episode display components
-- [x] Develop navigation with language switching
-- [x] Build footer with platform links
-- [x] Implement Transistor.FM player embedding
-- [x] Create metadata components for all page types
-- [x] Implement structured data components
+- [x] Clean existing episode folders
+- [x] Set up content collections for episodes
+- [x] Implement language-specific content structure
+- [ ] Configure URL structure
+  - [ ] Define language-specific URL patterns (e.g., /es/, /de/, /nl/)
+  - [ ] Set up URL redirects for language detection
+  - [ ] Handle default language paths
+  - [ ] Configure 404 handling for invalid language paths
+- [ ] Configure image optimization pipeline
+  - [ ] Set up image processing pipeline
+  - [ ] Implement responsive image sizes
+  - [ ] Configure image caching
+  - [ ] Handle missing episode images
+- [ ] Set up canonical URLs and language references
+  - [ ] Implement hreflang tags
+  - [ ] Configure language alternates
+  - [ ] Set up default language fallbacks
+- [ ] Implement language switcher component
+  - [ ] Create language detection logic
+  - [ ] Build UI component
+  - [ ] Handle path translations
+- [ ] Configure caching strategy
+  - [ ] Set up browser caching headers
+  - [ ] Configure CDN caching rules
+  - [ ] Implement API response caching
+  - [ ] Set up static asset caching
 
 **Validation Checks:**
 
-- Components render in all supported languages
-- Language switching works correctly
-- Episode player embeds function properly
-- Navigation works across all routes
-- Responsive design functions on all viewports
-- SEO components generate valid metadata
-- Structured data validates in testing tools
+- [x] Content schemas compile without errors
+- [x] Test content entries validate against schema
+- [ ] Image optimization works as expected
+- [ ] Content queries work in test components
+- [ ] Canonical URLs properly reference primary language versions
+- [ ] Language switching works across all pages
+- [ ] Caching headers are properly set
+- [ ] Language detection works correctly
+- [ ] URL structure follows SEO best practices
 
-**Reference Files:**
+## Phase 4: Core Features
 
-- [Component Development Guide](./guides/component-development.md)
-- [Language Implementation Guide](./guides/language-implementation.md)
-
-## 5. Routing & Language Management
-
-- [x] Set up language-specific routes
-- [x] Implement language detection and redirection
-- [x] Configure canonical URLs
-- [x] Set up cross-language linking
-- [x] Implement hreflang tags
-- [x] Configure browser language detection
-- [x] Set up language-specific sitemaps
-- [x] Implement RSS feed sync for all languages
-- [x] Add episode cleanup and deduplication
-
-**Implementation Details:**
-
-- Created language utility (src/utils/language.ts) for:
-  - Language detection from URLs
-  - Browser language preference detection
-  - Language validation and type safety
-  - Cross-language URL generation
-- Implemented middleware (src/middleware.ts) for:
-  - Automatic language detection and redirection
-  - Language information in locals
-  - Proper caching headers
-- Set up sitemap generation (src/pages/sitemap.xml.ts) with:
-  - Support for all content types
-  - Language-specific URLs
-  - Proper change frequencies and priorities
-  - Last modified dates
-- Updated robots.txt with:
-  - Sitemap reference
-  - Crawl optimization settings
-  - Directory exclusions
-- Added comprehensive test coverage:
-  - Language utility tests (src/utils/language.test.ts):
-    - URL language detection
-    - Browser language preference parsing
-    - Language validation
-    - URL generation
-    - Redirection logic
-  - Sitemap generation tests (src/pages/sitemap.xml.test.ts):
-    - XML structure validation
-    - Content entry handling
-    - Empty collection handling
-    - Error handling
-    - Priority and frequency validation
-- Implemented RSS sync (src/utils/rss-sync.ts) with:
-  - Support for all podcast languages (en, nl, de, es)
-  - Episode duration extraction from RSS feeds
-  - Smart title normalization for matching episodes
-  - Duplicate episode detection and cleanup
-  - Short slug generation for consistent URLs
-  - CSV file generation for new episodes
+- [ ] Implement unified homepage
+  - [ ] Latest episodes grid from all shows
+  - [ ] Language-specific sections
+  - [ ] Show preview cards
+  - [ ] Episode filtering by language
+  - [ ] Language-specific landing page links
+  - [ ] Basic navigation
+  - [ ] Language detection and redirection
+- [ ] Create language-specific landing pages
+  - [ ] Show-specific episode lists
+  - [ ] Language-specific content
+  - [ ] Consistent layout across languages
+  - [ ] Language switcher integration
+  - [ ] Show branding elements
+- [ ] Build episode detail pages
+  - [ ] Episode content from Transistor
+  - [ ] Media embeds (YouTube, etc.)
+  - [ ] Share functionality
+  - [ ] Cross-language episode references
+  - [ ] Related episodes section
 
 **Validation Checks:**
 
-- URLs follow specified structure ✓
-- Language detection works correctly ✓
-- Canonical tags are properly set ✓
-- Cross-language navigation functions ✓
-- SEO tags validate correctly ✓
-- Browser language detection works across browsers ✓
-- Sitemaps include all language versions ✓
+- Homepage displays latest episodes correctly
+- Language switching works properly
+- Episode pages render all content
+- Media embeds function correctly
+- Share functionality works
+- Language detection works as expected
+- Cross-language navigation is intuitive
 
-**Reference Files:**
+## Phase 5: Design & UX
 
-- src/utils/language.ts (Language utilities)
-- src/middleware.ts (Language middleware)
-- src/pages/sitemap.xml.ts (Sitemap generation)
-- public/robots.txt (Crawler configuration)
-- src/utils/language.test.ts (Language utility tests)
-- src/pages/sitemap.xml.test.ts (Sitemap generation tests)
-
-## 6. Search Implementation
-
-- [ ] Set up PageFind integration
-- [ ] Implement language-aware search
-- [ ] Create search results page
-- [ ] Add search filters
-- [ ] Implement search analytics
-- [ ] Configure search result metadata
-
-**Validation Checks:**
-
-- Search indexes build correctly
-- Results display in correct languages
-- Filters work as expected
-- Search performance meets requirements
-- Analytics capture search data
-- Search results have proper metadata
-
-**Reference Files:**
-
-- [Search Implementation Guide](./guides/search.md)
-- [PageFind Configuration](./guides/pagefind.md)
-
-## 7. Testing & Quality Assurance
-
-- [ ] Set up Vitest testing environment
-- [ ] Write component tests
-- [ ] Create end-to-end tests
-- [ ] Implement accessibility tests
-- [ ] Set up performance monitoring
-- [ ] Implement SEO validation tests
+- [ ] Implement responsive design
+  - [ ] Mobile-first approach
+  - [ ] Consistent styling across pages
+  - [ ] RTL support foundation
+  - [ ] Responsive navigation
+- [ ] Create loading states
+  - [ ] Skeleton loaders for episode lists
+  - [ ] Loading indicators for media
+  - [ ] Progressive image loading
+- [ ] Error states
+  - [ ] API failure handling
+  - [ ] 404 pages
+  - [ ] Graceful degradation
+  - [ ] Offline support
+- [ ] Accessibility implementation
+  - [ ] ARIA labels and roles
+  - [ ] Keyboard navigation
+  - [ ] Screen reader support
+  - [ ] Color contrast compliance
+  - [ ] Focus management
 
 **Validation Checks:**
 
-- All tests pass (`npm run test`)
-- Lighthouse scores meet targets
-- Accessibility tests pass
-- Performance metrics meet requirements
-- Cross-browser testing passes
-- SEO validation tests pass
+- Design is responsive across devices
+- Loading states provide good UX
+- Error states handle failures gracefully
+- UI is consistent across languages
+- Passes accessibility audits
+- Works well on all major browsers
 
-**Reference Files:**
+## Phase 6: Performance & SEO
 
-- [Testing Guide](./guides/testing.md)
-- [Performance Optimization](./guides/performance.md)
-
-## 8. Deployment & Infrastructure
-
-- [ ] Configure Netlify build settings
-- [ ] Set up URL redirects
-- [ ] Configure build caching
-- [ ] Implement error handling
-- [ ] Set up monitoring
+- [ ] Implement SEO meta tags
+  - [ ] Language-specific meta tags
+  - [ ] Alternate language links
+  - [ ] Social media meta tags
+- [ ] Add structured data for episodes
+  - [ ] Podcast schema markup
+  - [ ] Episode schema markup
+  - [ ] Language indicators
+- [ ] Create sitemap
+  - [ ] Multi-language support
+  - [ ] Proper language annotations
+  - [ ] Priority settings
 - [ ] Configure robots.txt
-- [ ] Set up sitemap generation
+- [ ] Basic performance optimization
+  - [ ] Image optimization
+  - [ ] Lazy loading
+  - [ ] Caching headers
+  - [ ] Resource prioritization
+  - [ ] Code splitting
+  - [ ] Bundle optimization
 
 **Validation Checks:**
 
-- Builds complete successfully
-- Redirects work as expected
-- Cache invalidation functions
-- Error pages display correctly
+- SEO tags validate correctly
+- Structured data passes testing
+- Sitemap includes all content
+- Performance meets Lighthouse targets
+- Proper language indicators for search engines
+- Fast page load times
+
+## Phase 7: Testing & Launch
+
+- [ ] Core functionality testing
+  - [ ] Episode display
+  - [ ] Navigation
+  - [ ] Media playback
+  - [ ] Language switching
+  - [ ] Cross-browser testing
+- [ ] Performance testing
+  - [ ] Page load times
+  - [ ] API response handling
+  - [ ] CDN configuration
+  - [ ] Cache effectiveness
+- [ ] Accessibility testing
+  - [ ] Screen reader testing
+  - [ ] Keyboard navigation
+  - [ ] WCAG compliance
+  - [ ] Color contrast
+- [ ] Content review
+  - [ ] Language accuracy
+  - [ ] Content completeness
+  - [ ] Media availability
+- [ ] Launch checklist
+  - [ ] SSL configuration
+  - [ ] Domain setup
+  - [ ] Analytics setup
+  - [ ] Monitoring setup
+  - [ ] Backup strategy
+
+**Validation Checks:**
+
+- All core features work as expected
+- Performance meets requirements
+- Content displays correctly
 - Monitoring captures issues
-- Sitemaps generate correctly
-- Search engines can crawl properly
+- Accessibility requirements met
+- Security measures in place
+
+## Future Phases (Post-MVP)
+
+- Guest detail pages
+- Platform subscription pages
+- Quotes system
+- Advanced search functionality
+- Enhanced analytics
+- Additional language features
 
 **Reference Files:**
 
-- [Deployment Guide](./guides/deployment.md)
-- [Infrastructure Setup](./guides/infrastructure.md)
-
-## Future Enhancements (Post-MVP)
-
-- Custom audio player implementation
-- Transcript generation and display
-- AI-powered content enrichment
-- Advanced search capabilities
-- Translation management system
-- Automated OpenGraph image generation with branding
-- Enhanced structured data for podcast episodes
-
-**Note:** Each section's reference files will be created separately with detailed technical specifications and implementation instructions for junior developers.
-
-# Technical Debt and Future Improvements
-
-## TypeScript Type Predicate Challenge in Permalinks Utility
-
-**Location:** `src/utils/permalinks.ts`
-
-**Issue:** Encountered a complex TypeScript type predicate challenge in the `generateHreflangTags` function. The current implementation struggles with type narrowing, specifically with the `language` property in the type predicate.
-
-**Potential Solutions to Investigate:**
-
-1. Refactor the type definition to make it more flexible
-2. Create a more robust type guard function
-3. Consider using a different approach to type validation
-4. Potentially simplify the function signature
+- [API Integration Guide](./guides/api-integration.md)
+- [Content Schema Guide](./guides/content-schemas.md)
+- [Performance Guide](./guides/performance.md)
+- [Testing Guide](./guides/testing.md)

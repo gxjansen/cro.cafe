@@ -1,0 +1,47 @@
+{
+  "id": "713459",
+  "type": "episode",
+  "attributes": {
+    "title": "Usando Whatsapp Business y canales digitales para convertir en negocios de catering y alojamiento rural, con Miguel Fernández",
+    "number": 23,
+    "season": 1,
+    "status": "published",
+    "published_at": "2021-11-02T23:00:00.000Z",
+    "duration": 3191,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://es.cro.cafe/podcast/usando-whatsapp-business-y-canales-digitales-para-convertir-en-negocios-de-catering-y-alojamiento-rural",
+    "media_url": "https://media.transistor.fm/9b1c99a1/4c6c92ea.mp3",
+    "image_url": "https://img.transistor.fm/ti4FXUAIqZKYGfZy2eek-ZE_VGX89sTfwhOnGGB6Lj0/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9jYWIy/ODkyMGI3MWE1MzNl/YWMzNjEwMThjZWFk/ZWNhMy5qcGc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "¿Como un negocio \"tradicional\" como un catering o un hotel rural explota los canales digitales para convertir? Hablamos con Miguel Fernández sobre este y otros temas en un episodio cercano y real como la vida misma.",
+    "description": "¿Como un negocio \"tradicional\" como un catering o un hotel rural explota los canales digitales para convertir? Hablamos con Miguel Fernández sobre este y otros temas en un episodio cercano y real como la vida misma.\n\n\n\n<!-- GUESTS START -->\nGuest: Miguel Fernández\nURL: https://es.cro.cafe/invitados/miguel-fernandez\n<!-- GUESTS END -->\n",
+    "slug": "usando-whatsapp-business-y-canales-digitales-para-convertir-en-negocios-de-catering-y-hotel-rural-con-miguel-fernandez",
+    "created_at": "2021-11-02T20:37:01.192Z",
+    "updated_at": "2025-01-13T11:36:39.944Z",
+    "formatted_published_at": "November 2, 2021",
+    "duration_in_mmss": "53:11",
+    "share_url": "https://share.transistor.fm/s/9b1c99a1",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "¿Como un negocio \"tradicional\" como un catering o un hotel rural explota los canales digitales para convertir? Hablamos con Miguel Fernández sobre este y otros temas en un episodio cercano y real como la vida misma.",
+    "formatted_description": "¿Como un negocio \"tradicional\" como un catering o un hotel rural explota los canales digitales para convertir? Hablamos con Miguel Fernández sobre este y otros temas en un episodio cercano y real como la vida misma.\n\n\n\n<!-- GUESTS START -->\nGuest: Miguel Fernández\nURL: https://es.cro.cafe/invitados/miguel-fernandez\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/9b1c99a1\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/9b1c99a1/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16111",
+        "type": "show"
+      }
+    }
+  }
+}

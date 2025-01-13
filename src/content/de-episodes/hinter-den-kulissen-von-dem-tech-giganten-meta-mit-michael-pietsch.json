@@ -1,26 +1,47 @@
 {
-  "id": "hinter-den-kulissen-von-dem-tech-giganten-meta-mit-michael-pietsch",
-  "title": "Hinter den Kulissen von dem Tech-Giganten Meta mit Michael Pietsch",
-  "description": "Michael Pietsch, MarTech Ecosystem & Business Development Consultant bei Meta, berichtet über spannende Insights und seine langjährige Erfahrung bei Meta.",
-  "date": "2025-01-10T20:38:14.600Z",
-  "duration": 0,
-  "audio_url": "https://audio.transistor.fm/m/shows/28592/8529dde73b07b015934dfe2974ae8d13.mp3?download=hinter-den-kulissen-von-dem-tech-giganten-meta-mit-michael-pietsch",
-  "transcript_url": "",
-  "show_notes": "<p id=\"\">Künstliche Intelligenz gibt es schon länger als viele denken. Es ist zwar erst seit kurzem unter anderem durch ChatGPT in aller Munde, allerdings wird KI in vielen Bereichen schon jahrelang genutzt und ist auch zukünftig nicht mehr wegzudenken. Michael Pietsch,&nbsp; MarTech Ecosystem &amp; Business Development Consultant bei Meta, hat bereits Kunden wie Zalando, About You und Otto Group im Paid Advertising Bereich betreut. In der neuesten Folge gibt er spannende Einblicke hinter die Kulissen von Meta und berichtet über seine langjährigen Erfahrungen in der Branche.</p><p>‍</p><p id=\"\">Haben wir dich neugierig gemacht? Viel Spaß beim Hören!</p><p>‍</p><p id=\"\"><strong>Podcast und Newsletter Empfehlungen:</strong></p><ul id=\"\"><li>Doppelgänger Podcast</li></ul><p>‍</p>",
-  "guests": [
-    {
-      "id": "michael-pietsch",
-      "name": "Michael Pietsch",
-      "role": "MarTech Ecosystem & Business Development",
-      "bio": "",
-      "image_url": "michael-pietsch.jpg",
-      "social_links": [],
-      "language": "de",
-      "type": "guest"
+  "id": "1388473",
+  "type": "episode",
+  "attributes": {
+    "title": "Hinter den Kulissen von dem Tech-Giganten Meta mit Michael Pietsch",
+    "number": 24,
+    "season": 1,
+    "status": "published",
+    "published_at": "2023-06-20T07:30:00.000Z",
+    "duration": 2040,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://de.cro.cafe/podcast/hinter-den-kulissen-von-meta",
+    "media_url": "https://media.transistor.fm/4e954550/99911d3b.mp3",
+    "image_url": "https://img.transistor.fm/NygemRrhng2DQ9Tzw_e-MwHGMZnBB3Tkdqq9VzG7foM/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mZjlj/NGQ4Yzc1NzMzZWJm/NWM4M2FlM2FjMGY3/YTA3ZC5wbmc.webp",
+    "video_url": "",
+    "author": "",
+    "summary": null,
+    "description": "Michael Pietsch, MarTech Ecosystem &amp; Business Development Consultant bei Meta, berichtet über spannende Insights und seine langjährige Erfahrung bei dem millionenschweren Technologieunternehmen Meta.\n\n\n\n<!-- GUESTS START -->\nGuest: Michael Pietsch\nURL: https://de.cro.cafe/guest/michael-pietsch\n<!-- GUESTS END -->\n",
+    "slug": "hinter-den-kulissen-von-dem-tech-giganten-meta-mit-michael-pietsch",
+    "created_at": "2023-06-19T14:09:41.538Z",
+    "updated_at": "2025-01-13T00:28:53.792Z",
+    "formatted_published_at": "June 20, 2023",
+    "duration_in_mmss": "34:00",
+    "share_url": "https://share.transistor.fm/s/4e954550",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Michael Pietsch, MarTech Ecosystem & Business Development Consultant bei Meta, berichtet über spannende Insights und seine langjährige Erfahrung bei dem millionenschweren Technologieunternehmen Meta.\n\n\n\n\nGuest: Michael Pietsch\nURL: https://de.cro.cafe/guest/michael-pietsch",
+    "formatted_description": "Michael Pietsch, MarTech Ecosystem &amp; Business Development Consultant bei Meta, berichtet über spannende Insights und seine langjährige Erfahrung bei dem millionenschweren Technologieunternehmen Meta.\n\n\n\n<!-- GUESTS START -->\nGuest: Michael Pietsch\nURL: https://de.cro.cafe/guest/michael-pietsch\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/4e954550\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/4e954550/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "28592",
+        "type": "show"
+      }
     }
-  ],
-  "youtube_url": "",
-  "main_image": "hinter-den-kulissen-von-dem-tech-giganten-meta-mit-michael-pietsch.png",
-  "language": "de",
-  "type": "podcast"
+  }
 }

@@ -1,15 +1,68 @@
 {
-  "id": "growth-minded-superheroes",
-  "title": "Growth Minded Superheroes",
-  "description": "\n        Next week, the Growth Marketing Summit event will take place in Frankfurt Germany, CRO.CAFE will be there with our own booth to record experts from the stage and audience. In this episode you'll get a short preview with the organisers of the event: André Morys and Julia Rumpf! \n      ",
-  "date": "2024-06-11T13:45:35.000Z",
-  "duration": 1182,
-  "audio_url": "https://media.transistor.fm/90b62ec1/15b7b59d.mp3",
-  "transcript_url": "",
-  "show_notes": "",
-  "guests": [],
-  "youtube_url": "",
-  "main_image": "",
-  "language": "en",
-  "type": "podcast"
+  "id": "1952497",
+  "type": "episode",
+  "attributes": {
+    "title": "Growth Minded Superheroes",
+    "number": 1,
+    "season": 5,
+    "status": "published",
+    "published_at": "2024-06-11T13:45:35.219Z",
+    "duration": 1182,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://www.cro.cafe/podcast/growth-minded-superheroes",
+    "media_url": "https://media.transistor.fm/90b62ec1/15b7b59d.mp3",
+    "image_url": "https://img.transistor.fm/K6abWi85LGubZpHC2OFbNfZ_b-ekPFJqbjnLwOKbfQw/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS85M2E2/MmUxNWJhYzBiZTc3/N2Q0ZjgxYjg1Zjk3/NTU3OC5qcGc.webp",
+    "video_url": "https://www.youtube.com/watch?v=8RLowNw8UbI",
+    "author": "",
+    "summary": null,
+    "description": "Next week, the Growth Marketing Summit event will take place in Frankfurt Germany, CRO.CAFE will be there with our own booth to record experts from the stage and audience. In this episode you'll get a short preview with the organisers of the event: André Morys and Julia Rumpf!\n\n\n\n<!-- GUESTS START -->\nGuest 1: Andre Morys\nURL: https://www.cro.cafe/guest/andre-morys\n\n|\n\nGuest 2: Julia Rumpf\nURL: https://www.cro.cafe/guest/julia-rumpf\n<!-- GUESTS END -->\n",
+    "slug": "growth-minded-superheroes",
+    "created_at": "2024-06-11T13:45:35.228Z",
+    "updated_at": "2025-01-13T00:18:41.808Z",
+    "formatted_published_at": "June 11, 2024",
+    "duration_in_mmss": "19:42",
+    "share_url": "https://share.transistor.fm/s/90b62ec1",
+    "transcript_url": null,
+    "transcripts": [
+      {
+        "url": "https://share.transistor.fm/s/90b62ec1/transcription.vtt",
+        "format": "vtt"
+      },
+      {
+        "url": "https://share.transistor.fm/s/90b62ec1/transcription.srt",
+        "format": "srt"
+      },
+      {
+        "url": "https://share.transistor.fm/s/90b62ec1/transcription.json",
+        "format": "json"
+      },
+      {
+        "url": "https://share.transistor.fm/s/90b62ec1/transcription.txt",
+        "format": "txt"
+      },
+      {
+        "url": "https://share.transistor.fm/s/90b62ec1/transcription",
+        "format": "html"
+      }
+    ],
+    "formatted_summary": "Next week, the Growth Marketing Summit event will take place in Frankfurt Germany, CRO.CAFE will be there with our own booth to record experts from the stage and audience. In this episode you'll get a short preview with the organisers of the event: André Morys and Julia Rumpf!\n\n\n\n\nGuest 1: Andre Morys\nURL: https://www.cro.cafe/guest/andre-morys\n\n|\n\nGuest 2: Julia Rumpf\nURL: https://www.cro.cafe/guest/julia-rumpf\n\n\n00:00 - Welcome Back to CRO.CAFE\r\n00:20 - Upcoming Growth Marketing Summit\r\n01:01 - Origins of the Conversion Summit\r\n03:30 - Evolution of the Event's Name\r\n11:21 - Importance of In-Person Networking\r\n14:32 - Preparing for the Event\r\n18:15 - Final Thoughts and Farewell",
+    "formatted_description": "Next week, the Growth Marketing Summit event will take place in Frankfurt Germany, CRO.CAFE will be there with our own booth to record experts from the stage and audience. In this episode you'll get a short preview with the organisers of the event: André Morys and Julia Rumpf!\n\n\n\n<!-- GUESTS START -->\nGuest 1: Andre Morys\nURL: https://www.cro.cafe/guest/andre-morys\n\n|\n\nGuest 2: Julia Rumpf\nURL: https://www.cro.cafe/guest/julia-rumpf\n<!-- GUESTS END -->\n\n<ul><li>(00:00) - Welcome Back to CRO.CAFE\r</li>\n<li>(00:20) - Upcoming Growth Marketing Summit\r</li>\n<li>(01:01) - Origins of the Conversion Summit\r</li>\n<li>(03:30) - Evolution of the Event's Name\r</li>\n<li>(11:21) - Importance of In-Person Networking\r</li>\n<li>(14:32) - Preparing for the Event\r</li>\n<li>(18:15) - Final Thoughts and Farewell</li>\n</ul>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/90b62ec1\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/90b62ec1/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
 }

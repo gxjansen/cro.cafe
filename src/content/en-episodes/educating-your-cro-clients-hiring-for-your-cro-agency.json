@@ -1,0 +1,68 @@
+{
+  "id": "1150841",
+  "type": "episode",
+  "attributes": {
+    "title": "Educating your CRO clients & hiring for your CRO agency",
+    "number": 7,
+    "season": 4,
+    "status": "published",
+    "published_at": "2022-12-31T08:00:00.000Z",
+    "duration": 2111,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://www.cro.cafe/podcast/educating-your-cro-clients-hiring-for-your-cro-agency",
+    "media_url": "https://media.transistor.fm/4c7a199d/fb09f0b5.mp3",
+    "image_url": "https://img.transistor.fm/NEOoXB5S2NxrpNW9gW5CiJXPsNHOARRw9DFGZtaJc7A/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS84ZjIw/YjIwMTc4MTcyMzdi/MWU2OTRkOTg5ZDNh/NTM0ZC5qcGc.webp",
+    "video_url": "https://www.youtube.com/watch?v=iQR134Y9TH0",
+    "author": "",
+    "summary": "",
+    "description": "<div>Together with Matt we go through a variety of CRO agency topics, like how to educate your clients and how to hire for your team. Guest: Matt Scaysbrook URL: https://www.cro.cafe/guest/matt-scaysbrook&nbsp;</div>",
+    "slug": "educating-your-cro-clients-hiring-for-your-cro-agency",
+    "created_at": "2022-12-30T22:31:31.069Z",
+    "updated_at": "2025-01-13T14:49:26.440Z",
+    "formatted_published_at": "December 31, 2022",
+    "duration_in_mmss": "35:11",
+    "share_url": "https://share.transistor.fm/s/4c7a199d",
+    "transcript_url": null,
+    "transcripts": [
+      {
+        "url": "https://share.transistor.fm/s/4c7a199d/transcription.vtt",
+        "format": "vtt"
+      },
+      {
+        "url": "https://share.transistor.fm/s/4c7a199d/transcription.srt",
+        "format": "srt"
+      },
+      {
+        "url": "https://share.transistor.fm/s/4c7a199d/transcription.json",
+        "format": "json"
+      },
+      {
+        "url": "https://share.transistor.fm/s/4c7a199d/transcription.txt",
+        "format": "txt"
+      },
+      {
+        "url": "https://share.transistor.fm/s/4c7a199d/transcription",
+        "format": "html"
+      }
+    ],
+    "formatted_summary": "Together with Matt we go through a variety of CRO agency topics, like how to educate your clients and how to hire for your team. Guest: Matt Scaysbrook URL: https://www.cro.cafe/guest/matt-scaysbrook ",
+    "formatted_description": "<div>Together with Matt we go through a variety of CRO agency topics, like how to educate your clients and how to hire for your team. Guest: Matt Scaysbrook URL: https://www.cro.cafe/guest/matt-scaysbrook&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/4c7a199d\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/4c7a199d/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

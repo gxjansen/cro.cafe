@@ -1,15 +1,47 @@
 {
-  "id": "starten-als-cro-freelancer",
-  "title": "Starten als CRO Freelancer",
-  "description": "Van ervaringsdeskundige Wesley Singh leren we hoe je (ook nu) een carrière als CRO freelancer kan starten.",
-  "date": "2025-01-10T20:38:14.578Z",
-  "duration": 0,
-  "audio_url": "https://chrt.fm/track/D992D/media.transistor.fm/30c41b54/d0c5f36e.mp3",
-  "transcript_url": "",
-  "show_notes": "<ul><li><a href=\"https://wesleysingh.nl/\">WesleySingh.nl</a></li></ul>",
-  "guests": [],
-  "youtube_url": "",
-  "main_image": "starten-als-cro-freelancer.jpg",
-  "language": "nl",
-  "type": "podcast"
+  "id": "510803",
+  "type": "episode",
+  "attributes": {
+    "title": "Starten als CRO Freelancer",
+    "number": 6,
+    "season": 3,
+    "status": "published",
+    "published_at": "2021-04-15T09:00:00.000Z",
+    "duration": 2311,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://nl.cro.cafe/podcast/starten-als-cro-freelancer",
+    "media_url": "https://media.transistor.fm/30c41b54/d0c5f36e.mp3",
+    "image_url": "https://img.transistor.fm/F3-g42FMUxcVTX4TngIT7UWz6sXE2w4DY7VvM1DhV3E/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82ZGNj/YTkyYTVjOGZhZmQ1/OTQ4NjcwOWU5OTVm/NjZjMy5qcGc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "Van ervaringsdeskundige Wesley Singh leren we hoe je (ook nu) een carrière als CRO freelancer kan starten.",
+    "description": "\n\n<!-- GUESTS START -->\nGuest: Wesley Singh\nURL: https://nl.cro.cafe/gast/wesley-singh\n<!-- GUESTS END -->\n",
+    "slug": "starten-als-cro-freelancer",
+    "created_at": "2021-04-07T09:57:26.211Z",
+    "updated_at": "2025-01-12T23:47:48.304Z",
+    "formatted_published_at": "April 15, 2021",
+    "duration_in_mmss": "38:31",
+    "share_url": "https://share.transistor.fm/s/30c41b54",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Van ervaringsdeskundige Wesley Singh leren we hoe je (ook nu) een carrière als CRO freelancer kan starten.",
+    "formatted_description": "\n\n<!-- GUESTS START -->\nGuest: Wesley Singh\nURL: https://nl.cro.cafe/gast/wesley-singh\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/30c41b54\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/30c41b54/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
 }

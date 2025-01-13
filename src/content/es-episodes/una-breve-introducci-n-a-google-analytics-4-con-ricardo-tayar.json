@@ -1,0 +1,47 @@
+{
+  "id": "732689",
+  "type": "episode",
+  "attributes": {
+    "title": "Una breve introducción a Google Analytics 4, con Ricardo Tayar",
+    "number": null,
+    "season": 1,
+    "status": "published",
+    "published_at": "2021-11-23T23:00:00.000Z",
+    "duration": 865,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "",
+    "media_url": "https://media.transistor.fm/5eedbe88/0f59159b.mp3",
+    "image_url": null,
+    "video_url": null,
+    "author": "",
+    "summary": "En apenas 10 minutos te cuento unas impresiones y tendencias de uso tras un año de rodaje de Google Analytics 4",
+    "description": "",
+    "slug": "una-breve-introduccion-a-google-analytics-4-con-ricardo-tayar",
+    "created_at": "2021-11-23T22:06:38.149Z",
+    "updated_at": "2021-11-23T23:00:16.571Z",
+    "formatted_published_at": "November 23, 2021",
+    "duration_in_mmss": "14:25",
+    "share_url": "https://share.transistor.fm/s/5eedbe88",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "En apenas 10 minutos te cuento unas impresiones y tendencias de uso tras un año de rodaje de Google Analytics 4",
+    "formatted_description": "",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/5eedbe88\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/5eedbe88/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16111",
+        "type": "show"
+      }
+    }
+  }
+}

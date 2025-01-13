@@ -1,26 +1,47 @@
 {
-  "id": "automation-of-tedious-cro-work-with-matt-beischel",
-  "title": "Automation of tedious CRO work, with Matt Beischel",
-  "description": "\n        Shownotes: www.cro.cafe/podcast/automation-of-tedious-cro-workPartners:Convert: convert.com/featuresOnline Dialogue: onlinedialogue.nlSiteSpect: sitespect.comContentsquare: contentsquare.com\n      ",
-  "date": "2020-04-26T22:00:00.000Z",
-  "duration": 3477,
-  "audio_url": "https://media.transistor.fm/5bf0fc51/2a20e8b6.mp3",
-  "transcript_url": "",
-  "show_notes": "",
-  "guests": [
-    {
-      "id": "matt-beischel",
-      "name": "Matt Beischel",
-      "role": "Owner",
-      "bio": "",
-      "image_url": "matt-beischel.jpeg",
-      "social_links": [],
-      "language": "en",
-      "type": "guest"
+  "id": "246715",
+  "type": "episode",
+  "attributes": {
+    "title": "Automation of tedious CRO work, with Matt Beischel",
+    "number": 8,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-04-26T22:00:00.000Z",
+    "duration": 3477,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://www.cro.cafe/podcast/automation-of-tedious-cro-work",
+    "media_url": "https://media.transistor.fm/5bf0fc51/2a20e8b6.mp3",
+    "image_url": "https://img.transistor.fm/ENUKP7R9MxKcYBYkviXuF0eKX86BYzNuEUbGjxerx9U/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lZGM1/NDBjNjRlNTUxMjBi/NWJlNGE1MjU3MzJl/ZWE0Yy5qcGVn.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "In this episode I talk to designer, developer, and optimizer Matt Beischel. He runs his own agency Corvus CRO and we discuss automating parts of your CRO workflow so you can keep focusing on the fun parts of the job.",
+    "description": "Shownotes: <a href=\"https://www.cro.cafe/podcast/automation-of-tedious-cro-work\">www.cro.cafe/podcast/automation-of-tedious-cro-work</a><strong>Partners:</strong><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li><li>SiteSpect: <a href=\"https://www.sitespect.com/\">sitespect.com</a></li><li>Contentsquare: <a href=\"https://contentsquare.com/\">contentsquare.com</a></li></ul>\n\n\n\n<!-- GUESTS START -->\nGuest: Matt Beischel\nURL: https://www.cro.cafe/guest/matt-beischel\n<!-- GUESTS END -->\n",
+    "slug": "automation-of-tedious-cro-work",
+    "created_at": "2020-04-26T21:12:05.786Z",
+    "updated_at": "2025-01-13T15:03:43.993Z",
+    "formatted_published_at": "April 26, 2020",
+    "duration_in_mmss": "57:57",
+    "share_url": "https://share.transistor.fm/s/5bf0fc51",
+    "transcript_url": "https://share.transistor.fm/s/5bf0fc51/transcript",
+    "transcripts": [],
+    "formatted_summary": "In this episode I talk to designer, developer, and optimizer Matt Beischel. He runs his own agency Corvus CRO and we discuss automating parts of your CRO workflow so you can keep focusing on the fun parts of the job.",
+    "formatted_description": "Shownotes: <a href=\"https://www.cro.cafe/podcast/automation-of-tedious-cro-work\">www.cro.cafe/podcast/automation-of-tedious-cro-work</a><strong>Partners:</strong><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li><li>SiteSpect: <a href=\"https://www.sitespect.com/\">sitespect.com</a></li><li>Contentsquare: <a href=\"https://contentsquare.com/\">contentsquare.com</a></li></ul>\n\n\n\n<!-- GUESTS START -->\nGuest: Matt Beischel\nURL: https://www.cro.cafe/guest/matt-beischel\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/5bf0fc51\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/5bf0fc51/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
     }
-  ],
-  "youtube_url": "",
-  "main_image": "",
-  "language": "en",
-  "type": "podcast"
+  }
 }

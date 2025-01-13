@@ -1,0 +1,47 @@
+{
+  "id": "805876",
+  "type": "episode",
+  "attributes": {
+    "title": "Accesibilidad, la necesidad de atender a todos tus clientes, con Arantxa Hernández",
+    "number": 29,
+    "season": 2,
+    "status": "published",
+    "published_at": "2022-02-15T23:00:00.000Z",
+    "duration": 3553,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://es.cro.cafe/podcast/accesibilidad-la-necesidad-de-atender-a-todos-tus-clientes",
+    "media_url": "https://media.transistor.fm/ab6c8897/153ad01e.mp3",
+    "image_url": "https://img.transistor.fm/hrihaxvkfz1P1prW-geZsEKVbkYPEMYQexxLSlD67hM/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS84OWY3/MzI2MDYyZWE5ZWNk/ZjliODNkODQyMWY5/ZWUzMC5wbmc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "La accesibilidad no es solo construir un diseño digital que sea accesible para cualquier persona, independientemente de sus capacidades o limitaciones. Es también la clave para construir diseños que realmente resulten sencillos, comprensibles y pensados para la práctica totalidad de posibles usuarios, y ello importa, y mucho, en términos de rendimiento, eficiencia y conversión.",
+    "description": "La accesibilidad no es solo construir un diseño digital que sea accesible para cualquier persona, independientemente de sus capacidades o limitaciones. Es también la clave para construir diseños que realmente resulten sencillos, comprensibles y pensados para la práctica totalidad de posibles usuarios, y ello importa, y mucho, en términos de rendimiento, eficiencia y conversión.\n\n\n\n<!-- GUESTS START -->\nGuest: Arantxa Hernández\nURL: https://es.cro.cafe/invitados/arantxa-hernandez\n<!-- GUESTS END -->\n",
+    "slug": "accesibilidad-la-necesidad-de-atender-a-todos-tus-clientes-con-arantxa-hernandez-57327e6a-6155-404d-ba05-039294843b90",
+    "created_at": "2022-02-15T21:05:20.808Z",
+    "updated_at": "2025-01-13T11:31:37.761Z",
+    "formatted_published_at": "February 15, 2022",
+    "duration_in_mmss": "59:13",
+    "share_url": "https://share.transistor.fm/s/ab6c8897",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "La accesibilidad no es solo construir un diseño digital que sea accesible para cualquier persona, independientemente de sus capacidades o limitaciones. Es también la clave para construir diseños que realmente resulten sencillos, comprensibles y pensados para la práctica totalidad de posibles usuarios, y ello importa, y mucho, en términos de rendimiento, eficiencia y conversión.",
+    "formatted_description": "La accesibilidad no es solo construir un diseño digital que sea accesible para cualquier persona, independientemente de sus capacidades o limitaciones. Es también la clave para construir diseños que realmente resulten sencillos, comprensibles y pensados para la práctica totalidad de posibles usuarios, y ello importa, y mucho, en términos de rendimiento, eficiencia y conversión.\n\n\n\n<!-- GUESTS START -->\nGuest: Arantxa Hernández\nURL: https://es.cro.cafe/invitados/arantxa-hernandez\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/ab6c8897\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/ab6c8897/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16111",
+        "type": "show"
+      }
+    }
+  }
+}

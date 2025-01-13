@@ -1,0 +1,47 @@
+{
+  "id": "338517",
+  "type": "episode",
+  "attributes": {
+    "title": "Server-side experimentation, with Tom van den Berg & Ruben de Boer (Online Dialogue)",
+    "number": 20,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-09-06T22:00:00.000Z",
+    "duration": 3010,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://www.cro.cafe/podcast/server-side-experimentation",
+    "media_url": "https://media.transistor.fm/1542b3e8/d687cb27.mp3",
+    "image_url": "https://img.transistor.fm/QG8UxhhIYepp63e2kR4SiyX9lazyN7vRuGKhUWkS884/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lNzhh/MGQxYjdjNjNjMzdi/YzU5YTg4ZjkwNmU2/ZjAwOC5qcGVn.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "Learn what makes server-side testing different from client-side testing, if can you use both simultaneously and what the common mistakes are you need to avoid.\r\n\r\nPodcast Partners: Convert.com, OnlineDialogue.com, Sitespect.com, Contentsquare.com and OnlineInfluence.com",
+    "description": "<div><strong>Partners:</strong></div><ul><li>Convert: <a href=\"https://www.convert.com/features?utm_source=crocafe&amp;utm_medium=shownoteslink\">convert.com/features</a></li><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl/?utm_source=crocafe&amp;utm_medium=shownoteslink\">onlinedialogue.nl</a></li><li>SiteSpect: <a href=\"https://www.sitespect.com/?utm_source=crocafe&amp;utm_medium=shownoteslink\">sitespect.com</a></li><li>Contentsquare: <a href=\"https://contentsquare.com/?utm_source=crocafe&amp;utm_medium=shownoteslink\">contentsquare.com</a></li><li>Online Invloed: <a href=\"https://onlineinvloed.nl/?utm_source=crocafe&amp;utm_medium=shownoteslink\">onlineinvloed.nl</a></li></ul><div>&nbsp;Guest 1: Tom van den Berg URL: https://www.cro.cafe/guest/tom-van-den-berg | Guest 2: Ruben de Boer URL: https://www.cro.cafe/guest/ruben-de-boer&nbsp;</div>",
+    "slug": "server-side-experimentation",
+    "created_at": "2020-09-05T19:14:44.758Z",
+    "updated_at": "2025-01-13T15:22:31.956Z",
+    "formatted_published_at": "September 6, 2020",
+    "duration_in_mmss": "50:10",
+    "share_url": "https://share.transistor.fm/s/1542b3e8",
+    "transcript_url": "https://share.transistor.fm/s/1542b3e8/transcript",
+    "transcripts": [],
+    "formatted_summary": "Learn what makes server-side testing different from client-side testing, if can you use both simultaneously and what the common mistakes are you need to avoid.\r\n\r\nPodcast Partners: Convert.com, OnlineDialogue.com, Sitespect.com, Contentsquare.com and OnlineInfluence.com",
+    "formatted_description": "<div><strong>Partners:</strong></div><ul><li>Convert: <a href=\"https://www.convert.com/features?utm_source=crocafe&amp;utm_medium=shownoteslink\">convert.com/features</a></li><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl/?utm_source=crocafe&amp;utm_medium=shownoteslink\">onlinedialogue.nl</a></li><li>SiteSpect: <a href=\"https://www.sitespect.com/?utm_source=crocafe&amp;utm_medium=shownoteslink\">sitespect.com</a></li><li>Contentsquare: <a href=\"https://contentsquare.com/?utm_source=crocafe&amp;utm_medium=shownoteslink\">contentsquare.com</a></li><li>Online Invloed: <a href=\"https://onlineinvloed.nl/?utm_source=crocafe&amp;utm_medium=shownoteslink\">onlineinvloed.nl</a></li></ul><div>&nbsp;Guest 1: Tom van den Berg URL: https://www.cro.cafe/guest/tom-van-den-berg | Guest 2: Ruben de Boer URL: https://www.cro.cafe/guest/ruben-de-boer&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/1542b3e8\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/1542b3e8/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

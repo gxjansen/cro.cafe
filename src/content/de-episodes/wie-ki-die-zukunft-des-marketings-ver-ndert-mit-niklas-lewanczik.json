@@ -1,0 +1,47 @@
+{
+  "id": "1423673",
+  "type": "episode",
+  "attributes": {
+    "title": "Wie KI die Zukunft des Marketings verändert mit Niklas Lewanczik",
+    "number": 26,
+    "season": 1,
+    "status": "published",
+    "published_at": "2023-07-18T09:00:00.000Z",
+    "duration": 2465,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://de.cro.cafe/podcast/wie-ki-die-zukunft-des-marketings-verandert",
+    "media_url": "https://media.transistor.fm/55f7fd1c/10eba26e.mp3",
+    "image_url": "https://img.transistor.fm/oA4uK1FCQXkq2teXXBFaHNya-Z3R0Suc1OoYNdty8-8/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kNzc2/ZTMxMjVkOGNhOWJi/NzhhMWE4OWQzODdi/ZDVmZi5wbmc.webp",
+    "video_url": "",
+    "author": "",
+    "summary": null,
+    "description": "Künstliche Intelligenz gewinnt immer mehr an Bedeutung. Der Durchbruch von ChatGPT hat uns gezeigt, wie sich unser Arbeitsalltag durch KI verändern wird. Niklas Lewanczik, Redaktionsleiter bei Onlinemarketing.de, kennt sich bestens mit der Thematik aus und gibt uns spannende Einblicke in die Arbeit mit Künstlicher Intelligenz. Außerdem verrät er, welche nützliche Tools es momentan auf dem Markt gibt.<strong>Niklas's Empfehlungen:</strong><ul><li>Blog von Open.ai</li><li>Blogs von Google (DeepMind)</li><li>AI Podcast von Videa </li></ul>\n\n\n\n<!-- GUESTS START -->\nGuest: Niklas Lewanczik\nURL: https://de.cro.cafe/guest/niklas-lewanczik\n<!-- GUESTS END -->\n",
+    "slug": "wie-ki-die-zukunft-des-marketings-verandert-mit-niklas-lewanczik",
+    "created_at": "2023-07-18T07:03:54.562Z",
+    "updated_at": "2025-01-13T00:27:55.961Z",
+    "formatted_published_at": "July 18, 2023",
+    "duration_in_mmss": "41:05",
+    "share_url": "https://share.transistor.fm/s/55f7fd1c",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Künstliche Intelligenz gewinnt immer mehr an Bedeutung. Der Durchbruch von ChatGPT hat uns gezeigt, wie sich unser Arbeitsalltag durch KI verändern wird. Niklas Lewanczik, Redaktionsleiter bei Onlinemarketing.de, kennt sich bestens mit der Thematik aus und gibt uns spannende Einblicke in die Arbeit mit Künstlicher Intelligenz. Außerdem verrät er, welche nützliche Tools es momentan auf dem Markt gibt.Niklas's Empfehlungen:Blog von Open.aiBlogs von Google (DeepMind)AI Podcast von Videa \n\n\n\n\nGuest: Niklas Lewanczik\nURL: https://de.cro.cafe/guest/niklas-lewanczik",
+    "formatted_description": "Künstliche Intelligenz gewinnt immer mehr an Bedeutung. Der Durchbruch von ChatGPT hat uns gezeigt, wie sich unser Arbeitsalltag durch KI verändern wird. Niklas Lewanczik, Redaktionsleiter bei Onlinemarketing.de, kennt sich bestens mit der Thematik aus und gibt uns spannende Einblicke in die Arbeit mit Künstlicher Intelligenz. Außerdem verrät er, welche nützliche Tools es momentan auf dem Markt gibt.<strong>Niklas's Empfehlungen:</strong><ul><li>Blog von Open.ai</li><li>Blogs von Google (DeepMind)</li><li>AI Podcast von Videa </li></ul>\n\n\n\n<!-- GUESTS START -->\nGuest: Niklas Lewanczik\nURL: https://de.cro.cafe/guest/niklas-lewanczik\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/55f7fd1c\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/55f7fd1c/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "28592",
+        "type": "show"
+      }
+    }
+  }
+}

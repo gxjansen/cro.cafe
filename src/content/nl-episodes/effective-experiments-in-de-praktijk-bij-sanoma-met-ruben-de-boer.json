@@ -1,0 +1,52 @@
+{
+  "id": "397660",
+  "type": "episode",
+  "attributes": {
+    "title": "Effective Experiments in de praktijk bij Sanoma, met Ruben de Boer",
+    "number": 19,
+    "season": 1,
+    "status": "published",
+    "published_at": "2019-06-10T10:48:00.000Z",
+    "duration": 2619,
+    "explicit": false,
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
+    "alternate_url": "https://nl.cro.cafe/podcast/effective-experiments-in-de-praktijk-bij-sanoma",
+    "media_url": "https://media.transistor.fm/31e55544/6a2f3679.mp3",
+    "image_url": "https://img.transistor.fm/ugpuIBqK2cJAFhE0M1F3_eWCWRXMR6jo4z54ATEr6Rk/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS81M2Y5/YmE3NjEyOGNhYjA2/MmJiZTc5ZGRkZjhm/ZGQ4ZC5wbmc.webp",
+    "video_url": null,
+    "author": "Guido Jansen",
+    "summary": "In deze aflevering praat ik met Ruben de Boer. Hij is Manager CRO & UX bij Sanoma, en heeft hij ook zijn eigen hobby bedrijfje Conversion Ideas met als doel mensen in de CRO wereld te helpen die geen opleidingsbudget of geld hebben voor de duurdere B2B cursussen.\nIn deze aflevering gaan wij het hebben over hoe Ruben en zijn team gebruik maken van de SaaS tool Effective Experiments.\n\nPartners:\n> Effective Experiments: www.effectiveexperiments.com\n> Convert: www.convert.com/features\n> Buyerminds: www.buyerminds.com\n> Online Dialogue: www.onlinedialogue.nl\n\nAanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/effective-experiments-in-de-praktijk-bij-sanoma",
+    "description": "In deze aflevering praat ik met Ruben de Boer. Hij is Manager CRO & UX bij Sanoma, en heeft hij ook zijn eigen hobby bedrijfje Conversion Ideas met als doel mensen in de CRO wereld te helpen die geen opleidingsbudget of geld hebben voor de duurdere B2B cursussen. In deze aflevering gaan wij het hebben over hoe Ruben en zijn team gebruik maken van de SaaS tool Effective Experiments. Partners: > Effective Experiments: www.effectiveexperiments.com > Convert: www.convert.com/features > Buyerminds: www.buyerminds.com > Online Dialogue: www.onlinedialogue.nl Aanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/effective-experiments-in-de-praktijk-bij-sanoma\n\n\n\n<!-- GUESTS START -->\nGuest: Ruben de Boer\nURL: https://nl.cro.cafe/gast/ruben-de-boer\n<!-- GUESTS END -->\n",
+    "slug": "effective-experiments-in-de-praktijk-bij-sanoma-met-ruben-de-boer",
+    "created_at": "2020-11-10T20:43:48.618Z",
+    "updated_at": "2025-01-13T10:24:55.578Z",
+    "formatted_published_at": "June 10, 2019",
+    "duration_in_mmss": "43:39",
+    "share_url": "https://share.transistor.fm/s/31e55544",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "In deze aflevering praat ik met Ruben de Boer. Hij is Manager CRO & UX bij Sanoma, en heeft hij ook zijn eigen hobby bedrijfje Conversion Ideas met als doel mensen in de CRO wereld te helpen die geen opleidingsbudget of geld hebben voor de duurdere B2B cursussen.\nIn deze aflevering gaan wij het hebben over hoe Ruben en zijn team gebruik maken van de SaaS tool Effective Experiments.\n\nPartners:\n> Effective Experiments: www.effectiveexperiments.com\n> Convert: www.convert.com/features\n> Buyerminds: www.buyerminds.com\n> Online Dialogue: www.onlinedialogue.nl\n\nAanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/effective-experiments-in-de-praktijk-bij-sanoma",
+    "formatted_description": "In deze aflevering praat ik met Ruben de Boer. Hij is Manager CRO & UX bij Sanoma, en heeft hij ook zijn eigen hobby bedrijfje Conversion Ideas met als doel mensen in de CRO wereld te helpen die geen opleidingsbudget of geld hebben voor de duurdere B2B cursussen. In deze aflevering gaan wij het hebben over hoe Ruben en zijn team gebruik maken van de SaaS tool Effective Experiments. Partners: > Effective Experiments: www.effectiveexperiments.com > Convert: www.convert.com/features > Buyerminds: www.buyerminds.com > Online Dialogue: www.onlinedialogue.nl Aanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/effective-experiments-in-de-praktijk-bij-sanoma\n\n\n\n<!-- GUESTS START -->\nGuest: Ruben de Boer\nURL: https://nl.cro.cafe/gast/ruben-de-boer\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/31e55544\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/31e55544/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

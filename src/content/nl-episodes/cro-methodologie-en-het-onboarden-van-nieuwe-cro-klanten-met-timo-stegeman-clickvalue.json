@@ -1,0 +1,52 @@
+{
+  "id": "397716",
+  "type": "episode",
+  "attributes": {
+    "title": "CRO Methodologie en het onboarden van nieuwe CRO klanten, met Timo Stegeman (ClickValue)",
+    "number": 3,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-01-20T13:00:00.000Z",
+    "duration": 4223,
+    "explicit": false,
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
+    "alternate_url": "https://nl.cro.cafe/podcast/cro-methodologie-en-het-onboarden-van-nieuwe-cro-klanten",
+    "media_url": "https://media.transistor.fm/aed402aa/a411dede.mp3",
+    "image_url": "https://img.transistor.fm/mkCgE-IZbGXzOLD5wibxntdphDHKD-_yvyBpV2Uv-v0/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82MTUw/Y2RmNmM5ODVlMmI3/NzhhN2E3YmY3ZjBi/MGY1YS5qcGVn.webp",
+    "video_url": null,
+    "author": "Guido X Jansen",
+    "summary": "Deze week weer een gezellige aflevering met Timo Stegeman, Lead CRO consultant bij Clickvalue. We hebben het over de methodologie achter een CRO programma, het onboarding van nieuwe CRO klanten en het trainen van CRO consultants.",
+    "description": "\n\n<!-- GUESTS START -->\nGuest: Timo Stegeman\nURL: https://nl.cro.cafe/gast/timo-stegeman\n<!-- GUESTS END -->\n",
+    "slug": "nl-cro-methodologie-en-het-onboarden-van-nieuwe-cro-klanten-met-timo-stegeman-clickvalue",
+    "created_at": "2020-11-10T20:46:01.510Z",
+    "updated_at": "2025-01-13T10:28:55.874Z",
+    "formatted_published_at": "January 20, 2020",
+    "duration_in_mmss": "70:23",
+    "share_url": "https://share.transistor.fm/s/aed402aa",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Deze week weer een gezellige aflevering met Timo Stegeman, Lead CRO consultant bij Clickvalue. We hebben het over de methodologie achter een CRO programma, het onboarding van nieuwe CRO klanten en het trainen van CRO consultants.",
+    "formatted_description": "\n\n<!-- GUESTS START -->\nGuest: Timo Stegeman\nURL: https://nl.cro.cafe/gast/timo-stegeman\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/aed402aa\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/aed402aa/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

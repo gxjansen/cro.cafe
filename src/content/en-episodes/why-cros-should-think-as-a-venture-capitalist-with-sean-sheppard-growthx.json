@@ -1,26 +1,47 @@
 {
-  "id": "why-cros-should-think-as-a-venture-capitalist-with-sean-sheppard-growthx",
-  "title": "Why CROs should think as a Venture Capitalist, with Sean Sheppard (GrowthX)",
-  "description": "\n        Shownotes: www.cro.cafe/podcast/why-cros-should-think-as-a-venture-capitalistPartners:Convert: convert.com/featuresOnline Dialogue: onlinedialogue.nlSiteSpect: sitespect.comContentsquare: contentsquare.com\n      ",
-  "date": "2020-04-19T22:00:00.000Z",
-  "duration": 2244,
-  "audio_url": "https://media.transistor.fm/113f03cb/8ee604b2.mp3",
-  "transcript_url": "",
-  "show_notes": "",
-  "guests": [
-    {
-      "id": "sean-sheppard",
-      "name": "Sean Sheppard",
-      "role": "Founder",
-      "bio": "",
-      "image_url": "sean-sheppard.jpeg",
-      "social_links": [],
-      "language": "en",
-      "type": "guest"
+  "id": "240971",
+  "type": "episode",
+  "attributes": {
+    "title": "Why CROs should think as a Venture Capitalist, with Sean Sheppard (GrowthX)",
+    "number": 7,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-04-19T22:00:00.000Z",
+    "duration": 2244,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://www.cro.cafe/podcast/why-cros-should-think-as-a-venture-capitalist",
+    "media_url": "https://media.transistor.fm/113f03cb/8ee604b2.mp3",
+    "image_url": "https://img.transistor.fm/KeZyB6wDaLDyOv73jnUY4Igmg2_sbcqZ2WBebtvMXc8/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83NzI5/ZTI3MThmNzY0N2U1/NjhmYTc5NzkwNjZl/YTcxZS5qcGVn.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "Sean is a serial entrepreneur, venture capitalist and co-founder of GrowthX and the GrowthX Academy. He has successfully grown dozens of early-stage companies across a wide variety of products and markets. He’s now committed to working on building startup ecosystems and developing the next generation of leaders for the innovation economy.\r\n\r\nSean and I discuss some Strategies for Navigating Through Tough Times and talk about how CROs like you and me can deal with companies asking us to optimize when there isn’t even a product/market fit.",
+    "description": "Shownotes: <a href=\"https://www.cro.cafe/podcast/why-cros-should-think-as-a-venture-capitalist\">www.cro.cafe/podcast/why-cros-should-think-as-a-venture-capitalist</a><strong>Partners:</strong><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li><li>SiteSpect: <a href=\"https://www.sitespect.com/\">sitespect.com</a></li><li>Contentsquare: <a href=\"https://contentsquare.com/\">contentsquare.com</a></li></ul>\n\n\n\n<!-- GUESTS START -->\nGuest: Sean Sheppard\nURL: https://www.cro.cafe/guest/sean-sheppard\n<!-- GUESTS END -->\n",
+    "slug": "why-cros-should-think-as-a-vc",
+    "created_at": "2020-04-19T15:40:11.137Z",
+    "updated_at": "2025-01-13T15:02:26.713Z",
+    "formatted_published_at": "April 19, 2020",
+    "duration_in_mmss": "37:24",
+    "share_url": "https://share.transistor.fm/s/113f03cb",
+    "transcript_url": "https://share.transistor.fm/s/113f03cb/transcript",
+    "transcripts": [],
+    "formatted_summary": "Sean is a serial entrepreneur, venture capitalist and co-founder of GrowthX and the GrowthX Academy. He has successfully grown dozens of early-stage companies across a wide variety of products and markets. He’s now committed to working on building startup ecosystems and developing the next generation of leaders for the innovation economy.\r\n\r\nSean and I discuss some Strategies for Navigating Through Tough Times and talk about how CROs like you and me can deal with companies asking us to optimize when there isn’t even a product/market fit.",
+    "formatted_description": "Shownotes: <a href=\"https://www.cro.cafe/podcast/why-cros-should-think-as-a-venture-capitalist\">www.cro.cafe/podcast/why-cros-should-think-as-a-venture-capitalist</a><strong>Partners:</strong><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li><li>SiteSpect: <a href=\"https://www.sitespect.com/\">sitespect.com</a></li><li>Contentsquare: <a href=\"https://contentsquare.com/\">contentsquare.com</a></li></ul>\n\n\n\n<!-- GUESTS START -->\nGuest: Sean Sheppard\nURL: https://www.cro.cafe/guest/sean-sheppard\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/113f03cb\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/113f03cb/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
     }
-  ],
-  "youtube_url": "",
-  "main_image": "",
-  "language": "en",
-  "type": "podcast"
+  }
 }

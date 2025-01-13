@@ -1,0 +1,47 @@
+{
+  "id": "570358",
+  "type": "episode",
+  "attributes": {
+    "title": "El marketing de contenidos como motor de un negocio digital, con Mariam Veiga",
+    "number": 16,
+    "season": 1,
+    "status": "published",
+    "published_at": "2021-06-15T22:00:00.000Z",
+    "duration": 4103,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://es.cro.cafe/podcast/el-marketing-de-contenidos-como-motor-de-un-negocio-digital",
+    "media_url": "https://media.transistor.fm/12c9d215/6d5ab728.mp3",
+    "image_url": "https://img.transistor.fm/0uCXk0P70hd6vGVByw_Goaq03XCLo1r72YDDLdekiHo/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mMjA5/ZDcxZDIxYzNlYmVl/NTEzY2RlZjIyMTQ2/Y2FhMS5qcGc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "El marketing de contenidos es en el caso de Mariam Veiga el principal motor de conversión de su negocio digital, y de ello hablamos en detalle para conocer en detalle esta técnica para poder aprovecharla como parte de nuestra estrategia.",
+    "description": "El marketing de contenidos es en el caso de Mariam Veiga el principal motor de conversión de su negocio digital, y de ello hablamos en detalle para conocer en detalle esta técnica para poder aprovecharla como parte de nuestra estrategia.\n\n\n\n<!-- GUESTS START -->\nGuest: Mariam Veiga\nURL: https://es.cro.cafe/invitados/mariam-veiga\n<!-- GUESTS END -->\n",
+    "slug": "el-marketing-de-contenidos-como-motor-de-un-negocio-digital-con-mariam-veiga",
+    "created_at": "2021-06-15T19:57:15.533Z",
+    "updated_at": "2025-01-13T11:33:39.259Z",
+    "formatted_published_at": "June 15, 2021",
+    "duration_in_mmss": "68:23",
+    "share_url": "https://share.transistor.fm/s/12c9d215",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "El marketing de contenidos es en el caso de Mariam Veiga el principal motor de conversión de su negocio digital, y de ello hablamos en detalle para conocer en detalle esta técnica para poder aprovecharla como parte de nuestra estrategia.",
+    "formatted_description": "El marketing de contenidos es en el caso de Mariam Veiga el principal motor de conversión de su negocio digital, y de ello hablamos en detalle para conocer en detalle esta técnica para poder aprovecharla como parte de nuestra estrategia.\n\n\n\n<!-- GUESTS START -->\nGuest: Mariam Veiga\nURL: https://es.cro.cafe/invitados/mariam-veiga\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/12c9d215\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/12c9d215/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16111",
+        "type": "show"
+      }
+    }
+  }
+}

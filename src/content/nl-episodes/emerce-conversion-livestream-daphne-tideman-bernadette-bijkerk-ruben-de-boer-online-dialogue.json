@@ -1,0 +1,52 @@
+{
+  "id": "397655",
+  "type": "episode",
+  "attributes": {
+    "title": "Emerce Conversion Livestream: Daphne Tideman - Bernadette Bijkerk - Ruben de Boer (Online Dialogue)",
+    "number": null,
+    "season": 1,
+    "status": "published",
+    "published_at": "2019-04-12T14:07:00.000Z",
+    "duration": 1964,
+    "explicit": false,
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
+    "alternate_url": "https://nl.cro.cafe/podcast/emerce-interview-daphne-tideman-bernadette-bijkerk-ruben-de-boer",
+    "media_url": "https://media.transistor.fm/7d49f9c1/5ea8f04b.mp3",
+    "image_url": "https://img.transistor.fm/AGp33hJ0ZMQ7yuydAc38wtXlaYzZ9wjODeSyH_PXdcM/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS81YTgy/ZGM1NmYzZjlhN2Ey/NzEwOTQzY2Q2NmU5/ZDhjNC5qcGVn.webp",
+    "video_url": "",
+    "author": "Guido Jansen",
+    "summary": "Emerce Conversion Livestream: Daphne Tideman - Bernadette Bijkerk - Ruben de Boer by Guido Jansen",
+    "description": "<div>Emerce Conversion Livestream: Daphne Tideman - Bernadette Bijkerk - Ruben de Boer by Guido Jansen Guest 1: Bernadette Bijkerk URL: https://nl.cro.cafe/gast/bernadette-bijkerk | Guest 2: Daphne Tideman URL: https://nl.cro.cafe/gast/daphne-tideman | Guest 3: Ruben de Boer URL: https://nl.cro.cafe/gast/ruben-de-boer&nbsp;</div>",
+    "slug": "emerce-conversion-livestream-daphne-tideman-bernadette-bijkerk-ruben-de-boer-online-dialogue",
+    "created_at": "2020-11-10T20:43:34.870Z",
+    "updated_at": "2025-01-13T15:38:09.967Z",
+    "formatted_published_at": "April 12, 2019",
+    "duration_in_mmss": "32:44",
+    "share_url": "https://share.transistor.fm/s/7d49f9c1",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Emerce Conversion Livestream: Daphne Tideman - Bernadette Bijkerk - Ruben de Boer by Guido Jansen",
+    "formatted_description": "<div>Emerce Conversion Livestream: Daphne Tideman - Bernadette Bijkerk - Ruben de Boer by Guido Jansen Guest 1: Bernadette Bijkerk URL: https://nl.cro.cafe/gast/bernadette-bijkerk | Guest 2: Daphne Tideman URL: https://nl.cro.cafe/gast/daphne-tideman | Guest 3: Ruben de Boer URL: https://nl.cro.cafe/gast/ruben-de-boer&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/7d49f9c1\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/7d49f9c1/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

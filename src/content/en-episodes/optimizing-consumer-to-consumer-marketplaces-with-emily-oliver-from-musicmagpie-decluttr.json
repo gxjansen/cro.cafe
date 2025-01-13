@@ -1,0 +1,47 @@
+{
+  "id": "376012",
+  "type": "episode",
+  "attributes": {
+    "title": "Optimizing Consumer-to-consumer marketplaces, with Emily Oliver from musicMagpie/Decluttr",
+    "number": 25,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-10-18T22:00:00.000Z",
+    "duration": 3482,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://www.cro.cafe/podcast/optimizing-consumer-to-consumer-marketplaces",
+    "media_url": "https://media.transistor.fm/0ad43b27/980f7f75.mp3",
+    "image_url": "https://img.transistor.fm/E7PZJQJDjZbNx2sj1ag4FB6G5Pp3Wh5lfZRMoe_Dwtc/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82MTI1/OTQwN2I2MTRmNjNi/ODQ5N2ViMmE1OGE5/ZWQ3NS5qcGVn.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "Today we learn how to approach optimization for a consumer-to-consumer marketplace and Emily is able to share some recent experiment results with us.\r\n\r\nShownotes: https://www.cro.cafe/podcast/optimizing-consumer-to-consumer-marketplaces\r\n\r\nPodcast Partners: Convert.com, OnlineDialogue.com, Sitespect.com, Contentsquare.com and OnlineInfluence.com",
+    "description": "Today we learn how to approach optimization for a consumer-to-consumer marketplace and Emily is able to share some recent experiment results with us.\nShownotes: https://www.cro.cafe/podcast/optimizing-consumer-to-consumer-marketplaces\nPodcast Partners: Convert.com, OnlineDialogue.com, Sitespect.com, Contentsquare.com and OnlineInfluence.com\n\n\n\n<!-- GUESTS START -->\nGuest: Emily Oliver\nURL: https://www.cro.cafe/guest/emily-oliver\n<!-- GUESTS END -->\n",
+    "slug": "optimizing-consumer-to-consumer-marketplaces-with-emily-oliver-from-musicmagpie-decluttr",
+    "created_at": "2020-10-15T18:56:29.789Z",
+    "updated_at": "2025-01-13T15:06:23.320Z",
+    "formatted_published_at": "October 18, 2020",
+    "duration_in_mmss": "58:02",
+    "share_url": "https://share.transistor.fm/s/0ad43b27",
+    "transcript_url": "https://share.transistor.fm/s/0ad43b27/transcript",
+    "transcripts": [],
+    "formatted_summary": "Today we learn how to approach optimization for a consumer-to-consumer marketplace and Emily is able to share some recent experiment results with us.\r\n\r\nShownotes: https://www.cro.cafe/podcast/optimizing-consumer-to-consumer-marketplaces\r\n\r\nPodcast Partners: Convert.com, OnlineDialogue.com, Sitespect.com, Contentsquare.com and OnlineInfluence.com",
+    "formatted_description": "Today we learn how to approach optimization for a consumer-to-consumer marketplace and Emily is able to share some recent experiment results with us.\nShownotes: https://www.cro.cafe/podcast/optimizing-consumer-to-consumer-marketplaces\nPodcast Partners: Convert.com, OnlineDialogue.com, Sitespect.com, Contentsquare.com and OnlineInfluence.com\n\n\n\n<!-- GUESTS START -->\nGuest: Emily Oliver\nURL: https://www.cro.cafe/guest/emily-oliver\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/0ad43b27\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/0ad43b27/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "726668",
+  "type": "episode",
+  "attributes": {
+    "title": "Errores y cagadas que he cometido en proyectos CRO, con Ricardo Tayar",
+    "number": null,
+    "season": 1,
+    "status": "published",
+    "published_at": "2021-11-17T07:40:28.302Z",
+    "duration": 1508,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://es.cro.cafe/podcast/errores-y-cagadas-que-he-cometido-en-proyectos-cro",
+    "media_url": "https://media.transistor.fm/e420223e/f6b0af12.mp3",
+    "image_url": "https://img.transistor.fm/MxRo6vetB7i68nsKLAGLpsm7iyTnqj-ccMl6f_isUFk/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kZWU1/YzVkMjM0OWM2MzI4/YmM1ZTQxODllYTQx/YmNmMC5qcGc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "Unas cuantas historias de errores y cagadas cometidos a lo largo de 13 años en diferentes proyectos de CRO.",
+    "description": "Unas cuantas historias de errores y cagadas cometidos a lo largo de 13 años en diferentes proyectos de CRO.\n\n\n\n<!-- GUESTS START -->\nGuest: Ricardo Tayar\nURL: https://es.cro.cafe/invitados/ricardo-tayar-lopez\n<!-- GUESTS END -->\n",
+    "slug": "errores-y-cagadas-que-he-cometido-en-proyectos-cro-con-ricardo-tayar",
+    "created_at": "2021-11-17T07:40:28.303Z",
+    "updated_at": "2025-01-13T11:33:39.539Z",
+    "formatted_published_at": "November 17, 2021",
+    "duration_in_mmss": "25:08",
+    "share_url": "https://share.transistor.fm/s/e420223e",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Unas cuantas historias de errores y cagadas cometidos a lo largo de 13 años en diferentes proyectos de CRO.",
+    "formatted_description": "Unas cuantas historias de errores y cagadas cometidos a lo largo de 13 años en diferentes proyectos de CRO.\n\n\n\n<!-- GUESTS START -->\nGuest: Ricardo Tayar\nURL: https://es.cro.cafe/invitados/ricardo-tayar-lopez\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/e420223e\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/e420223e/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16111",
+        "type": "show"
+      }
+    }
+  }
+}

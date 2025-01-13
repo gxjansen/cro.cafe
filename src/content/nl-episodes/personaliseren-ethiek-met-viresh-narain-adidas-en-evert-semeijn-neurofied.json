@@ -1,0 +1,52 @@
+{
+  "id": "397672",
+  "type": "episode",
+  "attributes": {
+    "title": "Personaliseren & Ethiek, met Viresh Narain (Adidas) en Evert Semeijn (Neurofied)",
+    "number": 31,
+    "season": 1,
+    "status": "published",
+    "published_at": "2019-09-30T14:39:00.000Z",
+    "duration": 3568,
+    "explicit": false,
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
+    "alternate_url": "https://nl.cro.cafe/podcast/personaliseren-ethiek",
+    "media_url": "https://media.transistor.fm/74a0ab28/daefee57.mp3",
+    "image_url": "https://img.transistor.fm/-WX-b5mHvgEsaHG-lsmktASx2Qt4GZV1SuJ3kJJlX3k/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mZGY5/YjI5NzRlOTUwNzUz/NDcxOWE0NmViMjcy/MmNhNy5qcGVn.webp",
+    "video_url": null,
+    "author": "Guido Jansen",
+    "summary": "Vandaag praat ik met Viresh Narain en Evert Semeijn over personalisatie en ethiek. Viresh is een freelance digital manager die momenteel bij Adidas en ING aan het werk is. Evert heeft een PHD in neurowetenschappen en mede-oprichter van Neurofied, een naam die je als het goed is kent van de wekelijkse neuronuggets die je telkens aan het einde van onze podcast hoort. We hebben het over Personalization on scale: hoe bereik je dat en hoe kan je omgaan met de ethische keuzes die je als experts tegen gaat komen?\n\nPartners:\n> Effective Experiments: www.effectiveexperiments.com\n> Convert: www.convert.com/features\n> Online Dialogue: www.onlinedialogue.nl\n> Braingineers: www.braingineers.com",
+    "description": "Vandaag praat ik met Viresh Narain en Evert Semeijn over personalisatie en ethiek. Viresh is een freelance digital manager die momenteel bij Adidas en ING aan het werk is. Evert heeft een PHD in neurowetenschappen en mede-oprichter van Neurofied, een naam die je als het goed is kent van de wekelijkse neuronuggets die je telkens aan het einde van onze podcast hoort. We hebben het over Personalization on scale: hoe bereik je dat en hoe kan je omgaan met de ethische keuzes die je als experts tegen gaat komen? Partners: > Effective Experiments: www.effectiveexperiments.com > Convert: www.convert.com/features > Online Dialogue: www.onlinedialogue.nl > Braingineers: www.braingineers.com\n\n\n\n<!-- GUESTS START -->\nGuest 1: Viresh Narain\nURL: https://nl.cro.cafe/gast/viresh-narain\n\n|\n\nGuest 2: Evert Semeijn\nURL: https://nl.cro.cafe/gast/evert-semeijn\n<!-- GUESTS END -->\n",
+    "slug": "personaliseren-ethiek-met-viresh-narain-adidas-en-evert-semeijn-neurofied",
+    "created_at": "2020-11-10T20:44:19.496Z",
+    "updated_at": "2025-01-13T10:25:55.802Z",
+    "formatted_published_at": "September 30, 2019",
+    "duration_in_mmss": "59:28",
+    "share_url": "https://share.transistor.fm/s/74a0ab28",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Vandaag praat ik met Viresh Narain en Evert Semeijn over personalisatie en ethiek. Viresh is een freelance digital manager die momenteel bij Adidas en ING aan het werk is. Evert heeft een PHD in neurowetenschappen en mede-oprichter van Neurofied, een naam die je als het goed is kent van de wekelijkse neuronuggets die je telkens aan het einde van onze podcast hoort. We hebben het over Personalization on scale: hoe bereik je dat en hoe kan je omgaan met de ethische keuzes die je als experts tegen gaat komen?\n\nPartners:\n> Effective Experiments: www.effectiveexperiments.com\n> Convert: www.convert.com/features\n> Online Dialogue: www.onlinedialogue.nl\n> Braingineers: www.braingineers.com",
+    "formatted_description": "Vandaag praat ik met Viresh Narain en Evert Semeijn over personalisatie en ethiek. Viresh is een freelance digital manager die momenteel bij Adidas en ING aan het werk is. Evert heeft een PHD in neurowetenschappen en mede-oprichter van Neurofied, een naam die je als het goed is kent van de wekelijkse neuronuggets die je telkens aan het einde van onze podcast hoort. We hebben het over Personalization on scale: hoe bereik je dat en hoe kan je omgaan met de ethische keuzes die je als experts tegen gaat komen? Partners: > Effective Experiments: www.effectiveexperiments.com > Convert: www.convert.com/features > Online Dialogue: www.onlinedialogue.nl > Braingineers: www.braingineers.com\n\n\n\n<!-- GUESTS START -->\nGuest 1: Viresh Narain\nURL: https://nl.cro.cafe/gast/viresh-narain\n\n|\n\nGuest 2: Evert Semeijn\nURL: https://nl.cro.cafe/gast/evert-semeijn\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/74a0ab28\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/74a0ab28/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

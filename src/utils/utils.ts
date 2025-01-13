@@ -1,52 +1,86 @@
-import { I18N } from 'astrowind:config';
+/**
+ * Convert a string to a URL-friendly slug
+ * @param text The text to convert to a slug
+ * @returns A URL-friendly slug
+ */
+export function slugify(text: string): string {
+  return text
+    .toString()
+    .toLowerCase()
+    .trim()
+    .normalize('NFD') // Normalize unicode characters
+    .replace(/[\u0300-\u036f]/g, '') // Remove diacritics
+    .replace(/[^a-z0-9\s-]/g, '') // Remove non-alphanumeric characters
+    .replace(/[\s_-]+/g, '-') // Replace spaces and underscores with hyphens
+    .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
+}
 
-export const formatter: Intl.DateTimeFormat = new Intl.DateTimeFormat(I18N?.language, {
-  year: 'numeric',
-  month: 'short',
-  day: 'numeric',
-  timeZone: 'UTC',
-});
+/**
+ * Ensure a string starts with a given prefix
+ * @param str The string to check
+ * @param prefix The prefix to ensure
+ * @returns The string with the prefix
+ */
+export function ensurePrefix(str: string, prefix: string): string {
+  return str.startsWith(prefix) ? str : `${prefix}${str}`;
+}
 
-export const getFormattedDate = (date: Date): string => (date ? formatter.format(date) : '');
+/**
+ * Ensure a string ends with a given suffix
+ * @param str The string to check
+ * @param suffix The suffix to ensure
+ * @returns The string with the suffix
+ */
+export function ensureSuffix(str: string, suffix: string): string {
+  return str.endsWith(suffix) ? str : `${str}${suffix}`;
+}
 
-export const trim = (str = '', ch?: string) => {
-  let start = 0,
-    end = str.length || 0;
-  while (start < end && str[start] === ch) ++start;
-  while (end > start && str[end - 1] === ch) --end;
-  return start > 0 || end < str.length ? str.substring(start, end) : str;
-};
+/**
+ * Format a date string to a locale-specific format
+ * @param date The date string to format
+ * @param locale The locale to use for formatting
+ * @returns A formatted date string
+ */
+export function formatDate(date: string, locale: string = 'en-US'): string {
+  return new Date(date).toLocaleDateString(locale, {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
 
-// Function to format a number in thousands (K) or millions (M) format depending on its value
-export const toUiAmount = (amount: number) => {
-  if (!amount) return 0;
+/**
+ * Format a duration in seconds to a human-readable string (MM:SS)
+ * @param seconds The duration in seconds
+ * @returns A formatted duration string
+ */
+export function formatDuration(seconds: number): string {
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = Math.floor(seconds % 60);
+  return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+}
 
-  let value: string;
+/**
+ * Clean HTML content by removing unwanted tags and attributes
+ * @param html The HTML content to clean
+ * @returns Cleaned HTML content
+ */
+export function cleanHtml(html: string): string {
+  return html
+    .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '') // Remove scripts
+    .replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, '') // Remove styles
+    .replace(/on\w+="[^"]*"/g, '') // Remove inline event handlers
+    .trim();
+}
 
-  if (amount >= 1000000000) {
-    const formattedNumber = (amount / 1000000000).toFixed(1);
-    if (Number(formattedNumber) === parseInt(formattedNumber)) {
-      value = parseInt(formattedNumber) + 'B';
-    } else {
-      value = formattedNumber + 'B';
-    }
-  } else if (amount >= 1000000) {
-    const formattedNumber = (amount / 1000000).toFixed(1);
-    if (Number(formattedNumber) === parseInt(formattedNumber)) {
-      value = parseInt(formattedNumber) + 'M';
-    } else {
-      value = formattedNumber + 'M';
-    }
-  } else if (amount >= 1000) {
-    const formattedNumber = (amount / 1000).toFixed(1);
-    if (Number(formattedNumber) === parseInt(formattedNumber)) {
-      value = parseInt(formattedNumber) + 'K';
-    } else {
-      value = formattedNumber + 'K';
-    }
-  } else {
-    value = Number(amount).toFixed(0);
-  }
-
-  return value;
-};
+/**
+ * Generate a random string of specified length
+ * @param length The length of the random string
+ * @returns A random string
+ */
+export function generateRandomString(length: number): string {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  return Array.from(crypto.getRandomValues(new Uint8Array(length)))
+    .map((x) => chars[x % chars.length])
+    .join('');
+}

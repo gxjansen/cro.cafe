@@ -1,0 +1,53 @@
+{
+  "id": "397690",
+  "type": "episode",
+  "attributes": {
+    "title": "Guido's rant over persoonlijkheidstesten",
+    "number": null,
+    "season": 1,
+    "status": "published",
+    "published_at": "2019-11-04T15:20:00.000Z",
+    "duration": 925,
+    "explicit": false,
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "dac19",
+      "moa",
+      "livestream"
+    ],
+    "alternate_url": "https://nl.cro.cafe/podcast/guidos-rant-over-persoonlijkheidstesten",
+    "media_url": "https://media.transistor.fm/640d7957/79d325dd.mp3",
+    "image_url": "https://img.transistor.fm/0CLe6BlIAzVm26-QIId-osrEkbwWj_VY_yCDOr8rzd4/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS81MmI2/ZDJmOTQ3MTcwNTky/NzczZmFjZGJlNzFm/NDk2Yy5qcGVn.webp",
+    "video_url": "",
+    "author": "Guido Jansen & Bart van der Meer",
+    "summary": "In deze clip vanuit de livestream tijdens #DAC19 spraken Guido en Bart onderling over persoonlijkheidstesten.",
+    "description": "<div><strong>Partners:</strong></div><div>&nbsp;</div><ul><li>Effective Experiments: <a href=\"https://www.effectiveexperiments.com\">effectiveexperiments.com</a></li></ul><div><br></div><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li></ul><div><br></div><ul><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li></ul><div><br></div><ul><li>Braingineers: <a href=\"https://www.braingineers.com\">braingineers.com</a></li></ul><div>Het&nbsp;</div><div><strong>Digital Analytics Congres</strong> 2019 vond plaats op 8 oktober 2019 in de Jaarbeurs in Utrecht en wij deden live verslag vanaf de conferentie. Meer over het congres kun je vinden op <a href=\"https://www.digitalanalyticscongres.nl/\">https://www.digitalanalyticscongres.nl/</a>.DAC19 werd georganiseerd door het Expertise Center voor Marketing Insights, Onderzoek en Analytics beter bekend als <strong>MOA</strong>. Meer daarover kun je terugvinden op <a href=\"https://www.moaweb.nl/\">https://www.moaweb.nl/</a>. Guest: Bart van der Meer URL: https://nl.cro.cafe/gast/bart-van-der-meer&nbsp;</div>",
+    "slug": "guidos-rant-over-persoonlijkheidstesten",
+    "created_at": "2020-11-10T20:45:03.886Z",
+    "updated_at": "2025-01-13T15:50:02.801Z",
+    "formatted_published_at": "November 4, 2019",
+    "duration_in_mmss": "15:25",
+    "share_url": "https://share.transistor.fm/s/640d7957",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "In deze clip vanuit de livestream tijdens #DAC19 spraken Guido en Bart onderling over persoonlijkheidstesten.",
+    "formatted_description": "<div><strong>Partners:</strong></div><div>&nbsp;</div><ul><li>Effective Experiments: <a href=\"https://www.effectiveexperiments.com\">effectiveexperiments.com</a></li></ul><div><br></div><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li></ul><div><br></div><ul><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li></ul><div><br></div><ul><li>Braingineers: <a href=\"https://www.braingineers.com\">braingineers.com</a></li></ul><div>Het&nbsp;</div><div><strong>Digital Analytics Congres</strong> 2019 vond plaats op 8 oktober 2019 in de Jaarbeurs in Utrecht en wij deden live verslag vanaf de conferentie. Meer over het congres kun je vinden op <a href=\"https://www.digitalanalyticscongres.nl/\">https://www.digitalanalyticscongres.nl/</a>.DAC19 werd georganiseerd door het Expertise Center voor Marketing Insights, Onderzoek en Analytics beter bekend als <strong>MOA</strong>. Meer daarover kun je terugvinden op <a href=\"https://www.moaweb.nl/\">https://www.moaweb.nl/</a>. Guest: Bart van der Meer URL: https://nl.cro.cafe/gast/bart-van-der-meer&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/640d7957\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/640d7957/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "keywords_raw": "podcast, ecommerce, conversion, usability, dac19, moa, livestream"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

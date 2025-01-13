@@ -1,0 +1,52 @@
+{
+  "id": "397684",
+  "type": "episode",
+  "attributes": {
+    "title": "Live @ Dutch CRO Awards: Guido & Bart",
+    "number": null,
+    "season": 1,
+    "status": "published",
+    "published_at": "2019-11-01T11:00:00.000Z",
+    "duration": 746,
+    "explicit": false,
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
+    "alternate_url": "",
+    "media_url": "https://media.transistor.fm/61c5f41c/01dc6106.mp3",
+    "image_url": "https://img.transistor.fm/0wSQCzPBbue80MSYKdiabxmxeM579CHA4zhFfWmhHpo/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzM5NzY4NC8x/NjA1MDQxMDg3LWFy/dHdvcmsuanBn.webp",
+    "video_url": "",
+    "author": "Guido X Jansen",
+    "summary": "Tijdens de DDMA Dutch CRO Awards op 3 oktober 2019 deden we live verslag vanaf het event.\r\n\r\nIn deze clip hebben Guido en Bart even een onderonsje :)",
+    "description": "<div><strong>Partners:</strong></div><div>&nbsp;</div><ul><li>Effective Experiments: <a href=\"https://www.effectiveexperiments.com\">effectiveexperiments.com</a></li></ul><div><br></div><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li></ul><div><br></div><ul><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li></ul><div><br></div><ul><li>Braingineers: <a href=\"https://www.braingineers.com\">braingineers.com</a></li></ul><div><br></div>",
+    "slug": "live-dutch-cro-awards-guido-bart",
+    "created_at": "2020-11-10T20:44:47.402Z",
+    "updated_at": "2025-01-13T15:49:37.739Z",
+    "formatted_published_at": "November 1, 2019",
+    "duration_in_mmss": "12:26",
+    "share_url": "https://share.transistor.fm/s/61c5f41c",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Tijdens de DDMA Dutch CRO Awards op 3 oktober 2019 deden we live verslag vanaf het event.\r\n\r\nIn deze clip hebben Guido en Bart even een onderonsje :)",
+    "formatted_description": "<div><strong>Partners:</strong></div><div>&nbsp;</div><ul><li>Effective Experiments: <a href=\"https://www.effectiveexperiments.com\">effectiveexperiments.com</a></li></ul><div><br></div><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li></ul><div><br></div><ul><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li></ul><div><br></div><ul><li>Braingineers: <a href=\"https://www.braingineers.com\">braingineers.com</a></li></ul><div><br></div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/61c5f41c\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/61c5f41c/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

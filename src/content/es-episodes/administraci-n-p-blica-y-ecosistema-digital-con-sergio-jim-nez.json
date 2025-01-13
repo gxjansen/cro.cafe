@@ -1,0 +1,47 @@
+{
+  "id": "793101",
+  "type": "episode",
+  "attributes": {
+    "title": "Administración pública y ecosistema digital, con Sergio Jiménez",
+    "number": 27,
+    "season": 2,
+    "status": "published",
+    "published_at": "2022-02-01T23:00:00.000Z",
+    "duration": 4432,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://es.cro.cafe/podcast/administracion-publica-y-ecosistema-digital-como-se-hacen-y-para-que-sus-webs-y-apps",
+    "media_url": "https://media.transistor.fm/c1db10cd/9fb36596.mp3",
+    "image_url": "https://img.transistor.fm/1RRTEnufVGqPx77ccxN2JUoNfymxeCDIeO12Nh6MDOw/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83ZGRj/MDI4NTQ5ZmQxMWRh/NjIxNDllMTlmNGJl/M2ZiNy5wbmc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "¿Qué entendemos por una conversión en un activo digital de la administración pública?, ¿por qué hacer cualquier cosa parece tan difícil en esas webs / apps? Hablamos con Sergio de todo esto con todo lujo de detalles.",
+    "description": "Sergio Jiménez lleva muchos años siendo referente en la medición digital y en la transformación digital de organismos públicos. Pocas personas saben más que él acerca de cómo medir y enfocar un proyecto digital para una administración.Las webs y apps de las administraciones son en general complejas y de difícil manejo por múltiples circunstancias: cómo son diseñadas, por quién, en base a qué, la medición que hay después, y mil cosas más.En esta charla apasionante intentamos desentrañar cuales son los grandes males de la administración pública digital, hacia donde vamos, qué camino queda, cual es el objetivo y cómo las administraciones deberían enfocar sus servicios digitales para que en el futuro cercano el ciudadano de a pie pueda resolver grandes cantidades de dudas y transacciones a través de esos activos digitales.Ese es el reto de las administraciones públicas en lo relacionado al ecosistema digital, ¿lo conseguirán?\n\n\n\n<!-- GUESTS START -->\nGuest: Sergio Jimenez\nURL: https://es.cro.cafe/invitados/sergio-jimenez\n<!-- GUESTS END -->\n",
+    "slug": "administracion-publica-y-ecosistema-digital-con-sergio-jimenez",
+    "created_at": "2022-02-01T09:01:00.503Z",
+    "updated_at": "2025-01-13T11:31:37.948Z",
+    "formatted_published_at": "February 1, 2022",
+    "duration_in_mmss": "73:52",
+    "share_url": "https://share.transistor.fm/s/c1db10cd",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "¿Qué entendemos por una conversión en un activo digital de la administración pública?, ¿por qué hacer cualquier cosa parece tan difícil en esas webs / apps? Hablamos con Sergio de todo esto con todo lujo de detalles.",
+    "formatted_description": "Sergio Jiménez lleva muchos años siendo referente en la medición digital y en la transformación digital de organismos públicos. Pocas personas saben más que él acerca de cómo medir y enfocar un proyecto digital para una administración.Las webs y apps de las administraciones son en general complejas y de difícil manejo por múltiples circunstancias: cómo son diseñadas, por quién, en base a qué, la medición que hay después, y mil cosas más.En esta charla apasionante intentamos desentrañar cuales son los grandes males de la administración pública digital, hacia donde vamos, qué camino queda, cual es el objetivo y cómo las administraciones deberían enfocar sus servicios digitales para que en el futuro cercano el ciudadano de a pie pueda resolver grandes cantidades de dudas y transacciones a través de esos activos digitales.Ese es el reto de las administraciones públicas en lo relacionado al ecosistema digital, ¿lo conseguirán?\n\n\n\n<!-- GUESTS START -->\nGuest: Sergio Jimenez\nURL: https://es.cro.cafe/invitados/sergio-jimenez\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/c1db10cd\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/c1db10cd/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16111",
+        "type": "show"
+      }
+    }
+  }
+}

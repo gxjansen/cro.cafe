@@ -1,26 +1,47 @@
 {
-  "id": "are-you-a-movie-critic-you-might-be-great-at-cro-with-sumantha-shankaranarayana",
-  "title": "Are you a movie critic? You might be great at CRO! With Sumantha Shankaranarayana",
-  "description": "\n        We learn how Kaspersky approaches and combines CRO for B2B and B2C and how a movie critic might make you a great CRO!\n\nShownotes: https://www.cro.cafe/podcast/kaspersky\n\nPodcast Partners: Convert.com, OnlineDialogue.com, Sitespect.com, Contentsquare.com and OnlineInfluence.com\n      ",
-  "date": "2020-11-01T23:09:51.000Z",
-  "duration": 3482,
-  "audio_url": "https://media.transistor.fm/c94477d2/fa5d78de.mp3",
-  "transcript_url": "",
-  "show_notes": "",
-  "guests": [
-    {
-      "id": "sumantha-shankaranarayana",
-      "name": "Sumantha Shankaranarayana",
-      "role": "Senior Conversion Rate Optimization Manager",
-      "bio": "",
-      "image_url": "sumantha-shankaranarayana.jpeg",
-      "social_links": [],
-      "language": "en",
-      "type": "guest"
+  "id": "389820",
+  "type": "episode",
+  "attributes": {
+    "title": "Are you a movie critic? You might be great at CRO! With Sumantha Shankaranarayana",
+    "number": 27,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-11-01T23:09:51.474Z",
+    "duration": 3482,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://www.cro.cafe/podcast/kaspersky",
+    "media_url": "https://media.transistor.fm/c94477d2/fa5d78de.mp3",
+    "image_url": "https://img.transistor.fm/bw0xilixF4ZiUtllo_c8XdpemGHhvowTrdTvK3IibrY/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9hZTgz/ZWE2NTQ5MjIwYTZl/MzczOWIwZjQwN2Ex/Mjc2Ni5qcGVn.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "We learn how Kaspersky approaches and combines CRO for B2B and B2C and how a movie critic might make you a great CRO!\r\n\r\nShownotes: https://www.cro.cafe/podcast/kaspersky\r\n\r\nPodcast Partners: Convert.com, OnlineDialogue.com, Sitespect.com, Contentsquare.com and OnlineInfluence.com",
+    "description": "We learn how Kaspersky approaches and combines CRO for B2B and B2C and how a movie critic might make you a great CRO!\nShownotes: https://www.cro.cafe/podcast/kaspersky\nPodcast Partners: Convert.com, OnlineDialogue.com, Sitespect.com, Contentsquare.com and OnlineInfluence.com\n\n\n\n<!-- GUESTS START -->\nGuest: Sumantha Shankaranarayana\nURL: https://www.cro.cafe/guest/sumantha-shankaranarayana\n<!-- GUESTS END -->\n",
+    "slug": "kaspersky",
+    "created_at": "2020-11-01T22:48:31.615Z",
+    "updated_at": "2025-01-13T15:06:37.433Z",
+    "formatted_published_at": "November 1, 2020",
+    "duration_in_mmss": "58:02",
+    "share_url": "https://share.transistor.fm/s/c94477d2",
+    "transcript_url": "https://share.transistor.fm/s/c94477d2/transcript",
+    "transcripts": [],
+    "formatted_summary": "We learn how Kaspersky approaches and combines CRO for B2B and B2C and how a movie critic might make you a great CRO!\r\n\r\nShownotes: https://www.cro.cafe/podcast/kaspersky\r\n\r\nPodcast Partners: Convert.com, OnlineDialogue.com, Sitespect.com, Contentsquare.com and OnlineInfluence.com",
+    "formatted_description": "We learn how Kaspersky approaches and combines CRO for B2B and B2C and how a movie critic might make you a great CRO!\nShownotes: https://www.cro.cafe/podcast/kaspersky\nPodcast Partners: Convert.com, OnlineDialogue.com, Sitespect.com, Contentsquare.com and OnlineInfluence.com\n\n\n\n<!-- GUESTS START -->\nGuest: Sumantha Shankaranarayana\nURL: https://www.cro.cafe/guest/sumantha-shankaranarayana\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/c94477d2\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/c94477d2/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
     }
-  ],
-  "youtube_url": "",
-  "main_image": "",
-  "language": "en",
-  "type": "podcast"
+  }
 }

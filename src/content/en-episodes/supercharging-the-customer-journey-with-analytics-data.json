@@ -1,15 +1,47 @@
 {
-  "id": "supercharging-the-customer-journey-with-analytics-data",
-  "title": "Supercharging the customer journey with analytics data",
-  "description": "\n        Learn how to make use of the higher speed of data to facilitate a change of focus from reactive reporting to complex live activation across channels, together with Steen Rasmussen.\n      ",
-  "date": "2021-09-19T22:00:00.000Z",
-  "duration": 2512,
-  "audio_url": "https://media.transistor.fm/aa185158/cd27f1d6.mp3",
-  "transcript_url": "",
-  "show_notes": "",
-  "guests": [],
-  "youtube_url": "",
-  "main_image": "",
-  "language": "en",
-  "type": "podcast"
+  "id": "586547",
+  "type": "episode",
+  "attributes": {
+    "title": "Supercharging the customer journey with analytics data",
+    "number": 15,
+    "season": 3,
+    "status": "published",
+    "published_at": "2021-09-19T22:00:00.000Z",
+    "duration": 2512,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://www.cro.cafe/podcast/supercharging-the-customer-journey-with-analytics-data",
+    "media_url": "https://media.transistor.fm/aa185158/cd27f1d6.mp3",
+    "image_url": "https://img.transistor.fm/H4tYZec8FUkAv4NOKEnGy2mkdQBJUdteDp8PqPkDp_s/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kYTMw/ZjJlMGY1N2RlYmMz/ZTYwYWJjM2U5YzFk/N2M1Yi5qcGc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "Learn how to make use of the higher speed of data to facilitate a change of focus from reactive reporting to complex live activation across channels, together with Steen Rasmussen.",
+    "description": "Learn how to make use of the higher speed of data to facilitate a change of focus from reactive reporting to complex live activation across channels, together with Steen Rasmussen.\n\n\n\n<!-- GUESTS START -->\nGuest: Steen Rasmussen\nURL: https://www.cro.cafe/guest/steen-rasmussen\n<!-- GUESTS END -->\n",
+    "slug": "steen",
+    "created_at": "2021-07-05T20:48:51.533Z",
+    "updated_at": "2025-01-13T00:11:40.884Z",
+    "formatted_published_at": "September 19, 2021",
+    "duration_in_mmss": "41:52",
+    "share_url": "https://share.transistor.fm/s/aa185158",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Learn how to make use of the higher speed of data to facilitate a change of focus from reactive reporting to complex live activation across channels, together with Steen Rasmussen.",
+    "formatted_description": "Learn how to make use of the higher speed of data to facilitate a change of focus from reactive reporting to complex live activation across channels, together with Steen Rasmussen.\n\n\n\n<!-- GUESTS START -->\nGuest: Steen Rasmussen\nURL: https://www.cro.cafe/guest/steen-rasmussen\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/aa185158\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/aa185158/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
 }

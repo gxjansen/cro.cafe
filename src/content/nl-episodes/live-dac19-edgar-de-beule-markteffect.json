@@ -1,0 +1,53 @@
+{
+  "id": "397695",
+  "type": "episode",
+  "attributes": {
+    "title": "Live @ DAC19: Edgar de Beule (Markteffect)",
+    "number": null,
+    "season": 1,
+    "status": "published",
+    "published_at": "2019-11-04T15:45:00.000Z",
+    "duration": 1890,
+    "explicit": false,
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "dac19",
+      "moa",
+      "livestream"
+    ],
+    "alternate_url": "",
+    "media_url": "https://media.transistor.fm/1095f554/be6a39e7.mp3",
+    "image_url": "https://img.transistor.fm/fXkPX0XxYyBNj-8nsMnnZ6xa1dW-BIhT8AF_2BSpyso/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzM5NzY5NS8x/NjA1MDQxMTEzLWFy/dHdvcmsuanBn.webp",
+    "video_url": "",
+    "author": "Guido Jansen & Bart van der Meer",
+    "summary": "In deze clip vanuit de livestream tijdens #DAC19 spraken Guido en Bart met Edgar de Beule van Markteffect.",
+    "description": "<div><strong>Partners:</strong></div><div>&nbsp;</div><ul><li>Effective Experiments: <a href=\"https://www.effectiveexperiments.com\">effectiveexperiments.com</a></li></ul><div><br></div><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li></ul><div><br></div><ul><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li></ul><div><br></div><ul><li>Braingineers: <a href=\"https://www.braingineers.com\">braingineers.com</a></li></ul><div>Het&nbsp;</div><div><strong>Digital Analytics Congres</strong> 2019 vond plaats op 8 oktober 2019 in de Jaarbeurs in Utrecht en wij deden live verslag vanaf de conferentie. Meer over het congres kun je vinden op <a href=\"https://www.digitalanalyticscongres.nl/\">https://www.digitalanalyticscongres.nl/</a>.<br><br>DAC19 werd georganiseerd door het Expertise Center voor Marketing Insights, Onderzoek en Analytics beter bekend als <strong>MOA</strong>. Meer daarover kun je terugvinden op <a href=\"https://www.moaweb.nl/\">https://www.moaweb.nl/</a>.</div>",
+    "slug": "live-dac19-edgar-de-beule-markteffect",
+    "created_at": "2020-11-10T20:45:13.988Z",
+    "updated_at": "2025-01-13T15:44:26.958Z",
+    "formatted_published_at": "November 4, 2019",
+    "duration_in_mmss": "31:30",
+    "share_url": "https://share.transistor.fm/s/1095f554",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "In deze clip vanuit de livestream tijdens #DAC19 spraken Guido en Bart met Edgar de Beule van Markteffect.",
+    "formatted_description": "<div><strong>Partners:</strong></div><div>&nbsp;</div><ul><li>Effective Experiments: <a href=\"https://www.effectiveexperiments.com\">effectiveexperiments.com</a></li></ul><div><br></div><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li></ul><div><br></div><ul><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li></ul><div><br></div><ul><li>Braingineers: <a href=\"https://www.braingineers.com\">braingineers.com</a></li></ul><div>Het&nbsp;</div><div><strong>Digital Analytics Congres</strong> 2019 vond plaats op 8 oktober 2019 in de Jaarbeurs in Utrecht en wij deden live verslag vanaf de conferentie. Meer over het congres kun je vinden op <a href=\"https://www.digitalanalyticscongres.nl/\">https://www.digitalanalyticscongres.nl/</a>.<br><br>DAC19 werd georganiseerd door het Expertise Center voor Marketing Insights, Onderzoek en Analytics beter bekend als <strong>MOA</strong>. Meer daarover kun je terugvinden op <a href=\"https://www.moaweb.nl/\">https://www.moaweb.nl/</a>.</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/1095f554\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/1095f554/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "keywords_raw": "podcast, ecommerce, conversion, usability, dac19, moa, livestream"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

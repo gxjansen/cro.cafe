@@ -1,15 +1,47 @@
 {
-  "id": "personalisatie-werk-van-grof-naar-fijn",
-  "title": "Personalisatie: werk van grof naar fijn",
-  "description": "We leren van Jaap (WiQhit) wat bij hun klanten goed (en minder goed) werkt wanneer ze aan de slag gaan met personaliseren.",
-  "date": "2025-01-10T20:38:14.578Z",
-  "duration": 0,
-  "audio_url": "https://chrt.fm/track/D992D/media.transistor.fm/f1a909f3/3d710b6c.mp3",
-  "transcript_url": "",
-  "show_notes": "<ul><li><a href=\"https://wiqhit.com/\" target=\"_blank\">WiQhit</a></li></ul>",
-  "guests": [],
-  "youtube_url": "",
-  "main_image": "personalisatie-werk-van-grof-naar-fijn.jpg",
-  "language": "nl",
-  "type": "podcast"
+  "id": "506923",
+  "type": "episode",
+  "attributes": {
+    "title": "Personalisatie: werk van grof naar fijn",
+    "number": 5,
+    "season": 3,
+    "status": "published",
+    "published_at": "2021-04-07T09:46:01.425Z",
+    "duration": 2481,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://nl.cro.cafe/podcast/personalisatie-werk-van-grof-naar-fijn",
+    "media_url": "https://media.transistor.fm/f1a909f3/3d710b6c.mp3",
+    "image_url": "https://img.transistor.fm/gjphs33HwWbEjgamtMW-hKAfX9L84uUch88nHz68bzc/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kYzc5/MTk4MzRlYjk4ZjE4/Yzc0ZDU0ODcwMDA1/OWMxMi5qcGc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "We leren van Jaap (WiQhit) wat bij hun klanten goed (en minder goed) werkt wanneer ze aan de slag gaan met personaliseren.",
+    "description": "\n\n<!-- GUESTS START -->\nGuest: Jaap van Baar\nURL: https://nl.cro.cafe/gast/jaap-van-baar\n<!-- GUESTS END -->\n",
+    "slug": "personalisatie-werk-van-grof-naar-fijn",
+    "created_at": "2021-04-02T13:16:55.638Z",
+    "updated_at": "2025-01-12T23:47:48.458Z",
+    "formatted_published_at": "April 7, 2021",
+    "duration_in_mmss": "41:21",
+    "share_url": "https://share.transistor.fm/s/f1a909f3",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "We leren van Jaap (WiQhit) wat bij hun klanten goed (en minder goed) werkt wanneer ze aan de slag gaan met personaliseren.",
+    "formatted_description": "\n\n<!-- GUESTS START -->\nGuest: Jaap van Baar\nURL: https://nl.cro.cafe/gast/jaap-van-baar\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/f1a909f3\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/f1a909f3/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
 }

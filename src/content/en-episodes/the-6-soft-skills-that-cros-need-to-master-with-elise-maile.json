@@ -1,26 +1,47 @@
 {
-  "id": "the-6-soft-skills-that-cros-need-to-master-with-elise-maile",
-  "title": "The 6 soft skills that CROs need to master, with Elise Maile",
-  "description": "\n        Partners:Convert: convert.com/featuresOnline Dialogue: onlinedialogue.nlSiteSpect: sitespect.comContentsquare: contentsquare.comOnline Invloed: onlineinvloed.nl\n      ",
-  "date": "2020-09-20T22:00:00.000Z",
-  "duration": 3032,
-  "audio_url": "https://media.transistor.fm/8cafb1dd/88328bc0.mp3",
-  "transcript_url": "",
-  "show_notes": "",
-  "guests": [
-    {
-      "id": "elise-maile",
-      "name": "Elise Maile",
-      "role": "Senior UX and CRO",
-      "bio": "",
-      "image_url": "elise-maile.jpeg",
-      "social_links": [],
-      "language": "en",
-      "type": "guest"
+  "id": "354318",
+  "type": "episode",
+  "attributes": {
+    "title": "The 6 soft skills that CROs need to master, with Elise Maile",
+    "number": 22,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-09-20T22:00:00.000Z",
+    "duration": 3032,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://www.cro.cafe/podcast/the-6-soft-skills-that-cros-need-to-master",
+    "media_url": "https://media.transistor.fm/8cafb1dd/88328bc0.mp3",
+    "image_url": "https://img.transistor.fm/8gj0vLuKSiNJfy3jVBcvX6JPptLGQ7OGQQJ6DD5TWJQ/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lODA1/N2VmOGI5ZjNlNzBm/OWRhNjUzZDFmNmI3/Njk1OS5qcGVn.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "Learn the 6 soft skills you need to have or develop as a CRO specialist: listen, communicate, organize, be flexible and curious and have integrity.\r\n\r\nPodcast Partners: Convert.com, OnlineDialogue.com, Sitespect.com, Contentsquare.com and OnlineInfluence.com",
+    "description": "<div><strong>Partners:</strong></div><ul><li>Convert: <a href=\"https://www.convert.com/features?utm_source=crocafe&amp;utm_medium=shownoteslink\">convert.com/features</a></li><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl/?utm_source=crocafe&amp;utm_medium=shownoteslink\">onlinedialogue.nl</a></li><li>SiteSpect: <a href=\"https://www.sitespect.com/?utm_source=crocafe&amp;utm_medium=shownoteslink\">sitespect.com</a></li><li>Contentsquare: <a href=\"https://contentsquare.com/?utm_source=crocafe&amp;utm_medium=shownoteslink\">contentsquare.com</a></li><li>Online Invloed: <a href=\"https://onlineinvloed.nl/?utm_source=crocafe&amp;utm_medium=shownoteslink\">onlineinvloed.nl</a></li></ul><div>&nbsp;Guest: Elise Maile URL: https://www.cro.cafe/guest/elise-maile&nbsp;</div>",
+    "slug": "the-6-soft-skills-that-cros-need-to-master",
+    "created_at": "2020-09-20T07:12:49.756Z",
+    "updated_at": "2025-01-13T15:22:44.386Z",
+    "formatted_published_at": "September 20, 2020",
+    "duration_in_mmss": "50:32",
+    "share_url": "https://share.transistor.fm/s/8cafb1dd",
+    "transcript_url": "https://share.transistor.fm/s/8cafb1dd/transcript",
+    "transcripts": [],
+    "formatted_summary": "Learn the 6 soft skills you need to have or develop as a CRO specialist: listen, communicate, organize, be flexible and curious and have integrity.\r\n\r\nPodcast Partners: Convert.com, OnlineDialogue.com, Sitespect.com, Contentsquare.com and OnlineInfluence.com",
+    "formatted_description": "<div><strong>Partners:</strong></div><ul><li>Convert: <a href=\"https://www.convert.com/features?utm_source=crocafe&amp;utm_medium=shownoteslink\">convert.com/features</a></li><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl/?utm_source=crocafe&amp;utm_medium=shownoteslink\">onlinedialogue.nl</a></li><li>SiteSpect: <a href=\"https://www.sitespect.com/?utm_source=crocafe&amp;utm_medium=shownoteslink\">sitespect.com</a></li><li>Contentsquare: <a href=\"https://contentsquare.com/?utm_source=crocafe&amp;utm_medium=shownoteslink\">contentsquare.com</a></li><li>Online Invloed: <a href=\"https://onlineinvloed.nl/?utm_source=crocafe&amp;utm_medium=shownoteslink\">onlineinvloed.nl</a></li></ul><div>&nbsp;Guest: Elise Maile URL: https://www.cro.cafe/guest/elise-maile&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/8cafb1dd\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/8cafb1dd/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
     }
-  ],
-  "youtube_url": "",
-  "main_image": "",
-  "language": "en",
-  "type": "podcast"
+  }
 }

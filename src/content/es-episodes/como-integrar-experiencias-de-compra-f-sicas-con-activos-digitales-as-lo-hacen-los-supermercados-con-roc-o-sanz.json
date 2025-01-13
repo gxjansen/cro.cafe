@@ -1,0 +1,47 @@
+{
+  "id": "479270",
+  "type": "episode",
+  "attributes": {
+    "title": "Como integrar experiencias de compra físicas con activos digitales. Así lo hacen los supermercados, con Rocío Sanz",
+    "number": 5,
+    "season": 1,
+    "status": "published",
+    "published_at": "2021-03-02T23:00:00.000Z",
+    "duration": 3927,
+    "explicit": false,
+    "keywords": [
+      ""
+    ],
+    "alternate_url": "https://es.cro.cafe/podcast/como-integrar-experiencias-de-compra-fisicas-con-activos-digitales-supermercados",
+    "media_url": "https://media.transistor.fm/164b6dc4/e16fab01.mp3",
+    "image_url": "https://img.transistor.fm/i5d4uzG3kxnyrAwAUOs-jJVnxDmFkCDIxxWqLIlw4wE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82Mzhm/NjhhNGRkZTIzYzBh/YTc3ZDU4OTY1OWVi/NDk4OS5qcGVn.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "Hablamos con Rocío Sanz sobre cómo medir y optimizar la experiencia de compra, off y online, de un supermercado, y sobre cómo se emplean los canales digitales en este modelo de negocio, cómo retroalimentan al canal físico y viceversa. Hay un cliente y varios canales para atenderle. En esta charla aprendemos como se integran y como trabajan juntos para optimizar resultados de negocio.",
+    "description": "Hablamos con Rocío Sanz sobre cómo medir y optimizar la experiencia de compra, off y online, de un supermercado, y sobre cómo se emplean los canales digitales en este modelo de negocio, cómo retroalimentan al canal físico y viceversa. Hay un cliente y varios canales para atenderle. En esta charla aprendemos como se integran y como trabajan juntos para optimizar resultados de negocio.\n\n\n\n<!-- GUESTS START -->\nGuest: Rocío Sanz\nURL: https://es.cro.cafe/invitados/rocio-sanz\n<!-- GUESTS END -->\n",
+    "slug": "como-integrar-experiencias-de-compra-fisicas-con-activos-digitales-supermercados-con-rocio-sanz",
+    "created_at": "2021-03-02T19:42:40.936Z",
+    "updated_at": "2025-01-13T11:32:37.328Z",
+    "formatted_published_at": "March 2, 2021",
+    "duration_in_mmss": "65:27",
+    "share_url": "https://share.transistor.fm/s/164b6dc4",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Hablamos con Rocío Sanz sobre cómo medir y optimizar la experiencia de compra, off y online, de un supermercado, y sobre cómo se emplean los canales digitales en este modelo de negocio, cómo retroalimentan al canal físico y viceversa. Hay un cliente y varios canales para atenderle. En esta charla aprendemos como se integran y como trabajan juntos para optimizar resultados de negocio.",
+    "formatted_description": "Hablamos con Rocío Sanz sobre cómo medir y optimizar la experiencia de compra, off y online, de un supermercado, y sobre cómo se emplean los canales digitales en este modelo de negocio, cómo retroalimentan al canal físico y viceversa. Hay un cliente y varios canales para atenderle. En esta charla aprendemos como se integran y como trabajan juntos para optimizar resultados de negocio.\n\n\n\n<!-- GUESTS START -->\nGuest: Rocío Sanz\nURL: https://es.cro.cafe/invitados/rocio-sanz\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/164b6dc4\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/164b6dc4/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": ""
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16111",
+        "type": "show"
+      }
+    }
+  }
+}

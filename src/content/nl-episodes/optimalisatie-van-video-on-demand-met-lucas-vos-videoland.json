@@ -1,0 +1,52 @@
+{
+  "id": "397728",
+  "type": "episode",
+  "attributes": {
+    "title": "Optimalisatie van video-on-demand, met Lucas Vos (Videoland)",
+    "number": 5,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-02-09T23:00:00.000Z",
+    "duration": 3484,
+    "explicit": false,
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
+    "alternate_url": "https://nl.cro.cafe/podcast/optimalisatie-van-video-on-demand",
+    "media_url": "https://media.transistor.fm/1f06801f/6a3acdc1.mp3",
+    "image_url": "https://img.transistor.fm/WLT-j_KhNquD1NSERi52DK15hkgsR3oGBt6p_4Hlvvw/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9hNTBk/Mzg1NTNiMWUyNmIw/NzgwYTZhOTNjMzdh/OGIyNC5qcGVn.webp",
+    "video_url": "",
+    "author": "Guido X Jansen",
+    "summary": "Samen met Lucas Vos bespreek ik de mogelijkheden en uitdagingen van het optimaliseren van een video-on-demand dienst: Videoland!",
+    "description": "<div>Guest: Lucas Vos URL: https://nl.cro.cafe/gast/lucas-vos&nbsp;</div>",
+    "slug": "nl-optimalisatie-van-video-on-demand-met-lucas-vos-videoland",
+    "created_at": "2020-11-10T20:46:15.388Z",
+    "updated_at": "2025-01-13T15:45:34.608Z",
+    "formatted_published_at": "February 9, 2020",
+    "duration_in_mmss": "58:04",
+    "share_url": "https://share.transistor.fm/s/1f06801f",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Samen met Lucas Vos bespreek ik de mogelijkheden en uitdagingen van het optimaliseren van een video-on-demand dienst: Videoland!",
+    "formatted_description": "<div>Guest: Lucas Vos URL: https://nl.cro.cafe/gast/lucas-vos&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/1f06801f\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/1f06801f/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

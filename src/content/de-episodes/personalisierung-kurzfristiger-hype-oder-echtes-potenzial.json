@@ -1,15 +1,51 @@
 {
-  "id": "personalisierung-kurzfristiger-hype-oder-echtes-potenzial",
-  "title": "Personalisierung: Kurzfristiger Hype oder echtes Potenzial?",
-  "description": "In dieser Folge diskutieren wir mit Timo über die Relevanz von Personalisierung im E-Commerce und was ihr für eine erfolgreiche Personalisierung benötigt.",
-  "date": "2025-01-10T20:38:14.600Z",
-  "duration": 0,
-  "audio_url": "https://cdn.transistor.fm/file/transistor/m/shows/28592/ddf1cbaf886600b817fe8c6af6971d25.mp3",
-  "transcript_url": "",
-  "show_notes": "<p id=\"\">Laut einer <a href=\"https://www.accenture.com/us-en/services/interactive/propelling-growth-personalization\" id=\"\">Studie von Accenture</a> sind 91 % der Verbraucher eher bereit bei Shops einzukaufen, die individuelle und personalisierte Angebote bieten. Dies zeigt, dass Online-Käufer heutzutage ein personalisiertes Einkaufserlebnis erwarten.</p><p id=\"\">In dieser Folge diskutieren wir mit Timo von Focht,&nbsp;DACH Country Lead bei Mixpanel,&nbsp;über die Relevanz von Personalisierung im E-Commerce und was ihr für eine erfolgreiche Personalisierung benötigt. <br></p><p id=\"\">Viel Spaß beim Hören! </p><p id=\"\">‍</p>",
-  "guests": [],
-  "youtube_url": "",
-  "main_image": "personalisierung-kurzfristiger-hype-oder-echtes-potenzial.png",
-  "language": "de",
-  "type": "podcast"
+  "id": "960122",
+  "type": "episode",
+  "attributes": {
+    "title": "Personalisierung: Kurzfristiger Hype oder echtes Potenzial? ",
+    "number": 5,
+    "season": 1,
+    "status": "published",
+    "published_at": "2022-07-26T07:00:00.000Z",
+    "duration": 2314,
+    "explicit": false,
+    "keywords": [
+      "podcast",
+      "CRO",
+      "Conversion Rate",
+      "Personalisierung",
+      "E-Commerce"
+    ],
+    "alternate_url": "https://de.cro.cafe/podcast/personalisierung-kurzfristiger-hype-oder-echtes-potenzial",
+    "media_url": "https://media.transistor.fm/32f86e5c/59e02fd3.mp3",
+    "image_url": "https://img.transistor.fm/AYexZCVzno7FRZcSW6JzRfSvEaiEv1w9IUlztjheOhc/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80OWVj/NzVjOTVlOTU3YmVl/MzlkYWRkNzU1ODFm/YWIyOS5wbmc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "In dieser Folge diskutieren wir mit Timo von Focht, DACH Country Lead bei Mixpanel, über die Relevanz von Personalisierung im E-Commerce und was ihr für eine erfolgreiche Personalisierung benötigt. ",
+    "description": "Laut einer <a href=\"https://www.accenture.com/us-en/services/interactive/propelling-growth-personalization\">Studie von Accenture</a> sind 91 % der Verbraucher eher bereit bei Shops einzukaufen, die individuelle und personalisierte Angebote bieten. Dies zeigt, dass Online-Käufer heutzutage ein personalisiertes Einkaufserlebnis erwarten.In dieser Folge diskutieren wir mit <a href=\"https://www.linkedin.com/in/tvonfocht/\">Timo von Focht</a>, DACH Country Lead bei Mixpanel, über die Relevanz von Personalisierung im E-Commerce und was ihr für eine erfolgreiche Personalisierung benötigt.Viel Spaß beim Hören!\n\n\n\n<!-- GUESTS START -->\nGuest: Timo von Focht\nURL: https://de.cro.cafe/guest/timo-von-focht\n<!-- GUESTS END -->\n",
+    "slug": "personalisierung-kurzfristiger-hype-oder-echtes-potenzial",
+    "created_at": "2022-07-25T16:02:15.158Z",
+    "updated_at": "2025-01-13T00:28:55.842Z",
+    "formatted_published_at": "July 26, 2022",
+    "duration_in_mmss": "38:34",
+    "share_url": "https://share.transistor.fm/s/32f86e5c",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "In dieser Folge diskutieren wir mit Timo von Focht, DACH Country Lead bei Mixpanel, über die Relevanz von Personalisierung im E-Commerce und was ihr für eine erfolgreiche Personalisierung benötigt. ",
+    "formatted_description": "Laut einer <a href=\"https://www.accenture.com/us-en/services/interactive/propelling-growth-personalization\">Studie von Accenture</a> sind 91 % der Verbraucher eher bereit bei Shops einzukaufen, die individuelle und personalisierte Angebote bieten. Dies zeigt, dass Online-Käufer heutzutage ein personalisiertes Einkaufserlebnis erwarten.In dieser Folge diskutieren wir mit <a href=\"https://www.linkedin.com/in/tvonfocht/\">Timo von Focht</a>, DACH Country Lead bei Mixpanel, über die Relevanz von Personalisierung im E-Commerce und was ihr für eine erfolgreiche Personalisierung benötigt.Viel Spaß beim Hören!\n\n\n\n<!-- GUESTS START -->\nGuest: Timo von Focht\nURL: https://de.cro.cafe/guest/timo-von-focht\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/32f86e5c\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/32f86e5c/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": "podcast, CRO, Conversion Rate, Personalisierung, E-Commerce "
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "28592",
+        "type": "show"
+      }
+    }
+  }
 }

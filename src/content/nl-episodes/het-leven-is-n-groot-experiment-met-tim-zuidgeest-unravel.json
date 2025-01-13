@@ -1,0 +1,52 @@
+{
+  "id": "397659",
+  "type": "episode",
+  "attributes": {
+    "title": "Het leven is één groot experiment!, met Tim Zuidgeest (Unravel)",
+    "number": 18,
+    "season": 1,
+    "status": "published",
+    "published_at": "2019-06-02T23:00:00.000Z",
+    "duration": 3519,
+    "explicit": false,
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
+    "alternate_url": "https://nl.cro.cafe/podcast/het-leven-is-een-groot-experiment",
+    "media_url": "https://media.transistor.fm/ad420e3b/a10879d1.mp3",
+    "image_url": "https://img.transistor.fm/-zjE_1LO8blV5oDsQfKKJz93IlUKVrxEf_pasZgH0sg/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8yODRi/MjNiMDJjM2JmOTlh/ZGU1OTE1MDQyNjVh/YjQxOC5qcGVn.webp",
+    "video_url": null,
+    "author": "Guido Jansen",
+    "summary": "Vandaag praat ik met Tim Zuidgeest, mede-oprichter en mede-eigenaar bij Unravel Neuromarketing research (wat je wellicht nog kent onder de oude naam ST&T Research). We gaan het NIET hebben over wat we zakelijk allemaal voor toffe dingen doen maar maken we het even heel persoonlijk: Tim is namelijk ook met zijn eigen privéleven flink aan het experimenteren geslagen. En jawel, de N in dit onderzoek is dus een keiharde 1, maar ik weet zeker dat je hier wel wat leuke inspiratie uit gaat halen hoe je proefondervindelijk ook je eigen offline leven een stukje beter kan maken...\n\nPartners:\n> Effective Experiments: www.effectiveexperiments.com\n> Convert: www.convert.com/features\n> Buyerminds: www.buyerminds.com\n> Online Dialogue: www.onlinedialogue.nl\n\nAanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/het-leven-is-een-groot-experiment",
+    "description": "Vandaag praat ik met Tim Zuidgeest, mede-oprichter en mede-eigenaar bij Unravel Neuromarketing research (wat je wellicht nog kent onder de oude naam ST&T Research). We gaan het NIET hebben over wat we zakelijk allemaal voor toffe dingen doen maar maken we het even heel persoonlijk: Tim is namelijk ook met zijn eigen privéleven flink aan het experimenteren geslagen. En jawel, de N in dit onderzoek is dus een keiharde 1, maar ik weet zeker dat je hier wel wat leuke inspiratie uit gaat halen hoe je proefondervindelijk ook je eigen offline leven een stukje beter kan maken... Partners: > Effective Experiments: www.effectiveexperiments.com > Convert: www.convert.com/features > Buyerminds: www.buyerminds.com > Online Dialogue: www.onlinedialogue.nl Aanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/het-leven-is-een-groot-experiment\n\n\n\n<!-- GUESTS START -->\nGuest: Tim Zuidgeest\nURL: https://nl.cro.cafe/gast/tim-zuidgeest\n<!-- GUESTS END -->\n",
+    "slug": "het-leven-is-een-groot-experiment-met-tim-zuidgeest-unravel",
+    "created_at": "2020-11-10T20:43:45.215Z",
+    "updated_at": "2025-01-13T10:24:55.420Z",
+    "formatted_published_at": "June 2, 2019",
+    "duration_in_mmss": "58:39",
+    "share_url": "https://share.transistor.fm/s/ad420e3b",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Vandaag praat ik met Tim Zuidgeest, mede-oprichter en mede-eigenaar bij Unravel Neuromarketing research (wat je wellicht nog kent onder de oude naam ST&T Research). We gaan het NIET hebben over wat we zakelijk allemaal voor toffe dingen doen maar maken we het even heel persoonlijk: Tim is namelijk ook met zijn eigen privéleven flink aan het experimenteren geslagen. En jawel, de N in dit onderzoek is dus een keiharde 1, maar ik weet zeker dat je hier wel wat leuke inspiratie uit gaat halen hoe je proefondervindelijk ook je eigen offline leven een stukje beter kan maken...\n\nPartners:\n> Effective Experiments: www.effectiveexperiments.com\n> Convert: www.convert.com/features\n> Buyerminds: www.buyerminds.com\n> Online Dialogue: www.onlinedialogue.nl\n\nAanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/het-leven-is-een-groot-experiment",
+    "formatted_description": "Vandaag praat ik met Tim Zuidgeest, mede-oprichter en mede-eigenaar bij Unravel Neuromarketing research (wat je wellicht nog kent onder de oude naam ST&T Research). We gaan het NIET hebben over wat we zakelijk allemaal voor toffe dingen doen maar maken we het even heel persoonlijk: Tim is namelijk ook met zijn eigen privéleven flink aan het experimenteren geslagen. En jawel, de N in dit onderzoek is dus een keiharde 1, maar ik weet zeker dat je hier wel wat leuke inspiratie uit gaat halen hoe je proefondervindelijk ook je eigen offline leven een stukje beter kan maken... Partners: > Effective Experiments: www.effectiveexperiments.com > Convert: www.convert.com/features > Buyerminds: www.buyerminds.com > Online Dialogue: www.onlinedialogue.nl Aanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/het-leven-is-een-groot-experiment\n\n\n\n<!-- GUESTS START -->\nGuest: Tim Zuidgeest\nURL: https://nl.cro.cafe/gast/tim-zuidgeest\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/ad420e3b\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/ad420e3b/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "397636",
+  "type": "episode",
+  "attributes": {
+    "title": "Tele2: Resultaten van 3 experimenten, met Rick Weij",
+    "number": 7,
+    "season": 1,
+    "status": "published",
+    "published_at": "2019-02-10T19:58:00.000Z",
+    "duration": 1710,
+    "explicit": false,
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
+    "alternate_url": "https://nl.cro.cafe/podcast/tele2-resultaten-van-3-experimenten",
+    "media_url": "https://media.transistor.fm/56005a02/3aee1d4f.mp3",
+    "image_url": "https://img.transistor.fm/UQDxgq12GvHz0FBZq_HOqcquKYsGwXIn-f07nRmb0Pk/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8zYTUz/ZmU4ODllNzY1MzRi/ODA0Yzc5MWQ2Yjk0/MzhiZi5qcGVn.webp",
+    "video_url": null,
+    "author": "Guido Jansen",
+    "summary": "In deze aflevering vervolg ik mijn gesprek met Rick Weij van Tele2 en bespreken we 3 experimenten die Rick onlangs heeft uitgevoerd.\n\nPartners:\n> Effective Experiments: www.effectiveexperiments.com\n> Convert: www.convert.com/features\n\nAanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/tele2-resultaten-van-3-experimenten",
+    "description": "In deze aflevering vervolg ik mijn gesprek met Rick Weij van Tele2 en bespreken we 3 experimenten die Rick onlangs heeft uitgevoerd. Partners: > Effective Experiments: www.effectiveexperiments.com > Convert: www.convert.com/features Aanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/tele2-resultaten-van-3-experimenten\n\n\n\n<!-- GUESTS START -->\nGuest: Rick Weij\nURL: https://nl.cro.cafe/gast/rick-weij\n<!-- GUESTS END -->\n",
+    "slug": "tele2-resultaten-van-3-experimenten-met-rick-weij",
+    "created_at": "2020-11-10T20:42:50.371Z",
+    "updated_at": "2025-01-13T10:22:56.553Z",
+    "formatted_published_at": "February 10, 2019",
+    "duration_in_mmss": "28:30",
+    "share_url": "https://share.transistor.fm/s/56005a02",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "In deze aflevering vervolg ik mijn gesprek met Rick Weij van Tele2 en bespreken we 3 experimenten die Rick onlangs heeft uitgevoerd.\n\nPartners:\n> Effective Experiments: www.effectiveexperiments.com\n> Convert: www.convert.com/features\n\nAanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/tele2-resultaten-van-3-experimenten",
+    "formatted_description": "In deze aflevering vervolg ik mijn gesprek met Rick Weij van Tele2 en bespreken we 3 experimenten die Rick onlangs heeft uitgevoerd. Partners: > Effective Experiments: www.effectiveexperiments.com > Convert: www.convert.com/features Aanvullende info over deze aflevering kun je vinden op https://www.cro.cafe/podcast/tele2-resultaten-van-3-experimenten\n\n\n\n<!-- GUESTS START -->\nGuest: Rick Weij\nURL: https://nl.cro.cafe/gast/rick-weij\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/56005a02\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/56005a02/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}
