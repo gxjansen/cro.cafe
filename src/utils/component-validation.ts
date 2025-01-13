@@ -6,19 +6,20 @@ export const LanguageSchema = z.enum(['en', 'de', 'es', 'nl']);
 // Common props validation
 export const MetadataSchema = z.object({
   title: z.string(),
-  description: z.string(),
-  image: z.string().optional(),
+  description: z.string().nullable(),
+  image: z.string().nullable().optional(),
   canonicalUrl: z.string().optional(),
   type: z.enum(['website', 'article']).optional(),
   publishedTime: z.string().optional(),
   modifiedTime: z.string().optional(),
   author: z.string().optional(),
   tags: z.array(z.string()).optional(),
+  alternateLanguages: z.record(z.string()).optional(),
 });
 
 // Layout component props
 export const LayoutPropsSchema = z.object({
-  metadata: MetadataSchema.optional(),
+  metadata: MetadataSchema,
   availableLanguages: z.array(LanguageSchema),
   currentLang: LanguageSchema,
 });
@@ -41,54 +42,59 @@ export const EpisodePlayerPropsSchema = z.object({
   description: z.string().optional(),
 });
 
-export const EpisodeGridPropsSchema = z.object({
-  language: LanguageSchema,
-  limit: z.number().optional(),
-  featured: z.boolean().optional(),
-  showGuests: z.boolean().optional(),
-  columns: z.enum(['2', '3', '4']).optional(),
-});
-
-// Episode data validation
+// Episode data validation matching Transistor API structure
 export const EpisodeSchema = z.object({
   id: z.string(),
-  title: z.string(),
-  description: z.string(),
-  date: z.string(),
-  audio_url: z.string(),
-  duration: z.number().optional().default(0),
-  language: LanguageSchema.optional().default('en'),
-  guests: z
-    .array(
-      z.object({
+  type: z.literal('episode'),
+  attributes: z.object({
+    title: z.string(),
+    summary: z.string().nullable(),
+    description: z.string(),
+    published_at: z.string(),
+    media_url: z.string(),
+    duration: z.number(),
+    duration_in_mmss: z.string(),
+    formatted_published_at: z.string(),
+    formatted_description: z.string(),
+    image_url: z.string().nullable().optional(),
+    video_url: z.string().nullable().optional(),
+    transcript_url: z.string().nullable().optional(),
+    share_url: z.string(),
+    embed_html: z.string(),
+    embed_html_dark: z.string(),
+    slug: z.string(),
+  }),
+  relationships: z.object({
+    show: z.object({
+      data: z.object({
         id: z.string(),
-        name: z.string(),
-        role: z.string(),
-        bio: z.string(),
-        image_url: z.string(),
-        social_links: z.array(z.string()),
-        language: LanguageSchema,
         type: z.string(),
-      })
-    )
-    .optional()
-    .default([]),
-  tags: z.array(z.string()).optional().default([]),
-  type: z.string().optional().default('episode'),
-  main_image: z.string().optional(),
-  transcript_url: z.string().optional(),
-  youtube_url: z.string().optional(),
-  show_notes: z.string().optional(),
+      }),
+    }),
+  }),
+});
+
+export const EpisodeGridPropsSchema = z.object({
+  episodes: z.array(
+    z.object({
+      data: EpisodeSchema,
+    })
+  ),
+  limit: z.number().optional(),
+  featured: z.boolean().optional(),
+  columns: z.enum(['2', '3', '4']).optional(),
+  loading: z.boolean().optional(),
 });
 
 export const EpisodeCardPropsSchema = z.object({
   episode: EpisodeSchema,
-  showGuests: z.boolean().optional(),
+  loading: z.boolean().optional(),
 });
 
 export const SingleEpisodePropsSchema = z.object({
   episode: EpisodeSchema,
   availableLanguages: z.array(LanguageSchema).min(1),
+  loading: z.boolean().optional(),
 });
 
 // Structured data props

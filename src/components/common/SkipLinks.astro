@@ -1,0 +1,32 @@
+---
+// Skip links for keyboard navigation
+---
+
+<div class="skip-links">
+  <a href="#main-content" data-skip-link class="skip-link"> Skip to main content </a>
+  <a href="#episode-grid" data-skip-link class="skip-link"> Skip to episode list </a>
+</div>
+
+<style>
+  .skip-links {
+    @apply fixed top-0 left-0 z-50;
+  }
+
+  .skip-link {
+    @apply absolute top-0 left-0 p-3 bg-blue-600 text-white
+         -translate-y-full focus:translate-y-0 transition-transform
+         outline-none focus:ring-2 ring-white ring-offset-2 ring-offset-blue-600;
+  }
+
+  /* Ensure skip links are visible when focused */
+  .skip-link:focus {
+    @apply block;
+  }
+</style>
+
+<script>
+  import { setupSkipLinks } from '~/utils/accessibility';
+
+  // Initialize skip links
+  setupSkipLinks();
+</script>

@@ -105,10 +105,10 @@ const alternateUrls = {
 
 ```typescript
 // src/utils/language.ts
-export function getBrowserLanguage(): "en" | "de" | "es" | "nl" {
-  if (typeof navigator === "undefined") return "en";
+export function getBrowserLanguage(): 'en' | 'de' | 'es' | 'nl' {
+  if (typeof navigator === 'undefined') return 'en';
 
-  const browserLang = navigator.language.toLowerCase().split("-")[0];
+  const browserLang = navigator.language.toLowerCase().split('-')[0];
 
   const supportedLanguages = {
     en: true,
@@ -117,14 +117,12 @@ export function getBrowserLanguage(): "en" | "de" | "es" | "nl" {
     nl: true,
   };
 
-  return supportedLanguages[browserLang] ? browserLang : "en";
+  return supportedLanguages[browserLang] ? browserLang : 'en';
 }
 
-export function getLanguageFromURL(
-  pathname: string,
-): "en" | "de" | "es" | "nl" {
+export function getLanguageFromURL(pathname: string): 'en' | 'de' | 'es' | 'nl' {
   const langMatch = pathname.match(/^\/(en|de|es|nl)\//);
-  return langMatch ? (langMatch[1] as "en" | "de" | "es" | "nl") : "en";
+  return langMatch ? (langMatch[1] as 'en' | 'de' | 'es' | 'nl') : 'en';
 }
 ```
 
@@ -132,18 +130,15 @@ export function getLanguageFromURL(
 
 ```typescript
 // src/middleware.ts
-import { defineMiddleware } from "astro:middleware";
-import { getBrowserLanguage, getLanguageFromURL } from "./utils/language";
+import { defineMiddleware } from 'astro:middleware';
+import { getBrowserLanguage, getLanguageFromURL } from './utils/language';
 
 export const onRequest = defineMiddleware(async (context, next) => {
   const { request } = context;
   const url = new URL(request.url);
 
   // Skip redirect for assets and API routes
-  if (
-    url.pathname.match(/\.(jpg|png|gif|svg|css|js|ico)$/) ||
-    url.pathname.startsWith("/api/")
-  ) {
+  if (url.pathname.match(/\.(jpg|png|gif|svg|css|js|ico)$/) || url.pathname.startsWith('/api/')) {
     return next();
   }
 
@@ -156,9 +151,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
   const preferredLang = getBrowserLanguage();
 
   // Redirect to language path
-  return Response.redirect(
-    new URL(`/${preferredLang}${url.pathname}`, url.origin),
-  );
+  return Response.redirect(new URL(`/${preferredLang}${url.pathname}`, url.origin));
 });
 ```
 
@@ -220,27 +213,27 @@ const episodeSchema = {
 
 ```typescript
 // astro.config.ts
-import sitemap from "@astrojs/sitemap";
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: "https://www.cro.cafe",
+  site: 'https://www.cro.cafe',
   integrations: [
     sitemap({
       i18n: {
-        defaultLocale: "en",
+        defaultLocale: 'en',
         locales: {
-          en: "en-US",
-          de: "de-DE",
-          es: "es-ES",
-          nl: "nl-NL",
+          en: 'en-US',
+          de: 'de-DE',
+          es: 'es-ES',
+          nl: 'nl-NL',
         },
       },
-      filter: (page) => !page.includes("/admin"),
+      filter: (page) => !page.includes('/admin'),
       customPages: [
-        "https://www.cro.cafe/en",
-        "https://www.cro.cafe/de",
-        "https://www.cro.cafe/es",
-        "https://www.cro.cafe/nl",
+        'https://www.cro.cafe/en',
+        'https://www.cro.cafe/de',
+        'https://www.cro.cafe/es',
+        'https://www.cro.cafe/nl',
       ],
     }),
   ],

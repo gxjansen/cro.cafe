@@ -1,0 +1,12 @@
+---
+import { getLanguageFromURL } from '~/utils/language';
+
+// Get current URL
+const url = new URL(Astro.request.url);
+
+// Get language from URL or default to English
+const lang = getLanguageFromURL(url.pathname) || 'en';
+
+// Redirect to language-specific episodes page
+return Astro.redirect(`/${lang}/episodes`);
+---

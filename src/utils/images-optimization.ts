@@ -1,5 +1,5 @@
 import { getImage } from 'astro:assets';
-import { transformUrl, parseUrl } from 'unpic';
+import { Image } from '@unpic/astro';
 
 import type { ImageMetadata } from 'astro';
 import type { HTMLAttributes } from 'astro/types';
@@ -119,13 +119,13 @@ const getStyle = ({
   objectPosition = 'center',
   background,
 }: {
-  width?: number;
-  height?: number;
-  aspectRatio?: number;
-  objectFit?: string;
-  objectPosition?: string;
-  layout?: string;
-  background?: string;
+  width?: number | undefined;
+  height?: number | undefined;
+  aspectRatio?: number | undefined;
+  objectFit?: string | undefined;
+  objectPosition?: string | undefined;
+  layout?: string | undefined;
+  background?: string | undefined;
 }) => {
   const styleEntries: Array<[prop: string, value: string | undefined]> = [
     ['object-fit', objectFit],
@@ -133,7 +133,11 @@ const getStyle = ({
   ];
 
   // If background is a URL, set it to cover the image and not repeat
-  if (background?.startsWith('https:') || background?.startsWith('http:') || background?.startsWith('data:')) {
+  if (
+    background?.startsWith('https:') ||
+    background?.startsWith('http:') ||
+    background?.startsWith('data:')
+  ) {
     styleEntries.push(['background-image', `url(${background})`]);
     styleEntries.push(['background-size', 'cover']);
     styleEntries.push(['background-repeat', 'no-repeat']);
@@ -184,11 +188,16 @@ const getBreakpoints = ({
   breakpoints,
   layout,
 }: {
-  width?: number;
-  breakpoints?: number[];
+  width?: number | undefined;
+  breakpoints?: number[] | undefined;
   layout: Layout;
 }): number[] => {
-  if (layout === 'fullWidth' || layout === 'cover' || layout === 'responsive' || layout === 'contained') {
+  if (
+    layout === 'fullWidth' ||
+    layout === 'cover' ||
+    layout === 'responsive' ||
+    layout === 'contained'
+  ) {
     return breakpoints || config.deviceSizes;
   }
   if (!width) {
@@ -225,7 +234,12 @@ export const astroAsseetsOptimizer: ImagesOptimizer = async (
 
   return Promise.all(
     breakpoints.map(async (w: number) => {
-      const result = await getImage({ src: image, width: w, inferSize: true, ...(format ? { format: format } : {}) });
+      const result = await getImage({
+        src: image,
+        width: w,
+        inferSize: true,
+        ...(format ? { format: format } : {}),
+      });
 
       return {
         src: result?.src,
@@ -236,40 +250,7 @@ export const astroAsseetsOptimizer: ImagesOptimizer = async (
   );
 };
 
-export const isUnpicCompatible = (image: string) => {
-  return typeof parseUrl(image) !== 'undefined';
-};
-
-/* ** */
-export const unpicOptimizer: ImagesOptimizer = async (image, breakpoints, width, height, format = undefined) => {
-  if (!image || typeof image !== 'string') {
-    return [];
-  }
-
-  const urlParsed = parseUrl(image);
-  if (!urlParsed) {
-    return [];
-  }
-
-  return Promise.all(
-    breakpoints.map(async (w: number) => {
-      const _height = width && height ? computeHeight(w, width / height) : height;
-      const url =
-        transformUrl({
-          url: image,
-          width: w,
-          height: _height,
-          cdn: urlParsed.cdn,
-          ...(format ? { format: format } : {}),
-        }) || image;
-      return {
-        src: String(url),
-        width: w,
-        height: _height,
-      };
-    })
-  );
-};
+export const UnpicImage = Image;
 
 /* ** */
 export async function getImagesOptimized(
@@ -291,7 +272,8 @@ export async function getImagesOptimized(
 ): Promise<{ src: string; attributes: HTMLAttributes<'img'> }> {
   if (typeof image !== 'string') {
     width ||= Number(image.width) || undefined;
-    height ||= typeof width === 'number' ? computeHeight(width, image.width / image.height) : undefined;
+    height ||=
+      typeof width === 'number' ? computeHeight(width, image.width / image.height) : undefined;
   }
 
   width = (width && Number(width)) || undefined;
@@ -327,7 +309,15 @@ export async function getImagesOptimized(
   let breakpoints = getBreakpoints({ width: width, breakpoints: widths, layout: layout });
   breakpoints = [...new Set(breakpoints)].sort((a, b) => a - b);
 
-  const srcset = (await transform(image, breakpoints, Number(width) || undefined, Number(height) || undefined, format))
+  const srcset = (
+    await transform(
+      image,
+      breakpoints,
+      Number(width) || undefined,
+      Number(height) || undefined,
+      format
+    )
+  )
     .map(({ src, width }) => `${src} ${width}w`)
     .join(', ');
 

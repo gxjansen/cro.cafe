@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '~/layouts/Layout.astro';
+import SingleEpisode from '~/components/episode/SingleEpisode.astro';
+import { getLanguageFromShowId } from '~/utils/permalinks';
+import type { Language } from '~/utils/language';
+
+export async function getStaticPaths() {
+  const allEpisodes = await Promise.all([
+    getCollection('en-episodes'),
+    getCollection('nl-episodes'),
+    getCollection('de-episodes'),
+    getCollection('es-episodes'),
+  ]).then(collections => collections.flat());
+
+  return allEpisodes.map(episode => {
+    const language = getLanguageFromShowId(episode.data.relationships.show.data.id);
+    return {
+      params: {
+        lang: language,
+        slug: episode.data.attributes.slug,
+      },
+      props: {
+        episode: episode.data,
+        availableLanguages: ['en', 'nl', 'de', 'es'] as const,
+      },
+    };
+  });
+}
+
+const { episode, availableLanguages } = Astro.props;
+const { lang } = Astro.params;
+
+// Metadata for the page
+const metadata = {
+  title: episode.attributes.title,
+  description: episode.attributes.summary || '',
+  image: episode.attributes.image_url || '/images/default.png',
+  type: 'article',
+  publishedTime: episode.attributes.published_at,
+  alternateLanguages: availableLanguages.reduce((acc, lang) => ({
+    ...acc,
+    [lang]: `/${lang}/podcast/${episode.attributes.slug}`
+  }), {})
+};
+
+// Cast language parameter to Language type
+const currentLang = lang as Language;
+---
+
+<Layout {metadata} {currentLang} {availableLanguages}>
+  <SingleEpisode {episode} {availableLanguages} />
+</Layout>

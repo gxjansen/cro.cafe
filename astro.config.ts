@@ -1,81 +1,68 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
-
 import { defineConfig } from 'astro/config';
-
-import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
-import partytown from '@astrojs/partytown';
+import sitemap from '@astrojs/sitemap';
+import mdx from '@astrojs/mdx';
+import react from '@astrojs/react';
 import icon from 'astro-icon';
-import compress from 'astro-compress';
-import type { AstroIntegration } from 'astro';
 
-import astrowind from './vendor/integration';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-const hasExternalScripts = false;
-const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroIntegration)[] = []) =>
-  hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
-
+// https://astro.build/config
 export default defineConfig({
-  output: 'static',
-
+  site: 'https://www.cro.cafe',
+  trailingSlash: 'never',
+  build: {
+    format: 'directory',
+  },
   integrations: [
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap(),
-    icon({
-      include: {
-        tabler: ['*'],
-        mdi: ['podcast', 'apple', 'spotify', 'google'],
-        'flat-color-icons': [
-          'template',
-          'gallery',
-          'approval',
-          'document',
-          'advertising',
-          'currency-exchange',
-          'voice-presentation',
-          'business-contact',
-          'database',
-        ],
-      },
-    }),
-
-    ...whenExternalScripts(() =>
-      partytown({
-        config: { forward: ['dataLayer.push'] },
-      })
-    ),
-
-    compress({
-      CSS: true,
-      HTML: {
-        'html-minifier-terser': {
-          removeAttributeQuotes: false,
+    sitemap({
+      i18n: {
+        defaultLocale: 'en',
+        locales: {
+          en: 'en',
+          nl: 'nl',
+          de: 'de',
+          es: 'es',
         },
       },
-      Image: false,
-      JavaScript: true,
-      SVG: false,
-      Logger: 1,
     }),
-
-    astrowind({
-      config: './src/config.yaml',
+    mdx(),
+    react({
+      include: ['**/react/*'],
+      experimentalReactChildren: true,
     }),
+    icon(),
   ],
-
+  output: 'server',
   image: {
-    domains: ['cdn.pixabay.com'],
+    service: {
+      entrypoint: 'astro/assets/services/sharp',
+    },
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'assets.transistor.fm',
+      },
+    ],
   },
-
+  markdown: {
+    shikiConfig: {
+      theme: 'github-dark',
+      wrap: true,
+    },
+    remarkPlugins: [],
+    rehypePlugins: [],
+    syntaxHighlight: 'shiki',
+  },
   vite: {
-    resolve: {
-      alias: {
-        '~': path.resolve(__dirname, './src'),
+    build: {
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'transistor-api': ['./src/utils/transistor-api.ts'],
+          },
+        },
       },
     },
   },

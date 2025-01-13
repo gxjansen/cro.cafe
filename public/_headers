@@ -1,2 +1,35 @@
-/_astro/*
-  Cache-Control: public, max-age=31536000, immutable
+# Cache static assets
+
+/images/\*
+Cache-Control: public, max-age=31536000, immutable
+
+# Cache fonts
+
+/fonts/\*
+Cache-Control: public, max-age=31536000, immutable
+
+# Cache JavaScript and CSS
+
+/_.js
+Cache-Control: public, max-age=31536000, immutable
+/_.css
+Cache-Control: public, max-age=31536000, immutable
+
+# Cache optimized images
+
+/\_astro/\*
+Cache-Control: public, max-age=31536000, immutable
+
+# Cache HTML pages for 10 minutes
+
+/\*
+Cache-Control: public, max-age=600, must-revalidate
+
+# Security headers
+
+/\*
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+Content-Security-Policy: default-src 'self' https://media.transistor.fm; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://share.transistor.fm; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; media-src 'self' https://media.transistor.fm; frame-src https://share.transistor.fm; connect-src 'self' https://media.transistor.fm;

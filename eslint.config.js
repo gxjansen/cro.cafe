@@ -28,6 +28,9 @@ export default [
         extraFileExtensions: ['.astro'],
       },
     },
+    rules: {
+      '@typescript-eslint/no-unused-vars': 'off',
+    },
   },
   {
     files: ['**/*.{js,jsx,astro}'],

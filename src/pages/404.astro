@@ -1,11 +1,32 @@
 ---
 import Layout from '~/layouts/Layout.astro';
-import { getHomePermalink } from '~/utils/permalinks';
+import { getTranslations } from '~/utils/translations';
 
-const title = `Error 404`;
+// Get language from URL or default to English
+const urlPath = Astro.url.pathname;
+const langMatch = urlPath.match(/^\/([a-z]{2})\//);
+const currentLang = (langMatch?.[1] as 'en' | 'nl' | 'de' | 'es') || 'en';
+
+// Get translations for the current language
+const t = getTranslations(currentLang);
+
+// Metadata for the page
+const metadata = {
+  title: `404 - ${t.title}`,
+  description: t.description,
+  type: 'website',
+  alternateLanguages: {
+    en: '/en',
+    nl: '/nl',
+    de: '/de',
+    es: '/es',
+  },
+};
+
+const availableLanguages = ['en', 'nl', 'de', 'es'] as const;
 ---
 
-<Layout metadata={{ title }}>
+<Layout metadata={metadata} currentLang={currentLang} availableLanguages={availableLanguages}>
   <section class="flex items-center h-full p-16">
     <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
       <div class="max-w-md text-center">
@@ -13,12 +34,28 @@ const title = `Error 404`;
           <span class="sr-only">Error</span>
           <span class="text-primary">404</span>
         </h2>
-        <p class="text-3xl font-semibold md:text-3xl">Sorry, we couldn't find this page.</p>
-        <p class="mt-4 mb-8 text-lg text-muted dark:text-slate-400">
-          But dont worry, you can find plenty of other things on our homepage.
+        <p class="text-3xl font-semibold md:text-3xl">{t.error404.title}</p>
+        <p class="mt-4 mb-8 text-lg text-gray-600 dark:text-slate-400">
+          {t.error404.description}
         </p>
-        <a rel="noopener noreferrer" href={getHomePermalink()} class="btn ml-4">Back to homepage</a>
+        <a
+          rel="noopener noreferrer"
+          href={`/${currentLang === 'en' ? '' : currentLang}`}
+          class="btn btn-primary"
+        >
+          {t.error404.backToHome}
+        </a>
       </div>
     </div>
   </section>
 </Layout>
+
+<style>
+.btn {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-lg text-base font-medium transition-colors duration-200;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800;
+}
+</style>

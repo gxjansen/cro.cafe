@@ -4,8 +4,9 @@ on:
   schedule:
     # Run every hour
     - cron: '0 * * * *'
-  # Allow manual trigger
-  workflow_dispatch:
+  workflow_dispatch:  # Allow manual trigger
+  repository_dispatch:
+    types: [transistor-webhook]  # Triggered by webhook
 
 jobs:
   sync:
@@ -13,6 +14,8 @@ jobs:
     
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -23,50 +26,20 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
-      - name: Run sync script
-        id: sync
-        continue-on-error: true
+      - name: Sync episodes
         env:
           TRANSISTOR_API_KEY: ${{ secrets.TRANSISTOR_API_KEY }}
         run: npm run sync-episodes
       
-      - name: Check sync status
-        if: steps.sync.outcome != 'success'
+      - name: Commit changes
         run: |
-          echo "::error::Episode sync failed"
-          exit 1
-      
-      - name: Check for changes
-        id: git-check
-        if: steps.sync.outcome == 'success'
-        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           git add src/content/*-episodes/
-          git status --porcelain
-          echo "changes=$(git status --porcelain | wc -l)" >> $GITHUB_OUTPUT
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update episodes from Transistor"
       
-      - name: Commit and push if changes
-        if: steps.sync.outcome == 'success' && steps.git-check.outputs.changes > 0
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git commit -m "Update episodes from Transistor API"
-          git push
-
-      - name: Notify on failure
-        if: failure()
-        uses: actions/github-script@v7
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          script: |
-            const issue = await github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: '🚨 Episode Sync Failed',
-              body: `The episode sync workflow failed at ${new Date().toISOString()}.
-              
-              [View workflow run](https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId})
-              
-              Please check the workflow logs for more details.`,
-              labels: ['sync-failure', 'bug']
-            });
-            
-            console.log(`Created issue #${issue.data.number}`);
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}

@@ -25,8 +25,8 @@ export default {
         slow: '500ms',
       },
       transitionTimingFunction: {
-        'enter': 'cubic-bezier(0, 0, 0.2, 1)',
-        'exit': 'cubic-bezier(0.4, 0, 1, 1)',
+        enter: 'cubic-bezier(0, 0, 0.2, 1)',
+        exit: 'cubic-bezier(0.4, 0, 1, 1)',
       },
       animation: {
         fade: 'fadeInUp 1s both',
@@ -46,7 +46,7 @@ export default {
     }),
     plugin(({ addBase }) => {
       addBase({
-        'a': {
+        a: {
           textDecoration: 'underline',
           transition: '150ms all',
           '&:hover': {

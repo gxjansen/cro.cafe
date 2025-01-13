@@ -1,5 +1,6 @@
 ---
 import ErrorBoundary from '../common/ErrorBoundary.astro';
+import AudioPlayer from '../react/AudioPlayer';
 import { validateProps, EpisodePlayerPropsSchema } from '~/utils/component-validation';
 
 interface Props {
@@ -19,16 +20,7 @@ const escapedTitle = title.replace(/"/g, '&quot;');
 <ErrorBoundary fallback="Audio player unavailable. Please try again later.">
   <div class="episode-player">
     <div class="audio-container">
-      <audio
-        controls
-        preload="metadata"
-        class="audio-player"
-        title={title}
-        aria-label={`Podcast episode player: ${escapedTitle}`}
-      >
-        <source src={audio_url} type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
+      <AudioPlayer client:load {audio_url} {title} {escapedTitle} />
     </div>
     {description && (
       <div class="episode-description">

@@ -2,16 +2,18 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://cro.cafe/sitemap.xml
+# Language-specific sitemaps
+Sitemap: https://www.cro.cafe/sitemap-index.xml
 
-# Crawl-delay to prevent server overload
-Crawl-delay: 10
-
-# Common directories to exclude
+# Disallow admin paths
 Disallow: /admin/
-Disallow: /_astro/
-Disallow: /api/
 Disallow: /keystatic/
 
-# Language-specific sitemaps will be handled by the main sitemap.xml
+# Prevent duplicate content indexing
+Disallow: /*?*
+
+# Rate limiting
+Crawl-delay: 1
+
+# Host directive
+Host: https://www.cro.cafe

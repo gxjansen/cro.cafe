@@ -1,0 +1,119 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '~/layouts/Layout.astro';
+import EpisodeGrid from '~/components/episode/Grid.astro';
+import Pagination from '~/components/common/Pagination.astro';
+import { getTranslations } from '~/utils/translations';
+
+// Import AstroWind components
+import Header from '~/components/widgets/Header.astro';
+import Features from '~/components/widgets/Features.astro';
+import Footer from '~/components/widgets/Footer.astro';
+
+export async function getStaticPaths() {
+  const episodes = await getCollection('es-episodes');
+  const EPISODES_PER_PAGE = 10;
+  const totalPages = Math.ceil(episodes.length / EPISODES_PER_PAGE);
+  
+  return Array.from({ length: totalPages }, (_, i) => ({
+    params: { page: (i + 1).toString() },
+    props: { currentPage: i + 1, totalPages },
+  }));
+}
+
+const { currentPage, totalPages } = Astro.props;
+
+// Get Spanish episodes
+const episodes = await getCollection('es-episodes');
+
+// Sort episodes by date
+const sortedEpisodes = episodes.sort((a, b) => 
+  new Date(b.data.attributes.published_at).valueOf() - 
+  new Date(a.data.attributes.published_at).valueOf()
+);
+
+// Pagination
+const EPISODES_PER_PAGE = 10;
+const paginatedEpisodes = sortedEpisodes.slice(
+  (currentPage - 1) * EPISODES_PER_PAGE,
+  currentPage * EPISODES_PER_PAGE
+);
+
+// Get Spanish translations
+const t = getTranslations('es');
+
+// Metadata for the page
+const metadata = {
+  title: `${t.latestEpisodes} - Page ${currentPage} - ${t.title}`,
+  description: t.description,
+  type: 'website',
+  alternateLanguages: {
+    en: '/en/episodes',
+    nl: '/nl/episodes',
+    de: '/de/episodes',
+    es: '/es/episodes',
+  },
+};
+
+const availableLanguages = ['en', 'nl', 'de', 'es'] as const;
+---
+
+<Layout metadata={metadata} currentLang="es" availableLanguages={availableLanguages}>
+  <Header
+    links={[
+      { text: 'Episodes', href: '/episodes' },
+      { text: 'Guests', href: '/guests' },
+      { text: 'Topics', href: '/topics' },
+    ]}
+    actions={[
+      {
+        text: t.listenNow,
+        href: '#episodes',
+        icon: 'tabler:player-play',
+      },
+    ]}
+    showToggleTheme={true}
+    position="right"
+    currentLang="es"
+    currentPath={Astro.url.pathname}
+  />
+
+  <Features
+    id="episodes"
+    title={t.latestEpisodes}
+    columns={3}
+    classes={{ container: 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12' }}
+  >
+    <EpisodeGrid episodes={paginatedEpisodes} columns="3" />
+    <Pagination currentPage={currentPage} totalPages={totalPages} basePath="/es/episodes" />
+  </Features>
+
+  <Footer
+    links={[
+      {
+        title: 'Podcast',
+        links: [
+          { text: 'Latest Episodes', href: '#episodes' },
+          { text: 'All Episodes', href: '/episodes' },
+          { text: 'Guests', href: '/guests' },
+        ],
+      },
+      {
+        title: 'Languages',
+        links: [
+          { text: 'English', href: '/en' },
+          { text: 'Nederlands', href: '/nl' },
+          { text: 'Deutsch', href: '/de' },
+          { text: 'Español', href: '/es' },
+        ],
+      },
+    ]}
+    socialLinks={[
+      { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: 'https://twitter.com/cro_cafe' },
+      { ariaLabel: 'RSS Feed', icon: 'tabler:rss', href: '/rss.xml' },
+    ]}
+    footNote="© 2024 CRO.cafe. All rights reserved."
+    currentLang="es"
+    currentPath={Astro.url.pathname}
+  />
+</Layout>

@@ -1,53 +1,48 @@
 # Transistor API Reference
+
 The Transistor API is built around the [JSON:API](https://jsonapi.org/) specification. Our API allows you to work with podcasts, episodes, private podcast subscribers, and analytics. Endpoints accept JSON or form-encoded request bodies, return JSON-encoded responses, and use standard HTTP response codes.
 
-Authentication[](#authentication "Link to this section")
---------------------------------------------------------
+## Authentication[](#authentication 'Link to this section')
 
 The Transistor API uses API keys to authenticate all requests. Your API keys can be viewed and reset in the [Account Area](https://dashboard.transistor.fm/account) of your Transistor Dashboard. Each API request must include an HTTP header `x-api-key` with its value being your API key.
 
 Authenticated requests grant you access to any podcast or episode you would have access to through the Dashboard, along with the same level of access depending on if you're an owner, an admin, or a regular team member of a podcast.
 
-* * *
+---
 
-Rate Limits[](#ratelimits "Link to this section")
--------------------------------------------------
+## Rate Limits[](#ratelimits 'Link to this section')
 
 API requests are rate-limited to 10 requests per 10 seconds. If this limit is exceeded, you will be receive a `429` HTTP error code, and access will be blocked for 10 seconds. After these 10 seconds, you are free to use the API again.
 
 If you are continually hitting the rate-limit, please review your use of the API and always cache responses when possible. The Transistor API is not meant to be the main data source for website content. If this is what you're looking for, you may want to simply parse the XML from your RSS Feed.
 
-* * *
+---
 
-Endpoints[](#endpoints "Link to this section")
-----------------------------------------------
+## Endpoints[](#endpoints 'Link to this section')
 
 Because our API conforms to the [JSON:API](https://jsonapi.org/) spec, each endpoint also accepts extra parameters that can be helpful in certain scenarios: **sparse fieldsets** and **including related resources**. We've included examples of these in some of our example requests and responses.
 
 ### Sparse fieldsets
 
-Sometimes you may wish to only have a handful of a resource's fields be returned from an API request, instead of the entire resource. Let's say you want to retrieve an Episode but only return the title and media\_url. In your request you can specify `fields[episode][]=title&fields[episode][]=media_url`.
+Sometimes you may wish to only have a handful of a resource's fields be returned from an API request, instead of the entire resource. Let's say you want to retrieve an Episode but only return the title and media_url. In your request you can specify `fields[episode][]=title&fields[episode][]=media_url`.
 
 ### Including related resources
 
 You can also return a resource's related resources in one single API request instead of multiuple requests. For example, you may want to retrieve an Episode, but also include its parent Show resource. In your request you can specify `include[]=show`. You can also combine this with sparse fieldsets to request an Episode's related Show, but only return the Show's title and RSS Feed URL, for example. `include[]=show&fields[show][]=title&fields[show][]=feed_url`.
 
-### Root[](#root "Link to this section")
+### Root[](#root 'Link to this section')
 
-Get authenticated user[](#get-v1 "Link to this endpoint")
----------------------------------------------------------
+## Get authenticated user[](#get-v1 'Link to this endpoint')
 
 Retrieve details of the user account that is authenticating to the API.
 
 `GET /v1`
 
-Response
---------
+## Response
 
 A single [User resource](#User)
 
-Example
--------
+## Example
 
 ### Request
 
@@ -60,19 +55,21 @@ $ curl https://api.transistor.fm/v1 -G \
 ### Response
 
 ````
+
 $ {
-  "data": {
-    "id": "173455",
-    "type": "user",
-    "attributes": {
-      "created_at": "2020-01-01 00:00:00 UTC",
-      "image_url": null,
-      "name": "Jimmy Podcaster",
-      "time_zone": "UTC",
-      "updated_at": "2020-06-01 00:00:00 UTC"
-    }
-  }
+"data": {
+"id": "173455",
+"type": "user",
+"attributes": {
+"created_at": "2020-01-01 00:00:00 UTC",
+"image_url": null,
+"name": "Jimmy Podcaster",
+"time_zone": "UTC",
+"updated_at": "2020-06-01 00:00:00 UTC"
 }
+}
+}
+
 ```
 `
 
@@ -90,17 +87,17 @@ Parameters
 
 
 
-* Field:           id            Required        
+* Field:           id            Required
   * Type: String
-  * Details:         
+  * Details:
   * Description: Show ID or slug
-* Field:           start_date        
+* Field:           start_date
   * Type: String
-  * Details:         
+  * Details:
   * Description: Optional starting date for analytics (dd-mm-yyyy). Required if using an ending date.
-* Field:           end_date        
+* Field:           end_date
   * Type: String
-  * Details:         
+  * Details:
   * Description: Optional ending date for analytics (dd-mm-yyyy). Required if using a starting date.
 
 
@@ -114,105 +111,109 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/analytics/132543 -G \
-  -H "x-api-key: your_api_key" \
-  -d start_date=01-01-2020 \
-  -d end_date=31-12-2020 \
-  -d "include[]=show" \
-  -d "fields[show][]=title"
+ -H "x-api-key: your_api_key" \
+ -d start_date=01-01-2020 \
+ -d end_date=31-12-2020 \
+ -d "include[]=show" \
+ -d "fields[show][]=title"
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": {
-    "id": "the-caffeine-show",
-    "type": "show_analytics",
-    "attributes": {
-      "downloads": [
-        {
-          "date": "30-11-2024",
-          "downloads": 0
-        },
-        {
-          "date": "01-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "02-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "03-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "04-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "05-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "06-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "07-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "08-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "09-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "10-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "11-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "12-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "13-12-2024",
-          "downloads": 0
-        }
-      ],
-      "start_date": "11-30-2024",
-      "end_date": "12-13-2024"
-    },
-    "relationships": {
-      "show": {
-        "data": {
-          "id": "132543",
-          "type": "show"
-        }
-      }
-    }
-  },
-  "included": [
-    {
-      "id": "132543",
-      "type": "show",
-      "attributes": {
-        "title": "The Caffeine Show"
-      },
-      "relationships": {}
-    }
-  ]
+"data": {
+"id": "the-caffeine-show",
+"type": "show_analytics",
+"attributes": {
+"downloads": [
+{
+"date": "30-11-2024",
+"downloads": 0
+},
+{
+"date": "01-12-2024",
+"downloads": 0
+},
+{
+"date": "02-12-2024",
+"downloads": 0
+},
+{
+"date": "03-12-2024",
+"downloads": 0
+},
+{
+"date": "04-12-2024",
+"downloads": 0
+},
+{
+"date": "05-12-2024",
+"downloads": 0
+},
+{
+"date": "06-12-2024",
+"downloads": 0
+},
+{
+"date": "07-12-2024",
+"downloads": 0
+},
+{
+"date": "08-12-2024",
+"downloads": 0
+},
+{
+"date": "09-12-2024",
+"downloads": 0
+},
+{
+"date": "10-12-2024",
+"downloads": 0
+},
+{
+"date": "11-12-2024",
+"downloads": 0
+},
+{
+"date": "12-12-2024",
+"downloads": 0
+},
+{
+"date": "13-12-2024",
+"downloads": 0
 }
+],
+"start_date": "11-30-2024",
+"end_date": "12-13-2024"
+},
+"relationships": {
+"show": {
+"data": {
+"id": "132543",
+"type": "show"
+}
+}
+}
+},
+"included": [
+{
+"id": "132543",
+"type": "show",
+"attributes": {
+"title": "The Caffeine Show"
+},
+"relationships": {}
+}
+]
+}
+
 ```
 `
 
@@ -228,17 +229,17 @@ Parameters
 
 
 
-* Field:           id            Required        
+* Field:           id            Required
   * Type: String
-  * Details:         
+  * Details:
   * Description: Show ID or slug
-* Field:           start_date        
+* Field:           start_date
   * Type: String
-  * Details:         
+  * Details:
   * Description: Optional starting date for analytics (dd-mm-yyyy). Required if using an ending date.
-* Field:           end_date        
+* Field:           end_date
   * Type: String
-  * Details:         
+  * Details:
   * Description: Optional ending date for analytics (dd-mm-yyyy). Required if using a starting date.
 
 
@@ -252,119 +253,123 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/analytics/132543/episodes -G \
-  -H "x-api-key: your_api_key" \
-  -d start_date=01-01-2021 \
-  -d end_date=07-01-2021 \
-  -d "include[]=show" \
-  -d "fields[show][]=title"
+ -H "x-api-key: your_api_key" \
+ -d start_date=01-01-2021 \
+ -d end_date=07-01-2021 \
+ -d "include[]=show" \
+ -d "fields[show][]=title"
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": {
-    "id": "the-caffeine-show",
-    "type": "episodes_analytics",
-    "attributes": {
-      "episodes": [
-        {
-          "id": 2,
-          "title": "Episode Two",
-          "published_at": "2024-12-05 14:01:43 UTC",
-          "downloads": [
-            {
-              "date": "11-30-2024",
-              "downloads": 0
-            },
-            {
-              "date": "12-01-2024",
-              "downloads": 0
-            },
-            {
-              "date": "12-02-2024",
-              "downloads": 0
-            },
-            {
-              "date": "12-03-2024",
-              "downloads": 0
-            },
-            {
-              "date": "12-04-2024",
-              "downloads": 0
-            },
-            {
-              "date": "12-05-2024",
-              "downloads": 0
-            },
-            {
-              "date": "12-06-2024",
-              "downloads": 0
-            }
-          ]
-        },
-        {
-          "id": 1,
-          "title": "Episode One",
-          "published_at": "2024-12-03 14:01:43 UTC",
-          "downloads": [
-            {
-              "date": "11-30-2024",
-              "downloads": 0
-            },
-            {
-              "date": "12-01-2024",
-              "downloads": 0
-            },
-            {
-              "date": "12-02-2024",
-              "downloads": 0
-            },
-            {
-              "date": "12-03-2024",
-              "downloads": 0
-            },
-            {
-              "date": "12-04-2024",
-              "downloads": 0
-            },
-            {
-              "date": "12-05-2024",
-              "downloads": 0
-            },
-            {
-              "date": "12-06-2024",
-              "downloads": 0
-            }
-          ]
-        }
-      ],
-      "start_date": "11-30-2024",
-      "end_date": "12-06-2024"
-    },
-    "relationships": {
-      "show": {
-        "data": {
-          "id": "132543",
-          "type": "show"
-        }
-      }
-    }
-  },
-  "included": [
-    {
-      "id": "132543",
-      "type": "show",
-      "attributes": {
-        "title": "The Caffeine Show"
-      },
-      "relationships": {}
-    }
-  ]
+"data": {
+"id": "the-caffeine-show",
+"type": "episodes_analytics",
+"attributes": {
+"episodes": [
+{
+"id": 2,
+"title": "Episode Two",
+"published_at": "2024-12-05 14:01:43 UTC",
+"downloads": [
+{
+"date": "11-30-2024",
+"downloads": 0
+},
+{
+"date": "12-01-2024",
+"downloads": 0
+},
+{
+"date": "12-02-2024",
+"downloads": 0
+},
+{
+"date": "12-03-2024",
+"downloads": 0
+},
+{
+"date": "12-04-2024",
+"downloads": 0
+},
+{
+"date": "12-05-2024",
+"downloads": 0
+},
+{
+"date": "12-06-2024",
+"downloads": 0
 }
+]
+},
+{
+"id": 1,
+"title": "Episode One",
+"published_at": "2024-12-03 14:01:43 UTC",
+"downloads": [
+{
+"date": "11-30-2024",
+"downloads": 0
+},
+{
+"date": "12-01-2024",
+"downloads": 0
+},
+{
+"date": "12-02-2024",
+"downloads": 0
+},
+{
+"date": "12-03-2024",
+"downloads": 0
+},
+{
+"date": "12-04-2024",
+"downloads": 0
+},
+{
+"date": "12-05-2024",
+"downloads": 0
+},
+{
+"date": "12-06-2024",
+"downloads": 0
+}
+]
+}
+],
+"start_date": "11-30-2024",
+"end_date": "12-06-2024"
+},
+"relationships": {
+"show": {
+"data": {
+"id": "132543",
+"type": "show"
+}
+}
+}
+},
+"included": [
+{
+"id": "132543",
+"type": "show",
+"attributes": {
+"title": "The Caffeine Show"
+},
+"relationships": {}
+}
+]
+}
+
 ```
 `
 
@@ -380,17 +385,17 @@ Parameters
 
 
 
-* Field:           id            Required        
+* Field:           id            Required
   * Type: String
-  * Details:         
+  * Details:
   * Description: Episode ID or slug
-* Field:           start_date        
+* Field:           start_date
   * Type: String
-  * Details:         
+  * Details:
   * Description: Optional starting date for analytics (dd-mm-yyyy). Required if using an ending date.
-* Field:           end_date        
+* Field:           end_date
   * Type: String
-  * Details:         
+  * Details:
   * Description: Optional ending date for analytics (dd-mm-yyyy). Required if using a starting date.
 
 
@@ -404,105 +409,109 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/analytics/episodes/3056098 -G \
-  -H "x-api-key: your_api_key" \
-  -d start_date=01-01-2020 \
-  -d end_date=31-12-2020 \
-  -d "include[]=episode" \
-  -d "fields[episode][]=title"
+ -H "x-api-key: your_api_key" \
+ -d start_date=01-01-2020 \
+ -d end_date=31-12-2020 \
+ -d "include[]=episode" \
+ -d "fields[episode][]=title"
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": {
-    "id": "3056098",
-    "type": "episode_analytics",
-    "attributes": {
-      "downloads": [
-        {
-          "date": "30-11-2024",
-          "downloads": 0
-        },
-        {
-          "date": "01-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "02-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "03-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "04-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "05-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "06-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "07-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "08-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "09-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "10-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "11-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "12-12-2024",
-          "downloads": 0
-        },
-        {
-          "date": "13-12-2024",
-          "downloads": 0
-        }
-      ],
-      "start_date": "11-30-2024",
-      "end_date": "12-13-2024"
-    },
-    "relationships": {
-      "episode": {
-        "data": {
-          "id": "3056098",
-          "type": "episode"
-        }
-      }
-    }
-  },
-  "included": [
-    {
-      "id": "3056098",
-      "type": "episode",
-      "attributes": {
-        "title": "How To Roast Coffee"
-      },
-      "relationships": {}
-    }
-  ]
+"data": {
+"id": "3056098",
+"type": "episode_analytics",
+"attributes": {
+"downloads": [
+{
+"date": "30-11-2024",
+"downloads": 0
+},
+{
+"date": "01-12-2024",
+"downloads": 0
+},
+{
+"date": "02-12-2024",
+"downloads": 0
+},
+{
+"date": "03-12-2024",
+"downloads": 0
+},
+{
+"date": "04-12-2024",
+"downloads": 0
+},
+{
+"date": "05-12-2024",
+"downloads": 0
+},
+{
+"date": "06-12-2024",
+"downloads": 0
+},
+{
+"date": "07-12-2024",
+"downloads": 0
+},
+{
+"date": "08-12-2024",
+"downloads": 0
+},
+{
+"date": "09-12-2024",
+"downloads": 0
+},
+{
+"date": "10-12-2024",
+"downloads": 0
+},
+{
+"date": "11-12-2024",
+"downloads": 0
+},
+{
+"date": "12-12-2024",
+"downloads": 0
+},
+{
+"date": "13-12-2024",
+"downloads": 0
 }
+],
+"start_date": "11-30-2024",
+"end_date": "12-13-2024"
+},
+"relationships": {
+"episode": {
+"data": {
+"id": "3056098",
+"type": "episode"
+}
+}
+}
+},
+"included": [
+{
+"id": "3056098",
+"type": "episode",
+"attributes": {
+"title": "How To Roast Coffee"
+},
+"relationships": {}
+}
+]
+}
+
 ```
 `
 
@@ -520,29 +529,29 @@ Parameters
 
 
 
-* Field:           show_id        
+* Field:           show_id
   * Type: String
-  * Details:         
+  * Details:
   * Description: Show ID or slug
-* Field:           query        
+* Field:           query
   * Type: String
-  * Details:         
+  * Details:
   * Description: Search query
-* Field:           status        
+* Field:           status
   * Type: String
-  * Details:             One of                                  
+  * Details:             One of
   * Description: Publishing status: published, scheduled, or draft
-* Field:           order        
+* Field:           order
   * Type: String
-  * Details:             One of                                      Default:                          desc                    
+  * Details:             One of                                      Default:                          desc
   * Description: Return order of episodes. Newest first (desc), or oldest first (asc)
-* Field:           pagination[page]        
+* Field:           pagination[page]
   * Type: Integer
-  * Details:             Default:                          0                    
+  * Details:             Default:                          0
   * Description: Page number
-* Field:           pagination[per]        
+* Field:           pagination[per]
   * Type: Integer
-  * Details:             Default:                          10                    
+  * Details:             Default:                          10
   * Description: Resources per page
 
 
@@ -556,47 +565,51 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/episodes -G \
-  -H "x-api-key: your_api_key" \
-  -d show_id=132543 \
-  -d "pagination[page]=1" \
-  -d "pagination[per]=5" \
-  -d "fields[episode][]=title" \
-  -d "fields[episode][]=published_at"
+ -H "x-api-key: your_api_key" \
+ -d show_id=132543 \
+ -d "pagination[page]=1" \
+ -d "pagination[per]=5" \
+ -d "fields[episode][]=title" \
+ -d "fields[episode][]=published_at"
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": [
-    {
-      "id": "3056098",
-      "type": "episode",
-      "attributes": {
-        "title": "How To Roast Coffee",
-        "published_at": "2020-07-01 00:00:00 UTC"
-      },
-      "relationships": {}
-    },
-    {
-      "id": "3056099",
-      "type": "episode",
-      "attributes": {
-        "title": "The Effects of Caffeine",
-        "published_at": "2020-07-01 00:00:00 UTC"
-      },
-      "relationships": {}
-    }
-  ],
-  "meta": {
-    "currentPage": 1,
-    "totalPages": 1,
-    "totalCount": 2
-  }
+"data": [
+{
+"id": "3056098",
+"type": "episode",
+"attributes": {
+"title": "How To Roast Coffee",
+"published_at": "2020-07-01 00:00:00 UTC"
+},
+"relationships": {}
+},
+{
+"id": "3056099",
+"type": "episode",
+"attributes": {
+"title": "The Effects of Caffeine",
+"published_at": "2020-07-01 00:00:00 UTC"
+},
+"relationships": {}
 }
+],
+"meta": {
+"currentPage": 1,
+"totalPages": 1,
+"totalCount": 2
+}
+}
+
 ```
 `
 
@@ -626,74 +639,78 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/episodes/3056098 -G \
-  -H "x-api-key: your_api_key" \
-  -d "include[]=show" \
-  -d "fields[show][]=title" \
-  -d "fields[show][]=summary"
+ -H "x-api-key: your_api_key" \
+ -d "include[]=show" \
+ -d "fields[show][]=title" \
+ -d "fields[show][]=summary"
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": {
-    "id": "3056098",
-    "type": "episode",
-    "attributes": {
-      "title": "How To Roast Coffee",
-      "number": 1,
-      "season": 1,
-      "status": "published",
-      "published_at": "2020-07-01 00:00:00 UTC",
-      "duration": 568,
-      "explicit": false,
-      "keywords": "coffee,caffeine,beans",
-      "alternate_url": null,
-      "media_url": "https://media.transistor.fm/af3e966c/43bc35ee.mp3",
-      "image_url": null,
-      "video_url": "https://www.youtube.com/watch?v=xcyHT1ZLd9Y",
-      "author": "Jimmy Podcaster",
-      "summary": "A primer on roasting coffee",
-      "description": "This podcast talks about some <strong>strong</strong> coffee!",
-      "slug": null,
-      "created_at": "2020-03-01 00:00:00 UTC",
-      "updated_at": "2020-03-01 00:00:00 UTC",
-      "formatted_published_at": "July 1, 2020",
-      "duration_in_mmss": "09:28",
-      "share_url": "https://share.transistor.fm/s/af3e966c",
-      "transcript_url": null,
-      "transcripts": [],
-      "formatted_summary": "A primer on roasting coffee",
-      "formatted_description": "This podcast talks about some <strong>strong</strong> coffee!",
-      "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/af3e966c\"></iframe>",
-      "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/af3e966c/dark\"></iframe>",
-      "audio_processing": false,
-      "type": "full",
-      "email_notifications": null
-    },
-    "relationships": {
-      "show": {
-        "data": {
-          "id": "132543",
-          "type": "show"
-        }
-      }
-    }
-  },
-  "included": [
-    {
-      "id": "132543",
-      "type": "show",
-      "attributes": {
-        "title": "The Caffeine Show"
-      },
-      "relationships": {}
-    }
-  ]
+"data": {
+"id": "3056098",
+"type": "episode",
+"attributes": {
+"title": "How To Roast Coffee",
+"number": 1,
+"season": 1,
+"status": "published",
+"published_at": "2020-07-01 00:00:00 UTC",
+"duration": 568,
+"explicit": false,
+"keywords": "coffee,caffeine,beans",
+"alternate_url": null,
+"media_url": "https://media.transistor.fm/af3e966c/43bc35ee.mp3",
+"image_url": null,
+"video_url": "https://www.youtube.com/watch?v=xcyHT1ZLd9Y",
+"author": "Jimmy Podcaster",
+"summary": "A primer on roasting coffee",
+"description": "This podcast talks about some <strong>strong</strong> coffee!",
+"slug": null,
+"created_at": "2020-03-01 00:00:00 UTC",
+"updated_at": "2020-03-01 00:00:00 UTC",
+"formatted_published_at": "July 1, 2020",
+"duration_in_mmss": "09:28",
+"share_url": "https://share.transistor.fm/s/af3e966c",
+"transcript_url": null,
+"transcripts": [],
+"formatted_summary": "A primer on roasting coffee",
+"formatted_description": "This podcast talks about some <strong>strong</strong> coffee!",
+"embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/af3e966c\"></iframe>",
+"embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/af3e966c/dark\"></iframe>",
+"audio_processing": false,
+"type": "full",
+"email_notifications": null
+},
+"relationships": {
+"show": {
+"data": {
+"id": "132543",
+"type": "show"
 }
+}
+}
+},
+"included": [
+{
+"id": "132543",
+"type": "show",
+"attributes": {
+"title": "The Caffeine Show"
+},
+"relationships": {}
+}
+]
+}
+
 ```
 `
 
@@ -709,9 +726,9 @@ Parameters
 
 
 
-* Field:           filename            Required        
+* Field:           filename            Required
   * Type: String
-  * Details:         
+  * Details:
   * Description: Filename of the audio file you wish to upload
 
 
@@ -725,28 +742,32 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/episodes/authorize_upload -G \
-  -H "x-api-key: your_api_key" \
-  -d filename=Episode1.mp3
+ -H "x-api-key: your_api_key" \
+ -d filename=Episode1.mp3
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": {
-    "id": "f61f26fb-ac59-4eb0-9f02-213e7d2b99ee",
-    "type": "audio_upload",
-    "attributes": {
-      "upload_url": "https://transistorupload.s3.amazonaws.com/588ea179cb09e23eaf331d12f600ab9e.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJNPH...%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240402T175744Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Signature=0c3bf1...",
-      "content_type": "audio/mpeg",
-      "expires_in": 600,
-      "audio_url": "https://transistorupload.s3.amazonaws.com/588ea179cb09e23eaf331d12f600ab9e.mp3"
-    }
-  }
+"data": {
+"id": "f61f26fb-ac59-4eb0-9f02-213e7d2b99ee",
+"type": "audio_upload",
+"attributes": {
+"upload_url": "https://transistorupload.s3.amazonaws.com/588ea179cb09e23eaf331d12f600ab9e.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJNPH...%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240402T175744Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Signature=0c3bf1...",
+"content_type": "audio/mpeg",
+"expires_in": 600,
+"audio_url": "https://transistorupload.s3.amazonaws.com/588ea179cb09e23eaf331d12f600ab9e.mp3"
 }
+}
+}
+
 ```
 `
 
@@ -757,17 +778,20 @@ Upload your audio file however you wish but it must be a PUT method HTTP request
 
 ### CURL Example
 
-````
+```
+
 $ curl -v -X PUT \
-  -H "Content-Type: audio/mpeg" \
-  -T /path/to/your/audio/Episode1.mp3 \
-  "upload_url_from_authorize_upload"
+ -H "Content-Type: audio/mpeg" \
+ -T /path/to/your/audio/Episode1.mp3 \
+ "upload_url_from_authorize_upload"
+
 ```
 `
 
 ### Ruby Example
 
-````
+```
+
 require "net/http"
 
 file = "/path/to/your/audio/Episode1.mp3"
@@ -775,8 +799,9 @@ presigned_url = "upload_url_from_authorize_upload"
 url = URI.parse(presigned_url)
 
 Net::HTTP.start(url.host) do |http|
-  http.send_request("PUT", url.request_uri, File.read(file), { "content-type" => "audio/mpeg" })
+http.send_request("PUT", url.request_uri, File.read(file), { "content-type" => "audio/mpeg" })
 end
+
 ```
 `
 
@@ -792,73 +817,73 @@ Parameters
 
 
 
-* Field:           episode[show_id]            Required        
+* Field:           episode[show_id]            Required
   * Type: String
-  * Details:         
+  * Details:
   * Description: ID or Slug of the Show to add an episode to
-* Field:           episode[audio_url]        
+* Field:           episode[audio_url]
   * Type: String
-  * Details:         
+  * Details:
   * Description: URL to an episode's new audio file
-* Field:           episode[transcript_text]        
+* Field:           episode[transcript_text]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Full text of the episode transcript
-* Field:           episode[author]        
+* Field:           episode[author]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Episode author
-* Field:           episode[description]        
+* Field:           episode[description]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Longer episode description which may contain HTML and unformatted tags for chapters, people, supporters, etc
-* Field:           episode[explicit]        
+* Field:           episode[explicit]
   * Type: Boolean
-  * Details:         
+  * Details:
   * Description: Episode contains explicit content
-* Field:           episode[image_url]        
+* Field:           episode[image_url]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Episode artwork image URL
-* Field:           episode[keywords]        
+* Field:           episode[keywords]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Comma-separated list of keywords
-* Field:           episode[number]        
+* Field:           episode[number]
   * Type: Integer
-  * Details:         
+  * Details:
   * Description: Episode number
-* Field:           episode[season]        
+* Field:           episode[season]
   * Type: Integer
-  * Details:         
+  * Details:
   * Description: Season number
-* Field:           episode[summary]        
+* Field:           episode[summary]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Episode summary short description
-* Field:           episode[type]        
+* Field:           episode[type]
   * Type: String
-  * Details:             One of                                  
+  * Details:             One of
   * Description: Full, trailer, or bonus episode
-* Field:           episode[title]        
+* Field:           episode[title]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Episode title
-* Field:           episode[alternate_url]        
+* Field:           episode[alternate_url]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Alternate episode URL overriding the share_url
-* Field:           episode[video_url]        
+* Field:           episode[video_url]
   * Type: String
-  * Details:         
+  * Details:
   * Description: YouTube video URL to be embedded on episode sharing pages and website pages
-* Field:           episode[email_notifications]        
+* Field:           episode[email_notifications]
   * Type: Boolean
-  * Details:         
+  * Details:
   * Description: Private podcast email notifications override (defaults to Show setting)
-* Field:           episode[increment_number]        
+* Field:           episode[increment_number]
   * Type: Boolean
-  * Details:         
+  * Details:
   * Description: Automatically set the number to the next episode number of the current season
 
 
@@ -872,66 +897,70 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/episodes -X POST \
-  -H "x-api-key: your_api_key" \
-  -d "episode[show_id]=132543" \
-  -d "episode[title]=Awesome podcast" \
-  -d "episode[summary]=A podcast about awesome things" \
-  -d "episode[season]=2" \
-  -d "episode[number]=1"
+ -H "x-api-key: your_api_key" \
+ -d "episode[show_id]=132543" \
+ -d "episode[title]=Awesome podcast" \
+ -d "episode[summary]=A podcast about awesome things" \
+ -d "episode[season]=2" \
+ -d "episode[number]=1"
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": {
-    "id": "3056098",
-    "type": "episode",
-    "attributes": {
-      "title": "Awesome podcast",
-      "number": 1,
-      "season": 2,
-      "status": "draft",
-      "published_at": null,
-      "duration": null,
-      "explicit": false,
-      "keywords": null,
-      "alternate_url": null,
-      "media_url": "https://media.transistor.fm/47d59efd/3786c02d.mp3",
-      "image_url": null,
-      "video_url": null,
-      "author": null,
-      "summary": "A podcast about awesome things",
-      "description": null,
-      "slug": null,
-      "created_at": "2024-12-13 14:01:43 UTC",
-      "updated_at": "2024-12-13 14:01:43 UTC",
-      "formatted_published_at": null,
-      "duration_in_mmss": "00:00",
-      "share_url": "https://share.transistor.fm/s/47d59efd",
-      "transcript_url": null,
-      "transcripts": [],
-      "formatted_summary": "A podcast about awesome things",
-      "formatted_description": "",
-      "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/47d59efd\"></iframe>",
-      "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/47d59efd/dark\"></iframe>",
-      "audio_processing": false,
-      "type": "full",
-      "email_notifications": null
-    },
-    "relationships": {
-      "show": {
-        "data": {
-          "id": "132543",
-          "type": "show"
-        }
-      }
-    }
-  }
+"data": {
+"id": "3056098",
+"type": "episode",
+"attributes": {
+"title": "Awesome podcast",
+"number": 1,
+"season": 2,
+"status": "draft",
+"published_at": null,
+"duration": null,
+"explicit": false,
+"keywords": null,
+"alternate_url": null,
+"media_url": "https://media.transistor.fm/47d59efd/3786c02d.mp3",
+"image_url": null,
+"video_url": null,
+"author": null,
+"summary": "A podcast about awesome things",
+"description": null,
+"slug": null,
+"created_at": "2024-12-13 14:01:43 UTC",
+"updated_at": "2024-12-13 14:01:43 UTC",
+"formatted_published_at": null,
+"duration_in_mmss": "00:00",
+"share_url": "https://share.transistor.fm/s/47d59efd",
+"transcript_url": null,
+"transcripts": [],
+"formatted_summary": "A podcast about awesome things",
+"formatted_description": "",
+"embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/47d59efd\"></iframe>",
+"embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/47d59efd/dark\"></iframe>",
+"audio_processing": false,
+"type": "full",
+"email_notifications": null
+},
+"relationships": {
+"show": {
+"data": {
+"id": "132543",
+"type": "show"
 }
+}
+}
+}
+}
+
 ```
 `
 
@@ -947,69 +976,69 @@ Parameters
 
 
 
-* Field:           id            Required        
+* Field:           id            Required
   * Type: String
-  * Details:         
+  * Details:
   * Description: Episode ID
-* Field:           episode[audio_url]        
+* Field:           episode[audio_url]
   * Type: String
-  * Details:         
+  * Details:
   * Description: URL to an episode's new audio file
-* Field:           episode[transcript_text]        
+* Field:           episode[transcript_text]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Full text of the episode transcript
-* Field:           episode[author]        
+* Field:           episode[author]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Episode author
-* Field:           episode[description]        
+* Field:           episode[description]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Longer episode description which may contain HTML and unformatted tags for chapters, people, supporters, etc
-* Field:           episode[explicit]        
+* Field:           episode[explicit]
   * Type: Boolean
-  * Details:         
+  * Details:
   * Description: Episode contains explicit content
-* Field:           episode[image_url]        
+* Field:           episode[image_url]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Episode artwork image URL
-* Field:           episode[keywords]        
+* Field:           episode[keywords]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Comma-separated list of keywords
-* Field:           episode[number]        
+* Field:           episode[number]
   * Type: Integer
-  * Details:         
+  * Details:
   * Description: Episode number
-* Field:           episode[season]        
+* Field:           episode[season]
   * Type: Integer
-  * Details:         
+  * Details:
   * Description: Season number
-* Field:           episode[summary]        
+* Field:           episode[summary]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Episode summary short description
-* Field:           episode[type]        
+* Field:           episode[type]
   * Type: String
-  * Details:             One of                                  
+  * Details:             One of
   * Description: Full, trailer, or bonus episode
-* Field:           episode[title]        
+* Field:           episode[title]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Episode title
-* Field:           episode[alternate_url]        
+* Field:           episode[alternate_url]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Alternate episode URL overriding the share_url
-* Field:           episode[video_url]        
+* Field:           episode[video_url]
   * Type: String
-  * Details:         
+  * Details:
   * Description: YouTube video URL to be embedded on episode sharing pages and website pages
-* Field:           episode[email_notifications]        
+* Field:           episode[email_notifications]
   * Type: Boolean
-  * Details:         
+  * Details:
   * Description: Private podcast email notifications override (defaults to Show setting)
 
 
@@ -1023,27 +1052,31 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/episodes/3056098 -X PATCH \
-  -H "x-api-key: your_api_key" \
-  -d "episode[title]=Updated podcast" \
-  -d "fields[episode][]=title"
+ -H "x-api-key: your_api_key" \
+ -d "episode[title]=Updated podcast" \
+ -d "fields[episode][]=title"
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": {
-    "id": "3056098",
-    "type": "episode",
-    "attributes": {
-      "title": "Updated podcast"
-    },
-    "relationships": {}
-  }
+"data": {
+"id": "3056098",
+"type": "episode",
+"attributes": {
+"title": "Updated podcast"
+},
+"relationships": {}
 }
+}
+
 ```
 `
 
@@ -1059,17 +1092,17 @@ Parameters
 
 
 
-* Field:           id            Required        
+* Field:           id            Required
   * Type: String
-  * Details:         
+  * Details:
   * Description: Episode ID
-* Field:           episode[status]            Required        
+* Field:           episode[status]            Required
   * Type: String
-  * Details:             One of                                  
+  * Details:             One of
   * Description: Publishing status: published, scheduled, or draft
-* Field:           episode[published_at]        
+* Field:           episode[published_at]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Episode publishing date and time - in your podcast's time zone
 
 
@@ -1083,27 +1116,31 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/episodes/3056098/publish -X PATCH \
-  -H "x-api-key: your_api_key" \
-  -d "episode[status]=published" \
-  -d "fields[episode][]=status"
+ -H "x-api-key: your_api_key" \
+ -d "episode[status]=published" \
+ -d "fields[episode][]=status"
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": {
-    "id": "3056098",
-    "type": "episode",
-    "attributes": {
-      "status": "published"
-    },
-    "relationships": {}
-  }
+"data": {
+"id": "3056098",
+"type": "episode",
+"attributes": {
+"status": "published"
+},
+"relationships": {}
 }
+}
+
 ```
 `
 
@@ -1121,21 +1158,21 @@ Parameters
 
 
 
-* Field:           private        
+* Field:           private
   * Type: Boolean
-  * Details:         
+  * Details:
   * Description: Filter for private shows
-* Field:           query        
+* Field:           query
   * Type: String
-  * Details:         
+  * Details:
   * Description: Search query
-* Field:           pagination[page]        
+* Field:           pagination[page]
   * Type: Integer
-  * Details:             Default:                          0                    
+  * Details:             Default:                          0
   * Description: Page number
-* Field:           pagination[per]        
+* Field:           pagination[per]
   * Type: Integer
-  * Details:             Default:                          10                    
+  * Details:             Default:                          10
   * Description: Resources per page
 
 
@@ -1149,37 +1186,41 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/shows -G \
-  -H "x-api-key: your_api_key" \
-  -d "pagination[page]=1" \
-  -d "pagination[per]=5" \
-  -d "fields[show][]=title" \
-  -d "fields[show][]=description"
+ -H "x-api-key: your_api_key" \
+ -d "pagination[page]=1" \
+ -d "pagination[per]=5" \
+ -d "fields[show][]=title" \
+ -d "fields[show][]=description"
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": [
-    {
-      "id": "132543",
-      "type": "show",
-      "attributes": {
-        "title": "The Caffeine Show",
-        "description": "A podcast covering all things coffee and caffeine"
-      },
-      "relationships": {}
-    }
-  ],
-  "meta": {
-    "currentPage": 1,
-    "totalPages": 1,
-    "totalCount": 1
-  }
+"data": [
+{
+"id": "132543",
+"type": "show",
+"attributes": {
+"title": "The Caffeine Show",
+"description": "A podcast covering all things coffee and caffeine"
+},
+"relationships": {}
 }
+],
+"meta": {
+"currentPage": 1,
+"totalPages": 1,
+"totalCount": 1
+}
+}
+
 ```
 `
 
@@ -1209,69 +1250,73 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/shows/132543 -G \
-  -H "x-api-key: your_api_key"
+ -H "x-api-key: your_api_key"
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": {
-    "id": "132543",
-    "type": "show",
-    "attributes": {
-      "author": null,
-      "category": "Arts :: Food",
-      "copyright": null,
-      "created_at": "2020-02-01 00:00:00 UTC",
-      "description": "A podcast covering all things coffee and caffeine",
-      "explicit": false,
-      "image_url": null,
-      "keywords": "coffee,caffeine,beans",
-      "language": "en",
-      "multiple_seasons": false,
-      "owner_email": null,
-      "playlist_limit": 25,
-      "private": false,
-      "secondary_category": "Arts",
-      "show_type": "episodic",
-      "slug": "the-caffeine-show",
-      "time_zone": null,
-      "title": "The Caffeine Show",
-      "updated_at": "2020-06-01 00:00:00 UTC",
-      "website": null,
-      "feed_url": "https://feeds.transistor.fm/the-caffeine-show",
-      "apple_podcasts": null,
-      "amazon_music": null,
-      "deezer": null,
-      "spotify": null,
-      "podcast_addict": null,
-      "player_FM": null,
-      "anghami": null,
-      "castbox": null,
-      "castro": null,
-      "goodpods": null,
-      "iHeartRadio": null,
-      "overcast": null,
-      "pandora": null,
-      "pocket_casts": null,
-      "soundcloud": null,
-      "tuneIn": null,
-      "fountain": null,
-      "jiosaavn": null,
-      "gaana": null,
-      "email_notifications": false
-    },
-    "relationships": {
-      "episodes": {
-        "data": []
-      }
-    }
-  }
+"data": {
+"id": "132543",
+"type": "show",
+"attributes": {
+"author": null,
+"category": "Arts :: Food",
+"copyright": null,
+"created_at": "2020-02-01 00:00:00 UTC",
+"description": "A podcast covering all things coffee and caffeine",
+"explicit": false,
+"image_url": null,
+"keywords": "coffee,caffeine,beans",
+"language": "en",
+"multiple_seasons": false,
+"owner_email": null,
+"playlist_limit": 25,
+"private": false,
+"secondary_category": "Arts",
+"show_type": "episodic",
+"slug": "the-caffeine-show",
+"time_zone": null,
+"title": "The Caffeine Show",
+"updated_at": "2020-06-01 00:00:00 UTC",
+"website": null,
+"feed_url": "https://feeds.transistor.fm/the-caffeine-show",
+"apple_podcasts": null,
+"amazon_music": null,
+"deezer": null,
+"spotify": null,
+"podcast_addict": null,
+"player_FM": null,
+"anghami": null,
+"castbox": null,
+"castro": null,
+"goodpods": null,
+"iHeartRadio": null,
+"overcast": null,
+"pandora": null,
+"pocket_casts": null,
+"soundcloud": null,
+"tuneIn": null,
+"fountain": null,
+"jiosaavn": null,
+"gaana": null,
+"email_notifications": false
+},
+"relationships": {
+"episodes": {
+"data": []
 }
+}
+}
+}
+
 ```
 `
 
@@ -1287,65 +1332,65 @@ Parameters
 
 
 
-* Field:           id            Required        
+* Field:           id            Required
   * Type: String
-  * Details:         
+  * Details:
   * Description: Show ID or slug
-* Field:           show[author]        
+* Field:           show[author]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Podcast author
-* Field:           show[category]        
+* Field:           show[category]
   * Type: String
-  * Details:             One of                                  
+  * Details:             One of
   * Description: Primary category
-* Field:           show[copyright]        
+* Field:           show[copyright]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Copyright information
-* Field:           show[description]        
+* Field:           show[description]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Podcast description
-* Field:           show[explicit]        
+* Field:           show[explicit]
   * Type: Boolean
-  * Details:         
+  * Details:
   * Description: Podcast contains explicit content
-* Field:           show[image_url]        
+* Field:           show[image_url]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Podcast artwork image URL
-* Field:           show[keywords]        
+* Field:           show[keywords]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Comma-separated list of keywords
-* Field:           show[language]        
+* Field:           show[language]
   * Type: String
-  * Details:             One of                                  
+  * Details:             One of
   * Description: Podcast's spoken language
-* Field:           show[owner_email]        
+* Field:           show[owner_email]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Podcast owner email
-* Field:           show[secondary_category]        
+* Field:           show[secondary_category]
   * Type: String
-  * Details:             One of                                  
+  * Details:             One of
   * Description: Secondary category
-* Field:           show[show_type]        
+* Field:           show[show_type]
   * Type: String
-  * Details:             One of                                  
+  * Details:             One of
   * Description: Publishing type. Episodic displays newest episodes, serial displays oldest first
-* Field:           show[title]        
+* Field:           show[title]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Podcast title
-* Field:           show[time_zone]        
+* Field:           show[time_zone]
   * Type: String
-  * Details:             One of                                  
+  * Details:             One of
   * Description: Publishing time zone
-* Field:           show[website]        
+* Field:           show[website]
   * Type: String
-  * Details:         
+  * Details:
   * Description: Podcast website
 
 
@@ -1359,30 +1404,34 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/shows/132543 -X PATCH \
-  -H "x-api-key: your_api_key" \
-  -d "show[title]=Updated Title" \
-  -d "show[author]=Updated Author" \
-  -d "fields[show][]=title" \
-  -d "fields[show][]=author"
+ -H "x-api-key: your_api_key" \
+ -d "show[title]=Updated Title" \
+ -d "show[author]=Updated Author" \
+ -d "fields[show][]=title" \
+ -d "fields[show][]=author"
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": {
-    "id": "132543",
-    "type": "show",
-    "attributes": {
-      "title": "Updated Title",
-      "author": "Updated Author"
-    },
-    "relationships": {}
-  }
+"data": {
+"id": "132543",
+"type": "show",
+"attributes": {
+"title": "Updated Title",
+"author": "Updated Author"
+},
+"relationships": {}
 }
+}
+
 ```
 `
 
@@ -1400,21 +1449,21 @@ Parameters
 
 
 
-* Field:           show_id            Required        
+* Field:           show_id            Required
   * Type: String
-  * Details:         
+  * Details:
   * Description: Show ID or slug
-* Field:           query        
+* Field:           query
   * Type: String
-  * Details:         
+  * Details:
   * Description: Search query
-* Field:           pagination[page]        
+* Field:           pagination[page]
   * Type: Integer
-  * Details:             Default:                          0                    
+  * Details:             Default:                          0
   * Description: Page number
-* Field:           pagination[per]        
+* Field:           pagination[per]
   * Type: Integer
-  * Details:             Default:                          10                    
+  * Details:             Default:                          10
   * Description: Resources per page
 
 
@@ -1428,44 +1477,48 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/subscribers -G \
-  -H "x-api-key: your_api_key" \
-  -d show_id=132543 \
-  -d "pagination[page]=1" \
-  -d "pagination[per]=5" \
-  -d "fields[subscriber][]=email"
+ -H "x-api-key: your_api_key" \
+ -d show_id=132543 \
+ -d "pagination[page]=1" \
+ -d "pagination[per]=5" \
+ -d "fields[subscriber][]=email"
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": [
-    {
-      "id": "709423",
-      "type": "subscriber",
-      "attributes": {
-        "email": "arthur@example.com"
-      },
-      "relationships": {}
-    },
-    {
-      "id": "709424",
-      "type": "subscriber",
-      "attributes": {
-        "email": "beatrice@example.com"
-      },
-      "relationships": {}
-    }
-  ],
-  "meta": {
-    "currentPage": 1,
-    "totalPages": 1,
-    "totalCount": 2
-  }
+"data": [
+{
+"id": "709423",
+"type": "subscriber",
+"attributes": {
+"email": "arthur@example.com"
+},
+"relationships": {}
+},
+{
+"id": "709424",
+"type": "subscriber",
+"attributes": {
+"email": "beatrice@example.com"
+},
+"relationships": {}
 }
+],
+"meta": {
+"currentPage": 1,
+"totalPages": 1,
+"totalCount": 2
+}
+}
+
 ```
 `
 
@@ -1493,39 +1546,43 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/subscribers/709423 -G \
-  -H "x-api-key: your_api_key"
+ -H "x-api-key: your_api_key"
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": {
-    "id": "709423",
-    "type": "subscriber",
-    "attributes": {
-      "email": "arthur@example.com",
-      "status": "default",
-      "feed_url": "https://subscribers.transistor.fm/45ac840ad67713",
-      "created_at": "2020-01-01 00:00:00 UTC",
-      "updated_at": "2020-06-01 00:00:00 UTC",
-      "last_notified_at": "2020-07-01 00:00:00 UTC",
-      "has_downloads": false,
-      "subscribe_url": "https://subscribe.transistor.fm/45ac840ad67713"
-    },
-    "relationships": {
-      "show": {
-        "data": {
-          "id": "132543",
-          "type": "show"
-        }
-      }
-    }
-  }
+"data": {
+"id": "709423",
+"type": "subscriber",
+"attributes": {
+"email": "arthur@example.com",
+"status": "default",
+"feed_url": "https://subscribers.transistor.fm/45ac840ad67713",
+"created_at": "2020-01-01 00:00:00 UTC",
+"updated_at": "2020-06-01 00:00:00 UTC",
+"last_notified_at": "2020-07-01 00:00:00 UTC",
+"has_downloads": false,
+"subscribe_url": "https://subscribe.transistor.fm/45ac840ad67713"
+},
+"relationships": {
+"show": {
+"data": {
+"id": "132543",
+"type": "show"
 }
+}
+}
+}
+}
+
 ```
 `
 
@@ -1541,17 +1598,17 @@ Parameters
 
 
 
-* Field:           show_id            Required        
+* Field:           show_id            Required
   * Type: String
-  * Details:         
+  * Details:
   * Description: Show ID or slug
-* Field:           email            Required        
+* Field:           email            Required
   * Type: String
-  * Details:         
+  * Details:
   * Description: Email address
-* Field:           skip_welcome_email        
+* Field:           skip_welcome_email
   * Type: Boolean
-  * Details:             Default:                          false                    
+  * Details:             Default:                          false
   * Description: Do not send the instructional email
 
 
@@ -1565,28 +1622,32 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/subscribers -X POST \
-  -H "x-api-key: your_api_key" \
-  -d show_id=132543 \
-  -d email=carol@example.com \
-  -d "fields[subscriber][]=email"
+ -H "x-api-key: your_api_key" \
+ -d show_id=132543 \
+ -d email=carol@example.com \
+ -d "fields[subscriber][]=email"
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": {
-    "id": "709427",
-    "type": "subscriber",
-    "attributes": {
-      "email": "carol@example.com"
-    },
-    "relationships": {}
-  }
+"data": {
+"id": "709427",
+"type": "subscriber",
+"attributes": {
+"email": "carol@example.com"
+},
+"relationships": {}
 }
+}
+
 ```
 `
 
@@ -1602,17 +1663,17 @@ Parameters
 
 
 
-* Field:           show_id            Required        
+* Field:           show_id            Required
   * Type: String
-  * Details:         
+  * Details:
   * Description: Show ID or slug
-* Field:           emails            Required        
+* Field:           emails            Required
   * Type: [String]
-  * Details:         
+  * Details:
   * Description: Array of email addresses
-* Field:           skip_welcome_email        
+* Field:           skip_welcome_email
   * Type: Boolean
-  * Details:             Default:                          false                    
+  * Details:             Default:                          false
   * Description: Do not send the instructional emails
 
 
@@ -1626,39 +1687,43 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/subscribers/batch -X POST \
-  -H "x-api-key: your_api_key" \
-  -d show_id=132543 \
-  -d "emails[]=carol@example.com" \
-  -d "emails[]=derek@example.com" \
-  -d "fields[subscriber][]=email"
+ -H "x-api-key: your_api_key" \
+ -d show_id=132543 \
+ -d "emails[]=carol@example.com" \
+ -d "emails[]=derek@example.com" \
+ -d "fields[subscriber][]=email"
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": [
-    {
-      "id": "709427",
-      "type": "subscriber",
-      "attributes": {
-        "email": "carol@example.com"
-      },
-      "relationships": {}
-    },
-    {
-      "id": "709428",
-      "type": "subscriber",
-      "attributes": {
-        "email": "derek@example.com"
-      },
-      "relationships": {}
-    }
-  ]
+"data": [
+{
+"id": "709427",
+"type": "subscriber",
+"attributes": {
+"email": "carol@example.com"
+},
+"relationships": {}
+},
+{
+"id": "709428",
+"type": "subscriber",
+"attributes": {
+"email": "derek@example.com"
+},
+"relationships": {}
 }
+]
+}
+
 ```
 `
 
@@ -1689,27 +1754,31 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/subscribers/709423 -X PATCH \
-  -H "x-api-key: your_api_key" \
-  -d "subscriber[email]=updated@example.com" \
-  -d "fields[subscriber][]=email"
+ -H "x-api-key: your_api_key" \
+ -d "subscriber[email]=updated@example.com" \
+ -d "fields[subscriber][]=email"
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": {
-    "id": "709423",
-    "type": "subscriber",
-    "attributes": {
-      "email": "updated@example.com"
-    },
-    "relationships": {}
-  }
+"data": {
+"id": "709423",
+"type": "subscriber",
+"attributes": {
+"email": "updated@example.com"
+},
+"relationships": {}
 }
+}
+
 ```
 `
 
@@ -1740,41 +1809,45 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/subscribers -X DELETE \
-  -H "x-api-key: your_api_key" \
-  -d show_id=132543 \
-  -d email=carol@example.com
+ -H "x-api-key: your_api_key" \
+ -d show_id=132543 \
+ -d email=carol@example.com
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": {
-    "id": "709423",
-    "type": "subscriber",
-    "attributes": {
-      "email": "carol@example.com",
-      "status": "default",
-      "feed_url": "https://subscribers.transistor.fm/797e600524c5ae",
-      "created_at": "2020-01-01 00:00:00 UTC",
-      "updated_at": "2020-06-01 00:00:00 UTC",
-      "last_notified_at": "2020-07-01 00:00:00 UTC",
-      "has_downloads": false,
-      "subscribe_url": "https://subscribe.transistor.fm/797e600524c5ae"
-    },
-    "relationships": {
-      "show": {
-        "data": {
-          "id": "132543",
-          "type": "show"
-        }
-      }
-    }
-  }
+"data": {
+"id": "709423",
+"type": "subscriber",
+"attributes": {
+"email": "carol@example.com",
+"status": "default",
+"feed_url": "https://subscribers.transistor.fm/797e600524c5ae",
+"created_at": "2020-01-01 00:00:00 UTC",
+"updated_at": "2020-06-01 00:00:00 UTC",
+"last_notified_at": "2020-07-01 00:00:00 UTC",
+"has_downloads": false,
+"subscribe_url": "https://subscribe.transistor.fm/797e600524c5ae"
+},
+"relationships": {
+"show": {
+"data": {
+"id": "132543",
+"type": "show"
 }
+}
+}
+}
+}
+
 ```
 `
 
@@ -1804,39 +1877,43 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/subscribers/709423 -X DELETE \
-  -H "x-api-key: your_api_key"
+ -H "x-api-key: your_api_key"
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": {
-    "id": "709423",
-    "type": "subscriber",
-    "attributes": {
-      "email": "arthur@example.com",
-      "status": "default",
-      "feed_url": "https://subscribers.transistor.fm/f0dd44b76ef2cb",
-      "created_at": "2020-01-01 00:00:00 UTC",
-      "updated_at": "2020-06-01 00:00:00 UTC",
-      "last_notified_at": "2020-07-01 00:00:00 UTC",
-      "has_downloads": false,
-      "subscribe_url": "https://subscribe.transistor.fm/f0dd44b76ef2cb"
-    },
-    "relationships": {
-      "show": {
-        "data": {
-          "id": "132543",
-          "type": "show"
-        }
-      }
-    }
-  }
+"data": {
+"id": "709423",
+"type": "subscriber",
+"attributes": {
+"email": "arthur@example.com",
+"status": "default",
+"feed_url": "https://subscribers.transistor.fm/f0dd44b76ef2cb",
+"created_at": "2020-01-01 00:00:00 UTC",
+"updated_at": "2020-06-01 00:00:00 UTC",
+"last_notified_at": "2020-07-01 00:00:00 UTC",
+"has_downloads": false,
+"subscribe_url": "https://subscribe.transistor.fm/f0dd44b76ef2cb"
+},
+"relationships": {
+"show": {
+"data": {
+"id": "132543",
+"type": "show"
 }
+}
+}
+}
+}
+
 ```
 `
 
@@ -1868,44 +1945,48 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/webhooks -G \
-  -H "x-api-key: your_api_key" \
-  -d show_id=132543
+ -H "x-api-key: your_api_key" \
+ -d show_id=132543
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": [
-    {
-      "id": "104325",
-      "type": "webhook",
-      "attributes": {
-        "event_name": "episode_created",
-        "url": "http://example.com/incoming_web_hooks",
-        "created_at": null,
-        "updated_at": null
-      },
-      "relationships": {
-        "user": {
-          "data": {
-            "id": "173455",
-            "type": "user"
-          }
-        },
-        "show": {
-          "data": {
-            "id": "132543",
-            "type": "show"
-          }
-        }
-      }
-    }
-  ]
+"data": [
+{
+"id": "104325",
+"type": "webhook",
+"attributes": {
+"event_name": "episode_created",
+"url": "http://example.com/incoming_web_hooks",
+"created_at": null,
+"updated_at": null
+},
+"relationships": {
+"user": {
+"data": {
+"id": "173455",
+"type": "user"
 }
+},
+"show": {
+"data": {
+"id": "132543",
+"type": "show"
+}
+}
+}
+}
+]
+}
+
 ```
 `
 
@@ -1921,17 +2002,17 @@ Parameters
 
 
 
-* Field:           event_name            Required        
+* Field:           event_name            Required
   * Type: String
-  * Details:             One of                                  
+  * Details:             One of
   * Description: Name of webhook event
-* Field:           show_id            Required        
+* Field:           show_id            Required
   * Type: String
-  * Details:         
+  * Details:
   * Description: Show ID or slug
-* Field:           url            Required        
+* Field:           url            Required
   * Type: String
-  * Details:         
+  * Details:
   * Description: Target URL for webhook delivery
 
 
@@ -1945,44 +2026,48 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/webhooks -X POST \
-  -H "x-api-key: your_api_key" \
-  -d event_name=episode_created \
-  -d show_id=1 \
-  -d url=http://example.com/incoming_web_hooks
+ -H "x-api-key: your_api_key" \
+ -d event_name=episode_created \
+ -d show_id=1 \
+ -d url=http://example.com/incoming_web_hooks
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": {
-    "id": "104325",
-    "type": "webhook",
-    "attributes": {
-      "event_name": "episode_created",
-      "url": "http://example.com/incoming_web_hooks",
-      "created_at": null,
-      "updated_at": null
-    },
-    "relationships": {
-      "user": {
-        "data": {
-          "id": "173455",
-          "type": "user"
-        }
-      },
-      "show": {
-        "data": {
-          "id": "132543",
-          "type": "show"
-        }
-      }
-    }
-  }
+"data": {
+"id": "104325",
+"type": "webhook",
+"attributes": {
+"event_name": "episode_created",
+"url": "http://example.com/incoming_web_hooks",
+"created_at": null,
+"updated_at": null
+},
+"relationships": {
+"user": {
+"data": {
+"id": "173455",
+"type": "user"
 }
+},
+"show": {
+"data": {
+"id": "132543",
+"type": "show"
+}
+}
+}
+}
+}
+
 ```
 `
 
@@ -2012,41 +2097,45 @@ Example
 
 ### Request
 
-````
+```
+
 $ curl https://api.transistor.fm/v1/webhooks/104325 -X DELETE \
-  -H "x-api-key: your_api_key"
+ -H "x-api-key: your_api_key"
+
 ```
 `
 
 ### Response
 
-````
+```
+
 $ {
-  "data": {
-    "id": "104325",
-    "type": "webhook",
-    "attributes": {
-      "event_name": "episode_created",
-      "url": "http://example.com/incoming_web_hooks",
-      "created_at": null,
-      "updated_at": null
-    },
-    "relationships": {
-      "user": {
-        "data": {
-          "id": "173455",
-          "type": "user"
-        }
-      },
-      "show": {
-        "data": {
-          "id": "132543",
-          "type": "show"
-        }
-      }
-    }
-  }
+"data": {
+"id": "104325",
+"type": "webhook",
+"attributes": {
+"event_name": "episode_created",
+"url": "http://example.com/incoming_web_hooks",
+"created_at": null,
+"updated_at": null
+},
+"relationships": {
+"user": {
+"data": {
+"id": "173455",
+"type": "user"
 }
+},
+"show": {
+"data": {
+"id": "132543",
+"type": "show"
+}
+}
+}
+}
+}
+
 ```
 `
 
@@ -2083,127 +2172,127 @@ Fields
 
 
 
-* Name:                           amazon_music                      
+* Name:                           amazon_music
   * Type: String
   * Description: Amazon Music URL
-* Name:                           anghami                      
+* Name:                           anghami
   * Type: String
   * Description: Anghami URL
-* Name:                           apple_podcasts                      
+* Name:                           apple_podcasts
   * Type: String
   * Description: Apple Podcasts URL
-* Name:                           author                      
+* Name:                           author
   * Type: String
   * Description: Podcast author
-* Name:                           castbox                      
+* Name:                           castbox
   * Type: String
   * Description: Castbox URL
-* Name:                           castro                      
+* Name:                           castro
   * Type: String
   * Description: Castro URL
-* Name:                           category                      
+* Name:                           category
   * Type: String
   * Description: Primary category
-* Name:                           copyright                      
+* Name:                           copyright
   * Type: String
   * Description: Copyright information
-* Name:                           created_at                      
+* Name:                           created_at
   * Type: Datetime
   * Description: Timestamp of creation
-* Name:                           deezer                      
+* Name:                           deezer
   * Type: String
   * Description: Deezer URL
-* Name:                           description                      
+* Name:                           description
   * Type: String
   * Description: Podcast description
-* Name:                           email_notifications                      
+* Name:                           email_notifications
   * Type: Boolean
   * Description: Private podcast email notifications enabled or disabled
-* Name:                           explicit                      
+* Name:                           explicit
   * Type: Boolean
   * Description: Podcast contains explicit content
-* Name:                           feed_url                      
+* Name:                           feed_url
   * Type: String
   * Description: Podcast RSS Feed URL
-* Name:                           fountain                      
+* Name:                           fountain
   * Type: String
   * Description: Fountain URL
-* Name:                           gaana                      
+* Name:                           gaana
   * Type: String
   * Description: Gaana URL
-* Name:                           goodpods                      
+* Name:                           goodpods
   * Type: String
   * Description: Goodpods URL
-* Name:                           iHeartRadio                      
+* Name:                           iHeartRadio
   * Type: String
   * Description: iHeartRadio URL
-* Name:                           image_url                      
+* Name:                           image_url
   * Type: String
   * Description: Podcast artwork image URL
-* Name:                           jiosaavn                      
+* Name:                           jiosaavn
   * Type: String
   * Description: JioSaavn URL
-* Name:                           keywords                      
+* Name:                           keywords
   * Type: String
   * Description: Comma-separated list of keywords
-* Name:                           language                      
+* Name:                           language
   * Type: String
   * Description: Podcast's spoken language
-* Name:                           multiple_seasons                      
+* Name:                           multiple_seasons
   * Type: Boolean
   * Description: Podcast has multiple seasons
-* Name:                           overcast                      
+* Name:                           overcast
   * Type: String
   * Description: Overcast URL
-* Name:                           owner_email                      
+* Name:                           owner_email
   * Type: String
   * Description: Podcast owner email
-* Name:                           pandora                      
+* Name:                           pandora
   * Type: String
   * Description: Pandora URL
-* Name:                           player_FM                      
+* Name:                           player_FM
   * Type: String
   * Description: Player FM URL
-* Name:                           playlist_limit                      
+* Name:                           playlist_limit
   * Type: Integer
   * Description: Playlist embed player episode limit
-* Name:                           pocket_casts                      
+* Name:                           pocket_casts
   * Type: String
   * Description: Pocket Casts URL
-* Name:                           podcast_addict                      
+* Name:                           podcast_addict
   * Type: String
   * Description: Podcast Addict URL
-* Name:                           private                      
+* Name:                           private
   * Type: Boolean
   * Description: Podcast is private and subscribers are managed by admins
-* Name:                           secondary_category                      
+* Name:                           secondary_category
   * Type: String
   * Description: Secondary category
-* Name:                           show_type                      
+* Name:                           show_type
   * Type: String
   * Description: Publishing type. Episodic displays newest episodes, serial displays oldest first
-* Name:                           slug                      
+* Name:                           slug
   * Type: String
   * Description: Podcast slug (used for API and RSS Feed URL)
-* Name:                           soundcloud                      
+* Name:                           soundcloud
   * Type: String
   * Description: Soundcloud URL
-* Name:                           spotify                      
+* Name:                           spotify
   * Type: String
   * Description: Spotify URL
-* Name:                           time_zone                      
+* Name:                           time_zone
   * Type: String
   * Description: Publishing time zone
-* Name:                           title                      
+* Name:                           title
   * Type: String
   * Description: Podcast title
-* Name:                           tuneIn                      
+* Name:                           tuneIn
   * Type: String
   * Description: TuneIn URL
-* Name:                           updated_at                      
+* Name:                           updated_at
   * Type: Datetime
   * Description: Timestamp of last update
-* Name:                           website                      
+* Name:                           website
   * Type: String
   * Description: Podcast website
 
@@ -2213,10 +2302,10 @@ Relationships
 
 
 
-* Name:                           episodes                      
-  * Type:             An array of            Episode resources          
-* Name:                           subscribers                      
-  * Type:             An array of            Subscriber resources          
+* Name:                           episodes
+  * Type:             An array of            Episode resources
+* Name:                           subscribers
+  * Type:             An array of            Subscriber resources
 
 
 ### Episode[](#Episode "Link to this resource")
@@ -2228,94 +2317,94 @@ Fields
 
 
 
-* Name:                           alternate_url                      
+* Name:                           alternate_url
   * Type: String
   * Description: Alternate episode URL overriding the share_url
-* Name:                           audio_processing                      
+* Name:                           audio_processing
   * Type: Boolean
   * Description: Denotes processing of audio after creating or updating the audio_url
-* Name:                           author                      
+* Name:                           author
   * Type: String
   * Description: Episode author
-* Name:                           created_at                      
+* Name:                           created_at
   * Type: Datetime
   * Description: Timestamp of creation
-* Name:                           description                      
+* Name:                           description
   * Type: String
   * Description: Longer episode description which may contain HTML and unformatted tags for chapters, people, supporters, etc
-* Name:                           duration                      
+* Name:                           duration
   * Type: Integer
   * Description: Duration of episode in seconds
-* Name:                           duration_in_mmss                      
+* Name:                           duration_in_mmss
   * Type: String
   * Description: Duration of episode in minutes and seconds. e.g. 34:12
-* Name:                           email_notifications                      
+* Name:                           email_notifications
   * Type: String
   * Description: Private podcast email notifications override (defaults to Show setting)
-* Name:                           embed_html                      
+* Name:                           embed_html
   * Type: String
   * Description: Embeddable audio player HTML
-* Name:                           embed_html_dark                      
+* Name:                           embed_html_dark
   * Type: String
   * Description: Dark theme of the embeddable audio player HTML
-* Name:                           explicit                      
+* Name:                           explicit
   * Type: Boolean
   * Description: Episode contains explicit content
-* Name:                           formatted_description                      
+* Name:                           formatted_description
   * Type: String
   * Description: HTML episode description including dynamic content like chapters, people, supporters, etc
-* Name:                           formatted_published_at                      
+* Name:                           formatted_published_at
   * Type: String
   * Description: Formatted version of the published_at datetime field
-* Name:                           formatted_summary                      
+* Name:                           formatted_summary
   * Type: String
   * Description: Formatted episode summary short description
-* Name:                           image_url                      
+* Name:                           image_url
   * Type: String
   * Description: Episode artwork image URL
-* Name:                           keywords                      
+* Name:                           keywords
   * Type: String
   * Description: Comma-separated list of keywords
-* Name:                           media_url                      
+* Name:                           media_url
   * Type: String
   * Description: Trackable audio MP3 URL
-* Name:                           number                      
+* Name:                           number
   * Type: Integer
   * Description: Episode number
-* Name:                           published_at                      
+* Name:                           published_at
   * Type: Datetime
   * Description: Episode publishing date and time - in your podcast's time zone
-* Name:                           season                      
+* Name:                           season
   * Type: Integer
   * Description: Season number
-* Name:                           share_url                      
+* Name:                           share_url
   * Type: String
   * Description: Social media sharing page URL
-* Name:                           slug                      
+* Name:                           slug
   * Type: String
   * Description: Slugified episode title used in Transistor websites. e.g. my-first-episode
-* Name:                           status                      
+* Name:                           status
   * Type: String
   * Description: Publishing status: published, scheduled, or draft
-* Name:                           summary                      
+* Name:                           summary
   * Type: String
   * Description: Episode summary short description
-* Name:                           title                      
+* Name:                           title
   * Type: String
   * Description: Episode title
-* Name:                           transcript_url                      
+* Name:                           transcript_url
   * Type: String
   * Description: Shareable URL for the episode transcript
-* Name:                           transcripts                      
+* Name:                           transcripts
   * Type: Array
   * Description: An array of URLs to AI transcription formats
-* Name:                           type                      
+* Name:                           type
   * Type: String
   * Description: Full, trailer, or bonus episode
-* Name:                           updated_at                      
+* Name:                           updated_at
   * Type: Datetime
   * Description: Timestamp of last update
-* Name:                           video_url                      
+* Name:                           video_url
   * Type: String
   * Description: YouTube video URL to be embedded on episode sharing pages and website pages
 
@@ -2325,8 +2414,8 @@ Relationships
 
 
 
-* Name:                           show                      
-  * Type:             A single            Show resource          
+* Name:                           show
+  * Type:             A single            Show resource
 
 
 ### Subscriber[](#Subscriber "Link to this resource")
@@ -2338,28 +2427,28 @@ Fields
 
 
 
-* Name:                           created_at                      
+* Name:                           created_at
   * Type: Datetime
   * Description: Timestamp of creation
-* Name:                           email                      
+* Name:                           email
   * Type: String
   * Description: Subscriber's email address
-* Name:                           feed_url                      
+* Name:                           feed_url
   * Type: String
   * Description: URL for subscriber's unique RSS Feed
-* Name:                           has_downloads                      
+* Name:                           has_downloads
   * Type: Boolean
   * Description: Subscriber has downloaded at least one episode
-* Name:                           last_notified_at                      
+* Name:                           last_notified_at
   * Type: Datetime
   * Description: Timestamp of when subscriber was last emailed
-* Name:                           status                      
+* Name:                           status
   * Type: String
   * Description: Email notification status - default, subscribed, or unsubscribed
-* Name:                           subscribe_url                      
+* Name:                           subscribe_url
   * Type: String
   * Description: URL for subscriber's private landing page
-* Name:                           updated_at                      
+* Name:                           updated_at
   * Type: Datetime
   * Description: Timestamp of last update
 
@@ -2369,8 +2458,8 @@ Relationships
 
 
 
-* Name:                           show                      
-  * Type:             A single            Show resource          
+* Name:                           show
+  * Type:             A single            Show resource
 
 
 ### ShowAnalytics[](#ShowAnalytics "Link to this resource")
@@ -2382,13 +2471,13 @@ Fields
 
 
 
-* Name:                           downloads                      
+* Name:                           downloads
   * Type: Array
   * Description: An array of download counts per day
-* Name:                           end_date                      
+* Name:                           end_date
   * Type: String
   * Description: Ending date of the analytics date range
-* Name:                           start_date                      
+* Name:                           start_date
   * Type: String
   * Description: Starting date of the analytics date range
 
@@ -2398,8 +2487,8 @@ Relationships
 
 
 
-* Name:                           show                      
-  * Type:             A single            Show resource          
+* Name:                           show
+  * Type:             A single            Show resource
 
 
 ### EpisodesAnalytics[](#EpisodesAnalytics "Link to this resource")
@@ -2422,8 +2511,8 @@ Relationships
 
 
 
-* Name:                           show                      
-  * Type:             A single            Show resource          
+* Name:                           show
+  * Type:             A single            Show resource
 
 
 ### EpisodeAnalytics[](#EpisodeAnalytics "Link to this resource")
@@ -2435,13 +2524,13 @@ Fields
 
 
 
-* Name:                           downloads                      
+* Name:                           downloads
   * Type: Array
   * Description: An array of download counts per day
-* Name:                           end_date                      
+* Name:                           end_date
   * Type: String
   * Description: Ending date of the analytics date range
-* Name:                           start_date                      
+* Name:                           start_date
   * Type: String
   * Description: Starting date of the analytics date range
 
@@ -2451,8 +2540,8 @@ Relationships
 
 
 
-* Name:                           episode                      
-  * Type:             A single            Episode resource          
+* Name:                           episode
+  * Type:             A single            Episode resource
 
 
 ### AudioUpload[](#AudioUpload "Link to this resource")
@@ -2464,16 +2553,16 @@ Fields
 
 
 
-* Name:                           audio_url                      
+* Name:                           audio_url
   * Type: String
   * Description: URL of your audio file after uploading is complete. To be used when creating or updating an episode
-* Name:                           content_type                      
+* Name:                           content_type
   * Type: String
   * Description: Content type of the file to upload. audio/mpeg, audio/wav, etc
-* Name:                           expires_in                      
+* Name:                           expires_in
   * Type: Integer
   * Description: Amount of time in seconds before the authorized upload URL expires
-* Name:                           upload_url                      
+* Name:                           upload_url
   * Type: String
   * Description: Endpoint URL to upload your audio file to using HTTP PUT
 
@@ -2499,10 +2588,11 @@ Relationships
 
 
 
-* Name:                           user                      
-  * Type:             A single            User resource          
-* Name:                           show                      
-  * Type:             A single            Show resource          
+* Name:                           user
+  * Type:             A single            User resource
+* Name:                           show
+  * Type:             A single            Show resource
 
 
 [Back to the top](#intro)
+```

@@ -1,114 +1,137 @@
 ---
-import PageLayout from '~/layouts/PageLayout.astro';
+import { getCollection } from 'astro:content';
+import Layout from '~/layouts/Layout.astro';
+import EpisodeGrid from '~/components/episode/Grid.astro';
+import { getTranslations } from '~/utils/translations';
+import logo from '~/assets/images/crocafe-logo.svg';
+
+// Import AstroWind components
+import Header from '~/components/widgets/Header.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
-import Content from '~/components/widgets/Content.astro';
+import Footer from '~/components/widgets/Footer.astro';
 
-// Import images
-import heroImage from '~/assets/images/hero-image.png';
-import defaultImage from '~/assets/images/default.png';
+// Get latest episode from each language
+const [enEpisodes, nlEpisodes, deEpisodes, esEpisodes] = await Promise.all([
+  getCollection('en-episodes'),
+  getCollection('nl-episodes'),
+  getCollection('de-episodes'),
+  getCollection('es-episodes'),
+]);
 
-const metadata = {
-  title: 'CRO.CAFE - The Conversion Rate Optimization Podcast',
-  ignoreTitleTemplate: true,
+// Sort episodes by date and get the latest one from each language
+const getLatestEpisode = (episodes) => {
+  return episodes.sort((a, b) => 
+    new Date(b.data.attributes.published_at).valueOf() - 
+    new Date(a.data.attributes.published_at).valueOf()
+  )[0];
 };
 
-const availableLanguages = ['en', 'es', 'de', 'nl'];
+const latestEpisodes = [
+  getLatestEpisode(enEpisodes),
+  getLatestEpisode(nlEpisodes),
+  getLatestEpisode(deEpisodes),
+  getLatestEpisode(esEpisodes),
+].filter(Boolean);
+
+// Get English translations for the homepage
+const t = getTranslations('en');
+
+// Metadata for the page
+const metadata = {
+  title: t.title,
+  description: t.description,
+  type: 'website',
+  alternateLanguages: {
+    en: '/en',
+    nl: '/nl',
+    de: '/de',
+    es: '/es',
+  },
+};
+
+const availableLanguages = ['en', 'nl', 'de', 'es'] as const;
 ---
 
-<PageLayout {...{ metadata, availableLanguages, currentLang: 'en' }}>
-  <!-- Hero Widget -->
-  <Hero
+<Layout metadata={metadata} currentLang="en" availableLanguages={availableLanguages}>
+  <Header
+    links={[
+      { text: 'Episodes', href: '/episodes' },
+      { text: 'Guests', href: '/guests' },
+      { text: 'Topics', href: '/topics' },
+    ]}
     actions={[
       {
-        variant: 'primary',
-        text: 'Listen Now',
+        text: t.listenNow,
         href: '#episodes',
         icon: 'tabler:player-play',
       },
-      { text: 'About', href: '#about' },
     ]}
-    image={{ src: heroImage, alt: 'CRO.CAFE Hero Image' }}
+    showToggleTheme={true}
+    position="right"
+    currentLang="en"
+    currentPath={Astro.url.pathname}
+  />
+  
+  <Hero
+    callToAction={{ text: t.listenNow, href: '#episodes', icon: 'tabler:player-play' }}
+    image={{ src: logo, alt: 'CRO.cafe Logo', width: 400, height: 400 }}
   >
     <Fragment slot="title">
-      Welcome to <span class="text-accent dark:text-white highlight">CRO.CAFE</span>
+      CRO.cafe
     </Fragment>
-
     <Fragment slot="subtitle">
-      Your go-to podcast for everything Conversion Rate Optimization. Join us for expert insights, practical tips, and the latest trends in CRO.
+      {t.description}
+    </Fragment>
+    <Fragment slot="actions">
+      <div class="flex flex-wrap justify-center gap-4">
+        {Object.entries(t.languageButtons).map(([lang, text]) => (
+          <a
+            href={`/${lang === 'en' ? '' : lang}`}
+            class="btn btn-primary px-6 py-3 text-white font-semibold shadow-lg"
+          >
+            {text}
+          </a>
+        ))}
+      </div>
     </Fragment>
   </Hero>
 
-  <!-- Features Widget -->
   <Features
-    id="about"
-    tagline="About"
-    title="What is CRO.CAFE?"
-    subtitle="Join us for in-depth discussions about Conversion Rate Optimization with industry experts and practitioners."
-    items={[
-      {
-        title: 'Expert Guests',
-        description: 'Learn from leading CRO practitioners and industry experts sharing their knowledge and experiences.',
-        icon: 'tabler:users',
-      },
-      {
-        title: 'Practical Insights',
-        description: 'Get actionable tips and strategies you can apply to improve your conversion rates.',
-        icon: 'tabler:bulb',
-      },
-      {
-        title: 'Multiple Languages',
-        description: 'Content available in English, German, Spanish, and Dutch to serve our global audience.',
-        icon: 'tabler:language',
-      },
-      {
-        title: 'Latest Trends',
-        description: 'Stay up-to-date with the latest developments and best practices in CRO.',
-        icon: 'tabler:chart-arrows',
-      },
-      {
-        title: 'Case Studies',
-        description: 'Real-world examples and success stories from various industries and businesses.',
-        icon: 'tabler:notebook',
-      },
-      {
-        title: 'Community',
-        description: 'Join a growing community of CRO professionals and enthusiasts.',
-        icon: 'tabler:messages',
-      },
-    ]}
-  />
-
-  <!-- Content Widget -->
-  <Content
     id="episodes"
-    isReversed
-    tagline="Latest Episodes"
-    title="Listen to Our Latest Discussions"
-    items={[
+    title={t.latestEpisodes}
+    columns={3}
+    classes={{ container: 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' }}
+  >
+    <EpisodeGrid episodes={latestEpisodes} columns="4" />
+  </Features>
+
+  <Footer
+    links={[
       {
-        title: 'Expert Insights',
-        description: 'Learn from industry leaders and practitioners who share their experiences and knowledge.',
+        title: 'Podcast',
+        links: [
+          { text: 'Latest Episodes', href: '#episodes' },
+          { text: 'All Episodes', href: '/episodes' },
+          { text: 'Guests', href: '/guests' },
+        ],
       },
       {
-        title: 'Practical Tips',
-        description: 'Get actionable advice you can implement in your CRO strategy right away.',
-      },
-      {
-        title: 'Success Stories',
-        description: 'Hear real case studies and success stories from various industries.',
+        title: 'Languages',
+        links: [
+          { text: 'English', href: '/en' },
+          { text: 'Nederlands', href: '/nl' },
+          { text: 'Deutsch', href: '/de' },
+          { text: 'Español', href: '/es' },
+        ],
       },
     ]}
-    image={{
-      src: defaultImage,
-      alt: 'Latest Episodes Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        New episodes every week
-      </h3>
-      Subscribe to never miss an episode
-    </Fragment>
-  </Content>
-</PageLayout>
+    socialLinks={[
+      { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: 'https://twitter.com/cro_cafe' },
+      { ariaLabel: 'RSS Feed', icon: 'tabler:rss', href: '/rss.xml' },
+    ]}
+    footNote="© 2024 CRO.cafe. All rights reserved."
+    currentLang="en"
+    currentPath={Astro.url.pathname}
+  />
+</Layout>

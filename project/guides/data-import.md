@@ -5,6 +5,7 @@ This guide explains how to import data from RSS feeds and CSV files into the CRO
 ## RSS Feed Import
 
 ### Feed URLs
+
 - English: https://feeds.transistor.fm/cro-cafe
 - Dutch: https://feeds.transistor.fm/cro-cafe-nl
 - German: https://feeds.transistor.fm/cro-cafe-deutsch
@@ -53,25 +54,25 @@ async function importRSSFeeds() {
 
   for (const feed of FEEDS) {
     console.log(`Importing ${feed.language} feed...`);
-    
+
     // Fetch and parse feed
     const response = await fetch(feed.url);
     const xml = await response.text();
     const data = parser.parse(xml);
-    
+
     // Process each item
     for (const item of data.rss.channel.item) {
       const parsed = RSSItemSchema.parse(item);
-      
+
       // Generate slug from title
       const slug = parsed.title
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-|-$/g, '');
-      
+
       // Extract episode ID from enclosure URL
       const episodeId = parsed.enclosure['@_url'].split('/').pop()?.slice(0, 8);
-      
+
       // Create MDX content
       const content = `---
 title: ${parsed.title}
@@ -88,7 +89,7 @@ shortId: ${episodeId}
 
 ${parsed.description}
 `;
-      
+
       // Save to file
       const dir = join('src/content/episodes', feed.language, `season-${parsed['itunes:season']}`);
       await writeFile(join(dir, `${slug}.mdx`), content);
@@ -103,7 +104,9 @@ importRSSFeeds().catch(console.error);
 ## CSV Data Import
 
 ### Available CSV Files
+
 Located in `project/current-site-data/{Language}/`:
+
 - Episodes.csv
 - People.csv (Guests)
 - Platforms.csv
@@ -184,7 +187,7 @@ import { writeFile } from 'fs/promises';
 async function downloadAndOptimizeImage(url: string, outputPath: string) {
   const response = await fetch(url);
   const buffer = await response.arrayBuffer();
-  
+
   // Process with sharp
   await sharp(buffer)
     .resize(800, 800, {
@@ -198,13 +201,10 @@ async function downloadAndOptimizeImage(url: string, outputPath: string) {
 // Example usage for guest images
 async function processGuestImages() {
   const guests = await getCollection('guests');
-  
+
   for (const guest of guests) {
     if (guest.data.image) {
-      const outputPath = join(
-        'src/assets/images/guests',
-        `${guest.slug}.webp`
-      );
+      const outputPath = join('src/assets/images/guests', `${guest.slug}.webp`);
       await downloadAndOptimizeImage(guest.data.image, outputPath);
     }
   }
@@ -228,12 +228,12 @@ async function validateContent() {
     if (!audioResponse.ok) {
       console.error(`Invalid audio URL for ${episode.id}`);
     }
-    
+
     // Check guest references exist
     if (episode.data.guests) {
       const guests = await getCollection('guests');
       for (const guestId of episode.data.guests) {
-        if (!guests.find(g => g.id === guestId)) {
+        if (!guests.find((g) => g.id === guestId)) {
           console.error(`Invalid guest reference in ${episode.id}: ${guestId}`);
         }
       }

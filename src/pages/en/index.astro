@@ -1,0 +1,57 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '~/layouts/Layout.astro';
+import EpisodeGrid from '~/components/episode/Grid.astro';
+import { getTranslations } from '~/utils/translations';
+
+const SHOW_ID = '5036'; // English show ID
+
+// Get episodes for the English show
+const episodes = await getCollection('en-episodes');
+
+// Filter to only show episodes from this show and sort by date
+const showEpisodes = episodes
+  .filter(episode => episode.data.relationships.show.data.id === SHOW_ID)
+  .sort((a, b) => 
+    new Date(b.data.attributes.published_at).valueOf() - 
+    new Date(a.data.attributes.published_at).valueOf()
+  );
+
+// Get English translations
+const t = getTranslations('en');
+
+// Metadata for the page
+const metadata = {
+  title: t.title,
+  description: t.description,
+  type: 'website',
+  alternateLanguages: {
+    en: '/en',
+    nl: '/nl',
+    de: '/de',
+    es: '/es',
+  },
+};
+
+const availableLanguages = ['en', 'nl', 'de', 'es'] as const;
+---
+
+<Layout metadata={metadata} currentLang="en" availableLanguages={availableLanguages}>
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-7xl">
+    <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+      <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
+        CRO.cafe EN
+      </h1>
+      <div class="max-w-3xl mx-auto">
+        <p class="text-xl text-gray-600 mb-8 dark:text-slate-400">
+          {t.description}
+        </p>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <h2 class="text-3xl font-bold mb-4">{t.latestEpisodes}</h2>
+      <EpisodeGrid episodes={showEpisodes} limit={12} columns="3" />
+    </div>
+  </section>
+</Layout>

@@ -146,16 +146,19 @@ public/
 ## Implementation Guidelines
 
 1. **Content Organization**
+
    - Keep language-specific content in appropriate directories
    - Use consistent naming conventions
    - Maintain clear separation of concerns
 
 2. **Component Development**
+
    - Create reusable components
    - Follow atomic design principles
    - Implement proper TypeScript types
 
 3. **Asset Management**
+
    - Optimize images during build
    - Use appropriate formats
    - Maintain organized structure

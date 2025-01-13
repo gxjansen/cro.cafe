@@ -1,128 +1,204 @@
 ---
-import { getCollection } from 'astro:content';
 import EpisodeCard from './Card.astro';
 import ErrorBoundary from '../common/ErrorBoundary.astro';
 import { validateProps, EpisodeGridPropsSchema } from '~/utils/component-validation';
 
 interface Props {
-  language: 'en' | 'de' | 'es' | 'nl';
+  episodes: Array<{
+    data: {
+      id: string;
+      type: 'episode';
+      attributes: {
+        title: string;
+        summary: string;
+        description: string;
+        published_at: string;
+        media_url: string;
+        duration: number;
+        duration_in_mmss: string;
+        formatted_published_at: string;
+        formatted_description: string;
+        image_url?: string;
+        video_url?: string;
+        transcript_url?: string;
+        share_url: string;
+        embed_html: string;
+        embed_html_dark: string;
+        slug: string;
+      };
+      relationships: {
+        show: {
+          data: {
+            id: string;
+            type: string;
+          };
+        };
+      };
+    };
+  }>;
   limit?: number;
   featured?: boolean;
-  showGuests?: boolean;
   columns?: '2' | '3' | '4';
+  loading?: boolean;
 }
 
 // Validate props
 const props = validateProps(EpisodeGridPropsSchema, Astro.props);
 const { 
-  language, 
-  limit, 
-  featured = false, 
-  showGuests = true,
-  columns = '3'
+  episodes,
+  limit,
+  featured = false,
+  columns = '3',
+  loading = false
 } = props;
-
-// Get episodes for the specified language
-let episodes = [];
-try {
-  // Debug: Log collection path
-  const collectionPath = `${language}-episodes`;
-  console.log('Trying to get collection:', collectionPath);
-  
-  episodes = await getCollection(collectionPath);
-  
-  // Debug: Log raw collection result
-  console.log('Collection result:', {
-    path: collectionPath,
-    count: episodes.length,
-    episodes: episodes.map(e => ({
-      id: e.id,
-      title: e.data.title,
-      date: e.data.date,
-      slug: e.slug
-    }))
-  });
-} catch (error) {
-  // Log the error for debugging
-  console.error('Error getting collection:', error);
-  // Continue with empty array
-  episodes = [];
-}
 
 // Filter and sort episodes
 const displayEpisodes = episodes
   .filter(entry => {
-    // Skip future episodes
-    const isPublished = new Date(entry.data.date) <= new Date();
     // Skip if featured filter is on and episode is not featured
-    const meetsFeatureFilter = !featured || entry.data.featured;
-    
-    // Debug: Log filtering info
-    console.log('Filtering episode:', {
-      id: entry.id,
-      title: entry.data.title,
-      date: entry.data.date,
-      isPublished,
-      meetsFeatureFilter
-    });
-    
-    return isPublished && meetsFeatureFilter;
+    const meetsFeatureFilter = !featured || entry.data.attributes.featured;
+    return meetsFeatureFilter;
   })
-  .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf())
   // Apply limit if specified
   .slice(0, limit || undefined);
 
-// Debug: Log final episodes
-console.log('Final episodes:', displayEpisodes.length);
-
 // Define grid columns class based on prop
 const gridClass = {
-  '2': 'md:grid-cols-2',
-  '3': 'md:grid-cols-2 lg:grid-cols-3',
-  '4': 'md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
+  '2': 'sm:grid-cols-2',
+  '3': 'sm:grid-cols-2 lg:grid-cols-3',
+  '4': 'sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
 }[columns];
+
+// Generate skeleton cards for loading state
+const skeletonCount = limit || 6;
+
+// Prepare ARIA labels
+const gridLabel = featured ? 'Featured Episodes' : 'Episode List';
+const loadingLabel = 'Loading episodes...';
+const noEpisodesLabel = 'No episodes found';
 ---
 
 <ErrorBoundary fallback="Unable to load episodes. Please try again later.">
   <div class="episode-grid">
-    {displayEpisodes.length > 0 ? (
-      <div class={`grid gap-6 ${gridClass}`}>
-        {displayEpisodes.map((episode) => {
-          // Transform episode data to match schema
-          const episodeData = {
-            id: episode.id,
-            title: episode.data.title,
-            description: episode.data.description,
-            date: episode.data.date,
-            audio_url: episode.data.audio_url,
-            duration: episode.data.duration,
-            language: episode.data.language,
-            guests: episode.data.guests || [],
-            type: episode.data.type || 'episode'
-          };
-          
-          return (
-            <EpisodeCard 
-              episode={episodeData} 
-              showGuests={showGuests}
-            />
-          );
-        })}
+    {loading ? (
+      <div 
+        role="status" 
+        aria-label={loadingLabel}
+        class={`grid gap-4 sm:gap-6 ${gridClass}`}
+      >
+        {Array.from({ length: skeletonCount }).map(() => (
+          <EpisodeCard
+            episode={{
+              id: 'skeleton',
+              type: 'episode',
+              attributes: {
+                title: 'Loading...',
+                summary: 'Loading...',
+                description: 'Loading...',
+                published_at: new Date().toISOString(),
+                media_url: '',
+                duration: 0,
+                duration_in_mmss: '00:00',
+                formatted_published_at: 'Loading...',
+                formatted_description: 'Loading...',
+                share_url: '',
+                embed_html: '',
+                embed_html_dark: '',
+                slug: '',
+              },
+              relationships: {
+                show: {
+                  data: {
+                    id: '',
+                    type: 'show',
+                  },
+                },
+              },
+            }}
+            loading={true}
+          />
+        ))}
+        <div class="sr-only" aria-live="polite">Loading episodes, please wait...</div>
+      </div>
+    ) : displayEpisodes.length > 0 ? (
+      <div 
+        role="grid" 
+        aria-label={gridLabel}
+        class={`grid gap-4 sm:gap-6 ${gridClass}`}
+        data-grid-nav
+      >
+        {displayEpisodes.map((episode, index) => (
+          <div 
+            role="gridcell"
+            class="episode-cell"
+            tabindex={index === 0 ? 0 : -1}
+          >
+            <EpisodeCard episode={episode.data} />
+          </div>
+        ))}
       </div>
     ) : (
-      <div class="no-episodes">
+      <div 
+        class="no-episodes"
+        role="status"
+        aria-label={noEpisodesLabel}
+      >
         <p>No episodes found.</p>
       </div>
     )}
   </div>
 </ErrorBoundary>
 
+<script>
+import { initializeGridNavigation } from './grid-init';
+initializeGridNavigation();
+</script>
+
 <style>
 .episode-grid {
-  @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8;
+  @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8;
 }
 
 .no-episodes {
-  @apply text-center text-gray-500 dark:text-gray-400 py-12;
+  @apply text-center text-gray-500 dark:text-gray-400 py-8 sm:py-12;
 }
+
+/* Responsive grid adjustments */
+@screen sm {
+  .grid {
+    @apply grid-cols-2;
+  }
+}
+
+@screen lg {
+  .grid {
+    @apply grid-cols-3;
+  }
+}
+
+@screen xl {
+  .grid[class*='grid-cols-4'] {
+    @apply grid-cols-4;
+  }
+}
+
+/* Loading state animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loading {
+  @apply animate-pulse;
+}
+
+/* Focus styles */
+.episode-cell:focus-within {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-gray-800 rounded-lg;
+}
+
 </style>

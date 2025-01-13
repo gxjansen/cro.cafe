@@ -1,84 +1,96 @@
-import { Handler } from '@netlify/functions';
+import { Handler, HandlerEvent } from '@netlify/functions';
 import { Octokit } from '@octokit/rest';
-import { TransistorEpisodeSchema, convertTransistorEpisode } from '../../src/utils/transistor-api';
-import { slugify } from '../../src/utils/utils';
+import { createHmac } from 'crypto';
 
-const SHOW_LANGUAGES: Record<string, string> = {
-  'cro-cafe': 'en',
-  'cro-cafe-nl': 'nl',
-  'cro-cafe-deutsch': 'de',
-  'cro-cafe-es': 'es',
-};
+interface TransistorWebhookPayload {
+  event: string;
+  episode: {
+    id: string;
+    type: 'episode';
+    attributes: {
+      title: string;
+      status: string;
+      published_at: string;
+      updated_at: string;
+    };
+  };
+}
 
-const GITHUB_REPO = {
-  owner: 'gxjansen',
-  repo: 'cro.cafe',
-};
+// Initialize GitHub client
+const octokit = new Octokit({
+  auth: process.env.GITHUB_TOKEN,
+});
 
-const handler: Handler = async (event) => {
-  // Verify webhook signature (you should implement this)
-  if (!event.body) {
+// Verify webhook signature
+function verifySignature(signature: string | undefined, body: string): boolean {
+  if (!signature || !process.env.TRANSISTOR_WEBHOOK_SECRET) return false;
+
+  const hmac = createHmac('sha256', process.env.TRANSISTOR_WEBHOOK_SECRET);
+  const expectedSignature = hmac.update(body).digest('hex');
+
+  // Use constant-time string comparison to prevent timing attacks
+  if (signature.length !== expectedSignature.length) {
+    return false;
+  }
+
+  let result = 0;
+  for (let i = 0; i < signature.length; i++) {
+    result |= signature.charCodeAt(i) ^ expectedSignature.charCodeAt(i);
+  }
+  return result === 0;
+}
+
+export const handler: Handler = async (event: HandlerEvent) => {
+  // Only allow POST requests
+  if (event.httpMethod !== 'POST') {
     return {
-      statusCode: 400,
-      body: JSON.stringify({ error: 'No body provided' }),
+      statusCode: 405,
+      body: 'Method Not Allowed',
     };
   }
 
   try {
-    const payload = JSON.parse(event.body);
-    const episode = TransistorEpisodeSchema.parse(payload.data);
-    const showId = episode.relationships.show.data.id;
-    const language = SHOW_LANGUAGES[showId];
-
-    if (!language) {
-      throw new Error(`Unknown show ID: ${showId}`);
+    // Verify webhook signature
+    const signature = event.headers['x-transistor-signature'];
+    if (!verifySignature(signature, event.body || '')) {
+      return {
+        statusCode: 401,
+        body: 'Invalid signature',
+      };
     }
 
-    // Convert episode to our format
-    const convertedEpisode = convertTransistorEpisode(episode);
-    const episodeSlug = slugify(convertedEpisode.title);
-    const filePath = `src/content/${language}-episodes/${episodeSlug}.json`;
-    const content = JSON.stringify(convertedEpisode, null, 2);
+    // Parse webhook payload
+    const payload = JSON.parse(event.body || '{}') as TransistorWebhookPayload;
+    const { event: eventType } = payload;
 
-    // Initialize Octokit
-    if (!process.env.GITHUB_TOKEN) {
-      throw new Error('GITHUB_TOKEN environment variable is required');
+    // Only process episode events
+    if (!eventType.startsWith('episode.')) {
+      return {
+        statusCode: 200,
+        body: 'Event ignored',
+      };
     }
-    const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
-    // Get the current commit SHA
-    const { data: ref } = await octokit.git.getRef({
-      ...GITHUB_REPO,
-      ref: 'heads/main',
-    });
-    const commitSha = ref.object.sha;
-
-    // Create or update the file in GitHub
-    await octokit.repos.createOrUpdateFileContents({
-      ...GITHUB_REPO,
-      path: filePath,
-      message: `${payload.event_type} episode: ${convertedEpisode.title}`,
-      content: Buffer.from(content).toString('base64'),
-      branch: 'main',
-      sha: commitSha,
+    // Trigger GitHub Action to sync episodes
+    await octokit.repos.createDispatchEvent({
+      owner: process.env.GITHUB_OWNER || '',
+      repo: process.env.GITHUB_REPO || '',
+      event_type: 'transistor-webhook',
+      client_payload: {
+        event: eventType,
+        episode: payload.episode,
+      },
     });
 
     return {
       statusCode: 200,
-      body: JSON.stringify({
-        message: 'Episode updated successfully',
-        episode: episodeSlug,
-      }),
+      body: JSON.stringify({ message: 'Sync triggered' }),
     };
   } catch (error) {
     console.error('Webhook error:', error);
     return {
       statusCode: 500,
-      body: JSON.stringify({
-        error: error instanceof Error ? error.message : 'Unknown error occurred',
-      }),
+      body: JSON.stringify({ error: 'Internal Server Error' }),
     };
   }
 };
-
-export { handler };
