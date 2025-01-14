@@ -98,6 +98,39 @@ const {
 
     <!-- Custom Styles -->
     <CustomStyles />
+
+    <!-- Theme Script -->
+    <script is:inline>
+      if (
+        localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+
+      function attachEvent(selector, event, fn) {
+        const matches = typeof selector === 'string' ? document.querySelectorAll(selector) : selector;
+        if (matches && matches.length) {
+          matches.forEach((elem) => {
+            elem.addEventListener(event, (e) => fn(e, elem), false);
+          });
+        }
+      }
+
+      window.onload = function () {
+        attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
+          if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.theme = 'light';
+          } else {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
+          }
+        });
+      };
+    </script>
   </head>
 
   <body>
