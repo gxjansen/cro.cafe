@@ -25,7 +25,7 @@ export function getAsset(path: string) {
  * Generate a podcast episode URL
  */
 export function getEpisodePermalink(language: Language, slug: string) {
-  return `/${language}/podcast/${slug}`;
+  return `/${language}/episodes/${slug}`;
 }
 
 /**

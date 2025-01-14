@@ -34,7 +34,7 @@ export default defineConfig({
     }),
     icon(),
   ],
-  output: 'server',
+  output: 'static',
   image: {
     service: {
       entrypoint: 'astro/assets/services/sharp',

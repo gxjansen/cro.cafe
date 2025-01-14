@@ -3,44 +3,10 @@ import EpisodeCard from './Card.astro';
 import ErrorBoundary from '../common/ErrorBoundary.astro';
 import { validateProps, EpisodeGridPropsSchema } from '~/utils/component-validation';
 
-interface Props {
-  episodes: Array<{
-    data: {
-      id: string;
-      type: 'episode';
-      attributes: {
-        title: string;
-        summary: string;
-        description: string;
-        published_at: string;
-        media_url: string;
-        duration: number;
-        duration_in_mmss: string;
-        formatted_published_at: string;
-        formatted_description: string;
-        image_url?: string;
-        video_url?: string;
-        transcript_url?: string;
-        share_url: string;
-        embed_html: string;
-        embed_html_dark: string;
-        slug: string;
-      };
-      relationships: {
-        show: {
-          data: {
-            id: string;
-            type: string;
-          };
-        };
-      };
-    };
-  }>;
-  limit?: number;
-  featured?: boolean;
-  columns?: '2' | '3' | '4';
-  loading?: boolean;
-}
+import type { z } from 'zod';
+import type { EpisodeGridPropsSchema } from '~/utils/component-validation';
+
+type Props = z.infer<typeof EpisodeGridPropsSchema>;
 
 // Validate props
 const props = validateProps(EpisodeGridPropsSchema, Astro.props);
@@ -200,5 +166,4 @@ initializeGridNavigation();
 .episode-cell:focus-within {
   @apply outline-none ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-gray-800 rounded-lg;
 }
-
 </style>

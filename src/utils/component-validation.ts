@@ -77,6 +77,8 @@ export const EpisodeSchema = z.object({
 export const EpisodeGridPropsSchema = z.object({
   episodes: z.array(
     z.object({
+      id: z.string(),
+      collection: z.string(),
       data: EpisodeSchema,
     })
   ),
