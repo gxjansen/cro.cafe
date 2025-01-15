@@ -37,13 +37,15 @@ export const getHeaderData = (lang: string) => ({
       href: withLang('/guests', lang),
     },
     {
-      text: 'About',
-      links: [
-        {
-          text: 'About CRO.CAFE',
-          href: withLang('/#about', lang),
-        },
-      ],
+      text:
+        lang === 'de'
+          ? 'Über uns'
+          : lang === 'nl'
+            ? 'Over ons'
+            : lang === 'es'
+              ? 'Sobre nosotros'
+              : 'About',
+      href: '/about',
     },
   ],
   actions: [

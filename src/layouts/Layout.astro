@@ -23,8 +23,12 @@ interface Props {
   availableLanguages: readonly ('en' | 'nl' | 'de' | 'es')[];
 }
 
-const props = validateProps(LayoutPropsSchema, Astro.props);
-const { metadata, currentLang, availableLanguages } = props;
+const { metadata, currentLang, availableLanguages, ...rest } = Astro.props;
+const validatedProps = validateProps(LayoutPropsSchema, { 
+  metadata: typeof metadata === 'string' ? JSON.parse(metadata) : metadata,
+  currentLang,
+  availableLanguages: typeof availableLanguages === 'string' ? JSON.parse(availableLanguages) : availableLanguages,
+});
 
 const {
   title,

@@ -12,25 +12,25 @@ export interface Props {
   currentLang?: 'en' | 'de' | 'es' | 'nl';
 }
 
-const { metadata, availableLanguages, currentLang = 'en' } = Astro.props;
+const props = Astro.props;
 
 // Prepare props objects to avoid string interpolation issues
 const layoutProps = {
-  metadata,
-  availableLanguages,
-  currentLang,
+  metadata: props.metadata,
+  availableLanguages: props.availableLanguages,
+  currentLang: props.currentLang || 'en',
 };
 
 const headerProps = {
-  ...getHeaderData(currentLang),
+  ...getHeaderData(props.currentLang || 'en'),
   isSticky: true,
   showToggleTheme: true,
-  currentLang,
+  currentLang: props.currentLang || 'en',
 };
 
 const footerProps = {
-  ...getFooterData(currentLang),
-  currentLang,
+  ...getFooterData(props.currentLang || 'en'),
+  currentLang: props.currentLang || 'en',
 };
 ---
 

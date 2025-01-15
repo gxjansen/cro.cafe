@@ -6,13 +6,11 @@ import { validateProps, EpisodePlayerPropsSchema } from '~/utils/component-valid
 interface Props {
   audio_url: string;
   title: string;
-  description?: string | null;
 }
 
-// Validate props with fallback for description
-const { audio_url, title, description: rawDescription } = Astro.props;
-const description = rawDescription || 'Listen to this episode of CRO.CAFE';
-const props = validateProps(EpisodePlayerPropsSchema, { audio_url, title, description });
+// Validate props
+const { audio_url, title } = Astro.props;
+const props = validateProps(EpisodePlayerPropsSchema, { audio_url, title });
 
 // Ensure the title is properly escaped for use in aria-label
 const escapedTitle = title.replace(/"/g, '&quot;');
@@ -20,32 +18,14 @@ const escapedTitle = title.replace(/"/g, '&quot;');
 
 <ErrorBoundary fallback="Audio player unavailable. Please try again later.">
   <div class="episode-player">
-    <div class="audio-container">
+    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg p-6">
       <AudioPlayer client:load {audio_url} {title} {escapedTitle} />
     </div>
-    {description && (
-      <div class="episode-description">
-        <p>{description}</p>
-      </div>
-    )}
   </div>
 </ErrorBoundary>
 
 <style>
-.episode-player {
-  @apply w-full max-w-3xl mx-auto my-4 rounded-lg overflow-hidden
-         shadow-lg bg-white dark:bg-gray-800;
-}
-
-.audio-container {
-  @apply p-4;
-}
-
-.audio-player {
-  @apply w-full;
-}
-
-.episode-description {
-  @apply p-4 text-sm text-gray-600 dark:text-gray-300;
-}
+  .episode-player {
+    @apply w-full max-w-4xl mx-auto;
+  }
 </style>

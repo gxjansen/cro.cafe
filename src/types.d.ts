@@ -64,7 +64,7 @@ export interface Brand {
   canonicalUrl?: string;
 }
 
-export interface MetadataProps {
+export interface MetaData {
   title: string;
   description: string;
   image?: string;
@@ -74,6 +74,7 @@ export interface MetadataProps {
   modifiedTime?: string;
   author?: string;
   tags?: string[];
+  alternateLanguages?: Record<string, string>;
 }
 
 export interface OpenGraphImageProps {
@@ -120,7 +121,7 @@ export interface SchemaOrgObject {
     | null
     | undefined
     | Record<string, unknown>
-    | Array<unknown>; // Allow Schema.org properties with specific types
+    | Array<unknown>;
 }
 
 declare module 'satori' {

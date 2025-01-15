@@ -125,9 +125,15 @@ const structuredData = {
         <header class="episode-header">
           <div class="header-content">
             <h1>{title}</h1>
-            <time datetime={published_at}>{formatted_published_at}</time>
-            <div class="episode-meta">
-              <span class="duration">{duration_in_mmss}</span>
+            <div class="episode-meta flex flex-col gap-3">
+              <div class="text-sm text-gray-600 dark:text-gray-400">
+                Publication date: <time datetime={published_at} class="font-medium">
+                  {new Date(published_at).getDate()} {new Date(published_at).toLocaleString('en-GB', { month: 'long' })}, {new Date(published_at).getFullYear()}
+                </time>
+              </div>
+              <div class="text-sm text-gray-600 dark:text-gray-400">
+                Duration: <span class="font-medium">{duration_in_mmss}</span>
+              </div>
               {transcript_url && (
                 <a href={transcript_url} class="transcript-link">
                   View Transcript
@@ -140,35 +146,30 @@ const structuredData = {
               )}
             </div>
           </div>
-          <img
-            src={image.src}
-            width={image.width}
-            height={image.height}
-            alt={title}
-            loading="eager"
-            decoding="async"
-            class="episode-image"
-          />
+          <div class="relative aspect-[16/9]">
+            <img
+              src={image.src}
+              width={image.width}
+              height={image.height}
+              alt={title}
+              loading="eager"
+              decoding="async"
+              class="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg"
+            />
+          </div>
         </header>
 
-        <ErrorBoundary fallback="Audio player unavailable. Please try again later.">
-          <Player 
-            audio_url={media_url}
-            title={title}
-            description={formatted_description || description || 'Listen to this episode of CRO.CAFE'}
-          />
-        </ErrorBoundary>
+        <div class="mt-6">
+          <ErrorBoundary fallback="Audio player unavailable. Please try again later.">
+            <Player 
+              audio_url={media_url}
+              title={title}
+            />
+          </ErrorBoundary>
+        </div>
 
-        <div class="episode-content">
+        <div class="episode-content mt-6">
           <div class="description" set:html={sanitizedDescription} />
-
-          <div class="share-section">
-            <h2>Share this episode</h2>
-            <div class="share-embed" set:html={embed_html} />
-            <a href={share_url} class="share-link" target="_blank" rel="noopener noreferrer">
-              Share Link
-            </a>
-          </div>
         </div>
 
         <ErrorBoundary fallback="Additional episode information unavailable.">
@@ -216,9 +217,6 @@ const structuredData = {
          transition-colors duration-200;
 }
 
-.episode-image {
-  @apply w-full rounded-lg shadow-lg object-cover;
-}
 
 .episode-content {
   @apply mt-6 sm:mt-8;

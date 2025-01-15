@@ -24,7 +24,7 @@ export const LayoutPropsSchema = z
     availableLanguages: z.array(LanguageSchema).min(1),
     currentLang: LanguageSchema,
   })
-  .strict();
+  .passthrough(); // Allow additional Astro-specific props
 
 // Navigation component props
 export const NavigationPropsSchema = z.object({
@@ -38,11 +38,12 @@ export const FooterPropsSchema = z.object({
 });
 
 // Episode components props
-export const EpisodePlayerPropsSchema = z.object({
-  audio_url: z.string().url(),
-  title: z.string(),
-  description: z.string(),
-});
+export const EpisodePlayerPropsSchema = z
+  .object({
+    audio_url: z.string().url(),
+    title: z.string(),
+  })
+  .strict();
 
 // Episode data validation matching Transistor API structure
 export const EpisodeSchema = z.object({
