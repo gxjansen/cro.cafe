@@ -67,7 +67,7 @@ const {
 // Get language from show ID
 const language = getLanguageFromShowId(episode.relationships.show.data.id);
 
-const image = await getEpisodeImage(`/images/episodes/en/${episode.attributes.slug}.webp`, 'detail');
+const image = await getEpisodeImage(`/images/episodes/${language}/${episode.attributes.slug}.webp`, 'detail');
 
 // Ensure local image URL is used for Open Graph and Twitter meta tags
 const ogImageUrl = episode.local_image_url || image.src;

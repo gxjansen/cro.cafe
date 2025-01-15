@@ -63,8 +63,8 @@ const langNames = {
 
 // Prepare metadata
 const metadata = {
-  title: `CRO.cafe - ${langNames[currentLang as keyof typeof langNames]} Podcast`,
-  description: `Latest episodes of the ${langNames[currentLang as keyof typeof langNames]} CRO.cafe podcast about Conversion Rate Optimization`,
+  title: `CRO.CAFE - ${langNames[currentLang as keyof typeof langNames]} Podcast`,
+  description: `Latest episodes of the ${langNames[currentLang as keyof typeof langNames]} CRO.CAFE podcast about Conversion Rate Optimization`,
   type: 'website',
   canonicalUrl: `${Astro.url.origin}/${currentLang}`,
   alternateLanguages: Object.fromEntries(
@@ -87,7 +87,7 @@ const metadata = {
     <section class="max-w-7xl mx-auto">
       <header class="text-center mb-12">
         <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
-          CRO.cafe {langNames[currentLang as keyof typeof langNames]}
+          CRO.CAFE {langNames[currentLang as keyof typeof langNames]}
         </h1>
         <p class="text-xl text-gray-600 dark:text-gray-400">
           {currentLang === 'en' && 'The podcast about Conversion Rate Optimization'}

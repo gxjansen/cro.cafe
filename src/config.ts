@@ -1,8 +1,8 @@
 export const SITE = {
-  name: 'CRO.cafe',
-  title: 'CRO.cafe - Conversion Rate Optimization Podcast',
+  name: 'CRO.CAFE',
+  title: 'CRO.CAFE - Conversion Rate Optimization Podcast',
   description:
-    'Expert interviews and discussions about Conversion Rate Optimization, A/B testing, and UX research.',
+    "Join 14K+ subscribers for the world's most exciting, raw discussions on experimentation, CRO, user research and digital marketing from the industry leaders who live and breathe it\.",
   defaultLanguage: 'en',
   languages: ['en', 'nl', 'de', 'es'],
 } as const;

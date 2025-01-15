@@ -1,0 +1,161 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import { getCollection } from 'astro:content';
+
+// Get platform data for all languages
+const dePlatforms = await getCollection('de-platforms');
+const enPlatforms = await getCollection('en-platforms');
+const nlPlatforms = await getCollection('nl-platforms');
+const esPlatforms = await getCollection('es-platforms');
+
+// Language section titles
+const sectionTitles = {
+  en: 'English',
+  de: 'Deutsch',
+  nl: 'Nederlands',
+  es: 'Español'
+};
+
+---
+
+<PageLayout 
+  metadata={{ 
+    title: 'Subscribe to CRO.CAFE Podcast',
+    description: 'Subscribe to the CRO.CAFE Podcast - Join 7500+ CRO and Digital Marketing Specialists for honest conversations on CRO, experimentation, and digital marketing.'
+  }}
+  currentLang="en"
+  availableLanguages={['en', 'de', 'es', 'nl']}
+>
+  <section class="bg-gradient-to-b from-primary-50 to-white dark:from-primary-950 dark:to-slate-900">
+    <div class="container mx-auto px-4 py-24">
+      <h1 class="text-4xl md:text-5xl font-bold text-center mb-4 text-primary-950 dark:text-primary-50">Subscribe for free</h1>
+      <p class="text-xl md:text-2xl text-center mb-8 text-primary-800 dark:text-primary-200">Join 7500+ CRO and Digital Marketing Specialists</p>
+      <p class="text-lg max-w-3xl mx-auto text-center text-primary-700 dark:text-primary-300">
+        The CRO.CAFE Podcast is an interview-driven show that gives you honest conversations on CRO, experimentation, user research and digital marketing from the people that live it. Through humor, grace and grit, Guido and his guests give you the tools, insights and motivation you need for your daily CRO grind.
+      </p>
+    </div>
+  </section>
+
+  <nav class="sticky top-0 z-10 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm shadow-md">
+    <div class="container mx-auto px-4 py-6">
+      <div class="flex flex-wrap justify-center gap-4">
+        {Object.entries(sectionTitles).map(([lang, title]) => (
+          <a 
+            href={`#${lang}`}
+            class="px-6 py-3 rounded-full bg-primary-100 hover:bg-primary-200 dark:bg-primary-900 dark:hover:bg-primary-800 text-primary-700 dark:text-primary-300 font-medium transition-all duration-200 hover:scale-105"
+          >
+            {title}
+          </a>
+        ))}
+      </div>
+    </div>
+  </nav>
+
+  <section id="en" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center text-primary-950 dark:text-primary-50">{sectionTitles.en}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+        {enPlatforms.map((platform) => (
+          <a 
+            href={platform.data.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-4 p-4 rounded-lg bg-white dark:bg-slate-800 hover:bg-primary-50 dark:hover:bg-primary-900 border border-primary-200 dark:border-primary-800 transition-all duration-200 hover:scale-105 hover:shadow-md"
+          >
+            <div class="w-12 h-12 flex items-center justify-center relative">
+              <img
+                src={`/images/platforms/${platform.id === 'podcast-republic' ? 'podcast-republic' : platform.id}.png`}
+                alt={platform.data.name}
+                width={48}
+                height={48}
+                class="object-contain"
+              />
+            </div>
+            <span class="text-lg font-medium text-primary-950 dark:text-primary-50">{platform.data.name}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="de" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center text-primary-950 dark:text-primary-50">{sectionTitles.de}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+        {dePlatforms.map((platform) => (
+          <a 
+            href={platform.data.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-4 p-4 rounded-lg bg-white dark:bg-slate-800 hover:bg-primary-50 dark:hover:bg-primary-900 border border-primary-200 dark:border-primary-800 transition-all duration-200 hover:scale-105 hover:shadow-md"
+          >
+            <div class="w-12 h-12 flex items-center justify-center relative">
+              <img
+                src={`/images/platforms/${platform.id === 'podcast-republic' ? 'podcast-republic' : platform.id}.png`}
+                alt={platform.data.name}
+                width={48}
+                height={48}
+                class="object-contain"
+              />
+            </div>
+            <span class="text-lg font-medium text-primary-950 dark:text-primary-50">{platform.data.name}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="nl" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center text-primary-950 dark:text-primary-50">{sectionTitles.nl}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+        {nlPlatforms.map((platform) => (
+          <a 
+            href={platform.data.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-4 p-4 rounded-lg bg-white dark:bg-slate-800 hover:bg-primary-50 dark:hover:bg-primary-900 border border-primary-200 dark:border-primary-800 transition-all duration-200 hover:scale-105 hover:shadow-md"
+          >
+            <div class="w-12 h-12 flex items-center justify-center relative">
+              <img
+                src={`/images/platforms/${platform.id === 'podcast-republic' ? 'podcast-republic' : platform.id}.png`}
+                alt={platform.data.name}
+                width={48}
+                height={48}
+                class="object-contain"
+              />
+            </div>
+            <span class="text-lg font-medium text-primary-950 dark:text-primary-50">{platform.data.name}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="es" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center text-primary-950 dark:text-primary-50">{sectionTitles.es}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+        {esPlatforms.map((platform) => (
+          <a 
+            href={platform.data.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-4 p-4 rounded-lg bg-white dark:bg-slate-800 hover:bg-primary-50 dark:hover:bg-primary-900 border border-primary-200 dark:border-primary-800 transition-all duration-200 hover:scale-105 hover:shadow-md"
+          >
+            <div class="w-12 h-12 flex items-center justify-center relative">
+              <img
+                src={`/images/platforms/${platform.id === 'podcast-republic' ? 'podcast-republic' : platform.id}.png`}
+                alt={platform.data.name}
+                width={48}
+                height={48}
+                class="object-contain"
+              />
+            </div>
+            <span class="text-lg font-medium text-primary-950 dark:text-primary-50">{platform.data.name}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</PageLayout>

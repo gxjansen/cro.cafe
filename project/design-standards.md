@@ -1,4 +1,4 @@
-# CRO.cafe Design Standards
+# CRO.CAFE Design Standards
 
 Minimize the use of inline styles, and use Tailwind classes instead. Mjor elements are shown on /styleguide page.
 
@@ -94,7 +94,6 @@ icon (also to be used as favicon) can be found at /public/crocafe-icon.png
   - Colors:
     - Apple Podcasts: #933AC3
     - Spotify: #1DB954
-    - Google Podcasts: #4285F4
 - Hover state:
   - Slightly larger shadow
   - Darker border

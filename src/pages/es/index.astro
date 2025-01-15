@@ -3,10 +3,12 @@ import { getCollection } from 'astro:content';
 import PageLayout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Grid from '~/components/episode/Grid.astro';
+import { getTranslations } from '~/utils/translations';
 
+const translations = getTranslations('es');
 const metadata = {
-  title: 'CRO.CAFE - El Podcast de Optimización de Conversión',
-  description: 'Tu podcast sobre Optimización de Tasa de Conversión.',
+  title: translations.title,
+  description: translations.description,
 };
 
 const availableLanguages = ['en', 'de', 'es', 'nl'];
@@ -21,13 +23,13 @@ const spanishShowId = '16111';
 <PageLayout {...{ metadata, availableLanguages, currentLang: 'es' }}>
   <Hero
     title="Bienvenido a CRO.CAFE"
-    subtitle="Tu podcast sobre Optimización de Tasa de Conversión"
+    subtitle={translations.description}
   />
 
   {/* Latest Episodes */}
   <section class="py-12">
     <div class="container mx-auto">
-      <h2 class="text-3xl font-bold mb-8 text-center">Últimos Episodios</h2>
+      <h2 class="text-3xl font-bold mb-8 text-center">{translations.latestEpisodes}</h2>
       <Grid
         episodes={episodes}
         limit={6}

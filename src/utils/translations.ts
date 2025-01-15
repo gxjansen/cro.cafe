@@ -1,8 +1,8 @@
 export const translations = {
   en: {
-    title: 'CRO.cafe - Conversion Rate Optimization Podcast',
+    title: 'CRO.CAFE - Conversion Rate Optimization Podcast',
     description:
-      'Expert interviews and discussions about Conversion Rate Optimization, A/B testing, and UX research.',
+      "Join 15K+ subscribers for the world's most exciting, raw discussions on experimentation, CRO, user research and digital marketing from the industry leaders who live and breathe it\.",
     latestEpisodes: 'Latest Episodes',
     listenNow: 'Listen Now',
     languageButtons: {
@@ -18,9 +18,8 @@ export const translations = {
     },
   },
   nl: {
-    title: 'CRO.cafe - Conversie Optimalisatie Podcast',
-    description:
-      'Expert interviews en discussies over Conversie Optimalisatie, A/B testen en UX onderzoek.',
+    title: 'CRO.CAFE - De podcast over klantgedreven digitale optimalisatie',
+    description: 'Sluit je aan bij 15K+ CRO en digital marketing specialisten',
     latestEpisodes: 'Laatste Afleveringen',
     listenNow: 'Luister Nu',
     languageButtons: {
@@ -36,9 +35,9 @@ export const translations = {
     },
   },
   de: {
-    title: 'CRO.cafe - Conversion Rate Optimierung Podcast',
+    title: 'CRO.CAFE - Conversion Rate Optimierung Podcast',
     description:
-      'Experteninterviews und Diskussionen über Conversion Rate Optimierung, A/B-Tests und UX-Research.',
+      'Werde Teil unserer 15K+ Abonnenten und begleite Branchenführer und Experten der Marketing-Szene in spannenden Diskussionen über digitales Marketing, CRO, Nutzerforschung und Testing.',
     latestEpisodes: 'Neueste Folgen',
     listenNow: 'Jetzt Anhören',
     languageButtons: {
@@ -55,9 +54,9 @@ export const translations = {
     },
   },
   es: {
-    title: 'CRO.cafe - Podcast de Optimización de Conversión',
+    title: 'CRO.CAFE - El podcast sobre optimización digital centrado en el consumidor',
     description:
-      'Entrevistas con expertos y discusiones sobre Optimización de Conversión, pruebas A/B e investigación UX.',
+      'Únete a más de 15K+ profesionales y especialistas del marketing digital que ya están suscritos.',
     latestEpisodes: 'Últimos Episodios',
     listenNow: 'Escuchar Ahora',
     languageButtons: {

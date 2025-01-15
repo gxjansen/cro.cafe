@@ -2,7 +2,6 @@
 import { Icon } from 'astro-icon/components';
 import Logo from '~/components/Logo.astro';
 import { getHomePermalink } from '~/utils/permalinks';
-import LanguageSwitcher from '~/components/common/LanguageSwitcher.astro';
 
 interface Link {
   text?: string;
@@ -109,11 +108,8 @@ const {
         )
       }
 
-      <div class="flex items-center gap-4">
-        <LanguageSwitcher currentLang={currentLang} currentPath={currentPath} />
-        <div class="text-sm dark:text-muted">
-          <Fragment set:html={footNote} />
-        </div>
+      <div class="text-sm dark:text-muted">
+        <Fragment set:html={footNote} />
       </div>
     </div>
   </div>

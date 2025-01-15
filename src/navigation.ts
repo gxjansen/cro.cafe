@@ -51,7 +51,7 @@ export const getHeaderData = (lang: string) => ({
   actions: [
     {
       text: 'Subscribe',
-      href: '#',
+      href: '/subscribe',
       icon: 'tabler:rss',
       target: '_blank',
       variant: 'primary',
@@ -64,9 +64,9 @@ export const getFooterData = (lang: string) => ({
     {
       title: 'Listen On',
       links: [
-        { text: 'Spotify', href: '#', icon: 'tabler:brand-spotify' },
-        { text: 'Apple Podcasts', href: '#', icon: 'tabler:brand-apple' },
-        { text: 'Google Podcasts', href: '#', icon: 'tabler:brand-google' },
+        { text: 'Spotify', href: '/subscribe', icon: 'tabler:brand-spotify' },
+        { text: 'Apple Podcasts', href: '/subscribe', icon: 'tabler:brand-apple' },
+        { text: 'Other Platforms', href: '/subscribe' },
       ],
     },
     {
@@ -79,10 +79,7 @@ export const getFooterData = (lang: string) => ({
     },
     {
       title: 'Legal',
-      links: [
-        { text: 'Terms', href: withLang('/terms', lang) },
-        { text: 'Privacy Policy', href: withLang('/privacy', lang) },
-      ],
+      links: [{ text: 'Privacy Policy', href: '/privacy' }],
     },
   ],
   socialLinks: [
