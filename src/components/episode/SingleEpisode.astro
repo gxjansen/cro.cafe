@@ -137,28 +137,29 @@ const structuredData = {
               <div class="text-sm text-gray-600 dark:text-gray-400">
                 Duration: <span class="font-medium">{duration_in_mmss}</span>
               </div>
-              {transcript_url && (
-                <a href={transcript_url} class="transcript-link">
-                  View Transcript
-                </a>
-              )}
-              {video_url && (
-                <a href={video_url} class="youtube-link">
-                  Watch on YouTube
-                </a>
-              )}
             </div>
           </div>
           <div class="relative aspect-[16/9]">
-<img
-  src={episode.local_image_url || image.src}
-  width={image.width}
-  height={image.height}
-  alt={title}
-  loading="eager"
-  decoding="async"
-  class="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg"
-/>
+            {video_url ? (
+              <iframe
+                src={video_url.replace(/(youtube\.com\/watch\?v=|youtu\.be\/)([^&]+)/, 'youtube.com/embed/$2')}
+                title={`Video: ${title}`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy"
+                class="absolute inset-0 w-full h-full rounded-lg shadow-lg"
+              />
+            ) : (
+              <img
+                src={episode.local_image_url || image.src}
+                width={image.width}
+                height={image.height}
+                alt={title}
+                loading="eager"
+                decoding="async"
+                class="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg"
+              />
+            )}
           </div>
         </header>
 
@@ -173,6 +174,13 @@ const structuredData = {
 
         <div class="episode-content mt-6">
           <div class="description" set:html={sanitizedDescription} />
+          {transcript_url && (
+            <div class="mt-6">
+              <a href={transcript_url} class="transcript-link">
+                View Transcript
+              </a>
+            </div>
+          )}
         </div>
 
         <ErrorBoundary fallback="Additional episode information unavailable.">
