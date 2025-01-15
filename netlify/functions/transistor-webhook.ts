@@ -1,4 +1,4 @@
-import { Handler, HandlerEvent } from '@netlify/functions';
+import type { Handler, HandlerEvent } from '@netlify/functions';
 import { Octokit } from '@octokit/rest';
 import { createHmac } from 'crypto';
 
@@ -63,11 +63,11 @@ export const handler: Handler = async (event: HandlerEvent) => {
     const payload = JSON.parse(event.body || '{}') as TransistorWebhookPayload;
     const { event: eventType } = payload;
 
-    // Only process episode events
-    if (!eventType.startsWith('episode.')) {
+    // Only process published episode events
+    if (!eventType.startsWith('episode.') || payload.episode.attributes.status !== 'published') {
       return {
         statusCode: 200,
-        body: 'Event ignored',
+        body: 'Event ignored - not a published episode',
       };
     }
 

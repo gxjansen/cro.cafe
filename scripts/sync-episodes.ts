@@ -28,10 +28,14 @@ async function syncShow(showId: string) {
   try {
     const episodes = await transistorApi.getAllEpisodes(showId);
 
-    // Save each episode
+    // Save only published episodes
     for (const episode of episodes) {
-      await saveEpisode(episode, language);
-      console.log(`Saved episode: ${episode.attributes.title}`);
+      if (episode.attributes.status === 'published') {
+        await saveEpisode(episode, language);
+        console.log(`Saved published episode: ${episode.attributes.title}`);
+      } else {
+        console.log(`Skipped non-published episode: ${episode.attributes.title}`);
+      }
     }
   } catch (error) {
     console.error(`Error syncing show ${showId}:`, error);

@@ -5,6 +5,7 @@ export interface TransistorEpisode {
     title: string;
     summary: string;
     description: string;
+    status: string;
     published_at: string;
     media_url: string;
     duration: number;
