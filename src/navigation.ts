@@ -5,19 +5,30 @@ const withLang = (path: string, lang: string) => `/${lang}${path}`;
 export const getHeaderData = (lang: string) => ({
   links: [
     {
-      text: 'Episodes',
+      text:
+        lang === 'de'
+          ? 'Episoden'
+          : lang === 'nl'
+            ? 'Afleveringen'
+            : lang === 'es'
+              ? 'Episodios'
+              : 'Episodes',
       links: [
         {
-          text: 'Latest Episodes',
-          href: withLang('/#episodes', lang),
+          text: 'English Episodes',
+          href: '/en/episodes',
         },
         {
-          text: 'All Episodes',
-          href: withLang('/episodes', lang),
+          text: 'Deutsche Episoden',
+          href: '/de/episodes',
         },
         {
-          text: 'By Topic',
-          href: withLang('/topics', lang),
+          text: 'Nederlandse Afleveringen',
+          href: '/nl/episodes',
+        },
+        {
+          text: 'Episodios en Español',
+          href: '/es/episodes',
         },
       ],
     },
@@ -31,14 +42,6 @@ export const getHeaderData = (lang: string) => ({
         {
           text: 'About CRO.CAFE',
           href: withLang('/#about', lang),
-        },
-        {
-          text: 'Contact',
-          href: withLang('/contact', lang),
-        },
-        {
-          text: 'Style Guide',
-          href: withLang('/styleguide', lang),
         },
       ],
     },

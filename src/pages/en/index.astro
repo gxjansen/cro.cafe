@@ -1,80 +1,45 @@
 ---
 import { getCollection } from 'astro:content';
 import PageLayout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
 import Grid from '~/components/episode/Grid.astro';
-import { SITE } from '~/config';
 
-// Get latest 4 episodes for English
-const episodes = await getCollection('en-episodes');
-const latestEpisodes = episodes
-  .sort((a, b) => {
-    const dateA = new Date(b.data.attributes.published_at);
-    const dateB = new Date(a.data.attributes.published_at);
-    return dateA.valueOf() - dateB.valueOf();
-  })
-  .slice(0, 4);
-
-// Language display names
-const langNames = {
-  en: 'English',
-  nl: 'Nederlands',
-  de: 'Deutsch',
-  es: 'Español',
-} as const;
-
-// Prepare metadata
 const metadata = {
-  title: `CRO.cafe - ${langNames.en} Podcast`,
-  description: `Latest episodes of the ${langNames.en} CRO.cafe podcast about Conversion Rate Optimization`,
-  type: 'website',
-  canonicalUrl: `${Astro.url.origin}/en`,
-  alternateLanguages: Object.fromEntries(
-    SITE.languages.map(l => [l, `${Astro.url.origin}/${l}`])
-  ),
-  image: '/images/default.png',
-  publishedTime: new Date().toISOString(),
-  modifiedTime: new Date().toISOString(),
-  author: SITE.name,
-  tags: ['podcast', 'cro', 'conversion rate optimization']
+  title: 'CRO.CAFE - The Conversion Rate Optimization Podcast',
+  description: 'Your podcast about Conversion Rate Optimization.',
 };
+
+const availableLanguages = ['en', 'de', 'es', 'nl'];
+
+// Get English episodes
+const episodes = await getCollection('en-episodes');
+
+// English show ID from Transistor
+const englishShowId = '5036';
 ---
 
-<PageLayout
-  metadata={metadata}
-  currentLang="en"
-  availableLanguages={SITE.languages}
->
-  <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-    <section class="max-w-7xl mx-auto">
-      <header class="text-center mb-12">
-        <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
-          CRO.cafe {langNames.en}
-        </h1>
-        <p class="text-xl text-gray-600 dark:text-gray-400">
-          The podcast about Conversion Rate Optimization
-        </p>
-      </header>
+<PageLayout {...{ metadata, availableLanguages, currentLang: 'en' }}>
+  <Hero
+    title="Welcome to CRO.CAFE"
+    subtitle="Your podcast about Conversion Rate Optimization"
+  />
 
-      <Grid 
-        episodes={latestEpisodes}
-        limit={4}
-        columns="4"
+  {/* Latest Episodes */}
+  <section class="py-12">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center">Latest Episodes</h2>
+      <Grid
+        episodes={episodes}
+        limit={6}
+        showId={englishShowId}
+        orderBy="published_at"
+        orderDirection="desc"
+        button={{
+          show: true,
+          text: "View All Episodes",
+          link: "/en/episodes"
+        }}
       />
-
-      <div class="text-center mt-12">
-        <a
-          href="/en/episodes"
-          class="btn btn-primary inline-flex items-center gap-2"
-        >
-          <span>View All Episodes</span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M5 12l14 0"></path>
-            <path d="M13 18l6 -6"></path>
-            <path d="M13 6l6 6"></path>
-          </svg>
-        </a>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
 </PageLayout>

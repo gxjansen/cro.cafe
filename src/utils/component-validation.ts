@@ -86,6 +86,17 @@ export const EpisodeGridPropsSchema = z.object({
   featured: z.boolean().optional(),
   columns: z.enum(['2', '3', '4']).optional(),
   loading: z.boolean().optional(),
+  showId: z.string().optional(),
+  season: z.number().optional(),
+  orderBy: z.enum(['published_at', 'duration']).optional().default('published_at'),
+  orderDirection: z.enum(['asc', 'desc']).optional().default('desc'),
+  button: z
+    .object({
+      show: z.boolean(),
+      text: z.string(),
+      link: z.string(),
+    })
+    .optional(),
 });
 
 export const EpisodeCardPropsSchema = z.object({

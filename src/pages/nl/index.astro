@@ -1,6 +1,8 @@
 ---
+import { getCollection } from 'astro:content';
 import PageLayout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import Grid from '~/components/episode/Grid.astro';
 
 const metadata = {
   title: 'CRO.CAFE - De Conversion Rate Optimization Podcast',
@@ -8,11 +10,36 @@ const metadata = {
 };
 
 const availableLanguages = ['en', 'de', 'es', 'nl'];
+
+// Get Dutch episodes
+const episodes = await getCollection('nl-episodes');
+
+// Dutch show ID from Transistor
+const dutchShowId = '16113';
 ---
 
 <PageLayout {...{ metadata, availableLanguages, currentLang: 'nl' }}>
   <Hero
     title="Welkom bij CRO.CAFE"
-    subtitle="Nederlandse content komt binnenkort."
+    subtitle="Jouw podcast over Conversion Rate Optimization"
   />
+
+  {/* Latest Episodes */}
+  <section class="py-12">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center">Nieuwste Afleveringen</h2>
+      <Grid
+        episodes={episodes}
+        limit={6}
+        showId={dutchShowId}
+        orderBy="published_at"
+        orderDirection="desc"
+        button={{
+          show: true,
+          text: "Bekijk Alle Afleveringen",
+          link: "/nl/episodes"
+        }}
+      />
+    </div>
+  </section>
 </PageLayout>
