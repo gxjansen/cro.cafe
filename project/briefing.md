@@ -87,17 +87,17 @@ Use Astro 5.0 Content Collections to manage all content with the following struc
     - enclosure
     - duration
     - itunes:episodeType (Normal, Trailer, Bonus)
-  - Optional metadata from project/current-site-data:
+  - Optional metadata from Transistor API:
     - Host
     - Guests
-    - Intro & SERP Meta Description
-    - Episode ID - short
-    - Overall episode number
-    - Bonus episode flag
-    - Main image
-    - Shownotes/extra info
-    - Youtube Embed code
-    - Transcript
+    - Summary (for SERP Meta Description)
+    - ID
+    - Number (overall episode number)
+    - Type (full, trailer, bonus)
+    - Image URL
+    - Share URL
+    - Embed HTML/URL
+    - Keywords
     - Featured flag
   - Organized by language/show
   - Type-safe content management through Zod schemas
@@ -128,56 +128,39 @@ Use Astro 5.0 Content Collections to manage all content with the following struc
 
 ### Data Import & Synchronization
 
-#### Initial Import
+#### Initial Import & Updates
 
-- Source data from:
-  - RSS feeds (primary source for episode data)
-  - project/current-site-data (supplementary data)
-- Use RSS feed link as unique identifier
+- Source all episode data from Transistor API
+- Use Transistor episode ID as unique identifier
 - Preserve existing slugs for SEO
-- Generate new slugs from RSS titles for future episodes
-- Import and store all images locally
+- Generate new slugs from episode titles
+- Download and optimize images from Transistor CDN
 
-#### Ongoing Updates
+#### Real-time Updates
 
-Implement an automated RSS feed sync system using GitHub Actions:
+Implement Transistor webhooks and Netlify Functions:
 
-```yaml
-# .github/workflows/rss-sync.yml
-name: RSS Feed Sync
-on:
-  schedule:
-    - cron: '0 * * * *' # Runs hourly
-  workflow_dispatch: # Manual trigger option
+```typescript
+// netlify/functions/transistor-webhook.ts
+export const handler: Handler = async (event) => {
+  const payload = JSON.parse(event.body!) as TransistorWebhookPayload;
 
-jobs:
-  sync:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+  if (payload.event === 'episode.published' || payload.event === 'episode.updated') {
+    await fetch(process.env.NETLIFY_BUILD_HOOK!, {
+      method: 'POST',
+    });
+  }
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Sync RSS Feeds
-        run: node scripts/sync-rss.js
-
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: 'chore: sync RSS feeds'
-          file_pattern: 'src/content/episodes/*.mdx'
+  return { statusCode: 200 };
+};
 ```
 
 This setup:
 
-- Runs hourly to check for new episodes
-- Creates/updates MDX files automatically
-- Triggers Netlify rebuild through GitHub integration
-- Maintains static nature while keeping content fresh
+- Receives real-time updates from Transistor
+- Processes episode publish/update events
+- Triggers Netlify rebuild automatically
+- Maintains content freshness with minimal delay
 
 ## Project Standards
 
@@ -236,7 +219,7 @@ This setup:
 #### URL Structure:
 
 - Use /en/, /de/, etc., for language-specific content.
-- Maintain unique slugs for guests and episodes across languages. Individual episode pages can be created based on the RSS feed data and (for existing episodes) should use the slug in project/current-site-data. For guests, use the "Slug" field in the Guest CSV file.
+- Maintain unique slugs for guests and episodes across languages. Individual episode pages can be created based on the Transistor API data. For guests, generate slugs from their names while ensuring uniqueness across languages.
 
 #### Handle Cross-Language Guests/Episodes:
 
@@ -297,8 +280,8 @@ Default to English if the user’s language preference cannot be detected or mat
 
 ### Image Management
 
-- Import all images locally from CSV URLs
-- Store in episode folders: /content/episodes/{language}/episode-{number}/images/
+- Download images from Transistor CDN
+- Store optimized versions locally
 - Use Astro's built-in <Image> component for automatic optimization
 
 ## Technical Details & Future Plans
@@ -307,9 +290,9 @@ Default to English if the user’s language preference cannot be detected or mat
 
 - No timeline constraints for transition
 - Analytics and tracking handled separately
-- Content management not required post-launch
-- Create import script for initial data migration from RSS feeds and CSVs
-- No rate limiting concerns for RSS feed access
+- Content management through Transistor dashboard
+- Create sync script for Transistor API integration
+- Monitor API rate limits and webhook reliability
 
 ### Custom player (later phase):
 

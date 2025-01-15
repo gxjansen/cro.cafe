@@ -6,12 +6,13 @@ import { validateProps, EpisodePlayerPropsSchema } from '~/utils/component-valid
 interface Props {
   audio_url: string;
   title: string;
-  description?: string;
+  description?: string | null;
 }
 
-// Validate props
-const props = validateProps(EpisodePlayerPropsSchema, Astro.props);
-const { audio_url, title, description } = props;
+// Validate props with fallback for description
+const { audio_url, title, description: rawDescription } = Astro.props;
+const description = rawDescription || 'Listen to this episode of CRO.CAFE';
+const props = validateProps(EpisodePlayerPropsSchema, { audio_url, title, description });
 
 // Ensure the title is properly escaped for use in aria-label
 const escapedTitle = title.replace(/"/g, '&quot;');

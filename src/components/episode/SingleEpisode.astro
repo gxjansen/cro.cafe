@@ -48,6 +48,7 @@ const { episode, availableLanguages, loading = false } = props;
 const { 
   title,
   summary,
+  description,
   published_at,
   media_url,
   duration,
@@ -154,7 +155,7 @@ const structuredData = {
           <Player 
             audio_url={media_url}
             title={title}
-            description={summary}
+            description={formatted_description || description || 'Listen to this episode of CRO.CAFE'}
           />
         </ErrorBoundary>
 

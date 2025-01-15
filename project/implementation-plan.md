@@ -58,26 +58,26 @@ After completing a task, mark it as complete by replacing the [ ] with [x].
 
 ## 3. Data Import System
 
-- [x] Create RSS feed parser
-- [x] Develop CSV data import scripts
+- [x] Set up Transistor API integration
+- [x] Configure webhook endpoints
+- [x] Implement episode sync script
 - [x] Set up image download and optimization pipeline
-- [x] Implement slug generation and validation
-- [x] Create GitHub Action for RSS sync
+- [x] Create Netlify build hooks for automated deploys
 - [x] Implement OpenGraph image generation during import
 
 **Validation Checks:**
 
-- RSS feeds parse correctly
-- CSV data imports successfully
+- Transistor API connection works
+- Webhooks receive and process updates
+- Episodes sync correctly with proper field mapping
 - Images download and optimize properly
-- Slugs generate uniquely without conflicts
-- GitHub Action runs successfully
+- Netlify builds trigger on updates
 - OpenGraph images generate for all content types
 
 **Reference Files:**
 
 - [Data Import Guide](./guides/data-import.md)
-- [RSS Sync Implementation](./guides/rss-sync.md)
+- [Transistor API Reference](./Transistor%20API%20Reference.md)
 
 ## 4. Core Components Development
 

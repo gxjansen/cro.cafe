@@ -8,7 +8,7 @@ import type { MetaData } from '~/types';
 
 export interface Props {
   metadata?: MetaData;
-  availableLanguages: string[];
+  availableLanguages: readonly ('en' | 'nl' | 'de' | 'es')[];
   currentLang?: 'en' | 'de' | 'es' | 'nl';
 }
 

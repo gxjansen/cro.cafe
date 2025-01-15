@@ -6,7 +6,7 @@ export const LanguageSchema = z.enum(['en', 'de', 'es', 'nl']);
 // Common props validation
 export const MetadataSchema = z.object({
   title: z.string(),
-  description: z.string().nullable(),
+  description: z.string(),
   image: z.string().nullable().optional(),
   canonicalUrl: z.string().optional(),
   type: z.enum(['website', 'article']).optional(),
@@ -18,11 +18,13 @@ export const MetadataSchema = z.object({
 });
 
 // Layout component props
-export const LayoutPropsSchema = z.object({
-  metadata: MetadataSchema,
-  availableLanguages: z.array(LanguageSchema),
-  currentLang: LanguageSchema,
-});
+export const LayoutPropsSchema = z
+  .object({
+    metadata: MetadataSchema,
+    availableLanguages: z.array(LanguageSchema).min(1),
+    currentLang: LanguageSchema,
+  })
+  .strict();
 
 // Navigation component props
 export const NavigationPropsSchema = z.object({
@@ -39,7 +41,7 @@ export const FooterPropsSchema = z.object({
 export const EpisodePlayerPropsSchema = z.object({
   audio_url: z.string().url(),
   title: z.string(),
-  description: z.string().optional(),
+  description: z.string(),
 });
 
 // Episode data validation matching Transistor API structure

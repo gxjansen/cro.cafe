@@ -1,191 +1,138 @@
 # Data Import Guide
 
-This guide explains how to import data from RSS feeds and CSV files into the CRO.CAFE content collections.
+This guide explains how to import podcast episode data using the Transistor API into the CRO.CAFE content collections.
 
-## RSS Feed Import
+## Transistor API Integration
 
-### Feed URLs
+### Shows
 
-- English: https://feeds.transistor.fm/cro-cafe
-- Dutch: https://feeds.transistor.fm/cro-cafe-nl
-- German: https://feeds.transistor.fm/cro-cafe-deutsch
-- Spanish: https://feeds.transistor.fm/cro-cafe-es
+The CRO.CAFE podcast consists of four shows in different languages:
 
-### RSS Import Script
+- English: CRO.CAFE (Show ID: 1234)
+- Dutch: CRO.CAFE NL (Show ID: 5678)
+- German: CRO.CAFE Deutsch (Show ID: 9012)
+- Spanish: CRO.CAFE ES (Show ID: 3456)
+
+### Episode Data Structure
+
+We use the exact same field names as the Transistor API to maintain consistency:
 
 ```typescript
-// scripts/import/rss.ts
-import { XMLParser } from 'fast-xml-parser';
+interface Episode {
+  id: string; // Transistor episode ID
+  title: string; // Episode title
+  number: number; // Episode number in show
+  season: number; // Season number
+  status: 'published' | 'draft' | 'scheduled';
+  published_at: string; // ISO date string
+  duration: number; // Duration in seconds
+  summary: string; // Short description
+  description: string; // Full description/show notes
+  media_url: string; // Audio file URL
+  share_url: string; // Public sharing URL
+  embed_html: string; // Embed player HTML
+  embed_url: string; // Embed player URL
+  image_url: string; // Episode artwork URL
+  type: 'full' | 'trailer' | 'bonus';
+  keywords: string[]; // Episode tags/keywords
+}
+```
+
+### Sync Script
+
+```typescript
+// scripts/sync-episodes.ts
+import { TransistorClient } from '../src/utils/transistor-api';
 import { writeFile } from 'fs/promises';
 import { join } from 'path';
-import { z } from 'zod';
 
-// RSS Feed item schema
-const RSSItemSchema = z.object({
-  title: z.string(),
-  'itunes:episode': z.string(),
-  'itunes:season': z.string(),
-  pubDate: z.string(),
-  description: z.string(),
-  'itunes:duration': z.string(),
-  'itunes:episodeType': z.string(),
-  enclosure: z.object({
-    '@_url': z.string(),
-  }),
-});
+const SHOWS = {
+  en: { id: '1234', language: 'en' },
+  nl: { id: '5678', language: 'nl' },
+  de: { id: '9012', language: 'de' },
+  es: { id: '3456', language: 'es' },
+};
 
-interface FeedConfig {
-  url: string;
-  language: 'en' | 'de' | 'es' | 'nl';
-}
+async function syncEpisodes() {
+  const client = new TransistorClient(process.env.TRANSISTOR_API_KEY);
 
-const FEEDS: FeedConfig[] = [
-  { url: 'https://feeds.transistor.fm/cro-cafe', language: 'en' },
-  { url: 'https://feeds.transistor.fm/cro-cafe-nl', language: 'nl' },
-  { url: 'https://feeds.transistor.fm/cro-cafe-deutsch', language: 'de' },
-  { url: 'https://feeds.transistor.fm/cro-cafe-es', language: 'es' },
-];
+  for (const [lang, show] of Object.entries(SHOWS)) {
+    console.log(`Syncing ${lang} episodes...`);
 
-async function importRSSFeeds() {
-  const parser = new XMLParser({
-    ignoreAttributes: false,
-    attributeNamePrefix: '@_',
-  });
+    const episodes = await client.getEpisodes(show.id);
 
-  for (const feed of FEEDS) {
-    console.log(`Importing ${feed.language} feed...`);
-
-    // Fetch and parse feed
-    const response = await fetch(feed.url);
-    const xml = await response.text();
-    const data = parser.parse(xml);
-
-    // Process each item
-    for (const item of data.rss.channel.item) {
-      const parsed = RSSItemSchema.parse(item);
-
-      // Generate slug from title
-      const slug = parsed.title
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/^-|-$/g, '');
-
-      // Extract episode ID from enclosure URL
-      const episodeId = parsed.enclosure['@_url'].split('/').pop()?.slice(0, 8);
-
-      // Create MDX content
+    for (const episode of episodes) {
+      // Create MDX content with Transistor field names
       const content = `---
-title: ${parsed.title}
-pubDate: ${new Date(parsed.pubDate).toISOString()}
-season: ${parseInt(parsed['itunes:season'])}
-episode: ${parseInt(parsed['itunes:episode'])}
-description: ${parsed.description}
-audioUrl: ${parsed.enclosure['@_url']}
-duration: ${parsed['itunes:duration']}
-episodeType: ${parsed['itunes:episodeType']}
-language: ${feed.language}
-shortId: ${episodeId}
+id: ${episode.id}
+title: ${episode.title}
+number: ${episode.number}
+season: ${episode.season}
+status: ${episode.status}
+published_at: ${episode.published_at}
+duration: ${episode.duration}
+summary: ${episode.summary}
+media_url: ${episode.media_url}
+share_url: ${episode.share_url}
+embed_html: ${episode.embed_html}
+embed_url: ${episode.embed_url}
+image_url: ${episode.image_url}
+type: ${episode.type}
+keywords: ${JSON.stringify(episode.keywords)}
+language: ${show.language}
 ---
 
-${parsed.description}
+${episode.description}
 `;
 
-      // Save to file
-      const dir = join('src/content/episodes', feed.language, `season-${parsed['itunes:season']}`);
-      await writeFile(join(dir, `${slug}.mdx`), content);
+      // Save to file using Transistor ID as filename
+      const dir = join('src/content/episodes', lang, `season-${episode.season}`);
+      await writeFile(join(dir, `${episode.id}.mdx`), content);
     }
   }
 }
 
-// Run import
-importRSSFeeds().catch(console.error);
+// Run sync
+syncEpisodes().catch(console.error);
 ```
 
-## CSV Data Import
+### Webhook Integration
 
-### Available CSV Files
-
-Located in `project/current-site-data/{Language}/`:
-
-- Episodes.csv
-- People.csv (Guests)
-- Platforms.csv
-- Quotes.csv
-- Brand listeners.csv
-
-### CSV Import Script
+We use Netlify Functions to handle Transistor webhooks for real-time updates:
 
 ```typescript
-// scripts/import/csv.ts
-import { parse } from 'csv-parse/sync';
-import { readFile, writeFile } from 'fs/promises';
-import { join } from 'path';
+// netlify/functions/transistor-webhook.ts
+import { Handler } from '@netlify/functions';
+import { TransistorWebhookPayload } from '../../src/types/transistor';
 
-interface CSVImportConfig {
-  inputPath: string;
-  outputPath: string;
-  transform: (row: Record<string, string>) => Promise<string>;
-}
+export const handler: Handler = async (event) => {
+  const payload = JSON.parse(event.body!) as TransistorWebhookPayload;
 
-async function importCSVData(config: CSVImportConfig) {
-  // Read CSV file
-  const content = await readFile(config.inputPath, 'utf-8');
-  const records = parse(content, {
-    columns: true,
-    skip_empty_lines: true,
-  });
-
-  // Process each row
-  for (const row of records) {
-    const transformed = await config.transform(row);
-    const slug = row.Slug || generateSlug(row.Name || row.Title);
-    await writeFile(join(config.outputPath, `${slug}.mdx`), transformed);
+  // Trigger site rebuild when episodes are published/updated
+  if (payload.event === 'episode.published' || payload.event === 'episode.updated') {
+    await fetch(process.env.NETLIFY_BUILD_HOOK!, {
+      method: 'POST',
+    });
   }
-}
 
-// Example guest transform function
-async function transformGuest(row: Record<string, string>) {
-  return `---
-name: ${row.Name}
-title: ${row.Title}
-company: ${row.Company}
-language: ${row.Language}
-bio: ${row.Bio}
-shortBio: ${row.ShortBio || row.Bio.slice(0, 160)}
-image: ${row.Image}
-linkedin: ${row.LinkedIn || ''}
-twitter: ${row.Twitter || ''}
-website: ${row.Website || ''}
-episodes: ${JSON.stringify(row.Episodes?.split(',') || [])}
----
-
-${row.Bio}
-`;
-}
-
-// Import guests for each language
-const languages = ['en', 'de', 'es', 'nl'];
-for (const lang of languages) {
-  await importCSVData({
-    inputPath: `project/current-site-data/${lang}/People.csv`,
-    outputPath: `src/content/guests/${lang}`,
-    transform: transformGuest,
-  });
-}
+  return {
+    statusCode: 200,
+  };
+};
 ```
 
-## Image Import
+## Image Processing
 
-### Image Processing Script
+Images are downloaded from Transistor's CDN and optimized:
 
 ```typescript
-// scripts/import/images.ts
+// scripts/process-images.ts
 import sharp from 'sharp';
 import { join } from 'path';
 import { writeFile } from 'fs/promises';
 
-async function downloadAndOptimizeImage(url: string, outputPath: string) {
-  const response = await fetch(url);
+async function processEpisodeImage(imageUrl: string, episodeId: string) {
+  const response = await fetch(imageUrl);
   const buffer = await response.arrayBuffer();
 
   // Process with sharp
@@ -195,82 +142,31 @@ async function downloadAndOptimizeImage(url: string, outputPath: string) {
       withoutEnlargement: true,
     })
     .webp({ quality: 80 })
-    .toFile(outputPath);
-}
-
-// Example usage for guest images
-async function processGuestImages() {
-  const guests = await getCollection('guests');
-
-  for (const guest of guests) {
-    if (guest.data.image) {
-      const outputPath = join('src/assets/images/guests', `${guest.slug}.webp`);
-      await downloadAndOptimizeImage(guest.data.image, outputPath);
-    }
-  }
-}
-```
-
-## Validation & Error Handling
-
-### Data Validation
-
-```typescript
-// scripts/import/validate.ts
-import { getCollection } from 'astro:content';
-
-async function validateContent() {
-  // Check episodes
-  const episodes = await getCollection('episodes');
-  for (const episode of episodes) {
-    // Verify audio URL is accessible
-    const audioResponse = await fetch(episode.data.audioUrl);
-    if (!audioResponse.ok) {
-      console.error(`Invalid audio URL for ${episode.id}`);
-    }
-
-    // Check guest references exist
-    if (episode.data.guests) {
-      const guests = await getCollection('guests');
-      for (const guestId of episode.data.guests) {
-        if (!guests.find((g) => g.id === guestId)) {
-          console.error(`Invalid guest reference in ${episode.id}: ${guestId}`);
-        }
-      }
-    }
-  }
+    .toFile(join('public/images/episodes', `${episodeId}.webp`));
 }
 ```
 
 ## Implementation Checklist
 
-- [ ] Install required dependencies:
-  ```bash
-  npm install fast-xml-parser csv-parse sharp
-  ```
-- [ ] Create import scripts directory:
-  ```bash
-  mkdir -p scripts/import
-  ```
-- [ ] Implement and test RSS import
-- [ ] Implement and test CSV import
-- [ ] Implement and test image processing
-- [ ] Run validation checks
-- [ ] Set up GitHub Action for RSS sync
-- [ ] Document any manual data cleanup needed
+- [ ] Set up Transistor API key in environment variables
+- [ ] Configure webhook endpoint in Transistor dashboard
+- [ ] Create Netlify build hook for automated deploys
+- [ ] Implement and test episode sync
+- [ ] Set up image processing pipeline
+- [ ] Configure error monitoring
 
 ## Error Recovery
 
-1. Keep backup of original data
-2. Log all import operations
-3. Implement retry logic for network requests
-4. Validate output before overwriting existing files
-5. Create rollback scripts if needed
+1. Log all API operations
+2. Implement retry logic for API requests
+3. Validate webhook signatures
+4. Monitor webhook delivery status
+5. Keep backup of episode data
 
 ## Maintenance Notes
 
-- Run RSS sync hourly via GitHub Actions
-- Manually trigger sync when needed
-- Monitor error logs
-- Periodically validate content integrity
-- Update scripts when feed structure changes
+- Monitor Transistor API rate limits
+- Check webhook delivery logs
+- Verify image processing pipeline
+- Update episode schemas if Transistor adds fields
+- Monitor Netlify build minutes usage

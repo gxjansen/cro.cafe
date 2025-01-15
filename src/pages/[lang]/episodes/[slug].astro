@@ -1,9 +1,24 @@
 ---
 import { getCollection } from 'astro:content';
-import Layout, { type Props } from '../../../layouts/Layout.astro';
+import PageLayout from '~/layouts/PageLayout.astro';
+import SingleEpisode from '~/components/episode/SingleEpisode.astro';
 import { SITE } from '~/config';
 
-interface PageProps {
+interface Props {
+  metadata: {
+    title: string;
+    description: string;
+    image?: string;
+    canonicalUrl?: string;
+    type?: 'website' | 'article';
+    publishedTime?: string;
+    modifiedTime?: string;
+    author?: string;
+    tags?: string[];
+    alternateLanguages?: Record<string, string>;
+  };
+  currentLang: 'en' | 'nl' | 'de' | 'es';
+  availableLanguages: readonly ('en' | 'nl' | 'de' | 'es')[];
   episode: {
     id: string;
     type: 'episode';
@@ -34,8 +49,6 @@ interface PageProps {
   };
 }
 
-// Import supported languages from config
-import { SITE } from '~/config';
 type Language = typeof SITE.languages[number];
 
 // Get all episodes for each language and generate paths
@@ -52,6 +65,18 @@ export async function getStaticPaths() {
       },
       props: {
         episode: episode.data,
+        metadata: {
+          title: episode.data.attributes.title,
+          description: episode.data.attributes.formatted_description || episode.data.attributes.description || 'Listen to this episode of CRO.CAFE',
+          type: 'article',
+          publishedTime: episode.data.attributes.published_at,
+          image: episode.data.attributes.image_url || '/images/default.png',
+          author: SITE.name,
+          tags: [],
+          alternateLanguages: {},
+        },
+        currentLang: lang,
+        availableLanguages: ['en', 'nl', 'de', 'es'],
       },
     }));
     
@@ -65,11 +90,11 @@ export async function getStaticPaths() {
 const { episode } = Astro.props;
 const { lang } = Astro.params;
 const currentLang = lang as Language;
-const availableLanguages = SITE.languages;
+const availableLanguages = ['en', 'nl', 'de', 'es'] as const;
 
 // Build alternate language URLs
 const alternateLanguages: Record<string, string> = {};
-for (const lang of SITE.languages) {
+for (const lang of availableLanguages) {
   // Only add alternate if episode exists in that language
   const collection = await getCollection(`${lang}-episodes`);
   const exists = collection.some(ep => ep.data.attributes.slug === episode.attributes.slug);
@@ -78,95 +103,22 @@ for (const lang of SITE.languages) {
   }
 }
 
-// Prepare metadata with all optional properties explicitly defined
-const metadata: Props['metadata'] = {
+// Prepare metadata with all required fields
+const metadata = {
   title: episode.attributes.title,
-  description: episode.attributes.summary || episode.attributes.description.slice(0, 160),
+  description: episode.attributes.formatted_description || episode.attributes.description || 'Listen to this episode of CRO.CAFE',
   type: 'article',
   publishedTime: episode.attributes.published_at,
   modifiedTime: undefined,
-  image: episode.attributes.image_url || undefined,
-  // Make English version canonical for cross-language episodes
+  image: episode.attributes.image_url || '/images/default.png',
   canonicalUrl: currentLang === 'en' ? Astro.url.href : alternateLanguages['en'] || Astro.url.href,
   author: SITE.name,
-  tags: undefined,
+  tags: [],
   alternateLanguages
 };
 ---
 
-<Layout
-  metadata={metadata}
-  currentLang={currentLang}
-  availableLanguages={availableLanguages}
->
-  <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-    <article class="max-w-4xl mx-auto">
-      {/* Episode header */}
-      <header class="mb-8 sm:mb-12">
-        <div class="flex gap-2 mb-4">
-          <span class={`badge badge-${currentLang}`}>
-            {currentLang === 'en' ? 'English' :
-             currentLang === 'nl' ? 'Nederlands' :
-             currentLang === 'de' ? 'Deutsch' :
-             currentLang === 'es' ? 'Español' : currentLang}
-          </span>
-        </div>
-        <h1 class="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-          {episode.attributes.title}
-        </h1>
-        <div class="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
-          <time datetime={episode.attributes.published_at}>
-            {episode.attributes.formatted_published_at}
-          </time>
-          <span class="flex items-center gap-1">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-              <path d="M12 7l0 5l3 3"></path>
-            </svg>
-            {episode.attributes.duration_in_mmss}
-          </span>
-        </div>
-      </header>
-
-      {/* Episode image */}
-      {episode.attributes.image_url && (
-        <div class="mb-8 sm:mb-12 rounded-lg overflow-hidden">
-          <img
-            src={episode.attributes.image_url}
-            alt=""
-            class="w-full aspect-video object-cover"
-            width={1200}
-            height={675}
-          />
-        </div>
-      )}
-
-      {/* Episode player */}
-      <div class="mb-8 sm:mb-12">
-        <Fragment set:html={episode.attributes.embed_html} />
-      </div>
-
-      {/* Episode description */}
-      <div class="prose prose-lg dark:prose-invert max-w-none">
-        <Fragment set:html={episode.attributes.formatted_description} />
-      </div>
-
-      {/* Video embed if available */}
-      {episode.attributes.video_url && (
-        <div class="mt-8 sm:mt-12">
-          <h2 class="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-            Watch the Episode
-          </h2>
-          <div class="aspect-video">
-            <iframe
-              src={episode.attributes.video_url}
-              class="w-full h-full rounded-lg"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-      )}
-    </article>
-  </main>
-</Layout>
+{/* prettier-ignore */}
+<PageLayout metadata={metadata} currentLang={currentLang} availableLanguages={availableLanguages}>
+  <SingleEpisode episode={episode} availableLanguages={availableLanguages} />
+</PageLayout>
