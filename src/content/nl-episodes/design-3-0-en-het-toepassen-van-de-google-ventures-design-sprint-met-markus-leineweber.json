@@ -9,7 +9,14 @@
     "published_at": "2019-12-18T12:00:00.000Z",
     "duration": 1067,
     "explicit": false,
-    "keywords": ["podcast", "ecommerce", "conversion", "usability", "webshop", "english"],
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "",
     "media_url": "https://media.transistor.fm/e8f8f16f/a2b58c61.mp3",
     "image_url": "https://img.transistor.fm/nHc8uy2J7Evi2MAPunzAt7kWQ79-jNIHDp6eIhNBnwc/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzM5NzcwNC8x/NjA1MDQxMTQwLWFy/dHdvcmsuanBn.webp",
@@ -32,7 +39,9 @@
     "audio_processing": false,
     "type": "bonus",
     "email_notifications": null,
-    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english",
+    "local_image_url": "/images/episodes/nl/design-3-0-en-het-toepassen-van-de-google-ventures-design-sprint-met-markus-leineweber.webp",
+    "transistor_image_url": "https://img.transistor.fm/nHc8uy2J7Evi2MAPunzAt7kWQ79-jNIHDp6eIhNBnwc/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzM5NzcwNC8x/NjA1MDQxMTQwLWFy/dHdvcmsuanBn.webp"
   },
   "relationships": {
     "show": {

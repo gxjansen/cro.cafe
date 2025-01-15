@@ -60,6 +60,7 @@ export const EpisodeSchema = z.object({
     formatted_published_at: z.string(),
     formatted_description: z.string(),
     image_url: z.string().nullable().optional(),
+    local_image_url: z.string().nullable().optional(),
     video_url: z.string().nullable().optional(),
     transcript_url: z.string().nullable().optional(),
     share_url: z.string(),

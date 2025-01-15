@@ -1,8 +1,15 @@
 import { writeFile, mkdir } from 'fs/promises';
 import { join } from 'path';
 import { existsSync } from 'fs';
-import { transistorApi, SHOW_IDS, getLanguageFromShowId } from '../src/utils/transistor-api';
+import { config } from 'dotenv';
+import { TransistorAPI, SHOW_IDS, getLanguageFromShowId } from '../src/utils/transistor-api';
 import type { TransistorEpisode } from '../src/types/transistor';
+
+// Load environment variables
+config();
+
+// Initialize API with key from environment
+const transistorApi = new TransistorAPI(process.env.TRANSISTOR_API_KEY || '');
 
 // Ensure content directory exists
 async function ensureContentDirectory(language: string) {
@@ -58,6 +65,7 @@ async function syncAllShows() {
 }
 
 // Run sync if called directly
-if (require.main === module) {
+const isMainModule = import.meta.url === `file://${process.argv[1]}`;
+if (isMainModule) {
   syncAllShows();
 }

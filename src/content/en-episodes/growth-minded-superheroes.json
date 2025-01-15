@@ -9,7 +9,9 @@
     "published_at": "2024-06-11T13:45:35.219Z",
     "duration": 1182,
     "explicit": false,
-    "keywords": [""],
+    "keywords": [
+      ""
+    ],
     "alternate_url": "https://www.cro.cafe/podcast/growth-minded-superheroes",
     "media_url": "https://media.transistor.fm/90b62ec1/15b7b59d.mp3",
     "image_url": "https://img.transistor.fm/K6abWi85LGubZpHC2OFbNfZ_b-ekPFJqbjnLwOKbfQw/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS85M2E2/MmUxNWJhYzBiZTc3/N2Q0ZjgxYjg1Zjk3/NTU3OC5qcGc.webp",
@@ -53,7 +55,9 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": ""
+    "keywords_raw": "",
+    "local_image_url": "/images/episodes/en/growth-minded-superheroes.webp",
+    "transistor_image_url": "https://img.transistor.fm/K6abWi85LGubZpHC2OFbNfZ_b-ekPFJqbjnLwOKbfQw/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS85M2E2/MmUxNWJhYzBiZTc3/N2Q0ZjgxYjg1Zjk3/NTU3OC5qcGc.webp"
   },
   "relationships": {
     "show": {

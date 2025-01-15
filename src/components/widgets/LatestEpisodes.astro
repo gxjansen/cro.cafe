@@ -73,7 +73,7 @@ const langNames = {
         latestEpisodes.map(({ lang, episode }) => (
           <article class="card focus-within:ring-2 focus-within:ring-[#ff676d]">
             <img
-              src={episode.data.attributes.image_url || '/images/default.png'}
+              src={`/images/episodes/${lang}/${episode.data.attributes.slug.replace(/_/g, '-').toLowerCase()}.webp`}
               alt={episode.data.attributes.title || 'Episode thumbnail'}
               class="w-full aspect-video object-cover"
               loading="lazy"

@@ -9,7 +9,9 @@
     "published_at": "2020-05-25T06:00:00.000Z",
     "duration": 1766,
     "explicit": false,
-    "keywords": [""],
+    "keywords": [
+      ""
+    ],
     "alternate_url": "https://www.cro.cafe/podcast/centralized-versus-decentralized-cro",
     "media_url": "https://media.transistor.fm/5a72bfe0/165faa05.mp3",
     "image_url": "https://img.transistor.fm/AwYJMIVb1JF1tm-PILmq5k8hoOIsGyIUBvo6iioQISo/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82ZDA0/ZjdhMDVhMGZiZWUx/MWRmNWQ0MjhiM2Uz/YTdiZS5wbmc.webp",
@@ -32,7 +34,9 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": ""
+    "keywords_raw": "",
+    "local_image_url": "/images/episodes/en/centralized-versus-decentralized-cro.webp",
+    "transistor_image_url": "https://img.transistor.fm/AwYJMIVb1JF1tm-PILmq5k8hoOIsGyIUBvo6iioQISo/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82ZDA0/ZjdhMDVhMGZiZWUx/MWRmNWQ0MjhiM2Uz/YTdiZS5wbmc.webp"
   },
   "relationships": {
     "show": {

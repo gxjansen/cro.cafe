@@ -9,7 +9,14 @@
     "published_at": "2020-02-09T23:00:00.000Z",
     "duration": 3484,
     "explicit": false,
-    "keywords": ["podcast", "ecommerce", "conversion", "usability", "webshop", "english"],
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/optimalisatie-van-video-on-demand",
     "media_url": "https://media.transistor.fm/1f06801f/6a3acdc1.mp3",
     "image_url": "https://img.transistor.fm/WLT-j_KhNquD1NSERi52DK15hkgsR3oGBt6p_4Hlvvw/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9hNTBk/Mzg1NTNiMWUyNmIw/NzgwYTZhOTNjMzdh/OGIyNC5qcGVn.webp",
@@ -32,7 +39,9 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english",
+    "local_image_url": "/images/episodes/nl/nl-optimalisatie-van-video-on-demand-met-lucas-vos-videoland.webp",
+    "transistor_image_url": "https://img.transistor.fm/WLT-j_KhNquD1NSERi52DK15hkgsR3oGBt6p_4Hlvvw/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9hNTBk/Mzg1NTNiMWUyNmIw/NzgwYTZhOTNjMzdh/OGIyNC5qcGVn.webp"
   },
   "relationships": {
     "show": {

@@ -9,7 +9,9 @@
     "published_at": "2021-04-07T09:46:01.425Z",
     "duration": 2481,
     "explicit": false,
-    "keywords": [""],
+    "keywords": [
+      ""
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/personalisatie-werk-van-grof-naar-fijn",
     "media_url": "https://media.transistor.fm/f1a909f3/3d710b6c.mp3",
     "image_url": "https://img.transistor.fm/gjphs33HwWbEjgamtMW-hKAfX9L84uUch88nHz68bzc/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kYzc5/MTk4MzRlYjk4ZjE4/Yzc0ZDU0ODcwMDA1/OWMxMi5qcGc.webp",
@@ -32,7 +34,9 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": ""
+    "keywords_raw": "",
+    "local_image_url": "/images/episodes/nl/personalisatie-werk-van-grof-naar-fijn.webp",
+    "transistor_image_url": "https://img.transistor.fm/gjphs33HwWbEjgamtMW-hKAfX9L84uUch88nHz68bzc/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kYzc5/MTk4MzRlYjk4ZjE4/Yzc0ZDU0ODcwMDA1/OWMxMi5qcGc.webp"
   },
   "relationships": {
     "show": {

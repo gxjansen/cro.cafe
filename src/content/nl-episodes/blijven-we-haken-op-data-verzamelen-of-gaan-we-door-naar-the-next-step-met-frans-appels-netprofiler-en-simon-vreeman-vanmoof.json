@@ -9,7 +9,15 @@
     "published_at": "2019-11-04T15:35:00.000Z",
     "duration": 1721,
     "explicit": false,
-    "keywords": ["podcast", "ecommerce", "conversion", "usability", "dac19", "moa", "livestream"],
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "dac19",
+      "moa",
+      "livestream"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/blijven-we-haken-op-data-verzamelen-of-gaan-we-door-naar-the-next-step",
     "media_url": "https://media.transistor.fm/44ef1451/a0469824.mp3",
     "image_url": "https://img.transistor.fm/N2yc4_7OXp45a6AD7e0ooJz1zq2dOXASGacsjc9uDpI/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80OGE3/MTY4NGI5ZTM2ZjA3/MGQzOGIyZmU2N2I1/YjBjNy5qcGVn.webp",
@@ -32,7 +40,9 @@
     "audio_processing": false,
     "type": "bonus",
     "email_notifications": null,
-    "keywords_raw": "podcast, ecommerce, conversion, usability, dac19, moa, livestream"
+    "keywords_raw": "podcast, ecommerce, conversion, usability, dac19, moa, livestream",
+    "local_image_url": "/images/episodes/nl/blijven-we-haken-op-data-verzamelen-of-gaan-we-door-naar-the-next-step-met-frans-appels-netprofiler-en-simon-vreeman-vanmoof.webp",
+    "transistor_image_url": "https://img.transistor.fm/N2yc4_7OXp45a6AD7e0ooJz1zq2dOXASGacsjc9uDpI/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80OGE3/MTY4NGI5ZTM2ZjA3/MGQzOGIyZmU2N2I1/YjBjNy5qcGVn.webp"
   },
   "relationships": {
     "show": {

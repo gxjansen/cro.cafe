@@ -9,7 +9,14 @@
     "published_at": "2019-09-30T14:39:00.000Z",
     "duration": 3568,
     "explicit": false,
-    "keywords": ["podcast", "ecommerce", "conversion", "usability", "webshop", "english"],
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/personaliseren-ethiek",
     "media_url": "https://media.transistor.fm/74a0ab28/daefee57.mp3",
     "image_url": "https://img.transistor.fm/-WX-b5mHvgEsaHG-lsmktASx2Qt4GZV1SuJ3kJJlX3k/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mZGY5/YjI5NzRlOTUwNzUz/NDcxOWE0NmViMjcy/MmNhNy5qcGVn.webp",
@@ -32,7 +39,9 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english",
+    "local_image_url": "/images/episodes/nl/personaliseren-ethiek-met-viresh-narain-adidas-en-evert-semeijn-neurofied.webp",
+    "transistor_image_url": "https://img.transistor.fm/-WX-b5mHvgEsaHG-lsmktASx2Qt4GZV1SuJ3kJJlX3k/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mZGY5/YjI5NzRlOTUwNzUz/NDcxOWE0NmViMjcy/MmNhNy5qcGVn.webp"
   },
   "relationships": {
     "show": {

@@ -9,7 +9,9 @@
     "published_at": "2024-11-20T09:00:00.000Z",
     "duration": 2073,
     "explicit": false,
-    "keywords": [""],
+    "keywords": [
+      ""
+    ],
     "alternate_url": "https://de.cro.cafe/podcast/a-b-testing-fur-leadgenerierung-best-practices-mit-julian-kleinknecht",
     "media_url": "https://media.transistor.fm/1bcf958d/542a0c6d.mp3",
     "image_url": "https://img.transistor.fm/ce6ecaoEv2txm7njXccAeLV9mLSJcTW748nxZSdFzBo/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iNDU2/YWU3YWRmMmMwY2Uw/ZDI0YzM2NTc0YWIx/ZDVjNS5qcGc.webp",
@@ -32,7 +34,9 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": ""
+    "keywords_raw": "",
+    "local_image_url": "/images/episodes/de/a-b-testing-fur-leadgenerierung-best-practices-mit-julian-kleinknecht.webp",
+    "transistor_image_url": "https://img.transistor.fm/ce6ecaoEv2txm7njXccAeLV9mLSJcTW748nxZSdFzBo/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iNDU2/YWU3YWRmMmMwY2Uw/ZDI0YzM2NTc0YWIx/ZDVjNS5qcGc.webp"
   },
   "relationships": {
     "show": {

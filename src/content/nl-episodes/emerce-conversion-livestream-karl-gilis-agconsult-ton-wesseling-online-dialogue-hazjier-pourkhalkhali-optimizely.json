@@ -9,7 +9,14 @@
     "published_at": "2019-04-11T20:16:00.000Z",
     "duration": 2431,
     "explicit": false,
-    "keywords": ["podcast", "ecommerce", "conversion", "usability", "webshop", "english"],
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "",
     "media_url": "https://media.transistor.fm/5e015e3f/a413dac1.mp3",
     "image_url": "https://img.transistor.fm/qYu_pyvpjy3tggrjXofuNnlBnPqjCZF4FbwQXOLZuSk/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzM5NzY0OC8x/NjA1MDQwOTk3LWFy/dHdvcmsuanBn.webp",
@@ -32,7 +39,9 @@
     "audio_processing": false,
     "type": "bonus",
     "email_notifications": null,
-    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english",
+    "local_image_url": "/images/episodes/nl/emerce-conversion-livestream-karl-gilis-agconsult-ton-wesseling-online-dialogue-hazjier-pourkhalkhali-optimizely.webp",
+    "transistor_image_url": "https://img.transistor.fm/qYu_pyvpjy3tggrjXofuNnlBnPqjCZF4FbwQXOLZuSk/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzM5NzY0OC8x/NjA1MDQwOTk3LWFy/dHdvcmsuanBn.webp"
   },
   "relationships": {
     "show": {

@@ -8,7 +8,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "sync-episodes": "tsx scripts/sync-episodes.ts"
+    "sync-episodes": "tsx scripts/sync-episodes.ts",
+    "download-images": "tsx scripts/download-episode-images.ts"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -47,8 +48,10 @@
     "@typescript-eslint/parser": "^6.12.0",
     "eslint": "^8.54.0",
     "eslint-plugin-astro": "^0.29.1",
+    "node-fetch": "^3.3.2",
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.12.3",
+    "sharp": "^0.33.5",
     "tailwind-merge": "^2.6.0",
     "vitest": "^2.1.8"
   }

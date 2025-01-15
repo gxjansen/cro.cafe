@@ -9,7 +9,14 @@
     "published_at": "2020-03-08T23:00:00.000Z",
     "duration": 2988,
     "explicit": false,
-    "keywords": ["podcast", "ecommerce", "conversion", "usability", "webshop", "english"],
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/cro-verkopen",
     "media_url": "https://media.transistor.fm/ba2fac76/306a8480.mp3",
     "image_url": "https://img.transistor.fm/bp-Ow9eztY3iXacnI3bXFjRVxaFVyN19z3zPzxEtb38/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80Yzg0/MWFjYzVlMzdjYmM3/NDJhZjgwMTY3Y2Q1/OTVmOC5qcGVn.webp",
@@ -32,7 +39,9 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english",
+    "local_image_url": "/images/episodes/nl/nl-cro-verkopen-met-joris-bryon-dexter-agency.webp",
+    "transistor_image_url": "https://img.transistor.fm/bp-Ow9eztY3iXacnI3bXFjRVxaFVyN19z3zPzxEtb38/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80Yzg0/MWFjYzVlMzdjYmM3/NDJhZjgwMTY3Y2Q1/OTVmOC5qcGVn.webp"
   },
   "relationships": {
     "show": {

@@ -9,7 +9,14 @@
     "published_at": "2019-04-11T20:16:00.000Z",
     "duration": 1020,
     "explicit": false,
-    "keywords": ["podcast", "ecommerce", "conversion", "usability", "webshop", "english"],
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/emerce-interview-michiel-jansen",
     "media_url": "https://media.transistor.fm/e980ac14/8630185d.mp3",
     "image_url": "https://img.transistor.fm/dyGj_jH57WThjqBNGzMgpeeBuu-3EvM3Y-ouvE5vjvw/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80MTE1/MzZhODUyZTA5M2Y0/NmJmZmRhODc5NTY1/YzI3Yi5qcGVn.webp",
@@ -32,7 +39,9 @@
     "audio_processing": false,
     "type": "bonus",
     "email_notifications": null,
-    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english",
+    "local_image_url": "/images/episodes/nl/emerce-conversion-livestream-michiel-jansen-leaseplan.webp",
+    "transistor_image_url": "https://img.transistor.fm/dyGj_jH57WThjqBNGzMgpeeBuu-3EvM3Y-ouvE5vjvw/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80MTE1/MzZhODUyZTA5M2Y0/NmJmZmRhODc5NTY1/YzI3Yi5qcGVn.webp"
   },
   "relationships": {
     "show": {

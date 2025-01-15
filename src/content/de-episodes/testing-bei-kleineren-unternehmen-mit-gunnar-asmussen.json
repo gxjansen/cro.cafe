@@ -9,7 +9,9 @@
     "published_at": "2023-10-17T14:52:29.620Z",
     "duration": 2362,
     "explicit": false,
-    "keywords": [""],
+    "keywords": [
+      ""
+    ],
     "alternate_url": "https://de.cro.cafe/podcast/testing-bei-kleineren-unternehmen-mit-gunnar-asmussen",
     "media_url": "https://media.transistor.fm/712dfa01/c54201fa.mp3",
     "image_url": "https://img.transistor.fm/4_mS0rlf1XA_vBCeiaIFVuY4EZAXuXDJQJxn6XrVpG0/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8wZWMy/Mzc1M2M4MDMwYmQ2/NzM4MjY4MzgyZjFk/NWM1My5wbmc.webp",
@@ -32,7 +34,9 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": ""
+    "keywords_raw": "",
+    "local_image_url": "/images/episodes/de/testing-bei-kleineren-unternehmen.webp",
+    "transistor_image_url": "https://img.transistor.fm/4_mS0rlf1XA_vBCeiaIFVuY4EZAXuXDJQJxn6XrVpG0/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8wZWMy/Mzc1M2M4MDMwYmQ2/NzM4MjY4MzgyZjFk/NWM1My5wbmc.webp"
   },
   "relationships": {
     "show": {

@@ -9,7 +9,15 @@
     "published_at": "2019-11-04T15:10:00.000Z",
     "duration": 1702,
     "explicit": false,
-    "keywords": ["podcast", "ecommerce", "conversion", "usability", "dac19", "moa", "livestream"],
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "dac19",
+      "moa",
+      "livestream"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/optimaliseer-je-optimalisatieprogramma",
     "media_url": "https://media.transistor.fm/981c9ba9/82261d14.mp3",
     "image_url": "https://img.transistor.fm/f4ThvYQQOvKp9FQvbf4hXPj37ikGUkOz3mw2wVYZovQ/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9jMzc2/NTIzMzkyNWUzM2Iy/NjU0ZGRkNTdlMmY0/MzFmOS5qcGVn.webp",
@@ -32,7 +40,9 @@
     "audio_processing": false,
     "type": "bonus",
     "email_notifications": null,
-    "keywords_raw": "podcast, ecommerce, conversion, usability, dac19, moa, livestream"
+    "keywords_raw": "podcast, ecommerce, conversion, usability, dac19, moa, livestream",
+    "local_image_url": "/images/episodes/nl/optimaliseer-je-optimalisatieprogramma-met-annemarie-klaassen-vodafoneziggo-en-helene-van-hallebeek-transavia.webp",
+    "transistor_image_url": "https://img.transistor.fm/f4ThvYQQOvKp9FQvbf4hXPj37ikGUkOz3mw2wVYZovQ/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9jMzc2/NTIzMzkyNWUzM2Iy/NjU0ZGRkNTdlMmY0/MzFmOS5qcGVn.webp"
   },
   "relationships": {
     "show": {

@@ -9,7 +9,9 @@
     "published_at": "2021-05-18T22:00:00.000Z",
     "duration": 3305,
     "explicit": false,
-    "keywords": [""],
+    "keywords": [
+      ""
+    ],
     "alternate_url": "https://es.cro.cafe/podcast/analitica-digital-y-cro-en-grandes-comercios-asi-trabajan-en-el-corte-ingles",
     "media_url": "https://media.transistor.fm/572ef619/76d1e278.mp3",
     "image_url": "https://img.transistor.fm/DYbUYN3fY6bS7oadAbtYAsqgi-AF4kkGcGUPC_mK2X4/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83Zjcw/NGU2MzlkNjcyNjlh/ZmZlYTBlODUxMTJk/MGYyYi5qcGc.webp",
@@ -32,7 +34,9 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": ""
+    "keywords_raw": "",
+    "local_image_url": "/images/episodes/es/analitica-digital-y-cro-en-grandes-comercios-asi-trabajan-en-el-corte-ingles-con-laura-rodriguez.webp",
+    "transistor_image_url": "https://img.transistor.fm/DYbUYN3fY6bS7oadAbtYAsqgi-AF4kkGcGUPC_mK2X4/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83Zjcw/NGU2MzlkNjcyNjlh/ZmZlYTBlODUxMTJk/MGYyYi5qcGc.webp"
   },
   "relationships": {
     "show": {

@@ -70,7 +70,7 @@ try {
   language = getLanguageFromShowId(episode.relationships.show.data.id);
 
   // Get optimized episode image
-  image = await getEpisodeImage(episode.attributes.image_url || '/images/default.png', 'card');
+  image = await getEpisodeImage(`/images/episodes/${language}/${episode.attributes.slug.replace(/_/g, '-').toLowerCase()}.webp`, 'card');
 
   // Sanitize and truncate summary, falling back to description if summary is null
   cleanSummary = sanitizeAndTruncate(episode.attributes.summary || episode.attributes.description || '', 150);

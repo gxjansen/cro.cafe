@@ -40,7 +40,9 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": "Conversion Rate, Optimization, AI, Marketing, E-Commerce, Künstliche Intelligenz, Online Marketing"
+    "keywords_raw": "Conversion Rate, Optimization, AI, Marketing, E-Commerce, Künstliche Intelligenz, Online Marketing",
+    "local_image_url": "/images/episodes/de/kunstliche-intelligenz-das-marketing-must-have-der-zukunft.webp",
+    "transistor_image_url": "https://img.transistor.fm/GuJseO8OHoWFJKfAQ74jn6R3VBJxFVcgWJRk5IZtnsk/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS84MjM3/ZTQ5ZTlmNjg2ZDAx/YzgyYWEwMjhiZmFk/YTg2My5wbmc.webp"
   },
   "relationships": {
     "show": {

@@ -31,43 +31,24 @@ export async function getEpisodeImage(
   imageUrl: string | undefined,
   size: keyof typeof IMAGE_SIZES.episode
 ) {
-  // If no image URL provided, use default image
-  const sourceUrl = imageUrl || '/images/default.png';
-
-  try {
-    const { width, height } = IMAGE_SIZES.episode[size];
-
-    // If it's an external URL (like from Transistor), use it directly
-    if (sourceUrl.startsWith('http')) {
-      return {
-        src: sourceUrl,
-        width,
-        height,
-      };
-    }
-
-    // For local images, use Astro's image optimization
-    const optimizedImage = await getImage({
-      src: sourceUrl,
-      width,
-      height,
-      format: 'webp',
-    });
-
-    return {
-      ...optimizedImage,
-      width,
-      height,
-    };
-  } catch (error) {
-    console.error(`Error optimizing image ${sourceUrl}:`, error);
-    // Return default image on error
-    return {
-      src: '/images/default.png',
-      width: IMAGE_SIZES.episode[size].width,
-      height: IMAGE_SIZES.episode[size].height,
-    };
+  // Directly use the provided image URL without fallback
+  if (!imageUrl) {
+    throw new Error('Image URL is required');
   }
+
+  const { width, height } = IMAGE_SIZES.episode[size];
+  const optimizedImage = await getImage({
+    src: imageUrl,
+    width,
+    height,
+    format: 'webp',
+  });
+
+  return {
+    ...optimizedImage,
+    width,
+    height,
+  };
 }
 
 /**

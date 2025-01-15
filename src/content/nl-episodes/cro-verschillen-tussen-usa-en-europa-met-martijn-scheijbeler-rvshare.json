@@ -9,7 +9,14 @@
     "published_at": "2019-09-12T10:26:00.000Z",
     "duration": 3447,
     "explicit": false,
-    "keywords": ["podcast", "ecommerce", "conversion", "usability", "webshop", "english"],
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/cro-verschillen-tussen-vs-en-europa-met-martijn-scheijbeler",
     "media_url": "https://media.transistor.fm/a2038b78/7a9b5d20.mp3",
     "image_url": "https://img.transistor.fm/hKEXTzURrjGiDSFNuWkckNRPEVt0NLUOeiC6m0ERUl4/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8wZTMz/YjhhOGFkNDE5YmNl/ZWU3YWI5NDYxNTBj/NmM5Zi5qcGVn.webp",
@@ -32,7 +39,9 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english",
+    "local_image_url": "/images/episodes/nl/cro-verschillen-tussen-usa-en-europa-met-martijn-scheijbeler-rvshare.webp",
+    "transistor_image_url": "https://img.transistor.fm/hKEXTzURrjGiDSFNuWkckNRPEVt0NLUOeiC6m0ERUl4/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8wZTMz/YjhhOGFkNDE5YmNl/ZWU3YWI5NDYxNTBj/NmM5Zi5qcGVn.webp"
   },
   "relationships": {
     "show": {

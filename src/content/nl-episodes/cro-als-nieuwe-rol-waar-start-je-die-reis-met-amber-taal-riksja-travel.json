@@ -9,7 +9,14 @@
     "published_at": "2019-04-17T12:19:00.000Z",
     "duration": 1766,
     "explicit": false,
-    "keywords": ["podcast", "ecommerce", "conversion", "usability", "webshop", "english"],
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/cro-als-nieuwe-rol-waar-start-je-die-reis",
     "media_url": "https://media.transistor.fm/f3e3c926/6d3557b6.mp3",
     "image_url": "https://img.transistor.fm/kZ12_IDkh3jUWkIGzCMM4W0j-bX3eh3ToveylvWoaW0/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80NDIy/NjYzMzVhOGUzOWI2/MTc0NGM4MDhlZTJl/YWIxOC5qcGVn.webp",
@@ -32,7 +39,9 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english",
+    "local_image_url": "/images/episodes/nl/cro-als-nieuwe-rol-waar-start-je-die-reis-met-amber-taal-riksja-travel.webp",
+    "transistor_image_url": "https://img.transistor.fm/kZ12_IDkh3jUWkIGzCMM4W0j-bX3eh3ToveylvWoaW0/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80NDIy/NjYzMzVhOGUzOWI2/MTc0NGM4MDhlZTJl/YWIxOC5qcGVn.webp"
   },
   "relationships": {
     "show": {

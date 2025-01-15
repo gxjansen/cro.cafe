@@ -9,7 +9,9 @@
     "published_at": "2021-03-25T10:04:32.521Z",
     "duration": 2262,
     "explicit": false,
-    "keywords": [""],
+    "keywords": [
+      ""
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/case-3-woorden-3-conversie-eu3m-omzet",
     "media_url": "https://media.transistor.fm/89b27fe6/8aa87748.mp3",
     "image_url": "https://img.transistor.fm/NdMI3ru8LZ4HzWhi4yiXsecChVK7MP3VGEmWzzfVKGI/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS81NWE5/ODUxNWQzYzViNWEz/YThhZTY1Mzg2YTI4/OWU3Ni5qcGc.webp",
@@ -32,7 +34,9 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": ""
+    "keywords_raw": "",
+    "local_image_url": "/images/episodes/nl/3-woorden-3-conversie-3m-omzet.webp",
+    "transistor_image_url": "https://img.transistor.fm/NdMI3ru8LZ4HzWhi4yiXsecChVK7MP3VGEmWzzfVKGI/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS81NWE5/ODUxNWQzYzViNWEz/YThhZTY1Mzg2YTI4/OWU3Ni5qcGc.webp"
   },
   "relationships": {
     "show": {

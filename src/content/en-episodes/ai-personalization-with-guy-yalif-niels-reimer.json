@@ -9,7 +9,9 @@
     "published_at": "2020-01-24T14:00:00.000Z",
     "duration": 1817,
     "explicit": false,
-    "keywords": [""],
+    "keywords": [
+      ""
+    ],
     "alternate_url": "https://www.cro.cafe/podcast/ai-personalization",
     "media_url": "https://media.transistor.fm/c3b41dd5/5841af97.mp3",
     "image_url": "https://img.transistor.fm/XalpBnnaSGCFBG6ewgKPXyp5m2WTeTmA8xYi8v7xkXk/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83Njkx/ZGZkOWJmNzQzNzJj/ZjM0NTc3NTAwMmM2/NDNmNS5qcGVn.webp",
@@ -32,7 +34,9 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": ""
+    "keywords_raw": "",
+    "local_image_url": "/images/episodes/en/ch2019-on-personalization.webp",
+    "transistor_image_url": "https://img.transistor.fm/XalpBnnaSGCFBG6ewgKPXyp5m2WTeTmA8xYi8v7xkXk/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83Njkx/ZGZkOWJmNzQzNzJj/ZjM0NTc3NTAwMmM2/NDNmNS5qcGVn.webp"
   },
   "relationships": {
     "show": {

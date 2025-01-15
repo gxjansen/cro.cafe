@@ -9,7 +9,15 @@
     "published_at": "2019-11-04T15:20:00.000Z",
     "duration": 925,
     "explicit": false,
-    "keywords": ["podcast", "ecommerce", "conversion", "usability", "dac19", "moa", "livestream"],
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "dac19",
+      "moa",
+      "livestream"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/guidos-rant-over-persoonlijkheidstesten",
     "media_url": "https://media.transistor.fm/640d7957/79d325dd.mp3",
     "image_url": "https://img.transistor.fm/0CLe6BlIAzVm26-QIId-osrEkbwWj_VY_yCDOr8rzd4/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS81MmI2/ZDJmOTQ3MTcwNTky/NzczZmFjZGJlNzFm/NDk2Yy5qcGVn.webp",
@@ -32,7 +40,9 @@
     "audio_processing": false,
     "type": "bonus",
     "email_notifications": null,
-    "keywords_raw": "podcast, ecommerce, conversion, usability, dac19, moa, livestream"
+    "keywords_raw": "podcast, ecommerce, conversion, usability, dac19, moa, livestream",
+    "local_image_url": "/images/episodes/nl/guidos-rant-over-persoonlijkheidstesten.webp",
+    "transistor_image_url": "https://img.transistor.fm/0CLe6BlIAzVm26-QIId-osrEkbwWj_VY_yCDOr8rzd4/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS81MmI2/ZDJmOTQ3MTcwNTky/NzczZmFjZGJlNzFm/NDk2Yy5qcGVn.webp"
   },
   "relationships": {
     "show": {

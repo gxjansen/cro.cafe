@@ -9,7 +9,14 @@
     "published_at": "2019-03-11T17:31:00.000Z",
     "duration": 2811,
     "explicit": false,
-    "keywords": ["podcast", "ecommerce", "conversion", "usability", "webshop", "english"],
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/waarom-cro-specialisten-goeie-koks-zijn",
     "media_url": "https://media.transistor.fm/6697d95f/50a028bb.mp3",
     "image_url": "https://img.transistor.fm/p5PDTG9m9wuEsVlexrPeS7LoL08XloU3cN4EPpYbhEw/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8yNmNi/MTYzMmEyN2NmZWRj/NWEyMzlkN2ZiYmVi/YjE0Yi5qcGVn.webp",
@@ -32,7 +39,9 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english",
+    "local_image_url": "/images/episodes/nl/waarom-cro-specialisten-goeie-koks-zijn-met-arnout-hellemans.webp",
+    "transistor_image_url": "https://img.transistor.fm/p5PDTG9m9wuEsVlexrPeS7LoL08XloU3cN4EPpYbhEw/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8yNmNi/MTYzMmEyN2NmZWRj/NWEyMzlkN2ZiYmVi/YjE0Yi5qcGVn.webp"
   },
   "relationships": {
     "show": {

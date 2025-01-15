@@ -9,7 +9,9 @@
     "published_at": "2022-05-02T08:14:39.129Z",
     "duration": 71,
     "explicit": false,
-    "keywords": [""],
+    "keywords": [
+      ""
+    ],
     "alternate_url": "https://de.cro.cafe/podcast/willkommen-bei-cro-cafe-auf-deutsch",
     "media_url": "https://media.transistor.fm/189e7e8d/7677c52e.mp3",
     "image_url": "https://img.transistor.fm/OdcwOz-3OieT17DO3T5pLApAKpAWrQpN8d4HNLaq7Ro/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mNTMy/ZTQ2YTdmMDhhYzYw/OTgyZjBmMmM1ZWZl/ODI5MC5wbmc.webp",
@@ -32,7 +34,9 @@
     "audio_processing": false,
     "type": "trailer",
     "email_notifications": null,
-    "keywords_raw": ""
+    "keywords_raw": "",
+    "local_image_url": "/images/episodes/de/cro-cafe-jetzt-auch-auf-deutsch.webp",
+    "transistor_image_url": "https://img.transistor.fm/OdcwOz-3OieT17DO3T5pLApAKpAWrQpN8d4HNLaq7Ro/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mNTMy/ZTQ2YTdmMDhhYzYw/OTgyZjBmMmM1ZWZl/ODI5MC5wbmc.webp"
   },
   "relationships": {
     "show": {

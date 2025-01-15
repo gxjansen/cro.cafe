@@ -9,7 +9,9 @@
     "published_at": "2022-02-15T23:00:00.000Z",
     "duration": 3553,
     "explicit": false,
-    "keywords": [""],
+    "keywords": [
+      ""
+    ],
     "alternate_url": "https://es.cro.cafe/podcast/accesibilidad-la-necesidad-de-atender-a-todos-tus-clientes",
     "media_url": "https://media.transistor.fm/ab6c8897/153ad01e.mp3",
     "image_url": "https://img.transistor.fm/hrihaxvkfz1P1prW-geZsEKVbkYPEMYQexxLSlD67hM/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS84OWY3/MzI2MDYyZWE5ZWNk/ZjliODNkODQyMWY5/ZWUzMC5wbmc.webp",
@@ -32,7 +34,9 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": ""
+    "keywords_raw": "",
+    "local_image_url": "/images/episodes/es/accesibilidad-la-necesidad-de-atender-a-todos-tus-clientes-con-arantxa-hernandez-57327e6a-6155-404d-ba05-039294843b90.webp",
+    "transistor_image_url": "https://img.transistor.fm/hrihaxvkfz1P1prW-geZsEKVbkYPEMYQexxLSlD67hM/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS84OWY3/MzI2MDYyZWE5ZWNk/ZjliODNkODQyMWY5/ZWUzMC5wbmc.webp"
   },
   "relationships": {
     "show": {

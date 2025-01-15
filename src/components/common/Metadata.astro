@@ -36,7 +36,7 @@ const ogImageUrl = ogImageType
 <meta property="og:description" content={description} />
 <meta property="og:type" content={type} />
 <meta property="og:url" content={canonicalUrl || Astro.url.href} />
-{fullImageUrl && <meta property="og:image" content={fullImageUrl} />}
+{fullImageUrl && <meta property="og:image" content={episode.local_image_url || fullImageUrl} />}
 
 {/* Twitter Card Metadata */}
 <meta name="twitter:card" content="summary_large_image" />

@@ -35,7 +35,7 @@ const { lang } = Astro.params;
 const metadata = {
   title: episode.attributes.title,
   description: episode.attributes.summary || '',
-  image: episode.attributes.image_url || '/images/default.png',
+  image: episode.attributes.local_image_url || episode.attributes.image_url || '/images/default.png',
   type: 'article',
   publishedTime: episode.attributes.published_at,
   alternateLanguages: availableLanguages.reduce((acc, lang) => ({

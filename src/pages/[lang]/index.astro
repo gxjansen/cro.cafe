@@ -70,7 +70,7 @@ const metadata = {
   alternateLanguages: Object.fromEntries(
     SITE.languages.map(l => [l, `${Astro.url.origin}/${l}`])
   ),
-  image: '/images/default.png',
+  image: `/images/episodes/${currentLang}/${episode.attributes.slug.replace(/_/g, '-').toLowerCase()}.webp`,
   publishedTime: new Date().toISOString(),
   modifiedTime: new Date().toISOString(),
   author: SITE.name,

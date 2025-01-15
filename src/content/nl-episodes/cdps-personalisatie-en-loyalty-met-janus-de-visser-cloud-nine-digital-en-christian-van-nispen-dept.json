@@ -9,7 +9,14 @@
     "published_at": "2020-03-03T23:00:00.000Z",
     "duration": 2094,
     "explicit": false,
-    "keywords": ["podcast", "ecommerce", "conversion", "usability", "webshop", "english"],
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/cdps-personalisatie-en-loyalty",
     "media_url": "https://media.transistor.fm/aa539016/fac7efce.mp3",
     "image_url": "https://img.transistor.fm/aAythu2CtnpAverBFsLWZ98Wl8nSqFMeRrefgpfl3hI/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82MjQ5/N2RmZGI1MzExNDRh/YTM2NWE5ZjY1OTUz/OTg0Ny5qcGVn.webp",
@@ -32,7 +39,9 @@
     "audio_processing": false,
     "type": "bonus",
     "email_notifications": null,
-    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english",
+    "local_image_url": "/images/episodes/nl/nl-cdps-personalisatie-en-loyalty-met-janus-de-visser-cloud-nine-digital-en-christian-van-nispen-dept.webp",
+    "transistor_image_url": "https://img.transistor.fm/aAythu2CtnpAverBFsLWZ98Wl8nSqFMeRrefgpfl3hI/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82MjQ5/N2RmZGI1MzExNDRh/YTM2NWE5ZjY1OTUz/OTg0Ny5qcGVn.webp"
   },
   "relationships": {
     "show": {

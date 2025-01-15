@@ -9,7 +9,9 @@
     "published_at": "2021-11-10T05:51:24.645Z",
     "duration": 1531,
     "explicit": false,
-    "keywords": [""],
+    "keywords": [
+      ""
+    ],
     "alternate_url": "https://es.cro.cafe/podcast/testing-y-experimentacion-en-sitios-web-y-apps-con-poco-trafico",
     "media_url": "https://media.transistor.fm/836eca23/8b232194.mp3",
     "image_url": "https://img.transistor.fm/8QenlBQ1DoArwH-y05zaB3EcmacrqmmQt6zf5FKhFr4/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS84Yzlk/YmUzNTYxYjZiZDY2/N2FiMWZiMzg3ZDg1/MmZmYy5qcGc.webp",
@@ -32,7 +34,9 @@
     "audio_processing": false,
     "type": "bonus",
     "email_notifications": null,
-    "keywords_raw": ""
+    "keywords_raw": "",
+    "local_image_url": "/images/episodes/es/testing-en-sitios-web-y-apps-con-poco-trafico-con-ricardo-tayar.webp",
+    "transistor_image_url": "https://img.transistor.fm/8QenlBQ1DoArwH-y05zaB3EcmacrqmmQt6zf5FKhFr4/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS84Yzlk/YmUzNTYxYjZiZDY2/N2FiMWZiMzg3ZDg1/MmZmYy5qcGc.webp"
   },
   "relationships": {
     "show": {

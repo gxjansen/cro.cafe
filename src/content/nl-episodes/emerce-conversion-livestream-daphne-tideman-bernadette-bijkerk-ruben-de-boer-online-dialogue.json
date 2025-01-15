@@ -9,7 +9,14 @@
     "published_at": "2019-04-12T14:07:00.000Z",
     "duration": 1964,
     "explicit": false,
-    "keywords": ["podcast", "ecommerce", "conversion", "usability", "webshop", "english"],
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/emerce-interview-daphne-tideman-bernadette-bijkerk-ruben-de-boer",
     "media_url": "https://media.transistor.fm/7d49f9c1/5ea8f04b.mp3",
     "image_url": "https://img.transistor.fm/AGp33hJ0ZMQ7yuydAc38wtXlaYzZ9wjODeSyH_PXdcM/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS81YTgy/ZGM1NmYzZjlhN2Ey/NzEwOTQzY2Q2NmU5/ZDhjNC5qcGVn.webp",
@@ -32,7 +39,9 @@
     "audio_processing": false,
     "type": "bonus",
     "email_notifications": null,
-    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english",
+    "local_image_url": "/images/episodes/nl/emerce-conversion-livestream-daphne-tideman-bernadette-bijkerk-ruben-de-boer-online-dialogue.webp",
+    "transistor_image_url": "https://img.transistor.fm/AGp33hJ0ZMQ7yuydAc38wtXlaYzZ9wjODeSyH_PXdcM/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS81YTgy/ZGM1NmYzZjlhN2Ey/NzEwOTQzY2Q2NmU5/ZDhjNC5qcGVn.webp"
   },
   "relationships": {
     "show": {

@@ -22,6 +22,7 @@ interface Props {
       formatted_published_at: string;
       formatted_description: string;
       image_url?: string;
+      local_image_url?: string;
       video_url?: string;
       transcript_url?: string;
       share_url: string;
@@ -66,8 +67,10 @@ const {
 // Get language from show ID
 const language = getLanguageFromShowId(episode.relationships.show.data.id);
 
-// Get optimized episode image
-const image = await getEpisodeImage(image_url, 'detail');
+const image = await getEpisodeImage(`/images/episodes/en/${episode.attributes.slug}.webp`, 'detail');
+
+// Ensure local image URL is used for Open Graph and Twitter meta tags
+const ogImageUrl = episode.local_image_url || image.src;
 
 // Sanitize HTML content
 const sanitizedDescription = DOMPurify.sanitize(formatted_description);
@@ -147,15 +150,15 @@ const structuredData = {
             </div>
           </div>
           <div class="relative aspect-[16/9]">
-            <img
-              src={image.src}
-              width={image.width}
-              height={image.height}
-              alt={title}
-              loading="eager"
-              decoding="async"
-              class="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg"
-            />
+<img
+  src={episode.local_image_url || image.src}
+  width={image.width}
+  height={image.height}
+  alt={title}
+  loading="eager"
+  decoding="async"
+  class="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg"
+/>
           </div>
         </header>
 

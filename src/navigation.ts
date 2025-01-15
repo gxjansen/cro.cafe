@@ -86,8 +86,16 @@ export const getFooterData = (lang: string) => ({
     },
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: '#' },
+    {
+      ariaLabel: 'LinkedIn',
+      icon: 'tabler:brand-linkedin',
+      href: 'https://www.linkedin.com/company/crocafe',
+    },
+    {
+      ariaLabel: 'YouTube',
+      icon: 'tabler:brand-youtube',
+      href: 'https://www.youtube.com/channel/UCN7W3kbJ62V39mTRhRYFMnw',
+    },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: withLang('/rss.xml', lang) },
   ],
   footNote: `

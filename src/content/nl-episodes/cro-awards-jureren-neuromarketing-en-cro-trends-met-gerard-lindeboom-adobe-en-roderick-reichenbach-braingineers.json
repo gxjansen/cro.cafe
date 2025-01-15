@@ -9,7 +9,14 @@
     "published_at": "2019-11-01T10:00:00.000Z",
     "duration": 2818,
     "explicit": false,
-    "keywords": ["podcast", "ecommerce", "conversion", "usability", "webshop", "english"],
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/croawards-jureren-neuromarketing-en-cro-trends",
     "media_url": "https://media.transistor.fm/399b1e7f/ff2234c8.mp3",
     "image_url": "https://img.transistor.fm/7uCSFw741gD8naY-uQ-vNqxrvsQjM_o3wsjO_rW_OOg/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8wNzM4/NWZmNDJhMGUyOTJk/ZDk2MGVhYThjNTAz/NWE1Ni5qcGVn.webp",
@@ -32,7 +39,9 @@
     "audio_processing": false,
     "type": "bonus",
     "email_notifications": null,
-    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english"
+    "keywords_raw": "podcast, ecommerce, conversion, usability, webshop, english",
+    "local_image_url": "/images/episodes/nl/cro-awards-jureren-neuromarketing-en-cro-trends-met-gerard-lindeboom-adobe-en-roderick-reichenbach-braingineers.webp",
+    "transistor_image_url": "https://img.transistor.fm/7uCSFw741gD8naY-uQ-vNqxrvsQjM_o3wsjO_rW_OOg/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8wNzM4/NWZmNDJhMGUyOTJk/ZDk2MGVhYThjNTAz/NWE1Ni5qcGVn.webp"
   },
   "relationships": {
     "show": {
