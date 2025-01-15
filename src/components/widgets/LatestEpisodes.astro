@@ -1,0 +1,120 @@
+---
+import { getCollection } from 'astro:content';
+
+console.log('Starting LatestEpisodes component...');
+
+let latestEpisodes: { lang: string; episode: any }[] = [];
+
+try {
+  // Get episodes from each language collection
+  const enEpisodes = await getCollection('en-episodes');
+  console.log('EN Episodes loaded:', enEpisodes.length);
+
+  const nlEpisodes = await getCollection('nl-episodes');
+  console.log('NL Episodes loaded:', nlEpisodes.length);
+
+  const deEpisodes = await getCollection('de-episodes');
+  console.log('DE Episodes loaded:', deEpisodes.length);
+
+  const esEpisodes = await getCollection('es-episodes');
+  console.log('ES Episodes loaded:', esEpisodes.length);
+
+  // Sort episodes by date and get the latest one from each language
+  const getLatestEpisode = (episodes: any[], lang: string) => {
+    if (!episodes || episodes.length === 0) {
+      console.log(`No episodes found for ${lang}`);
+      return null;
+    }
+
+    const sorted = episodes.sort((a, b) => {
+      const dateA = new Date(b.data.attributes.published_at);
+      const dateB = new Date(a.data.attributes.published_at);
+      return dateA.valueOf() - dateB.valueOf();
+    });
+
+    console.log(`Latest ${lang} episode:`, {
+      id: sorted[0].id,
+      title: sorted[0].data.attributes.title,
+      date: sorted[0].data.attributes.published_at,
+    });
+
+    return sorted[0];
+  };
+
+  latestEpisodes = [
+    { lang: 'en', episode: getLatestEpisode(enEpisodes, 'en') },
+    { lang: 'nl', episode: getLatestEpisode(nlEpisodes, 'nl') },
+    { lang: 'de', episode: getLatestEpisode(deEpisodes, 'de') },
+    { lang: 'es', episode: getLatestEpisode(esEpisodes, 'es') },
+  ].filter(({ episode }) => episode);
+
+  console.log('Final episodes count:', latestEpisodes.length);
+} catch (error) {
+  console.error('Error in LatestEpisodes component:', error);
+}
+
+// Language display names
+const langNames = {
+  en: 'English',
+  nl: 'Dutch',
+  de: 'German',
+  es: 'Spanish',
+} as const;
+---
+
+<div class="bg-white dark:bg-gray-900 mt-16 md:mt-24">
+  <section class="latest-episodes py-16 relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white">
+      Latest Episodes from All Shows
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {latestEpisodes.length > 0 ? (
+        latestEpisodes.map(({ lang, episode }) => (
+          <article class="card focus-within:ring-2 focus-within:ring-[#ff676d]">
+            <img
+              src={episode.data.attributes.image_url || '/images/default.png'}
+              alt={episode.data.attributes.title || 'Episode thumbnail'}
+              class="w-full aspect-video object-cover"
+              loading="lazy"
+            />
+            <div class="p-4">
+              <div class="flex gap-2 mb-2">
+                <span class={`badge badge-${lang}`}>
+                  {langNames[lang as keyof typeof langNames]}
+                </span>
+              </div>
+              <h3 class="text-lg font-bold mb-2 line-clamp-2">
+                {episode.data.attributes.title}
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-3">
+                {episode.data.attributes.summary || episode.data.attributes.description}
+              </p>
+              <div class="mt-4">
+                <a
+                  href={`/${lang}/episodes/${episode.data.attributes.slug}`}
+                  class="btn btn-primary inline-flex items-center gap-2"
+                >
+                  <span>Listen Now</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 4v16l13 -8z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))
+      ) : (
+        <div class="col-span-full text-center text-gray-500 dark:text-gray-400">
+          No episodes found
+        </div>
+      )}
+    </div>
+  </section>
+</div>
+
+<style>
+  .episode-card {
+    @apply hover:shadow-xl;
+  }
+</style>

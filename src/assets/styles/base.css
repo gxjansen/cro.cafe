@@ -31,7 +31,7 @@
 
   /* Focus styles */
   :focus-visible {
-    @apply outline-none ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-gray-900;
+    @apply outline-none ring-2 ring-[#ff676d] ring-offset-2 dark:ring-offset-gray-900;
   }
 }
 
@@ -42,27 +42,126 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
+  /* Skip Link */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 
+           bg-white dark:bg-gray-800 px-4 py-2 rounded-md z-50 
+           focus:ring-2 focus:ring-[#ff676d];
+  }
+
+  /* Table of Contents */
+  .toc-link {
+    @apply flex items-center gap-2 link focus:ring-2 focus:ring-[#ff676d] 
+           focus:outline-none rounded;
+  }
+
+  /* Navigation Menu */
+  .nav-link {
+    @apply hover:text-[#ff676d] dark:hover:text-[#7bfff8] px-4 py-3 
+           flex items-center focus:ring-2 focus:ring-[#ff676d] 
+           focus:outline-none rounded;
+  }
+
+  /* Icon Button */
+  .icon-button {
+    @apply text-gray-500 hover:text-[#ff676d] dark:text-gray-400 
+           dark:hover:text-[#7bfff8] focus:ring-2 focus:ring-[#ff676d] 
+           focus:outline-none rounded p-2;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full 
+           text-xs font-medium;
+  }
+
+  .badge-info {
+    @apply bg-[#7bfff8]/30 text-[#0d7a8c] dark:bg-[#7bfff8]/40 dark:text-[#7bfff8];
+  }
+
+  .badge-success {
+    @apply bg-[#ff676d]/30 text-[#b32d33] dark:bg-[#ff676d]/40 dark:text-[#ff676d];
+  }
+
+  .badge-warning {
+    @apply bg-[#95c3c0]/30 text-[#2c4f4d] dark:bg-[#95c3c0]/40 dark:text-[#95c3c0];
+  }
+
+  .badge-error {
+    @apply bg-[#dd8e91]/30 text-[#8c2f32] dark:bg-[#dd8e91]/40 dark:text-[#dd8e91];
+  }
+
+  /* Language badges - using distinct flag colors */
+  .badge-en {
+    @apply bg-[#cf142b]/90 text-white font-bold dark:bg-[#cf142b]/90 dark:text-white; /* UK: Red bg, White text */
+  }
+
+  .badge-nl {
+    @apply bg-[#21468B]/90 text-white font-bold dark:bg-[#21468B]/90 dark:text-white; /* Dutch: Blue bg, White text */
+  }
+
+  .badge-de {
+    @apply bg-black/90 text-[#FFD700] font-bold dark:bg-black/90 dark:text-[#FFD700]; /* German: Black bg, Gold text */
+  }
+
+  .badge-es {
+    @apply bg-[#F1BF00]/90 text-[#AA151B] font-bold dark:bg-[#F1BF00]/90 dark:text-[#AA151B]; /* Spanish: Yellow bg, Red text */
+  }
+
+  /* Alert */
+  .alert {
+    @apply p-4 rounded-lg flex items-center gap-3;
+  }
+
+  .alert-info {
+    @apply bg-[#7bfff8]/30 text-[#0d7a8c] dark:bg-[#7bfff8]/40 dark:text-[#7bfff8];
+  }
+
+  .alert-success {
+    @apply bg-[#ff676d]/30 text-[#b32d33] dark:bg-[#ff676d]/40 dark:text-[#ff676d];
+  }
+
+  .alert-warning {
+    @apply bg-[#95c3c0]/30 text-[#2c4f4d] dark:bg-[#95c3c0]/40 dark:text-[#95c3c0];
+  }
+
+  .alert-error {
+    @apply bg-[#dd8e91]/30 text-[#8c2f32] dark:bg-[#dd8e91]/40 dark:text-[#dd8e91];
+  }
+
   /* Buttons */
   .btn {
-    @apply inline-flex items-center justify-center px-4 py-2 border border-transparent
-           text-sm font-medium rounded-md shadow-sm transition-colors duration-200
-           focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent
+           text-sm font-semibold rounded-md shadow-md transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-offset-2 gap-2;
   }
 
   .btn-primary {
-    @apply bg-blue-600 text-white hover:bg-blue-700 
-           focus:ring-blue-500 dark:bg-blue-500 dark:hover:bg-blue-600;
+    @apply bg-[#ff676d] text-white hover:bg-[#dd8e91] 
+           focus:ring-[#ff676d] dark:bg-[#ff676d] dark:hover:bg-[#dd8e91]
+           shadow-[#ff676d]/10;
   }
 
   .btn-secondary {
-    @apply bg-white text-gray-700 border-gray-300 hover:bg-gray-50
-           focus:ring-blue-500 dark:bg-gray-800 dark:text-gray-100 
-           dark:border-gray-600 dark:hover:bg-gray-700;
+    @apply bg-[#95c3c0] text-white hover:bg-[#7bfff8]
+           focus:ring-[#95c3c0] dark:bg-[#95c3c0] dark:text-white 
+           dark:hover:bg-[#7bfff8] shadow-[#95c3c0]/10;
+  }
+
+  .btn-outline {
+    @apply bg-transparent border-2 border-[#ff676d] text-[#ff676d]
+           hover:bg-[#ff676d]/10 focus:ring-[#ff676d]
+           dark:border-[#ff676d] dark:text-[#ff676d]
+           dark:hover:bg-[#ff676d]/10;
+  }
+
+  .btn[disabled] {
+    @apply opacity-50 cursor-not-allowed hover:bg-[#ff676d] dark:hover:bg-[#ff676d];
   }
 
   /* Links */
   .link {
-    @apply text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300
+    @apply text-[#ff676d] hover:text-[#dd8e91] dark:text-[#ff676d] dark:hover:text-[#dd8e91]
            underline decoration-2 underline-offset-2 transition-colors duration-200;
   }
 
@@ -128,8 +227,8 @@
 }
 
 .prose a {
-  @apply text-blue-600 dark:text-blue-400 underline decoration-2 underline-offset-2
-         hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200;
+  @apply text-[#ff676d] dark:text-[#ff676d] underline decoration-2 underline-offset-2
+         hover:text-[#dd8e91] dark:hover:text-[#dd8e91] transition-colors duration-200;
 }
 
 .prose code {

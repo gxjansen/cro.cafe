@@ -54,68 +54,118 @@ interface Props {
 // Validate props
 const props = validateProps(EpisodeCardPropsSchema, Astro.props);
 const { episode, loading = false } = props;
-const { title, summary, published_at, formatted_published_at, image_url } = episode.attributes;
 
-// Get language from show ID
-const language = getLanguageFromShowId(episode.relationships.show.data.id);
+console.log('Card received episode:', JSON.stringify(episode, null, 2));
 
-// Get optimized episode image
-const image = await getEpisodeImage(image_url, 'card');
+let title = '';
+let cleanSummary = '';
+let language = '';
+let image = { src: '', width: 0, height: 0 };
+let slug = '';
 
-// Sanitize and truncate summary
-const cleanSummary = sanitizeAndTruncate(summary, 150);
+try {
+  title = episode.attributes.title;
+  
+  // Get language from show ID
+  language = getLanguageFromShowId(episode.relationships.show.data.id);
+
+  // Get optimized episode image
+  image = await getEpisodeImage(episode.attributes.image_url || '/images/default.png', 'card');
+
+  // Sanitize and truncate summary, falling back to description if summary is null
+  cleanSummary = sanitizeAndTruncate(episode.attributes.summary || episode.attributes.description || '', 150);
+
+  // Get slug from attributes
+  slug = episode.attributes.slug;
+
+  console.log('Card processed data:', {
+    title,
+    language,
+    cleanSummary,
+    image,
+    slug
+  });
+} catch (error) {
+  console.error('Error processing episode data:', error);
+}
 
 // Prepare ARIA labels
-const durationLabel = `Duration: ${episode.attributes.duration_in_mmss}`;
-const dateLabel = `Published: ${formatted_published_at}`;
-const cardLabel = `Episode: ${title}`;
+let durationLabel = '';
+let dateLabel = '';
+let cardLabel = '';
+
+try {
+  durationLabel = `Duration: ${episode.attributes.duration_in_mmss}`;
+  dateLabel = `Published: ${episode.attributes.formatted_published_at}`;
+  cardLabel = `Episode: ${title}`;
+} catch (error) {
+  console.error('Error preparing labels:', error);
+  durationLabel = 'Duration not available';
+  dateLabel = 'Publication date not available';
+  cardLabel = 'Episode information';
+}
 ---
 
 <ErrorBoundary fallback="Episode information unavailable">
   <article 
-    class:list={['episode-card', { 'is-loading': loading }]}
+    class:list={['card focus-within:ring-2 focus-within:ring-[#ff676d]', { 'is-loading': loading }]}
     aria-label={cardLabel}
   >
     {loading ? (
       <div class="loading-skeleton">
         <div class="skeleton-image" aria-hidden="true"></div>
-        <div class="skeleton-content">
+        <div class="p-4">
           <div class="skeleton-title" aria-hidden="true"></div>
           <div class="skeleton-date" aria-hidden="true"></div>
           <div class="skeleton-description" aria-hidden="true"></div>
         </div>
       </div>
     ) : (
-      <a 
-        href={getEpisodePermalink(language, episode.attributes.slug)} 
-        class="card-link"
-        aria-label={cardLabel}
-      >
-        <div class="card-image">
-          <img
-            src={image.src}
-            width={image.width}
-            height={image.height}
-            alt=""
-            loading="lazy"
-            decoding="async"
-            class="w-full h-full object-cover"
-            aria-hidden="true"
-          />
-        </div>
-        <div class="card-content">
-          <h3 class="card-title">{title}</h3>
-          <div class="card-meta">
-            <time datetime={published_at} class="card-date" aria-label={dateLabel}>
-              {formatted_published_at}
-            </time>
-            <span class="card-duration" aria-label={durationLabel}>
-              {episode.attributes.duration_in_mmss}
+      <>
+        <img
+          src={image.src}
+          width={image.width}
+          height={image.height}
+          alt=""
+          loading="lazy"
+          decoding="async"
+          class="w-full aspect-video object-cover"
+          aria-hidden="true"
+        />
+        <div class="p-4">
+          <div class="flex gap-2 mb-2">
+            <span class={`badge badge-${language}`}>
+              {language === 'en' ? 'English' :
+               language === 'nl' ? 'Nederlands' :
+               language === 'de' ? 'Deutsch' :
+               language === 'es' ? 'Español' : language}
             </span>
           </div>
-          <p class="card-description">{cleanSummary}</p>
+          <h3 class="text-lg font-bold mb-2 line-clamp-2">
+            <a 
+              href={`/${language}/episodes/${episode.attributes.slug}`}
+              class="hover:text-[#ff676d] dark:hover:text-[#7bfff8]"
+              aria-label={cardLabel}
+            >
+              {title}
+            </a>
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-3 mb-4">
+            {cleanSummary}
+          </p>
+          <div class="mt-4">
+            <a
+              href={`/${language}/episodes/${episode.attributes.slug}`}
+              class="btn btn-primary inline-flex items-center gap-2"
+            >
+              <span>Listen Now</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 4v16l13 -8z"></path>
+              </svg>
+            </a>
+          </div>
         </div>
-      </a>
+      </>
     )}
   </article>
 </ErrorBoundary>

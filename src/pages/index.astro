@@ -1,38 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from '~/layouts/Layout.astro';
-import EpisodeGrid from '~/components/episode/Grid.astro';
+import PageLayout from '~/layouts/PageLayout.astro';
 import { getTranslations } from '~/utils/translations';
-import logo from '~/assets/images/crocafe-logo.svg';
-
-// Import AstroWind components
-import Header from '~/components/widgets/Header.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Features from '~/components/widgets/Features.astro';
-import Footer from '~/components/widgets/Footer.astro';
-
-// Get latest episode from each language
-const [enEpisodes, nlEpisodes, deEpisodes, esEpisodes] = await Promise.all([
-  getCollection('en-episodes'),
-  getCollection('nl-episodes'),
-  getCollection('de-episodes'),
-  getCollection('es-episodes'),
-]);
-
-// Sort episodes by date and get the latest one from each language
-const getLatestEpisode = (episodes) => {
-  return episodes.sort((a, b) => 
-    new Date(b.data.attributes.published_at).valueOf() - 
-    new Date(a.data.attributes.published_at).valueOf()
-  )[0];
-};
-
-const latestEpisodes = [
-  getLatestEpisode(enEpisodes),
-  getLatestEpisode(nlEpisodes),
-  getLatestEpisode(deEpisodes),
-  getLatestEpisode(esEpisodes),
-].filter(Boolean);
+import LatestEpisodes from '~/components/widgets/LatestEpisodes.astro';
 
 // Get English translations for the homepage
 const t = getTranslations('en');
@@ -53,85 +23,35 @@ const metadata = {
 const availableLanguages = ['en', 'nl', 'de', 'es'] as const;
 ---
 
-<Layout metadata={metadata} currentLang="en" availableLanguages={availableLanguages}>
-  <Header
-    links={[
-      { text: 'Episodes', href: '/episodes' },
-      { text: 'Guests', href: '/guests' },
-      { text: 'Topics', href: '/topics' },
-    ]}
-    actions={[
-      {
-        text: t.listenNow,
-        href: '#episodes',
-        icon: 'tabler:player-play',
-      },
-    ]}
-    showToggleTheme={true}
-    position="right"
-    currentLang="en"
-    currentPath={Astro.url.pathname}
-  />
-  
-  <Hero
-    callToAction={{ text: t.listenNow, href: '#episodes', icon: 'tabler:player-play' }}
-    image={{ src: logo, alt: 'CRO.cafe Logo', width: 400, height: 400 }}
-  >
-    <Fragment slot="title">
-      CRO.cafe
-    </Fragment>
-    <Fragment slot="subtitle">
-      {t.description}
-    </Fragment>
-    <Fragment slot="actions">
-      <div class="flex flex-wrap justify-center gap-4">
-        {Object.entries(t.languageButtons).map(([lang, text]) => (
-          <a
-            href={`/${lang === 'en' ? '' : lang}`}
-            class="btn btn-primary px-6 py-3 text-white font-semibold shadow-lg"
-          >
-            {text}
-          </a>
-        ))}
-      </div>
-    </Fragment>
-  </Hero>
+<PageLayout metadata={metadata} currentLang="en" availableLanguages={availableLanguages}>
+  <div class="flex flex-col min-h-screen">
+    <div class="relative">
+      <Hero
+        callToAction={{ text: t.listenNow, href: '#episodes', icon: 'tabler:player-play' }}
+      >
+        <Fragment slot="title">
+          CRO.cafe
+        </Fragment>
+        <Fragment slot="subtitle">
+          {t.description}
+        </Fragment>
+        <Fragment slot="actions">
+          <div class="flex flex-wrap justify-center gap-4">
+            {Object.entries(t.languageButtons).map(([lang, text]) => (
+              <a
+                href={`/${lang}`}
+                class="btn btn-primary px-6 py-3 text-white font-semibold shadow-lg"
+              >
+                {text}
+              </a>
+            ))}
+          </div>
+        </Fragment>
+      </Hero>
+    </div>
 
-  <Features
-    id="episodes"
-    title={t.latestEpisodes}
-    columns={3}
-    classes={{ container: 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8' }}
-  >
-    <EpisodeGrid episodes={latestEpisodes} columns="4" />
-  </Features>
-
-  <Footer
-    links={[
-      {
-        title: 'Podcast',
-        links: [
-          { text: 'Latest Episodes', href: '#episodes' },
-          { text: 'All Episodes', href: '/episodes' },
-          { text: 'Guests', href: '/guests' },
-        ],
-      },
-      {
-        title: 'Languages',
-        links: [
-          { text: 'English', href: '/en' },
-          { text: 'Nederlands', href: '/nl' },
-          { text: 'Deutsch', href: '/de' },
-          { text: 'Español', href: '/es' },
-        ],
-      },
-    ]}
-    socialLinks={[
-      { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: 'https://twitter.com/cro_cafe' },
-      { ariaLabel: 'RSS Feed', icon: 'tabler:rss', href: '/rss.xml' },
-    ]}
-    footNote="© 2024 CRO.cafe. All rights reserved."
-    currentLang="en"
-    currentPath={Astro.url.pathname}
-  />
-</Layout>
+    <div class="relative">
+      <LatestEpisodes id="episodes" />
+    </div>
+  </div>
+</PageLayout>

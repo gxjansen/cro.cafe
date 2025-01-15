@@ -1,151 +1,423 @@
 ---
-import PageLayout from '~/layouts/PageLayout.astro';
+import Layout from '~/layouts/Layout.astro';
+import Button from '~/components/ui/Button.astro';
+import { Icon } from 'astro-icon/components';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
-
-import type { MetaData } from '~/types';
-
-export interface Props {
-  metadata?: MetaData;
-}
+import Logo from '~/components/Logo.astro';
+import ToggleTheme from '~/components/common/ToggleTheme.astro';
+import LanguageSwitcher from '~/components/common/LanguageSwitcher.astro';
+import Header from '~/components/widgets/Header.astro';
+import Footer from '~/components/widgets/Footer.astro';
+import heroImage from '~/assets/images/hero-image.png';
 
 const metadata = {
   title: 'Style Guide',
+  description: 'A comprehensive guide to our website design principles, components, and best practices.',
 };
 
-// Define the image type according to Hero component requirements
-type HeroImage = {
-  src: string;
-  alt: string;
-};
+const availableLanguages = ['en', 'nl', 'de', 'es'] as const;
 
-const heroImage: HeroImage = {
-  src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-  alt: 'Style Guide Image',
-};
+const sections = [
+  { id: 'typography', title: 'Typography', icon: 'tabler:typography' },
+  { id: 'links', title: 'Links', icon: 'tabler:link' },
+  { id: 'buttons', title: 'Buttons', icon: 'tabler:click' },
+  { id: 'badges', title: 'Badges', icon: 'tabler:badge' },
+  { id: 'alerts', title: 'Alerts', icon: 'tabler:alert-circle' },
+  { id: 'episode-cards', title: 'Episode Cards', icon: 'tabler:player-play' },
+  { id: 'lists', title: 'Lists', icon: 'tabler:list' },
+];
 ---
 
-<PageLayout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
-  <Hero
-    tagline="Style Guide"
-    image={heroImage}
-  >
-    <Fragment slot="title">
-      Our <span class="text-accent dark:text-white highlight">Style Guide</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Follow our style guide to ensure consistency and quality in your website's design and development.
-    </Fragment>
-  </Hero>
-
-  <!-- Features Widget *************** -->
-
-  <Features
-    id="styleguide"
-    tagline="Style Guide"
-    title="Design Principles"
-    subtitle="Our design principles guide the creation of visually appealing and user-friendly websites."
-    items={[
+<Layout metadata={metadata} currentLang="en" availableLanguages={availableLanguages}>
+  <Header
+    links={[
       {
-        title: "Accessibility",
-        description:
-          "Ensure your website is accessible to all users, including those with disabilities, by following best practices and standards.",
-        icon: "tabler:accessibility"
+        text: 'Episodes',
+        links: [
+          {
+            text: 'Latest Episodes',
+            href: '/#episodes',
+          },
+          {
+            text: 'All Episodes',
+            href: '/episodes',
+          },
+          {
+            text: 'By Topic',
+            href: '/topics',
+          },
+        ],
       },
       {
-        title: "Responsive Design",
-        description:
-          "Create websites that look and function well on all devices and screen sizes, providing a seamless user experience.",
-        icon: "tabler:device-mobile"
+        text: 'Guests',
+        href: '/guests',
       },
       {
-        title: "Consistency",
-        description:
-          "Maintain consistency in design elements, typography, and color schemes to create a cohesive and professional look.",
-        icon: "tabler:align-center"
-      },
-      {
-        title: "Performance",
-        description:
-          "Optimize your website for fast loading times and high performance, ensuring a smooth and engaging user experience.",
-        icon: "tabler:rocket"
-      },
-      {
-        title: "SEO",
-        description:
-          "Improve your website's visibility in search engine results by following SEO best practices and optimizing content.",
-        icon: "tabler:arrows-right-left"
-      },
-      {
-        title: "User Experience",
-        description:
-          "Focus on creating a user-friendly and intuitive website that meets the needs and expectations of your audience.",
-        icon: "tabler:user"
+        text: 'About',
+        links: [
+          {
+            text: 'About CRO.CAFE',
+            href: '/#about',
+          },
+          {
+            text: 'Contact',
+            href: '/contact',
+          },
+          {
+            text: 'Style Guide',
+            href: '/styleguide',
+          },
+        ],
       },
     ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Components"
-    tagline="Widgets"
-    columns={3}
-    items={[
+    actions={[
       {
-        title: "Headers",
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: "flat-color-icons:template"
-      },
-      {
-        title: "Heros",
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: "flat-color-icons:gallery"
-      },
-      {
-        title: "Features",
-        description:
-          "Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!",
-        icon: "flat-color-icons:approval"
-      },
-      {
-        title: "Content",
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: "flat-color-icons:document"
-      },
-      {
-        title: "Call-to-Action",
-        description:
-          "That enthusiastic friend who's always urging, \"Do it! Do it!\"? Yeah, that's this button nudging you towards adventure.",
-        icon: "flat-color-icons:advertising"
-      },
-      {
-        title: "Pricing",
-        description: "Behold the dessert menu of the website world. Tempting choices await, can you resist?",
-        icon: "flat-color-icons:currency-exchange"
-      },
-      {
-        title: "Testimonial",
-        description: "Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.",
-        icon: "flat-color-icons:voice-presentation"
-      },
-      {
-        title: "Contact",
-        description:
-          "Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.",
-        icon: "flat-color-icons:business-contact"
-      },
-      {
-        title: "Footers",
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: "flat-color-icons:database"
+        text: 'Subscribe',
+        href: '#',
+        icon: 'tabler:rss',
+        target: '_blank',
+        variant: 'primary',
       },
     ]}
+    showToggleTheme={true}
+    position="right"
+    currentLang="en"
+    currentPath={Astro.url.pathname}
   />
-</PageLayout>
+  <div class="container py-8 md:py-12">
+    <!-- Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Index -->
+    <nav class="mb-16" aria-label="Table of Contents">
+      <h2 class="text-2xl font-bold mb-4">Table of Contents</h2>
+      <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {sections.map(({ id, title, icon }) => (
+          <li>
+            <a href={`#${id}`} class="toc-link">
+              <Icon name={icon} class="w-5 h-5" />
+              <span>{title}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <!-- Hero Widget -->
+    <Hero
+      tagline="Style Guide"
+      image={{
+        src: heroImage,
+        alt: 'Style Guide Hero Image',
+        width: 1920,
+        height: 1080,
+      }}
+    >
+      <Fragment slot="title">
+        Our <span class="text-accent dark:text-white highlight">Style Guide</span>
+      </Fragment>
+
+      <Fragment slot="subtitle">
+        Follow our style guide to ensure consistency and quality in your website's design and development.
+      </Fragment>
+    </Hero>
+
+    <!-- Main Content -->
+    <main id="main-content" class="mt-16">
+      <!-- Typography -->
+      <section id="typography" class="mb-16" aria-labelledby="typography-title">
+        <h2 id="typography-title" class="text-3xl font-bold mb-4">Typography</h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-8">Our typography system uses a consistent scale to maintain visual hierarchy. Font sizes are defined using Tailwind's size classes to ensure consistency across the site.</p>
+        <div class="space-y-4">
+          <h1 class="text-5xl">Heading 1 - Extra Large</h1>
+          <h2 class="text-4xl">Heading 2 - Very Large</h2>
+          <h3 class="text-3xl">Heading 3 - Large</h3>
+          <h4 class="text-2xl">Heading 4 - Medium Large</h4>
+          <h5 class="text-xl">Heading 5 - Medium</h5>
+          <h6 class="text-lg">Heading 6 - Small</h6>
+          <p class="text-base">Regular paragraph text with a <a href="#" class="link">link</a> inside. This is a longer paragraph to demonstrate how text flows and wraps across multiple lines. The base font size is used for most body text throughout the site.</p>
+          <p class="text-sm">Small text is used for less important information, metadata, or supporting content. It helps create visual hierarchy and improve readability.</p>
+          <p class="text-xs">Extra small text should be used sparingly, typically for things like footnotes, captions, or legal text where space is limited but the information must still be included.</p>
+        </div>
+      </section>
+
+      <!-- Links -->
+      <section id="links" class="mb-16" aria-labelledby="links-title">
+        <h2 id="links-title" class="text-3xl font-bold mb-4">Links</h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-8">Links are used to navigate between pages or sections. They use consistent styling and hover states to indicate interactivity.</p>
+        <div class="space-y-4">
+          <div class="flex flex-wrap gap-8">
+            <div>
+              <h3 class="text-xl font-bold mb-4">Default Links</h3>
+              <div class="space-y-2">
+                <p><a href="#" class="link">Default link style</a></p>
+                <p><a href="#" class="link">Secondary link style</a></p>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-4">Navigation Links</h3>
+              <div class="space-y-2">
+                <p><a href="#" class="nav-link">Navigation link</a></p>
+                <p><a href="#" class="nav-link text-[#ff676d] dark:text-[#7bfff8] hover:opacity-80">Active navigation link</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Buttons -->
+      <section id="buttons" class="mb-16" aria-labelledby="buttons-title">
+        <h2 id="buttons-title" class="text-3xl font-bold mb-4">Buttons</h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-8">Buttons are used for primary actions and navigation. They come in different variants and can include icons to better communicate their purpose.</p>
+        <div class="flex flex-wrap gap-4">
+          <Button variant="primary">Primary Button</Button>
+          <Button variant="secondary">Secondary Button</Button>
+          <Button variant="primary" icon="tabler:arrow-right">With Icon</Button>
+          <Button variant="outline" icon="tabler:download">Download</Button>
+          <Button variant="primary" disabled>Disabled Button</Button>
+        </div>
+      </section>
+
+      <!-- Badges -->
+      <section id="badges" class="mb-16" aria-labelledby="badges-title">
+        <h2 id="badges-title" class="text-3xl font-bold mb-4">Badges</h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-8">Badges are used to highlight status, categories, or metadata. They use color and icons to provide quick visual feedback.</p>
+        <div class="flex flex-wrap gap-2">
+          <span role="status" class="badge badge-info">
+            <Icon name="tabler:info-circle" class="w-3.5 h-3.5" aria-hidden="true" />
+            Default
+          </span>
+          <span role="status" class="badge badge-success">
+            <Icon name="tabler:circle-check" class="w-3.5 h-3.5" aria-hidden="true" />
+            Success
+          </span>
+          <span role="status" class="badge badge-warning">
+            <Icon name="tabler:alert-triangle" class="w-3.5 h-3.5" aria-hidden="true" />
+            Warning
+          </span>
+          <span role="status" class="badge badge-error">
+            <Icon name="tabler:alert-circle" class="w-3.5 h-3.5" aria-hidden="true" />
+            Error
+          </span>
+        </div>
+
+        <h3 class="text-xl font-bold mt-8 mb-4">Language Badges</h3>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge badge-en">English</span>
+          <span class="badge badge-nl">Nederlands</span>
+          <span class="badge badge-de">Deutsch</span>
+          <span class="badge badge-es">Español</span>
+        </div>
+      </section>
+
+      <!-- Alerts -->
+      <section id="alerts" class="mb-16" aria-labelledby="alerts-title">
+        <h2 id="alerts-title" class="text-3xl font-bold mb-4">Alerts</h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-8">Alerts provide important feedback or information to users. Each type uses distinct colors and icons to convey different levels of importance.</p>
+        <div class="space-y-4">
+          <div role="alert" class="alert alert-info">
+            <Icon name="tabler:info-circle" class="w-5 h-5" aria-hidden="true" />
+            <p>Info alert message - Provides additional information or context to the user.</p>
+          </div>
+          <div role="alert" class="alert alert-success">
+            <Icon name="tabler:circle-check" class="w-5 h-5" aria-hidden="true" />
+            <p>Success alert message - Confirms that an action was completed successfully.</p>
+          </div>
+          <div role="alert" class="alert alert-warning">
+            <Icon name="tabler:alert-triangle" class="w-5 h-5" aria-hidden="true" />
+            <p>Warning alert message - Warns the user about potential issues or consequences.</p>
+          </div>
+          <div role="alert" class="alert alert-error">
+            <Icon name="tabler:alert-circle" class="w-5 h-5" aria-hidden="true" />
+            <p>Error alert message - Indicates that something went wrong or an error occurred.</p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Episode Cards -->
+      <section id="episode-cards" class="mb-16" aria-labelledby="episode-cards-title">
+        <h2 id="episode-cards-title" class="text-3xl font-bold mb-4">Episode Cards</h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-8">Episode cards display podcast content in a consistent format. They include thumbnails, titles, descriptions, and action buttons.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="card focus-within:ring-2 focus-within:ring-[#ff676d]">
+            <img src="/images/episodes/6-steps-to-get-your-experimentation-culture-running.jpeg" alt="Episode thumbnail" class="w-full aspect-video object-cover" />
+            <div class="p-4">
+              <div class="flex gap-2 mb-2">
+                <span class="badge badge-en">English</span>
+                <span class="badge badge-nl">Nederlands</span>
+                <span class="badge badge-de">Deutsch</span>
+                <span class="badge badge-es">Español</span>
+              </div>
+              <h3 class="text-lg font-bold mb-2 line-clamp-2">Episode Title Goes Here</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-3">Episode description that might be quite long and need to be truncated after three lines of text.</p>
+              <div class="mt-4">
+                <Button variant="primary" icon="tabler:player-play">Listen Now</Button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Lists -->
+      <section id="lists" class="mb-16" aria-labelledby="lists-title">
+        <h2 id="lists-title" class="text-3xl font-bold mb-4">Lists</h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-8">Lists are used to present related content in a structured way. Both ordered and unordered lists use consistent spacing and markers.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">Unordered List</h3>
+            <ul class="list-disc list-inside space-y-2">
+              <li>First item in the list</li>
+              <li>Second item in the list</li>
+              <li>Third item in the list</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Ordered List</h3>
+            <ol class="list-decimal list-inside space-y-2">
+              <li>First item in the list</li>
+              <li>Second item in the list</li>
+              <li>Third item in the list</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Design Principles -->
+      <section class="mb-16" aria-labelledby="design-principles-title">
+        <Features
+          id="design-principles"
+          tagline="Design Principles"
+          title="Core Design Principles"
+          subtitle="Our design principles guide the creation of visually appealing and user-friendly websites."
+          items={[
+            {
+              title: "Accessibility",
+              description:
+                "Ensure your website is accessible to all users, including those with disabilities, by following best practices and standards.",
+              icon: "tabler:wheelchair"
+            },
+            {
+              title: "Responsive Design",
+              description:
+                "Create websites that look and function well on all devices and screen sizes, providing a seamless user experience.",
+              icon: "tabler:device-mobile"
+            },
+            {
+              title: "Consistency",
+              description:
+                "Maintain consistency in design elements, typography, and color schemes to create a cohesive and professional look.",
+              icon: "tabler:layout-grid"
+            },
+            {
+              title: "Performance",
+              description:
+                "Optimize your website for fast loading times and high performance, ensuring a smooth and engaging user experience.",
+              icon: "tabler:rocket"
+            },
+            {
+              title: "SEO",
+              description:
+                "Improve your website's visibility in search engine results by following SEO best practices and optimizing content.",
+              icon: "tabler:search"
+            },
+            {
+              title: "User Experience",
+              description:
+                "Focus on creating a user-friendly and intuitive website that meets the needs and expectations of your audience.",
+              icon: "tabler:users"
+            }
+          ]}
+        />
+      </section>
+
+      <!-- Components -->
+      <section class="mb-16" aria-labelledby="components-title">
+        <Features2
+          title="Components"
+          tagline="Building Blocks"
+          subtitle="Our component library provides consistent, reusable elements for building interfaces."
+          columns={3}
+          items={[
+            {
+            title: "Headers",
+            description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
+            icon: "tabler:layout-navbar"
+          },
+          {
+            title: "Heroes",
+            description: "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
+            icon: "tabler:photo"
+          },
+          {
+            title: "Features",
+            description: "Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!",
+            icon: "tabler:star"
+          },
+          {
+            title: "Content",
+            description: "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
+            icon: "tabler:file-text"
+          },
+          {
+            title: "Call-to-Action",
+            description: "That enthusiastic friend who's always urging, \"Do it! Do it!\"? Yeah, that's this button nudging you towards adventure.",
+            icon: "tabler:pointer"
+          },
+          {
+            title: "Forms",
+            description: "Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.",
+            icon: "tabler:forms"
+          },
+          {
+            title: "Cards",
+            description: "Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.",
+            icon: "tabler:layout-grid"
+          },
+          {
+            title: "Lists",
+            description: "The organized friend who always has everything in perfect order. Making chaos look neat since forever!",
+            icon: "tabler:list"
+          },
+          {
+            title: "Footer",
+            description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
+            icon: "tabler:layout-bottombar"
+          }
+          ]}
+        />
+      </section>
+    </main>
+  </div>
+
+  <Footer
+    links={[
+      {
+        title: 'Podcast',
+        links: [
+          { text: 'Latest Episodes', href: '#episodes' },
+          { text: 'All Episodes', href: '/episodes' },
+          { text: 'Guests', href: '/guests' },
+        ],
+      },
+      {
+        title: 'Languages',
+        links: [
+          { text: 'English', href: '/en' },
+          { text: 'Nederlands', href: '/nl' },
+          { text: 'Deutsch', href: '/de' },
+          { text: 'Español', href: '/es' },
+        ],
+      },
+    ]}
+    socialLinks={[
+      { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: 'https://twitter.com/cro_cafe' },
+      { ariaLabel: 'RSS Feed', icon: 'tabler:rss', href: '/rss.xml' },
+    ]}
+    footNote="© 2024 CRO.cafe. All rights reserved."
+    currentLang="en"
+    currentPath={Astro.url.pathname}
+  />
+</Layout>

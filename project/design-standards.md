@@ -1,5 +1,7 @@
 # CRO.cafe Design Standards
 
+Minimize the use of inline styles, and use Tailwind classes instead. Mjor elements are shown on /styleguide page.
+
 ## Brand logo
 
 logo can be found at /public/crocafe-logo.svg

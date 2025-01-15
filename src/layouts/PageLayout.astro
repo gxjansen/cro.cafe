@@ -1,7 +1,9 @@
 ---
 import Layout from '~/layouts/Layout.astro';
-import Announcement from '~/components/widgets/Announcement.astro';
+import Header from '~/components/widgets/Header.astro';
+import Footer from '~/components/widgets/Footer.astro';
 
+import { getHeaderData, getFooterData } from '~/navigation';
 import type { MetaData } from '~/types';
 
 export interface Props {
@@ -11,11 +13,29 @@ export interface Props {
 }
 
 const { metadata, availableLanguages, currentLang = 'en' } = Astro.props;
+
+// Prepare props objects to avoid string interpolation issues
+const layoutProps = {
+  metadata,
+  availableLanguages,
+  currentLang,
+};
+
+const headerProps = {
+  ...getHeaderData(currentLang),
+  isSticky: true,
+  showToggleTheme: true,
+  currentLang,
+};
+
+const footerProps = {
+  ...getFooterData(currentLang),
+  currentLang,
+};
 ---
 
-<Layout {...{metadata, availableLanguages, currentLang}}>
-  <slot name="announcement">
-    <Announcement />
-  </slot>
+<Layout {...layoutProps}>
+  <Header {...headerProps} />
   <slot />
+  <Footer {...footerProps} />
 </Layout>

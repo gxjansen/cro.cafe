@@ -1,36 +1,44 @@
-export const headerData = {
+// Helper to prefix URLs with language
+const withLang = (path: string, lang: string) => `/${lang}${path}`;
+
+// Get navigation data for a specific language
+export const getHeaderData = (lang: string) => ({
   links: [
     {
       text: 'Episodes',
       links: [
         {
           text: 'Latest Episodes',
-          href: '/#episodes',
+          href: withLang('/#episodes', lang),
         },
         {
           text: 'All Episodes',
-          href: '/episodes',
+          href: withLang('/episodes', lang),
         },
         {
           text: 'By Topic',
-          href: '/topics',
+          href: withLang('/topics', lang),
         },
       ],
     },
     {
       text: 'Guests',
-      href: '/guests',
+      href: withLang('/guests', lang),
     },
     {
       text: 'About',
       links: [
         {
           text: 'About CRO.CAFE',
-          href: '/#about',
+          href: withLang('/#about', lang),
         },
         {
           text: 'Contact',
-          href: '/contact',
+          href: withLang('/contact', lang),
+        },
+        {
+          text: 'Style Guide',
+          href: withLang('/styleguide', lang),
         },
       ],
     },
@@ -44,9 +52,9 @@ export const headerData = {
       variant: 'primary',
     },
   ],
-};
+});
 
-export const footerData = {
+export const getFooterData = (lang: string) => ({
   links: [
     {
       title: 'Listen On',
@@ -59,25 +67,29 @@ export const footerData = {
     {
       title: 'Resources',
       links: [
-        { text: 'Episodes', href: '/episodes' },
-        { text: 'Guests', href: '/guests' },
-        { text: 'Topics', href: '/topics' },
+        { text: 'Episodes', href: withLang('/episodes', lang) },
+        { text: 'Guests', href: withLang('/guests', lang) },
+        { text: 'Topics', href: withLang('/topics', lang) },
       ],
     },
     {
       title: 'Legal',
       links: [
-        { text: 'Terms', href: '/terms' },
-        { text: 'Privacy Policy', href: '/privacy' },
+        { text: 'Terms', href: withLang('/terms', lang) },
+        { text: 'Privacy Policy', href: withLang('/privacy', lang) },
       ],
     },
   ],
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: '#' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: '/rss.xml' },
+    { ariaLabel: 'RSS', icon: 'tabler:rss', href: withLang('/rss.xml', lang) },
   ],
   footNote: `
     <span>CRO.CAFE · All rights reserved.</span>
   `,
-};
+});
+
+// Export default English navigation for backwards compatibility
+export const headerData = getHeaderData('en');
+export const footerData = getFooterData('en');

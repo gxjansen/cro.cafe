@@ -8,10 +8,7 @@ import icon from 'astro-icon';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.cro.cafe',
-  trailingSlash: 'never',
-  build: {
-    format: 'directory',
-  },
+  trailingSlash: 'ignore',
   integrations: [
     tailwind({
       applyBaseStyles: false,

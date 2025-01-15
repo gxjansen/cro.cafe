@@ -1,20 +1,108 @@
-# CRO.CAFE Implementation Plan - MVP Focus
+# CRO.CAFE Implementation Plan
 
-## Phase 1: Project Setup (Completed)
+This document outlines the step-by-step implementation plan for migrating four CRO.CAFE podcast websites into a single, unified platform using Astro 5.0. Each section includes validation checks to ensure proper implementation.
 
-[Previous completed items remain unchanged]
+After completing a task, mark it as complete by replacing the [ ] with [x].
 
-## Phase 2: Transistor API Integration (Completed)
+## 1. Project Setup & Template Analysis
 
-[Previous completed items remain unchanged]
+- [x] Initialize Git repository with proper .gitignore
+- [x] Clean up template files and organize reference material
+- [x] Set up project structure following Astro 5.0 best practices
+- [x] Configure TypeScript with strict mode
+- [x] Set up Tailwind CSS with proper configuration
+- [x] Configure ESLint and Prettier
+- [x] Implement base metadata component
+- [x] Configure OpenGraph tags and image generation
+- [x] Set up structured data templates
 
-## Phase 3: Content Management (Completed)
+**Validation Checks:**
 
-[Previous completed items remain unchanged]
+- All template demo content moved to a reference folder
+- No TypeScript errors (`npm run typecheck`)
+- ESLint passes without errors (`npm run lint`)
+- Development server runs without errors (`npm run dev`)
+- Project builds successfully (`npm run build`)
+- OpenGraph tags validate in social media debuggers
+- Structured data validates in testing tools
 
-## Phase 4: Core Features (Completed)
+**Reference Files:**
 
-[Previous completed items remain unchanged]
+- [Template Analysis Guide](./guides/template-analysis.md)
+- [Project Structure Guide](./guides/project-structure.md)
+- [SEO & Metadata Guide](./guides/seo-metadata.md)
+
+## 2. Content Collections Setup
+
+- [x] Define Zod schemas for all content types
+- [x] Set up content collections for episodes, guests, quotes, brands, and platforms
+- [x] Create folder structure for language-specific content
+- [x] Implement type-safe content management
+- [x] Set up image optimization pipeline
+- [x] Configure canonical URLs and language references
+- [x] Implement hreflang tags for all content types
+
+**Validation Checks:**
+
+- Content schemas compile without errors
+- Test content entries validate against schemas
+- Image optimization works as expected
+- Content queries work in test components
+- Canonical URLs properly reference primary language versions
+- hreflang tags validate for all language combinations
+
+**Reference Files:**
+
+- [Content Schema Definitions](./guides/content-schemas.md)
+- [Content Organization Guide](./guides/content-organization.md)
+
+## 3. Data Import System
+
+- [x] Create RSS feed parser
+- [x] Develop CSV data import scripts
+- [x] Set up image download and optimization pipeline
+- [x] Implement slug generation and validation
+- [x] Create GitHub Action for RSS sync
+- [x] Implement OpenGraph image generation during import
+
+**Validation Checks:**
+
+- RSS feeds parse correctly
+- CSV data imports successfully
+- Images download and optimize properly
+- Slugs generate uniquely without conflicts
+- GitHub Action runs successfully
+- OpenGraph images generate for all content types
+
+**Reference Files:**
+
+- [Data Import Guide](./guides/data-import.md)
+- [RSS Sync Implementation](./guides/rss-sync.md)
+
+## 4. Core Components Development
+
+- [x] Implement language-aware layout components
+- [x] Create episode display components
+- [x] Develop navigation with language switching
+- [x] Build footer with platform links
+- [x] Implement Transistor.FM player embedding
+- [x] Create metadata components for all page types
+- [x] Implement structured data components
+
+**Validation Checks:**
+
+- Components render in all supported languages
+- Language switching works correctly
+- Episode player embeds function properly
+- Navigation works across all routes
+- Responsive design functions on all viewports
+- SEO components generate valid metadata
+- Structured data validates in testing tools
+
+**Reference Files:**
+
+- [Component Development Guide](./guides/component-development.md)
+- [Language Implementation Guide](./guides/language-implementation.md)
 
 ## Phase 5: Design & UX (In Progress)
 
