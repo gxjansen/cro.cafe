@@ -5,17 +5,36 @@ import DOMPurify from 'isomorphic-dompurify';
 
 const LANGUAGES = ['en', 'nl', 'de', 'es'];
 
-// Helper function to clean HTML content
-function cleanDescription(html: string): string {
+// Helper function to clean content
+function cleanContent(text: string): string {
+  if (!text) return '';
+
   // First remove HTML comments and their content
-  const withoutComments = html.replace(/<!--[\s\S]*?-->/g, '');
+  const withoutComments = text.replace(/<!--[\s\S]*?-->/g, '');
   // Then sanitize the HTML
   const sanitized = DOMPurify.sanitize(withoutComments, { ALLOWED_TAGS: [] });
-  // Remove URLs and "Shownotes:" text
-  return sanitized
-    .replace(/Shownotes:.*$/m, '') // Remove "Shownotes:" and everything after it on that line
-    .replace(/https?:\/\/\S+/g, '') // Remove URLs
-    .replace(/\s+/g, ' ') // Normalize whitespace
+
+  // Remove timestamps (e.g., "00:00 - ", "(00:00) - ")
+  const withoutTimestamps = sanitized.replace(/(?:\d{2}:\d{2}|\(\d{2}:\d{2}\))\s*-\s*/g, '');
+
+  // Find where guest information starts
+  const guestMarkers = ['Guest 1:', 'Guest:', ' Guest 1 ', ' Guest '];
+  let earliestIndex = withoutTimestamps.length;
+
+  for (const marker of guestMarkers) {
+    const index = withoutTimestamps.indexOf(marker);
+    if (index !== -1 && index < earliestIndex) {
+      earliestIndex = index;
+    }
+  }
+
+  // Cut off the text at the earliest guest marker
+  let cleanedText = withoutTimestamps.substring(0, earliestIndex).trim();
+
+  // Remove any remaining URLs and normalize whitespace
+  return cleanedText
+    .replace(/https?:\/\/\S+/g, '')
+    .replace(/\s+/g, ' ')
     .trim();
 }
 
@@ -37,13 +56,19 @@ async function addCleanDescriptions() {
 
       try {
         const episode = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+        const attrs = episode.attributes;
 
-        // Add clean_description if it doesn't exist
-        if (!episode.attributes.clean_description) {
-          episode.attributes.clean_description = cleanDescription(episode.attributes.description);
-          fs.writeFileSync(filePath, JSON.stringify(episode, null, 2));
-          console.log(`Updated ${lang} episode: ${file}`);
-        }
+        // Clean both formatted_summary and formatted_description
+        const cleanedSummary = attrs.formatted_summary ? cleanContent(attrs.formatted_summary) : '';
+        const cleanedDescription = attrs.formatted_description
+          ? cleanContent(attrs.formatted_description)
+          : '';
+
+        // Use the longer cleaned text to avoid duplicate content
+        episode.attributes.clean_description =
+          cleanedSummary.length >= cleanedDescription.length ? cleanedSummary : cleanedDescription;
+        fs.writeFileSync(filePath, JSON.stringify(episode, null, 2));
+        console.log(`Updated ${lang} episode: ${file}`);
       } catch (error) {
         console.error(`Error processing ${lang} episode ${file}:`, error);
       }

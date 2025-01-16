@@ -23,6 +23,7 @@ interface Props {
       duration_in_mmss: string;
       formatted_published_at: string;
       formatted_description: string;
+      clean_description: string;
       image_url?: string;
       local_image_url?: string;
       video_url?: string;
@@ -63,6 +64,7 @@ const {
   duration_in_mmss,
   formatted_published_at,
   formatted_description,
+  clean_description,
   image_url,
   video_url,
   transcript_url,
@@ -75,9 +77,6 @@ const image = await getEpisodeImage(`/images/episodes/${language}/${episode.attr
 
 // Ensure local image URL is used for Open Graph and Twitter meta tags
 const ogImageUrl = episode.local_image_url || image.src;
-
-// Sanitize HTML content
-const sanitizedDescription = DOMPurify.sanitize(formatted_description);
 
 // Prepare structured data
 const structuredData = {
@@ -182,9 +181,9 @@ const structuredData = {
               <p class="text-lg text-gray-700 dark:text-gray-300">{summary}</p>
             </div>
           )}
-          {sanitizedDescription?.trim() && sanitizedDescription !== summary?.trim() && (
+          {clean_description?.trim() && clean_description !== summary?.trim() && (
             <div class="episode-description">
-              <div class="description" set:html={sanitizedDescription} />
+              <div class="description">{clean_description}</div>
             </div>
           )}
 

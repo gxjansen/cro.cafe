@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import Card from '../episode/Card.astro';
 
 console.log('Starting LatestEpisodes component...');
 
@@ -32,13 +33,28 @@ try {
       return dateA.valueOf() - dateB.valueOf();
     });
 
+    const latestEpisode = sorted[0];
     console.log(`Latest ${lang} episode:`, {
-      id: sorted[0].id,
-      title: sorted[0].data.attributes.title,
-      date: sorted[0].data.attributes.published_at,
+      id: latestEpisode.id,
+      title: latestEpisode.data.attributes.title,
+      date: latestEpisode.data.attributes.published_at,
+      clean_description: latestEpisode.data.attributes.clean_description
     });
 
-    return sorted[0];
+    // Transform data structure to match Card.astro expectations
+    return {
+      id: latestEpisode.id,
+      type: 'episode',
+      attributes: latestEpisode.data.attributes,
+      relationships: {
+        show: {
+          data: {
+            id: latestEpisode.data.relationships.show.data.id,
+            type: 'show'
+          }
+        }
+      }
+    };
   };
 
   latestEpisodes = [
@@ -52,14 +68,6 @@ try {
 } catch (error) {
   console.error('Error in LatestEpisodes component:', error);
 }
-
-// Language display names
-const langNames = {
-  en: 'English',
-  nl: 'Dutch',
-  de: 'German',
-  es: 'Spanish',
-} as const;
 ---
 
 <div class="bg-white dark:bg-gray-900 mt-16 md:mt-24">
@@ -70,39 +78,8 @@ const langNames = {
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {latestEpisodes.length > 0 ? (
-        latestEpisodes.map(({ lang, episode }) => (
-          <article class="card focus-within:ring-2 focus-within:ring-accent">
-            <img
-              src={`/images/episodes/${lang}/${episode.data.attributes.slug.replace(/_/g, '-').toLowerCase()}.webp`}
-              alt={episode.data.attributes.title || 'Episode thumbnail'}
-              class="w-full aspect-video object-cover"
-              loading="lazy"
-            />
-            <div class="p-4">
-              <div class="flex gap-2 mb-2">
-                <span class={`badge badge-${lang}`}>
-                  {langNames[lang as keyof typeof langNames]}
-                </span>
-              </div>
-              <h3 class="text-lg font-bold mb-2 line-clamp-2">
-                {episode.data.attributes.title}
-              </h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-3">
-                {episode.data.attributes.clean_description}
-              </p>
-              <div class="mt-4">
-                <a
-                  href={`/${lang}/episodes/${episode.data.attributes.slug}`}
-                  class="btn btn-primary inline-flex items-center gap-2"
-                >
-                  <span>Listen Now</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M7 4v16l13 -8z"></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </article>
+        latestEpisodes.map(({ episode }) => (
+          <Card episode={episode} />
         ))
       ) : (
         <div class="col-span-full text-center text-gray-500 dark:text-gray-400">

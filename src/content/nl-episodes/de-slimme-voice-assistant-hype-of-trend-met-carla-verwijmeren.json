@@ -40,7 +40,7 @@
     "type": "bonus",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Guest: Carla Verwijmeren URL: https://nl.cro.cafe/gast/carla-verwijmeren "
+    "clean_description": ""
   },
   "relationships": {
     "show": {

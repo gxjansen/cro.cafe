@@ -54,7 +54,23 @@ try {
       return orderDirection === 'desc' ? bValue - aValue : aValue - bValue;
     })
     // Apply limit if specified
-    .slice(0, limit || undefined);
+    .slice(0, limit || undefined)
+    // Transform data structure to match Card.astro expectations
+    .map(entry => ({
+      id: entry.id,
+      type: 'episode',
+      attributes: entry.data.attributes,
+      relationships: {
+        show: {
+          data: {
+            id: entry.data.relationships.show.data.id,
+            type: 'show'
+          }
+        }
+      }
+    }));
+
+  console.log('Processed episodes:', JSON.stringify(displayEpisodes[0], null, 2));
 } catch (error) {
   console.error('Error processing episodes:', error);
 }
@@ -131,7 +147,7 @@ const noEpisodesLabel = 'No episodes found';
               class="episode-cell"
               tabindex={index === 0 ? 0 : -1}
             >
-              <EpisodeCard episode={episode.data} />
+              <EpisodeCard episode={episode} />
             </div>
           ))}
         </div>
@@ -164,11 +180,6 @@ const noEpisodesLabel = 'No episodes found';
     )}
   </div>
 </ErrorBoundary>
-
-<script>
-import { initializeGridNavigation } from './grid-init';
-initializeGridNavigation();
-</script>
 
 <style>
 .episode-grid {

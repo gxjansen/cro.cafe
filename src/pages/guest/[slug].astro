@@ -62,10 +62,26 @@ for (const lang of SITE.languages) {
   allEpisodes.push(...guestEpisodes);
 }
 
-// Sort episodes by date
-const sortedEpisodes = allEpisodes.sort((a, b) => {
-  return new Date(b.data.attributes.published_at).getTime() - new Date(a.data.attributes.published_at).getTime();
-});
+// Sort episodes by date and transform data structure
+const sortedEpisodes = allEpisodes
+  .sort((a, b) => {
+    return new Date(b.data.attributes.published_at).getTime() - new Date(a.data.attributes.published_at).getTime();
+  })
+  .map(episode => ({
+    id: episode.id,
+    type: 'episode',
+    attributes: episode.data.attributes,
+    relationships: {
+      show: {
+        data: {
+          id: episode.data.relationships.show.data.id,
+          type: 'show'
+        }
+      }
+    }
+  }));
+
+console.log('Transformed episode data:', JSON.stringify(sortedEpisodes[0], null, 2));
 ---
 
 <PageLayout metadata={metadata} currentLang="en" availableLanguages={['en']}>
@@ -139,7 +155,7 @@ const sortedEpisodes = allEpisodes.sort((a, b) => {
           <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Episodes featuring {name}</h2>
           <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-8">
             {sortedEpisodes.map((episode) => (
-              <EpisodeCard episode={episode.data} />
+              <EpisodeCard episode={episode} />
             ))}
           </div>
         </section>

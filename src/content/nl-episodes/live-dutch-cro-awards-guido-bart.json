@@ -40,7 +40,7 @@
     "type": "bonus",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "<div><strong>Partners:</strong></div><div>&nbsp;</div><ul><li>Effective Experiments: <a href=\"https://www.effectiveexperiments.com\">effectiveexperiments.com</a></li></ul><div><br></div><ul><li>Convert: <a href=\"https://www.convert.com/features\">convert.com/features</a></li></ul><div><br></div><ul><li>Online Dialogue: <a href=\"https://www.onlinedialogue.nl\">onlinedialogue.nl</a></li></ul><div><br></div><ul><li>Braingineers: <a href=\"https://www.braingineers.com\">braingineers.com</a></li></ul><div><br></div>"
+    "clean_description": "Partners:&nbsp;Effective Experiments: effectiveexperiments.comConvert: convert.com/featuresOnline Dialogue: onlinedialogue.nlBraingineers: braingineers.com"
   },
   "relationships": {
     "show": {

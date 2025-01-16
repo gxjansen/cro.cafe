@@ -33,7 +33,7 @@
     "type": "bonus",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "\n\n<!-- GUESTS START -->\nGuest: Hielko Van Der Molen Martin Van Kranenburg Live Emerce Engage | URL: https://nl.cro.cafe/gast/hielko-van-der-molen-martin-van-kranenburg-live-emerce-engage\n<!-- GUESTS END -->"
+    "clean_description": ""
   },
   "relationships": {
     "show": {

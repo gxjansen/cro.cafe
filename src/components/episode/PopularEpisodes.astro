@@ -20,7 +20,22 @@ const popularStats = await getPopularEpisodes(language, limit);
 const allEpisodes = await getCollection(`${language}-episodes`);
 const popularEpisodes = popularStats
   .map(stat => allEpisodes.find(episode => episode.data.id === stat.id))
-  .filter((episode): episode is typeof allEpisodes[0] => episode !== undefined);
+  .filter((episode): episode is typeof allEpisodes[0] => episode !== undefined)
+  .map(episode => ({
+    id: episode.id,
+    type: 'episode',
+    attributes: episode.data.attributes,
+    relationships: {
+      show: {
+        data: {
+          id: episode.data.relationships.show.data.id,
+          type: 'show'
+        }
+      }
+    }
+  }));
+
+console.log('Transformed popular episodes:', JSON.stringify(popularEpisodes[0], null, 2));
 ---
 
 <ErrorBoundary fallback="Unable to load popular episodes.">
@@ -29,7 +44,7 @@ const popularEpisodes = popularStats
     {popularEpisodes.length > 0 ? (
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {popularEpisodes.map((episode) => (
-          <EpisodeCard episode={episode.data} />
+          <EpisodeCard episode={episode} />
         ))}
       </div>
     ) : (

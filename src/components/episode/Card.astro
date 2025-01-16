@@ -3,7 +3,7 @@ import ErrorBoundary from '../common/ErrorBoundary.astro';
 import { validateProps, EpisodeCardPropsSchema } from '~/utils/component-validation';
 import { getEpisodePermalink, getLanguageFromShowId } from '~/utils/permalinks';
 import { getEpisodeImage } from '~/utils/images';
-
+import DOMPurify from 'isomorphic-dompurify';
 
 interface Props {
   episode: {
@@ -61,8 +61,10 @@ try {
   // Get optimized episode image
   image = await getEpisodeImage(`/images/episodes/${language}/${episode.attributes.slug.replace(/_/g, '-').toLowerCase()}.webp`, 'card');
 
-  // Use clean_description which is already properly formatted without HTML
-  cleanSummary = episode.attributes.clean_description || '';
+  // Use clean_description first, then fall back to summary or cleaned description
+  cleanSummary = episode.attributes.clean_description || 
+                episode.attributes.summary || 
+                DOMPurify.sanitize(episode.attributes.description, { ALLOWED_TAGS: [] });
 
   // Get slug from attributes
   slug = episode.attributes.slug;
