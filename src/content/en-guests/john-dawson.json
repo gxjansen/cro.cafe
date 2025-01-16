@@ -4,7 +4,12 @@
   "role": "Managing Director",
   "bio": "",
   "image_url": "john-dawson.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/johnadawson/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

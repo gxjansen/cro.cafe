@@ -4,7 +4,12 @@
   "role": "Freelance Ecommerce Manager",
   "bio": "",
   "image_url": "tjerk-van-der-veen.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/tjerkveen/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

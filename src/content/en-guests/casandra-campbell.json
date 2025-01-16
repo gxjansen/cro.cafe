@@ -4,7 +4,12 @@
   "role": "Testing and Experimentation Lead",
   "bio": "",
   "image_url": "casandra-campbell.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/casandracampbell/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

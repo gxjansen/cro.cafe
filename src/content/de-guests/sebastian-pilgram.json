@@ -4,7 +4,12 @@
   "role": "Senior Conversion Manager",
   "bio": "",
   "image_url": "sebastian-pilgram.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/sebastian-p-a16141115/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

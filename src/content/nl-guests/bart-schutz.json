@@ -4,7 +4,12 @@
   "role": "Consumer Psychologist",
   "bio": "",
   "image_url": "bart-schutz.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://linkedin.com/in/bartschutz"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

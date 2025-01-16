@@ -1,7 +1,6 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 import plugin from 'tailwindcss/plugin';
 import typographyPlugin from '@tailwindcss/typography';
-import aspectRatioPlugin from '@tailwindcss/aspect-ratio';
 
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,json,md,mdx,svelte,ts,tsx,vue}'],
@@ -10,7 +9,8 @@ export default {
       colors: {
         primary: 'var(--aw-color-primary)',
         secondary: 'var(--aw-color-secondary)',
-        accent: 'var(--aw-color-accent)',
+        accent: 'var(--color-accent)',
+        'accent-dark': 'var(--color-accent-dark)',
         default: 'var(--aw-color-text-default)',
         muted: 'var(--aw-color-text-muted)',
         heading: 'var(--aw-color-text-heading)',
@@ -38,11 +38,14 @@ export default {
           '100%': { opacity: 1, transform: 'translateY(0)' },
         },
       },
+      aspectRatio: {
+        video: '16 / 9',
+        square: '1 / 1',
+      },
     },
   },
   plugins: [
     typographyPlugin,
-    aspectRatioPlugin,
     plugin(({ addVariant }) => {
       addVariant('intersect', '&:not([no-intersect])');
     }),

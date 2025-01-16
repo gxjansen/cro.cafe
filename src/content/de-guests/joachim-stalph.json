@@ -4,7 +4,12 @@
   "role": "Managing Partner",
   "bio": "",
   "image_url": "joachim-stalph.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/stalph/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

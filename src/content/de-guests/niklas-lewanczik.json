@@ -4,7 +4,12 @@
   "role": "Redaktionsleiter",
   "bio": "",
   "image_url": "niklas-lewanczik.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/niklas-lewanczik-517212168/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

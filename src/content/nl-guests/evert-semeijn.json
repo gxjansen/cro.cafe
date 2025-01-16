@@ -4,7 +4,12 @@
   "role": "Co-founder and neuropsychologist",
   "bio": "",
   "image_url": "evert-semeijn.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/evertsemeijn"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

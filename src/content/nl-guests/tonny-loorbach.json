@@ -4,7 +4,12 @@
   "role": "Entrepreneur, Author, Speaker and investor",
   "bio": "",
   "image_url": "tonny-loorbach.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/tonnyloorbach/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

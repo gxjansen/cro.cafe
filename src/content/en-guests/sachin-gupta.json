@@ -4,7 +4,12 @@
   "role": "Account Executive",
   "bio": "",
   "image_url": "sachin-gupta.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/sachin-gupta-linkedin/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

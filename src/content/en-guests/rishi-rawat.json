@@ -4,7 +4,12 @@
   "role": "eCommerce Marketing, Buyer Psychology",
   "bio": "",
   "image_url": "rishi-rawat.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/rawatrishi/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

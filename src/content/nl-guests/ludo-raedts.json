@@ -4,7 +4,12 @@
   "role": "Founding Partner",
   "bio": "",
   "image_url": "ludo-raedts.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/raedts"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

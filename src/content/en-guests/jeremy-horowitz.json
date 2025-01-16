@@ -4,7 +4,12 @@
   "role": "Dir. of Marketing",
   "bio": "",
   "image_url": "jeremy-horowitz.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/jeremyhorowitz1/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

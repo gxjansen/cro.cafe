@@ -4,7 +4,12 @@
   "role": "Co-Founder",
   "bio": "",
   "image_url": "anas-elimani.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/anas-e-40b74520a/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

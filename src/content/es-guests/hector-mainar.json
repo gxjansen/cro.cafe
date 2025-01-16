@@ -4,7 +4,12 @@
   "role": "Director Digital",
   "bio": "",
   "image_url": "hector-mainar.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/hectormainar/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

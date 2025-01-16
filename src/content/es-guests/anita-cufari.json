@@ -4,7 +4,12 @@
   "role": "CEO",
   "bio": "",
   "image_url": "anita-cufari.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/anitaalvarezcufari/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

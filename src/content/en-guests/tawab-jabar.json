@@ -4,7 +4,12 @@
   "role": "Growth Hacker & Strategist",
   "bio": "",
   "image_url": "tawab-jabar.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/tawabjabar"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

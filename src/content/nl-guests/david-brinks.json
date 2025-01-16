@@ -4,7 +4,12 @@
   "role": "Content writer & owner",
   "bio": "",
   "image_url": "david-brinks.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/davidbrinks"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

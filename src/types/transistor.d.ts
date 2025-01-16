@@ -62,3 +62,67 @@ export interface TransistorResponse {
   data: TransistorEpisode[];
   meta: TransistorPagination;
 }
+
+export interface DownloadData {
+  date: string;
+  downloads: number;
+}
+
+export interface EpisodeAnalytics {
+  id: string;
+  type: 'episode_analytics';
+  attributes: {
+    downloads: DownloadData[];
+    start_date: string;
+    end_date: string;
+  };
+  relationships: {
+    episode: {
+      data: {
+        id: string;
+        type: 'episode';
+      };
+    };
+  };
+}
+
+export interface EpisodesAnalytics {
+  id: string;
+  type: 'episodes_analytics';
+  attributes: {
+    episodes: Array<{
+      id: string;
+      title: string;
+      published_at: string;
+      downloads: DownloadData[];
+    }>;
+    start_date: string;
+    end_date: string;
+  };
+  relationships: {
+    show: {
+      data: {
+        id: string;
+        type: 'show';
+      };
+    };
+  };
+}
+
+export interface ShowAnalytics {
+  id: string;
+  type: 'show_analytics';
+  attributes: {
+    downloads: DownloadData[];
+    start_date: string;
+    end_date: string;
+  };
+  relationships: {
+    show: {
+      data: {
+        id: string;
+        type: 'show';
+      };
+    };
+  };
+}

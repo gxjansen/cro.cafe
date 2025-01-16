@@ -4,7 +4,12 @@
   "role": "Senior Innovation & Digital Executive I CMO/CCO",
   "bio": "",
   "image_url": "vanesa-robles.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/vanesarobles/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

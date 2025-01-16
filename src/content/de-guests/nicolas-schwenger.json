@@ -4,7 +4,12 @@
   "role": "Junior Manager Conversion Rate Optimization",
   "bio": "",
   "image_url": "nicolas-schwenger.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/nicolas-schwenger/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

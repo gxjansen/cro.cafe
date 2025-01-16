@@ -4,7 +4,12 @@
   "role": "Managing Director, Head of User Research & Metrics",
   "bio": "",
   "image_url": "tomer-sharon.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/tomersharon/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

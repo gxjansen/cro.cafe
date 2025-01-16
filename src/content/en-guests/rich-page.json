@@ -4,7 +4,12 @@
   "role": "CRO Expert",
   "bio": "",
   "image_url": "rich-page.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/richpagecro/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

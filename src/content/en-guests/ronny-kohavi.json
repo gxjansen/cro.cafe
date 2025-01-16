@@ -4,7 +4,12 @@
   "role": "Vice President and Technical Fellow",
   "bio": "",
   "image_url": "ronny-kohavi.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/ronnyk/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

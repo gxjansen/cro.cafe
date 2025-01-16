@@ -88,6 +88,46 @@ export class TransistorAPI {
       throw error;
     }
   }
+
+  /**
+   * Get analytics for a single episode
+   */
+  async getEpisodeAnalytics(episodeId: string, startDate?: string, endDate?: string) {
+    try {
+      const params = new URLSearchParams();
+      if (startDate) params.append('start_date', startDate);
+      if (endDate) params.append('end_date', endDate);
+
+      const response = await this.fetch(
+        `/analytics/episodes/${episodeId}${params.toString() ? `?${params.toString()}` : ''}`
+      );
+      await delay(this.rateLimitDelay);
+      return response;
+    } catch (error) {
+      console.error(`Error fetching analytics for episode ${episodeId}:`, error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get analytics for all episodes of a show
+   */
+  async getAllEpisodeAnalytics(showId: string, startDate?: string, endDate?: string) {
+    try {
+      const params = new URLSearchParams();
+      if (startDate) params.append('start_date', startDate);
+      if (endDate) params.append('end_date', endDate);
+
+      const response = await this.fetch(
+        `/analytics/${showId}/episodes${params.toString() ? `?${params.toString()}` : ''}`
+      );
+      await delay(this.rateLimitDelay);
+      return response;
+    } catch (error) {
+      console.error(`Error fetching analytics for show ${showId}:`, error);
+      throw error;
+    }
+  }
 }
 
 // Export singleton instance

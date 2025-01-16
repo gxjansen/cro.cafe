@@ -22,7 +22,43 @@ export const IMAGE_SIZES = {
       height: 675,
     },
   },
+  guest: {
+    card: {
+      width: 80,
+      height: 80,
+    },
+    detail: {
+      width: 200,
+      height: 200,
+    },
+  },
 } as const;
+
+/**
+ * Get optimized guest image URL with fallback
+ */
+export async function getGuestImage(
+  imageUrl: string | undefined,
+  size: keyof typeof IMAGE_SIZES.guest
+) {
+  if (!imageUrl) {
+    throw new Error('Image URL is required');
+  }
+
+  const { width, height } = IMAGE_SIZES.guest[size];
+  const optimizedImage = await getImage({
+    src: imageUrl,
+    width,
+    height,
+    format: 'webp',
+  });
+
+  return {
+    ...optimizedImage,
+    width,
+    height,
+  };
+}
 
 /**
  * Get optimized episode image URL with fallback

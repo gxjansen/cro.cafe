@@ -4,7 +4,12 @@
   "role": "Guest",
   "bio": "",
   "image_url": "marijke-van-spaendonck.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/marijke-van-spaendonck-03831ab3/?originalSubdomain=nl"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Head of user growth & analytics",
   "bio": "",
   "image_url": "milan-meurs.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/milanmeurs/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "DIgital Analytics Leader",
   "bio": "",
   "image_url": "prolet-miteva.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/prolet/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

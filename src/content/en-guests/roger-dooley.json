@@ -4,7 +4,12 @@
   "role": "Author, Keynote Speaker, Podcast Host",
   "bio": "",
   "image_url": "roger-dooley.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/dooley/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Co-founder",
   "bio": "",
   "image_url": "alen-sirovica.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/alensirovica/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

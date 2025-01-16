@@ -4,7 +4,12 @@
   "role": "CRO Strategist",
   "bio": "",
   "image_url": "jurjen-jongejan.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/jurjenjongejan"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

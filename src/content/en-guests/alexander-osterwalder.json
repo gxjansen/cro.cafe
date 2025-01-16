@@ -4,7 +4,12 @@
   "role": "Co-founder",
   "bio": "",
   "image_url": "alexander-osterwalder.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/osterwalder/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

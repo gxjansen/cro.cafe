@@ -4,7 +4,12 @@
   "role": "CRO Manager",
   "bio": "",
   "image_url": "marianne-stjernvall.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/marianne-stjernvall-%E2%99%A0%EF%B8%8F-04983680/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

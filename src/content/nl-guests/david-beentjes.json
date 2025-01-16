@@ -4,7 +4,12 @@
   "role": "Managing Partner",
   "bio": "",
   "image_url": "david-beentjes.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/davidbeentjes"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

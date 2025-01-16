@@ -4,7 +4,12 @@
   "role": "Digital Marketing Analyst",
   "bio": "",
   "image_url": "ana-soplon.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/anasoplon/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

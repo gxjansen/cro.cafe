@@ -4,7 +4,12 @@
   "role": "Founder",
   "bio": "",
   "image_url": "jerry-colonna.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/jerry-colonna-reboot/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

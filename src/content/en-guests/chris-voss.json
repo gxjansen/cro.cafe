@@ -4,7 +4,12 @@
   "role": "Guest",
   "bio": "",
   "image_url": "chris-voss.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/christophervoss/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

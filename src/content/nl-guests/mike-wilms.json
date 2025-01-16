@@ -4,7 +4,12 @@
   "role": "CRO & UX Consultant",
   "bio": "",
   "image_url": "mike-wilms.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/mikewilms/?originalSubdomain=nl"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

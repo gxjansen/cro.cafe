@@ -4,7 +4,12 @@
   "role": "Chairman",
   "bio": "",
   "image_url": "frank-overbeek.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/frank-overbeek-31a7a0/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

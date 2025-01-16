@@ -4,7 +4,12 @@
   "role": "MarTech Ecosystem & Business Development",
   "bio": "",
   "image_url": "michael-pietsch.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/michael-pietsch-0703ab45/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Owner",
   "bio": "",
   "image_url": "arnout-hellemans.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/arnouthellemans"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Optimiser in Chief",
   "bio": "",
   "image_url": "craig-sullivan.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/craigsullivan/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

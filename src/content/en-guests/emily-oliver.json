@@ -4,7 +4,12 @@
   "role": "UX & Experimentation Manager",
   "bio": "",
   "image_url": "emily-oliver.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/emily-oliver-77b602134/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

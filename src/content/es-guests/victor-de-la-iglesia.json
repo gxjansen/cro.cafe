@@ -4,7 +4,12 @@
   "role": "Data & Insights Solutions Consultant",
   "bio": "",
   "image_url": "victor-de-la-iglesia.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/victordelaiglesia/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

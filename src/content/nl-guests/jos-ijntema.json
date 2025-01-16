@@ -4,7 +4,12 @@
   "role": "Co-Founder",
   "bio": "",
   "image_url": "jos-ijntema.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/josijntema/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

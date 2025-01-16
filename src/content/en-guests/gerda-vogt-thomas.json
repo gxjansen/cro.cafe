@@ -4,7 +4,12 @@
   "role": "CRO & Content/Co-Founder",
   "bio": "",
   "image_url": "gerda-vogt-thomas.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/gerda-vogt-thomas/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

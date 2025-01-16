@@ -4,7 +4,12 @@
   "role": "Manager E-Business Development",
   "bio": "",
   "image_url": "lieven-swinnen.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/lievenswinnen/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

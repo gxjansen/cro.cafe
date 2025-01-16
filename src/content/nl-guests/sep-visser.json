@@ -4,7 +4,12 @@
   "role": "Managing Partner",
   "bio": "",
   "image_url": "sep-visser.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/sepvisser/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

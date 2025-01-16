@@ -4,7 +4,12 @@
   "role": "CEO",
   "bio": "",
   "image_url": "sergio-jimenez.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/sergiojimenezm/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

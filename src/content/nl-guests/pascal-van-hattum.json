@@ -4,7 +4,12 @@
   "role": "Manager Innovatie",
   "bio": "",
   "image_url": "pascal-van-hattum.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/pascal-van-hattum-✔-352491/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

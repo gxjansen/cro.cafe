@@ -4,7 +4,12 @@
   "role": "Founder & MD",
   "bio": "",
   "image_url": "raoul-doraiswamy.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/raouldoraiswamy/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Managing Director",
   "bio": "",
   "image_url": "alun-lucas.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/alun-lucas-zuko-analytics/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

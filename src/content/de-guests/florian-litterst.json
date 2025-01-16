@@ -4,7 +4,12 @@
   "role": "Gründer & CEO",
   "bio": "",
   "image_url": "florian-litterst.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://de.linkedin.com/in/florianlitterst"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

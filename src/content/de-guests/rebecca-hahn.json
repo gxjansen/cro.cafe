@@ -4,7 +4,12 @@
   "role": "UX-Designerin",
   "bio": "",
   "image_url": "rebecca-hahn.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/rebecca-h/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

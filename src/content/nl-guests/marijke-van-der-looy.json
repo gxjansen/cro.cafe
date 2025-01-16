@@ -4,7 +4,12 @@
   "role": "Customer Experience / E-commerce manager",
   "bio": "",
   "image_url": "marijke-van-der-looy.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/marijke-van-der-looy-01b70438/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

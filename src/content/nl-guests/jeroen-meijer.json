@@ -4,7 +4,12 @@
   "role": "Account Director, Sr. Business development",
   "bio": "",
   "image_url": "jeroen-meijer.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/jeroenmeijer1/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

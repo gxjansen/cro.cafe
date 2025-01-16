@@ -41,10 +41,24 @@
 ## Code Organization & Documentation
 
 - Components should be organized by feature/domain in the src/components directory
+  - Episode-related components in src/components/episode
+  - Guest-related components in src/components/guest
+  - Common UI components in src/components/ui
+  - Layout components in src/components/layout
 - Shared utilities should go in src/utils
-- Each component should have a descriptive README.md explaining its purpose, props, and usage examples
-- Document all functions/methods with JSDoc comments including parameter types and return values
-- Include @example tags in JSDoc comments for complex functionality
+  - Data fetching utilities (e.g., transistor-api.ts)
+  - Content processing utilities (e.g., guests.ts)
+  - Type definitions in src/types
+- Each component should have:
+  - A descriptive README.md explaining its purpose, props, and usage examples
+  - TypeScript interface definitions for props
+  - Error boundaries for graceful failure handling
+  - Loading states for async operations
+- Document all functions/methods with JSDoc comments including:
+  - Parameter types and return values
+  - Example usage with @example tags
+  - Error handling behavior with @throws tags
+  - Async behavior with @async tags
 
 ## Code Style & Best Practices
 
@@ -55,18 +69,39 @@
 - Implement proper error boundaries and error handling
 - Use meaningful error messages that aid debugging
 - Follow SOLID principles in component/class design
+- Content Handling:
+  - Use Astro's content collections for structured data
+  - Validate content with Zod schemas
+  - Handle multilingual content with language-specific collections
+  - Use getCollection for type-safe content queries
+- Component Design:
+  - Keep components focused and single-purpose
+  - Use composition over inheritance
+  - Implement proper prop validation
+  - Handle loading and error states gracefully
+  - Support dark mode with Tailwind classes
 
 ## Performance & Accessibility
 
-- Implement proper loading states for async operations
-- Use proper semantic HTML elements
-- Follow WCAG 2.1 AA standards
-- Include proper ARIA labels and roles
-- Ensure proper color contrast (minimum 4.5:1 for normal text)
-- Implement keyboard navigation support
-- Optimize images and assets
-- Implement proper code splitting
-- Use proper caching strategies
+- Loading States:
+  - Implement skeleton loaders for content-heavy components
+  - Show loading indicators for async operations
+  - Use progressive image loading with blur-up technique
+  - Handle loading states at component level
+- Accessibility:
+  - Use proper semantic HTML elements
+  - Follow WCAG 2.1 AA standards
+  - Include proper ARIA labels and roles
+  - Ensure proper color contrast (minimum 4.5:1 for normal text)
+  - Implement keyboard navigation support
+  - Use proper heading hierarchy
+  - Support screen readers with descriptive text
+- Performance:
+  - Optimize images using Astro's image optimization
+  - Implement proper code splitting
+  - Use proper caching strategies
+  - Lazy load non-critical components
+  - Minimize JavaScript bundle size
 
 ## Write valid Typescript code that uses state-of-the-art Node.js > v23 features and follows best practices:
 

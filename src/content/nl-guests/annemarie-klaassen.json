@@ -4,7 +4,12 @@
   "role": "Lead CRO Analyst",
   "bio": "",
   "image_url": "annemarie-klaassen.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/annemarie-klaassen-4a55a310"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

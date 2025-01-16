@@ -4,7 +4,12 @@
   "role": "Guest",
   "bio": "",
   "image_url": "ilja-gurevich.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/ilja-gurevich/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

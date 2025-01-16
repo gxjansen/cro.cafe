@@ -4,7 +4,12 @@
   "role": "CEO",
   "bio": "",
   "image_url": "maria-lopez.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/maria-lopez-valdes-514b6830/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

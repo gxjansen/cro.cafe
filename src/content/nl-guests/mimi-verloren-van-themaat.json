@@ -4,7 +4,12 @@
   "role": "Consultant CRO and Web Analytics",
   "bio": "",
   "image_url": "mimi-verloren-van-themaat.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/mimi-verloren-van-themaat-2a734283/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

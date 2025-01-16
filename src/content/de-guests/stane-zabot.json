@@ -4,7 +4,12 @@
   "role": "UX Manager A/B-Testing & Personalization",
   "bio": "",
   "image_url": "stane-zabot.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/stane-zabot-8aa6a665/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

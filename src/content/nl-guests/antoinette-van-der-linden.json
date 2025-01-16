@@ -4,7 +4,12 @@
   "role": "Adjunct directeur",
   "bio": "",
   "image_url": "antoinette-van-der-linden.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/antoinette-van-der-linden-ba75b984/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

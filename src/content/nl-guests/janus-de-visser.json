@@ -4,7 +4,12 @@
   "role": "Operations Director",
   "bio": "",
   "image_url": "janus-de-visser.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/janusdevisser/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

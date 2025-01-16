@@ -4,7 +4,12 @@
   "role": "Founder & Digital Optimizer",
   "bio": "",
   "image_url": "rudger-de-groot.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/rudgerdegroot"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

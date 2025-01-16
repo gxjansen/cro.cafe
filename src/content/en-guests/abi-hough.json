@@ -4,7 +4,12 @@
   "role": "CRO, User Research, Heuristic Analysis & QA",
   "bio": "",
   "image_url": "abi-hough.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/abihough/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

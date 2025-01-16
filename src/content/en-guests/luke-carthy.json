@@ -4,7 +4,12 @@
   "role": "eCommerce growth consultant",
   "bio": "",
   "image_url": "luke-carthy.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "http://linkedin.com/in/lukecarthy"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

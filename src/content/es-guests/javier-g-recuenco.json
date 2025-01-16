@@ -4,7 +4,12 @@
   "role": "CSO",
   "bio": "",
   "image_url": "javier-g-recuenco.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/javier-g-recuenco-70a708?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BRVL%2Bs2T7RY%2B%2BaOPesPyR%2Bw%3D%3D"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Behavioural Expert & Applied Cognitive Psychologist",
   "bio": "",
   "image_url": "roos-van-dam.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/roos-van-dam/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

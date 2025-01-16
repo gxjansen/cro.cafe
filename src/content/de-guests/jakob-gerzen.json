@@ -4,7 +4,12 @@
   "role": "CEO",
   "bio": "",
   "image_url": "jakob-gerzen.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/jakob-gerzen-5a3578120/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

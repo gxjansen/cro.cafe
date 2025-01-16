@@ -4,7 +4,12 @@
   "role": "Teamlead SEO",
   "bio": "",
   "image_url": "martijn-drijver.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/martijndrijver/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

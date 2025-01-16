@@ -4,7 +4,12 @@
   "role": "Partner & Creative director",
   "bio": "",
   "image_url": "joris-groen.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/jorisgroen"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Senior Conversion Rate Optimization Manager",
   "bio": "",
   "image_url": "sumantha-shankaranarayana.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/sumantha-s/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

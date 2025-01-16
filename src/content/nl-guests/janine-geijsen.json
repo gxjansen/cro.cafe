@@ -4,7 +4,12 @@
   "role": "Directeur",
   "bio": "",
   "image_url": "janine-geijsen.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/geijsen/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

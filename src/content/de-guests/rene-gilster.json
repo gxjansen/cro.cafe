@@ -4,7 +4,12 @@
   "role": "Principal Behavioral Sciences & Head of Data Sciences",
   "bio": "",
   "image_url": "rene-gilster.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/renegilster/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

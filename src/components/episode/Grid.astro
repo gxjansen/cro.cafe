@@ -140,7 +140,7 @@ const noEpisodesLabel = 'No episodes found';
           <div class="flex justify-center mt-8">
             <a 
               href={button.link}
-              class="btn btn-primary inline-flex items-center gap-2 text-white bg-[#ff676d] hover:bg-opacity-90 px-6 py-3 rounded-lg transition-colors duration-200"
+              class="btn btn-primary inline-flex items-center gap-2 text-white bg-accent hover:opacity-90 px-6 py-3 rounded-lg transition-colors duration-200"
             >
               {button.text}
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -214,6 +214,6 @@ initializeGridNavigation();
 
 /* Focus styles */
 .episode-cell:focus-within {
-  @apply outline-none ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-gray-800 rounded-lg;
+  @apply outline-none ring-2 ring-accent ring-offset-2 dark:ring-offset-gray-800 rounded-lg;
 }
 </style>

@@ -4,7 +4,12 @@
   "role": "Co-Founder",
   "bio": "",
   "image_url": "david-alayon.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/davidalayon/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

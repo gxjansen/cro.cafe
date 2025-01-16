@@ -4,7 +4,12 @@
   "role": "Global Product Management",
   "bio": "",
   "image_url": "divakar-gupta.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/divakargupta/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

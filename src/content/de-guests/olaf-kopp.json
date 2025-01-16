@@ -4,7 +4,12 @@
   "role": "Co-Founder und Chief Business Development Officer",
   "bio": "",
   "image_url": "olaf-kopp.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/olafkopp/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Co-Founder",
   "bio": "",
   "image_url": "pete-koomen.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/petekoomen/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Founder",
   "bio": "",
   "image_url": "henk-jan-journee.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/henkjanjournee"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Web Analytics Manager",
   "bio": "",
   "image_url": "marta-florentyna-saratowicz.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/marta-florentyna-saratowicz/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

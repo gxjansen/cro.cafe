@@ -7,12 +7,20 @@ import { getEpisodeImage } from '~/utils/images';
 
 // Helper function to strip HTML and truncate text
 function sanitizeAndTruncate(html: string, maxLength: number): string {
-  // First sanitize the HTML
-  const sanitized = DOMPurify.sanitize(html, { ALLOWED_TAGS: [] });
+  // First remove HTML comments and their content
+  const withoutComments = html.replace(/<!--[\s\S]*?-->/g, '');
+  // Then sanitize the HTML
+  const sanitized = DOMPurify.sanitize(withoutComments, { ALLOWED_TAGS: [] });
+  // Remove URLs and "Shownotes:" text
+  const withoutUrls = sanitized
+    .replace(/Shownotes:.*$/m, '') // Remove "Shownotes:" and everything after it on that line
+    .replace(/https?:\/\/\S+/g, '') // Remove URLs
+    .replace(/\s+/g, ' ') // Normalize whitespace
+    .trim();
   // Then truncate if needed
-  if (sanitized.length <= maxLength) return sanitized;
+  if (withoutUrls.length <= maxLength) return withoutUrls;
   // Find the last space before maxLength to avoid cutting words
-  const truncated = sanitized.substring(0, maxLength);
+  const truncated = withoutUrls.substring(0, maxLength);
   const lastSpace = truncated.lastIndexOf(' ');
   return `${truncated.substring(0, lastSpace)}...`;
 }
@@ -73,7 +81,7 @@ try {
   image = await getEpisodeImage(`/images/episodes/${language}/${episode.attributes.slug.replace(/_/g, '-').toLowerCase()}.webp`, 'card');
 
   // Sanitize and truncate summary, falling back to description if summary is null
-  cleanSummary = sanitizeAndTruncate(episode.attributes.summary || episode.attributes.description || '', 150);
+  cleanSummary = sanitizeAndTruncate(episode.attributes.summary || episode.attributes.description || '', 200);
 
   // Get slug from attributes
   slug = episode.attributes.slug;
@@ -108,13 +116,13 @@ try {
 
 <ErrorBoundary fallback="Episode information unavailable">
   <article 
-    class:list={['card focus-within:ring-2 focus-within:ring-[#ff676d]', { 'is-loading': loading }]}
+    class:list={['card h-full flex flex-col', { 'is-loading': loading }]}
     aria-label={cardLabel}
   >
     {loading ? (
       <div class="loading-skeleton">
         <div class="skeleton-image" aria-hidden="true"></div>
-        <div class="p-4">
+        <div class="p-4 flex flex-col flex-grow">
           <div class="skeleton-title" aria-hidden="true"></div>
           <div class="skeleton-date" aria-hidden="true"></div>
           <div class="skeleton-description" aria-hidden="true"></div>
@@ -144,7 +152,7 @@ try {
           <h3 class="text-lg font-bold mb-2 line-clamp-2">
             <a 
               href={`/${language}/episodes/${episode.attributes.slug}`}
-              class="hover:text-[#ff676d] dark:hover:text-[#7bfff8]"
+              class="hover:text-accent dark:hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 dark:focus:ring-offset-gray-800 rounded"
               aria-label={cardLabel}
             >
               {title}
@@ -153,12 +161,17 @@ try {
           <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-3 mb-4">
             {cleanSummary}
           </p>
-          <div class="mt-4">
+          <div class="mt-auto pt-4">
             <a
               href={`/${language}/episodes/${episode.attributes.slug}`}
-              class="btn btn-primary inline-flex items-center gap-2"
+              class="btn btn-primary inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 dark:focus:ring-offset-gray-800"
             >
-              <span>Listen Now</span>
+              <span>
+                {language === 'nl' ? 'Luister Nu' :
+                 language === 'de' ? 'Jetzt Anhören' :
+                 language === 'es' ? 'Escuchar Ahora' :
+                 'Listen Now'}
+              </span>
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M7 4v16l13 -8z"></path>
               </svg>
@@ -248,7 +261,7 @@ try {
 
 /* Focus styles */
 .card-link:focus {
-  @apply outline-none ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-gray-800;
+  @apply outline-none ring-2 ring-accent ring-offset-2 dark:ring-offset-gray-800;
 }
 
 /* Dark mode adjustments */

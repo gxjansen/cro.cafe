@@ -4,7 +4,12 @@
   "role": "Data Science Consultant, Specialized in Monitoring and Evaluation",
   "bio": "",
   "image_url": "marieke-schulte.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/marieke-schulte-8329b7149/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

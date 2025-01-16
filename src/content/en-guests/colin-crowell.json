@@ -4,7 +4,12 @@
   "role": "Senior Director",
   "bio": "",
   "image_url": "colin-crowell.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://ca.linkedin.com/in/collincrowell"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

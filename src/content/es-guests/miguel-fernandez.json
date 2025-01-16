@@ -4,7 +4,12 @@
   "role": "CEO",
   "bio": "",
   "image_url": "miguel-fernandez.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/miguel-angel-fernandez-l%C3%B3pez-de-la-torre-3001a653/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

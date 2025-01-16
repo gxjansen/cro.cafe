@@ -4,7 +4,12 @@
   "role": "Sr. Product manager mobile",
   "bio": "",
   "image_url": "melle-moorman.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/mellemoorman"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

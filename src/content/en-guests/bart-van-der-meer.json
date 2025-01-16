@@ -4,7 +4,12 @@
   "role": "Owner",
   "bio": "",
   "image_url": "bart-van-der-meer.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/bart-van-der-meer-6b561918"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

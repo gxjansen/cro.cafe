@@ -4,7 +4,12 @@
   "role": "Head of Growth Consultancy",
   "bio": "",
   "image_url": "daphne-tideman.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/daphnetideman"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

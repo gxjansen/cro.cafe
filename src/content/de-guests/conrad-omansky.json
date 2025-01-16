@@ -4,7 +4,12 @@
   "role": "Co-Founder",
   "bio": "",
   "image_url": "conrad-omansky.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/conrad-omansky-156a2/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

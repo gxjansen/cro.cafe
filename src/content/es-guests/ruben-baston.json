@@ -4,7 +4,12 @@
   "role": "Director de Marketing",
   "bio": "",
   "image_url": "ruben-baston.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/rubenbaston/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

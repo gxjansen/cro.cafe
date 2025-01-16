@@ -4,7 +4,12 @@
   "role": "Digital optimizer",
   "bio": "",
   "image_url": "roy-huiskes.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/royhuiskes"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

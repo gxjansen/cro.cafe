@@ -4,7 +4,12 @@
   "role": "Keynote Speaker, Trainer & Advisor",
   "bio": "",
   "image_url": "tim-ash.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/timash"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

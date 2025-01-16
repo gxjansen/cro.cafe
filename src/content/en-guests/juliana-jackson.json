@@ -4,7 +4,12 @@
   "role": "Digital analytics architect",
   "bio": "",
   "image_url": "juliana-jackson.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/theclvlady"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

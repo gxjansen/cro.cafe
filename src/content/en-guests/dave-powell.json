@@ -4,7 +4,12 @@
   "role": "E-commerce Conversion Manager",
   "bio": "",
   "image_url": "dave-powell.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/magicslipper/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

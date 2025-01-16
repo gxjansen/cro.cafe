@@ -4,7 +4,12 @@
   "role": "Co-Founder & Conversion Director",
   "bio": "",
   "image_url": "jonny-longden.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/jonnylongden/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

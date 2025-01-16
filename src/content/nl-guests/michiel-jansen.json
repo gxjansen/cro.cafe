@@ -4,7 +4,12 @@
   "role": "Global CRO Lead",
   "bio": "",
   "image_url": "michiel-jansen.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/mljansen"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

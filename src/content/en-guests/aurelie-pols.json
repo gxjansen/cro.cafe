@@ -4,7 +4,12 @@
   "role": "Data Protection Officer, Privacy Engineer, and Data Scientist",
   "bio": "",
   "image_url": "aurelie-pols.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/aureliepols/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Head of Product, Data Platform",
   "bio": "",
   "image_url": "chad-sanderson.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/chad-sanderson-experimentation/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

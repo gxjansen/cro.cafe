@@ -4,7 +4,12 @@
   "role": "Senior Manager Ecommerce DIA",
   "bio": "",
   "image_url": "rocio-sanz.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/rociosanzortega/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

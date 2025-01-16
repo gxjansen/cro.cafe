@@ -4,7 +4,12 @@
   "role": "Self-employed",
   "bio": "",
   "image_url": "rick-pastoor.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/rickpastoor/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

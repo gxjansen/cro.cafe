@@ -4,7 +4,12 @@
   "role": "Professor of Business Administration",
   "bio": "",
   "image_url": "stefan-h-thomke.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/stefan-thomke-innovation/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

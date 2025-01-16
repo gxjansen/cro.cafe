@@ -4,7 +4,12 @@
   "role": "Partner",
   "bio": "",
   "image_url": "bas-wouters.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/bas-wouters-cmct-b50a9216/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

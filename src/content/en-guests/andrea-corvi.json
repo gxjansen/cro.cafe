@@ -4,7 +4,12 @@
   "role": "Experimentation Manager",
   "bio": "",
   "image_url": "andrea-corvi.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/andreacorvi/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

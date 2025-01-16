@@ -4,7 +4,12 @@
   "role": "Marketeer",
   "bio": "",
   "image_url": "kirsten-van-der-kraan.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/kirstenvanderkraan"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Senior Data Analist",
   "bio": "",
   "image_url": "twan-lammers.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/twanlammers/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

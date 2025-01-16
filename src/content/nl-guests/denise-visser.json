@@ -4,7 +4,12 @@
   "role": "Product Manager Experimentation at bol.com",
   "bio": "",
   "image_url": "denise-visser.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/denisevisser"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

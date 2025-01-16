@@ -4,7 +4,12 @@
   "role": "Chief Sales Officer",
   "bio": "",
   "image_url": "thomas-kammerer.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/thomas-kammerer-conversion-maker/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

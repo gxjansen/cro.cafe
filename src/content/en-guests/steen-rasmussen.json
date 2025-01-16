@@ -4,7 +4,12 @@
   "role": "Director of analysis, research and user motivation",
   "bio": "",
   "image_url": "steen-rasmussen.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/steenrasmussen"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

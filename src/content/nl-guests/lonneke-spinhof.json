@@ -4,7 +4,12 @@
   "role": "Managing Partner & Senior Consultant",
   "bio": "",
   "image_url": "lonneke-spinhof.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://be.linkedin.com/in/lonnekespinhof"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Product owner & CRO specialist",
   "bio": "",
   "image_url": "gerben-van-ouwendorp.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/gerbenvanouwendorp"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

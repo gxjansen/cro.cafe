@@ -4,7 +4,12 @@
   "role": "Managing Partner & Geschäftsführer",
   "bio": "",
   "image_url": "philipp-spreer.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/spreer"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

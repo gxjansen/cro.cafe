@@ -4,7 +4,12 @@
   "role": "CRO designer, developer and consultant",
   "bio": "",
   "image_url": "iqbal-ali.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/iqbalhussainali/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

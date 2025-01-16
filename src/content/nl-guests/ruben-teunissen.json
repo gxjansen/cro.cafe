@@ -4,7 +4,12 @@
   "role": "CRO Specialist",
   "bio": "",
   "image_url": "ruben-teunissen.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/rubenteunissen"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

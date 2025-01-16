@@ -4,7 +4,12 @@
   "role": "VP Marketing",
   "bio": "",
   "image_url": "martijn-scheijbeler.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/martijnscheijbeler"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Lecturer, Senior Behavioral Scientist",
   "bio": "",
   "image_url": "brian-cugelman.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/cugelman/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

@@ -54,16 +54,21 @@ const episodeCollection = defineCollection({
 const guestCollection = defineCollection({
   type: 'data',
   schema: z.object({
+    id: z.string(),
     name: z.string(),
+    role: z.string().optional(),
     bio: z.string().optional(),
-    image: z.string().optional(),
-    social: z
-      .object({
-        twitter: z.string().optional(),
-        linkedin: z.string().optional(),
-        website: z.string().optional(),
-      })
+    image_url: z.string(),
+    social_links: z
+      .array(
+        z.object({
+          platform: z.string(),
+          url: z.string(),
+        })
+      )
       .optional(),
+    language: z.string(),
+    type: z.literal('guest'),
   }),
 });
 

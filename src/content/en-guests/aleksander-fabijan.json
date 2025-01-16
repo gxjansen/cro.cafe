@@ -4,7 +4,12 @@
   "role": "Data Scientist",
   "bio": "",
   "image_url": "aleksander-fabijan.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/afabijan/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

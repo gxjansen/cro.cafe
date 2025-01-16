@@ -4,7 +4,12 @@
   "role": "Host CRO.CAFE Spain, CEO & Founder",
   "bio": "",
   "image_url": "ricardo-tayar-lopez.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/ricardotayar/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

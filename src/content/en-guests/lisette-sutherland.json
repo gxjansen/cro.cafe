@@ -4,7 +4,12 @@
   "role": "Director",
   "bio": "",
   "image_url": "lisette-sutherland.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/lisettesutherland/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Owner",
   "bio": "",
   "image_url": "matt-beischel.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/mattbeischel/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

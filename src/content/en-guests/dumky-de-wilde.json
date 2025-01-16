@@ -4,7 +4,12 @@
   "role": "Senior Technical Analyst",
   "bio": "",
   "image_url": "dumky-de-wilde.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/dumkydewilde/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

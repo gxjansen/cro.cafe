@@ -4,7 +4,12 @@
   "role": "Conversion Copywriter",
   "bio": "",
   "image_url": "eden-bidani.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/edenbidani/?originalSubdomain=il"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

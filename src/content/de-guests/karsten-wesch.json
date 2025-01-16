@@ -4,7 +4,12 @@
   "role": "Head of Business Intelligence",
   "bio": "",
   "image_url": "karsten-wesch.JPG",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/karstenwesch/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

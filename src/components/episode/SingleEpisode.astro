@@ -3,6 +3,8 @@ import DOMPurify from 'isomorphic-dompurify';
 import Player from './Player.astro';
 import StructuredData from '../common/StructuredData.astro';
 import ErrorBoundary from '../common/ErrorBoundary.astro';
+import GuestCard from '../guest/GuestCard.astro';
+import { getEpisodeGuests } from '~/utils/guests';
 import { validateProps, SingleEpisodePropsSchema } from '~/utils/component-validation';
 import { getEpisodeCanonicalUrl, getLanguageFromShowId } from '~/utils/permalinks';
 import { getEpisodeImage } from '~/utils/images';
@@ -46,6 +48,11 @@ interface Props {
 // Validate props
 const props = validateProps(SingleEpisodePropsSchema, Astro.props);
 const { episode, availableLanguages, loading = false } = props;
+
+// Get language and guests
+const language = getLanguageFromShowId(episode.relationships.show.data.id);
+const guests = await getEpisodeGuests(language, episode.attributes.description);
+
 const { 
   title,
   summary,
@@ -63,9 +70,6 @@ const {
   embed_html,
   slug,
 } = episode.attributes;
-
-// Get language from show ID
-const language = getLanguageFromShowId(episode.relationships.show.data.id);
 
 const image = await getEpisodeImage(`/images/episodes/${language}/${episode.attributes.slug}.webp`, 'detail');
 
@@ -140,7 +144,7 @@ const structuredData = {
             </div>
           </div>
           <div class="relative aspect-[16/9]">
-            {video_url ? (
+            {video_url?.trim() ? (
               <iframe
                 src={video_url.replace(/(youtube\.com\/watch\?v=|youtu\.be\/)([^&]+)/, 'youtube.com/embed/$2')}
                 title={`Video: ${title}`}
@@ -173,8 +177,28 @@ const structuredData = {
         </div>
 
         <div class="episode-content mt-6">
-          <div class="description" set:html={sanitizedDescription} />
-          {transcript_url && (
+          {summary?.trim() && (
+            <div class="episode-summary mb-6">
+              <p class="text-lg text-gray-700 dark:text-gray-300">{summary}</p>
+            </div>
+          )}
+          {sanitizedDescription?.trim() && sanitizedDescription !== summary?.trim() && (
+            <div class="episode-description">
+              <div class="description" set:html={sanitizedDescription} />
+            </div>
+          )}
+
+          {guests?.length > 0 && (
+            <div class="episode-guests mt-8">
+              <h2 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">Featured Guests</h2>
+              <div class="grid gap-4">
+                {guests.map((guest) => (
+                  <GuestCard guest={guest} />
+                ))}
+              </div>
+            </div>
+          )}
+          {transcript_url?.trim() && (
             <div class="mt-6">
               <a href={transcript_url} class="transcript-link">
                 View Transcript
@@ -224,10 +248,9 @@ const structuredData = {
 
 .transcript-link,
 .youtube-link {
-  @apply flex items-center text-blue-600 dark:text-blue-400 hover:underline
+  @apply flex items-center text-accent dark:text-accent hover:opacity-90
          transition-colors duration-200;
 }
-
 
 .episode-content {
   @apply mt-6 sm:mt-8;
@@ -255,8 +278,8 @@ const structuredData = {
 }
 
 .share-link {
-  @apply inline-block px-4 py-2 bg-blue-600 text-white rounded-lg
-         hover:bg-blue-700 transition-colors duration-200;
+  @apply inline-block px-4 py-2 bg-accent text-white rounded-lg
+         hover:opacity-90 transition-colors duration-200;
 }
 
 /* Loading skeleton styles */
@@ -298,7 +321,7 @@ const structuredData = {
 
 /* Focus styles */
 a:focus {
-  @apply outline-none ring-2 ring-blue-500 ring-offset-2 dark:ring-offset-gray-800;
+  @apply outline-none ring-2 ring-accent ring-offset-2 dark:ring-offset-gray-800;
 }
 
 /* Dark mode adjustments */

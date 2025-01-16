@@ -4,7 +4,12 @@
   "role": "Teamlead CRO",
   "bio": "",
   "image_url": "marlies-wilms-floet.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/marlieswilmsfloet/?originalSubdomain=nl"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

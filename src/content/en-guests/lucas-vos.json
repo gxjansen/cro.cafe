@@ -4,7 +4,12 @@
   "role": "Senior Conversion Specialist",
   "bio": "",
   "image_url": "lucas-vos.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/lucasfjvos/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

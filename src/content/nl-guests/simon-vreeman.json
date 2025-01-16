@@ -4,7 +4,12 @@
   "role": "Growth Marketing Manager",
   "bio": "",
   "image_url": "simon-vreeman.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/simonvreeman/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

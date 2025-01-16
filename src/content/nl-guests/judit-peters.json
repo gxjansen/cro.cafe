@@ -4,7 +4,12 @@
   "role": "Conceptdeveloper & Projectmanager",
   "bio": "",
   "image_url": "judit-peters.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/judit-peters/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

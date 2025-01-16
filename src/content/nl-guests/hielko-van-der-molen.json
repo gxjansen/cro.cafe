@@ -4,7 +4,12 @@
   "role": "Product Owner Mijnmedipoint",
   "bio": "",
   "image_url": "hielko-van-der-molen.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/hielko/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

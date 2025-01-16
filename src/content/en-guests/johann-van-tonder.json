@@ -4,7 +4,12 @@
   "role": "COO",
   "bio": "",
   "image_url": "johann-van-tonder.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/jvtonder/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Director of Optimisation",
   "bio": "",
   "image_url": "matt-scaysbrook.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/mattscaysbrook/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

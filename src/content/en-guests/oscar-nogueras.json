@@ -4,7 +4,12 @@
   "role": "CEO & Lecturer",
   "bio": "",
   "image_url": "oscar-nogueras.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/oscarnogueras/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

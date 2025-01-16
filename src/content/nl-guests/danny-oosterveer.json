@@ -4,7 +4,12 @@
   "role": "Data-gedreven marketeer",
   "bio": "",
   "image_url": "danny-oosterveer.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://linkedin.com/in/dannyoosterveer/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

@@ -1,3 +1,11 @@
+/* CSS Variables */
+:root {
+  --color-accent: #ff676d;
+  --color-accent-dark: #7bfff8;
+  --shadow-accent: rgba(255, 103, 109, 0.1);
+  --shadow-secondary: rgba(149, 195, 192, 0.1);
+}
+
 /* Tailwind base styles */
 @tailwind base;
 @tailwind components;
@@ -31,7 +39,7 @@
 
   /* Focus styles */
   :focus-visible {
-    @apply outline-none ring-2 ring-[#ff676d] ring-offset-2 dark:ring-offset-gray-900;
+    @apply outline-none ring-2 ring-accent ring-offset-2 dark:ring-offset-gray-900;
   }
 }
 
@@ -46,26 +54,26 @@
   .skip-link {
     @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 
            bg-white dark:bg-gray-800 px-4 py-2 rounded-md z-50 
-           focus:ring-2 focus:ring-[#ff676d];
+           focus:ring-2 focus:ring-accent;
   }
 
   /* Table of Contents */
   .toc-link {
-    @apply flex items-center gap-2 link focus:ring-2 focus:ring-[#ff676d] 
+    @apply flex items-center gap-2 link focus:ring-2 focus:ring-accent 
            focus:outline-none rounded;
   }
 
   /* Navigation Menu */
   .nav-link {
-    @apply hover:text-[#ff676d] dark:hover:text-[#7bfff8] px-4 py-3 
-           flex items-center focus:ring-2 focus:ring-[#ff676d] 
+    @apply hover:text-accent dark:hover:text-accent-dark px-4 py-3 
+           flex items-center focus:ring-2 focus:ring-accent 
            focus:outline-none rounded;
   }
 
   /* Icon Button */
   .icon-button {
-    @apply text-gray-500 hover:text-[#ff676d] dark:text-gray-400 
-           dark:hover:text-[#7bfff8] focus:ring-2 focus:ring-[#ff676d] 
+    @apply text-gray-500 hover:text-accent dark:text-gray-400 
+           dark:hover:text-accent-dark focus:ring-2 focus:ring-accent 
            focus:outline-none rounded p-2;
   }
 
@@ -76,36 +84,44 @@
   }
 
   .badge-info {
-    @apply bg-[#7bfff8]/30 text-[#0d7a8c] dark:bg-[#7bfff8]/40 dark:text-[#7bfff8];
+    @apply bg-accent-dark text-[#0d7a8c] bg-opacity-30 
+           dark:bg-accent-dark dark:text-accent-dark dark:bg-opacity-40;
   }
 
   .badge-success {
-    @apply bg-[#ff676d]/30 text-[#b32d33] dark:bg-[#ff676d]/40 dark:text-[#ff676d];
+    @apply bg-accent text-[#b32d33] bg-opacity-30 
+           dark:bg-accent dark:text-accent dark:bg-opacity-40;
   }
 
   .badge-warning {
-    @apply bg-[#95c3c0]/30 text-[#2c4f4d] dark:bg-[#95c3c0]/40 dark:text-[#95c3c0];
+    @apply bg-[#95c3c0] text-[#2c4f4d] bg-opacity-30 
+           dark:bg-[#95c3c0] dark:text-[#95c3c0] dark:bg-opacity-40;
   }
 
   .badge-error {
-    @apply bg-[#dd8e91]/30 text-[#8c2f32] dark:bg-[#dd8e91]/40 dark:text-[#dd8e91];
+    @apply bg-[#dd8e91] text-[#8c2f32] bg-opacity-30 
+           dark:bg-[#dd8e91] dark:text-[#dd8e91] dark:bg-opacity-40;
   }
 
   /* Language badges - using distinct flag colors */
   .badge-en {
-    @apply bg-[#cf142b]/90 text-white font-bold dark:bg-[#cf142b]/90 dark:text-white; /* UK: Red bg, White text */
+    @apply bg-[#cf142b] text-white font-bold bg-opacity-90 
+           dark:bg-[#cf142b] dark:text-white dark:bg-opacity-90;
   }
 
   .badge-nl {
-    @apply bg-[#21468B]/90 text-white font-bold dark:bg-[#21468B]/90 dark:text-white; /* Dutch: Blue bg, White text */
+    @apply bg-[#21468B] text-white font-bold bg-opacity-90 
+           dark:bg-[#21468B] dark:text-white dark:bg-opacity-90;
   }
 
   .badge-de {
-    @apply bg-black/90 text-[#FFD700] font-bold dark:bg-black/90 dark:text-[#FFD700]; /* German: Black bg, Gold text */
+    @apply bg-black text-[#FFD700] font-bold bg-opacity-90 
+           dark:bg-black dark:text-[#FFD700] dark:bg-opacity-90;
   }
 
   .badge-es {
-    @apply bg-[#F1BF00]/90 text-[#AA151B] font-bold dark:bg-[#F1BF00]/90 dark:text-[#AA151B]; /* Spanish: Yellow bg, Red text */
+    @apply bg-[#F1BF00] text-[#AA151B] font-bold bg-opacity-90 
+           dark:bg-[#F1BF00] dark:text-[#AA151B] dark:bg-opacity-90;
   }
 
   /* Alert */
@@ -114,19 +130,23 @@
   }
 
   .alert-info {
-    @apply bg-[#7bfff8]/30 text-[#0d7a8c] dark:bg-[#7bfff8]/40 dark:text-[#7bfff8];
+    @apply bg-accent-dark text-[#0d7a8c] bg-opacity-30 
+           dark:bg-accent-dark dark:text-accent-dark dark:bg-opacity-40;
   }
 
   .alert-success {
-    @apply bg-[#ff676d]/30 text-[#b32d33] dark:bg-[#ff676d]/40 dark:text-[#ff676d];
+    @apply bg-accent text-[#b32d33] bg-opacity-30 
+           dark:bg-accent dark:text-accent dark:bg-opacity-40;
   }
 
   .alert-warning {
-    @apply bg-[#95c3c0]/30 text-[#2c4f4d] dark:bg-[#95c3c0]/40 dark:text-[#95c3c0];
+    @apply bg-[#95c3c0] text-[#2c4f4d] bg-opacity-30 
+           dark:bg-[#95c3c0] dark:text-[#95c3c0] dark:bg-opacity-40;
   }
 
   .alert-error {
-    @apply bg-[#dd8e91]/30 text-[#8c2f32] dark:bg-[#dd8e91]/40 dark:text-[#dd8e91];
+    @apply bg-[#dd8e91] text-[#8c2f32] bg-opacity-30 
+           dark:bg-[#dd8e91] dark:text-[#dd8e91] dark:bg-opacity-40;
   }
 
   /* Buttons */
@@ -137,31 +157,31 @@
   }
 
   .btn-primary {
-    @apply bg-[#ff676d] text-white hover:bg-[#dd8e91] 
-           focus:ring-[#ff676d] dark:bg-[#ff676d] dark:hover:bg-[#dd8e91]
-           shadow-[#ff676d]/10;
+    @apply bg-accent text-white hover:opacity-90 
+           focus:ring-accent dark:bg-accent dark:hover:opacity-90
+           shadow-lg shadow-[var(--shadow-accent)];
   }
 
   .btn-secondary {
-    @apply bg-[#95c3c0] text-white hover:bg-[#7bfff8]
+    @apply bg-[#95c3c0] text-white hover:bg-accent-dark
            focus:ring-[#95c3c0] dark:bg-[#95c3c0] dark:text-white 
-           dark:hover:bg-[#7bfff8] shadow-[#95c3c0]/10;
+           dark:hover:bg-accent-dark shadow-lg shadow-[var(--shadow-secondary)];
   }
 
   .btn-outline {
-    @apply bg-transparent border-2 border-[#ff676d] text-[#ff676d]
-           hover:bg-[#ff676d]/10 focus:ring-[#ff676d]
-           dark:border-[#ff676d] dark:text-[#ff676d]
-           dark:hover:bg-[#ff676d]/10;
+    @apply bg-transparent border-2 border-accent text-accent
+           hover:bg-accent hover:bg-opacity-10 focus:ring-accent
+           dark:border-accent dark:text-accent
+           dark:hover:bg-accent dark:hover:bg-opacity-10;
   }
 
   .btn[disabled] {
-    @apply opacity-50 cursor-not-allowed hover:bg-[#ff676d] dark:hover:bg-[#ff676d];
+    @apply opacity-50 cursor-not-allowed hover:bg-accent dark:hover:bg-accent;
   }
 
   /* Links */
   .link {
-    @apply text-[#ff676d] hover:text-[#dd8e91] dark:text-[#ff676d] dark:hover:text-[#dd8e91]
+    @apply text-accent hover:opacity-90 dark:text-accent dark:hover:opacity-90
            underline decoration-2 underline-offset-2 transition-colors duration-200;
   }
 
@@ -169,45 +189,6 @@
   .card {
     @apply bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden
            transition-transform duration-300 hover:transform hover:scale-[1.02];
-  }
-}
-
-/* Utility classes */
-@layer utilities {
-  /* Line clamp */
-  .line-clamp-1 {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    overflow: hidden;
-  }
-
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-  }
-
-  .line-clamp-3 {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    overflow: hidden;
-  }
-
-  /* Aspect ratios */
-  .aspect-video {
-    aspect-ratio: 16 / 9;
-  }
-
-  .aspect-square {
-    aspect-ratio: 1 / 1;
-  }
-
-  /* Grid auto-fit */
-  .grid-auto-fit {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
@@ -227,8 +208,8 @@
 }
 
 .prose a {
-  @apply text-[#ff676d] dark:text-[#ff676d] underline decoration-2 underline-offset-2
-         hover:text-[#dd8e91] dark:hover:text-[#dd8e91] transition-colors duration-200;
+  @apply text-accent dark:text-accent underline decoration-2 underline-offset-2
+         hover:opacity-90 dark:hover:opacity-90 transition-colors duration-200;
 }
 
 .prose code {

@@ -4,7 +4,12 @@
   "role": "Usability & User Experience expert",
   "bio": "",
   "image_url": "sjoerd-walinga.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/sjoerdwalinga"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

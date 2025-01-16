@@ -1,0 +1,47 @@
+---
+import { getPopularEpisodes } from '~/utils/episode-analytics';
+import { getCollection } from 'astro:content';
+import EpisodeCard from './Card.astro';
+import ErrorBoundary from '../common/ErrorBoundary.astro';
+import type { SHOW_IDS } from '~/utils/transistor-api';
+
+interface Props {
+  language: keyof typeof SHOW_IDS;
+  limit?: number;
+  title?: string;
+}
+
+const { language, limit = 5, title = 'Popular Episodes' } = Astro.props;
+
+// Get popular episodes
+const popularStats = await getPopularEpisodes(language, limit);
+
+// Get full episode data from content collections
+const allEpisodes = await getCollection(`${language}-episodes`);
+const popularEpisodes = popularStats
+  .map(stat => allEpisodes.find(episode => episode.data.id === stat.id))
+  .filter((episode): episode is typeof allEpisodes[0] => episode !== undefined);
+---
+
+<ErrorBoundary fallback="Unable to load popular episodes.">
+  <section class="popular-episodes">
+    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">{title}</h2>
+    {popularEpisodes.length > 0 ? (
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {popularEpisodes.map((episode) => (
+          <EpisodeCard episode={episode.data} />
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-8">
+        <p class="text-gray-600 dark:text-gray-400">No episodes available</p>
+      </div>
+    )}
+  </section>
+</ErrorBoundary>
+
+<style>
+.popular-episodes {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-6;
+}
+</style>

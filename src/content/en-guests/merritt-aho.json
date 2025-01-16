@@ -4,7 +4,12 @@
   "role": "Optimization Director",
   "bio": "",
   "image_url": "merritt-aho.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/merrittaho/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

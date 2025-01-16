@@ -4,7 +4,12 @@
   "role": "Sheep Analytics Officer",
   "bio": "",
   "image_url": "simo-ahava.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://fi.linkedin.com/in/simoahava"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

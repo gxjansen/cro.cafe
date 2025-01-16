@@ -4,7 +4,12 @@
   "role": "Content Lead",
   "bio": "",
   "image_url": "derek-gleason.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/derek-m-gleason/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

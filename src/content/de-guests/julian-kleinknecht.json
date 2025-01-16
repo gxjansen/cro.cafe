@@ -4,7 +4,12 @@
   "role": "Co-Founder und Geschäftsführer",
   "bio": "",
   "image_url": "julian-kleinknecht.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/jkleinknecht/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

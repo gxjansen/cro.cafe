@@ -4,7 +4,12 @@
   "role": "E-commerce manager",
   "bio": "",
   "image_url": "erik-oosterbaan-martinius.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "http://www.linkedin.com/in/erikoosterbaanmartinius/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

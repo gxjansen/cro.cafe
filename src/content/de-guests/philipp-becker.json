@@ -4,7 +4,12 @@
   "role": "Senior CRO Marketing Manager",
   "bio": "",
   "image_url": "philipp-becker.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/becker-philipp/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Design Manager & Behavioural Design",
   "bio": "",
   "image_url": "dani-solana.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/dani-solana/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

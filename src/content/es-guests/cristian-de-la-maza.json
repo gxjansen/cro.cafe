@@ -4,7 +4,12 @@
   "role": "Analítica Web y Optimización",
   "bio": "",
   "image_url": "cristian-de-la-maza.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/cristiandelamaza/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Conversion Optimization Manager",
   "bio": "",
   "image_url": "jonathan-heinze.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/jonathan-heinze-b6647021a/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

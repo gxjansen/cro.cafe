@@ -4,7 +4,12 @@
   "role": "Managing Partner",
   "bio": "",
   "image_url": "fionn-kientzler.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/fionnkientzler/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

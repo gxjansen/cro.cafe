@@ -4,7 +4,12 @@
   "role": "Entrepreneur and chief podcast",
   "bio": "",
   "image_url": "mathijs-kok.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/mathijskok"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

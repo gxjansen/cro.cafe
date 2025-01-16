@@ -4,7 +4,12 @@
   "role": "Experimentation Evangelist",
   "bio": "",
   "image_url": "manuel-da-costa.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/manueldacosta/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

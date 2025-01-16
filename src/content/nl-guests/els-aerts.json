@@ -4,7 +4,12 @@
   "role": "The 'A' from AGConsult",
   "bio": "",
   "image_url": "els-aerts.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://be.linkedin.com/in/elsaertswebusability"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

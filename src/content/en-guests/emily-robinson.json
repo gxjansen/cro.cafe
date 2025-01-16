@@ -4,7 +4,12 @@
   "role": "Senior Data Scientist",
   "bio": "",
   "image_url": "emily-robinson.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/robinsones/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

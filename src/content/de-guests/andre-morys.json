@@ -4,7 +4,12 @@
   "role": "Vorstand",
   "bio": "",
   "image_url": "andre-morys.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/andremorys/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

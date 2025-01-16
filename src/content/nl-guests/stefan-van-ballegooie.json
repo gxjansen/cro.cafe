@@ -4,7 +4,12 @@
   "role": "Conversion specialist",
   "bio": "",
   "image_url": "stefan-van-ballegooie.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/stefanvanballegooie"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

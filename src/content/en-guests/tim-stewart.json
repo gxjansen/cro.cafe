@@ -4,7 +4,12 @@
   "role": "Digital consultant / Owner",
   "bio": "",
   "image_url": "tim-stewart.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/timstewart/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

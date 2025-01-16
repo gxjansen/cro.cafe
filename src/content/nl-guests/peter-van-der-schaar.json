@@ -4,7 +4,12 @@
   "role": "Owner",
   "bio": "",
   "image_url": "peter-van-der-schaar.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/petervanderschaar/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

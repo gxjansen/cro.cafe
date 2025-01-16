@@ -4,7 +4,12 @@
   "role": "Mediapsychologist and CPO",
   "bio": "",
   "image_url": "mischa-coster.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/mcoster"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

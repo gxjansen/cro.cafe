@@ -4,7 +4,12 @@
   "role": "Director of Marketing",
   "bio": "",
   "image_url": "abbey-schoenberg.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/abbeyramge/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Partner & Founder",
   "bio": "",
   "image_url": "markus-leineweber.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/markusleineweber/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

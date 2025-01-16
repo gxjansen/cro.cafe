@@ -4,7 +4,12 @@
   "role": "Founder/Director",
   "bio": "",
   "image_url": "daniel-markus.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/danielmarkus"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

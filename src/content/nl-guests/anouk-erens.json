@@ -4,7 +4,12 @@
   "role": "Analytics & Optimization Expert",
   "bio": "",
   "image_url": "anouk-erens.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/anoukerens/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

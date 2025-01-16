@@ -4,7 +4,12 @@
   "role": "Marketeer",
   "bio": "",
   "image_url": "cindy-martens.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/cindy-martens-5a51584/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

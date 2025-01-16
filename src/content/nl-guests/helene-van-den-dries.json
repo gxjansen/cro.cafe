@@ -4,7 +4,12 @@
   "role": "UX Team lead",
   "bio": "",
   "image_url": "helene-van-den-dries.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/hélène-van-den-dries-7588825b/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

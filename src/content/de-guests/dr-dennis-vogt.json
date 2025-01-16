@@ -4,7 +4,12 @@
   "role": "Lecturer",
   "bio": "",
   "image_url": "dr-dennis-vogt.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/dr-dennis-vogt/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

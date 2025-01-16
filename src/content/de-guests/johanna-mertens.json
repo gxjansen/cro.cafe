@@ -4,7 +4,12 @@
   "role": "Conversion Rate Optimization (CRO) Manager",
   "bio": "",
   "image_url": "johanna-mertens.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/johanna-mertens-7a0522154/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

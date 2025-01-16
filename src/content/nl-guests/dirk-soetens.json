@@ -4,7 +4,12 @@
   "role": "Research manager",
   "bio": "",
   "image_url": "dirk-soetens.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/dirk-soetens-4886242/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

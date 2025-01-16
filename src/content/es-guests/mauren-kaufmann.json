@@ -4,7 +4,12 @@
   "role": "Shopify Expert, Creative Designer & Consultant for UX/UI and Branding",
   "bio": "",
   "image_url": "mauren-kaufmann.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/mauren-kaufmann"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

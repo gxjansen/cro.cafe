@@ -4,7 +4,12 @@
   "role": "Senior Online Marketing Manager",
   "bio": "",
   "image_url": "rogier-peters.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/rogierpaulpeters"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

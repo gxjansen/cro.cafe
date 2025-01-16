@@ -4,7 +4,12 @@
   "role": "Head of Marketing",
   "bio": "",
   "image_url": "kathleen-holler.JPG",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/kathleen-h%C3%B6ller/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

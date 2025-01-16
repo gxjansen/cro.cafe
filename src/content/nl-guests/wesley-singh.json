@@ -4,7 +4,12 @@
   "role": "Conversiespecialist",
   "bio": "",
   "image_url": "wesley-singh.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/wesleysingh"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

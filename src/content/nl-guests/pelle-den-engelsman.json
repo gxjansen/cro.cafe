@@ -4,7 +4,12 @@
   "role": "Campaign strategist",
   "bio": "",
   "image_url": "pelle-den-engelsman.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/pelledenengelsman/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

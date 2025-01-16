@@ -4,7 +4,12 @@
   "role": "Senior Managerin im digitalen Kundenerlebnis",
   "bio": "",
   "image_url": "janina-schwill.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/janina-schwill/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

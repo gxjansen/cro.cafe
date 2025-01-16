@@ -4,7 +4,12 @@
   "role": "Lead UX/CRO",
   "bio": "",
   "image_url": "jurrien-schouten.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/jurrienschouten"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "SEO & marketing specialist / Owner",
   "bio": "",
   "image_url": "gerk-mulder.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/gerkmulder/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

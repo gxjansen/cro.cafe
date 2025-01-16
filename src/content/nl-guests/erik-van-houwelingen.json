@@ -4,7 +4,12 @@
   "role": "Lead CRO & Web Analytics",
   "bio": "",
   "image_url": "erik-van-houwelingen.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/erikvanhouwelingen/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

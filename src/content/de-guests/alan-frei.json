@@ -4,7 +4,12 @@
   "role": "CMO Amorana",
   "bio": "",
   "image_url": "alan-frei.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/alanfrei/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

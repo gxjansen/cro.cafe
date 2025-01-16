@@ -4,7 +4,12 @@
   "role": "Digital Analytics expert",
   "bio": "",
   "image_url": "krista-seiden.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/kristaseiden/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

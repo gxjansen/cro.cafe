@@ -4,7 +4,12 @@
   "role": "Strategic and Technical Tag Management Contractor",
   "bio": "",
   "image_url": "matthew-niederberger.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/matthewniederberger/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

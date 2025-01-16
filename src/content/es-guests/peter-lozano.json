@@ -4,7 +4,12 @@
   "role": "Cofundador",
   "bio": "",
   "image_url": "peter-lozano.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/peterimascono"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

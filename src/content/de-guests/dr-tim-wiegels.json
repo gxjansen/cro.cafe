@@ -4,7 +4,12 @@
   "role": "Vice President Data",
   "bio": "",
   "image_url": "dr-tim-wiegels.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/timwiegels/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

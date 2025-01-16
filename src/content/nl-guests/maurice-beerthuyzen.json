@@ -4,7 +4,12 @@
   "role": "Owner & Online Optimizer",
   "bio": "",
   "image_url": "maurice-beerthuyzen.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/mauricebeerthuyzen"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

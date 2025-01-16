@@ -4,7 +4,12 @@
   "role": "CRO Specialist",
   "bio": "",
   "image_url": "jack-solcer.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/jsolcer/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Search Marketing Business Consultant",
   "bio": "",
   "image_url": "nils-rooijmans.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/nilsrooijmans"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

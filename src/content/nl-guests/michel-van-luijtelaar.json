@@ -4,7 +4,12 @@
   "role": "Founder",
   "bio": "",
   "image_url": "michel-van-luijtelaar.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/michelvanluijtelaar/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "CEO",
   "bio": "",
   "image_url": "stephen-pavlovich.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/stephenpavlovich/?originalSubdomain=uk"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

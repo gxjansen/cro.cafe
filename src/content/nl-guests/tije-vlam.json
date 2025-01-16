@@ -4,7 +4,12 @@
   "role": "Digital Analytics Consultant",
   "bio": "",
   "image_url": "tije-vlam.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/tijevlam/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

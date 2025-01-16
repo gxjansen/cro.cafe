@@ -4,7 +4,12 @@
   "role": "Conversion manager",
   "bio": "",
   "image_url": "tom-van-den-berg.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/vandenbergtom"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

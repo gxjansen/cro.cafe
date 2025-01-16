@@ -4,7 +4,12 @@
   "role": "President",
   "bio": "",
   "image_url": "joaquim-bretcha.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/joaquimbretcha"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

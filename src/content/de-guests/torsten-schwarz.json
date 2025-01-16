@@ -4,7 +4,12 @@
   "role": "CEO",
   "bio": "",
   "image_url": "torsten-schwarz.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/tschwarz/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

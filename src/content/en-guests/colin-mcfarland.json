@@ -4,7 +4,12 @@
   "role": "Director, Experimentation Platform",
   "bio": "",
   "image_url": "colin-mcfarland.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/mcfrl/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Business Owner GMS",
   "bio": "",
   "image_url": "julia-rumpf.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/julia-rumpf-74b77974/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

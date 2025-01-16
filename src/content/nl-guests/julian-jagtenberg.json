@@ -4,7 +4,12 @@
   "role": "Founder",
   "bio": "",
   "image_url": "julian-jagtenberg.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/julianjagtenberg"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

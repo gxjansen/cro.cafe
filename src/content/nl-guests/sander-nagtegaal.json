@@ -4,7 +4,12 @@
   "role": "CEO",
   "bio": "",
   "image_url": "sander-nagtegaal.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/centrical/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

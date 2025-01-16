@@ -4,7 +4,12 @@
   "role": "Director of Experimentation",
   "bio": "",
   "image_url": "lukas-vermeer.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/lukasvermeer"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

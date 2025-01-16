@@ -4,7 +4,12 @@
   "role": "CSO",
   "bio": "",
   "image_url": "sandra-navarro.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/sandranavarrolecina/?locale=es_ES"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "UX Designer & Researcher",
   "bio": "",
   "image_url": "rianne-van-de-rijt.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/riannevanderijt/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

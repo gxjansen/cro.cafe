@@ -4,7 +4,12 @@
   "role": "Managing Director DACH",
   "bio": "",
   "image_url": "christoph-rottler.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/christoph-rottler-41a547b3/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

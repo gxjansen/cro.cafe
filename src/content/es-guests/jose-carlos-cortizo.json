@@ -4,7 +4,12 @@
   "role": "CMO",
   "bio": "",
   "image_url": "jose-carlos-cortizo.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/jccortizo/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

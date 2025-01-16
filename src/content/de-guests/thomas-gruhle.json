@@ -4,7 +4,12 @@
   "role": "CEO",
   "bio": "",
   "image_url": "thomas-gruhle.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/thomas-gruhle-46476245/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

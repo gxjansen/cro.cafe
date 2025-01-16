@@ -9,7 +9,7 @@ export const MetadataSchema = z.object({
   description: z.string(),
   image: z.string().nullable().optional(),
   canonicalUrl: z.string().optional(),
-  type: z.enum(['website', 'article']).optional(),
+  type: z.enum(['website', 'article', 'profile']).optional(),
   publishedTime: z.string().optional(),
   modifiedTime: z.string().optional(),
   author: z.string().optional(),

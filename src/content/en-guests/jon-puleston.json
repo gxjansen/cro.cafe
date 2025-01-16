@@ -4,7 +4,12 @@
   "role": "VP Innovation",
   "bio": "",
   "image_url": "jon-puleston.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/jonpuleston"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

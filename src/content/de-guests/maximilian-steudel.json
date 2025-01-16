@@ -4,7 +4,12 @@
   "role": "MarTech und Digital Engagement Lead",
   "bio": "",
   "image_url": "maximilian-steudel.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/maximiliansteudel/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

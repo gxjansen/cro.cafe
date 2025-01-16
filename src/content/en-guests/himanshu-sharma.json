@@ -4,7 +4,12 @@
   "role": "Founder",
   "bio": "",
   "image_url": "himanshu-sharma.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/analyticsnerd"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

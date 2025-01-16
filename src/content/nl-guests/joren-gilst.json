@@ -4,7 +4,12 @@
   "role": "Customer Experience Optimization Consultant",
   "bio": "",
   "image_url": "joren-gilst.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/joren-van-gilst-34220a56"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

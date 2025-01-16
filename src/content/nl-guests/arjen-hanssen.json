@@ -4,7 +4,12 @@
   "role": "Owner",
   "bio": "",
   "image_url": "arjen-hanssen.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/arjenhanssen"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

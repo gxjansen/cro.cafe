@@ -4,7 +4,12 @@
   "role": "CXO Lead",
   "bio": "",
   "image_url": "arnout-van-scherpenzeel.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/avanscherpenzeel/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

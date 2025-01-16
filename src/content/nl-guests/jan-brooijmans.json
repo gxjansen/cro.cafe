@@ -4,7 +4,12 @@
   "role": "Business Analytics Consultant & BI Projectmanager",
   "bio": "",
   "image_url": "jan-brooijmans.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/janbrooijmans/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

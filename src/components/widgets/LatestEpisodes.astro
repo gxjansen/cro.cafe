@@ -71,7 +71,7 @@ const langNames = {
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {latestEpisodes.length > 0 ? (
         latestEpisodes.map(({ lang, episode }) => (
-          <article class="card focus-within:ring-2 focus-within:ring-[#ff676d]">
+          <article class="card focus-within:ring-2 focus-within:ring-accent">
             <img
               src={`/images/episodes/${lang}/${episode.data.attributes.slug.replace(/_/g, '-').toLowerCase()}.webp`}
               alt={episode.data.attributes.title || 'Episode thumbnail'}

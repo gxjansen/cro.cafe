@@ -4,7 +4,12 @@
   "role": "Gründer & Chief Experimentation Evangelist",
   "bio": "",
   "image_url": "samuel-hess.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/samuel-hess/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Co-Founder",
   "bio": "",
   "image_url": "niklas-brautigam.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/niklas-braeutigam/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Head of SEO",
   "bio": "",
   "image_url": "malte-landwehr.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/landwehr/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

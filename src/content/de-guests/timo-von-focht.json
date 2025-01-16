@@ -4,7 +4,12 @@
   "role": "Country Lead DACH",
   "bio": "",
   "image_url": "timo-von-focht.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/tvonfocht/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

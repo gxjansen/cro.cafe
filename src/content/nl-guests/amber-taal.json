@@ -4,7 +4,12 @@
   "role": "UX/CRO specialist",
   "bio": "",
   "image_url": "amber-taal.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/ambertaal"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

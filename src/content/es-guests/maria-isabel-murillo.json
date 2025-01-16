@@ -4,7 +4,12 @@
   "role": "CEO",
   "bio": "",
   "image_url": "maria-isabel-murillo.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/mariaisabelmurillo/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

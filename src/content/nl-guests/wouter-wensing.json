@@ -4,7 +4,12 @@
   "role": "Team Lead Conversion & Webanalytics",
   "bio": "",
   "image_url": "wouter-wensing.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/wouterwensing"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

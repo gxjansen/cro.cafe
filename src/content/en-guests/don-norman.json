@@ -4,7 +4,12 @@
   "role": "Director of The Design Lab",
   "bio": "",
   "image_url": "don-norman.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/donnorman/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

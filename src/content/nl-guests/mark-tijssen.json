@@ -4,7 +4,12 @@
   "role": "Team Lead Web Intelligence",
   "bio": "",
   "image_url": "mark-tijssen.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/marktijssen/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

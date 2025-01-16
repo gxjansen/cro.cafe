@@ -4,7 +4,12 @@
   "role": "Founder",
   "bio": "",
   "image_url": "rick-molenaar.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/rickmolenaar"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

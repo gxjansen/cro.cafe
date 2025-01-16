@@ -4,7 +4,12 @@
   "role": "Professor",
   "bio": "",
   "image_url": "jonah-berger.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/j1berger/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

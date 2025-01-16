@@ -4,7 +4,12 @@
   "role": "E-Commerce Managerin",
   "bio": "",
   "image_url": "amelie-albers.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/amelie-albers/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "UX Researcher / Product Designer",
   "bio": "",
   "image_url": "maria-pedrosa.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/maria-pedrosa-aguilar/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

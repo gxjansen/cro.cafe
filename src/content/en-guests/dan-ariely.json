@@ -4,7 +4,12 @@
   "role": "Professor of Psychology and Behavioral Economics",
   "bio": "",
   "image_url": "dan-ariely.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/danariely/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

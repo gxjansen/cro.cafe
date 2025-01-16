@@ -4,7 +4,12 @@
   "role": "Global Lead, Optimization Strategy",
   "bio": "",
   "image_url": "hazjier-pourkhalkhali.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/hpourkhalkhali"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

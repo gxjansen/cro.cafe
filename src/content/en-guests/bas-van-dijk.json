@@ -4,7 +4,12 @@
   "role": "Customer Journey Excellence Specialist",
   "bio": "",
   "image_url": "bas-van-dijk.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/basvandijk2/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

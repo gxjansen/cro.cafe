@@ -4,7 +4,12 @@
   "role": "Product Manager Customer Experience Optimization",
   "bio": "",
   "image_url": "shirley-van-haalem.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/shirley-van-haalem"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

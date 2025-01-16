@@ -4,7 +4,12 @@
   "role": "Product director & Senior consultant",
   "bio": "",
   "image_url": "lotte-cornelissen.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "http://nl.linkedin.com/in/cornelissenlotte"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

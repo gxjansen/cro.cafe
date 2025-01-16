@@ -4,7 +4,12 @@
   "role": "Business Development Manager",
   "bio": "",
   "image_url": "andrea-romano-velandia.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/andrea-romano-v/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

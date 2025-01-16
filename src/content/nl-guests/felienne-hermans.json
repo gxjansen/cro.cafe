@@ -4,7 +4,12 @@
   "role": "Associate professor",
   "bio": "",
   "image_url": "felienne-hermans.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/felienne/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

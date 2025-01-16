@@ -4,7 +4,12 @@
   "role": "CEO",
   "bio": "",
   "image_url": "ivan-navas.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/ivan-navas-2ab49914/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

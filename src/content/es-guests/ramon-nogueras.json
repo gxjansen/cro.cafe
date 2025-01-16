@@ -4,7 +4,12 @@
   "role": "Guest",
   "bio": "",
   "image_url": "ramon-nogueras.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/ramonnogueras/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

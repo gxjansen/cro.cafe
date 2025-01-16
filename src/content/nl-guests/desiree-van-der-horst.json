@@ -4,7 +4,12 @@
   "role": "CRO Lead",
   "bio": "",
   "image_url": "desiree-van-der-horst.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/desireevanderhorst/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

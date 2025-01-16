@@ -4,7 +4,12 @@
   "role": "Lead CRO",
   "bio": "",
   "image_url": "timo-stegeman.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/timostegeman/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

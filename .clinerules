@@ -86,6 +86,41 @@ Contains several files with:
    - Only proceed when confidence ≥ 9
    - Document findings for future memory resets
 
+### Task Verification Process
+
+CRITICAL: After implementing ANY feature or fix:
+
+1. Self-Verification:
+
+   - For UI components:
+     - Start the development server
+     - Load and interact with the component
+     - Test in different viewport sizes
+     - Verify all features work as expected
+   - For utilities/functions:
+     - Write and run test cases
+     - Verify edge cases
+     - Check error handling
+   - For any changes:
+     - Run TypeScript checks
+     - Run ESLint
+     - Check for console errors
+
+2. User Verification:
+
+   - NEVER assume a task is complete without user confirmation
+   - Present changes to user with clear steps to verify
+   - Wait for explicit confirmation before moving to next task
+   - If issues are found:
+     - Document the issues
+     - Fix them immediately
+     - Re-verify with user before proceeding
+
+3. Documentation:
+   - Only mark tasks as complete after user verification
+   - Document any issues found during verification
+   - Update implementation notes with lessons learned
+
 ### Memory Bank Updates
 
 When user says "update memory bank":

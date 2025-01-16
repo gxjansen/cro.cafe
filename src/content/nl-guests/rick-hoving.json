@@ -4,7 +4,12 @@
   "role": "Sr. Ecommerce Manager",
   "bio": "",
   "image_url": "rick-hoving.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/rickhoving/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

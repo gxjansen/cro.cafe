@@ -4,7 +4,12 @@
   "role": "Product owner",
   "bio": "",
   "image_url": "rob-harkink.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/robharkink"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

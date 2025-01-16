@@ -4,7 +4,12 @@
   "role": "Lead Analyst",
   "bio": "",
   "image_url": "eliza-mukherjee.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/eliza-mukherjee-3a9129a2"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

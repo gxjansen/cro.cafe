@@ -4,7 +4,12 @@
   "role": "Senior Customer Journey Optimization Expert",
   "bio": "",
   "image_url": "andre-vieira.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/andrevieira1/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

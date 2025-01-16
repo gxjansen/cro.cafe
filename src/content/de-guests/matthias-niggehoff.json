@@ -4,7 +4,12 @@
   "role": "Guest",
   "bio": "",
   "image_url": "matthias-niggehoff.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://de.linkedin.com/in/matthias-niggehoff-8a40b166"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

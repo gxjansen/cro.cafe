@@ -4,7 +4,12 @@
   "role": "Consultant in Marketing & Analytics",
   "bio": "",
   "image_url": "rick-dronkers.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/rickdronkers/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

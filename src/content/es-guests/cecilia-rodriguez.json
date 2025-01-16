@@ -4,7 +4,12 @@
   "role": "Coach ontológica y Directora creativa",
   "bio": "",
   "image_url": "cecilia-rodriguez.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/ceciliarod/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

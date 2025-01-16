@@ -4,7 +4,12 @@
   "role": "Team Lead Insights & sr. CRO specialist",
   "bio": "",
   "image_url": "lisanne-maatman.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/lisannemaatman/?originalSubdomain=nl"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

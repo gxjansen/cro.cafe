@@ -4,7 +4,12 @@
   "role": "Founder & CEO",
   "bio": "",
   "image_url": "scott-voigt.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/scottmvoigt/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

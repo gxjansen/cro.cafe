@@ -4,7 +4,12 @@
   "role": "E-mailmarketing consultant",
   "bio": "",
   "image_url": "monique-zwanenburg.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/monique-zwanenburg"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

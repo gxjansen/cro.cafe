@@ -4,7 +4,12 @@
   "role": "Online Marketeer",
   "bio": "",
   "image_url": "maaike-wittebrood.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/maaike-wittebrood-b4a77a49/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

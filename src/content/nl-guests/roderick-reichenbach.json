@@ -4,7 +4,12 @@
   "role": "Co-founder",
   "bio": "",
   "image_url": "roderick-reichenbach.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/rclreichenbach"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

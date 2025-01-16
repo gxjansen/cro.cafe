@@ -4,7 +4,12 @@
   "role": "Conversion optimization manager",
   "bio": "",
   "image_url": "ruben-de-boer.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/rgdeboer"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

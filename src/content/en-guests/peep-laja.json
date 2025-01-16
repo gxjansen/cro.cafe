@@ -4,7 +4,12 @@
   "role": "Founder and CEO",
   "bio": "",
   "image_url": "peep-laja.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/peeplaja/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

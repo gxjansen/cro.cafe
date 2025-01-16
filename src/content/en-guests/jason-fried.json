@@ -4,7 +4,12 @@
   "role": "Founder & CEO",
   "bio": "",
   "image_url": "jason-fried.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/37signals/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "CRO Specialist",
   "bio": "",
   "image_url": "rick-weij.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://nl.linkedin.com/in/rickweij"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "International Customer Journey Manager (Interim)",
   "bio": "",
   "image_url": "viresh-narain.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/vireshnarain/,"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

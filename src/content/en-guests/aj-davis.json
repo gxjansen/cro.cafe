@@ -4,7 +4,12 @@
   "role": "Founder",
   "bio": "",
   "image_url": "aj-davis.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/ajdavisatx/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

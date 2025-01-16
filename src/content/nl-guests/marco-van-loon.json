@@ -4,7 +4,12 @@
   "role": "Lead CX Researcher",
   "bio": "",
   "image_url": "marco-van-loon.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/marco-van-loon-6121b16"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

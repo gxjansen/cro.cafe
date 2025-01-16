@@ -4,7 +4,12 @@
   "role": "Google Analytics 360 solutions engineer",
   "bio": "",
   "image_url": "weiwei-liu-schroder.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/weiwei-liu-schr%C3%B6der-4b417936/"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

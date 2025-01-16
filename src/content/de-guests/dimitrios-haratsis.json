@@ -4,7 +4,12 @@
   "role": "Associate Partner",
   "bio": "",
   "image_url": "dimitrios-haratsis.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/dimitrios-haratsis-a9a26027/"
+    }
+  ],
   "language": "de",
   "type": "guest"
 }

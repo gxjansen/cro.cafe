@@ -4,7 +4,12 @@
   "role": "Eigenaar",
   "bio": "",
   "image_url": "martijn-van-tongeren.png",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/martijnvantongeren"
+    }
+  ],
   "language": "en",
   "type": "guest"
 }

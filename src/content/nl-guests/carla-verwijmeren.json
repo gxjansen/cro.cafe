@@ -4,7 +4,12 @@
   "role": "Founder & Managing partner",
   "bio": "",
   "image_url": "carla-verwijmeren.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/carla-verwijmeren/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

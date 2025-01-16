@@ -4,7 +4,12 @@
   "role": "CDO",
   "bio": "",
   "image_url": "ainara-simon.jpg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/ainara-sim%C3%B3n-8a336832/"
+    }
+  ],
   "language": "es",
   "type": "guest"
 }

@@ -4,7 +4,12 @@
   "role": "Digital strategist for social and e-commerce",
   "bio": "",
   "image_url": "polle-de-maagt.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/polle/"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }

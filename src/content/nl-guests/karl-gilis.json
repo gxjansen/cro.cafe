@@ -4,7 +4,12 @@
   "role": "The 'G' of AGconsult",
   "bio": "",
   "image_url": "karl-gilis.jpeg",
-  "social_links": [],
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://be.linkedin.com/in/webusability"
+    }
+  ],
   "language": "nl",
   "type": "guest"
 }
