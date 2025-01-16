@@ -1,6 +1,16 @@
 # To be fixed shortly:
 
-[ ] Favicon
+## Github actions is not working yet
+
+Error log:
+Run actions/setup-node@v4
+Found in cache @ /opt/hostedtoolcache/node/20.18.1/x64
+Environment details
+/opt/hostedtoolcache/node/20.18.1/x64/bin/npm config get cache
+/home/runner/.npm
+Error: Dependencies lock file is not found in /home/runner/work/cro.cafe/cro.cafe. Supported file patterns: package-lock.json,npm-shrinkwrap.json,yarn.lock
+
+[ ] we have not yet added an environmental variable for our transistor API key into Github, might that be the problem?
 
 ## Host cards
 
@@ -27,28 +37,7 @@ _ co-host of the DE podcast
 [ ] Unlike the guests, we don't need a single detail page for each host
 [ ] On the episode language pages, above the "Latest Episodes" component, add a component that shows the host information for that language. Note that in case of the German podcast, there are 2 hosts.
 
-## Guest Integration
 
-[x] Connected guest data from src/content/[lang]-guests/[guest].json
-[x] Added guest extraction from episode descriptions
-[x] Created GuestCard component for consistent display
-[x] Added guest section to episode detail pages
-[ ] Create guest pages, make sure to use our PageLayout. astro as a base.
-[ ] Link the cards on the episode detail pages to the new guest page.
-_ The content of these pages should be based on the guest data in src/content/[lang]-guests/[guest].json. This includes their name, role, bio, (big) profile picture and social links.
-_ The URL structure of these pages should be /guest/[slug]. Note that this means there is no [lang] in the URL. All the /guest/ pages are in English.
-
-## Github actions is not working yet
-
-Error log:
-Run actions/setup-node@v4
-Found in cache @ /opt/hostedtoolcache/node/20.18.1/x64
-Environment details
-/opt/hostedtoolcache/node/20.18.1/x64/bin/npm config get cache
-/home/runner/.npm
-Error: Dependencies lock file is not found in /home/runner/work/cro.cafe/cro.cafe. Supported file patterns: package-lock.json,npm-shrinkwrap.json,yarn.lock
-
-[ ] we have not yet added an environmental variable for our transistor API key into Github, might that be the problem?
 
 # Next tasks:
 
