@@ -9,7 +9,14 @@
     "published_at": "2019-10-09T20:45:00.000Z",
     "duration": 447,
     "explicit": false,
-    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/live-dutch-cro-awards-henk-jan-journee",
     "media_url": "https://media.transistor.fm/c8d54301/aa68e3c5.mp3",
     "image_url": "https://img.transistor.fm/0PgHVvSInqO6VNjpyahgXRJIWNHfSOyDwj8Czy7IJ9Y/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82ZjFj/OTE1MmVjZjFkZTNi/OGI4OTA0ZTEyNWY5/ZDg4OS5qcGVn.webp",

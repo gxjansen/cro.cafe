@@ -9,7 +9,14 @@
     "published_at": "2019-02-28T07:18:00.000Z",
     "duration": 2860,
     "explicit": false,
-    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/digital-marketing-pinball",
     "media_url": "https://media.transistor.fm/bb151115/15e5b651.mp3",
     "image_url": "https://img.transistor.fm/ONqPm873kJosKEF-aFJFq_79hwAK9WNKk6hSwI-yRJ4/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82MjQ4/NDAwNzJkNmQxNzg1/NzJjOTUzNzc3MzZj/MTVjYi5qcGVn.webp",

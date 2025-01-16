@@ -9,7 +9,14 @@
     "published_at": "2020-08-09T22:00:00.000Z",
     "duration": 2745,
     "explicit": false,
-    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/data-architectuur-splunk-en-itp",
     "media_url": "https://media.transistor.fm/5c0fb4e3/71074267.mp3",
     "image_url": "https://img.transistor.fm/rexzDO39yVcP4-onjBHhDUkjd-Fil2DMlNCUk65IS8E/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lNTM1/MzE0MTEzNzQxYzA0/Y2M1NDQyODZlODg1/YmJmZS5qcGVn.webp",

@@ -9,7 +9,14 @@
     "published_at": "2019-12-23T16:00:00.000Z",
     "duration": 2799,
     "explicit": false,
-    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/consumentenpsychologie-en-piekmomenten",
     "media_url": "https://media.transistor.fm/3f3f7f29/7d653335.mp3",
     "image_url": "https://img.transistor.fm/Q3I6pVD1CGpGy4eo5-n4wiIuajLTSgPvhwpoNj_DaFc/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8zYmVl/YTJjZjcyZTEyMGVl/OTMxOGZhYjRjNjM1/NDQ0ZC5qcGVn.webp",

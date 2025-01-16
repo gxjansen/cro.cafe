@@ -9,7 +9,15 @@
     "published_at": "2019-11-04T15:05:00.000Z",
     "duration": 1861,
     "explicit": false,
-    "keywords": "podcast, ecommerce, conversion, usability, dac19, moa, livestream",
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "dac19",
+      "moa",
+      "livestream"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/luister-naar-je-klanten-weet-je-eigenlijk-wel-wat-ze-nodig-hebben",
     "media_url": "https://media.transistor.fm/d49da350/c1145a82.mp3",
     "image_url": "https://img.transistor.fm/UXZzTNeFWIq0tc7sFyqJe3HN6Su3-gDC6j5ZcGDo_f8/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8zZGI0/NTMwMzZiOGZmNTRh/OTAwMjMzNjE1OTY4/MDczMi5qcGVn.webp",

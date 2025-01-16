@@ -9,7 +9,14 @@
     "published_at": "2020-02-07T12:00:00.000Z",
     "duration": 1709,
     "explicit": false,
-    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/de-slimme-voice-assistant-hype-of-trend",
     "media_url": "https://media.transistor.fm/3bb06fdc/5484db02.mp3",
     "image_url": "https://img.transistor.fm/IQUocOxiBkKAAzXcc0aotshrBQHXTPUfXzxgi7qFZ-U/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82MTFm/ZjMwZGViOTI1NTZh/NzY0NmZmNWU4ZDQy/ODhlOC5qcGVn.webp",

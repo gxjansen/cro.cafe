@@ -9,7 +9,14 @@
     "published_at": "2019-05-31T09:25:00.000Z",
     "duration": 1424,
     "explicit": false,
-    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/experience-economy-time-well-saved-time-well-spent",
     "media_url": "https://media.transistor.fm/5654d355/cb8984ba.mp3",
     "image_url": "https://img.transistor.fm/tYC5EkcwUAD-HlgTMvnhi_jVRARKoUT6CX0OeBs7RxE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iMGRl/NWJkOGVjZGUyZjFm/NDljM2UxYTUwYTli/OTEwOC5qcGVn.webp",
