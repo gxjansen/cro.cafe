@@ -17,3 +17,7 @@ export const METADATA = {
     twitter: 'https://twitter.com/cro_cafe',
   },
 } as const;
+
+export const PAGINATION = {
+  EPISODES_PER_PAGE: 15,
+} as const;

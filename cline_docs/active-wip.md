@@ -1,36 +1,26 @@
 # To be fixed shortly:
 
-## Episode Overview Page
-
-[ ] Increase the amount of episode cards on overview pages from 10 to 15
-
-## Episode Detail Page
-[ ] Change the title "Featured Guests" to "Episode Guests"
-[ ] Change the card width per person to half width. If there are 2 guests, they can be on the same line (at least on desktop)
-
-## Episode Cards
-
-[ ] The description text in the homepage card for the "Growth Minded Superheroes" episode starts with <div> while on http://localhost:4321/en/episodes/1 this is not the case. Make sure there is not HTMl visible in the description text.
+[ ] Favicon
 
 ## Host cards
 
 [ ] Add a folder with 4 json files for the following podcast show hosts:
-    * Guido X Jansen
-      * As a cognitive psychologist and award-winning CRO specialist, Guido has worked with global e-commerce companies such as eBay, Heineken, Sara Lee, ING, Randstad, Sanoma and Jacobs Douwe Egberts to turn their data and insights into continuous business growth.
-      * https://www.linkedin.com/in/gxjansen/
-      * host of the NL and EN podcast
-    * Ricardo Tayar
-      * Flat 101 CEO, Especialista en UX, podcast host
-      * https://www.linkedin.com/in/ricardotayar/en/?originalSubdomain=es
-      * host of the ES podcast
-    * Michael Witzenleiter
-      * Michael ist CEO und Gründer von Conversion Maker, einem Technologie-Unternehmen für Conversion-Rate-Optimierung. Seit über 15 Jahren beschäftigt er sich mit Online Marketing – immer mit dem Fokus auf messbaren Ergebnissen.
-      * https://de.linkedin.com/in/michael-witzenleiter-714a028
-      * co-host of the DE podcast
-    *Yvonne Teufel
-      * Als Conversion Rate Consultant unterstützte Yvonne zahlreiche Unternehmen dabei Daten auszuwerten und zu nutzen, um so das Online-Erlebnis von Kunden zu verbessern und den Geschäftserfolg nachhaltig zu steigern.
-      * https://de.linkedin.com/in/yvonne-teufel-461768190
-      * co-host of the DE podcast
+_ Guido X Jansen
+_ As a cognitive psychologist and award-winning CRO specialist, Guido has worked with global e-commerce companies such as eBay, Heineken, Sara Lee, ING, Randstad, Sanoma and Jacobs Douwe Egberts to turn their data and insights into continuous business growth.
+_ https://www.linkedin.com/in/gxjansen/
+_ host of the NL and EN podcast
+_ Ricardo Tayar
+_ Flat 101 CEO, Especialista en UX, podcast host
+_ https://www.linkedin.com/in/ricardotayar/en/?originalSubdomain=es
+_ host of the ES podcast
+_ Michael Witzenleiter
+_ Michael ist CEO und Gründer von Conversion Maker, einem Technologie-Unternehmen für Conversion-Rate-Optimierung. Seit über 15 Jahren beschäftigt er sich mit Online Marketing – immer mit dem Fokus auf messbaren Ergebnissen.
+_ https://de.linkedin.com/in/michael-witzenleiter-714a028
+_ co-host of the DE podcast
+_Yvonne Teufel
+_ Als Conversion Rate Consultant unterstützte Yvonne zahlreiche Unternehmen dabei Daten auszuwerten und zu nutzen, um so das Online-Erlebnis von Kunden zu verbessern und den Geschäftserfolg nachhaltig zu steigern.
+_ https://de.linkedin.com/in/yvonne-teufel-461768190
+_ co-host of the DE podcast
 [ ] Each host has a profile image, available in src/assets/images/hosts, add links to these in the json files
 [ ] Add a new section to the homepage with the title "Meet the Hosts" and show the host cards in a row of 4
 [ ] On each episode detail page, add a "Your host" section below the guest section. Use the same card layout as the guest cards.
@@ -45,10 +35,11 @@
 [x] Added guest section to episode detail pages
 [ ] Create guest pages, make sure to use our PageLayout. astro as a base.
 [ ] Link the cards on the episode detail pages to the new guest page.
-    * The content of these pages should be based on the guest data in src/content/[lang]-guests/[guest].json. This includes their name, role, bio, (big) profile picture and social links.
-    * The URL structure of these pages should be /guest/[slug]. Note that this means there is no [lang] in the URL. All the /guest/ pages are in English.
+_ The content of these pages should be based on the guest data in src/content/[lang]-guests/[guest].json. This includes their name, role, bio, (big) profile picture and social links.
+_ The URL structure of these pages should be /guest/[slug]. Note that this means there is no [lang] in the URL. All the /guest/ pages are in English.
 
 ## Github actions is not working yet
+
 Error log:
 Run actions/setup-node@v4
 Found in cache @ /opt/hostedtoolcache/node/20.18.1/x64
@@ -60,6 +51,8 @@ Error: Dependencies lock file is not found in /home/runner/work/cro.cafe/cro.caf
 [ ] we have not yet added an environmental variable for our transistor API key into Github, might that be the problem?
 
 # Next tasks:
+
+## Show total # episodes and # guests on homepage
 
 ## Popular Episodes (In Progress)
 

@@ -190,8 +190,8 @@ const structuredData = {
 
           {guests?.length > 0 && (
             <div class="episode-guests mt-8">
-              <h2 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">Featured Guests</h2>
-              <div class="grid gap-4">
+              <h2 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">Episode Guests</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {guests.map((guest) => (
                   <GuestCard guest={guest} />
                 ))}
