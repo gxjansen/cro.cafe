@@ -1,0 +1,51 @@
+{
+  "id": "773401",
+  "type": "episode",
+  "attributes": {
+    "title": "Behavioral design, aplicando la ciencia del comportamiento al diseño, con Dani Solana",
+    "number": 25,
+    "season": 2,
+    "status": "published",
+    "published_at": "2022-01-11T23:00:00.000Z",
+    "duration": 3956,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://es.cro.cafe/podcast/behavioural-design-aplicando-la-ciencia-del-comportamiento-al-diseno",
+    "media_url": "https://media.transistor.fm/a2feb95d/cd1cb3d0.mp3",
+    "image_url": "https://img.transistor.fm/bPov9br_F0AlhbHvzIIM2edqWUFftU_3jBMH7gpKx5I/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9hODI2/ODBjN2MyZTQxMTNh/NGQ2M2Y1YjM5M2M5/MDliZS5wbmc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "En este episodio hablamos sobre como aplicar la ciencia del comportamiento (sesgos cognitivos, heurísticos, etc) al diseño de productos y servicios digitales.",
+    "description": "En este episodio hablamos sobre como aplicar la ciencia del comportamiento (sesgos cognitivos, heurísticos, etc) al diseño de productos y servicios digitales.\n\n\n\n<!-- GUESTS START -->\nGuest: Dani Solana\nURL: https://es.cro.cafe/invitados/dani-solana\n<!-- GUESTS END -->\n",
+    "slug": "behavioural-design-aplicando-la-ciencia-del-comportamiento-al-diseno-con-dani-solana",
+    "created_at": "2022-01-11T17:55:05.822Z",
+    "updated_at": "2025-01-13T11:31:38.907Z",
+    "formatted_published_at": "January 11, 2022",
+    "duration_in_mmss": "65:56",
+    "share_url": "https://share.transistor.fm/s/a2feb95d",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "En este episodio hablamos sobre como aplicar la ciencia del comportamiento (sesgos cognitivos, heurísticos, etc) al diseño de productos y servicios digitales.",
+    "formatted_description": "En este episodio hablamos sobre como aplicar la ciencia del comportamiento (sesgos cognitivos, heurísticos, etc) al diseño de productos y servicios digitales.\n\n\n\n<!-- GUESTS START -->\nGuest: Dani Solana\nURL: https://es.cro.cafe/invitados/dani-solana\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/a2feb95d\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/a2feb95d/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [
+      {
+        "name": "Dani Solana",
+        "slug": "dani-solana"
+      }
+    ],
+    "clean_description": "En este episodio hablamos sobre como aplicar la ciencia del comportamiento (sesgos cognitivos, heurísticos, etc) al diseño de productos y servicios digitales."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16111",
+        "type": "show"
+      }
+    }
+  }
+}

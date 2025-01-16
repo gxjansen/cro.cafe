@@ -1,0 +1,46 @@
+{
+  "id": "113289",
+  "type": "episode",
+  "attributes": {
+    "title": "Why focussing on a culture of experimentation is a waste of time, with Manuel DaCosta (Effective Experiments)",
+    "number": 1,
+    "season": 1,
+    "status": "published",
+    "published_at": "2019-10-20T13:00:00.000Z",
+    "duration": 1767,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://www.cro.cafe/podcast/why-focussing-on-a-culture-of-experimentation-is-a-waste-of-time",
+    "media_url": "https://media.transistor.fm/65c88289/d9718325.mp3",
+    "image_url": "https://img.transistor.fm/j-NEp0W9gcASp2Cl1C_0jxfWRPEY8yc58s8EsOhs6iE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83NjM4/NjcyMDAwOGEyYTIw/ZWI1OTcwMzg1YTBl/NDRlYy5qcGVn.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "Tijdens de DDMA Dutch CRO Awards op 3 oktober 2019 deden we live verslag vanaf het event.\r\n\r\nIn deze clip spreken we met Manuel DaCosta van Effective Experiments en tevens spreker tijdens het event.",
+    "description": "<div>Guest: Manuel Da Costa URL: https://www.cro.cafe/guest/manuel-da-costa&nbsp;</div>",
+    "slug": "live-dutch-cro-awards-manuel-dacosta",
+    "created_at": "2019-10-20T13:12:47.380Z",
+    "updated_at": "2025-01-16T11:01:20.226Z",
+    "formatted_published_at": "October 20, 2019",
+    "duration_in_mmss": "29:27",
+    "share_url": "https://share.transistor.fm/s/65c88289",
+    "transcript_url": "https://share.transistor.fm/s/65c88289/transcript",
+    "transcripts": [],
+    "formatted_summary": "Tijdens de DDMA Dutch CRO Awards op 3 oktober 2019 deden we live verslag vanaf het event.\r\n\r\nIn deze clip spreken we met Manuel DaCosta van Effective Experiments en tevens spreker tijdens het event.",
+    "formatted_description": "<div>Guest: Manuel Da Costa URL: https://www.cro.cafe/guest/manuel-da-costa&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/65c88289\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/65c88289/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "Tijdens de DDMA Dutch CRO Awards op 3 oktober 2019 deden we live verslag vanaf het event.\r\n\r\nIn deze clip spreken we met Manuel DaCosta van Effective Experiments en tevens spreker tijdens het event."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

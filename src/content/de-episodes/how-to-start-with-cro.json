@@ -1,0 +1,51 @@
+{
+  "id": "903383",
+  "type": "episode",
+  "attributes": {
+    "title": "Aller Anfang ist schwer - So wirst Du zum CRO-Experten",
+    "number": 1,
+    "season": 1,
+    "status": "published",
+    "published_at": "2022-05-31T07:15:00.000Z",
+    "duration": 1545,
+    "explicit": false,
+    "keywords": "Podcast, Conversion Optimierung, CRO, Testing ",
+    "alternate_url": "https://de.cro.cafe/podcast/how-to-start-with-cro",
+    "media_url": "https://media.transistor.fm/f091cf3b/9eb1c1c2.mp3",
+    "image_url": "https://img.transistor.fm/K4tyyukvxTX_98ZNB_-KMmiRqkw-6JlaD4oGp8xMP_c/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kM2Zi/Nzk5OTNmN2U2YTYw/MzI0NDc3YWJjNWI3/ZDY2NC5wbmc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "Ihr möchtet den Bereich CRO und Testing in eurem Unternehmen etablieren und voranbringen? \r\nIn dieser Folge beantworten Christoph, Michael und Yvonne, was die Voraussetzungen hierfür sind, welche Kompetenzen gefordert sind und welche Herausforderungen ihr meistern müsst. \r\nZusätzlich erhaltet ihr Tipps, die euch den Einstieg erleichtern. Kleiner Vorgeschmack: streicht den Satz \"Das machen wir schon immer so\" aus eurem Wortschatz. Als Extra verraten wir euch, wie Christoph seinen Kaffee am liebsten trinkt. \r\nViel Spaß beim Hören! ",
+    "description": "Ihr möchtet den Bereich CRO und Testing in eurem Unternehmen etablieren und voranbringen?\nIn dieser Folge beantworten Christoph, Michael und Yvonne, was die Voraussetzungen hierfür sind, welche Kompetenzen gefordert sind und welche Herausforderungen ihr meistern müsst.\nZusätzlich erhaltet ihr Tipps, die euch den Einstieg erleichtern. Kleiner Vorgeschmack: streicht den Satz \"Das machen wir schon immer so\" aus eurem Wortschatz. Als Extra verraten wir euch, wie Christoph seinen Kaffee am liebsten trinkt.\nViel Spaß beim Hören!\n\n\n\n<!-- GUESTS START -->\nGuest: Christoph Rottler\nURL: https://de.cro.cafe/guest/christoph-rottler\n<!-- GUESTS END -->\n",
+    "slug": "how-to-start-with-cro",
+    "created_at": "2022-05-30T08:09:14.585Z",
+    "updated_at": "2025-01-13T00:29:56.065Z",
+    "formatted_published_at": "May 31, 2022",
+    "duration_in_mmss": "25:45",
+    "share_url": "https://share.transistor.fm/s/f091cf3b",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Ihr möchtet den Bereich CRO und Testing in eurem Unternehmen etablieren und voranbringen? \r\nIn dieser Folge beantworten Christoph, Michael und Yvonne, was die Voraussetzungen hierfür sind, welche Kompetenzen gefordert sind und welche Herausforderungen ihr meistern müsst. \r\nZusätzlich erhaltet ihr Tipps, die euch den Einstieg erleichtern. Kleiner Vorgeschmack: streicht den Satz \"Das machen wir schon immer so\" aus eurem Wortschatz. Als Extra verraten wir euch, wie Christoph seinen Kaffee am liebsten trinkt. \r\nViel Spaß beim Hören! ",
+    "formatted_description": "Ihr möchtet den Bereich CRO und Testing in eurem Unternehmen etablieren und voranbringen?\nIn dieser Folge beantworten Christoph, Michael und Yvonne, was die Voraussetzungen hierfür sind, welche Kompetenzen gefordert sind und welche Herausforderungen ihr meistern müsst.\nZusätzlich erhaltet ihr Tipps, die euch den Einstieg erleichtern. Kleiner Vorgeschmack: streicht den Satz \"Das machen wir schon immer so\" aus eurem Wortschatz. Als Extra verraten wir euch, wie Christoph seinen Kaffee am liebsten trinkt.\nViel Spaß beim Hören!\n\n\n\n<!-- GUESTS START -->\nGuest: Christoph Rottler\nURL: https://de.cro.cafe/guest/christoph-rottler\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/f091cf3b\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/f091cf3b/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [
+      {
+        "name": "Christoph Rottler",
+        "slug": "christoph-rottler"
+      }
+    ],
+    "clean_description": "Ihr möchtet den Bereich CRO und Testing in eurem Unternehmen etablieren und voranbringen? \r\nIn dieser Folge beantworten Christoph, Michael und Yvonne, was die Voraussetzungen hierfür sind, welche Kompetenzen gefordert sind und welche Herausforderungen ihr meistern müsst. \r\nZusätzlich erhaltet ihr Tipps, die euch den Einstieg erleichtern. Kleiner Vorgeschmack: streicht den Satz \"Das machen wir schon immer so\" aus eurem Wortschatz. Als Extra verraten wir euch, wie Christoph seinen Kaffee am liebsten trinkt. \r\nViel Spaß beim Hören! "
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "28592",
+        "type": "show"
+      }
+    }
+  }
+}

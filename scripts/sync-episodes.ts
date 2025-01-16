@@ -2,8 +2,9 @@ import { writeFile, mkdir } from 'fs/promises';
 import { join } from 'path';
 import { existsSync } from 'fs';
 import { config } from 'dotenv';
-import { TransistorAPI, SHOW_IDS, getLanguageFromShowId } from '../src/utils/transistor-api';
+import { TransistorAPI, SHOW_IDS, getLanguageFromShowId } from '../src/utils/transistor-api.ts';
 import type { TransistorEpisode } from '../src/types/transistor';
+import { extractGuests } from './extract-guests.ts';
 
 // Load environment variables
 config();
@@ -20,10 +21,35 @@ async function ensureContentDirectory(language: string) {
   return dir;
 }
 
-// Save episode to content collection
+// Process and save episode to content collection
 async function saveEpisode(episode: TransistorEpisode, language: string) {
   const dir = await ensureContentDirectory(language);
   const filePath = join(dir, `${episode.attributes.slug}.json`);
+
+  // Extract guests from description first (for names)
+  const { guests: descriptionGuests } = extractGuests(episode.attributes.description || '');
+
+  // Then extract from formatted_summary (for URLs)
+  const { guests: summaryGuests, cleanDescription } = extractGuests(
+    episode.attributes.formatted_summary || ''
+  );
+
+  // Combine guests from both sources, preferring summaryGuests if available
+  const allGuests = [...descriptionGuests];
+  for (const summaryGuest of summaryGuests) {
+    if (!allGuests.some((g) => g.slug === summaryGuest.slug)) {
+      allGuests.push(summaryGuest);
+    }
+  }
+
+  if (allGuests.length > 0) {
+    console.log(`Found ${allGuests.length} guests:`, allGuests);
+  }
+
+  // Update episode with guest information and clean description
+  episode.attributes.guests = allGuests;
+  episode.attributes.clean_description = cleanDescription;
+
   await writeFile(filePath, JSON.stringify(episode, null, 2));
 }
 
@@ -67,5 +93,27 @@ async function syncAllShows() {
 // Run sync if called directly
 const isMainModule = import.meta.url === `file://${process.argv[1]}`;
 if (isMainModule) {
-  syncAllShows();
+  // Check if a specific episode ID is provided
+  const episodeId = process.argv[2];
+  if (episodeId) {
+    // Sync a single episode
+    const showId = SHOW_IDS['en']; // Default to English show
+    transistorApi
+      .getEpisode(episodeId)
+      .then(async (episode) => {
+        if (episode) {
+          await saveEpisode(episode, 'en');
+          console.log('Single episode sync completed!');
+        }
+      })
+      .catch((error) => {
+        console.error('Failed to sync episode:', error);
+        process.exit(1);
+      });
+  } else {
+    // Sync all episodes
+    syncAllShows();
+  }
 }
+
+export { saveEpisode };

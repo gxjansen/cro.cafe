@@ -9,9 +9,7 @@
     "published_at": "2024-02-06T08:30:00.000Z",
     "duration": 1692,
     "explicit": false,
-    "keywords": [
-      ""
-    ],
+    "keywords": "",
     "alternate_url": "https://de.cro.cafe/podcast/getting-to-know-your-customers-with-conrad-omansky",
     "media_url": "https://media.transistor.fm/a934abef/7f86522f.mp3",
     "image_url": "https://img.transistor.fm/PAWS2mQmEnQbva5TMGdi8w9Ofr8tdaIeoIbySPo4eXc/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82YzQ1/Y2E3MmYwNWIyM2Rj/MGJmNGZlYzcwOThm/OGRhMS5wbmc.webp",
@@ -34,9 +32,13 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": "",
-    "local_image_url": "/images/episodes/de/getting-to-know-your-customers-with-conrad-omansky.webp",
-    "transistor_image_url": "https://img.transistor.fm/PAWS2mQmEnQbva5TMGdi8w9Ofr8tdaIeoIbySPo4eXc/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82YzQ1/Y2E3MmYwNWIyM2Rj/MGJmNGZlYzcwOThm/OGRhMS5wbmc.webp"
+    "guests": [
+      {
+        "name": "Conrad Omansky",
+        "slug": "conrad-omansky"
+      }
+    ],
+    "clean_description": "The key to improving your business is to understand the customers. In this episode, Conrad Omansky, CEO and Founder of the Omansky Group, tells us why qualitative and quantitative data are so important to optimize the website and how to find the right information. Besides that, he tells us the best ways to analyze the data and his best user interview tips.Book & Blog recommendations: The 9 American Lifestyles by Arnold Mitchell, 1983The Honest Broker------Der Schlüssel zur Verbesserung des Unternehmens ist es, Kunden richtig kennenzulernen und zu verstehen. In dieser Folge erklärt Conrad Omansky, CEO und Gründer der Omansky Group, warum qualitative und quantitative Daten so wichtig für die Optimierung der Website sind und wie man die richtigen Informationen findet. Außerdem verrät er uns, wie man die Daten am besten analysiert und gibt seine Tipps für Nutzer-Interviews.Buch- & Blogempfehlungen: Die 9 amerikanischen Lebensstile von Arnold Mitchell, 1983The Honest Broker\n\n\n\n\nGuest: Conrad Omansky\nURL: https://de.cro.cafe/guest/conrad-omansky"
   },
   "relationships": {
     "show": {

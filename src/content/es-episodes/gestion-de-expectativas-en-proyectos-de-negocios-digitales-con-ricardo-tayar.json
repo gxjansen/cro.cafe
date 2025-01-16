@@ -1,0 +1,51 @@
+{
+  "id": "668758",
+  "type": "episode",
+  "attributes": {
+    "title": "Gestión de expectativas en proyectos de negocios digitales, con Ricardo Tayar",
+    "number": null,
+    "season": 1,
+    "status": "published",
+    "published_at": "2021-10-05T22:00:00.000Z",
+    "duration": 1857,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://es.cro.cafe/podcast/gestion-de-expectativas-en-proyectos-de-negocios-digitales",
+    "media_url": "https://media.transistor.fm/3b26d718/8667b877.mp3",
+    "image_url": "https://img.transistor.fm/ffSgAMbUC22eF0bbR7-T_4No5G5Lc_XDB1Z_SZtJrow/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80NDI2/YmVmOGQwYzBiOWU0/ZGFhNjRmOWZiYmE5/MDNlYi5qcGc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "Gestionar las expectativas de resultados y venta en proyectos de e-commerce, CRO y negocios digitales es clave. En este episodio hablamos de ello con toda transparencia",
+    "description": "Gestionar las expectativas de resultados y venta en proyectos de e-commerce, CRO y negocios digitales es clave. En este episodio hablamos de ello con toda transparencia\n\n\n\n<!-- GUESTS START -->\nGuest: Ricardo Tayar\nURL: https://es.cro.cafe/invitados/ricardo-tayar-lopez\n<!-- GUESTS END -->\n",
+    "slug": "gestion-de-expectativas-en-proyectos-de-negocios-digitales-con-ricardo-tayar",
+    "created_at": "2021-10-05T20:32:24.317Z",
+    "updated_at": "2025-01-13T11:33:40.596Z",
+    "formatted_published_at": "October 5, 2021",
+    "duration_in_mmss": "30:57",
+    "share_url": "https://share.transistor.fm/s/3b26d718",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Gestionar las expectativas de resultados y venta en proyectos de e-commerce, CRO y negocios digitales es clave. En este episodio hablamos de ello con toda transparencia",
+    "formatted_description": "Gestionar las expectativas de resultados y venta en proyectos de e-commerce, CRO y negocios digitales es clave. En este episodio hablamos de ello con toda transparencia\n\n\n\n<!-- GUESTS START -->\nGuest: Ricardo Tayar\nURL: https://es.cro.cafe/invitados/ricardo-tayar-lopez\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/3b26d718\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/3b26d718/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "guests": [
+      {
+        "name": "Ricardo Tayar",
+        "slug": "ricardo-tayar-lopez"
+      }
+    ],
+    "clean_description": "Gestionar las expectativas de resultados y venta en proyectos de e-commerce, CRO y negocios digitales es clave. En este episodio hablamos de ello con toda transparencia"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16111",
+        "type": "show"
+      }
+    }
+  }
+}

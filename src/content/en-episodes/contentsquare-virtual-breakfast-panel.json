@@ -1,0 +1,46 @@
+{
+  "id": "363262",
+  "type": "episode",
+  "attributes": {
+    "title": "Contentsquare Virtual Breakfast Panel, with Fabian Kersten, Bas van Dijk & Lucas Vos",
+    "number": null,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-07-21T15:00:00.000Z",
+    "duration": 1018,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://www.cro.cafe/podcast/contentsquare-virtual-breakfast-panel",
+    "media_url": "https://media.transistor.fm/48a3ebea/9e5a29a6.mp3",
+    "image_url": "https://img.transistor.fm/CsXGdY0Xo2rhV7gRo8QU1m1az08DAQO48tEFYGkEvyA/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82NTFl/MjU1NmQyNDM2Zjdi/ZGFmYTk4ODYyNWE1/YTc2Ni5qcGVn.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "Recorded on Thursday July 16th, 2020. As a part of the Virtual Champagne Breakfast session hosted by ContentSquare and ClickValue we did a CRO.CAFE panel session with:\r\n* Bas van Dijk - Senior Customer Journey Specialist at Bol.com\r\n* Fabian Kersten - Director Digital Marketing, Sales & Service at Leaseplan\r\n* Lucas Vos - Optimizing online platforms at RTL Nederland",
+    "description": "<div>Guest 1: Fabian Kersten URL: https://www.cro.cafe/guest/fabian-kersten | Guest 2: Lucas Vos URL: https://www.cro.cafe/guest/lucas-vos | Guest 3: Bas van Dijk URL: https://www.cro.cafe/guest/bas-van-dijk&nbsp;</div>",
+    "slug": "contentsquare-virtual-breakfast-panel",
+    "created_at": "2020-10-01T17:59:24.770Z",
+    "updated_at": "2025-01-16T11:11:49.258Z",
+    "formatted_published_at": "July 21, 2020",
+    "duration_in_mmss": "16:58",
+    "share_url": "https://share.transistor.fm/s/48a3ebea",
+    "transcript_url": "https://share.transistor.fm/s/48a3ebea/transcript",
+    "transcripts": [],
+    "formatted_summary": "Recorded on Thursday July 16th, 2020. As a part of the Virtual Champagne Breakfast session hosted by ContentSquare and ClickValue we did a CRO.CAFE panel session with:\r\n* Bas van Dijk - Senior Customer Journey Specialist at Bol.com\r\n* Fabian Kersten - Director Digital Marketing, Sales & Service at Leaseplan\r\n* Lucas Vos - Optimizing online platforms at RTL Nederland",
+    "formatted_description": "<div>Guest 1: Fabian Kersten URL: https://www.cro.cafe/guest/fabian-kersten | Guest 2: Lucas Vos URL: https://www.cro.cafe/guest/lucas-vos | Guest 3: Bas van Dijk URL: https://www.cro.cafe/guest/bas-van-dijk&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/48a3ebea\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/48a3ebea/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "Recorded on Thursday July 16th, 2020. As a part of the Virtual Champagne Breakfast session hosted by ContentSquare and ClickValue we did a CRO.CAFE panel session with:\r\n* Bas van Dijk - Senior Customer Journey Specialist at Bol.com\r\n* Fabian Kersten - Director Digital Marketing, Sales & Service at Leaseplan\r\n* Lucas Vos - Optimizing online platforms at RTL Nederland"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

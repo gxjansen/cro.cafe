@@ -1,0 +1,51 @@
+{
+  "id": "397714",
+  "type": "episode",
+  "attributes": {
+    "title": "Verse optimalisatie cases met de #1 docent van Beeckestijn: Pieter Jan Troost",
+    "number": 2,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-01-13T07:00:00.000Z",
+    "duration": 2143,
+    "explicit": false,
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
+    "alternate_url": "https://nl.cro.cafe/podcast/verse-optimalisatie-cases-met-de-1-docent-van-beeckestijn",
+    "media_url": "https://media.transistor.fm/9e4ea736/d13c11a2.mp3",
+    "image_url": "https://img.transistor.fm/W1kZmTtWDu1DIXzeHPFAFOU6Q89icg4ObBym4Fq9aP0/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82MDEy/MjIyNzljZTRkZjFj/MWFkMWIwODU2OTUx/NmY5NS5qcGVn.webp",
+    "video_url": null,
+    "author": "Guido X Jansen",
+    "summary": "Geeft colleges rondom conversie en behavior design op business schools (Beeckestijn en NIMA)",
+    "description": "\n\n<!-- GUESTS START -->\nGuest: Pieter Jan Troost\nURL: https://nl.cro.cafe/gast/pieter-jan-troost\n<!-- GUESTS END -->\n",
+    "slug": "nl-verse-optimalisatie-cases-met-de-1-docent-van-beeckestijn-pieter-jan-troost",
+    "created_at": "2020-11-10T20:45:58.691Z",
+    "updated_at": "2025-01-13T10:28:55.720Z",
+    "formatted_published_at": "January 13, 2020",
+    "duration_in_mmss": "35:43",
+    "share_url": "https://share.transistor.fm/s/9e4ea736",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Geeft colleges rondom conversie en behavior design op business schools (Beeckestijn en NIMA)",
+    "formatted_description": "\n\n<!-- GUESTS START -->\nGuest: Pieter Jan Troost\nURL: https://nl.cro.cafe/gast/pieter-jan-troost\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/9e4ea736\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/9e4ea736/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [
+      {
+        "name": "Pieter Jan Troost",
+        "slug": "pieter-jan-troost"
+      }
+    ],
+    "clean_description": "Geeft colleges rondom conversie en behavior design op business schools (Beeckestijn en NIMA)"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

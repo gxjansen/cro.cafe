@@ -1,0 +1,46 @@
+{
+  "id": "246715",
+  "type": "episode",
+  "attributes": {
+    "title": "Automation of tedious CRO work, with Matt Beischel",
+    "number": 8,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-04-26T22:00:00.000Z",
+    "duration": 3477,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://www.cro.cafe/podcast/automation-of-tedious-cro-work",
+    "media_url": "https://media.transistor.fm/5bf0fc51/2a20e8b6.mp3",
+    "image_url": "https://img.transistor.fm/ENUKP7R9MxKcYBYkviXuF0eKX86BYzNuEUbGjxerx9U/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lZGM1/NDBjNjRlNTUxMjBi/NWJlNGE1MjU3MzJl/ZWE0Yy5qcGVn.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "In this episode I talk to designer, developer, and optimizer Matt Beischel. He runs his own agency Corvus CRO and we discuss automating parts of your CRO workflow so you can keep focusing on the fun parts of the job.",
+    "description": "<div>Guest: Matt Beischel URL: https://www.cro.cafe/guest/matt-beischel&nbsp;</div>",
+    "slug": "automation-of-tedious-cro-work",
+    "created_at": "2020-04-26T21:12:05.786Z",
+    "updated_at": "2025-01-16T11:03:12.680Z",
+    "formatted_published_at": "April 26, 2020",
+    "duration_in_mmss": "57:57",
+    "share_url": "https://share.transistor.fm/s/5bf0fc51",
+    "transcript_url": "https://share.transistor.fm/s/5bf0fc51/transcript",
+    "transcripts": [],
+    "formatted_summary": "In this episode I talk to designer, developer, and optimizer Matt Beischel. He runs his own agency Corvus CRO and we discuss automating parts of your CRO workflow so you can keep focusing on the fun parts of the job.",
+    "formatted_description": "<div>Guest: Matt Beischel URL: https://www.cro.cafe/guest/matt-beischel&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/5bf0fc51\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/5bf0fc51/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "In this episode I talk to designer, developer, and optimizer Matt Beischel. He runs his own agency Corvus CRO and we discuss automating parts of your CRO workflow so you can keep focusing on the fun parts of the job."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

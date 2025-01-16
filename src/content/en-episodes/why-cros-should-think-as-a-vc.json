@@ -1,0 +1,46 @@
+{
+  "id": "240971",
+  "type": "episode",
+  "attributes": {
+    "title": "Why CROs should think as a Venture Capitalist, with Sean Sheppard (GrowthX)",
+    "number": 7,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-04-19T22:00:00.000Z",
+    "duration": 2244,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://www.cro.cafe/podcast/why-cros-should-think-as-a-venture-capitalist",
+    "media_url": "https://media.transistor.fm/113f03cb/8ee604b2.mp3",
+    "image_url": "https://img.transistor.fm/KeZyB6wDaLDyOv73jnUY4Igmg2_sbcqZ2WBebtvMXc8/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83NzI5/ZTI3MThmNzY0N2U1/NjhmYTc5NzkwNjZl/YTcxZS5qcGVn.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "Sean is a serial entrepreneur, venture capitalist and co-founder of GrowthX and the GrowthX Academy. He has successfully grown dozens of early-stage companies across a wide variety of products and markets. He’s now committed to working on building startup ecosystems and developing the next generation of leaders for the innovation economy.\r\n\r\nSean and I discuss some Strategies for Navigating Through Tough Times and talk about how CROs like you and me can deal with companies asking us to optimize when there isn’t even a product/market fit.",
+    "description": "<div>Guest: Sean Sheppard URL: https://www.cro.cafe/guest/sean-sheppard&nbsp;</div>",
+    "slug": "why-cros-should-think-as-a-vc",
+    "created_at": "2020-04-19T15:40:11.137Z",
+    "updated_at": "2025-01-16T11:03:19.780Z",
+    "formatted_published_at": "April 19, 2020",
+    "duration_in_mmss": "37:24",
+    "share_url": "https://share.transistor.fm/s/113f03cb",
+    "transcript_url": "https://share.transistor.fm/s/113f03cb/transcript",
+    "transcripts": [],
+    "formatted_summary": "Sean is a serial entrepreneur, venture capitalist and co-founder of GrowthX and the GrowthX Academy. He has successfully grown dozens of early-stage companies across a wide variety of products and markets. He’s now committed to working on building startup ecosystems and developing the next generation of leaders for the innovation economy.\r\n\r\nSean and I discuss some Strategies for Navigating Through Tough Times and talk about how CROs like you and me can deal with companies asking us to optimize when there isn’t even a product/market fit.",
+    "formatted_description": "<div>Guest: Sean Sheppard URL: https://www.cro.cafe/guest/sean-sheppard&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/113f03cb\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/113f03cb/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "Sean is a serial entrepreneur, venture capitalist and co-founder of GrowthX and the GrowthX Academy. He has successfully grown dozens of early-stage companies across a wide variety of products and markets. He’s now committed to working on building startup ecosystems and developing the next generation of leaders for the innovation economy.\r\n\r\nSean and I discuss some Strategies for Navigating Through Tough Times and talk about how CROs like you and me can deal with companies asking us to optimize when there isn’t even a product/market fit."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

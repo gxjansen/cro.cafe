@@ -12,6 +12,8 @@ interface TransistorWebhookPayload {
       status: string;
       published_at: string;
       updated_at: string;
+      formatted_summary?: string;
+      guests?: Array<{ name: string; slug: string }>;
     };
   };
 }

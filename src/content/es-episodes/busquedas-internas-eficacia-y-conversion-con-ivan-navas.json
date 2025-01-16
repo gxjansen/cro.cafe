@@ -1,0 +1,51 @@
+{
+  "id": "522655",
+  "type": "episode",
+  "attributes": {
+    "title": "Búsquedas internas, eficacia y conversión, con Iván Navas",
+    "number": 10,
+    "season": 1,
+    "status": "published",
+    "published_at": "2021-04-20T22:00:00.000Z",
+    "duration": 3615,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://es.cro.cafe/podcast/busquedas-internas-eficacia-y-conversion",
+    "media_url": "https://media.transistor.fm/b4b6270b/17f494fe.mp3",
+    "image_url": "https://img.transistor.fm/ieopAfxbe7ysuwPvGTDD9IlzSRSVcF7PmZ-4ZVVsECw/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82OGI0/N2FhZDdhMDc3Mzg5/Y2Q2YThjNzZkYmZh/ODczNi5qcGc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "Iván Navas, CEO de Doofinder, y yo hablamos largo y tendido de la importancia de la calidad de los resultados de las búsquedas internas en las webs de un negocio digital de cara a conversión.",
+    "description": "Iván Navas, CEO de Doofinder, y yo hablamos largo y tendido de la importancia de la calidad de los resultados de las búsquedas internas en las webs de un negocio digital de cara a conversión.\n\n\n\n<!-- GUESTS START -->\nGuest: Iván Navas\nURL: https://es.cro.cafe/invitados/ivan-navas\n<!-- GUESTS END -->\n",
+    "slug": "busquedas-internas-eficacia-y-conversion-con-ivan-navas",
+    "created_at": "2021-04-20T19:50:47.716Z",
+    "updated_at": "2025-01-13T11:31:39.236Z",
+    "formatted_published_at": "April 20, 2021",
+    "duration_in_mmss": "60:15",
+    "share_url": "https://share.transistor.fm/s/b4b6270b",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Iván Navas, CEO de Doofinder, y yo hablamos largo y tendido de la importancia de la calidad de los resultados de las búsquedas internas en las webs de un negocio digital de cara a conversión.",
+    "formatted_description": "Iván Navas, CEO de Doofinder, y yo hablamos largo y tendido de la importancia de la calidad de los resultados de las búsquedas internas en las webs de un negocio digital de cara a conversión.\n\n\n\n<!-- GUESTS START -->\nGuest: Iván Navas\nURL: https://es.cro.cafe/invitados/ivan-navas\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/b4b6270b\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/b4b6270b/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [
+      {
+        "name": "Iván Navas",
+        "slug": "ivan-navas"
+      }
+    ],
+    "clean_description": "Iván Navas, CEO de Doofinder, y yo hablamos largo y tendido de la importancia de la calidad de los resultados de las búsquedas internas en las webs de un negocio digital de cara a conversión."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16111",
+        "type": "show"
+      }
+    }
+  }
+}

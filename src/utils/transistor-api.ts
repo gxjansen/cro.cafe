@@ -23,7 +23,8 @@ export class TransistorAPI {
     });
 
     if (!response.ok) {
-      throw new Error(`API error: ${response.status} ${response.statusText}`);
+      const errorText = await response.text();
+      throw new Error(`API error: ${response.status} ${response.statusText} - ${errorText}`);
     }
 
     return response.json();
@@ -40,7 +41,7 @@ export class TransistorAPI {
     while (hasMore) {
       try {
         const response = await this.fetch<TransistorResponse>(
-          `/episodes?show_id=${showId}&page=${page}&pagination[per]=25&status=published`
+          `/episodes?show_id=${showId}&pagination[page]=${page}&pagination[per]=25`
         );
 
         episodes.push(...response.data);

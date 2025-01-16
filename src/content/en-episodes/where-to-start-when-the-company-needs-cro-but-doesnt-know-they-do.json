@@ -1,0 +1,46 @@
+{
+  "id": "588624",
+  "type": "episode",
+  "attributes": {
+    "title": "Where to start when the company needs CRO, but doesn't know they do.",
+    "number": null,
+    "season": 3,
+    "status": "published",
+    "published_at": "2021-07-08T09:41:32.489Z",
+    "duration": 1696,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://www.cro.cafe/podcast/where-to-start-when-the-company-needs-cro-but-doesnt-know-they-do",
+    "media_url": "https://media.transistor.fm/2ee454d2/1d941b10.mp3",
+    "image_url": "https://img.transistor.fm/XfkrPYbwidyc-ulzdJyQpSoVlcPycopWAbKA2Jisn28/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS84MmYw/M2RhMjAwYTlhZjQ2/MGMyZmFkMTg5NmFk/YzlmNS5qcGc.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "In this episode we learn how to get companies into a CRO mindset so they are willing to buy CRO services/products and how to utilize user research in this fast changing environment.",
+    "description": "<div>Guest: Andrea Romano Velandia URL: https://www.cro.cafe/guest/andrea-romano-velandia&nbsp;</div>",
+    "slug": "where-to-start-when-the-company-needs-cro-but-doesnt-know-they-do",
+    "created_at": "2021-07-08T09:41:32.489Z",
+    "updated_at": "2025-01-16T11:12:48.445Z",
+    "formatted_published_at": "July 8, 2021",
+    "duration_in_mmss": "28:16",
+    "share_url": "https://share.transistor.fm/s/2ee454d2",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "In this episode we learn how to get companies into a CRO mindset so they are willing to buy CRO services/products and how to utilize user research in this fast changing environment.",
+    "formatted_description": "<div>Guest: Andrea Romano Velandia URL: https://www.cro.cafe/guest/andrea-romano-velandia&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/2ee454d2\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/2ee454d2/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "In this episode we learn how to get companies into a CRO mindset so they are willing to buy CRO services/products and how to utilize user research in this fast changing environment."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

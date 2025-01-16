@@ -1,0 +1,46 @@
+{
+  "id": "365837",
+  "type": "episode",
+  "attributes": {
+    "title": "Switching gears when the pandemic upends your traffic, with Dave Powell (TomTom)",
+    "number": 24,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-10-11T22:00:00.000Z",
+    "duration": 2036,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://www.cro.cafe/podcast/switching-gears-when-the-pandemic-upends-your-traffic",
+    "media_url": "https://media.transistor.fm/3a681b62/fc121cf6.mp3",
+    "image_url": "https://img.transistor.fm/K3De6WIi8jc-B7nsNe7cnel3S9E886Kpcc16Pj-A1tM/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kNjFi/OGE3NmY4OTQyZWE3/NjNkNjU3MmE1ZmEz/M2UxZi5qcGVn.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "We are going to learn how TomTom was able to quickly switch gears when the pandemic hit and lot of people all over the world suddenly stopped driving.",
+    "description": "<div>Guest: Dave Powell URL: https://www.cro.cafe/guest/dave-powell&nbsp;</div>",
+    "slug": "switching-gears-when-the-pandemic-upends-your-traffic",
+    "created_at": "2020-10-05T16:40:38.637Z",
+    "updated_at": "2025-01-16T11:09:16.549Z",
+    "formatted_published_at": "October 11, 2020",
+    "duration_in_mmss": "33:56",
+    "share_url": "https://share.transistor.fm/s/3a681b62",
+    "transcript_url": "https://share.transistor.fm/s/3a681b62/transcript",
+    "transcripts": [],
+    "formatted_summary": "We are going to learn how TomTom was able to quickly switch gears when the pandemic hit and lot of people all over the world suddenly stopped driving.",
+    "formatted_description": "<div>Guest: Dave Powell URL: https://www.cro.cafe/guest/dave-powell&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/3a681b62\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/3a681b62/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "We are going to learn how TomTom was able to quickly switch gears when the pandemic hit and lot of people all over the world suddenly stopped driving."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

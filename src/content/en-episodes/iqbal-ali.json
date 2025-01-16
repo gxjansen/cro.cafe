@@ -1,0 +1,46 @@
+{
+  "id": "557801",
+  "type": "episode",
+  "attributes": {
+    "title": "Bayesian expected loss: Telling a complete story with data",
+    "number": 11,
+    "season": 3,
+    "status": "published",
+    "published_at": "2021-06-21T08:30:55.078Z",
+    "duration": 2799,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://www.cro.cafe/podcast/bayesian-expected-loss-telling-a-complete-story-with-data",
+    "media_url": "https://media.transistor.fm/cb86ade1/88fe63b5.mp3",
+    "image_url": "https://img.transistor.fm/DG83DnMzP7__H0uMDBAxcyy7jXj-A_0gWeJoARClq6o/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mZjVj/OTRjZTk4NWZmYjBm/NjNlNTdhNmNjOGVi/OWFiNS5wbmc.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "We learn how about the problems with (frequentist) statistical significance and how we can tell a (more) complete and clear story with data on expected losses.",
+    "description": "<div>Guest: Iqbal Ali URL: https://www.cro.cafe/guest/iqbal-ali&nbsp;</div>",
+    "slug": "iqbal-ali",
+    "created_at": "2021-06-02T09:10:14.951Z",
+    "updated_at": "2025-01-16T11:13:07.625Z",
+    "formatted_published_at": "June 21, 2021",
+    "duration_in_mmss": "46:39",
+    "share_url": "https://share.transistor.fm/s/cb86ade1",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "We learn how about the problems with (frequentist) statistical significance and how we can tell a (more) complete and clear story with data on expected losses.",
+    "formatted_description": "<div>Guest: Iqbal Ali URL: https://www.cro.cafe/guest/iqbal-ali&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/cb86ade1\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/cb86ade1/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "We learn how about the problems with (frequentist) statistical significance and how we can tell a (more) complete and clear story with data on expected losses."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

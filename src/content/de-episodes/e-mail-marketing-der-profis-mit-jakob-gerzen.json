@@ -9,9 +9,7 @@
     "published_at": "2023-07-04T08:00:00.000Z",
     "duration": 1868,
     "explicit": false,
-    "keywords": [
-      ""
-    ],
+    "keywords": "",
     "alternate_url": "https://de.cro.cafe/podcast/e-mail-marketing-der-profis-mit-jakob-gerzen",
     "media_url": "https://media.transistor.fm/940e4364/5f9f9b75.mp3",
     "image_url": "https://img.transistor.fm/VePJV9_NaTfd88npx02NU00h0CQSC2Z2sgzL-7LE5To/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82MGQ4/Mjg5ZTY2MGFkOGMx/OTIyM2UyN2UxNTFm/NzA5Yi5wbmc.webp",
@@ -34,9 +32,13 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": "",
-    "local_image_url": "/images/episodes/de/e-mail-marketing-der-profis-mit-jakob-gerzen.webp",
-    "transistor_image_url": "https://img.transistor.fm/VePJV9_NaTfd88npx02NU00h0CQSC2Z2sgzL-7LE5To/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82MGQ4/Mjg5ZTY2MGFkOGMx/OTIyM2UyN2UxNTFm/NzA5Yi5wbmc.webp"
+    "guests": [
+      {
+        "name": "Jakob Gerzen",
+        "slug": "jakob-gerzen"
+      }
+    ],
+    "clean_description": "Nach wie vor ist E-Mail Marketing einer der wichtigsten Kommunikationskanäle von Unternehmen zum Kunden. Doch gibt es große Unterschiede in der Umsetzung. Jakob Gerzen hat 2019 seine eigene Agentur More Conversions gegründet. Wie er es immer wieder schafft, erfolgreiches E-Mail-Marketing von Kunden wie Snocks, Rosental oder live fresh zu betreiben, gibt er in der neusten Folge bekannt. Außerdem verrät er seine Geheimtipps und was man bei E-Mail Kampagnen unbedingt beachten sollte.Buchempfehlungen von Jakob:Conversion Code, Chris SmithDon't make me think, Steve KingKill your Conversion Killers, Joris Bryon\n\n\n\n\nGuest: Jakob Gerzen\nURL: https://de.cro.cafe/guest/jakob-gerzen"
   },
   "relationships": {
     "show": {

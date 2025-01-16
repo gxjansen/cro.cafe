@@ -1,0 +1,46 @@
+{
+  "id": "397761",
+  "type": "episode",
+  "attributes": {
+    "title": "Online Invloed, met Joris Groen en Bas Wouters",
+    "number": 15,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-06-07T22:00:00.000Z",
+    "duration": 2845,
+    "explicit": false,
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
+    "alternate_url": "https://nl.cro.cafe/podcast/online-invloed",
+    "media_url": "https://media.transistor.fm/b00bd3b0/99c66c58.mp3",
+    "image_url": "https://img.transistor.fm/PtOQQeuZd3eBs2VP4YaqAanDfR1kYiCrSPZKoLMJBGQ/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kZTIx/OTUwNmMxOTVhZGQw/ZmFjZTcwOGMwOGJj/NWQxYy5qcGVn.webp",
+    "video_url": "",
+    "author": "Guido X Jansen",
+    "summary": "Joris Groen is psycholoog en user experience designer, gespecialiseerd in online overtuigen. Bij booking.com houdt hij zich bezig met conversie via conversational interfaces en je kent hem wellicht nog van een vorige podcast aflevering. Joris heeft een boek geschreven samen met Bas Wouters en Bas is overtuigingsexpert en oprichter van Onlineinvloed.nl. Als enige ter wereld mag hij zich Cialdini Method Certified Trainer én BJ Fogg Certified Tiny Habits coach noemen. \r\nHet boek dat de heren hebben geschreven heet Online Invloed en daar gaan we het vandaag dan ook uitgebreid over hebben!",
+    "description": "<div>Guest 1: Bas Wouters URL: https://nl.cro.cafe/gast/bas-wouters | Guest 2: Joris Groen URL: https://nl.cro.cafe/gast/joris-groen&nbsp;</div>",
+    "slug": "nl-online-invloed-met-joris-groen-en-bas-wouters",
+    "created_at": "2020-11-10T20:47:26.862Z",
+    "updated_at": "2025-01-13T15:47:22.785Z",
+    "formatted_published_at": "June 7, 2020",
+    "duration_in_mmss": "47:25",
+    "share_url": "https://share.transistor.fm/s/b00bd3b0",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Joris Groen is psycholoog en user experience designer, gespecialiseerd in online overtuigen. Bij booking.com houdt hij zich bezig met conversie via conversational interfaces en je kent hem wellicht nog van een vorige podcast aflevering. Joris heeft een boek geschreven samen met Bas Wouters en Bas is overtuigingsexpert en oprichter van Onlineinvloed.nl. Als enige ter wereld mag hij zich Cialdini Method Certified Trainer én BJ Fogg Certified Tiny Habits coach noemen. \r\nHet boek dat de heren hebben geschreven heet Online Invloed en daar gaan we het vandaag dan ook uitgebreid over hebben!",
+    "formatted_description": "<div>Guest 1: Bas Wouters URL: https://nl.cro.cafe/gast/bas-wouters | Guest 2: Joris Groen URL: https://nl.cro.cafe/gast/joris-groen&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/b00bd3b0\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/b00bd3b0/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "Joris Groen is psycholoog en user experience designer, gespecialiseerd in online overtuigen. Bij booking.com houdt hij zich bezig met conversie via conversational interfaces en je kent hem wellicht nog van een vorige podcast aflevering. Joris heeft een boek geschreven samen met Bas Wouters en Bas is overtuigingsexpert en oprichter van Onlineinvloed.nl. Als enige ter wereld mag hij zich Cialdini Method Certified Trainer én BJ Fogg Certified Tiny Habits coach noemen. \r\nHet boek dat de heren hebben geschreven heet Online Invloed en daar gaan we het vandaag dan ook uitgebreid over hebben!"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

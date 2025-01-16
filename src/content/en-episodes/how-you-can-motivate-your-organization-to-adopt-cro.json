@@ -1,0 +1,46 @@
+{
+  "id": "297729",
+  "type": "episode",
+  "attributes": {
+    "title": "How you can motivate your organization to adopt CRO, with Ruben de Boer (Online Dialogue)",
+    "number": 15,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-07-19T22:00:00.000Z",
+    "duration": 2411,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://www.cro.cafe/podcast/how-you-can-motivate-your-organization-to-adopt-cro",
+    "media_url": "https://media.transistor.fm/c780d8e1/8a2f930a.mp3",
+    "image_url": "https://img.transistor.fm/IKlfGGy3WRp5eQsjsMBlvk1u5KVGbZEb3eIc36JDLZk/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80MTg3/ZmY3OTNhOThmNDUz/OTk3M2VhMjg2NWMx/MGYzZi5qcGVn.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "Together with Ruben de Boer I explore the ways you can motivate your team and organization to adopt CRO, whether you're just starting out or already have an ongoing CRO program.",
+    "description": "<div>Guest: Ruben de Boer URL: https://www.cro.cafe/guest/ruben-de-boer&nbsp;</div>",
+    "slug": "how-you-can-motivate-your-organization-to-adopt-cro",
+    "created_at": "2020-07-17T12:44:14.330Z",
+    "updated_at": "2025-01-16T11:12:09.220Z",
+    "formatted_published_at": "July 19, 2020",
+    "duration_in_mmss": "40:11",
+    "share_url": "https://share.transistor.fm/s/c780d8e1",
+    "transcript_url": "https://share.transistor.fm/s/c780d8e1/transcript",
+    "transcripts": [],
+    "formatted_summary": "Together with Ruben de Boer I explore the ways you can motivate your team and organization to adopt CRO, whether you're just starting out or already have an ongoing CRO program.",
+    "formatted_description": "<div>Guest: Ruben de Boer URL: https://www.cro.cafe/guest/ruben-de-boer&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/c780d8e1\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/c780d8e1/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "Together with Ruben de Boer I explore the ways you can motivate your team and organization to adopt CRO, whether you're just starting out or already have an ongoing CRO program."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

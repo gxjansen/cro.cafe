@@ -1,0 +1,46 @@
+{
+  "id": "397760",
+  "type": "episode",
+  "attributes": {
+    "title": "CRO.CAFE podcast live met Tim Zuidgeest (Unravel)",
+    "number": null,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-06-03T12:00:00.000Z",
+    "duration": 3624,
+    "explicit": false,
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
+    "alternate_url": "https://nl.cro.cafe/podcast/neuromarketing-fundamentals-livestream",
+    "media_url": "https://media.transistor.fm/32ca9a1d/6d63290a.mp3",
+    "image_url": "https://img.transistor.fm/M9QVvb9lRRYkEgE5AgTF6fiAyhHobHbUkPEmaK4LnPk/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzM5Nzc2MC8x/NjA1MDQxMjQ0LWFy/dHdvcmsuanBn.webp",
+    "video_url": "https://www.youtube.com/watch?v=nkmTT-OZO9Y",
+    "author": "Guido X Jansen",
+    "summary": "Bonus livestream opname waarin ik samen met Tim Zuidgeest praat ik over het doen van experimenteren met je eigen offline leven én gaan we het hebben over enkele Neuromarketing fundamentals.",
+    "description": "<div>Guest: Tim Zuidgeest | URL: https://nl.cro.cafe/gast/tim-zuidgeest</div>",
+    "slug": "nl-cro-cafe-podcast-live-met-tim-zuidgeest-unravel",
+    "created_at": "2020-11-10T20:47:24.615Z",
+    "updated_at": "2025-01-16T10:35:11.601Z",
+    "formatted_published_at": "June 3, 2020",
+    "duration_in_mmss": "60:24",
+    "share_url": "https://share.transistor.fm/s/32ca9a1d",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Bonus livestream opname waarin ik samen met Tim Zuidgeest praat ik over het doen van experimenteren met je eigen offline leven én gaan we het hebben over enkele Neuromarketing fundamentals.",
+    "formatted_description": "<div>Guest: Tim Zuidgeest | URL: https://nl.cro.cafe/gast/tim-zuidgeest</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/32ca9a1d\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/32ca9a1d/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "Bonus livestream opname waarin ik samen met Tim Zuidgeest praat ik over het doen van experimenteren met je eigen offline leven én gaan we het hebben over enkele Neuromarketing fundamentals."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

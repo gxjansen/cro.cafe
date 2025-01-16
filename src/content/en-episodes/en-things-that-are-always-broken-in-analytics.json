@@ -1,0 +1,46 @@
+{
+  "id": "299663",
+  "type": "episode",
+  "attributes": {
+    "title": "Things that are always broken in Analytics, with Arnout Hellemans & Charles Meaden",
+    "number": null,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-07-21T22:00:00.000Z",
+    "duration": 1815,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://www.cro.cafe/podcast/things-that-are-always-broken-in-analytics",
+    "media_url": "https://media.transistor.fm/0c43f3d1/5e35cdab.mp3",
+    "image_url": "https://img.transistor.fm/tHBw37Oc-znkxdL3om2-mt8hIbKz2B-uymeF0Uiadxg/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83MWQ5/ZGRhMjQ0NTdiMzI5/OGU4OTdlYzhhNThm/YTA0Yy5qcGVn.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "This is a bonus episode recorded live with audience pre-covid-19 at the Conversion Hotel conference in November 2019 on the island of Texel in The Netherlands.",
+    "description": "<div>Guest 1: Charles Meaden URL: https://www.cro.cafe/guest/charles-meaden | Guest 2: Arnout Hellemans URL: https://www.cro.cafe/guest/arnout-hellemans&nbsp;</div>",
+    "slug": "en-things-that-are-always-broken-in-analytics",
+    "created_at": "2020-07-20T16:18:05.427Z",
+    "updated_at": "2025-01-16T11:11:39.101Z",
+    "formatted_published_at": "July 21, 2020",
+    "duration_in_mmss": "30:15",
+    "share_url": "https://share.transistor.fm/s/0c43f3d1",
+    "transcript_url": "https://share.transistor.fm/s/0c43f3d1/transcript",
+    "transcripts": [],
+    "formatted_summary": "This is a bonus episode recorded live with audience pre-covid-19 at the Conversion Hotel conference in November 2019 on the island of Texel in The Netherlands.",
+    "formatted_description": "<div>Guest 1: Charles Meaden URL: https://www.cro.cafe/guest/charles-meaden | Guest 2: Arnout Hellemans URL: https://www.cro.cafe/guest/arnout-hellemans&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/0c43f3d1\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/0c43f3d1/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "This is a bonus episode recorded live with audience pre-covid-19 at the Conversion Hotel conference in November 2019 on the island of Texel in The Netherlands."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

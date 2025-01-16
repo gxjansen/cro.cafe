@@ -9,9 +9,7 @@
     "published_at": "2024-01-23T08:14:35.193Z",
     "duration": 2313,
     "explicit": false,
-    "keywords": [
-      ""
-    ],
+    "keywords": "",
     "alternate_url": "https://de.cro.cafe/podcast/testing-strategie-und-cro-insights-von-hubspot---mit-philipp-becker",
     "media_url": "https://media.transistor.fm/07b3a23d/b29b8ec3.mp3",
     "image_url": "https://img.transistor.fm/BTav7D41pfmZbaM4pZ8pAw3lu6CaHa4d0XLk3aAWWEU/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8xMzhl/YzJiNzk1ZGEzMTY1/MjIxMjMwZTFhNmUw/YmQyOS5wbmc.webp",
@@ -34,9 +32,13 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": "",
-    "local_image_url": "/images/episodes/de/testing-strategie-und-cro-insights-von-hubspot-mit-philipp-becker.webp",
-    "transistor_image_url": "https://img.transistor.fm/BTav7D41pfmZbaM4pZ8pAw3lu6CaHa4d0XLk3aAWWEU/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8xMzhl/YzJiNzk1ZGEzMTY1/MjIxMjMwZTFhNmUw/YmQyOS5wbmc.webp"
+    "guests": [
+      {
+        "name": "Philipp Becker",
+        "slug": "philipp-becker"
+      }
+    ],
+    "clean_description": "In dieser Folge sprechen wir über Conversion Rate Optimierung im B2B-Umfeld. Philipp Becker, Senior CRO Marketing Manager bei HubSpot, erzählt, was man bei Experimenten auf Content-Seiten wie Blog oder Landing Pages beachten sollte. Zudem teilt er Best Practices und verrät, durch welche Tests sie es geschafft haben, ihre Conversion Rate deutlich zu steigern. Erfahrt, welche KI-Features Hubspot bereits in der eigenen Software integriert hat.Viel Spaß beim Hören. 🎧Philipp's Buchtipps:Daniel Kahneman “Thinking fast and Slow\"Ron Kohavi “Trustworthy Online Controlled Experiments”Dale Carnegie “Wie man Freunde gewinnt”Philipp's Podcast-Tipps:Hubspot Listen & GrowHubSpot Hangout\n\n\n\n\nGuest: Philipp Becker\nURL: https://de.cro.cafe/guest/philipp-becker"
   },
   "relationships": {
     "show": {

@@ -1,0 +1,46 @@
+{
+  "id": "397757",
+  "type": "episode",
+  "attributes": {
+    "title": "Persuasion software tool gebaseerd op AI, met Tjerk van der Veen",
+    "number": 14,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-05-17T22:00:00.000Z",
+    "duration": 2848,
+    "explicit": false,
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
+    "alternate_url": "https://nl.cro.cafe/podcast/persuasion-software-tool-gebaseerd-op-ai",
+    "media_url": "https://media.transistor.fm/341c3543/8c9dddc1.mp3",
+    "image_url": "https://img.transistor.fm/gLho2dc2caD8LnCmCqDfZuSa1_6JNXTkKDXm2g8Hajk/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8zZjc0/OTNkNjU5OTEzNDlm/YzM2N2M0ZTcyNzA4/OTkyMC5qcGVn.webp",
+    "video_url": "",
+    "author": "Guido X Jansen",
+    "summary": "Tjerk van der Veen is een data gedreven Freelance Ecommerce Manager voor Digitale Transformatie en werkt nu zo’n 15 jaar voor A merken en MKB in met name telecom, travel automotive en ecommerce. We gaan het vandaag hebben over het automatiseren van je persuasion door middel van AI. Ik ben benieuwd!",
+    "description": "<div>Guest: Tjerk van der Veen URL: https://nl.cro.cafe/gast/tjerk-van-der-veen&nbsp;</div>",
+    "slug": "nl-persuasion-software-tool-gebaseerd-op-ai-met-tjerk-van-der-veen",
+    "created_at": "2020-11-10T20:47:18.156Z",
+    "updated_at": "2025-01-13T15:47:17.850Z",
+    "formatted_published_at": "May 17, 2020",
+    "duration_in_mmss": "47:28",
+    "share_url": "https://share.transistor.fm/s/341c3543",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Tjerk van der Veen is een data gedreven Freelance Ecommerce Manager voor Digitale Transformatie en werkt nu zo’n 15 jaar voor A merken en MKB in met name telecom, travel automotive en ecommerce. We gaan het vandaag hebben over het automatiseren van je persuasion door middel van AI. Ik ben benieuwd!",
+    "formatted_description": "<div>Guest: Tjerk van der Veen URL: https://nl.cro.cafe/gast/tjerk-van-der-veen&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/341c3543\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/341c3543/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "Tjerk van der Veen is een data gedreven Freelance Ecommerce Manager voor Digitale Transformatie en werkt nu zo’n 15 jaar voor A merken en MKB in met name telecom, travel automotive en ecommerce. We gaan het vandaag hebben over het automatiseren van je persuasion door middel van AI. Ik ben benieuwd!"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

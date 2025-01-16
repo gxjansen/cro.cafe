@@ -1,0 +1,46 @@
+{
+  "id": "267562",
+  "type": "episode",
+  "attributes": {
+    "title": "Holacracy: decentralized management and organizational governance, with Morgan Legge (Convert.com)",
+    "number": 12,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-06-02T06:00:00.000Z",
+    "duration": 4067,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://www.cro.cafe/podcast/holacracy-decentralized-management-and-organizational-governance",
+    "media_url": "https://media.transistor.fm/225e19f3/25a3ca3f.mp3",
+    "image_url": "https://img.transistor.fm/ZvNMqdwoyJJYjLdxHdOHjVKGGpjyw1QQuAGpopeemes/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kNWU1/OTVhYjk3NjBiMTEy/MGQ1MDhkMGRjMzM2/MDEzYi5qcGVn.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "In this episode I talk with Morgan Legge, Director of Operations & Certified Partner Outreach at our long time sponsor Convert.com. Today is not necessarily about CRO specifically, but rather about how to work together within your company. Morgan is going to tell us about the decentralized management model called Holacracy which I personally find fascinating and we end our talk talking about how this also led to Convert applying something that is called Conscious Business by for example eliminating bias in hiring and becoming carbon positive.",
+    "description": "<div>Guest: Morgan Legge URL: https://www.cro.cafe/guest/morgan-legge&nbsp;</div>",
+    "slug": "holacracy-decentralized-management-and-organizational-governance",
+    "created_at": "2020-05-30T19:08:32.375Z",
+    "updated_at": "2025-01-16T11:02:37.036Z",
+    "formatted_published_at": "June 2, 2020",
+    "duration_in_mmss": "67:47",
+    "share_url": "https://share.transistor.fm/s/225e19f3",
+    "transcript_url": "https://share.transistor.fm/s/225e19f3/transcript",
+    "transcripts": [],
+    "formatted_summary": "In this episode I talk with Morgan Legge, Director of Operations & Certified Partner Outreach at our long time sponsor Convert.com. Today is not necessarily about CRO specifically, but rather about how to work together within your company. Morgan is going to tell us about the decentralized management model called Holacracy which I personally find fascinating and we end our talk talking about how this also led to Convert applying something that is called Conscious Business by for example eliminating bias in hiring and becoming carbon positive.",
+    "formatted_description": "<div>Guest: Morgan Legge URL: https://www.cro.cafe/guest/morgan-legge&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/225e19f3\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/225e19f3/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "In this episode I talk with Morgan Legge, Director of Operations & Certified Partner Outreach at our long time sponsor Convert.com. Today is not necessarily about CRO specifically, but rather about how to work together within your company. Morgan is going to tell us about the decentralized management model called Holacracy which I personally find fascinating and we end our talk talking about how this also led to Convert applying something that is called Conscious Business by for example eliminating bias in hiring and becoming carbon positive."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "289746",
+  "type": "episode",
+  "attributes": {
+    "title": "The Art and Science of Converting Visitors into Customers, with Khalid Saleh (Invesp)",
+    "number": 14,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-07-05T22:00:00.000Z",
+    "duration": 2732,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://www.cro.cafe/podcast/the-art-and-science-of-converting-visitors-into-customers",
+    "media_url": "https://media.transistor.fm/36a54bd8/8914845d.mp3",
+    "image_url": "https://img.transistor.fm/MUj5SKaW053Evmd7_eR7iFPx8sRVuYYaFHi4V-GojEE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8xMjNh/OTlhOThjMTllMTUy/MTRiMzE1ODcxZmM5/NzMxYi5qcGVn.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "Khalid Saleh is CEO at Invesp, one of the first companies in North America dedicated to CRO that he founded back in 2006. He's also the co-author of an Amazon.com's bestselling book: \"Conversion Optimization: The Art and Science of Converting Visitors into Customers, a book he published already 10 years ago.\r\nKhalid brings a ton of experience to the table and I’m glad to be talking to him today about the seemingly simple task of finding the things that are broken on your website.",
+    "description": "<div>Guest: Khalid Saleh URL: https://www.cro.cafe/guest/khalid-saleh&nbsp;</div>",
+    "slug": "the-art-and-science-of-converting-visitors-into-customers",
+    "created_at": "2020-07-05T19:25:27.696Z",
+    "updated_at": "2025-01-16T11:12:17.267Z",
+    "formatted_published_at": "July 5, 2020",
+    "duration_in_mmss": "45:32",
+    "share_url": "https://share.transistor.fm/s/36a54bd8",
+    "transcript_url": "https://share.transistor.fm/s/36a54bd8/transcript",
+    "transcripts": [],
+    "formatted_summary": "Khalid Saleh is CEO at Invesp, one of the first companies in North America dedicated to CRO that he founded back in 2006. He's also the co-author of an Amazon.com's bestselling book: \"Conversion Optimization: The Art and Science of Converting Visitors into Customers, a book he published already 10 years ago.\r\nKhalid brings a ton of experience to the table and I’m glad to be talking to him today about the seemingly simple task of finding the things that are broken on your website.",
+    "formatted_description": "<div>Guest: Khalid Saleh URL: https://www.cro.cafe/guest/khalid-saleh&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/36a54bd8\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/36a54bd8/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "Khalid Saleh is CEO at Invesp, one of the first companies in North America dedicated to CRO that he founded back in 2006. He's also the co-author of an Amazon.com's bestselling book: \"Conversion Optimization: The Art and Science of Converting Visitors into Customers, a book he published already 10 years ago.\r\nKhalid brings a ton of experience to the table and I’m glad to be talking to him today about the seemingly simple task of finding the things that are broken on your website."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

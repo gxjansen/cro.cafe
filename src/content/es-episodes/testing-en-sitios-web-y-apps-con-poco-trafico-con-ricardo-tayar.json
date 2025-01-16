@@ -1,0 +1,51 @@
+{
+  "id": "720946",
+  "type": "episode",
+  "attributes": {
+    "title": "Testing en sitios web y apps con poco tráfico, con Ricardo Tayar",
+    "number": null,
+    "season": 1,
+    "status": "published",
+    "published_at": "2021-11-10T05:51:24.645Z",
+    "duration": 1531,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://es.cro.cafe/podcast/testing-y-experimentacion-en-sitios-web-y-apps-con-poco-trafico",
+    "media_url": "https://media.transistor.fm/836eca23/8b232194.mp3",
+    "image_url": "https://img.transistor.fm/8QenlBQ1DoArwH-y05zaB3EcmacrqmmQt6zf5FKhFr4/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS84Yzlk/YmUzNTYxYjZiZDY2/N2FiMWZiMzg3ZDg1/MmZmYy5qcGc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "¿Es recomendable realizar a/b test y experimentos en sitios web con poco tráfico?, ¿debemos?, ¿qué podemos hacer como alternativa?",
+    "description": "¿Es recomendable realizar a/b test y experimentos en sitios web con poco tráfico?, ¿debemos?, ¿qué podemos hacer como alternativa?\n\n\n\n<!-- GUESTS START -->\nGuest: Ricardo Tayar\nURL: https://es.cro.cafe/invitados/ricardo-tayar-lopez\n<!-- GUESTS END -->\n",
+    "slug": "testing-en-sitios-web-y-apps-con-poco-trafico-con-ricardo-tayar",
+    "created_at": "2021-11-10T05:51:24.646Z",
+    "updated_at": "2025-01-13T11:36:39.381Z",
+    "formatted_published_at": "November 10, 2021",
+    "duration_in_mmss": "25:31",
+    "share_url": "https://share.transistor.fm/s/836eca23",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "¿Es recomendable realizar a/b test y experimentos en sitios web con poco tráfico?, ¿debemos?, ¿qué podemos hacer como alternativa?",
+    "formatted_description": "¿Es recomendable realizar a/b test y experimentos en sitios web con poco tráfico?, ¿debemos?, ¿qué podemos hacer como alternativa?\n\n\n\n<!-- GUESTS START -->\nGuest: Ricardo Tayar\nURL: https://es.cro.cafe/invitados/ricardo-tayar-lopez\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/836eca23\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/836eca23/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "guests": [
+      {
+        "name": "Ricardo Tayar",
+        "slug": "ricardo-tayar-lopez"
+      }
+    ],
+    "clean_description": "¿Es recomendable realizar a/b test y experimentos en sitios web con poco tráfico?, ¿debemos?, ¿qué podemos hacer como alternativa?"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16111",
+        "type": "show"
+      }
+    }
+  }
+}

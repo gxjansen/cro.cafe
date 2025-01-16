@@ -9,9 +9,7 @@
     "published_at": "2024-03-05T07:00:00.000Z",
     "duration": 1730,
     "explicit": false,
-    "keywords": [
-      ""
-    ],
+    "keywords": "",
     "alternate_url": "https://de.cro.cafe/podcast/cro-uplift-durch-testing-bei-smarketer-mit-jonathan-heinze",
     "media_url": "https://media.transistor.fm/a6a60956/517fbcd0.mp3",
     "image_url": "https://img.transistor.fm/n91uQzTeIAhOFEbFz6cyqjV5zk9oroxo3wCAQvfUlEg/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83Mzgw/MzllMGY1ZDZhN2Fj/YjJlYTFjNmIzMDE0/YTg4Mi5wbmc.webp",
@@ -34,9 +32,13 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": "",
-    "local_image_url": "/images/episodes/de/cro-uplift-durch-testing-bei-smarketer-mit-jonathan-heinze.webp",
-    "transistor_image_url": "https://img.transistor.fm/n91uQzTeIAhOFEbFz6cyqjV5zk9oroxo3wCAQvfUlEg/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83Mzgw/MzllMGY1ZDZhN2Fj/YjJlYTFjNmIzMDE0/YTg4Mi5wbmc.webp"
+    "guests": [
+      {
+        "name": "Jonathan Heinze",
+        "slug": "jonathan-heinze"
+      }
+    ],
+    "clean_description": "Es gibt einige Methoden um die Conversion Rate deines Online-Shops nachhaltig zu steigern und gleichzeitig unnötige Kosten einzusparen. Jonathan Heinze, Conversion Optimization Manager bei Smarketer erzählt in dieser Folge, was die grundlegenden Prinzipien sind, um die Conversion Rate zu steigern, was es bei Google Ads zu beachten gibt, und ob man CRO und Google Ads kombinieren sollte. Außerdem teilt er seine Best Practices und seine liebsten Tools für CRO.Seine Empfehlungen:Website Clientboost.comConversion Snacks von ContentsquareBuch: Why We Buy: The Science of Shopping von Paco Underhill\n\n\n\n\nGuest: Jonathan Heinze\nURL: https://de.cro.cafe/guest/jonathan-heinze"
   },
   "relationships": {
     "show": {

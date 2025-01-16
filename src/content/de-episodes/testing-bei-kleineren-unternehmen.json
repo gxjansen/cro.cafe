@@ -1,0 +1,51 @@
+{
+  "id": "1549595",
+  "type": "episode",
+  "attributes": {
+    "title": "Testing bei kleineren Unternehmen mit Gunnar Asmussen",
+    "number": 29,
+    "season": 1,
+    "status": "published",
+    "published_at": "2023-10-17T14:52:29.620Z",
+    "duration": 2362,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://de.cro.cafe/podcast/testing-bei-kleineren-unternehmen-mit-gunnar-asmussen",
+    "media_url": "https://media.transistor.fm/712dfa01/c54201fa.mp3",
+    "image_url": "https://img.transistor.fm/4_mS0rlf1XA_vBCeiaIFVuY4EZAXuXDJQJxn6XrVpG0/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8wZWMy/Mzc1M2M4MDMwYmQ2/NzM4MjY4MzgyZjFk/NWM1My5wbmc.webp",
+    "video_url": "",
+    "author": "",
+    "summary": null,
+    "description": "Gunnar Asmussen, CMO &amp; CTO von <a href=\"https://www.kurz-mal-weg.de/\">kurz-mal-weg,de</a>, spricht in dieser Folge über seinen Wechsel in die Reisebranche und seine Best Practices im Testing. Außerdem klärt er auf, ob es bei kleineren Unternehmen mit wenig Traffic Sinn macht, A/B-Tests zur Optimierung zu nutzen und worauf man dabei achten sollte.Viel Spaß beim Hören!<strong>Gunnar's Tipps zum Thema CRO:</strong><ul><li>LinkedIn: Samuel Hess und Jakub Linowski</li><li><a href=\"http://Goodui.org\">Goodui.org</a></li><li><a href=\"http://guessthetest.com\">guessthetest.com</a></li></ul>\n\n\n\n<!-- GUESTS START -->\nGuest: Gunnar Asmussen\nURL: https://de.cro.cafe/guest/gunnar-asmussen\n<!-- GUESTS END -->\n",
+    "slug": "testing-bei-kleineren-unternehmen",
+    "created_at": "2023-10-17T09:55:33.722Z",
+    "updated_at": "2025-01-13T00:27:55.512Z",
+    "formatted_published_at": "October 17, 2023",
+    "duration_in_mmss": "39:22",
+    "share_url": "https://share.transistor.fm/s/712dfa01",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Gunnar Asmussen, CMO & CTO von kurz-mal-weg,de, spricht in dieser Folge über seinen Wechsel in die Reisebranche und seine Best Practices im Testing. Außerdem klärt er auf, ob es bei kleineren Unternehmen mit wenig Traffic Sinn macht, A/B-Tests zur Optimierung zu nutzen und worauf man dabei achten sollte.Viel Spaß beim Hören!Gunnar's Tipps zum Thema CRO:LinkedIn: Samuel Hess und Jakub LinowskiGoodui.orgguessthetest.com\n\n\n\n\nGuest: Gunnar Asmussen\nURL: https://de.cro.cafe/guest/gunnar-asmussen",
+    "formatted_description": "Gunnar Asmussen, CMO &amp; CTO von <a href=\"https://www.kurz-mal-weg.de/\">kurz-mal-weg,de</a>, spricht in dieser Folge über seinen Wechsel in die Reisebranche und seine Best Practices im Testing. Außerdem klärt er auf, ob es bei kleineren Unternehmen mit wenig Traffic Sinn macht, A/B-Tests zur Optimierung zu nutzen und worauf man dabei achten sollte.Viel Spaß beim Hören!<strong>Gunnar's Tipps zum Thema CRO:</strong><ul><li>LinkedIn: Samuel Hess und Jakub Linowski</li><li><a href=\"http://Goodui.org\">Goodui.org</a></li><li><a href=\"http://guessthetest.com\">guessthetest.com</a></li></ul>\n\n\n\n<!-- GUESTS START -->\nGuest: Gunnar Asmussen\nURL: https://de.cro.cafe/guest/gunnar-asmussen\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/712dfa01\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/712dfa01/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [
+      {
+        "name": "Gunnar Asmussen",
+        "slug": "gunnar-asmussen"
+      }
+    ],
+    "clean_description": "Gunnar Asmussen, CMO & CTO von kurz-mal-weg,de, spricht in dieser Folge über seinen Wechsel in die Reisebranche und seine Best Practices im Testing. Außerdem klärt er auf, ob es bei kleineren Unternehmen mit wenig Traffic Sinn macht, A/B-Tests zur Optimierung zu nutzen und worauf man dabei achten sollte.Viel Spaß beim Hören!Gunnar's Tipps zum Thema CRO:LinkedIn: Samuel Hess und Jakub LinowskiGoodui.orgguessthetest.com\n\n\n\n\nGuest: Gunnar Asmussen\nURL: https://de.cro.cafe/guest/gunnar-asmussen"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "28592",
+        "type": "show"
+      }
+    }
+  }
+}

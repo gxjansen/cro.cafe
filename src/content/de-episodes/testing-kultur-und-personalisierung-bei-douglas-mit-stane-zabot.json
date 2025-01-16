@@ -9,9 +9,7 @@
     "published_at": "2023-08-02T16:45:04.819Z",
     "duration": 2343,
     "explicit": false,
-    "keywords": [
-      ""
-    ],
+    "keywords": "",
     "alternate_url": "https://de.cro.cafe/podcast/testing-kultur-und-personalisierung-bei-douglas-mit-stane-zabot",
     "media_url": "https://media.transistor.fm/3593d487/0ba93241.mp3",
     "image_url": "https://img.transistor.fm/KFnYYFkqrcpirCCOfoGE1ehl0iVIuq8JMkiEWxTq_1M/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iMGE3/ZTczNzJiMTNiOTA2/NjQ3ZGEyNzY5YzU2/ZThiMC5wbmc.webp",
@@ -34,9 +32,13 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": "",
-    "local_image_url": "/images/episodes/de/testing-kultur-und-personalisierung-bei-douglas-mit-stane-zabot.webp",
-    "transistor_image_url": "https://img.transistor.fm/KFnYYFkqrcpirCCOfoGE1ehl0iVIuq8JMkiEWxTq_1M/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iMGE3/ZTczNzJiMTNiOTA2/NjQ3ZGEyNzY5YzU2/ZThiMC5wbmc.webp"
+    "guests": [
+      {
+        "name": "Stane Zabot",
+        "slug": "stane-zabot"
+      }
+    ],
+    "clean_description": "Gerade bei großen Unternehmen wie Douglas, die neben dem Einzelhandel auch Online eine starke Präsenz haben, lohnt sich A/B Testing besonders. Denn aufgrund des hohen Traffics kann unter optimalen Bedingungen getestet werden. Stane Zabot, UX Manager bei Douglas, ist verantwortlich für das A/B-Testing und Personalisierung bei Douglas. Er spricht darüber, wie der Testingprozess bei ihnen aussieht und berichtet über Zukunftsaussichten.Viel Spaß beim Hören 🎧Stane's Buch & Podcast TippsYou should test that - Chris GowardLess Ego More Data von Samuel HessOMR Education\n\n\n\n\nGuest: Stane Zabot\nURL: https://de.cro.cafe/guest/stane-zabot"
   },
   "relationships": {
     "show": {

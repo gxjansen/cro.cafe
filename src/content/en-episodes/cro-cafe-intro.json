@@ -1,0 +1,46 @@
+{
+  "id": "110367",
+  "type": "episode",
+  "attributes": {
+    "title": "Welcome new CRO.CAFE listener!",
+    "number": null,
+    "season": 1,
+    "status": "published",
+    "published_at": "2018-11-08T15:09:00.000Z",
+    "duration": 152,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": null,
+    "media_url": "https://media.transistor.fm/67cb8eb4/f18c29bc.mp3",
+    "image_url": "https://img.transistor.fm/hKJ1EHcUXdkWLm_P9w-0vf4IiSFk_5WL2KrHn6rS0jE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzExMDM2Ny8x/NjAxNTg4NjQwLWFy/dHdvcmsuanBn.webp",
+    "video_url": null,
+    "author": "Guido Jansen",
+    "summary": "Teaser episode with info for new listeners!",
+    "description": "<div>Teaser episode with info for new listeners!</div>",
+    "slug": "cro-cafe-intro",
+    "created_at": "2019-10-15T13:18:54.137Z",
+    "updated_at": "2022-04-05T14:59:00.464Z",
+    "formatted_published_at": "November 8, 2018",
+    "duration_in_mmss": "02:32",
+    "share_url": "https://share.transistor.fm/s/67cb8eb4",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Teaser episode with info for new listeners!",
+    "formatted_description": "<div>Teaser episode with info for new listeners!</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/67cb8eb4\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/67cb8eb4/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "trailer",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "Teaser episode with info for new listeners!"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

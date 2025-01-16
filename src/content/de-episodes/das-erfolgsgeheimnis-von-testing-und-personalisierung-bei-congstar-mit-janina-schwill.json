@@ -9,9 +9,7 @@
     "published_at": "2024-06-04T11:56:23.862Z",
     "duration": 2033,
     "explicit": false,
-    "keywords": [
-      ""
-    ],
+    "keywords": "",
     "alternate_url": "https://de.cro.cafe/podcast/das-erfolgsgeheimnis-von-testing-und-personalisierung-bei-congstar-mit-janina-schwill",
     "media_url": "https://media.transistor.fm/c07e222a/6c5bc798.mp3",
     "image_url": "https://img.transistor.fm/s28yRzJ0_otlll4LIxAdommBbODNgKhk5M0QiaRcv1s/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS85Yzgx/ZWUzZTY4MWIxNjk5/NTBjMTQ0ZTY5MDYy/Nzc1My5qcGc.webp",
@@ -34,9 +32,13 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": "",
-    "local_image_url": "/images/episodes/de/das-erfolgsgeheimnis-von-testing-und-personalisierung-bei-congstar-mit-janina-schwill.webp",
-    "transistor_image_url": "https://img.transistor.fm/s28yRzJ0_otlll4LIxAdommBbODNgKhk5M0QiaRcv1s/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS85Yzgx/ZWUzZTY4MWIxNjk5/NTBjMTQ0ZTY5MDYy/Nzc1My5qcGc.webp"
+    "guests": [
+      {
+        "name": "Janina Schwill",
+        "slug": "janina-schwill"
+      }
+    ],
+    "clean_description": "Das Unternehmen congstar hat jahrelange Erfahrung im Testing und profitiert mittlerweile von einer aufgeschlossenen Testing-Kultur. Janina Schwill, Senior Managerin im digitalen Kundenerlebnis bei congstar, erzählt uns in der heutigen Folge, wie sie es an diesen Punkt geschafft haben, wie das richtige Mindset aussehen sollte und welche Faktoren daran hindern, den vollen Nutzen aus der Conversion-Optimierung zu ziehen. Außerdem teilt sie Best Practices und Inspirationsquellen zum Thema CRO.Ihre Empfehlungen:Growth Ambassador CommunityEvents wie die “Experimentation Unite\" von Kameleoon,Messen wie die “Growth Marketing Summit” von KonversionsKRAFT\n\n\n\n\nGuest: Janina Schwill\nURL: https://de.cro.cafe/guest/janina-schwill"
   },
   "relationships": {
     "show": {

@@ -1,0 +1,46 @@
+{
+  "id": "397664",
+  "type": "episode",
+  "attributes": {
+    "title": "Gebruikersonderzoek met Fibéo, met Henk-Jan Journée",
+    "number": 23,
+    "season": 1,
+    "status": "published",
+    "published_at": "2019-07-15T14:20:00.000Z",
+    "duration": 2379,
+    "explicit": false,
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
+    "alternate_url": "https://nl.cro.cafe/podcast/gebruikersonderzoek-met-fibeo",
+    "media_url": "https://media.transistor.fm/36f7765c/21596a25.mp3",
+    "image_url": "https://img.transistor.fm/i3JXmq2qiyX21MSaeImlgpVnSATANsPAJd60ZQjW2CY/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS85NTBh/MDc5YTg3Yzg1M2Yw/MDBkNmMyODJmMzQ2/YmM1NS5qcGVn.webp",
+    "video_url": "",
+    "author": "Guido Jansen",
+    "summary": "In deze aflevering van het CRO CAFE heb ik weer een gast en dat is Henk-Jan Journée, oprichter van het user research platform Fibéo.  Vandaag hebben we het uiteraard over Fibéo zelf maar ook over de plek van gebruikersonderzoek in het hele optimalisatie process en verschillen tussen gebruikersgedrag in verschillende landen.",
+    "description": "<div>Guest: Henk-Jan Journée URL: https://nl.cro.cafe/gast/henk-jan-journee&nbsp;</div>",
+    "slug": "gebruikersonderzoek-met-fibeo-met-henk-jan-journee",
+    "created_at": "2020-11-10T20:43:58.372Z",
+    "updated_at": "2025-01-16T10:54:50.496Z",
+    "formatted_published_at": "July 15, 2019",
+    "duration_in_mmss": "39:39",
+    "share_url": "https://share.transistor.fm/s/36f7765c",
+    "transcript_url": "https://share.transistor.fm/s/36f7765c/transcript",
+    "transcripts": [],
+    "formatted_summary": "In deze aflevering van het CRO CAFE heb ik weer een gast en dat is Henk-Jan Journée, oprichter van het user research platform Fibéo.  Vandaag hebben we het uiteraard over Fibéo zelf maar ook over de plek van gebruikersonderzoek in het hele optimalisatie process en verschillen tussen gebruikersgedrag in verschillende landen.",
+    "formatted_description": "<div>Guest: Henk-Jan Journée URL: https://nl.cro.cafe/gast/henk-jan-journee&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/36f7765c\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/36f7765c/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "In deze aflevering van het CRO CAFE heb ik weer een gast en dat is Henk-Jan Journée, oprichter van het user research platform Fibéo.  Vandaag hebben we het uiteraard over Fibéo zelf maar ook over de plek van gebruikersonderzoek in het hele optimalisatie process en verschillen tussen gebruikersgedrag in verschillende landen."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

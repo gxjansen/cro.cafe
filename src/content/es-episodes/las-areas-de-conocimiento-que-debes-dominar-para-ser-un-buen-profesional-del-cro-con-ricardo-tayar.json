@@ -1,0 +1,51 @@
+{
+  "id": "486981",
+  "type": "episode",
+  "attributes": {
+    "title": "Las áreas de conocimiento que debes dominar para ser un buen profesional del CRO, con Ricardo Tayar",
+    "number": null,
+    "season": 1,
+    "status": "published",
+    "published_at": "2021-03-09T23:00:00.000Z",
+    "duration": 1063,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://es.cro.cafe/podcast/las-areas-de-conocimiento-que-debes-dominar-para-ser-un-buen-profesional-del-cro",
+    "media_url": "https://media.transistor.fm/52687b1b/42fc09c5.mp3",
+    "image_url": "https://img.transistor.fm/NXocaDHbiI7NQl6RuFqvkkgAIwk0j9Wv0lF0vXoIxis/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iNTlh/OTJlMWYyZTI5OTdi/ZjRmMTA2YjcyNDMy/N2RiYi5qcGVn.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "En este episodio hablamos sobre las áreas de conocimiento que todo buen profesional del CRO debe controlar en cierta medida. Es muy difícil tener éxito en un proyecto de CRO o CXO si solo nos centramos en la óptica de una o dos disciplinas, y debemos aprender, al menos, las bases de las áreas de conocimiento vinculadas a negocio, comportamiento, tecnología y creatividad, porque ese conocimiento transversal nos permitirá afrontar proyectos con mayores probabilidades de éxito por tener esa visión global.",
+    "description": "En este episodio hablamos sobre las áreas de conocimiento que todo buen profesional del CRO debe controlar en cierta medida. Es muy difícil tener éxito en un proyecto de CRO o CXO si solo nos centramos en la óptica de una o dos disciplinas, y debemos aprender, al menos, las bases de las áreas de conocimiento vinculadas a negocio, comportamiento, tecnología y creatividad, porque ese conocimiento transversal nos permitirá afrontar proyectos con mayores probabilidades de éxito por tener esa visión global.\n\n\n\n<!-- GUESTS START -->\nGuest: Ricardo Tayar\nURL: https://es.cro.cafe/invitados/ricardo-tayar-lopez\n<!-- GUESTS END -->\n",
+    "slug": "las-areas-de-conocimiento-que-debes-dominar-para-ser-un-buen-profesional-del-cro-con-ricardo-tayar",
+    "created_at": "2021-03-09T20:44:18.668Z",
+    "updated_at": "2025-01-13T11:34:41.312Z",
+    "formatted_published_at": "March 9, 2021",
+    "duration_in_mmss": "17:43",
+    "share_url": "https://share.transistor.fm/s/52687b1b",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "En este episodio hablamos sobre las áreas de conocimiento que todo buen profesional del CRO debe controlar en cierta medida. Es muy difícil tener éxito en un proyecto de CRO o CXO si solo nos centramos en la óptica de una o dos disciplinas, y debemos aprender, al menos, las bases de las áreas de conocimiento vinculadas a negocio, comportamiento, tecnología y creatividad, porque ese conocimiento transversal nos permitirá afrontar proyectos con mayores probabilidades de éxito por tener esa visión global.",
+    "formatted_description": "En este episodio hablamos sobre las áreas de conocimiento que todo buen profesional del CRO debe controlar en cierta medida. Es muy difícil tener éxito en un proyecto de CRO o CXO si solo nos centramos en la óptica de una o dos disciplinas, y debemos aprender, al menos, las bases de las áreas de conocimiento vinculadas a negocio, comportamiento, tecnología y creatividad, porque ese conocimiento transversal nos permitirá afrontar proyectos con mayores probabilidades de éxito por tener esa visión global.\n\n\n\n<!-- GUESTS START -->\nGuest: Ricardo Tayar\nURL: https://es.cro.cafe/invitados/ricardo-tayar-lopez\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/52687b1b\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/52687b1b/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "guests": [
+      {
+        "name": "Ricardo Tayar",
+        "slug": "ricardo-tayar-lopez"
+      }
+    ],
+    "clean_description": "En este episodio hablamos sobre las áreas de conocimiento que todo buen profesional del CRO debe controlar en cierta medida. Es muy difícil tener éxito en un proyecto de CRO o CXO si solo nos centramos en la óptica de una o dos disciplinas, y debemos aprender, al menos, las bases de las áreas de conocimiento vinculadas a negocio, comportamiento, tecnología y creatividad, porque ese conocimiento transversal nos permitirá afrontar proyectos con mayores probabilidades de éxito por tener esa visión global."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16111",
+        "type": "show"
+      }
+    }
+  }
+}

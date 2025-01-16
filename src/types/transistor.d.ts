@@ -12,6 +12,8 @@ export interface TransistorEpisode {
     duration_in_mmss: string;
     formatted_published_at: string;
     formatted_description: string;
+    formatted_summary?: string;
+    clean_description?: string;
     image_url?: string;
     video_url?: string;
     transcript_url?: string;
@@ -19,6 +21,7 @@ export interface TransistorEpisode {
     embed_html: string;
     embed_html_dark: string;
     slug: string;
+    guests?: Array<{ name: string; slug: string }>;
   };
   relationships: {
     show: {

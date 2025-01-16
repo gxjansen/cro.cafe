@@ -1,0 +1,51 @@
+{
+  "id": "494304",
+  "type": "episode",
+  "attributes": {
+    "title": "Análisis y optimización multicanal: e-commerce y tiendas físicas con un objetivo común, con Hector Mainar",
+    "number": 6,
+    "season": 1,
+    "status": "published",
+    "published_at": "2021-03-17T05:58:41.230Z",
+    "duration": 3304,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://es.cro.cafe/podcast/analisis-y-optimizacion-multicanal-e-commerce-y-tiendas-fisicas-con-un-objetivo-comun",
+    "media_url": "https://media.transistor.fm/21f59e32/798009f9.mp3",
+    "image_url": "https://img.transistor.fm/rr4u-zf_7f23XNuydaTOH7FuKUzDonxw8xOO8WaN4_4/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80ZGUw/ODFmNWQ5NWFlOTJm/MzRmOGI0N2Q4ZWU3/ZjM3ZC5qcGc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "Hablamos con Hector Mainar, director digital de Futbol Emotion, sobre la medición y mejora en un negocio que emplea tanto canales digitales como tiendas físicas para poder llegar al máximo número posible de clientes aficionados al fútbol.",
+    "description": "Hablamos con Hector Mainar, director digital de Futbol Emotion, sobre la medición y mejora en un negocio que emplea tanto canales digitales como tiendas físicas para poder llegar al máximo número posible de clientes aficionados al fútbol.\n\n\n\n<!-- GUESTS START -->\nGuest: Hector Mainar\nURL: https://es.cro.cafe/invitados/hector-mainar\n<!-- GUESTS END -->\n",
+    "slug": "analisis-y-optimizacion-multicanal-e-commerce-y-tiendas-fisicas-con-un-objetivo-comun-con-hector-mainar",
+    "created_at": "2021-03-17T05:58:19.386Z",
+    "updated_at": "2025-01-13T11:31:38.266Z",
+    "formatted_published_at": "March 17, 2021",
+    "duration_in_mmss": "55:04",
+    "share_url": "https://share.transistor.fm/s/21f59e32",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Hablamos con Hector Mainar, director digital de Futbol Emotion, sobre la medición y mejora en un negocio que emplea tanto canales digitales como tiendas físicas para poder llegar al máximo número posible de clientes aficionados al fútbol.",
+    "formatted_description": "Hablamos con Hector Mainar, director digital de Futbol Emotion, sobre la medición y mejora en un negocio que emplea tanto canales digitales como tiendas físicas para poder llegar al máximo número posible de clientes aficionados al fútbol.\n\n\n\n<!-- GUESTS START -->\nGuest: Hector Mainar\nURL: https://es.cro.cafe/invitados/hector-mainar\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/21f59e32\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/21f59e32/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [
+      {
+        "name": "Hector Mainar",
+        "slug": "hector-mainar"
+      }
+    ],
+    "clean_description": "Hablamos con Hector Mainar, director digital de Futbol Emotion, sobre la medición y mejora en un negocio que emplea tanto canales digitales como tiendas físicas para poder llegar al máximo número posible de clientes aficionados al fútbol."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16111",
+        "type": "show"
+      }
+    }
+  }
+}

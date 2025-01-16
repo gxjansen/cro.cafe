@@ -9,9 +9,7 @@
     "published_at": "2024-04-03T06:30:00.000Z",
     "duration": 2890,
     "explicit": false,
-    "keywords": [
-      ""
-    ],
+    "keywords": "",
     "alternate_url": "https://de.cro.cafe/podcast/aus-e-commerce-wird-r-commerce",
     "media_url": "https://media.transistor.fm/d7f89efd/e691d7fb.mp3",
     "image_url": "https://img.transistor.fm/akTcW862fhRkVIklZENwr9b75ZHX0-twGs7fHlK0Wfw/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kOTNm/NjliZDdkMmEzYzA4/ZGJkYjdhMWFlNWZh/Y2E5ZC5qcGc.webp",
@@ -34,9 +32,21 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": "",
-    "local_image_url": "/images/episodes/de/aus-e-commerce-wird-r-commerce-digitaler-erfolg-durch-nachhaltige-kundenbeziehungen-mit-joachim-stalph-philipp-spreer-und-dimitrios-haratsis.webp",
-    "transistor_image_url": "https://img.transistor.fm/akTcW862fhRkVIklZENwr9b75ZHX0-twGs7fHlK0Wfw/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kOTNm/NjliZDdkMmEzYzA4/ZGJkYjdhMWFlNWZh/Y2E5ZC5qcGc.webp"
+    "guests": [
+      {
+        "name": "Philipp Spreer",
+        "slug": "philipp-spreer"
+      },
+      {
+        "name": "Dimitrios Haratsis",
+        "slug": "dimitrios-haratsis"
+      },
+      {
+        "name": "Joachim Stalph",
+        "slug": "joachim-stalph"
+      }
+    ],
+    "clean_description": "In unserer neuesten Episode tauchen wir tief in die Welt des Relationship Commerce (R-Commerce) ein. Ein Konzept, das sich vom traditionellen E-Commerce-Modell unterscheidet, indem es den Fokus auf den Aufbau nachhaltiger Kundenbeziehungen legt. Unsere Experten Joachim Stalph, Philipp Spreer und Dimitrios Haratsis decken auf, wie sich R-Commerce von herkömmlichen Verkaufsstrategien unterscheidet, wie es das Kauferlebnis für Endkunden revolutioniert und warum ein integrierter Ansatz aus Daten, Marketing-Technologie und Psychologie der Schlüssel zum Erfolg in der digitalisierten Handelswelt ist.Wenn ihr noch mehr in die Tiefe gehen möchtet, findet ihr hier das Buch zur Folge:R-Commerce, von Joachim Stalph, Philipp Spreer, Dimitrios Haratsis: https://www.r-commerce.de/weitere Buchtipps:\"How Brands grow\" von Byron Sharp https://www.amazon.de/-/en/Byron-Sharp/dp/0195573560\"PsyConversion\" von Philipp Spreer https://www.psyconversion.de/\"Vertauensarchitektur\" von Dr. Eric Eller https://www.vertrauensarchitektur.de/Whitepaper “Enjoy your Cookies”: https://www.elaboratum.de/news/whitepaper-cookie-banner-strategie-positive-emotionen-akzeptanz-steigern/\n\n\n\n\nGuest 1: Philipp Spreer\nURL: https://de.cro.cafe/guest/philipp-spreer\n\n|\n\nGuest 2: Dimitrios Haratsis\nURL: https://de.cro.cafe/guest/dimitrios-haratsis\n\n|\n\nGuest 3: Joachim Stalph\nURL: https://de.cro.cafe/guest/joachim-stalph"
   },
   "relationships": {
     "show": {

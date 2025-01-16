@@ -1,0 +1,46 @@
+{
+  "id": "397740",
+  "type": "episode",
+  "attributes": {
+    "title": "CDPs, personalisatie en loyalty, met Janus de Visser (Cloud Nine Digital) en Christian van Nispen (Dept)",
+    "number": null,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-03-03T23:00:00.000Z",
+    "duration": 2094,
+    "explicit": false,
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
+    "alternate_url": "https://nl.cro.cafe/podcast/cdps-personalisatie-en-loyalty",
+    "media_url": "https://media.transistor.fm/aa539016/fac7efce.mp3",
+    "image_url": "https://img.transistor.fm/aAythu2CtnpAverBFsLWZ98Wl8nSqFMeRrefgpfl3hI/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82MjQ5/N2RmZGI1MzExNDRh/YTM2NWE5ZjY1OTUz/OTg0Ny5qcGVn.webp",
+    "video_url": "",
+    "author": "Guido X Jansen",
+    "summary": "Op Emerce GAUC spreken we met Janus de Visser (Cloud Nine Digital) en Christian van Nispen (Dept) en hebben we het over Customer Data Platforms (CDPs), personalisatie en loyalty programma's.",
+    "description": "<div>Guest 1: Janus de Visser URL: https://nl.cro.cafe/gast/janus-de-visser | Guest 2: Cristian van Nispen URL: https://nl.cro.cafe/gast/cristian-van-nispen&nbsp;</div>",
+    "slug": "nl-cdps-personalisatie-en-loyalty-met-janus-de-visser-cloud-nine-digital-en-christian-van-nispen-dept",
+    "created_at": "2020-11-10T20:46:39.406Z",
+    "updated_at": "2025-01-13T15:42:27.540Z",
+    "formatted_published_at": "March 3, 2020",
+    "duration_in_mmss": "34:54",
+    "share_url": "https://share.transistor.fm/s/aa539016",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Op Emerce GAUC spreken we met Janus de Visser (Cloud Nine Digital) en Christian van Nispen (Dept) en hebben we het over Customer Data Platforms (CDPs), personalisatie en loyalty programma's.",
+    "formatted_description": "<div>Guest 1: Janus de Visser URL: https://nl.cro.cafe/gast/janus-de-visser | Guest 2: Cristian van Nispen URL: https://nl.cro.cafe/gast/cristian-van-nispen&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/aa539016\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/aa539016/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "Op Emerce GAUC spreken we met Janus de Visser (Cloud Nine Digital) en Christian van Nispen (Dept) en hebben we het over Customer Data Platforms (CDPs), personalisatie en loyalty programma's."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

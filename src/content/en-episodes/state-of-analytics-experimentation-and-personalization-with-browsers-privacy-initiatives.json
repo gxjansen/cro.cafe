@@ -1,0 +1,46 @@
+{
+  "id": "202350",
+  "type": "episode",
+  "attributes": {
+    "title": "State of analytics, experimentation, and personalization with browsers’ privacy initiatives, with Simo Ahava, Ton Wesseling & Steen Rasmussen",
+    "number": 4,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-02-19T15:30:00.000Z",
+    "duration": 2123,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://www.cro.cafe/podcast/analytics-experimentation-personalization-browsers-privacy-simo-ahava",
+    "media_url": "https://media.transistor.fm/4bd8f368/f4fccb37.mp3",
+    "image_url": "https://img.transistor.fm/jwsxgUqEX79rsxckdKIUBdnMHjgv6IBpHwLCN9VhSt4/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9hOWIy/ODg2MjZhYzMyYTYx/ZjhmNmQ0ZmViNzQ5/MzY0MC5qcGVn.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "Recording from Emerce GAUC where we talk with Simo Ahava, Ton Wesseling and Steen Rasmussen about the current state of Analytics and in particular how browser are making our work harder :).",
+    "description": "<div>Guest 1: Simo Ahava URL: https://www.cro.cafe/guest/simo-ahava | Guest 2: Steen Rasmussen URL: https://www.cro.cafe/guest/steen-rasmussen | Guest 3: Ton Wesseling URL: https://www.cro.cafe/guest/ton-wesseling&nbsp;</div>",
+    "slug": "state-of-analytics-experimentation-and-personalization-with-browsers-privacy-initiatives",
+    "created_at": "2020-02-16T19:16:05.307Z",
+    "updated_at": "2025-01-16T11:03:43.214Z",
+    "formatted_published_at": "February 19, 2020",
+    "duration_in_mmss": "35:23",
+    "share_url": "https://share.transistor.fm/s/4bd8f368",
+    "transcript_url": "https://share.transistor.fm/s/4bd8f368/transcript",
+    "transcripts": [],
+    "formatted_summary": "Recording from Emerce GAUC where we talk with Simo Ahava, Ton Wesseling and Steen Rasmussen about the current state of Analytics and in particular how browser are making our work harder :).",
+    "formatted_description": "<div>Guest 1: Simo Ahava URL: https://www.cro.cafe/guest/simo-ahava | Guest 2: Steen Rasmussen URL: https://www.cro.cafe/guest/steen-rasmussen | Guest 3: Ton Wesseling URL: https://www.cro.cafe/guest/ton-wesseling&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/4bd8f368\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/4bd8f368/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "Recording from Emerce GAUC where we talk with Simo Ahava, Ton Wesseling and Steen Rasmussen about the current state of Analytics and in particular how browser are making our work harder :)."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

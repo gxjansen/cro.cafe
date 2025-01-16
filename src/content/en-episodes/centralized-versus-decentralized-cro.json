@@ -1,0 +1,46 @@
+{
+  "id": "264427",
+  "type": "episode",
+  "attributes": {
+    "title": "Centralized versus Decentralized CRO, with Andrea Corvi (iTech Media)",
+    "number": 11,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-05-25T06:00:00.000Z",
+    "duration": 1766,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://www.cro.cafe/podcast/centralized-versus-decentralized-cro",
+    "media_url": "https://media.transistor.fm/5a72bfe0/165faa05.mp3",
+    "image_url": "https://img.transistor.fm/AwYJMIVb1JF1tm-PILmq5k8hoOIsGyIUBvo6iioQISo/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82ZDA0/ZjdhMDVhMGZiZWUx/MWRmNWQ0MjhiM2Uz/YTdiZS5wbmc.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "In this episode I talk with Andrea Corvi, Experimentation Manager at iTech Media. iTech is a company that works for a host of clients all owned by the same mother company so they sort of function as an inhouse agency for different inhouse clients. They help people make smart choices online by creating industry-leading experiences and comparison products.\r\n\r\nToday we talk about working with a centralized versus a decentralized CRO model.",
+    "description": "<div>Guest: Andrea Corvi URL: https://www.cro.cafe/guest/andrea-corvi&nbsp;</div>",
+    "slug": "centralized-versus-decentralized-cro",
+    "created_at": "2020-05-25T09:21:28.924Z",
+    "updated_at": "2025-01-16T11:02:46.380Z",
+    "formatted_published_at": "May 25, 2020",
+    "duration_in_mmss": "29:26",
+    "share_url": "https://share.transistor.fm/s/5a72bfe0",
+    "transcript_url": "https://share.transistor.fm/s/5a72bfe0/transcript",
+    "transcripts": [],
+    "formatted_summary": "In this episode I talk with Andrea Corvi, Experimentation Manager at iTech Media. iTech is a company that works for a host of clients all owned by the same mother company so they sort of function as an inhouse agency for different inhouse clients. They help people make smart choices online by creating industry-leading experiences and comparison products.\r\n\r\nToday we talk about working with a centralized versus a decentralized CRO model.",
+    "formatted_description": "<div>Guest: Andrea Corvi URL: https://www.cro.cafe/guest/andrea-corvi&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/5a72bfe0\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/5a72bfe0/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "In this episode I talk with Andrea Corvi, Experimentation Manager at iTech Media. iTech is a company that works for a host of clients all owned by the same mother company so they sort of function as an inhouse agency for different inhouse clients. They help people make smart choices online by creating industry-leading experiences and comparison products.\r\n\r\nToday we talk about working with a centralized versus a decentralized CRO model."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

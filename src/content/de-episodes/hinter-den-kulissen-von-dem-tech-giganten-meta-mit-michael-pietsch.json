@@ -9,9 +9,7 @@
     "published_at": "2023-06-20T07:30:00.000Z",
     "duration": 2040,
     "explicit": false,
-    "keywords": [
-      ""
-    ],
+    "keywords": "",
     "alternate_url": "https://de.cro.cafe/podcast/hinter-den-kulissen-von-meta",
     "media_url": "https://media.transistor.fm/4e954550/99911d3b.mp3",
     "image_url": "https://img.transistor.fm/NygemRrhng2DQ9Tzw_e-MwHGMZnBB3Tkdqq9VzG7foM/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mZjlj/NGQ4Yzc1NzMzZWJm/NWM4M2FlM2FjMGY3/YTA3ZC5wbmc.webp",
@@ -34,9 +32,13 @@
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "keywords_raw": "",
-    "local_image_url": "/images/episodes/de/hinter-den-kulissen-von-dem-tech-giganten-meta-mit-michael-pietsch.webp",
-    "transistor_image_url": "https://img.transistor.fm/NygemRrhng2DQ9Tzw_e-MwHGMZnBB3Tkdqq9VzG7foM/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mZjlj/NGQ4Yzc1NzMzZWJm/NWM4M2FlM2FjMGY3/YTA3ZC5wbmc.webp"
+    "guests": [
+      {
+        "name": "Michael Pietsch",
+        "slug": "michael-pietsch"
+      }
+    ],
+    "clean_description": "Michael Pietsch, MarTech Ecosystem & Business Development Consultant bei Meta, berichtet über spannende Insights und seine langjährige Erfahrung bei dem millionenschweren Technologieunternehmen Meta.\n\n\n\n\nGuest: Michael Pietsch\nURL: https://de.cro.cafe/guest/michael-pietsch"
   },
   "relationships": {
     "show": {

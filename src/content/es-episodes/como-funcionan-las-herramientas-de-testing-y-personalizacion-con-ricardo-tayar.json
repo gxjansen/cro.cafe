@@ -1,0 +1,51 @@
+{
+  "id": "557362",
+  "type": "episode",
+  "attributes": {
+    "title": "Cómo funcionan las herramientas de testing y personalización, con Ricardo Tayar",
+    "number": null,
+    "season": 1,
+    "status": "published",
+    "published_at": "2021-06-01T22:00:00.000Z",
+    "duration": 1401,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://es.cro.cafe/podcast/como-funcionan-las-herramientas-de-testing-y-personalizacion",
+    "media_url": "https://media.transistor.fm/6523651c/2229bb06.mp3",
+    "image_url": "https://img.transistor.fm/2ZqHwuZ5btNliyuptjiNsM_k0O-_JI12aKA4MGK6-7E/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9hMTQ1/YjRlOGQ4M2EwNzli/NzJkMDZiODJiMzVk/NTYxMC5qcGc.webp",
+    "video_url": null,
+    "author": "",
+    "summary": "Hablamos de manera clara y sencilla sobre como funcionan las herramientas de testing y personalización. Os quedará claro y meridiano como el agua cristalina.",
+    "description": "Hablamos de manera clara y sencilla sobre como funcionan las herramientas de testing y personalización. Os quedará claro y meridiano como el agua cristalina.\n\n\n\n<!-- GUESTS START -->\nGuest: Ricardo Tayar\nURL: https://es.cro.cafe/invitados/ricardo-tayar-lopez\n<!-- GUESTS END -->\n",
+    "slug": "como-funcionan-las-herramientas-de-testing-y-personalizacion-con-ricardo-tayar",
+    "created_at": "2021-06-01T18:00:42.359Z",
+    "updated_at": "2025-01-13T11:31:39.400Z",
+    "formatted_published_at": "June 1, 2021",
+    "duration_in_mmss": "23:21",
+    "share_url": "https://share.transistor.fm/s/6523651c",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Hablamos de manera clara y sencilla sobre como funcionan las herramientas de testing y personalización. Os quedará claro y meridiano como el agua cristalina.",
+    "formatted_description": "Hablamos de manera clara y sencilla sobre como funcionan las herramientas de testing y personalización. Os quedará claro y meridiano como el agua cristalina.\n\n\n\n<!-- GUESTS START -->\nGuest: Ricardo Tayar\nURL: https://es.cro.cafe/invitados/ricardo-tayar-lopez\n<!-- GUESTS END -->",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/6523651c\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/6523651c/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "bonus",
+    "email_notifications": null,
+    "guests": [
+      {
+        "name": "Ricardo Tayar",
+        "slug": "ricardo-tayar-lopez"
+      }
+    ],
+    "clean_description": "Hablamos de manera clara y sencilla sobre como funcionan las herramientas de testing y personalización. Os quedará claro y meridiano como el agua cristalina."
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16111",
+        "type": "show"
+      }
+    }
+  }
+}

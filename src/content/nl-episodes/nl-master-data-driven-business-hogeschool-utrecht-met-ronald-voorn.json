@@ -1,0 +1,46 @@
+{
+  "id": "397764",
+  "type": "episode",
+  "attributes": {
+    "title": "Master Data Driven Business @ Hogeschool Utrecht, met Ronald Voorn",
+    "number": 17,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-06-28T22:00:00.000Z",
+    "duration": 2769,
+    "explicit": false,
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
+    "alternate_url": "https://nl.cro.cafe/podcast/master-data-driven-business-hogeschool-utrecht",
+    "media_url": "https://media.transistor.fm/785ff9e7/441edd14.mp3",
+    "image_url": "https://img.transistor.fm/kBsFvGQvveObyzJP5Qmpyv951bFOTfhqyAjSCDyDwQU/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS84NGM3/MTFhZmNhYjFkZTI2/MmY1NDA4NTFkMWIw/ZGM3OC5qcGVn.webp",
+    "video_url": "",
+    "author": "Guido X Jansen",
+    "summary": "Ronald Voorn is Docent en onderzoeker aan de hogeschool utrecht en de universiteit twente.  Hij heeft voor de hogeschool een nieuwe master ontwikkeld genaamd Data Driven Business. Ronald gaat daarmee studenten klaarstomen voor ons vakgebied en daar ben ik erg benieuwd naar!",
+    "description": "<div>Guest: Ronald Voorn URL: https://nl.cro.cafe/gast/ronald-voorn&nbsp;</div>",
+    "slug": "nl-master-data-driven-business-hogeschool-utrecht-met-ronald-voorn",
+    "created_at": "2020-11-10T20:47:35.905Z",
+    "updated_at": "2025-01-13T15:47:35.941Z",
+    "formatted_published_at": "June 28, 2020",
+    "duration_in_mmss": "46:09",
+    "share_url": "https://share.transistor.fm/s/785ff9e7",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Ronald Voorn is Docent en onderzoeker aan de hogeschool utrecht en de universiteit twente.  Hij heeft voor de hogeschool een nieuwe master ontwikkeld genaamd Data Driven Business. Ronald gaat daarmee studenten klaarstomen voor ons vakgebied en daar ben ik erg benieuwd naar!",
+    "formatted_description": "<div>Guest: Ronald Voorn URL: https://nl.cro.cafe/gast/ronald-voorn&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/785ff9e7\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/785ff9e7/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "Ronald Voorn is Docent en onderzoeker aan de hogeschool utrecht en de universiteit twente.  Hij heeft voor de hogeschool een nieuwe master ontwikkeld genaamd Data Driven Business. Ronald gaat daarmee studenten klaarstomen voor ons vakgebied en daar ben ik erg benieuwd naar!"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}

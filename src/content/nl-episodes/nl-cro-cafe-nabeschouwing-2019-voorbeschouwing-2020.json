@@ -1,0 +1,46 @@
+{
+  "id": "397710",
+  "type": "episode",
+  "attributes": {
+    "title": "CRO.CAFE: Nabeschouwing 2019 & voorbeschouwing 2020",
+    "number": null,
+    "season": 2,
+    "status": "published",
+    "published_at": "2020-01-02T20:00:00.000Z",
+    "duration": 907,
+    "explicit": false,
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
+    "alternate_url": "https://nl.cro.cafe/podcast/nabeschouwing-2019-voorbeschouwing-2020",
+    "media_url": "https://media.transistor.fm/b725f84d/254f6044.mp3",
+    "image_url": "https://img.transistor.fm/wcNQoE7DjRG6sEpvYJY5QfIiF_LccVmH3ldwALxoQnw/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mODk2/NjdlNjYxZDI2NDI5/OTdjN2Y3ZDU2OTQ4/NzIxZi5qcGVn.webp",
+    "video_url": "",
+    "author": "Guido X Jansen",
+    "summary": "Ik deed vanavond een livestream experiment op LinkedIn met als topic CRO.CAFE nabeschouwing 2019 en voorbeschouwing van 2020. Bekijk 'm via de link in de shownotes of beluister 'm direct hier!",
+    "description": "",
+    "slug": "nl-cro-cafe-nabeschouwing-2019-voorbeschouwing-2020",
+    "created_at": "2020-11-10T20:45:51.841Z",
+    "updated_at": "2025-01-16T10:45:28.617Z",
+    "formatted_published_at": "January 2, 2020",
+    "duration_in_mmss": "15:07",
+    "share_url": "https://share.transistor.fm/s/b725f84d",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Ik deed vanavond een livestream experiment op LinkedIn met als topic CRO.CAFE nabeschouwing 2019 en voorbeschouwing van 2020. Bekijk 'm via de link in de shownotes of beluister 'm direct hier!",
+    "formatted_description": "",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/b725f84d\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/b725f84d/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "trailer",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "Ik deed vanavond een livestream experiment op LinkedIn met als topic CRO.CAFE nabeschouwing 2019 en voorbeschouwing van 2020. Bekijk 'm via de link in de shownotes of beluister 'm direct hier!"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "16113",
+        "type": "show"
+      }
+    }
+  }
+}
