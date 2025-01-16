@@ -1,6 +1,5 @@
 ---
 import { getPopularEpisodes } from '~/utils/episode-analytics';
-import { getCollection } from 'astro:content';
 import EpisodeCard from './Card.astro';
 import ErrorBoundary from '../common/ErrorBoundary.astro';
 import type { SHOW_IDS } from '~/utils/transistor-api';
@@ -16,31 +15,41 @@ const { language, limit = 5, title = 'Popular Episodes' } = Astro.props;
 // Get popular episodes
 const popularStats = await getPopularEpisodes(language, limit);
 
-// Get full episode data from content collections
-const allEpisodes = await getCollection(`${language}-episodes`);
-const popularEpisodes = popularStats
-  .map(stat => allEpisodes.find(episode => episode.data.id === stat.id))
-  .filter((episode): episode is typeof allEpisodes[0] => episode !== undefined)
-  .map(episode => ({
-    id: episode.id,
-    type: 'episode',
-    attributes: episode.data.attributes,
-    relationships: {
-      show: {
-        data: {
-          id: episode.data.relationships.show.data.id,
-          type: 'show'
-        }
+// Transform CollectionEntry objects into the format EpisodeCard expects
+const popularEpisodes = popularStats.map(episode => ({
+  id: episode.data.id,
+  type: 'episode',
+  attributes: {
+    title: episode.data.attributes.title,
+    summary: episode.data.attributes.summary,
+    description: episode.data.attributes.description,
+    published_at: episode.data.attributes.published_at,
+    media_url: episode.data.attributes.media_url,
+    duration: episode.data.attributes.duration,
+    duration_in_mmss: episode.data.attributes.duration_in_mmss,
+    formatted_published_at: episode.data.attributes.formatted_published_at,
+    formatted_description: episode.data.attributes.formatted_description,
+    clean_description: episode.data.attributes.clean_description,
+    image_url: episode.data.attributes.image_url,
+    share_url: episode.data.attributes.share_url,
+    slug: episode.data.attributes.slug,
+    embed_html: episode.data.attributes.embed_html || '',
+    embed_html_dark: episode.data.attributes.embed_html_dark || ''
+  },
+  relationships: {
+    show: {
+      data: {
+        id: episode.data.relationships.show.data.id,
+        type: 'show'
       }
     }
-  }));
-
-console.log('Transformed popular episodes:', JSON.stringify(popularEpisodes[0], null, 2));
+  }
+}));
 ---
 
 <ErrorBoundary fallback="Unable to load popular episodes.">
-  <section class="popular-episodes">
-    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">{title}</h2>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <h2 class="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">{title}</h2>
     {popularEpisodes.length > 0 ? (
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {popularEpisodes.map((episode) => (
@@ -54,9 +63,3 @@ console.log('Transformed popular episodes:', JSON.stringify(popularEpisodes[0], 
     )}
   </section>
 </ErrorBoundary>
-
-<style>
-.popular-episodes {
-  @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-6;
-}
-</style>

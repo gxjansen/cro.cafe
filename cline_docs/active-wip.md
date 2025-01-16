@@ -1,17 +1,3 @@
-# To be fixed shortly:
-
-## Github actions is not working yet
-
-Error log:
-Run actions/setup-node@v4
-Found in cache @ /opt/hostedtoolcache/node/20.18.1/x64
-Environment details
-/opt/hostedtoolcache/node/20.18.1/x64/bin/npm config get cache
-/home/runner/.npm
-Error: Dependencies lock file is not found in /home/runner/work/cro.cafe/cro.cafe. Supported file patterns: package-lock.json,npm-shrinkwrap.json,yarn.lock
-
-[ ] we have not yet added an environmental variable for our transistor API key into Github, might that be the problem?
-
 ## Host cards
 
 [ ] Add a folder with 4 json files for the following podcast show hosts:
@@ -36,8 +22,6 @@ _ co-host of the DE podcast
 [ ] On each episode detail page, add a "Your host" section below the guest section. Use the same card layout as the guest cards.
 [ ] Unlike the guests, we don't need a single detail page for each host
 [ ] On the episode language pages, above the "Latest Episodes" component, add a component that shows the host information for that language. Note that in case of the German podcast, there are 2 hosts.
-
-
 
 # Next tasks:
 

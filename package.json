@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "sync-episodes": "tsx scripts/sync-episodes.ts",
-    "download-images": "tsx scripts/download-episode-images.ts"
+    "download-images": "tsx scripts/download-episode-images.ts",
+    "sync-analytics": "tsx scripts/sync-episode-analytics.ts"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",

@@ -7,14 +7,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: 'var(--aw-color-primary)',
-        secondary: 'var(--aw-color-secondary)',
-        accent: 'var(--color-accent)',
-        'accent-dark': 'var(--color-accent-dark)',
-        default: 'var(--aw-color-text-default)',
-        muted: 'var(--aw-color-text-muted)',
-        heading: 'var(--aw-color-text-heading)',
-        page: 'var(--aw-color-bg-page)',
+        primary: '#ff676d',
+        secondary: '#95c3c0',
+        accent: '#ff676d',
+        'accent-dark': '#7bfff8',
+        default: '#1f2937',
+        muted: '#6b7280',
+        heading: '#111827',
+        page: '#ffffff',
+        // Language badge colors
+        'lang-en': '#cf142b',
+        'lang-nl': '#21468B',
+        'lang-de': '#000000',
+        'lang-de-text': '#FFD700',
+        'lang-es': '#F1BF00',
+        'lang-es-text': '#AA151B',
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],

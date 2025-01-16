@@ -20,6 +20,7 @@ const metadata = {
 const availableLanguages = ['en', 'nl', 'de', 'es'] as const;
 
 const sections = [
+  { id: 'colors', title: 'Colors', icon: 'tabler:palette' },
   { id: 'typography', title: 'Typography', icon: 'tabler:typography' },
   { id: 'links', title: 'Links', icon: 'tabler:link' },
   { id: 'buttons', title: 'Buttons', icon: 'tabler:click' },
@@ -126,6 +127,181 @@ const sections = [
 
     <!-- Main Content -->
     <main id="main-content" class="mt-16">
+      <!-- Colors -->
+      <section id="colors" class="mb-16" aria-labelledby="colors-title">
+        <h2 id="colors-title" class="text-3xl font-bold mb-4">Colors</h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-8">Our color system is designed to create accessible and visually consistent interfaces across light and dark modes.</p>
+        
+        <div class="space-y-8">
+          <!-- Background Colors -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">Background Colors</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div class="p-4 rounded">
+                <div class="h-20 bg-red-50 rounded mb-2"></div>
+                <p class="font-medium">Light Mode Alert Background</p>
+                <p class="text-sm text-gray-600">bg-red-50</p>
+                <p class="text-sm text-gray-500">RGB: 254, 242, 242</p>
+                <p class="text-sm text-gray-500">Used for: Alert sections, info blocks</p>
+              </div>
+              <div class="p-4 rounded dark:bg-gray-800">
+                <div class="h-20 bg-red-900/20 rounded mb-2"></div>
+                <p class="font-medium dark:text-white">Dark Mode Alert Background</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">bg-red-900/20</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">RGB: 127, 29, 29, 0.2</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Used for: Alert sections in dark mode</p>
+              </div>
+              <div class="p-4 rounded">
+                <div class="h-20 bg-white rounded mb-2 border"></div>
+                <p class="font-medium">Content Background - Light</p>
+                <p class="text-sm text-gray-600">bg-white</p>
+                <p class="text-sm text-gray-500">RGB: 255, 255, 255</p>
+                <p class="text-sm text-gray-500">Used for: Main content areas</p>
+              </div>
+              <div class="p-4 rounded dark:bg-gray-800">
+                <div class="h-20 bg-gray-900 rounded mb-2"></div>
+                <p class="font-medium dark:text-white">Content Background - Dark</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400">bg-gray-900</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">RGB: 17, 24, 39</p>
+                <p class="text-sm text-gray-500 dark:text-gray-400">Used for: Dark mode content areas</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text Colors -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">Text Colors</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div class="p-4 rounded">
+                <p class="text-gray-900 font-medium mb-2">Primary Text</p>
+                <p class="text-sm text-gray-600">text-gray-900</p>
+                <p class="text-sm text-gray-500">RGB: 17, 24, 39</p>
+                <p class="text-sm text-gray-500">Used for: Main content text</p>
+              </div>
+              <div class="p-4 rounded">
+                <p class="text-gray-600 font-medium mb-2">Secondary Text</p>
+                <p class="text-sm text-gray-600">text-gray-600</p>
+                <p class="text-sm text-gray-500">RGB: 75, 85, 99</p>
+                <p class="text-sm text-gray-500">Used for: Supporting text</p>
+              </div>
+              <div class="p-4 rounded dark:bg-gray-800">
+                <p class="text-white font-medium mb-2">Dark Mode Text</p>
+                <p class="text-sm text-gray-400">text-white</p>
+                <p class="text-sm text-gray-400">RGB: 255, 255, 255</p>
+                <p class="text-sm text-gray-400">Used for: Dark mode text</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- UI State Colors -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">UI State Colors</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div class="p-4 rounded">
+                <div class="h-10 bg-green-100 rounded mb-2"></div>
+                <p class="font-medium">Success</p>
+                <p class="text-sm text-gray-600">bg-green-100</p>
+                <p class="text-sm text-gray-500">Used for: Success messages</p>
+              </div>
+              <div class="p-4 rounded">
+                <div class="h-10 bg-yellow-100 rounded mb-2"></div>
+                <p class="font-medium">Warning</p>
+                <p class="text-sm text-gray-600">bg-yellow-100</p>
+                <p class="text-sm text-gray-500">Used for: Warning messages</p>
+              </div>
+              <div class="p-4 rounded">
+                <div class="h-10 bg-red-100 rounded mb-2"></div>
+                <p class="font-medium">Error</p>
+                <p class="text-sm text-gray-600">bg-red-100</p>
+                <p class="text-sm text-gray-500">Used for: Error messages</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Element Colors -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">Interactive Element Colors</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {/* Button Colors */}
+              <div class="p-4 rounded">
+                <div class="btn-primary h-10 rounded mb-2"></div>
+                <p class="font-medium">Primary Button</p>
+                <p class="text-sm text-gray-600">var(--color-accent)</p>
+                <p class="text-sm text-gray-500">HEX: #ff676d</p>
+                <p class="text-sm text-gray-500">Used for: Primary actions</p>
+              </div>
+              <div class="p-4 rounded">
+                <div class="btn-secondary h-10 rounded mb-2"></div>
+                <p class="font-medium">Secondary Button</p>
+                <p class="text-sm text-gray-600">bg-[#95c3c0]</p>
+                <p class="text-sm text-gray-500">HEX: #95c3c0</p>
+                <p class="text-sm text-gray-500">Used for: Secondary actions</p>
+              </div>
+              <div class="p-4 rounded">
+                <div class="btn-outline h-10 rounded mb-2"></div>
+                <p class="font-medium">Outline Button</p>
+                <p class="text-sm text-gray-600">border-accent</p>
+                <p class="text-sm text-gray-500">Border: #ff676d</p>
+                <p class="text-sm text-gray-500">Used for: Tertiary actions</p>
+              </div>
+
+              {/* Badge Colors */}
+              <div class="p-4 rounded">
+                <div class="badge-info h-10 rounded mb-2"></div>
+                <p class="font-medium">Info Badge</p>
+                <p class="text-sm text-gray-600">var(--color-accent-dark)</p>
+                <p class="text-sm text-gray-500">HEX: #7bfff8</p>
+                <p class="text-sm text-gray-500">Used for: Information badges</p>
+              </div>
+              <div class="p-4 rounded">
+                <div class="badge-success h-10 rounded mb-2"></div>
+                <p class="font-medium">Success Badge</p>
+                <p class="text-sm text-gray-600">var(--color-accent)</p>
+                <p class="text-sm text-gray-500">HEX: #ff676d</p>
+                <p class="text-sm text-gray-500">Used for: Success badges</p>
+              </div>
+              <div class="p-4 rounded">
+                <div class="badge-warning h-10 rounded mb-2"></div>
+                <p class="font-medium">Warning Badge</p>
+                <p class="text-sm text-gray-600">bg-[#95c3c0]</p>
+                <p class="text-sm text-gray-500">HEX: #95c3c0</p>
+                <p class="text-sm text-gray-500">Used for: Warning badges</p>
+              </div>
+
+              {/* Language Label Colors */}
+              <div class="p-4 rounded">
+                <div class="badge-en h-10 rounded mb-2"></div>
+                <p class="font-medium">English Label</p>
+                <p class="text-sm text-gray-600">bg-[#cf142b]</p>
+                <p class="text-sm text-gray-500">HEX: #cf142b</p>
+                <p class="text-sm text-gray-500">Used for: English language badges</p>
+              </div>
+              <div class="p-4 rounded">
+                <div class="badge-nl h-10 rounded mb-2"></div>
+                <p class="font-medium">Nederlands Label</p>
+                <p class="text-sm text-gray-600">bg-[#21468B]</p>
+                <p class="text-sm text-gray-500">HEX: #21468B</p>
+                <p class="text-sm text-gray-500">Used for: Dutch language badges</p>
+              </div>
+              <div class="p-4 rounded">
+                <div class="badge-de h-10 rounded mb-2"></div>
+                <p class="font-medium">Deutsch Label</p>
+                <p class="text-sm text-gray-600">bg-black text-[#FFD700]</p>
+                <p class="text-sm text-gray-500">BG: #000000, Text: #FFD700</p>
+                <p class="text-sm text-gray-500">Used for: German language badges</p>
+              </div>
+              <div class="p-4 rounded">
+                <div class="badge-es h-10 rounded mb-2"></div>
+                <p class="font-medium">Español Label</p>
+                <p class="text-sm text-gray-600">bg-[#F1BF00] text-[#AA151B]</p>
+                <p class="text-sm text-gray-500">BG: #F1BF00, Text: #AA151B</p>
+                <p class="text-sm text-gray-500">Used for: Spanish language badges</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Typography -->
       <section id="typography" class="mb-16" aria-labelledby="typography-title">
         <h2 id="typography-title" class="text-3xl font-bold mb-4">Typography</h2>

@@ -1,80 +1,123 @@
-import { transistorApi, SHOW_IDS } from './transistor-api';
-import type { EpisodesAnalytics, DownloadData } from '../types/transistor';
+import { getCollection, type CollectionEntry } from 'astro:content';
+import type { TransistorEpisode } from '../types/transistor';
 
-interface EpisodeStats {
+// Define valid episode collection names
+type EpisodeCollection = 'de-episodes' | 'en-episodes' | 'es-episodes' | 'nl-episodes';
+
+// Episode data type from content collection
+type EpisodeData = {
+  type: 'episode';
   id: string;
-  title: string;
-  published_at: string;
-  total_downloads: number;
-  downloads_per_day: DownloadData[];
+  attributes: {
+    title: string;
+    summary?: string | null;
+    description: string;
+    published_at: string;
+    media_url: string;
+    duration: number;
+    duration_in_mmss: string;
+    formatted_published_at: string;
+    formatted_description?: string;
+    clean_description?: string | null;
+    image_url?: string | null;
+    share_url: string;
+    slug: string;
+  };
+  relationships: {
+    show: {
+      data: {
+        id: string;
+        type: string;
+      };
+    };
+  };
+};
+
+interface EpisodeAnalytics {
+  id: string;
+  showId: string;
+  downloads: number;
+  lastUpdated: string;
 }
 
-/**
- * Get episode analytics for a specific language
- */
-export async function getLanguageEpisodeAnalytics(
-  language: keyof typeof SHOW_IDS,
-  days: number = 30
-): Promise<EpisodeStats[]> {
-  try {
-    // Calculate date range
-    const endDate = new Date();
-    const startDate = new Date();
-    startDate.setDate(startDate.getDate() - days);
+import { readFileSync } from 'fs';
+import { join } from 'path';
 
-    // Format dates as dd-mm-yyyy
-    const formatDate = (date: Date) => {
-      const dd = String(date.getDate()).padStart(2, '0');
-      const mm = String(date.getMonth() + 1).padStart(2, '0');
-      const yyyy = date.getFullYear();
-      return `${dd}-${mm}-${yyyy}`;
-    };
+// Initialize analytics data
+let analyticsData: EpisodeAnalytics[] = [];
 
-    // Get analytics from Transistor
-    const response = await transistorApi.getAllEpisodeAnalytics(
-      SHOW_IDS[language],
-      formatDate(startDate),
-      formatDate(endDate)
-    );
-
-    const analytics = response as { data: EpisodesAnalytics };
-
-    // Process analytics data
-    return analytics.data.attributes.episodes.map((episode) => ({
-      id: episode.id,
-      title: episode.title,
-      published_at: episode.published_at,
-      total_downloads: episode.downloads.reduce((sum, day) => sum + day.downloads, 0),
-      downloads_per_day: episode.downloads,
-    }));
-  } catch (error) {
-    console.error(`Error fetching episode analytics for ${language}:`, error);
-    return [];
-  }
+// Load analytics data if it exists
+try {
+  const dataPath = join(process.cwd(), 'src/data/episode-analytics.json');
+  const fileContent = readFileSync(dataPath, 'utf-8');
+  analyticsData = JSON.parse(fileContent);
+} catch (error) {
+  console.warn(
+    'No episode analytics data found. Run scripts/sync-episode-analytics.ts to generate it.'
+  );
 }
 
 /**
  * Get popular episodes for a specific language
  */
 export async function getPopularEpisodes(
-  language: keyof typeof SHOW_IDS,
-  limit: number = 5
-): Promise<EpisodeStats[]> {
-  const stats = await getLanguageEpisodeAnalytics(language);
+  lang: string,
+  limit = 3
+): Promise<CollectionEntry<EpisodeCollection>[]> {
+  // Get all episodes for this language
+  const allEpisodes = await getCollection(`${lang}-episodes` as EpisodeCollection);
 
-  // Sort by total downloads and take top N
-  return stats.sort((a, b) => b.total_downloads - a.total_downloads).slice(0, limit);
+  // Get analytics data for these episodes
+  console.log('Analytics data:', analyticsData.slice(0, 3)); // Show first 3 entries
+  console.log(
+    'All episodes:',
+    allEpisodes.slice(0, 3).map((ep) => ({ id: ep.data.id, title: ep.data.attributes.title }))
+  ); // Show first 3 entries
+
+  const episodesWithAnalytics = allEpisodes
+    .map((episode) => {
+      const analytics = analyticsData.find(
+        (a) => String(a.id) === String((episode.data as EpisodeData).id)
+      );
+
+      console.log('Comparing:', {
+        episodeId: (episode.data as EpisodeData).id,
+        analyticsFound: !!analytics,
+        downloads: analytics?.downloads,
+      });
+
+      return {
+        episode,
+        downloads: analytics?.downloads || 0,
+      };
+    })
+    // Sort by downloads (most popular first)
+    .sort((a, b) => b.downloads - a.downloads)
+    // Take the requested number of episodes
+    .slice(0, limit)
+    // Return just the episode data
+    .map(({ episode }) => episode);
+
+  return episodesWithAnalytics;
 }
 
 /**
- * Get trending episodes (highest downloads in last 7 days)
+ * Get total downloads for an episode
  */
-export async function getTrendingEpisodes(
-  language: keyof typeof SHOW_IDS,
-  limit: number = 5
-): Promise<EpisodeStats[]> {
-  const stats = await getLanguageEpisodeAnalytics(language, 7);
+export function getEpisodeDownloads(transistorId: string): number {
+  const analytics = analyticsData.find((a) => a.id === transistorId);
+  return analytics?.downloads || 0;
+}
 
-  // Sort by total downloads in last 7 days and take top N
-  return stats.sort((a, b) => b.total_downloads - a.total_downloads).slice(0, limit);
+/**
+ * Format download count for display
+ */
+export function formatDownloads(downloads: number): string {
+  if (downloads >= 1000000) {
+    return `${(downloads / 1000000).toFixed(1)}M`;
+  }
+  if (downloads >= 1000) {
+    return `${(downloads / 1000).toFixed(1)}K`;
+  }
+  return downloads.toString();
 }
