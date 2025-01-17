@@ -251,13 +251,7 @@ export const isUnpicCompatible = (src: string | ImageMetadata): boolean => {
   return false;
 };
 
-export const unpicOptimizer: ImagesOptimizer = async (
-  image,
-  breakpoints,
-  width,
-  height,
-  format
-) => {
+export const unpicOptimizer: ImagesOptimizer = async (image, breakpoints, height) => {
   if (!image) {
     return [];
   }

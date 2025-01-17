@@ -24,14 +24,14 @@ const episodes = await getCollection('en-episodes');
 
 // Sort episodes by date
 const sortedEpisodes = episodes
-  .sort((a, b) => 
+  .sort((a: Episode, b: Episode) =>
     new Date(b.data.attributes.published_at).valueOf() - 
     new Date(a.data.attributes.published_at).valueOf()
   );
 
 // Pagination
 const { EPISODES_PER_PAGE } = PAGINATION;
-const paginatedEpisodes = sortedEpisodes.slice(
+const paginatedEpisodes: Episode[] = sortedEpisodes.slice(
   (currentPage - 1) * EPISODES_PER_PAGE,
   currentPage * EPISODES_PER_PAGE
 );

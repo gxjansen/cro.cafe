@@ -3,7 +3,6 @@ import EpisodeCard from './Card.astro';
 import ErrorBoundary from '../common/ErrorBoundary.astro';
 import { validateProps } from '~/utils/component-validation';
 import { EpisodeGridPropsSchema } from '~/utils/component-validation';
-3
 import type { z } from 'zod';
 import type { Episode } from '~/types/episode';
 
@@ -13,7 +12,10 @@ interface EpisodeGridItem {
   data: {
     id: string;
     type: 'episode';
-    attributes: EpisodeAttributes;
+    attributes: EpisodeAttributes & {
+      embed_html_dark?: string;
+      description: string;
+    };
     relationships: {
       show: {
         data: {
@@ -159,7 +161,16 @@ const noEpisodesLabel = 'No episodes found';
               class="episode-cell"
               tabindex={index === 0 ? 0 : -1}
             >
-              <EpisodeCard episode={episode} />
+              <EpisodeCard
+                episode={{
+                  data: {
+                    id: episode.data.id,
+                    type: 'episode',
+                    attributes: episode.data.attributes,
+                    relationships: episode.data.relationships
+                  }
+                }}
+              />
             </div>
           ))}
         </div>
