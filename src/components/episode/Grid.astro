@@ -1,16 +1,35 @@
 ---
 import EpisodeCard from './Card.astro';
 import ErrorBoundary from '../common/ErrorBoundary.astro';
-import { validateProps, EpisodeGridPropsSchema } from '~/utils/component-validation';
-
+import { validateProps } from '~/utils/component-validation';
+import { EpisodeGridPropsSchema } from '~/utils/component-validation';
+3
 import type { z } from 'zod';
-import type { EpisodeGridPropsSchema } from '~/utils/component-validation';
+import type { Episode } from '~/types/episode';
+
+interface EpisodeGridItem {
+  id: string;
+  collection: string;
+  data: {
+    id: string;
+    type: 'episode';
+    attributes: EpisodeAttributes;
+    relationships: {
+      show: {
+        data: {
+          id: string;
+          type: string;
+        };
+      };
+    };
+  };
+}
 
 type Props = z.infer<typeof EpisodeGridPropsSchema>;
 
 // Validate props
 const props = validateProps(EpisodeGridPropsSchema, Astro.props);
-const { 
+const {
   episodes,
   limit,
   featured = false,
@@ -25,12 +44,9 @@ const {
 
 console.log('Grid received episodes:', JSON.stringify(episodes, null, 2));
 
-// Filter and sort episodes
-import type { Episode } from '~/types/episode';
-
-let displayEpisodes: Array<Episode['data']> = [];
+let displayEpisodes: EpisodeGridItem[] = [];
 try {
-  displayEpisodes = episodes
+  displayEpisodes = (episodes as EpisodeGridItem[])
     .filter(entry => {
       try {
         // Apply filters
@@ -98,19 +114,21 @@ const noEpisodesLabel = 'No episodes found';
                 id: 'skeleton',
                 type: 'episode',
                 attributes: {
+                  slug: '',
                   title: 'Loading...',
-                  summary: 'Loading...',
                   description: 'Loading...',
+                  summary: 'Loading...',
                   published_at: new Date().toISOString(),
                   media_url: '',
                   duration: 0,
                   duration_in_mmss: '00:00',
                   formatted_published_at: 'Loading...',
-                  formatted_description: 'Loading...',
+                  description: 'Loading...',
                   share_url: '',
                   embed_html: '',
                   embed_html_dark: '',
-                  slug: '',
+                  local_image_url: '',
+                  type: 'episode'
                 },
                 relationships: {
                   show: {
@@ -135,7 +153,7 @@ const noEpisodesLabel = 'No episodes found';
           class={`grid gap-4 sm:gap-6 ${gridClass}`}
           data-grid-nav
         >
-          {displayEpisodes.map((episode: Episode, index: number) => (
+          {displayEpisodes.map((episode: EpisodeGridItem, index: number) => (
             <div 
               role="gridcell"
               class="episode-cell"
