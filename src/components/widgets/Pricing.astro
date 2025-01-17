@@ -4,16 +4,16 @@ import Button from '~/components/ui/Button.astro';
 import Headline from '~/components/ui/Headline.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 import type { Pricing as Props } from '~/types';
+import type { PricingItem } from '~/types/pricing';
 
 const {
   title = '',
   subtitle = '',
   tagline = '',
-  prices = [],
-
+  prices = [] as PricingItem[],
   id,
   isDark = false,
-  classes = {},
+  classes = {} as Record<string, string>,
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
 ---
@@ -24,7 +24,16 @@ const {
     <div class="grid grid-cols-3 gap-4 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
       {
         prices &&
-          prices.map(({ title, subtitle, price, period, items, callToAction, hasRibbon = false, ribbonTitle }) => (
+          prices.map(({ 
+            title: itemTitle, 
+            subtitle: itemSubtitle, 
+            price, 
+            period, 
+            items, 
+            callToAction, 
+            hasRibbon = false, 
+            ribbonTitle 
+          }: PricingItem) => (
             <div class="col-span-3 mx-auto flex w-full sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1 intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter">
               {price && period && (
                 <div class="rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow px-6 py-8 flex w-full max-w-sm flex-col justify-between text-center">
@@ -36,10 +45,10 @@ const {
                     </div>
                   )}
                   <div class="px-2 py-0">
-                    {title && (
-                      <h3 class="text-center text-xl font-semibold uppercase leading-6 tracking-wider mb-2">{title}</h3>
+                    {itemTitle && (
+                      <h3 class="text-center text-xl font-semibold uppercase leading-6 tracking-wider mb-2">{itemTitle}</h3>
                     )}
-                    {subtitle && <p class="font-light sm:text-lg text-gray-600 dark:text-slate-400">{subtitle}</p>}
+                    {itemSubtitle && <p class="font-light sm:text-lg text-gray-600 dark:text-slate-400">{itemSubtitle}</p>}
                     <div class="my-8">
                       <div class="flex items-center justify-center text-center mb-1">
                         <span class="text-5xl">$</span>
@@ -54,7 +63,7 @@ const {
                             description && (
                               <li class="mb-1.5 flex items-start space-x-3 leading-7">
                                 <div class="rounded-full bg-primary mt-1">
-                                  <Icon name={icon ? icon : 'tabler:check'} class="w-5 h-5 font-bold p-1 text-white" />
+                                  <Icon name={icon || 'tabler:check'} class="w-5 h-5 font-bold p-1 text-white" />
                                 </div>
                                 <span>{description}</span>
                               </li>
@@ -68,8 +77,12 @@ const {
                       {typeof callToAction === 'string' ? (
                         <Fragment set:html={callToAction} />
                       ) : (
-                        callToAction &&
-                        callToAction.href && <Button {...(hasRibbon ? { variant: 'primary' } : {})} {...callToAction} />
+                        callToAction?.href && <Button 
+                          {...(hasRibbon ? { variant: 'primary' } : {})} 
+                          text={callToAction.text}
+                          href={callToAction.href}
+                          icon={callToAction.icon}
+                        />
                       )}
                     </div>
                   )}
