@@ -1,10 +1,8 @@
-import { getImage } from 'astro:assets';
-import type { APIRoute } from 'astro';
 import { Resvg } from '@resvg/resvg-js';
 import satori from 'satori';
 import OpenGraphImage from '../../../components/common/OpenGraphImage.astro';
 
-export const GET: APIRoute = async ({ params }) => {
+export const get = async ({ params }: { params: { type: string; title: string } }) => {
   const { type, title } = params;
 
   if (!type || !title) {

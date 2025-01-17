@@ -1,16 +1,11 @@
 import type { PaginateFunction } from 'astro';
-import { getCollection, render } from 'astro:content';
+import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import type { Post } from '~/types';
 import { APP_BLOG } from 'astrowind:config';
-import {
-  cleanSlug,
-  trimSlash,
-  BLOG_BASE,
-  POST_PERMALINK_PATTERN,
-  CATEGORY_BASE,
-  TAG_BASE,
-} from './permalinks';
+import { trimSlash } from './permalinks';
+
+type BlogEntry = CollectionEntry<'post'>;
 
 const generatePermalink = async ({
   id,
@@ -30,7 +25,8 @@ const generatePermalink = async ({
   const minute = String(publishDate.getMinutes()).padStart(2, '0');
   const second = String(publishDate.getSeconds()).padStart(2, '0');
 
-  const permalink = POST_PERMALINK_PATTERN.replace('%slug%', slug)
+  const permalink = `blog/%slug%`
+    .replace('%slug%', slug)
     .replace('%id%', id)
     .replace('%category%', category || '')
     .replace('%year%', year)
@@ -42,18 +38,22 @@ const generatePermalink = async ({
 
   return permalink
     .split('/')
-    .map((el) => trimSlash(el))
-    .filter((el) => !!el)
+    .map((el: string) => trimSlash(el))
+    .filter((el: string) => !!el)
     .join('/');
 };
 
-const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> => {
+const getNormalizedPost = async (post: BlogEntry): Promise<Post> => {
+  if (!post || !post.data) {
+    throw new Error('Invalid post data');
+  }
+
   const { id, data } = post;
-  const { Content, remarkPluginFrontmatter } = await render(post);
+  const rendered = await post.render();
+  const { Content, remarkPluginFrontmatter } = rendered;
 
   const {
     publishDate: rawPublishDate = new Date(),
-    updateDate: rawUpdateDate,
     title,
     excerpt,
     image,
@@ -61,22 +61,20 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     category: rawCategory,
     author,
     draft = false,
-    metadata = {},
   } = data;
 
-  const slug = cleanSlug(id); // cleanSlug(rawSlug.split('/').pop());
+  const slug = id.split('/').pop() || id;
   const publishDate = new Date(rawPublishDate);
-  const updateDate = rawUpdateDate ? new Date(rawUpdateDate) : undefined;
 
   const category = rawCategory
     ? {
-        slug: cleanSlug(rawCategory),
+        slug: rawCategory.toLowerCase().replace(/\s+/g, '-'),
         title: rawCategory,
       }
     : undefined;
 
   const tags = rawTags.map((tag: string) => ({
-    slug: cleanSlug(tag),
+    slug: tag.toLowerCase().replace(/\s+/g, '-'),
     title: tag,
   }));
 
@@ -84,38 +82,31 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     id: id,
     slug: slug,
     permalink: await generatePermalink({ id, slug, publishDate, category: category?.slug }),
-
     publishDate: publishDate,
-    updateDate: updateDate,
-
     title: title,
-    excerpt: excerpt,
+    description: excerpt || '',
+    body: '',
     image: image,
-
     category: category,
     tags: tags,
     author: author,
-
     draft: draft,
-
-    metadata,
-
-    Content: Content,
-    // or 'content' in case you consume from API
-
+    excerpt: excerpt,
     readingTime: remarkPluginFrontmatter?.readingTime,
+    Content: Content,
   };
 };
 
 const load = async function (): Promise<Array<Post>> {
-  const posts = await getCollection('post');
-  const normalizedPosts = posts.map(async (post) => await getNormalizedPost(post));
+  const posts = await getCollection('post', {
+    type: 'content',
+    filter: (entry: BlogEntry) => import.meta.env.DEV || !entry.data.draft,
+  });
+  const normalizedPosts = await Promise.all(posts.map(getNormalizedPost));
 
-  const results = (await Promise.all(normalizedPosts))
-    .sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf())
-    .filter((post) => !post.draft);
-
-  return results;
+  return normalizedPosts.sort(
+    (a: Post, b: Post) => b.publishDate.valueOf() - a.publishDate.valueOf()
+  );
 };
 
 let _posts: Array<Post>;
@@ -184,7 +175,7 @@ export const findLatestPosts = async ({ count }: { count?: number }): Promise<Ar
 export const getStaticPathsBlogList = async ({ paginate }: { paginate: PaginateFunction }) => {
   if (!isBlogEnabled || !isBlogListRouteEnabled) return [];
   return paginate(await fetchPosts(), {
-    params: { blog: BLOG_BASE || undefined },
+    params: { blog: 'blog' },
     pageSize: blogPostsPerPage,
   });
 };
@@ -192,7 +183,7 @@ export const getStaticPathsBlogList = async ({ paginate }: { paginate: PaginateF
 /** */
 export const getStaticPathsBlogPost = async () => {
   if (!isBlogEnabled || !isBlogPostRouteEnabled) return [];
-  return (await fetchPosts()).flatMap((post) => ({
+  return (await fetchPosts()).flatMap((post: Post) => ({
     params: {
       blog: post.permalink,
     },
@@ -205,18 +196,18 @@ export const getStaticPathsBlogCategory = async ({ paginate }: { paginate: Pagin
   if (!isBlogEnabled || !isBlogCategoryRouteEnabled) return [];
 
   const posts = await fetchPosts();
-  const categories = {};
-  posts.map((post) => {
+  const categories: Record<string, { slug: string; title: string }> = {};
+  posts.forEach((post: Post) => {
     if (post.category?.slug) {
-      categories[post.category?.slug] = post.category;
+      categories[post.category.slug] = post.category;
     }
   });
 
-  return Array.from(Object.keys(categories)).flatMap((categorySlug) =>
+  return Array.from(Object.keys(categories)).flatMap((categorySlug: string) =>
     paginate(
-      posts.filter((post) => post.category?.slug && categorySlug === post.category?.slug),
+      posts.filter((post: Post) => post.category?.slug && categorySlug === post.category.slug),
       {
-        params: { category: categorySlug, blog: CATEGORY_BASE || undefined },
+        params: { category: categorySlug, blog: 'category' },
         pageSize: blogPostsPerPage,
         props: { category: categories[categorySlug] },
       }
@@ -229,22 +220,26 @@ export const getStaticPathsBlogTag = async ({ paginate }: { paginate: PaginateFu
   if (!isBlogEnabled || !isBlogTagRouteEnabled) return [];
 
   const posts = await fetchPosts();
-  const tags = {};
-  posts.map((post) => {
+  const tags: Record<string, { slug: string; title: string }> = {};
+  posts.forEach((post: Post) => {
     if (Array.isArray(post.tags)) {
-      post.tags.map((tag) => {
-        tags[tag?.slug] = tag;
+      post.tags.forEach((tag: { slug: string; title: string }) => {
+        if (tag?.slug) {
+          tags[tag.slug] = tag;
+        }
       });
     }
   });
 
-  return Array.from(Object.keys(tags)).flatMap((tagSlug) =>
+  return Array.from(Object.keys(tags)).flatMap((tagSlug: string) =>
     paginate(
       posts.filter(
-        (post) => Array.isArray(post.tags) && post.tags.find((elem) => elem.slug === tagSlug)
+        (post: Post) =>
+          Array.isArray(post.tags) &&
+          post.tags.find((elem: { slug: string }) => elem.slug === tagSlug)
       ),
       {
-        params: { tag: tagSlug, blog: TAG_BASE || undefined },
+        params: { tag: tagSlug, blog: 'tag' },
         pageSize: blogPostsPerPage,
         props: { tag: tags[tagSlug] },
       }
@@ -256,7 +251,7 @@ export const getStaticPathsBlogTag = async ({ paginate }: { paginate: PaginateFu
 export async function getRelatedPosts(originalPost: Post, maxResults: number = 4): Promise<Post[]> {
   const allPosts = await fetchPosts();
   const originalTagsSet = new Set(
-    originalPost.tags ? originalPost.tags.map((tag) => tag.slug) : []
+    originalPost.tags ? originalPost.tags.map((tag: { slug: string }) => tag.slug) : []
   );
 
   const postsWithScores = allPosts.reduce(
@@ -273,7 +268,7 @@ export async function getRelatedPosts(originalPost: Post, maxResults: number = 4
       }
 
       if (iteratedPost.tags) {
-        iteratedPost.tags.forEach((tag) => {
+        iteratedPost.tags.forEach((tag: { slug: string }) => {
           if (originalTagsSet.has(tag.slug)) {
             score += 1;
           }
@@ -286,14 +281,12 @@ export async function getRelatedPosts(originalPost: Post, maxResults: number = 4
     []
   );
 
-  postsWithScores.sort((a, b) => b.score - a.score);
+  postsWithScores.sort((a: { score: number }, b: { score: number }) => b.score - a.score);
 
   const selectedPosts: Post[] = [];
-  let i = 0;
-  while (selectedPosts.length < maxResults && i < postsWithScores.length) {
-    selectedPosts.push(postsWithScores[i].post);
-    i++;
-  }
+  postsWithScores.slice(0, maxResults).forEach(({ post }: { post: Post }) => {
+    selectedPosts.push(post);
+  });
 
   return selectedPosts;
 }

@@ -5,6 +5,7 @@ import type { Episode, Person, Quote, Platform, Brand } from '~/types';
 // Mock data for testing
 const mockPerson: Person = {
   id: 'person-1',
+  type: 'guest',
   name: 'John Doe',
   role: 'Guest Expert',
   bio: 'A renowned expert in conversion optimization',
@@ -15,48 +16,88 @@ const mockPerson: Person = {
 
 const mockEpisode: Episode = {
   id: 'mastering-conversion-rates',
-  language: 'en',
-  title: 'Mastering Conversion Rates',
-  description: 'Deep dive into conversion rate optimization strategies',
-  date: new Date('2023-01-15'),
-  duration: 3600, // 1 hour
-  audio_url: 'https://example.com/podcast/episode1.mp3',
-  transcript_url: 'https://example.com/podcast/episode1-transcript.txt',
-  guests: [mockPerson],
-  platforms: [],
-  quotes: [],
-  type: 'episodes',
+  collection: 'en-episodes',
+  data: {
+    id: 'mastering-conversion-rates',
+    type: 'episode',
+    attributes: {
+      title: 'Mastering Conversion Rates',
+      summary: null,
+      description: 'Deep dive into conversion rate optimization strategies',
+      published_at: '2023-01-15T00:00:00.000Z',
+      media_url: 'https://example.com/podcast/episode1.mp3',
+      duration: 3600,
+      duration_in_mmss: '60:00',
+      formatted_published_at: 'January 15, 2023',
+      transcript_url: 'https://example.com/podcast/episode1-transcript.txt',
+      share_url: 'https://example.com/share',
+      embed_html: '<iframe></iframe>',
+      embed_html_dark: '<iframe></iframe>',
+      slug: 'mastering-conversion-rates',
+    },
+    relationships: {
+      show: {
+        data: {
+          id: '5036',
+          type: 'show',
+        },
+      },
+      guests: [
+        {
+          id: 'person-1',
+          type: 'guest',
+        },
+      ],
+    },
+  },
 };
 
 const mockQuote: Quote = {
-  id: 'conversion-is-all-about-understanding-user-behavior',
-  language: 'en',
-  text: 'Conversion is all about understanding user behavior',
-  author: mockPerson,
-  episode: mockEpisode,
-  timestamp: 1800, // 30 minutes into the episode
+  id: 'quote-1',
   type: 'quotes',
+  text: 'Conversion is all about understanding user behavior',
+  author: 'John Doe',
+  episode: 'mastering-conversion-rates',
+  timestamp: '1800',
+  data: {
+    id: 'quote-1',
+    type: 'quotes',
+    text: 'Conversion is all about understanding user behavior',
+    author: 'John Doe',
+    episode: 'mastering-conversion-rates',
+    timestamp: '1800',
+  },
+  collection: 'en-quotes',
 };
 
 const mockPlatform: Platform = {
   id: 'spotify',
-  language: 'en',
+  type: 'platforms',
   name: 'Spotify',
   description: 'Listen on Spotify',
   url: 'https://spotify.com/crocafe',
-  icon_url: 'https://example.com/spotify-icon.png',
-  type: 'platforms',
+  logo: 'https://example.com/spotify-icon.png',
+  data: {
+    id: 'spotify',
+    type: 'platforms',
+    name: 'Spotify',
+    description: 'Listen on Spotify',
+    url: 'https://spotify.com/crocafe',
+    logo: 'https://example.com/spotify-icon.png',
+  },
+  collection: 'en-platforms',
 };
 
 const mockBrand: Brand = {
   id: 'example-brand',
-  language: 'en',
   name: 'Example Brand',
   description: 'An example brand for testing',
   logo_url: 'https://example.com/brand-logo.png',
   website_url: 'https://example.com/brand',
   iconUrl: 'https://example.com/brand-icon.png',
-  type: 'brands',
+  language: 'en',
+  type: 'brand',
+  canonicalUrl: 'https://example.com/brand',
 };
 
 describe('Structured Data Generator', () => {
@@ -91,7 +132,7 @@ describe('Structured Data Generator', () => {
       expect(quoteSchema).toHaveProperty('@context', 'https://schema.org');
       expect(quoteSchema).toHaveProperty('@type', 'Quotation');
       expect(quoteSchema.text).toBe('Conversion is all about understanding user behavior');
-      expect(quoteSchema.citation).toHaveProperty('name', 'Mastering Conversion Rates');
+      expect(quoteSchema.citation).toHaveProperty('name', 'mastering-conversion-rates');
     });
   });
 

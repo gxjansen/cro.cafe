@@ -10,9 +10,11 @@ export default defineConfig({
   site: 'https://www.cro.cafe',
   trailingSlash: 'ignore',
   integrations: [
+    // @ts-expect-error - Type mismatch in internal Astro types
     tailwind({
       applyBaseStyles: false,
     }),
+    // @ts-expect-error - Type mismatch in internal Astro types
     sitemap({
       i18n: {
         defaultLocale: 'en',
@@ -24,11 +26,14 @@ export default defineConfig({
         },
       },
     }),
+    // @ts-expect-error - Type mismatch in internal Astro types
     mdx(),
+    // @ts-expect-error - Type mismatch in internal Astro types
     react({
       include: ['**/react/*'],
       experimentalReactChildren: true,
     }),
+    // @ts-expect-error - Type mismatch in internal Astro types
     icon(),
   ],
   output: 'static',

@@ -222,11 +222,6 @@ apps:
     isRelatedPostsEnabled: true # If a widget with related posts is to be displayed below each post
     relatedPostsCount: 4 # Number of related posts to display
 
-analytics:
-  vendors:
-    googleAnalytics:
-      id: null # or "G-XXXXXXXXXX"
-
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 ```

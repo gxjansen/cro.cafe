@@ -4,39 +4,10 @@ import { validateProps, EpisodeCardPropsSchema } from '~/utils/component-validat
 import { getEpisodePermalink, getLanguageFromShowId } from '~/utils/permalinks';
 import { getEpisodeImage } from '~/utils/images';
 import DOMPurify from 'isomorphic-dompurify';
+import type { Episode } from '~/types/episode';
 
 interface Props {
-  episode: {
-    id: string;
-    type: 'episode';
-    attributes: {
-      title: string;
-      summary: string;
-      description: string;
-      published_at: string;
-      media_url: string;
-      duration: number;
-      duration_in_mmss: string;
-      formatted_published_at: string;
-      formatted_description: string;
-      clean_description?: string;
-      image_url?: string;
-      video_url?: string;
-      transcript_url?: string;
-      share_url: string;
-      embed_html: string;
-      embed_html_dark: string;
-      slug: string;
-    };
-    relationships: {
-      show: {
-        data: {
-          id: string;
-          type: string;
-        };
-      };
-    };
-  };
+  episode: Episode;
   loading?: boolean;
 }
 
@@ -53,21 +24,21 @@ let image = { src: '', width: 0, height: 0 };
 let slug = '';
 
 try {
-  title = episode.attributes.title;
+  title = episode.data.attributes.title;
   
   // Get language from show ID
-  language = getLanguageFromShowId(episode.relationships.show.data.id);
+  language = getLanguageFromShowId(episode.data.relationships.show.data.id);
 
   // Get optimized episode image
-  image = await getEpisodeImage(`/images/episodes/${language}/${episode.attributes.slug.replace(/_/g, '-').toLowerCase()}.webp`, 'card');
+  image = await getEpisodeImage(`/images/episodes/${language}/${episode.data.attributes.slug.replace(/_/g, '-').toLowerCase()}.webp`, 'card');
 
   // Use clean_description first, then fall back to summary or cleaned description
-  cleanSummary = episode.attributes.clean_description || 
-                episode.attributes.summary || 
-                DOMPurify.sanitize(episode.attributes.description, { ALLOWED_TAGS: [] });
+  cleanSummary = episode.data.attributes.clean_description || 
+                episode.data.attributes.summary || 
+                DOMPurify.sanitize(episode.data.attributes.description, { ALLOWED_TAGS: [] });
 
   // Get slug from attributes
-  slug = episode.attributes.slug;
+  slug = episode.data.attributes.slug;
 
   console.log('Card processed data:', {
     title,
@@ -80,21 +51,8 @@ try {
   console.error('Error processing episode data:', error);
 }
 
-// Prepare ARIA labels
-let durationLabel = '';
-let dateLabel = '';
-let cardLabel = '';
-
-try {
-  durationLabel = `Duration: ${episode.attributes.duration_in_mmss}`;
-  dateLabel = `Published: ${episode.attributes.formatted_published_at}`;
-  cardLabel = `Episode: ${title}`;
-} catch (error) {
-  console.error('Error preparing labels:', error);
-  durationLabel = 'Duration not available';
-  dateLabel = 'Publication date not available';
-  cardLabel = 'Episode information';
-}
+// Prepare ARIA label
+let cardLabel = `Episode: ${title}`;
 ---
 
 <ErrorBoundary fallback="Episode information unavailable">
@@ -134,7 +92,7 @@ try {
           </div>
           <h3 class="text-lg font-bold mb-2 line-clamp-2">
             <a 
-              href={`/${language}/episodes/${episode.attributes.slug}`}
+              href={`/${language}/episodes/${episode.data.attributes.slug}`}
               class="hover:text-accent dark:hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 dark:focus:ring-offset-gray-800 rounded"
               aria-label={cardLabel}
             >
@@ -144,7 +102,7 @@ try {
           <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-3 mb-4">{cleanSummary}</p>
           <div class="mt-auto pt-4">
             <a
-              href={`/${language}/episodes/${episode.attributes.slug}`}
+              href={`/${language}/episodes/${episode.data.attributes.slug}`}
               class="btn btn-primary inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 dark:focus:ring-offset-gray-800"
             >
               <span>

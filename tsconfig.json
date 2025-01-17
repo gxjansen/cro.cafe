@@ -14,7 +14,15 @@
     "paths": {
       "~/*": ["src/*"]
     },
-    "lib": ["ESNext", "DOM", "ES2020"]
+    "lib": ["ESNext", "DOM", "ES2020"],
+    "types": [
+      "@astrojs/tsconfig/strictest",
+      "@types/node",
+      "@types/react",
+      "@types/react-dom",
+      "./src/types/unpic-astro.d.ts",
+      "./src/types/astrojs-rss.d.ts"
+    ]
   },
   "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist/"]

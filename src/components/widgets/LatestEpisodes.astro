@@ -44,13 +44,17 @@ try {
     // Transform data structure to match Card.astro expectations
     return {
       id: latestEpisode.id,
-      type: 'episode',
-      attributes: latestEpisode.data.attributes,
-      relationships: {
-        show: {
-          data: {
-            id: latestEpisode.data.relationships.show.data.id,
-            type: 'show'
+      collection: `${lang}-episodes`,
+      data: {
+        id: latestEpisode.id,
+        type: 'episode',
+        attributes: latestEpisode.data.attributes,
+        relationships: {
+          show: {
+            data: {
+              id: latestEpisode.data.relationships.show.data.id,
+              type: 'show'
+            }
           }
         }
       }

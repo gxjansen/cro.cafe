@@ -1,4 +1,4 @@
-import type { APIRoute } from 'astro';
+import type { APIContext } from 'astro';
 import { getCollection } from 'astro:content';
 import { LANGUAGES, type Language } from '../utils/language';
 
@@ -89,7 +89,7 @@ async function getContentEntries(): Promise<SitemapEntry[]> {
       episodes.forEach((episode) => {
         entries.push({
           url: `${SITE_URL}/${lang}/episodes/${episode.data.id}`,
-          lastmod: formatDate(episode.data.date),
+          lastmod: formatDate(episode.data.attributes?.published_at),
           changefreq: 'weekly',
           priority: 0.9,
         });
@@ -126,7 +126,7 @@ async function getContentEntries(): Promise<SitemapEntry[]> {
   return entries;
 }
 
-export const GET: APIRoute = async () => {
+export const get = async () => {
   const entries = await getContentEntries();
   const sitemap = generateSitemapXML(entries);
 

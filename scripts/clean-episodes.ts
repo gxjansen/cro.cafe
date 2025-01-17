@@ -28,7 +28,7 @@ async function cleanupEpisodes() {
 
     try {
       const episode = JSON.parse(fs.readFileSync(filePath, 'utf-8')) as Episode;
-      const normalizedTitle = normalizeTitle(episode.title);
+      const normalizedTitle = normalizeTitle(episode.data.attributes.title);
 
       if (!episodeGroups.has(normalizedTitle)) {
         episodeGroups.set(normalizedTitle, { files: [], episodes: [] });
@@ -49,17 +49,29 @@ async function cleanupEpisodes() {
 
       // Find the episode with the most complete data
       const bestEpisode = group.episodes.reduce((best, current) => {
-        const bestScore = Object.values(best).filter((v) => v).length;
-        const currentScore = Object.values(current).filter((v) => v).length;
+        const bestScore = Object.values(best.data.attributes).filter((v) => v).length;
+        const currentScore = Object.values(current.data.attributes).filter((v) => v).length;
         return currentScore > bestScore ? current : best;
       });
 
       // Generate the correct short slug
-      const shortSlug = generateSlug(bestEpisode.title);
+      const shortSlug = generateSlug(bestEpisode.data.attributes.title);
       const shortPath = path.join(episodeDir, `${shortSlug}.json`);
 
+      // Create updated episode with new ID
+      const updatedEpisode: Episode = {
+        id: shortSlug,
+        collection: bestEpisode.collection,
+        data: {
+          id: shortSlug,
+          type: 'episode',
+          attributes: bestEpisode.data.attributes,
+          relationships: bestEpisode.data.relationships,
+        },
+      };
+
       // Write the best episode to the short slug file
-      fs.writeFileSync(shortPath, JSON.stringify({ ...bestEpisode, id: shortSlug }, null, 2));
+      fs.writeFileSync(shortPath, JSON.stringify(updatedEpisode, null, 2));
       console.log(`Wrote merged episode to ${shortPath}`);
 
       // Remove all other files for this episode

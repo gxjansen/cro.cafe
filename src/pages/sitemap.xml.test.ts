@@ -1,7 +1,6 @@
 import { describe, expect, it, vi, beforeEach } from 'vitest';
-import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
-import { GET } from './sitemap.xml';
+import { get } from './sitemap.xml';
 
 // Mock getCollection
 vi.mock('astro:content', () => ({
@@ -52,7 +51,7 @@ describe('Sitemap Generation', () => {
       return Promise.resolve([]);
     });
 
-    const response = await GET({} as Parameters<APIRoute>[0]);
+    const response = await get();
     const sitemap = await response.text();
 
     // Verify response headers
@@ -78,7 +77,7 @@ describe('Sitemap Generation', () => {
     // Mock empty collections
     (getCollection as jest.Mock).mockResolvedValue([]);
 
-    const response = await GET({} as Parameters<APIRoute>[0]);
+    const response = await get();
     const sitemap = await response.text();
 
     // Should still include static pages
@@ -91,7 +90,7 @@ describe('Sitemap Generation', () => {
   it('includes correct priorities and change frequencies', async () => {
     (getCollection as jest.Mock).mockResolvedValue([]);
 
-    const response = await GET({} as Parameters<APIRoute>[0]);
+    const response = await get();
     const sitemap = await response.text();
 
     // Check homepage priority
@@ -109,7 +108,7 @@ describe('Sitemap Generation', () => {
     // Mock collection error
     (getCollection as jest.Mock).mockRejectedValue(new Error('Collection error'));
 
-    const response = await GET({} as Parameters<APIRoute>[0]);
+    const response = await get();
     const sitemap = await response.text();
 
     // Should still generate valid XML with static pages

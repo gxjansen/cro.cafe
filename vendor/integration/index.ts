@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import os from 'node:os';
 import type { AstroConfig, AstroIntegration } from 'astro';
+import type { Plugin } from 'vite';
 
 import configBuilder, { type Config } from './utils/configBuilder';
 import loadConfig from './utils/loadConfig';
@@ -8,18 +9,10 @@ import loadConfig from './utils/loadConfig';
 export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegration => {
   let cfg: AstroConfig;
   return {
-    name: 'astrowind-integration',
+    name: '@astrowind/integration',
 
     hooks: {
-      'astro:config:setup': async ({
-        // command,
-        config,
-        // injectRoute,
-        // isRestart,
-        logger,
-        updateConfig,
-        addWatchFile,
-      }) => {
+      'astro:config:setup': async ({ config, logger, updateConfig, addWatchFile }) => {
         const buildLogger = logger.fork('astrowind');
 
         const virtualModuleId = 'astrowind:config';
@@ -29,21 +22,20 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegra
         const { SITE, I18N, METADATA, APP_BLOG, UI, ANALYTICS } = configBuilder(rawJsonConfig);
 
         updateConfig({
-          site: SITE.site,
-          base: SITE.base,
-
+          site: SITE.site || '',
+          base: SITE.base || '/',
           trailingSlash: SITE.trailingSlash ? 'always' : 'never',
-
           vite: {
             plugins: [
               {
                 name: 'vite-plugin-astrowind-config',
-                resolveId(id) {
+                resolveId(id: string): string | undefined {
                   if (id === virtualModuleId) {
                     return resolvedVirtualModuleId;
                   }
+                  return undefined;
                 },
-                load(id) {
+                load(id: string): string | undefined {
                   if (id === resolvedVirtualModuleId) {
                     return `
                     export const SITE = ${JSON.stringify(SITE)};
@@ -54,20 +46,21 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegra
                     export const ANALYTICS = ${JSON.stringify(ANALYTICS)};
                     `;
                   }
+                  return undefined;
                 },
-              },
+              } satisfies Plugin,
             ],
           },
         });
 
         if (typeof _themeConfig === 'string') {
           addWatchFile(new URL(_themeConfig, config.root));
-
           buildLogger.info(`Astrowind \`${_themeConfig}\` has been loaded.`);
         } else {
-          buildLogger.info(`Astrowind config has been loaded.`);
+          buildLogger.info('Astrowind config has been loaded.');
         }
       },
+
       'astro:config:done': async ({ config }) => {
         cfg = config;
       },
@@ -114,7 +107,6 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegra
               );
             }
           }
-          // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (error) {
           /* empty */
         }

@@ -34,29 +34,11 @@ export type ImagesOptimizer = (
   format?: string
 ) => Promise<Array<{ src: string; width: number }>>;
 
-/* ******* */
 const config = {
-  // FIXME: Use this when image.width is minor than deviceSizes
   imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-
   deviceSizes: [
-    640, // older and lower-end phones
-    750, // iPhone 6-8
-    828, // iPhone XR/11
-    960, // older horizontal phones
-    1080, // iPhone 6-8 Plus
-    1280, // 720p
-    1668, // Various iPads
-    1920, // 1080p
-    2048, // QXGA
-    2560, // WQXGA
-    3200, // QHD+
-    3840, // 4K
-    4480, // 4.5K
-    5120, // 5K
-    6016, // 6K
+    640, 750, 828, 960, 1080, 1280, 1668, 1920, 2048, 2560, 3200, 3840, 4480, 5120, 6016,
   ],
-
   formats: ['image/webp'],
 };
 
@@ -71,38 +53,35 @@ const parseAspectRatio = (aspectRatio: number | string | null | undefined): numb
     const match = aspectRatio.match(/(\d+)\s*[/:]\s*(\d+)/);
 
     if (match) {
-      const [, num, den] = match.map(Number);
-      if (den && !isNaN(num)) return num / den;
-    } else {
-      const numericValue = parseFloat(aspectRatio);
-      if (!isNaN(numericValue)) return numericValue;
+      const [, numStr, denStr] = match;
+      const num = Number(numStr);
+      const den = Number(denStr);
+
+      if (!isNaN(num) && !isNaN(den) && den !== 0) {
+        return num / den;
+      }
+    }
+
+    const numericValue = parseFloat(aspectRatio);
+    if (!isNaN(numericValue)) {
+      return numericValue;
     }
   }
 
   return undefined;
 };
 
-/**
- * Gets the `sizes` attribute for an image, based on the layout and width
- */
 export const getSizes = (width?: number, layout?: Layout): string | undefined => {
   if (!width || !layout) {
     return undefined;
   }
   switch (layout) {
-    // If screen is wider than the max size, image width is the max size,
-    // otherwise it's the width of the screen
     case `constrained`:
       return `(min-width: ${width}px) ${width}px, 100vw`;
-
-    // Image is always the same width, whatever the size of the screen
     case `fixed`:
       return `${width}px`;
-
-    // Image is always the width of the screen
     case `fullWidth`:
       return `100vw`;
-
     default:
       return undefined;
   }
@@ -132,7 +111,6 @@ const getStyle = ({
     ['object-position', objectPosition],
   ];
 
-  // If background is a URL, set it to cover the image and not repeat
   if (
     background?.startsWith('https:') ||
     background?.startsWith('http:') ||
@@ -144,33 +122,47 @@ const getStyle = ({
   } else {
     styleEntries.push(['background', background]);
   }
+
   if (layout === 'fixed') {
     styleEntries.push(['width', pixelate(width)]);
     styleEntries.push(['height', pixelate(height)]);
     styleEntries.push(['object-position', 'top left']);
   }
+
   if (layout === 'constrained') {
     styleEntries.push(['max-width', pixelate(width)]);
     styleEntries.push(['max-height', pixelate(height)]);
-    styleEntries.push(['aspect-ratio', aspectRatio ? `${aspectRatio}` : undefined]);
+    if (aspectRatio) {
+      styleEntries.push(['aspect-ratio', `${aspectRatio}`]);
+    }
     styleEntries.push(['width', '100%']);
   }
+
   if (layout === 'fullWidth') {
     styleEntries.push(['width', '100%']);
-    styleEntries.push(['aspect-ratio', aspectRatio ? `${aspectRatio}` : undefined]);
+    if (aspectRatio) {
+      styleEntries.push(['aspect-ratio', `${aspectRatio}`]);
+    }
     styleEntries.push(['height', pixelate(height)]);
   }
+
   if (layout === 'responsive') {
     styleEntries.push(['width', '100%']);
     styleEntries.push(['height', 'auto']);
-    styleEntries.push(['aspect-ratio', aspectRatio ? `${aspectRatio}` : undefined]);
+    if (aspectRatio) {
+      styleEntries.push(['aspect-ratio', `${aspectRatio}`]);
+    }
   }
+
   if (layout === 'contained') {
     styleEntries.push(['max-width', '100%']);
     styleEntries.push(['max-height', '100%']);
     styleEntries.push(['object-fit', 'contain']);
-    styleEntries.push(['aspect-ratio', aspectRatio ? `${aspectRatio}` : undefined]);
+    if (aspectRatio) {
+      styleEntries.push(['aspect-ratio', `${aspectRatio}`]);
+    }
   }
+
   if (layout === 'cover') {
     styleEntries.push(['max-width', '100%']);
     styleEntries.push(['max-height', '100%']);
@@ -200,19 +192,20 @@ const getBreakpoints = ({
   ) {
     return breakpoints || config.deviceSizes;
   }
+
   if (!width) {
     return [];
   }
+
   const doubleWidth = width * 2;
   if (layout === 'fixed') {
     return [width, doubleWidth];
   }
+
   if (layout === 'constrained') {
     return [
-      // Always include the image at 1x and 2x the specified width
       width,
       doubleWidth,
-      // Filter out any resolutions that are larger than the double-res image
       ...(breakpoints || config.deviceSizes).filter((w) => w < doubleWidth),
     ];
   }
@@ -220,7 +213,6 @@ const getBreakpoints = ({
   return [];
 };
 
-/* ** */
 export const astroAsseetsOptimizer: ImagesOptimizer = async (
   image,
   breakpoints,
@@ -252,7 +244,31 @@ export const astroAsseetsOptimizer: ImagesOptimizer = async (
 
 export const UnpicImage = Image;
 
-/* ** */
+export const isUnpicCompatible = (src: string | ImageMetadata): boolean => {
+  if (typeof src === 'string') {
+    return src.startsWith('http') || src.startsWith('https');
+  }
+  return false;
+};
+
+export const unpicOptimizer: ImagesOptimizer = async (
+  image,
+  breakpoints,
+  width,
+  height,
+  format
+) => {
+  if (!image) {
+    return [];
+  }
+
+  return breakpoints.map((w: number) => ({
+    src: typeof image === 'string' ? image : image.src,
+    width: w,
+    height: height || undefined,
+  }));
+};
+
 export async function getImagesOptimized(
   image: ImageMetadata | string,
   {
@@ -283,25 +299,20 @@ export async function getImagesOptimized(
   sizes ||= getSizes(Number(width) || undefined, layout);
   aspectRatio = parseAspectRatio(aspectRatio);
 
-  // Calculate dimensions from aspect ratio
   if (aspectRatio) {
     if (width) {
-      if (height) {
-        /* empty */
-      } else {
+      if (!height) {
         height = width / aspectRatio;
       }
     } else if (height) {
       width = Number(height * aspectRatio);
     } else if (layout !== 'fullWidth') {
-      // Fullwidth images have 100% width, so aspectRatio is applicable
       console.error('When aspectRatio is set, either width or height must also be set');
       console.error('Image', image);
     }
   } else if (width && height) {
     aspectRatio = width / height;
   } else if (layout !== 'fullWidth') {
-    // Fullwidth images don't need dimensions
     console.error('Either aspectRatio or both width and height must be set');
     console.error('Image', image);
   }

@@ -5,17 +5,18 @@ import { getGuestImage } from '~/utils/images';
 import { SITE } from '~/config';
 import ErrorBoundary from '~/components/common/ErrorBoundary.astro';
 import EpisodeCard from '~/components/episode/Card.astro';
+import type { Guest } from '~/types/guest';
 
 export async function getStaticPaths() {
   // Collect all guests from all languages
-  const allGuests = [];
+  const allGuests: Guest[] = [];
   for (const lang of SITE.languages) {
     const guests = await getCollection(`${lang}-guests`);
     allGuests.push(...guests);
   }
 
   // Create unique paths based on guest IDs
-  const uniqueGuests = allGuests.reduce((acc, guest) => {
+  const uniqueGuests = allGuests.reduce((acc: Guest[], guest: Guest) => {
     if (!acc.find(g => g.data.id === guest.data.id)) {
       acc.push(guest);
     }
@@ -39,9 +40,8 @@ export async function getStaticPaths() {
   }));
 }
 
-const { guest, metadata } = Astro.props;
+const { guest, metadata } = Astro.props as { guest: Guest['data']; metadata: any };
 const { name, role, bio, image_url, social_links } = guest;
-console.log('Guest data:', { name, role, bio, image_url, social_links });
 
 // Get guest image
 const image = await getGuestImage(image_url ? `/images/guests/${image_url}` : '/images/default.png', 'detail');
@@ -52,7 +52,6 @@ for (const lang of SITE.languages) {
   const episodes = await getCollection(`${lang}-episodes`);
   const guestEpisodes = episodes.filter(episode => {
     const description = episode.data.attributes.description || '';
-    // Check for both URL and name mentions to catch all references
     return (
       description.toLowerCase().includes(name.toLowerCase()) ||
       description.includes(`/guest/${guest.id}`) ||
@@ -81,7 +80,6 @@ const sortedEpisodes = allEpisodes
     }
   }));
 
-console.log('Transformed episode data:', JSON.stringify(sortedEpisodes[0], null, 2));
 ---
 
 <PageLayout metadata={metadata} currentLang="en" availableLanguages={['en']}>

@@ -22,6 +22,51 @@ export function getAsset(path: string) {
 }
 
 /**
+ * Generate a permalink
+ */
+export function getPermalink(slug: string = '', type: string = 'page') {
+  let permalink: string;
+
+  switch (type) {
+    case 'page':
+    case 'post':
+      permalink = `/${trimSlash(slug)}`;
+      break;
+
+    case 'category':
+      permalink = `/category/${trimSlash(slug)}`;
+      break;
+
+    case 'tag':
+      permalink = `/tag/${trimSlash(slug)}`;
+      break;
+
+    default:
+      permalink = `/${trimSlash(slug)}`;
+      break;
+  }
+
+  return permalink;
+}
+
+/**
+ * Get blog permalink
+ */
+export function getBlogPermalink() {
+  return getPermalink('blog');
+}
+
+/**
+ * Generate a slug from a string
+ */
+export function generateSlug(str: string): string {
+  return str
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+
+/**
  * Generate a podcast episode URL
  */
 export function getEpisodePermalink(language: Language, slug: string) {

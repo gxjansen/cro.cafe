@@ -42,7 +42,8 @@ export const onRequest: MiddlewareHandler = async (
       if (acceptLanguage) {
         const browserLanguages = acceptLanguage
           .split(',')
-          .map((lang) => lang.split(';')[0].trim().substring(0, 2).toLowerCase());
+          .map((lang) => lang?.split(';')[0]?.trim()?.substring(0, 2)?.toLowerCase())
+          .filter((lang): lang is string => typeof lang === 'string' && lang.length === 2);
 
         for (const browserLang of browserLanguages) {
           if (supportedLanguages.includes(browserLang as SupportedLanguage)) {
@@ -69,7 +70,10 @@ export const onRequest: MiddlewareHandler = async (
     ? (firstSegment as SupportedLanguage)
     : 'en';
 
-  (context.locals as Record<string, unknown>).lang = currentLang;
+  if (!context.locals) {
+    context.locals = {};
+  }
+  context.locals.lang = currentLang;
 
   return next();
 };

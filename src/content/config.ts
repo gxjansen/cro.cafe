@@ -1,4 +1,22 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, type SchemaContext, z } from 'astro:content';
+
+// Blog collection schema
+const blogCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    publishDate: z.date(),
+    excerpt: z.string().optional(),
+    image: z.string().optional(),
+    category: z.string().optional(),
+    tags: z.array(z.string()).optional(),
+    draft: z.boolean().optional(),
+    updateDate: z.date().optional(),
+    author: z.string().optional(),
+    metadata: z.record(z.unknown()).optional(),
+  }),
+});
 
 // Episode collection schema
 const episodeCollection = defineCollection({
@@ -8,14 +26,15 @@ const episodeCollection = defineCollection({
     type: z.literal('episode'),
     attributes: z.object({
       title: z.string(),
-      summary: z.string().nullable().optional(),
+      summary: z.string().nullable(),
       description: z.string(),
+      status: z.enum(['published', 'draft', 'scheduled']).nullable().optional(),
       published_at: z.string(),
       media_url: z.string(),
       duration: z.number(),
       duration_in_mmss: z.string(),
       formatted_published_at: z.string(),
-      formatted_description: z.string().optional(),
+      formatted_description: z.string().nullable().optional(),
       clean_description: z.string().nullable().optional(),
       image_url: z.string().nullable().optional(),
       video_url: z.string().nullable().optional(),
@@ -24,21 +43,20 @@ const episodeCollection = defineCollection({
       embed_html: z.string(),
       embed_html_dark: z.string(),
       slug: z.string(),
-      // Additional fields found in Spanish episodes
       number: z.number().nullable().optional(),
       season: z.number().nullable().optional(),
-      status: z.string().optional(),
-      explicit: z.boolean().optional(),
-      keywords: z.array(z.string()).optional(),
+      explicit: z.boolean().nullable().optional(),
+      keywords: z.array(z.string()).nullable().optional(),
       alternate_url: z.string().nullable().optional(),
       author: z.string().nullable().optional(),
       created_at: z.string().nullable().optional(),
       updated_at: z.string().nullable().optional(),
       formatted_summary: z.string().nullable().optional(),
-      audio_processing: z.boolean().optional(),
-      type: z.string().optional(),
-      email_notifications: z.any().optional(),
+      audio_processing: z.boolean().nullable().optional(),
+      email_notifications: z.record(z.unknown()).nullable().optional(),
       keywords_raw: z.string().optional(),
+      local_image_url: z.string().optional(),
+      featured: z.boolean().optional(),
     }),
     relationships: z.object({
       show: z.object({
@@ -47,6 +65,14 @@ const episodeCollection = defineCollection({
           type: z.string(),
         }),
       }),
+      guests: z
+        .array(
+          z.object({
+            id: z.string(),
+            type: z.literal('guest'),
+          })
+        )
+        .optional(),
     }),
   }),
 });
@@ -95,8 +121,9 @@ const quoteCollection = defineCollection({
   }),
 });
 
-// Define collections for each language
+// Define collections
 export const collections = {
+  post: blogCollection,
   // Episodes
   'en-episodes': episodeCollection,
   'nl-episodes': episodeCollection,

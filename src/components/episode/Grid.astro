@@ -55,20 +55,8 @@ try {
     })
     // Apply limit if specified
     .slice(0, limit || undefined)
-    // Transform data structure to match Card.astro expectations
-    .map(entry => ({
-      id: entry.id,
-      type: 'episode',
-      attributes: entry.data.attributes,
-      relationships: {
-        show: {
-          data: {
-            id: entry.data.relationships.show.data.id,
-            type: 'show'
-          }
-        }
-      }
-    }));
+    // Keep original data structure
+    .map(entry => entry);
 
   console.log('Processed episodes:', JSON.stringify(displayEpisodes[0], null, 2));
 } catch (error) {
@@ -103,27 +91,31 @@ const noEpisodesLabel = 'No episodes found';
           <EpisodeCard
             episode={{
               id: 'skeleton',
-              type: 'episode',
-              attributes: {
-                title: 'Loading...',
-                summary: 'Loading...',
-                description: 'Loading...',
-                published_at: new Date().toISOString(),
-                media_url: '',
-                duration: 0,
-                duration_in_mmss: '00:00',
-                formatted_published_at: 'Loading...',
-                formatted_description: 'Loading...',
-                share_url: '',
-                embed_html: '',
-                embed_html_dark: '',
-                slug: '',
-              },
-              relationships: {
-                show: {
-                  data: {
-                    id: '',
-                    type: 'show',
+              collection: 'en-episodes',
+              data: {
+                id: 'skeleton',
+                type: 'episode',
+                attributes: {
+                  title: 'Loading...',
+                  summary: 'Loading...',
+                  description: 'Loading...',
+                  published_at: new Date().toISOString(),
+                  media_url: '',
+                  duration: 0,
+                  duration_in_mmss: '00:00',
+                  formatted_published_at: 'Loading...',
+                  formatted_description: 'Loading...',
+                  share_url: '',
+                  embed_html: '',
+                  embed_html_dark: '',
+                  slug: '',
+                },
+                relationships: {
+                  show: {
+                    data: {
+                      id: '',
+                      type: 'show',
+                    },
                   },
                 },
               },

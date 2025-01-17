@@ -12,32 +12,36 @@ import { getEpisodeImage } from '~/utils/images';
 interface Props {
   episode: {
     id: string;
-    type: 'episode';
-    attributes: {
-      title: string;
-      summary: string;
-      description: string;
-      published_at: string;
-      media_url: string;
-      duration: number;
-      duration_in_mmss: string;
-      formatted_published_at: string;
-      formatted_description: string;
-      clean_description: string;
-      image_url?: string;
-      local_image_url?: string;
-      video_url?: string;
-      transcript_url?: string;
-      share_url: string;
-      embed_html: string;
-      embed_html_dark: string;
-      slug: string;
-    };
-    relationships: {
-      show: {
-        data: {
-          id: string;
-          type: string;
+    collection: string;
+    data: {
+      id: string;
+      type: 'episode';
+      attributes: {
+        title: string;
+        summary: string | null;
+        description: string;
+        published_at: string;
+        media_url: string;
+        duration: number;
+        duration_in_mmss: string;
+        formatted_published_at: string;
+        formatted_description?: string | null;
+        clean_description?: string | null;
+        image_url?: string | null;
+        local_image_url?: string;
+        video_url?: string | null;
+        transcript_url?: string | null;
+        share_url: string;
+        embed_html: string;
+        embed_html_dark: string;
+        slug: string;
+      };
+      relationships: {
+        show: {
+          data: {
+            id: string;
+            type: string;
+          };
         };
       };
     };
@@ -51,8 +55,8 @@ const props = validateProps(SingleEpisodePropsSchema, Astro.props);
 const { episode, availableLanguages, loading = false } = props;
 
 // Get language and guests
-const language = getLanguageFromShowId(episode.relationships.show.data.id);
-const guests = await getEpisodeGuests(language, episode.attributes.description);
+const language = getLanguageFromShowId(episode.data.relationships.show.data.id);
+const guests = await getEpisodeGuests(language, episode.data.attributes.description);
 
 const { 
   title,
@@ -71,12 +75,12 @@ const {
   share_url,
   embed_html,
   slug,
-} = episode.attributes;
+} = episode.data.attributes;
 
-const image = await getEpisodeImage(`/images/episodes/${language}/${episode.attributes.slug}.webp`, 'detail');
+const image = await getEpisodeImage(`/images/episodes/${language}/${episode.data.attributes.slug}.webp`, 'detail');
 
 // Ensure local image URL is used for Open Graph and Twitter meta tags
-const ogImageUrl = episode.local_image_url || image.src;
+const ogImageUrl = episode.data.attributes.local_image_url || image.src;
 
 // Prepare structured data
 const structuredData = {
@@ -154,7 +158,7 @@ const structuredData = {
               />
             ) : (
               <img
-                src={episode.local_image_url || image.src}
+                src={episode.data.attributes.local_image_url || image.src}
                 width={image.width}
                 height={image.height}
                 alt={title}

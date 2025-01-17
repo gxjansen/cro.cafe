@@ -1,4 +1,3 @@
-import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 
 const languages = ['en', 'nl', 'de', 'es'] as const;
@@ -8,7 +7,7 @@ export async function getStaticPaths() {
   return languages.map((lang) => ({ params: { lang } }));
 }
 
-export const GET: APIRoute = async ({ params }) => {
+export const get = async ({ params }: { params: { lang: string } }) => {
   const lang = params.lang as Language;
 
   // Get episodes for this language

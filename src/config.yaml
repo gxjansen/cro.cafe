@@ -3,8 +3,12 @@ site:
   site: 'https://cro.cafe'
   base: '/'
   trailingSlash: false
-
   googleSiteVerificationId: ''
+
+analytics:
+  googleAnalytics:
+    id: ''
+    partytown: true
 
 # Default SEO metadata
 metadata:
@@ -62,11 +66,5 @@ apps:
 
     isRelatedPostsEnabled: false
     relatedPostsCount: 4
-
-analytics:
-  vendors:
-    googleAnalytics:
-      id: null # or "G-XXXXXXXXXX"
-
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"

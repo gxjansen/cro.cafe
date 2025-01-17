@@ -4,33 +4,34 @@ import Header from '~/components/widgets/Header.astro';
 import Footer from '~/components/widgets/Footer.astro';
 
 import { getHeaderData, getFooterData } from '~/navigation';
-import type { MetaData } from '~/types';
+import type { PageProps } from '~/types';
 
-export interface Props {
-  metadata?: MetaData;
-  availableLanguages: readonly ('en' | 'nl' | 'de' | 'es')[];
-  currentLang?: 'en' | 'de' | 'es' | 'nl';
+type Language = 'en' | 'nl' | 'de' | 'es';
+
+export interface Props extends PageProps {
+  currentLang: Language;
+  availableLanguages: readonly Language[];
 }
 
-const props = Astro.props;
+const { metadata, availableLanguages, currentLang } = Astro.props;
 
 // Prepare props objects to avoid string interpolation issues
 const layoutProps = {
-  metadata: props.metadata,
-  availableLanguages: props.availableLanguages,
-  currentLang: props.currentLang || 'en',
+  metadata,
+  availableLanguages,
+  currentLang,
 };
 
 const headerProps = {
-  ...getHeaderData(props.currentLang || 'en'),
+  ...getHeaderData(currentLang),
   isSticky: true,
   showToggleTheme: true,
-  currentLang: props.currentLang || 'en',
+  currentLang,
 };
 
 const footerProps = {
-  ...getFooterData(props.currentLang || 'en'),
-  currentLang: props.currentLang || 'en',
+  ...getFooterData(currentLang),
+  currentLang,
 };
 ---
 

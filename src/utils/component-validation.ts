@@ -3,26 +3,70 @@ import { z } from 'zod';
 // Language validation
 export const LanguageSchema = z.enum(['en', 'de', 'es', 'nl']);
 
+// Person validation
+export const PersonSchema = z.object({
+  id: z.string(),
+  type: z.literal('guest'),
+  name: z.string(),
+  role: z.string().nullable().optional(),
+  bio: z.string().nullable().optional(),
+  image_url: z.string(),
+  social_links: z
+    .array(
+      z.object({
+        platform: z.string(),
+        url: z.string(),
+      })
+    )
+    .optional(),
+  language: LanguageSchema,
+});
+
 // Common props validation
 export const MetadataSchema = z.object({
   title: z.string(),
   description: z.string(),
   image: z.string().nullable().optional(),
-  canonicalUrl: z.string().optional(),
-  type: z.enum(['website', 'article', 'profile']).optional(),
-  publishedTime: z.string().optional(),
-  modifiedTime: z.string().optional(),
-  author: z.string().optional(),
-  tags: z.array(z.string()).optional(),
-  alternateLanguages: z.record(z.string()).optional(),
+  canonicalUrl: z.string().nullable().optional(),
+  type: z
+    .union([z.literal('article'), z.literal('website'), z.literal('page'), z.string()])
+    .optional(),
+  publishedTime: z.string().nullable().optional(),
+  modifiedTime: z.string().nullable().optional(),
+  author: z.string().nullable().optional(),
+  tags: z.array(z.string()).nullable().optional(),
+  alternateLanguages: z.record(z.string()).nullable().optional(),
+});
+
+// Page props validation
+export const PagePropsSchema = z.object({
+  metadata: MetadataSchema.optional(),
+  currentLang: LanguageSchema,
+  availableLanguages: z.array(LanguageSchema).min(1),
+  children: z.any().optional(),
 });
 
 // Layout component props
 export const LayoutPropsSchema = z
   .object({
-    metadata: MetadataSchema,
-    availableLanguages: z.array(LanguageSchema).min(1),
+    metadata: z
+      .object({
+        title: z.string(),
+        description: z.string(),
+        image: z.string().nullable().optional(),
+        canonicalUrl: z.string().nullable().optional(),
+        type: z
+          .union([z.literal('article'), z.literal('website'), z.literal('page'), z.string()])
+          .optional(),
+        publishedTime: z.string().nullable().optional(),
+        modifiedTime: z.string().nullable().optional(),
+        author: z.string().nullable().optional(),
+        tags: z.array(z.string()).nullable().optional(),
+        alternateLanguages: z.record(z.string()).nullable().optional(),
+      })
+      .optional(),
     currentLang: LanguageSchema,
+    availableLanguages: z.array(LanguageSchema).min(1),
   })
   .passthrough(); // Allow additional Astro-specific props
 
@@ -48,45 +92,65 @@ export const EpisodePlayerPropsSchema = z
 // Episode data validation matching Transistor API structure
 export const EpisodeSchema = z.object({
   id: z.string(),
-  type: z.literal('episode'),
-  attributes: z.object({
-    title: z.string(),
-    summary: z.string().nullable(),
-    description: z.string(),
-    published_at: z.string(),
-    media_url: z.string(),
-    duration: z.number(),
-    duration_in_mmss: z.string(),
-    formatted_published_at: z.string(),
-    formatted_description: z.string(),
-    clean_description: z.string().optional(),
-    image_url: z.string().nullable().optional(),
-    local_image_url: z.string().nullable().optional(),
-    video_url: z.string().nullable().optional(),
-    transcript_url: z.string().nullable().optional(),
-    share_url: z.string(),
-    embed_html: z.string(),
-    embed_html_dark: z.string(),
-    slug: z.string(),
-  }),
-  relationships: z.object({
-    show: z.object({
-      data: z.object({
-        id: z.string(),
-        type: z.string(),
+  collection: z.string(),
+  data: z.object({
+    id: z.string(),
+    type: z.literal('episode'),
+    attributes: z.object({
+      title: z.string(),
+      summary: z.string().nullable(),
+      description: z.string(),
+      status: z.enum(['published', 'draft', 'scheduled']).nullable().optional(),
+      published_at: z.string(),
+      media_url: z.string(),
+      duration: z.number(),
+      duration_in_mmss: z.string(),
+      formatted_published_at: z.string(),
+      formatted_description: z.string().nullable().optional(),
+      clean_description: z.string().nullable().optional(),
+      image_url: z.string().nullable().optional(),
+      video_url: z.string().nullable().optional(),
+      transcript_url: z.string().nullable().optional(),
+      share_url: z.string(),
+      embed_html: z.string(),
+      embed_html_dark: z.string(),
+      slug: z.string(),
+      number: z.number().nullable().optional(),
+      season: z.number().nullable().optional(),
+      explicit: z.boolean().nullable().optional(),
+      keywords: z.array(z.string()).nullable().optional(),
+      alternate_url: z.string().nullable().optional(),
+      author: z.string().nullable().optional(),
+      created_at: z.string().nullable().optional(),
+      updated_at: z.string().nullable().optional(),
+      formatted_summary: z.string().nullable().optional(),
+      audio_processing: z.boolean().nullable().optional(),
+      email_notifications: z.record(z.unknown()).nullable().optional(),
+      keywords_raw: z.string().optional(),
+      local_image_url: z.string().optional(),
+      featured: z.boolean().optional(),
+    }),
+    relationships: z.object({
+      show: z.object({
+        data: z.object({
+          id: z.string(),
+          type: z.string(),
+        }),
       }),
+      guests: z
+        .array(
+          z.object({
+            id: z.string(),
+            type: z.literal('guest'),
+          })
+        )
+        .optional(),
     }),
   }),
 });
 
 export const EpisodeGridPropsSchema = z.object({
-  episodes: z.array(
-    z.object({
-      id: z.string(),
-      collection: z.string(),
-      data: EpisodeSchema,
-    })
-  ),
+  episodes: z.array(EpisodeSchema),
   limit: z.number().optional(),
   featured: z.boolean().optional(),
   columns: z.enum(['2', '3', '4']).optional(),

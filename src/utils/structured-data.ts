@@ -4,6 +4,16 @@ interface StructuredDataOptions {
   canonicalUrl?: string;
 }
 
+interface SocialLink {
+  platform: string;
+  url: string;
+}
+
+interface GuestReference {
+  id: string;
+  type: 'guest';
+}
+
 export class StructuredDataGenerator {
   /**
    * Generate JSON-LD structured data for a podcast episode
@@ -15,22 +25,33 @@ export class StructuredDataGenerator {
     episode: Episode,
     options: StructuredDataOptions = {}
   ): Record<string, unknown> {
-    return {
+    const schema: Record<string, unknown> = {
       '@context': 'https://schema.org',
       '@type': 'PodcastEpisode',
-      name: episode.title,
-      description: episode.description,
-      url: options.canonicalUrl || episode.canonicalUrl,
-      duration: `PT${episode.duration}S`,
-      datePublished: episode.date.toISOString(),
-      audio: episode.audio_url,
-      transcript: episode.transcript_url,
+      name: episode.data.attributes.title,
+      description: episode.data.attributes.description,
+      url: options.canonicalUrl || episode.data.attributes.alternate_url,
+      duration: `PT${episode.data.attributes.duration}S`,
+      datePublished: episode.data.attributes.published_at,
+      audio: episode.data.attributes.media_url,
       partOfSeries: {
         '@type': 'PodcastSeries',
         name: 'CRO.CAFE Podcast',
       },
-      guest: episode.guests.map(this.generatePersonSchema),
     };
+
+    if (episode.data.attributes.transcript_url) {
+      schema.transcript = episode.data.attributes.transcript_url;
+    }
+
+    if (episode.data.relationships.guests?.length) {
+      schema.guest = episode.data.relationships.guests.map((guestRef: GuestReference) => ({
+        '@type': 'Person',
+        '@id': guestRef.id,
+      }));
+    }
+
+    return schema;
   }
 
   /**
@@ -39,14 +60,23 @@ export class StructuredDataGenerator {
    * @returns JSON-LD object for the person
    */
   static generatePersonSchema(person: Person): Record<string, unknown> {
-    return {
+    const schema: Record<string, unknown> = {
       '@context': 'https://schema.org',
       '@type': 'Person',
+      '@id': person.id,
       name: person.name,
-      description: person.bio,
       image: person.image_url,
-      sameAs: person.social_links.map((link) => link.url),
     };
+
+    if (person.bio) {
+      schema.description = person.bio;
+    }
+
+    if (person.social_links?.length) {
+      schema.sameAs = person.social_links.map((link: SocialLink) => link.url);
+    }
+
+    return schema;
   }
 
   /**
@@ -55,16 +85,25 @@ export class StructuredDataGenerator {
    * @returns JSON-LD object for the quote
    */
   static generateQuoteSchema(quote: Quote): Record<string, unknown> {
-    return {
+    const schema: Record<string, unknown> = {
       '@context': 'https://schema.org',
       '@type': 'Quotation',
       text: quote.text,
-      author: this.generatePersonSchema(quote.author),
-      citation: {
-        '@type': 'Episode',
-        name: quote.episode.title,
-      },
+      author: quote.author,
     };
+
+    if (quote.episode) {
+      schema.citation = {
+        '@type': 'Episode',
+        name: quote.episode,
+      };
+    }
+
+    if (quote.timestamp) {
+      schema.timeStamp = quote.timestamp;
+    }
+
+    return schema;
   }
 
   /**
@@ -73,14 +112,22 @@ export class StructuredDataGenerator {
    * @returns JSON-LD object for the platform
    */
   static generatePlatformSchema(platform: Platform): Record<string, unknown> {
-    return {
+    const schema: Record<string, unknown> = {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: platform.name,
       description: platform.description,
-      url: platform.canonicalUrl || platform.url,
-      logo: platform.icon_url,
     };
+
+    if (platform.url) {
+      schema.url = platform.url;
+    }
+
+    if (platform.logo) {
+      schema.logo = platform.logo;
+    }
+
+    return schema;
   }
 
   /**

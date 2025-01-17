@@ -6,33 +6,30 @@ import Favicons from '~/components/Favicons.astro';
 import SkipLinks from '~/components/common/SkipLinks.astro';
 import { validateProps, LayoutPropsSchema } from '~/utils/component-validation';
 
+import type { Language } from '~/types';
+
 interface Props {
-  metadata: {
+  metadata?: {
     title: string;
     description: string;
     image?: string;
     canonicalUrl?: string;
-    type?: 'website' | 'article';
+    type?: 'article' | 'website' | 'page';
     publishedTime?: string;
     modifiedTime?: string;
     author?: string;
     tags?: string[];
     alternateLanguages?: Record<string, string>;
   };
-  currentLang: 'en' | 'nl' | 'de' | 'es';
-  availableLanguages: readonly ('en' | 'nl' | 'de' | 'es')[];
+  currentLang: Language;
+  availableLanguages: readonly Language[];
 }
 
-const { metadata, currentLang, availableLanguages, ...rest } = Astro.props;
-const validatedProps = validateProps(LayoutPropsSchema, { 
-  metadata: typeof metadata === 'string' ? JSON.parse(metadata) : metadata,
-  currentLang,
-  availableLanguages: typeof availableLanguages === 'string' ? JSON.parse(availableLanguages) : availableLanguages,
-});
+const { metadata, currentLang, availableLanguages } = Astro.props;
 
 const {
-  title,
-  description,
+  title = '',
+  description = '',
   image = '/images/default.png',
   canonicalUrl = Astro.url.href,
   type = 'website',
@@ -41,7 +38,7 @@ const {
   author,
   tags = [],
   alternateLanguages = {},
-} = metadata;
+} = metadata || {};
 ---
 
 <!DOCTYPE html>

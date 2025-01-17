@@ -128,7 +128,7 @@ async function updateContentFromRSS() {
 
             try {
               const episode = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-              if (normalizeTitle(episode.title) === normalizedTitle) {
+              if (normalizeTitle(episode.data.attributes.title) === normalizedTitle) {
                 existingEpisode = episode;
                 existingPath = filePath;
                 break;
@@ -145,13 +145,21 @@ async function updateContentFromRSS() {
           console.log(`Duration for ${title}: ${duration} -> ${durationSeconds} seconds`);
 
           // Create new episode object with updated duration
-          const updatedEpisode = {
-            ...existingEpisode,
+          const updatedEpisode: Episode = {
             id: shortSlug,
-            title: existingEpisode.title || title,
-            description: existingEpisode.description || description,
-            duration: durationSeconds, // Always use the duration from RSS feed
-            audio_url: existingEpisode.audio_url || audioUrl,
+            collection: `${lang}-episodes`,
+            data: {
+              id: shortSlug,
+              type: 'episode',
+              attributes: {
+                ...existingEpisode.data.attributes,
+                title: existingEpisode.data.attributes.title || title,
+                description: existingEpisode.data.attributes.description || description,
+                duration: durationSeconds,
+                media_url: existingEpisode.data.attributes.media_url || audioUrl,
+              },
+              relationships: existingEpisode.data.relationships,
+            },
           };
 
           // If found by long slug, move to short slug
@@ -162,7 +170,9 @@ async function updateContentFromRSS() {
 
           // Always write to short slug path
           fs.writeFileSync(shortPath, JSON.stringify(updatedEpisode, null, 2));
-          console.log(`Updated episode at ${shortPath} (duration: ${updatedEpisode.duration}s)`);
+          console.log(
+            `Updated episode at ${shortPath} (duration: ${updatedEpisode.data.attributes.duration}s)`
+          );
         } else {
           // Add new episode to rows
           newRows.push(`"${title}","${description}","${pubDate}","${duration}","${audioUrl}",""`);

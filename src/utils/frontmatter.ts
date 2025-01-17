@@ -2,6 +2,7 @@ import getReadingTime from 'reading-time';
 import { toString } from 'mdast-util-to-string';
 import { visit } from 'unist-util-visit';
 import type { RehypePlugin, RemarkPlugin } from '@astrojs/markdown-remark';
+import type { Root, Element, RootContent } from 'hast';
 
 export const readingTimeRemarkPlugin: RemarkPlugin = () => {
   return function (tree, file) {
@@ -15,14 +16,20 @@ export const readingTimeRemarkPlugin: RemarkPlugin = () => {
 };
 
 export const responsiveTablesRehypePlugin: RehypePlugin = () => {
-  return function (tree) {
-    if (!tree.children) return;
+  return function (tree: Root) {
+    if (!Array.isArray(tree.children)) return;
 
     for (let i = 0; i < tree.children.length; i++) {
-      const child = tree.children[i];
+      const child = tree.children[i] as Element | undefined;
 
-      if (child.type === 'element' && child.tagName === 'table') {
-        tree.children[i] = {
+      if (
+        child &&
+        'type' in child &&
+        'tagName' in child &&
+        child.type === 'element' &&
+        child.tagName === 'table'
+      ) {
+        const wrapper: Element = {
           type: 'element',
           tagName: 'div',
           properties: {
@@ -31,6 +38,7 @@ export const responsiveTablesRehypePlugin: RehypePlugin = () => {
           children: [child],
         };
 
+        tree.children[i] = wrapper;
         i++;
       }
     }
@@ -38,11 +46,14 @@ export const responsiveTablesRehypePlugin: RehypePlugin = () => {
 };
 
 export const lazyImagesRehypePlugin: RehypePlugin = () => {
-  return function (tree) {
-    if (!tree.children) return;
+  return function (tree: Root) {
+    if (!Array.isArray(tree.children)) return;
 
-    visit(tree, 'element', function (node) {
-      if (node.tagName === 'img') {
+    visit(tree, 'element', function (node: Element) {
+      if ('tagName' in node && node.tagName === 'img') {
+        if (!node.properties) {
+          node.properties = {};
+        }
         node.properties.loading = 'lazy';
       }
     });
