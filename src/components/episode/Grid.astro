@@ -26,7 +26,9 @@ const {
 console.log('Grid received episodes:', JSON.stringify(episodes, null, 2));
 
 // Filter and sort episodes
-let displayEpisodes = [];
+import type { Episode } from '~/types/episode';
+
+let displayEpisodes: Array<Episode['data']> = [];
 try {
   displayEpisodes = episodes
     .filter(entry => {
@@ -133,7 +135,7 @@ const noEpisodesLabel = 'No episodes found';
           class={`grid gap-4 sm:gap-6 ${gridClass}`}
           data-grid-nav
         >
-          {displayEpisodes.map((episode, index) => (
+          {displayEpisodes.map((episode: Episode, index: number) => (
             <div 
               role="gridcell"
               class="episode-cell"

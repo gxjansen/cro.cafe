@@ -1,29 +1,14 @@
 {
-  "extends": "astro/tsconfigs/strictest",
+  "extends": "astro/tsconfigs/base",
   "compilerOptions": {
+    "jsx": "preserve",
+    "jsxImportSource": "react",
     "strict": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictBindCallApply": true,
-    "strictPropertyInitialization": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
-    "allowJs": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"]
-    },
-    "lib": ["ESNext", "DOM", "ES2020"],
-    "types": [
-      "@astrojs/tsconfig/strictest",
-      "@types/node",
-      "@types/react",
-      "@types/react-dom",
-      "./src/types/unpic-astro.d.ts",
-      "./src/types/astrojs-rss.d.ts"
-    ]
+      "~/*": ["./src/*"]
+    }
   },
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist/"]
+  "include": ["src/**/*", "astro.config.mjs"],
+  "exclude": ["node_modules"]
 }

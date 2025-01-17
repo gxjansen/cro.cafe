@@ -133,14 +133,20 @@ export interface Brand {
 export interface MetaData {
   title: string;
   description: string;
-  image?: string;
+  image?: string | ImageMetadata;
   canonicalUrl?: string;
-  type?: string; // Changed from 'article' | 'website' | 'page' to string to allow more types
+  type?: 'article' | 'website' | 'page' | 'episode' | 'guest' | string;
   publishedTime?: string;
   modifiedTime?: string;
   author?: string;
   tags?: string[];
   alternateLanguages?: Record<string, string>;
+  ogSubtitle?: string;
+  ogImageType?: string;
+  ogImageUrl?: string;
+  episode?: {
+    local_image_url?: string;
+  };
 }
 
 export interface PageProps {

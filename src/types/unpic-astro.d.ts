@@ -1,7 +1,7 @@
 declare module '@unpic/astro' {
-  import type { AstroIntegration } from 'astro';
+  import type { AstroComponentFactory } from 'astro/dist/runtime/server';
 
-  export interface UnpicConfig {
+  export interface UnpicImageProps {
     src: string;
     width?: number;
     height?: number;
@@ -10,7 +10,12 @@ declare module '@unpic/astro' {
     decoding?: 'async' | 'auto' | 'sync';
     class?: string;
     style?: string;
+    background?: string;
+    layout?: 'constrained' | 'fixed' | 'fullWidth';
+    aspectRatio?: number;
+    breakpoints?: number[];
+    sizes?: string;
   }
 
-  export default function unpicIntegration(config?: UnpicConfig): AstroIntegration;
+  export const UnpicImage: AstroComponentFactory<UnpicImageProps>;
 }

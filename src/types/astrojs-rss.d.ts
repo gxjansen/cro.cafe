@@ -3,28 +3,35 @@ declare module '@astrojs/rss' {
 
   export interface RSSFeedItem {
     title: string;
+    description?: string;
     link: string;
     pubDate: Date;
-    description?: string;
-    content?: string;
-    author?: string;
-    categories?: string[];
+    guid?: string;
     enclosure?: {
       url: string;
       length?: number;
       type?: string;
     };
+    categories?: string[];
+    author?: string;
+    comments?: string;
+    source?: {
+      url: string;
+      title: string;
+    };
   }
 
-  export interface RSSOptions {
+  export interface RSSFeedOptions {
     title: string;
     description: string;
     site: string;
     items: RSSFeedItem[];
     customData?: string;
     stylesheet?: string;
+    xmlns?: Record<string, string>;
+    trailingSlash?: boolean;
   }
 
-  export function getRSS(options: RSSOptions): string;
-  export function getRSSFeed(options: RSSOptions): string;
+  export function getRSSString(options: RSSFeedOptions): string;
+  export function getRSSResponse(options: RSSFeedOptions): Response;
 }
