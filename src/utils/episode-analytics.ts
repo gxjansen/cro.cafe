@@ -1,5 +1,4 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
-import type { TransistorEpisode } from '../types/transistor';
 
 // Define valid episode collection names
 type EpisodeCollection = 'de-episodes' | 'en-episodes' | 'es-episodes' | 'nl-episodes';
@@ -69,13 +68,21 @@ export async function getPopularEpisodes(
 
   // Get analytics data for these episodes
   console.log('Analytics data:', analyticsData.slice(0, 3)); // Show first 3 entries
+  type EpisodeWithAnalytics = {
+    episode: CollectionEntry<EpisodeCollection>;
+    downloads: number;
+  };
+
   console.log(
     'All episodes:',
-    allEpisodes.slice(0, 3).map((ep) => ({ id: ep.data.id, title: ep.data.attributes.title }))
+    allEpisodes.slice(0, 3).map((ep: CollectionEntry<EpisodeCollection>) => ({
+      id: ep.data.id,
+      title: ep.data.attributes.title,
+    }))
   ); // Show first 3 entries
 
   const episodesWithAnalytics = allEpisodes
-    .map((episode) => {
+    .map((episode: CollectionEntry<EpisodeCollection>) => {
       const analytics = analyticsData.find(
         (a) => String(a.id) === String((episode.data as EpisodeData).id)
       );
@@ -92,11 +99,11 @@ export async function getPopularEpisodes(
       };
     })
     // Sort by downloads (most popular first)
-    .sort((a, b) => b.downloads - a.downloads)
+    .sort((a: EpisodeWithAnalytics, b: EpisodeWithAnalytics) => b.downloads - a.downloads)
     // Take the requested number of episodes
     .slice(0, limit)
     // Return just the episode data
-    .map(({ episode }) => episode);
+    .map(({ episode }: EpisodeWithAnalytics) => episode);
 
   return episodesWithAnalytics;
 }
