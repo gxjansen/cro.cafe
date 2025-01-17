@@ -2,9 +2,12 @@ export const SITE = {
   name: 'CRO.CAFE',
   title: 'CRO.CAFE - Conversion Rate Optimization Podcast',
   description:
-    "Join 14K+ subscribers for the world's most exciting, raw discussions on experimentation, CRO, user research and digital marketing from the industry leaders who live and breathe it\.",
+    "Join 14K+ subscribers for the world's most exciting, raw discussions on experimentation, CRO, user research and digital marketing from the industry leaders who live and breathe it.",
   defaultLanguage: 'en',
   languages: ['en', 'nl', 'de', 'es'],
+  textDirection: 'ltr',
+  googleSiteVerificationId: '',
+  trailingSlash: false,
 } as const;
 
 export const UI = {
@@ -13,6 +16,7 @@ export const UI = {
 
 export const METADATA = {
   author: 'Guido X. Jansen',
+  description: '',
   social: {
     twitter: 'https://twitter.com/cro_cafe',
   },

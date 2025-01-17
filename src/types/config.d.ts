@@ -5,6 +5,9 @@ declare module 'astrowind:config' {
     description: string;
     defaultLanguage: string;
     languages: string[];
+    textDirection: 'ltr' | 'rtl';
+    googleSiteVerificationId?: string;
+    trailingSlash: boolean;
   };
 
   export const UI: {
@@ -13,6 +16,7 @@ declare module 'astrowind:config' {
 
   export const METADATA: {
     author: string;
+    description?: string;
     social: {
       twitter: string;
     };
