@@ -16,7 +16,6 @@ export interface ItemProps {
     permalink?: string;
     excerpt?: string;
   };
-  key?: string;
 }
 
 const { posts } = Astro.props;
@@ -27,7 +26,7 @@ const { posts } = Astro.props;
     image?: string | ImageMetadata;
     permalink?: string;
     excerpt?: string;
-  }, index: number) => (
-    <Item key={post.data.id} post={post} />
+  }) => (
+    <Item post={post} />
   ))}
 </div>

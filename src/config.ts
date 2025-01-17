@@ -21,3 +21,27 @@ export const METADATA = {
 export const PAGINATION = {
   EPISODES_PER_PAGE: 15,
 } as const;
+
+export const APP_BLOG = {
+  enabled: true,
+  postsPerPage: 6,
+  post: {
+    path: '/blog',
+    permalink: '/blog/:slug',
+    isEnabled: true,
+    robots: 'index, follow',
+  },
+  list: {
+    isEnabled: true,
+    robots: 'index, follow',
+  },
+  category: {
+    isEnabled: true,
+    robots: 'index, follow',
+  },
+  tag: {
+    isEnabled: true,
+    robots: 'index, follow',
+  },
+  isRelatedPostsEnabled: true,
+} as const;
