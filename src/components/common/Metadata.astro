@@ -44,8 +44,7 @@ if (episode) {
   };
   structuredData['publisher'] = {
     '@type': 'Organization',
-    name: SITE.title,
-    url: SITE.url,
+    name: SITE.name,
     logo: {
       '@type': 'ImageObject',
       url: new URL(SITE.logo, Astro.site).toString(),
@@ -65,8 +64,8 @@ if (availableLanguages.length > 0) {
     url: `${canonicalUrl.replace(/\/$/, '')}/${lang}`,
   }));
 }
-
 ---
+
 <script type="application/ld+json" is:inline>
   {JSON.stringify(structuredData, null, 2)}
 </script>

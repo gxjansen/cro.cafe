@@ -6,27 +6,6 @@ import { EpisodeGridPropsSchema } from '~/utils/component-validation';
 import type { z } from 'zod';
 import type { Episode } from '~/types/episode';
 
-interface EpisodeGridItem {
-  id: string;
-  collection: string;
-  data: {
-    id: string;
-    type: 'episode';
-    attributes: EpisodeAttributes & {
-      embed_html_dark?: string;
-      description: string;
-    };
-    relationships: {
-      show: {
-        data: {
-          id: string;
-          type: string;
-        };
-      };
-    };
-  };
-}
-
 type Props = z.infer<typeof EpisodeGridPropsSchema>;
 
 // Validate props
@@ -46,9 +25,9 @@ const {
 
 console.log('Grid received episodes:', JSON.stringify(episodes, null, 2));
 
-let displayEpisodes: EpisodeGridItem[] = [];
+let displayEpisodes = episodes;
 try {
-  displayEpisodes = (episodes as EpisodeGridItem[])
+  displayEpisodes = episodes
     .filter(entry => {
       try {
         // Apply filters
@@ -75,8 +54,20 @@ try {
     })
     // Apply limit if specified
     .slice(0, limit || undefined)
-    // Keep original data structure
-    .map(entry => entry);
+    // Transform to Episode type
+    .map(entry => ({
+      data: {
+        id: entry.data.id,
+        type: 'episode',
+        attributes: {
+          ...entry.data.attributes,
+          type: 'episode',
+          guests: entry.data.attributes.guests || [],
+          language: entry.data.attributes.language || 'en',
+        },
+        relationships: entry.data.relationships,
+      },
+    }));
 
   console.log('Processed episodes:', JSON.stringify(displayEpisodes[0], null, 2));
 } catch (error) {
@@ -97,6 +88,43 @@ const skeletonCount = limit || 6;
 const gridLabel = featured ? 'Featured Episodes' : 'Episode List';
 const loadingLabel = 'Loading episodes...';
 const noEpisodesLabel = 'No episodes found';
+
+// Create a skeleton episode for loading state
+const skeletonEpisode: Episode = {
+  data: {
+    id: 'skeleton',
+    type: 'episode',
+    attributes: {
+      slug: '',
+      title: 'Loading...',
+      description: 'Loading...',
+      summary: null,
+      published_at: new Date().toISOString(),
+      media_url: '',
+      duration: 0,
+      duration_in_mmss: '00:00',
+      formatted_published_at: 'Loading...',
+      local_image_url: '',
+      transcript_url: null,
+      audio_url: '',
+      video_url: null,
+      embed_html: null,
+      share_url: '',
+      featured: false,
+      guests: [],
+      language: 'en',
+      type: 'episode'
+    },
+    relationships: {
+      show: {
+        data: {
+          id: '',
+          type: 'show',
+        },
+      },
+    },
+  },
+};
 ---
 
 <ErrorBoundary fallback="Unable to load episodes. Please try again later.">
@@ -109,39 +137,7 @@ const noEpisodesLabel = 'No episodes found';
       >
         {Array.from({ length: skeletonCount }).map(() => (
           <EpisodeCard
-            episode={{
-              id: 'skeleton',
-              collection: 'en-episodes',
-              data: {
-                id: 'skeleton',
-                type: 'episode',
-                attributes: {
-                  slug: '',
-                  title: 'Loading...',
-                  description: 'Loading...',
-                  summary: 'Loading...',
-                  published_at: new Date().toISOString(),
-                  media_url: '',
-                  duration: 0,
-                  duration_in_mmss: '00:00',
-                  formatted_published_at: 'Loading...',
-                  description: 'Loading...',
-                  share_url: '',
-                  embed_html: '',
-                  embed_html_dark: '',
-                  local_image_url: '',
-                  type: 'episode'
-                },
-                relationships: {
-                  show: {
-                    data: {
-                      id: '',
-                      type: 'show',
-                    },
-                  },
-                },
-              },
-            }}
+            episode={skeletonEpisode}
             loading={true}
           />
         ))}
@@ -155,22 +151,13 @@ const noEpisodesLabel = 'No episodes found';
           class={`grid gap-4 sm:gap-6 ${gridClass}`}
           data-grid-nav
         >
-          {displayEpisodes.map((episode: EpisodeGridItem, index: number) => (
+          {displayEpisodes.map((episode, index: number) => (
             <div 
               role="gridcell"
               class="episode-cell"
               tabindex={index === 0 ? 0 : -1}
             >
-              <EpisodeCard
-                episode={{
-                  data: {
-                    id: episode.data.id,
-                    type: 'episode',
-                    attributes: episode.data.attributes,
-                    relationships: episode.data.relationships
-                  }
-                }}
-              />
+              <EpisodeCard episode={episode} />
             </div>
           ))}
         </div>

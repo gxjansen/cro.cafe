@@ -10,8 +10,20 @@ interface Props {
 
 const { type, data, canonicalUrl, availableLanguages } = Astro.props;
 
+interface BaseStructuredData {
+  '@context': string;
+  '@type': string;
+  url: string;
+  inLanguage?: string;
+  alternateLanguage?: Array<{
+    '@type': string;
+    inLanguage: string;
+    url: string;
+  }>;
+}
+
 // Base structured data that's common across all types
-const baseStructuredData = {
+const baseStructuredData: BaseStructuredData = {
   '@context': 'https://schema.org',
   '@type': type,
   url: canonicalUrl,
@@ -19,8 +31,8 @@ const baseStructuredData = {
 
 // Add language alternates if available
 if (availableLanguages.length > 0) {
-  baseStructuredData['inLanguage'] = Astro.url.pathname.split('/')[1] || 'en';
-  baseStructuredData['alternateLanguage'] = availableLanguages.map((lang) => ({
+  baseStructuredData.inLanguage = Astro.url.pathname.split('/')[1] || 'en';
+  baseStructuredData.alternateLanguage = availableLanguages.map((lang: string) => ({
     '@type': 'Language',
     inLanguage: lang,
     url: `${canonicalUrl.replace(/\/$/, '')}/${lang}`,
@@ -28,12 +40,10 @@ if (availableLanguages.length > 0) {
 }
 
 // Merge base data with provided data
-/* eslint-disable-next-line @typescript-eslint/no-unused-vars */
 const structuredData = {
   ...baseStructuredData,
   ...data,
 };
-
 ---
 
 <script type="application/ld+json" is:inline>
