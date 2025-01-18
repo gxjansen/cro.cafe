@@ -5,7 +5,7 @@ import { fetchPosts } from '~/utils/blog';
 import { getPermalink } from '~/utils/permalinks';
 
 export const GET = async () => {
-  if (!APP_BLOG.isEnabled) {
+  if (!APP_BLOG.enabled) {
     return new Response(null, {
       status: 404,
       statusText: 'Not found',

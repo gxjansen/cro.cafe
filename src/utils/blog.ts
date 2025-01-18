@@ -112,7 +112,7 @@ const load = async function (): Promise<Array<Post>> {
 let _posts: Array<Post>;
 
 /** */
-export const isBlogEnabled = APP_BLOG.isEnabled;
+export const isBlogEnabled = APP_BLOG.enabled;
 export const isRelatedPostsEnabled = APP_BLOG.isRelatedPostsEnabled;
 export const isBlogListRouteEnabled = APP_BLOG.list.isEnabled;
 export const isBlogPostRouteEnabled = APP_BLOG.post.isEnabled;

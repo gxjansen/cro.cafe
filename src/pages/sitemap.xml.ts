@@ -1,5 +1,7 @@
 import type { APIContext } from 'astro';
 import { getCollection } from 'astro:content';
+import type { Episode } from '~/types/episode';
+import type { Guest, Platform } from '~/types';
 import { LANGUAGES, type Language } from '../utils/language';
 
 interface SitemapEntry {
@@ -86,7 +88,7 @@ async function getContentEntries(): Promise<SitemapEntry[]> {
     try {
       // Episodes
       const episodes = await getCollection(`${lang}-episodes`);
-      episodes.forEach((episode) => {
+      episodes.forEach((episode: Episode) => {
         entries.push({
           url: `${SITE_URL}/${lang}/episodes/${episode.data.id}`,
           lastmod: formatDate(episode.data.attributes?.published_at),
@@ -97,7 +99,7 @@ async function getContentEntries(): Promise<SitemapEntry[]> {
 
       // Guests
       const guests = await getCollection(`${lang}-guests`);
-      guests.forEach((guest) => {
+      guests.forEach((guest: Guest) => {
         entries.push({
           url: `${SITE_URL}/${lang}/guests/${guest.data.id}`,
           changefreq: 'monthly',
@@ -108,7 +110,7 @@ async function getContentEntries(): Promise<SitemapEntry[]> {
       // Platforms - only available in specific languages
       if (lang === 'en' || lang === 'de') {
         const platforms = await getCollection(`${lang}-platforms` as const);
-        platforms.forEach((platform) => {
+        platforms.forEach((platform: Platform) => {
           if ('id' in platform.data) {
             entries.push({
               url: `${SITE_URL}/${lang}/platforms/${platform.data.id}`,

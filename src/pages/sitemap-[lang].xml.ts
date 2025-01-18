@@ -1,7 +1,8 @@
 import { getCollection } from 'astro:content';
+import type { Episode } from '~/types/episode';
+import type { Language } from '~/types';
 
 const languages = ['en', 'nl', 'de', 'es'] as const;
-type Language = (typeof languages)[number];
 
 export async function getStaticPaths() {
   return languages.map((lang) => ({ params: { lang } }));
@@ -15,7 +16,7 @@ export const get = async ({ params }: { params: { lang: string } }) => {
 
   // Sort episodes by date
   const sortedEpisodes = episodes.sort(
-    (a, b) =>
+    (a: Episode, b: Episode) =>
       new Date(b.data.attributes.published_at).valueOf() -
       new Date(a.data.attributes.published_at).valueOf()
   );
@@ -32,43 +33,98 @@ export const get = async ({ params }: { params: { lang: string } }) => {
       })),
     },
     // Episode entries
-    ...sortedEpisodes.map((episode) => ({
+    ...sortedEpisodes.map((episode: Episode) => ({
       url: `/${lang}/podcast/${episode.data.attributes.slug}`,
       lastmod: episode.data.attributes.published_at,
       alternates: languages.map((l) => ({
         lang: l,
-        url: `https://www.cro.cafe/${l}/podcast/${episode.data.attributes.slug}`,
+        url: `/${l}/podcast/${episode.data.attributes.slug}`,
+      })),
+    })),
+    // Additional entries for other pages
+    ...languages.map((l) => ({
+      url: `/${l}/episodes`,
+      lastmod: new Date().toISOString(),
+      alternates: languages.map((altLang) => ({
+        lang: altLang,
+        url: `/${altLang}/episodes`,
+      })),
+    })),
+    ...languages.map((l) => ({
+      url: `/${l}/about`,
+      lastmod: new Date().toISOString(),
+      alternates: languages.map((altLang) => ({
+        lang: altLang,
+        url: `/${altLang}/about`,
+      })),
+    })),
+    ...languages.map((l) => ({
+      url: `/${l}/contact`,
+      lastmod: new Date().toISOString(),
+      alternates: languages.map((altLang) => ({
+        lang: altLang,
+        url: `/${altLang}/contact`,
+      })),
+    })),
+    ...languages.map((l) => ({
+      url: `/${l}/pricing`,
+      lastmod: new Date().toISOString(),
+      alternates: languages.map((altLang) => ({
+        lang: altLang,
+        url: `/${altLang}/pricing`,
+      })),
+    })),
+    ...languages.map((l) => ({
+      url: `/${l}/privacy`,
+      lastmod: new Date().toISOString(),
+      alternates: languages.map((altLang) => ({
+        lang: altLang,
+        url: `/${altLang}/privacy`,
+      })),
+    })),
+    ...languages.map((l) => ({
+      url: `/${l}/terms`,
+      lastmod: new Date().toISOString(),
+      alternates: languages.map((altLang) => ({
+        lang: altLang,
+        url: `/${altLang}/terms`,
+      })),
+    })),
+    ...languages.map((l) => ({
+      url: `/${l}/subscribe`,
+      lastmod: new Date().toISOString(),
+      alternates: languages.map((altLang) => ({
+        lang: altLang,
+        url: `/${altLang}/subscribe`,
       })),
     })),
   ];
 
-  // Generate sitemap XML
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${entries
-  .map(
-    (entry) => `  <url>
-    <loc>https://www.cro.cafe${entry.url}</loc>
+  return {
+    body: `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  ${entries
+    .map(
+      (entry) => `
+  <url>
+    <loc>${entry.url}</loc>
     <lastmod>${entry.lastmod}</lastmod>
-${entry.alternates
-  .map(
-    (alt) => `    <xhtml:link
+    ${entry.alternates
+      .map(
+        (alternate: { lang: Language; url: string }) => `
+    <xhtml:link
       rel="alternate"
-      hreflang="${alt.lang}"
-      href="${alt.url}"
+      hreflang="${alternate.lang}"
+      href="${alternate.url}"
     />`
-  )
-  .join('\n')}
+      )
+      .join('')}
   </url>`
-  )
-  .join('\n')}
-</urlset>`;
-
-  return new Response(sitemap, {
-    status: 200,
+    )
+    .join('')}
+</urlset>`,
     headers: {
       'Content-Type': 'application/xml',
     },
-  });
+  };
 };

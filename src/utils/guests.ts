@@ -1,4 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
+import type { Guest } from '~/types';
 
 type GuestCollectionName = 'en-guests' | 'de-guests' | 'es-guests' | 'nl-guests';
 type GuestEntry = CollectionEntry<GuestCollectionName>;
@@ -20,22 +21,6 @@ export async function getGuestBySlug(
   language: string,
   slug: string
 ): Promise<GuestEntry | undefined> {
-  const collectionName = `${language}-guests` as GuestCollectionName;
-  const guests = await getCollection(collectionName);
-  return guests.find((guest) => guest.data.id === slug);
-}
-
-/**
- * Get all guests for an episode
- */
-export async function getEpisodeGuests(
-  language: string,
-  description: string
-): Promise<GuestEntry['data'][]> {
-  const slugs = await extractGuestSlugs(description);
-  const guestPromises = slugs.map((slug) => getGuestBySlug(language, slug));
-  const guests = await Promise.all(guestPromises);
-  return guests
-    .filter((guest): guest is GuestEntry => guest !== undefined)
-    .map((guest) => guest.data);
+  const guests = await getCollection(language as GuestCollectionName);
+  return guests.find((guest: GuestEntry) => guest.data.id === slug);
 }
