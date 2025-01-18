@@ -5,6 +5,7 @@ import EpisodeGrid from '~/components/episode/Grid.astro';
 import Pagination from '~/components/common/Pagination.astro';
 import { getTranslations } from '~/utils/translations';
 import { PAGINATION } from '~/config';
+import type { CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
   const episodes = await getCollection('en-episodes');
@@ -24,14 +25,14 @@ const episodes = await getCollection('en-episodes');
 
 // Sort episodes by date
 const sortedEpisodes = episodes
-  .sort((a: Episode, b: Episode) =>
+  .sort((a: CollectionEntry<'en-episodes'>, b: CollectionEntry<'en-episodes'>) =>
     new Date(b.data.attributes.published_at).valueOf() - 
     new Date(a.data.attributes.published_at).valueOf()
   );
 
 // Pagination
 const { EPISODES_PER_PAGE } = PAGINATION;
-const paginatedEpisodes: Episode[] = sortedEpisodes.slice(
+const paginatedEpisodes = sortedEpisodes.slice(
   (currentPage - 1) * EPISODES_PER_PAGE,
   currentPage * EPISODES_PER_PAGE
 );
@@ -58,8 +59,8 @@ const availableLanguages = ['en', 'nl', 'de', 'es'] as const;
 <PageLayout metadata={metadata} currentLang="en" availableLanguages={availableLanguages}>
   <div id="episodes" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <h1 class="text-4xl font-bold text-center mb-8">{t.latestEpisodes}</h1>
-    <EpisodeGrid
-      episodes={paginatedEpisodes}
+    <EpisodeGrid 
+      episodes={paginatedEpisodes} 
       columns="3"
       orderBy="published_at"
       orderDirection="desc"
