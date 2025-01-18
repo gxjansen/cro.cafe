@@ -89,13 +89,13 @@ export const EpisodePlayerPropsSchema = z
   })
   .strict();
 
-// Episode data validation matching Transistor API structure
+// Episode data validation matching Content Collection structure
 export const EpisodeSchema = z.object({
   id: z.string(),
   collection: z.string(),
   data: z.object({
-    id: z.string(),
     type: z.literal('episode'),
+    id: z.string(),
     attributes: z.object({
       title: z.string(),
       summary: z.string().nullable(),
@@ -157,8 +157,8 @@ export const EpisodeGridPropsSchema = z.object({
   loading: z.boolean().optional(),
   showId: z.string().optional(),
   season: z.number().optional(),
-  orderBy: z.enum(['published_at', 'duration']).optional().default('published_at'),
-  orderDirection: z.enum(['asc', 'desc']).optional().default('desc'),
+  orderBy: z.enum(['published_at', 'duration']).optional(),
+  orderDirection: z.enum(['asc', 'desc']).optional(),
   button: z
     .object({
       show: z.boolean(),

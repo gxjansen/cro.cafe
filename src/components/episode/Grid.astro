@@ -23,8 +23,6 @@ const {
   button
 } = props;
 
-console.log('Grid received episodes:', JSON.stringify(episodes, null, 2));
-
 let displayEpisodes = episodes;
 try {
   displayEpisodes = episodes
@@ -53,23 +51,8 @@ try {
       return orderDirection === 'desc' ? bValue - aValue : aValue - bValue;
     })
     // Apply limit if specified
-    .slice(0, limit || undefined)
-    // Transform to Episode type
-    .map(entry => ({
-      data: {
-        id: entry.data.id,
-        type: 'episode',
-        attributes: {
-          ...entry.data.attributes,
-          type: 'episode',
-          guests: entry.data.attributes.guests || [],
-          language: entry.data.attributes.language || 'en',
-        },
-        relationships: entry.data.relationships,
-      },
-    }));
+    .slice(0, limit || undefined);
 
-  console.log('Processed episodes:', JSON.stringify(displayEpisodes[0], null, 2));
 } catch (error) {
   console.error('Error processing episodes:', error);
 }
