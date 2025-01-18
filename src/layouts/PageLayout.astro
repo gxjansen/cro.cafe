@@ -27,11 +27,18 @@ const headerProps = {
   isSticky: true,
   showToggleTheme: true,
   currentLang,
+  links: [], // Add empty array for links
+  actions: [], // Add empty array for actions
+  isDark: false, // Add default value for isDark
+  isFullWidth: false, // Add default value for isFullWidth
+  showRssFeed: false, // Add default value for showRssFeed
+  position: 'center', // Add default value for position
 };
 
 const footerProps = {
   ...getFooterData(currentLang),
   currentLang,
+  secondaryLinks: [], // Add empty array for secondary links
 };
 ---
 
