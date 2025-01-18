@@ -16,7 +16,7 @@ export interface Props {
 }
 
 const { post } = Astro.props;
-const image = await findImage(post.image);
+const image = findImage(post.image);
 
 const link = APP_BLOG.post.permalink && post.permalink ? getPermalink(post.permalink, 'post') : '';
 ---

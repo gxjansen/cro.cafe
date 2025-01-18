@@ -32,7 +32,7 @@ const pathWithoutLang = currentPath.replace(/^\/(en|de|es|nl)\//, '/');
   </select>
 </div>
 
-<script define:vars={{ pathWithoutLang }}>
+<script define:vars={{ pathWithoutLang }} is:inline>
 document.querySelector('.select-language').addEventListener('change', (e) => {
   const code = e.target.value;
   // Always redirect to the root page of the selected language

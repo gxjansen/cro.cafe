@@ -1,63 +1,72 @@
 ---
-import type { MetadataProps } from '~/types';
+import { SITE } from '~/config';
+import type { MetaData } from '~/types';
+import type { Language } from '~/types';
+import type { SchemaOrgObject } from '~/types';
 
-interface Props extends MetadataProps {
-  ogImageType?: 'episode' | 'guest' | 'quote';
-  ogSubtitle?: string;
-  episode?: {
-    local_image_url?: string;
+interface Props {
+  metadata: MetaData;
+  availableLanguages: readonly Language[];
+  canonicalUrl: string;
+  currentLang: Language;
+  episode?: any; // Placeholder for now, will refine later
+}
+
+const { metadata, availableLanguages, canonicalUrl, currentLang, episode } = Astro.props;
+
+const fullImageUrl = metadata.image ? new URL(metadata.image, Astro.site).toString() : undefined;
+
+const ogImageUrl = metadata.ogImageType
+  ? new URL(`/images/${metadata.ogImageType}.webp`, Astro.site).toString()
+  : fullImageUrl;
+
+const structuredData: SchemaOrgObject = {
+  '@context': 'https://schema.org',
+  '@type': metadata.type || 'website',
+  url: canonicalUrl,
+  name: metadata.title,
+  description: metadata.description,
+  image: ogImageUrl,
+  datePublished: metadata.publishedTime,
+  dateModified: metadata.modifiedTime,
+  author: metadata.author,
+  tags: metadata.tags,
+};
+
+if (episode) {
+  structuredData['@type'] = 'Article';
+  structuredData['headline'] = episode.title;
+  structuredData['datePublished'] = episode.published_at;
+  structuredData['dateModified'] = episode.modified_at;
+  structuredData['author'] = {
+    '@type': 'Person',
+    name: episode.guests.map((guest: any) => guest.name).join(', '), // Ensure guest is typed
+  };
+  structuredData['publisher'] = {
+    '@type': 'Organization',
+    name: SITE.title,
+    url: SITE.url,
+    logo: {
+      '@type': 'ImageObject',
+      url: new URL(SITE.logo, Astro.site).toString(),
+    },
+  };
+  structuredData['mainEntityOfPage'] = {
+    '@type': 'WebPage',
+    '@id': canonicalUrl,
   };
 }
 
-const {
-  title,
-  description,
-  image,
-  canonicalUrl,
-  type = 'website',
-  publishedTime,
-  modifiedTime,
-  author,
-  tags = [],
-  ogImageType,
-  ogSubtitle,
-  episode
-} = Astro.props;
+if (availableLanguages.length > 0) {
+  structuredData['inLanguage'] = currentLang;
+  structuredData['alternateLanguage'] = availableLanguages.map((lang: Language) => ({
+    '@type': 'WebPage',
+    inLanguage: lang,
+    url: `${canonicalUrl.replace(/\/$/, '')}/${lang}`,
+  }));
+}
 
-const fullImageUrl = image ? new URL(image, Astro.site).toString() : undefined;
-const ogImageUrl = ogImageType
-  ? new URL(`/og/${ogImageType}/${encodeURIComponent(title)}.png`, Astro.site).toString()
-  : fullImageUrl;
 ---
-
-{/* Basic Metadata */}
-<title>{title}</title>
-<meta name="description" content={description} />
-
-{/* OpenGraph Metadata */}
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:type" content={type} />
-<meta property="og:url" content={canonicalUrl || Astro.url.href} />
-{fullImageUrl && <meta property="og:image" content={episode?.local_image_url || fullImageUrl} />}
-
-{/* Twitter Card Metadata */}
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content={title} />
-<meta name="twitter:description" content={description} />
-{fullImageUrl && <meta name="twitter:image" content={fullImageUrl} />}
-
-{/* Article-specific Metadata */}
-{type === 'article' && (
-  <>
-    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-    {author && <meta property="article:author" content={author} />}
-    {tags.map((tag: string) => (
-      <meta property="article:tag" content={tag} />
-    ))}
-  </>
-)}
-
-{/* Canonical URL */}
-{canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+<script type="application/ld+json" is:inline>
+  {JSON.stringify(structuredData, null, 2)}
+</script>

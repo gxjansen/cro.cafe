@@ -8,6 +8,8 @@ export const SITE = {
   textDirection: 'ltr',
   googleSiteVerificationId: '',
   trailingSlash: false,
+  url: 'https://cro.cafe',
+  logo: '/images/crocafe-logo.svg',
 } as const;
 
 export const UI = {

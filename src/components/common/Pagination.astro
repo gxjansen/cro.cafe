@@ -43,7 +43,7 @@ const visiblePages = getVisiblePages(currentPage, totalPages);
     {/* Page numbers */}
     {visiblePages.map((pageNum, index) => (
       pageNum === '...' ? (
-        <span key={`ellipsis-${index}`} class="px-4 py-2">...</span>
+        <span class="px-4 py-2">...</span>
       ) : (
         <a
           href={pageNum === 1 ? basePath : `${basePath}/${pageNum}`}

@@ -20,7 +20,11 @@ const baseStructuredData = {
 // Add language alternates if available
 if (availableLanguages.length > 0) {
   baseStructuredData['inLanguage'] = Astro.url.pathname.split('/')[1] || 'en';
-  baseStructuredData['availableLanguage'] = availableLanguages;
+  baseStructuredData['alternateLanguage'] = availableLanguages.map((lang) => ({
+    '@type': 'Language',
+    inLanguage: lang,
+    url: `${canonicalUrl.replace(/\/$/, '')}/${lang}`,
+  }));
 }
 
 // Merge base data with provided data
@@ -32,6 +36,6 @@ const structuredData = {
 
 ---
 
-<script type="application/ld+json">
+<script type="application/ld+json" is:inline>
   {JSON.stringify(structuredData, null, 2)}
 </script>

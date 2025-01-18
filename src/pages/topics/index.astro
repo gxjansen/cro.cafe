@@ -2,16 +2,17 @@
 import PageLayout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Grid from '~/components/topic/Grid.astro';
+import type { Language } from '~/types';
+import type { MetaData } from '~/types';
 
-const metadata = {
+const metadata: MetaData = {
   title: 'Topics - CRO.CAFE',
   description: 'Explore CRO topics discussed in our podcast episodes, from A/B testing to user research and everything in between.',
 };
 
-const availableLanguages = ['en', 'de', 'es', 'nl'];
----
+const availableLanguages: readonly Language[] = ['en', 'de', 'es', 'nl'] as const;
 
-<PageLayout metadata="{metadata}" availableLanguages="{availableLanguages}" currentLang="en">
+<PageLayout metadata={metadata} availableLanguages={availableLanguages} currentLang="en">
   <Hero
     tagline="Topics"
     title="CRO Topics"
