@@ -1,17 +1,18 @@
-// prettier-ignore
 ---
 import PageLayout from '~/layouts/PageLayout.astro';
-import type { MetaData } from '~/types';
+import type { PageProps } from '~/types';
 
-export interface Props {
-  metadata?: MetaData;
-  availableLanguages: string[];
-}
+export type Props = PageProps;
 
-const { metadata, availableLanguages } = Astro.props;
+const { metadata, availableLanguages, currentLang } = Astro.props;
+
+const layoutProps = {
+metadata,
+availableLanguages,
+currentLang,
+};
 ---
 
-// prettier-ignore
-<PageLayout metadata={metadata} availableLanguages={availableLanguages}>
+<PageLayout {...layoutProps}>
   <slot />
 </PageLayout>
