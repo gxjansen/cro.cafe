@@ -33,22 +33,42 @@ export interface CallToAction extends HTMLAttributes<'a'> {
   variant?: 'primary' | 'secondary' | 'tertiary' | 'link' | 'outline';
 }
 
+export interface Hero extends WidgetProps {
+  title?: string | null;
+  subtitle?: string | null;
+  tagline?: string | null;
+  content?: string | null;
+  actions?: Array<CallToAction> | string | null;
+  image?: string | ImageMetadata | null;
+  callToAction?: CallToAction;
+}
+
+type HTMLInputType =
+  | 'text'
+  | 'email'
+  | 'tel'
+  | 'url'
+  | 'password'
+  | 'number'
+  | 'date'
+  | 'time'
+  | 'datetime-local'
+  | 'month'
+  | 'week'
+  | 'color'
+  | 'search'
+  | 'checkbox'
+  | 'radio'
+  | 'file'
+  | 'submit'
+  | 'reset'
+  | 'button'
+  | 'image'
+  | 'hidden';
+
 export interface Form {
   inputs?: Array<{
-    type?:
-      | 'text'
-      | 'email'
-      | 'tel'
-      | 'url'
-      | 'password'
-      | 'number'
-      | 'date'
-      | 'time'
-      | 'datetime-local'
-      | 'month'
-      | 'week'
-      | 'color'
-      | 'search';
+    type?: HTMLInputType;
     name: string;
     label?: string;
     autocomplete?: string;

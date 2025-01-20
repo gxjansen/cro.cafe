@@ -5,7 +5,7 @@ import Button from '~/components/ui/Button.astro';
 const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props;
 
 type FormInput = Props['inputs'][number];
-type InputType = HTMLInputElement['type'];
+type HTMLInputType = 'text' | 'email' | 'tel' | 'url' | 'password' | 'number' | 'date' | 'time' | 'datetime-local' | 'month' | 'week' | 'color' | 'search' | 'checkbox' | 'radio' | 'file' | 'submit' | 'reset' | 'button' | 'image' | 'hidden';
 ---
 
 <form>
@@ -20,7 +20,7 @@ type InputType = HTMLInputElement['type'];
               </label>
             )}
             <input
-              type={type}
+              type={type as HTMLInputType}
               name={name}
               id={name}
               autocomplete={autocomplete}

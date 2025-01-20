@@ -3,12 +3,13 @@ import PageLayout from '~/layouts/PageLayout.astro';
 import { getTranslations } from '~/utils/translations';
 import Hero from '~/components/widgets/Hero.astro';
 import LatestEpisodes from '~/components/widgets/LatestEpisodes.astro';
+import type { MetaData } from '~/types';
 
 // Get English translations for the homepage
 const t = getTranslations('en');
 
 // Metadata for the page
-const metadata: Metadata = {
+const metadata: MetaData = {
   title: t.title,
   description: t.description,
   type: 'website',

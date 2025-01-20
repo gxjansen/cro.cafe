@@ -4,14 +4,11 @@ import '~/assets/styles/base.css';
 import CustomStyles from '~/components/CustomStyles.astro';
 import Favicons from '~/components/Favicons.astro';
 import SkipLinks from '~/components/common/SkipLinks.astro';
-import { validateProps, LayoutPropsSchema } from '~/utils/component-validation';
 
-import type { Language } from '~/types';
+import type { Language, MetaData } from '~/types';
 
-interface Props {
-  metadata?: {
-    title: string;
-    description: string;
+export interface Props {
+  metadata?: MetaData & {
     image?: string;
     canonicalUrl?: string;
     type?: 'article' | 'website' | 'page';
@@ -19,7 +16,6 @@ interface Props {
     modifiedTime?: string;
     author?: string;
     tags?: string[];
-    alternateLanguages?: Record<string, string>;
   };
   currentLang: Language;
   availableLanguages: readonly Language[];

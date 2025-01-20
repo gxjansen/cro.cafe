@@ -2,17 +2,16 @@
 import Image from '~/components/common/Image.astro';
 import Button from '~/components/ui/Button.astro';
 
-import type { Hero as Props } from '~/types';
+import type { Hero as Props } from '~/types/widgets';
 
 const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.slots.render('subtitle'),
   tagline,
-
   content = await Astro.slots.render('content'),
   actions = await Astro.slots.render('actions'),
   image = await Astro.slots.render('image'),
-
+  callToAction,
   id,
   bg = await Astro.slots.render('bg'),
 } = Astro.props;
@@ -68,6 +67,13 @@ const {
               </div>
             )
           }
+          {callToAction && (
+            <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
+              <div class="flex w-full sm:w-auto">
+                <Button {...callToAction} class="w-full sm:mb-0" />
+              </div>
+            </div>
+          )}
         </div>
         {content && <Fragment set:html={content} />}
       </div>
