@@ -9,3 +9,19 @@ export interface PageProps {
 }
 
 export type { Metadata };
+
+export type {
+  WidgetProps,
+  ItemProps,
+  CallToAction,
+  Content,
+  Features,
+  Stats,
+  Testimonials,
+  Brands,
+  FAQs,
+  Steps,
+  Footer,
+  Header,
+  ItemGrid,
+} from './widgets';
