@@ -4,19 +4,14 @@ import Button from '~/components/ui/Button.astro';
 
 const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props;
 
-type InputProps = {
-  type?: HTMLInputElement['type'];
-  name: string;
-  label?: string;
-  autocomplete?: string;
-  placeholder?: string;
-};
+type FormInput = Props['inputs'][number];
+type InputType = HTMLInputElement['type'];
 ---
 
 <form>
   {
     inputs &&
-      inputs.map(({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '' }: InputProps) =>
+      inputs.map(({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '' }: FormInput) =>
         name && (
           <div class="mb-6">
             {label && (

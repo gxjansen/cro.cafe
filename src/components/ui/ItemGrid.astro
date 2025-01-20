@@ -1,8 +1,10 @@
 ---
-import type { ItemGrid as Props, ItemProps, ItemGridClasses } from '~/types';
+import type { ItemGrid as Props } from '~/types';
 import { twMerge } from 'tailwind-merge';
 import Button from './Button.astro';
 import { Icon } from 'astro-icon/components';
+
+type ItemType = Props['items'][number];
 
 const { items = [], columns, defaultIcon = '', classes = {} } = Astro.props;
 
@@ -13,7 +15,7 @@ const {
   description: descriptionClass = '',
   icon: defaultIconClass = 'text-primary',
   action: actionClass = '',
-} = classes as ItemGridClasses;
+} = classes;
 ---
 
 {
@@ -32,7 +34,7 @@ const {
         containerClass
       )}
     >
-      {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }: ItemProps) => (
+      {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }: ItemType) => (
         <div class="intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
           <div class={twMerge('flex flex-row max-w-md', panelClass, itemClasses?.panel)}>
             <div class="flex justify-center">

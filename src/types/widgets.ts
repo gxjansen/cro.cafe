@@ -35,7 +35,20 @@ export interface CallToAction extends HTMLAttributes<'a'> {
 
 export interface Form {
   inputs?: Array<{
-    type?: HTMLInputElement['type'];
+    type?:
+      | 'text'
+      | 'email'
+      | 'tel'
+      | 'url'
+      | 'password'
+      | 'number'
+      | 'date'
+      | 'time'
+      | 'datetime-local'
+      | 'month'
+      | 'week'
+      | 'color'
+      | 'search';
     name: string;
     label?: string;
     autocomplete?: string;
@@ -55,13 +68,7 @@ export interface Form {
 }
 
 export interface ItemGrid {
-  items?: Array<{
-    title?: string;
-    description?: string;
-    icon?: string;
-    callToAction?: CallToAction;
-    classes?: ItemGridClasses;
-  }>;
+  items?: Array<ItemProps>;
   columns?: 2 | 3 | 4;
   defaultIcon?: string;
   classes?: ItemGridClasses;
