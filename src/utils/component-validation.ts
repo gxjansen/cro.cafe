@@ -93,6 +93,7 @@ export const EpisodePlayerPropsSchema = z
 export const EpisodeSchema = z.object({
   id: z.string(),
   collection: z.enum(['en-episodes', 'nl-episodes', 'de-episodes', 'es-episodes']),
+  render: z.function().optional(),
   data: z.object({
     type: z.literal('episode'),
     id: z.string(),

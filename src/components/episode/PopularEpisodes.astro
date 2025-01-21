@@ -15,36 +15,10 @@ const { language, limit = 5, title = 'Popular Episodes' } = Astro.props;
 // Get popular episodes
 const popularStats = await getPopularEpisodes(language, limit);
 
-// Transform CollectionEntry objects into the format EpisodeCard expects
-const popularEpisodes = popularStats.map(episode => ({
-  id: episode.data.id,
-  type: 'episode',
-  attributes: {
-    title: episode.data.attributes.title,
-    summary: episode.data.attributes.summary,
-    description: episode.data.attributes.description,
-    published_at: episode.data.attributes.published_at,
-    media_url: episode.data.attributes.media_url,
-    duration: episode.data.attributes.duration,
-    duration_in_mmss: episode.data.attributes.duration_in_mmss,
-    formatted_published_at: episode.data.attributes.formatted_published_at,
-    formatted_description: episode.data.attributes.formatted_description,
-    clean_description: episode.data.attributes.clean_description,
-    image_url: episode.data.attributes.image_url,
-    share_url: episode.data.attributes.share_url,
-    slug: episode.data.attributes.slug,
-    embed_html: episode.data.attributes.embed_html || '',
-    embed_html_dark: episode.data.attributes.embed_html_dark || ''
-  },
-  relationships: {
-    show: {
-      data: {
-        id: episode.data.relationships.show.data.id,
-        type: 'show'
-      }
-    }
-  }
-}));
+import { transformEpisode } from '~/utils/episode-transformation';
+
+// Transform episodes using the utility function
+const popularEpisodes = popularStats.map(episode => transformEpisode(episode));
 ---
 
 <ErrorBoundary fallback="Unable to load popular episodes.">

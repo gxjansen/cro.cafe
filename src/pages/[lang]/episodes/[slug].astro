@@ -3,6 +3,8 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import PageLayout from '~/layouts/PageLayout.astro';
 import SingleEpisode from '~/components/episode/SingleEpisode.astro';
 import { SITE } from '~/config';
+import { transformEpisode } from '~/utils/episode-transformation';
+import type { Language as AppLanguage } from '~/types';
 
 interface Props {
   metadata: {
@@ -65,7 +67,7 @@ export async function getStaticPaths() {
         slug: episode.data.attributes.slug,
       },
       props: {
-        episode: episode.data,
+        episode: transformEpisode(episode),
         metadata: {
           title: episode.data.attributes.title,
           description: episode.data.attributes.formatted_description || episode.data.attributes.description || 'Listen to this episode of CRO.CAFE',
@@ -98,20 +100,20 @@ const alternateLanguages: Record<string, string> = {};
 for (const lang of availableLanguages) {
   // Only add alternate if episode exists in that language
   const collection = await getCollection(`${lang}-episodes`);
-  const exists = collection.some((ep: CollectionEntry<EpisodeCollection>) => ep.data.attributes.slug === episode.attributes.slug);
+  const exists = collection.some((ep: CollectionEntry<EpisodeCollection>) => ep.data.attributes.slug === episode.data.attributes.slug);
   if (exists) {
-    alternateLanguages[lang] = `${Astro.url.origin}/${lang}/episodes/${episode.attributes.slug}`;
+    alternateLanguages[lang] = `${Astro.url.origin}/${lang}/episodes/${episode.data.attributes.slug}`;
   }
 }
 
 // Prepare metadata with all required fields
 const metadata = {
-  title: episode.attributes.title,
-  description: episode.attributes.formatted_description || episode.attributes.description || 'Listen to this episode of CRO.CAFE',
+  title: episode.data.attributes.title,
+  description: episode.data.attributes.formatted_description || episode.data.attributes.description || 'Listen to this episode of CRO.CAFE',
   type: 'article',
-  publishedTime: episode.attributes.published_at,
+  publishedTime: episode.data.attributes.published_at,
   modifiedTime: undefined,
-  image: episode.attributes.local_image_url || episode.attributes.image_url || '/images/default.png',
+  image: episode.data.attributes.local_image_url || episode.data.attributes.image_url || '/images/default.png',
   canonicalUrl: currentLang === 'en' ? Astro.url.href : alternateLanguages['en'] || Astro.url.href,
   author: SITE.name,
   tags: [],

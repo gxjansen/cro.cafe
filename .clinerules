@@ -104,7 +104,7 @@ CRITICAL: After implementing ANY feature or fix:
    - For any changes:
      - Run TypeScript checks
      - Run ESLint
-     - Check for console errors
+     - Run `npm run build` and check for console errors or warnings
 
 2. User Verification:
 

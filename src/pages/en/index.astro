@@ -19,8 +19,11 @@ import type { Language } from '~/types';
 
 const availableLanguages: readonly Language[] = ['en', 'de', 'es', 'nl'] as const;
 
-// Get English episodes
-const episodes = await getCollection('en-episodes');
+import { transformEpisodes } from '~/utils/episode-transformation';
+
+// Get English episodes and transform to match schema
+const rawEpisodes = await getCollection('en-episodes');
+const episodes = transformEpisodes(rawEpisodes);
 
 // English show ID from Transistor
 const englishShowId = '5036';

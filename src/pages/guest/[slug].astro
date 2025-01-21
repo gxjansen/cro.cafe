@@ -1,1 +1,42 @@
-c
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import GuestLayout from '~/layouts/GuestLayout.astro';
+
+interface Props {
+  guest: CollectionEntry<'guests'>;
+}
+
+export async function getStaticPaths() {
+  const guests = await getCollection('guests');
+  return guests.map((guest: CollectionEntry<'guests'>) => ({
+    params: { slug: guest.slug },
+    props: { guest },
+  }));
+}
+
+const { guest } = Astro.props;
+---
+<GuestLayout guest={guest}>
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold mb-4">{guest.data.name}</h1>
+    <div class="prose dark:prose-invert">
+      <p>{guest.data.bio}</p>
+      {guest.data.social_links?.length > 0 && (
+        <div class="mt-6">
+          <h2 class="text-2xl font-semibold mb-2">Social Links</h2>
+          <div class="flex gap-4">
+            {guest.data.social_links.map((link: {name: string, url: string}) => (
+              <a
+                href={link.url}
+                class="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-200"
+                rel="noopener noreferrer"
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </main>
+</GuestLayout>

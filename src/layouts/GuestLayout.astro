@@ -1,0 +1,14 @@
+---
+import BaseLayout from './Layout.astro';
+import { getLanguageFromShowId } from '~/utils/permalinks';
+import type { GuestEntry } from '~/types/layouts';
+
+const { guest } = Astro.props as { guest: GuestEntry };
+---
+
+<BaseLayout
+  currentLang={getLanguageFromShowId(guest.data.show_id)}
+  availableLanguages={['en', 'nl', 'de', 'es']}
+>
+  <slot />
+</BaseLayout>
