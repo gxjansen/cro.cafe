@@ -1,4 +1,5 @@
 import { GET } from './sitemap.xml';
+import { describe, it, expect } from 'vitest';
 
 describe('GET /sitemap.xml', () => {
   it('should return a valid sitemap index', async () => {

@@ -7,8 +7,9 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"]
-    }
+    },
+    "types": ["vitest/globals"]
   },
-  "include": ["src/**/*", "astro.config.mjs"],
+  "include": ["src/**/*", "astro.config.mjs", "**/*.test.ts"],
   "exclude": ["node_modules"]
 }
