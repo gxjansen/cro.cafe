@@ -92,7 +92,7 @@ export const EpisodePlayerPropsSchema = z
 // Episode data validation matching Content Collection structure
 export const EpisodeSchema = z.object({
   id: z.string(),
-  collection: z.string(),
+  collection: z.enum(['en-episodes', 'nl-episodes', 'de-episodes', 'es-episodes']),
   data: z.object({
     type: z.literal('episode'),
     id: z.string(),

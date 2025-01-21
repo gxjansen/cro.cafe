@@ -15,7 +15,9 @@ const metadata = {
   canonicalUrl: Astro.url.href,
 };
 
-const availableLanguages = ['en', 'de', 'es', 'nl'];
+import type { Language } from '~/types';
+
+const availableLanguages: readonly Language[] = ['en', 'de', 'es', 'nl'] as const;
 
 // Get Spanish episodes
 const episodes = await getCollection('es-episodes');

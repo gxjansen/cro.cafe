@@ -1,32 +1,23 @@
 import { getRssString } from '@astrojs/rss';
+import { SITE } from '~/config';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 
-import { SITE, METADATA, APP_BLOG } from 'astrowind:config';
-import { fetchPosts } from '~/utils/blog';
-import { getPermalink } from '~/utils/permalinks';
+type Episode = CollectionEntry<'en-episodes'>;
 
 export const GET = async () => {
-  if (!APP_BLOG.enabled) {
-    return new Response(null, {
-      status: 404,
-      statusText: 'Not found',
-    });
-  }
-
-  const posts = await fetchPosts();
+  const episodes = await getCollection('en-episodes');
 
   const rss = await getRssString({
-    title: `${SITE.name}’s Blog`,
-    description: METADATA?.description || '',
+    title: SITE.name,
+    description: SITE.description,
     site: import.meta.env.SITE,
-
-    items: posts.map((post) => ({
-      link: getPermalink(post.permalink, 'post'),
-      title: post.title,
-      description: post.excerpt,
-      pubDate: post.publishDate,
+    items: episodes.map((episode: Episode) => ({
+      link: `/en/podcast/${episode.slug}`,
+      title: episode.data.title,
+      description: episode.data.description,
+      pubDate: episode.data.publishDate,
     })),
-
-    trailingSlash: SITE.trailingSlash,
   });
 
   return new Response(rss, {

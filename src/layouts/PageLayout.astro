@@ -6,10 +6,7 @@ import Footer from '~/components/widgets/Footer.astro';
 import { getHeaderData, getFooterData } from '~/navigation';
 import type { PageProps, Language } from '~/types';
 
-export interface Props extends PageProps {
-  currentLang: Language;
-  availableLanguages: readonly Language[];
-}
+export type Props = PageProps;
 
 const { metadata, availableLanguages, currentLang } = Astro.props;
 
