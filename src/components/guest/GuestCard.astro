@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import { getGuestImage } from '~/utils/images';
 
 interface Props {
@@ -56,7 +55,7 @@ const image = await getGuestImage(image_url ? `/images/guests/${image_url}` : '/
       {bio && <p class="text-sm text-gray-700 dark:text-gray-300">{bio}</p>}
       {social_links && social_links.length > 0 && (
         <div class="mt-3 flex gap-2">
-          {social_links.map(({ platform, url }) => (
+          {social_links.map(({ platform, url }: { platform: string; url: string }) => (
             <a
               href={url}
               target="_blank"

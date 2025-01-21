@@ -1,5 +1,4 @@
 ---
-import DOMPurify from 'isomorphic-dompurify';
 import Player from './Player.astro';
 import StructuredData from '../common/StructuredData.astro';
 import ErrorBoundary from '../common/ErrorBoundary.astro';
@@ -57,38 +56,25 @@ const { episode, availableLanguages, loading = false } = props;
 const language = getLanguageFromShowId(episode.data.relationships.show.data.id);
 const guests: {
   id: string;
-  name: string;
-  role: string;
-  bio: string;
-  image_url: string;
-  social_links: Array<{ platform: string; url: string }>;
-  language: string;
-  type: 'guest';
+  attributes: {
+    name: string;
+  };
 }[] = [];
 
-const { 
+const {
   title,
   summary,
-  description,
   published_at,
   media_url,
   duration,
   duration_in_mmss,
-  formatted_published_at,
-  formatted_description,
   clean_description,
-  image_url,
   video_url,
   transcript_url,
-  share_url,
-  embed_html,
   slug,
 } = episode.data.attributes;
 
 const image = await getEpisodeImage(`/images/episodes/${language}/${episode.data.attributes.slug}.webp`, 'detail');
-
-// Ensure local image URL is used for Open Graph and Twitter meta tags
-const ogImageUrl = episode.data.attributes.local_image_url || image.src;
 
 // Prepare structured data
 const structuredData = {
@@ -203,7 +189,7 @@ const structuredData = {
             <div class="episode-guests mt-8">
               <h2 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">Episode Guests</h2>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {guests.map((guest) => (
+                {guests.map((guest: { id: string; attributes: { name: string } }) => (
                   <GuestCard guest={{
                     id: guest.id,
                     name: guest.attributes.name,
