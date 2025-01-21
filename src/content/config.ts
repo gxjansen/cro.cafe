@@ -1,4 +1,4 @@
-import { defineCollection, type SchemaContext, z } from 'astro:content';
+import { defineCollection, z } from 'astro:content';
 
 // Blog collection schema
 const blogCollection = defineCollection({

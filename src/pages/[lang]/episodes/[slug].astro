@@ -5,8 +5,6 @@ import PageLayout from '~/layouts/PageLayout.astro';
 import SingleEpisode from '~/components/episode/SingleEpisode.astro';
 import { SITE } from '~/config';
 import { transformEpisode } from '~/utils/episode-transformation';
-import type { Language as AppLanguage } from '~/types';
-
 interface Props {
   metadata: {
     title: string;

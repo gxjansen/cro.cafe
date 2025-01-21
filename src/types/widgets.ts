@@ -1,4 +1,3 @@
-import type { HTMLAttributes } from 'astro/types';
 import type { ImageMetadata } from 'astro';
 
 export interface WidgetProps {

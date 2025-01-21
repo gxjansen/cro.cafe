@@ -6,7 +6,7 @@ import ToggleMenu from '~/components/common/ToggleMenu.astro';
 import LanguageSwitcher from '~/components/common/LanguageSwitcher.astro';
 import Button from '~/components/ui/Button.astro';
 
-import { getHomePermalink, trimSlash, getAsset } from '~/utils/permalinks';
+import { getHomePermalink, trimSlash } from '~/utils/permalinks';
 import type { CallToAction } from '~/types';
 
 interface Link {
@@ -90,8 +90,6 @@ const currentPath = propPath || `/${trimSlash(new URL(Astro.url).pathname)}`;
       >
         {
           links.map(({ text, href, links }: MenuLink) => {
-            type LinkType = { text: string; href: string };
-            const key = text || href || '';
             return (
               <li class={links?.length ? 'dropdown group' : ''}>
                 {links?.length ? (

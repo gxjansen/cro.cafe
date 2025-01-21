@@ -2,7 +2,7 @@ import getReadingTime from 'reading-time';
 import { toString } from 'mdast-util-to-string';
 import { visit } from 'unist-util-visit';
 import type { RehypePlugin, RemarkPlugin } from '@astrojs/markdown-remark';
-import type { Root, Element, RootContent } from 'hast';
+import type { Root, Element } from 'hast';
 
 export const readingTimeRemarkPlugin: RemarkPlugin = () => {
   return function (tree, file) {

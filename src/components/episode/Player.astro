@@ -10,7 +10,7 @@ interface Props {
 
 // Validate props
 const { audio_url, title } = Astro.props;
-const props = validateProps(EpisodePlayerPropsSchema, { audio_url, title });
+validateProps(EpisodePlayerPropsSchema, { audio_url, title });
 
 // Ensure the title is properly escaped for use in aria-label
 const escapedTitle = title.replace(/"/g, '&quot;');

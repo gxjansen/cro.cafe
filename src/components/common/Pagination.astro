@@ -41,7 +41,7 @@ const visiblePages = getVisiblePages(currentPage, totalPages);
     </a>
 
     {/* Page numbers */}
-    {visiblePages.map((pageNum, index) => (
+    {visiblePages.map((pageNum) => (
       pageNum === '...' ? (
         <span class="px-4 py-2">...</span>
       ) : (
