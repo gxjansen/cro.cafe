@@ -1,6 +1,8 @@
 ---
 import PageLayout from '~/layouts/PageLayout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+type Platform = CollectionEntry<'de-platforms' | 'en-platforms' | 'nl-platforms' | 'es-platforms'>;
 
 // Get platform data for all languages
 const dePlatforms = await getCollection('de-platforms');
@@ -55,7 +57,7 @@ const sectionTitles = {
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold mb-8 text-center text-primary-950 dark:text-primary-50">{sectionTitles.en}</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-        {enPlatforms.map((platform) => (
+        {enPlatforms.map((platform: Platform) => (
           <a 
             href={platform.data.url}
             target="_blank"
@@ -82,7 +84,7 @@ const sectionTitles = {
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold mb-8 text-center text-primary-950 dark:text-primary-50">{sectionTitles.de}</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-        {dePlatforms.map((platform) => (
+        {dePlatforms.map((platform: Platform) => (
           <a 
             href={platform.data.url}
             target="_blank"
@@ -109,7 +111,7 @@ const sectionTitles = {
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold mb-8 text-center text-primary-950 dark:text-primary-50">{sectionTitles.nl}</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-        {nlPlatforms.map((platform) => (
+        {nlPlatforms.map((platform: Platform) => (
           <a 
             href={platform.data.url}
             target="_blank"
@@ -136,7 +138,7 @@ const sectionTitles = {
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold mb-8 text-center text-primary-950 dark:text-primary-50">{sectionTitles.es}</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-        {esPlatforms.map((platform) => (
+        {esPlatforms.map((platform: Platform) => (
           <a 
             href={platform.data.url}
             target="_blank"

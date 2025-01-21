@@ -5,13 +5,9 @@ import { Icon } from 'astro-icon/components';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Logo from '~/components/Logo.astro';
-import ToggleTheme from '~/components/common/ToggleTheme.astro';
-import LanguageSwitcher from '~/components/common/LanguageSwitcher.astro';
 import Header from '~/components/widgets/Header.astro';
 import Footer from '~/components/widgets/Footer.astro';
 import heroImage from '~/assets/images/hero-image.png';
-
 const metadata = {
   title: 'Style Guide',
   description: 'A comprehensive guide to our website design principles, components, and best practices.',
@@ -109,12 +105,7 @@ const sections = [
     <!-- Hero Widget -->
     <Hero
       tagline="Style Guide"
-      image={{
-        src: heroImage,
-        alt: 'Style Guide Hero Image',
-        width: 1920,
-        height: 1080,
-      }}
+      image={heroImage}
     >
       <Fragment slot="title">
         Our <span class="text-accent dark:text-white highlight">Style Guide</span>
@@ -569,6 +560,10 @@ const sections = [
   </div>
 
   <Footer
+    secondaryLinks={[
+      { text: 'Privacy Policy', href: '/privacy' },
+      { text: 'Terms of Service', href: '/terms' }
+    ]}
     links={[
       {
         title: 'Podcast',
