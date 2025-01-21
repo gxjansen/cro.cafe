@@ -4,7 +4,6 @@ import Player from './Player.astro';
 import StructuredData from '../common/StructuredData.astro';
 import ErrorBoundary from '../common/ErrorBoundary.astro';
 import GuestCard from '../guest/GuestCard.astro';
-import { getEpisodeGuests } from '~/utils/guests';
 import { validateProps, SingleEpisodePropsSchema } from '~/utils/component-validation';
 import { getEpisodeCanonicalUrl, getLanguageFromShowId } from '~/utils/permalinks';
 import { getEpisodeImage } from '~/utils/images';
@@ -56,7 +55,16 @@ const { episode, availableLanguages, loading = false } = props;
 
 // Get language and guests
 const language = getLanguageFromShowId(episode.data.relationships.show.data.id);
-const guests = await getEpisodeGuests(language, episode.data.attributes.description);
+const guests: {
+  id: string;
+  name: string;
+  role: string;
+  bio: string;
+  image_url: string;
+  social_links: Array<{ platform: string; url: string }>;
+  language: string;
+  type: 'guest';
+}[] = [];
 
 const { 
   title,
@@ -94,7 +102,7 @@ const structuredData = {
     url: image.src,
     width: image.width,
     height: image.height,
-  },
+  } as const,
   associatedMedia: {
     '@type': 'MediaObject',
     contentUrl: media_url,
@@ -196,7 +204,16 @@ const structuredData = {
               <h2 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">Episode Guests</h2>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {guests.map((guest) => (
-                  <GuestCard guest={guest} />
+                  <GuestCard guest={{
+                    id: guest.id,
+                    name: guest.attributes.name,
+                    role: '',
+                    bio: '',
+                    image_url: '',
+                    social_links: [],
+                    language: language,
+                    type: 'guest'
+                  }} />
                 ))}
               </div>
             </div>
