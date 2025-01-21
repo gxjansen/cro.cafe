@@ -2,6 +2,8 @@ import { Resvg } from '@resvg/resvg-js';
 import satori from 'satori';
 import OpenGraphImage from '../../../components/common/OpenGraphImage.astro';
 
+export const prerender = false;
+
 export const get = async ({ params }: { params: { type: string; title: string } }) => {
   const { type, title } = params;
 

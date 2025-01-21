@@ -4,6 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import icon from 'astro-icon';
+import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
 export default defineConfig({
@@ -36,7 +37,8 @@ export default defineConfig({
     // @ts-expect-error - Type mismatch in internal Astro types
     icon(),
   ],
-  output: 'static',
+  output: 'server',
+  adapter: netlify(),
   image: {
     service: {
       entrypoint: 'astro/assets/services/sharp',

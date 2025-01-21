@@ -1,3 +1,4 @@
+export const prerender = true;
 import { getCollection } from 'astro:content';
 import type { Episode } from '~/types/episode';
 import type { Language } from '~/types';
@@ -8,7 +9,7 @@ export async function getStaticPaths() {
   return languages.map((lang) => ({ params: { lang } }));
 }
 
-export const get = async ({ params }: { params: { lang: string } }) => {
+export const GET = async ({ params }: { params: { lang: string } }) => {
   const lang = params.lang as Language;
 
   // Get episodes for this language
@@ -100,8 +101,8 @@ export const get = async ({ params }: { params: { lang: string } }) => {
     })),
   ];
 
-  return {
-    body: `<?xml version="1.0" encoding="UTF-8"?>
+  return new Response(
+    `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   ${entries
     .map(
@@ -123,8 +124,10 @@ export const get = async ({ params }: { params: { lang: string } }) => {
     )
     .join('')}
 </urlset>`,
-    headers: {
-      'Content-Type': 'application/xml',
-    },
-  };
+    {
+      headers: {
+        'Content-Type': 'application/xml',
+      },
+    }
+  );
 };

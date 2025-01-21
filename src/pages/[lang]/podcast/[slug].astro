@@ -1,4 +1,5 @@
 ---
+export const prerender = true;
 import { getCollection } from 'astro:content';
 import Layout from '~/layouts/Layout.astro';
 import SingleEpisode from '~/components/episode/SingleEpisode.astro';
@@ -23,7 +24,11 @@ export async function getStaticPaths() {
         slug: episode.data.attributes.slug,
       },
       props: {
-        episode: episode.data,
+        episode: {
+          id: episode.id,
+          collection: episode.collection,
+          data: episode.data
+        },
         availableLanguages: ['en', 'nl', 'de', 'es'] as const,
       },
     };
@@ -43,17 +48,17 @@ const metadata: MetaData & {
   author?: string;
   tags?: string[];
 } = {
-  title: episode.attributes.title,
-  description: episode.attributes.summary || '',
-  image: episode.attributes.local_image_url || episode.attributes.image_url || '/images/default.png',
+  title: episode.data.attributes.title,
+  description: episode.data.attributes.summary || '',
+  image: episode.data.attributes.local_image_url || episode.data.attributes.image_url || '/images/default.png',
   type: 'article',
-  publishedTime: episode.attributes.published_at,
-  modifiedTime: episode.attributes.updated_at,
-  author: episode.attributes.author || SITE.name,
-  tags: episode.attributes.keywords?.split(',').map((k: string) => k.trim()) || [],
+  publishedTime: episode.data.attributes.published_at,
+  modifiedTime: episode.data.attributes.updated_at,
+  author: episode.data.attributes.author || SITE.name,
+  tags: (typeof episode.data.attributes.keywords === 'string' ? episode.data.attributes.keywords.split(',').map((k: string) => k.trim()) : []),
   alternateLanguages: availableLanguages.reduce((acc: Record<string, string>, lang: typeof currentLang) => ({
     ...acc,
-    [lang]: `/${lang}/podcast/${episode.attributes.slug}`
+    [lang]: `/${lang}/podcast/${episode.data.attributes.slug}`
   }), {})
 };
 
