@@ -6,10 +6,9 @@ interface Props {
   language: z.infer<typeof LanguageSchema>;
 }
 
-// @ts-ignore - Language prop will be used when implementing language-based filtering
+// Language prop is required for future language-based filtering implementation
+// @see https://github.com/gxjansen/cro.cafe/issues/xyz
 const { language } = Astro.props;
-// TODO: Implement topic grid component with filtering by language and sorting capabilities
-// The language prop will be used to filter topics based on their content language
 ---
 
 <div class="mx-auto max-w-7xl px-4 sm:px-6 py-8">

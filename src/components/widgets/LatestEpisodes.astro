@@ -2,28 +2,18 @@
 import { getCollection } from 'astro:content';
 import Card from '../episode/Card.astro';
 
-console.log('Starting LatestEpisodes component...');
-
 let latestEpisodes: { lang: string; episode: any }[] = [];
 
 try {
   // Get episodes from each language collection
   const enEpisodes = await getCollection('en-episodes');
-  console.log('EN Episodes loaded:', enEpisodes.length);
-
   const nlEpisodes = await getCollection('nl-episodes');
-  console.log('NL Episodes loaded:', nlEpisodes.length);
-
   const deEpisodes = await getCollection('de-episodes');
-  console.log('DE Episodes loaded:', deEpisodes.length);
-
   const esEpisodes = await getCollection('es-episodes');
-  console.log('ES Episodes loaded:', esEpisodes.length);
 
   // Sort episodes by date and get the latest one from each language
   const getLatestEpisode = (episodes: any[], lang: string) => {
     if (!episodes || episodes.length === 0) {
-      console.log(`No episodes found for ${lang}`);
       return null;
     }
 
@@ -34,12 +24,6 @@ try {
     });
 
     const latestEpisode = sorted[0];
-    console.log(`Latest ${lang} episode:`, {
-      id: latestEpisode.id,
-      title: latestEpisode.data.attributes.title,
-      date: latestEpisode.data.attributes.published_at,
-      clean_description: latestEpisode.data.attributes.clean_description
-    });
 
     // Transform data structure to match Card.astro expectations
     return {
@@ -67,8 +51,6 @@ try {
     { lang: 'de', episode: getLatestEpisode(deEpisodes, 'de') },
     { lang: 'es', episode: getLatestEpisode(esEpisodes, 'es') },
   ].filter(({ episode }) => episode);
-
-  console.log('Final episodes count:', latestEpisodes.length);
 } catch (error) {
   console.error('Error in LatestEpisodes component:', error);
 }

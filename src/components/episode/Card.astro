@@ -15,8 +15,6 @@ interface Props {
 const props = validateProps(EpisodeCardPropsSchema, Astro.props);
 const { episode, loading = false } = props;
 
-console.log('Card received episode:', JSON.stringify(episode, null, 2));
-
 let title = '';
 let cleanSummary = '';
 let language = '';
@@ -39,14 +37,6 @@ try {
 
   // Get slug from attributes
   slug = episode.data.attributes.slug;
-
-  console.log('Card processed data:', {
-    title,
-    language,
-    cleanSummary,
-    image,
-    slug
-  });
 } catch (error) {
   console.error('Error processing episode data:', error);
 }
