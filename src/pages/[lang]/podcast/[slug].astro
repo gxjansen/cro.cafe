@@ -4,6 +4,8 @@ import Layout from '~/layouts/Layout.astro';
 import SingleEpisode from '~/components/episode/SingleEpisode.astro';
 import { getLanguageFromShowId } from '~/utils/permalinks';
 import type { Language } from '~/utils/language';
+import type { MetaData } from '~/types';
+import { SITE } from '~/config';
 
 export async function getStaticPaths() {
   const allEpisodes = await Promise.all([
@@ -32,13 +34,16 @@ const { episode, availableLanguages } = Astro.props;
 const { lang } = Astro.params;
 
 // Metadata for the page
-const metadata = {
+const metadata: MetaData = {
   title: episode.attributes.title,
   description: episode.attributes.summary || '',
   image: episode.attributes.local_image_url || episode.attributes.image_url || '/images/default.png',
   type: 'article',
   publishedTime: episode.attributes.published_at,
-  alternateLanguages: availableLanguages.reduce((acc, lang) => ({
+  modifiedTime: episode.attributes.updated_at,
+  author: episode.attributes.author || SITE.name,
+  tags: episode.attributes.keywords?.split(',').map(k => k.trim()) || [],
+  alternateLanguages: availableLanguages.reduce((acc: Record<string, string>, lang: typeof currentLang) => ({
     ...acc,
     [lang]: `/${lang}/podcast/${episode.attributes.slug}`
   }), {})

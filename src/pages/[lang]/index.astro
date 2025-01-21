@@ -70,7 +70,7 @@ const metadata = {
   type: 'website',
   canonicalUrl: `${Astro.url.origin}/${currentLang}`,
   alternateLanguages: Object.fromEntries(
-    SITE.languages.map(l => [l, `${Astro.url.origin}/${l}`])
+    SITE.languages.map((l: typeof currentLang) => [l, `${Astro.url.origin}/${l}`])
   ),
   image: latestEpisodes.length > 0
     ? `/images/episodes/${currentLang}/${latestEpisodes[0].data.attributes.slug.replace(/_/g, '-').toLowerCase()}.webp`
