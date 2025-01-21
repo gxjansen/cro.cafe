@@ -1,5 +1,4 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
-import type { Guest } from '~/types';
 
 type GuestCollectionName = 'en-guests' | 'de-guests' | 'es-guests' | 'nl-guests';
 type GuestEntry = CollectionEntry<GuestCollectionName>;
