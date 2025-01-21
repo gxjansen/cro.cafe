@@ -90,48 +90,49 @@ const currentPath = propPath || `/${trimSlash(new URL(Astro.url).pathname)}`;
       >
         {
           links.map(({ text, href, links }: { text?: string; href?: string; links?: Array<{ text: string; href: string }> }) => {
+            type LinkType = { text: string; href: string };
+            const key = text || href || '';
             return (
-            <li class={links?.length ? 'dropdown group' : ''}>
-              {links?.length ? (
-                <>
-                  <button
-                    type="button"
-                    class="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap"
+              <li class={links?.length ? 'dropdown group' : ''} key={key}>
+                {links?.length ? (
+                  <div>
+                    <button
+                      type="button"
+                      class="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap"
+                    >
+                      {text}{' '}
+                      <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
+                    </button>
+                    <ul class="dropdown-menu hidden group-hover:block md:backdrop-blur-sm rounded md:absolute pl-4 md:pl-0 font-medium md:bg-white/90 dark:md:bg-gray-800/90 md:min-w-[200px] drop-shadow-xl">
+                      {links.map(({ text: text2, href: href2 }: LinkType) => (
+                        <li key={text2}>
+                          <a
+                            class:list={[
+                              'first:rounded-t last:rounded-b text-gray-700 md:hover:bg-gray-100 hover:text-primary dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
+                              { 'aw-link-active': href2 === currentPath },
+                            ]}
+                            href={href2}
+                          >
+                            {text2}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : (
+                  <a
+                    class:list={[
+                      'text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap',
+                      { 'aw-link-active': href === currentPath },
+                    ]}
+                    href={href}
                   >
-                    {text}{' '}
-                    <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
-                  </button>
-                  <ul class="dropdown-menu hidden group-hover:block md:backdrop-blur-sm rounded md:absolute pl-4 md:pl-0 font-medium md:bg-white/90 dark:md:bg-gray-800/90 md:min-w-[200px] drop-shadow-xl">
-                    {links.map(({ text: text2, href: href2 }: { text: string; href: string }) => (
-                      <li>
-                        <a
-                          class:list={[
-                            'first:rounded-t last:rounded-b text-gray-700 md:hover:bg-gray-100 hover:text-primary dark:text-gray-300 dark:hover:text-white dark:hover:bg-gray-700 py-2 px-5 block whitespace-no-wrap',
-                            { 'aw-link-active': href2 === currentPath },
-                          ]}
-                          href={href2}
-                        >
-                          {text2}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              ) : (
-                <a
-                  class:list={[
-                    'text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap',
-                    { 'aw-link-active': href === currentPath },
-                  ]}
-                  href={href}
-                >
-                  {text}
-                </a>
-              )}
-            </li>
+                    {text}
+                  </a>
+                )}
+              </li>
             );
-          })
-        }
+          })}
       </ul>
     </nav>
     <div

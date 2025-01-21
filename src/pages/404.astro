@@ -14,7 +14,9 @@ const t = getTranslations(currentLang);
 const metadata = {
   title: `404 - ${t.title}`,
   description: t.description,
-  type: 'website',
+  type: 'website' as const,
+  image: '/images/default.png',
+  canonicalUrl: Astro.url.href,
   alternateLanguages: {
     en: '/en',
     nl: '/nl',

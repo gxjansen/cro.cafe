@@ -10,7 +10,9 @@ const translations = getTranslations('de');
 const metadata = {
   title: translations.title,
   description: translations.description,
-  type: 'website',
+  type: 'website' as const,
+  image: '/images/default.png',
+  canonicalUrl: Astro.url.href,
 };
 
 const availableLanguages = ['en', 'de', 'es', 'nl'];

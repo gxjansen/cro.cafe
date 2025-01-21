@@ -6,7 +6,9 @@ import Grid from '~/components/guest/Grid.astro';
 const metadata = {
   title: 'Guests - CRO.CAFE',
   description: 'Meet our expert guests from the CRO.CAFE podcast, sharing their knowledge and experiences in Conversion Rate Optimization.',
-  type: 'website',
+  type: 'website' as const,
+  image: '/images/default.png',
+  canonicalUrl: Astro.url.href,
 };
 
 const availableLanguages = ['en', 'de', 'es', 'nl'];

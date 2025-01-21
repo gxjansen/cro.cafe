@@ -8,8 +8,8 @@ export interface WidgetProps {
   bg?: string;
 }
 
-export interface ItemGridClasses {
-  [key: string]: string | Record<string, string> | undefined;
+export interface ItemGridClasses
+  extends Record<string, string | Record<string, string> | undefined> {
   container?: string;
   title?: string;
   description?: string;
@@ -28,11 +28,14 @@ export interface ItemProps {
   callToAction?: CallToAction;
 }
 
-export interface CallToAction extends HTMLAttributes<'a'> {
+export interface CallToAction {
   text?: string;
   href?: string;
   icon?: string;
   variant?: 'primary' | 'secondary' | 'tertiary' | 'link' | 'outline';
+  class?: string;
+  target?: string;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 export interface Hero extends WidgetProps {
@@ -89,8 +92,8 @@ export interface Form {
   description?: string;
 }
 
-export interface ItemGrid {
-  items?: Array<ItemProps>;
+export interface ItemGrid extends WidgetProps {
+  items: Array<ItemProps>;
   columns?: 2 | 3 | 4;
   defaultIcon?: string;
   classes?: ItemGridClasses;
@@ -116,6 +119,7 @@ export interface Features extends WidgetProps {
   tagline?: string;
   items?: Array<ItemProps>;
   columns?: number;
+  classes?: ItemGridClasses;
 }
 
 export interface Stats extends WidgetProps {
@@ -159,6 +163,7 @@ export interface FAQs extends WidgetProps {
   tagline?: string;
   items?: Array<ItemProps>;
   columns?: number;
+  classes?: ItemGridClasses;
 }
 
 export interface Steps extends WidgetProps {

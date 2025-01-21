@@ -30,7 +30,7 @@ export interface BlogPost {
 
 export type Post = BlogPost;
 
-export type { Metadata };
+export type { Metadata, PageProps } from './astro';
 
 export interface ItemGridClasses {
   container?: string;
