@@ -1,9 +1,11 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import PageLayout from '~/layouts/PageLayout.astro';
 import Grid from '~/components/episode/Grid.astro';
 import LatestEpisodes from '~/components/widgets/LatestEpisodes.astro';
 import { SITE } from '~/config';
+
+type Episode = CollectionEntry<`${(typeof SITE.languages)[number]}-episodes`>;
 
 export async function getStaticPaths() {
   return SITE.languages.map((lang) => ({
@@ -31,13 +33,13 @@ try {
 
   // Sort episodes by date and get the latest ones
   latestEpisodes = episodes
-    .sort((a, b) => {
+    .sort((a: Episode, b: Episode) => {
       const dateA = new Date(b.data.attributes.published_at);
       const dateB = new Date(a.data.attributes.published_at);
       return dateA.valueOf() - dateB.valueOf();
     })
     .slice(0, 4)
-    .map(episode => {
+    .map((episode: Episode) => {
       console.log(`[${currentLang}] Processing episode:`, JSON.stringify(episode, null, 2));
       return {
         id: episode.id,
@@ -70,7 +72,9 @@ const metadata = {
   alternateLanguages: Object.fromEntries(
     SITE.languages.map(l => [l, `${Astro.url.origin}/${l}`])
   ),
-  image: `/images/episodes/${currentLang}/${episode.attributes.slug.replace(/_/g, '-').toLowerCase()}.webp`,
+  image: latestEpisodes.length > 0
+    ? `/images/episodes/${currentLang}/${latestEpisodes[0].data.attributes.slug.replace(/_/g, '-').toLowerCase()}.webp`
+    : `/images/default.png`,
   publishedTime: new Date().toISOString(),
   modifiedTime: new Date().toISOString(),
   author: SITE.name,

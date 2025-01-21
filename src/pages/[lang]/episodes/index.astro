@@ -1,10 +1,10 @@
 ---
+import { getCollection } from 'astro:content';
 import PageLayout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Grid from '~/components/episode/Grid.astro';
 import { LanguageSchema } from '~/utils/component-validation';
 import type { z } from 'zod';
-
 export function getStaticPaths() {
   return [
     { params: { lang: 'en' } },
@@ -16,6 +16,10 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params;
 const availableLanguages = ['en', 'de', 'es', 'nl'] as const;
+const currentLang = lang as z.infer<typeof LanguageSchema>;
+
+// Get episodes for current language
+const episodes = await getCollection(`${currentLang}-episodes`);
 
 const metadata = {
   title: 'Episodes - CRO.CAFE',
@@ -30,5 +34,5 @@ const metadata = {
     subtitle="Listen to our podcast episodes about Conversion Rate Optimization, featuring expert insights and practical tips."
   />
 
-  <Grid language={lang as z.infer<typeof LanguageSchema>} />
+  <Grid episodes={episodes} />
 </PageLayout>

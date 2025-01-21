@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import PageLayout from '~/layouts/PageLayout.astro';
 import SingleEpisode from '~/components/episode/SingleEpisode.astro';
 import { SITE } from '~/config';
@@ -50,6 +50,7 @@ interface Props {
 }
 
 type Language = typeof SITE.languages[number];
+type EpisodeCollection = `${Language}-episodes`;
 
 // Get all episodes for each language and generate paths
 export async function getStaticPaths() {
@@ -58,7 +59,7 @@ export async function getStaticPaths() {
   for (const lang of SITE.languages) {
     const episodes = await getCollection(`${lang}-episodes`);
     
-    const langPaths = episodes.map((episode) => ({
+    const langPaths = episodes.map((episode: CollectionEntry<EpisodeCollection>) => ({
       params: {
         lang,
         slug: episode.data.attributes.slug,
@@ -97,7 +98,7 @@ const alternateLanguages: Record<string, string> = {};
 for (const lang of availableLanguages) {
   // Only add alternate if episode exists in that language
   const collection = await getCollection(`${lang}-episodes`);
-  const exists = collection.some(ep => ep.data.attributes.slug === episode.attributes.slug);
+  const exists = collection.some((ep: CollectionEntry<EpisodeCollection>) => ep.data.attributes.slug === episode.attributes.slug);
   if (exists) {
     alternateLanguages[lang] = `${Astro.url.origin}/${lang}/episodes/${episode.attributes.slug}`;
   }
