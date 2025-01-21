@@ -56,7 +56,7 @@ const {
     <link rel="canonical" href={canonicalUrl} />
 
     <!-- Language alternates -->
-    {availableLanguages.map((lang) => (
+    {availableLanguages.map((lang: Language) => (
       <link
         rel="alternate"
         hreflang={lang}
@@ -73,8 +73,8 @@ const {
     <meta property="og:image" content={new URL(image, Astro.url)} />
     <meta property="og:locale" content={currentLang} />
     {availableLanguages
-      .filter((lang) => lang !== currentLang)
-      .map((lang) => (
+      .filter((lang: Language) => lang !== currentLang)
+      .map((lang: Language) => (
         <meta property="og:locale:alternate" content={lang} />
       ))}
 
@@ -82,7 +82,7 @@ const {
     {publishedTime && <meta property="article:published_time" content={publishedTime} />}
     {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
     {author && <meta property="article:author" content={author} />}
-    {tags.map((tag) => (
+    {tags.map((tag: string) => (
       <meta property="article:tag" content={tag} />
     ))}
 
