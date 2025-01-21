@@ -25,7 +25,13 @@ const {
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
     {
       testimonials &&
-        testimonials.map(({ title, testimonial, name, job, image }) => (
+        testimonials.map(({ title, testimonial, name, job, image }: {
+          title?: string;
+          testimonial?: string;
+          name?: string;
+          job?: string;
+          image?: string | ImageMetadata;
+        }) => (
           <div class="flex h-auto intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter">
             <div class="flex flex-col p-4 md:p-6 rounded-md shadow-xl dark:shadow-none dark:border dark:border-slate-600">
               {title && <h2 class="text-lg font-medium leading-6 pb-4">{title}</h2>}
@@ -47,9 +53,8 @@ const {
                         class="h-10 w-10 rounded-full border border-slate-200 dark:border-slate-600 min-w-full min-h-full"
                         width={40}
                         height={40}
-                        widths={[400, 768]}
                         layout="fixed"
-                        {...image}
+                        {...(typeof image === 'object' ? image : {})}
                       />
                     )}
                   </div>

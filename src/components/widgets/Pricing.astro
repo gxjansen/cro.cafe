@@ -26,7 +26,7 @@ const {
         prices &&
           prices.map(({ 
             title: itemTitle, 
-            subtitle: itemSubtitle, 
+            description: itemSubtitle,
             price, 
             period, 
             items, 
@@ -59,7 +59,7 @@ const {
                     {items && (
                       <ul class="my-8 md:my-10 space-y-2 text-left">
                         {items.map(
-                          ({ description, icon }) =>
+                          ({ description, icon }: { description: string; icon?: string }) =>
                             description && (
                               <li class="mb-1.5 flex items-start space-x-3 leading-7">
                                 <div class="rounded-full bg-primary mt-1">
@@ -81,7 +81,7 @@ const {
                           {...(hasRibbon ? { variant: 'primary' } : {})} 
                           text={callToAction.text}
                           href={callToAction.href}
-                          icon={callToAction.icon}
+                          variant={callToAction.variant}
                         />
                       )}
                     </div>

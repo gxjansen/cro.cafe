@@ -1,8 +1,14 @@
 export interface Metadata {
   title: string;
   description: string;
-  type?: string;
+  type?: 'article' | 'page' | 'website';
   alternateLanguages?: { [key: string]: string };
+  image?: string;
+  canonicalUrl?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  tags?: string[];
 }
 
 export interface PageProps {

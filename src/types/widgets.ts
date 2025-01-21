@@ -16,6 +16,7 @@ export interface ItemGridClasses {
   description?: string;
   action?: string;
   actionClass?: string;
+  items?: Record<string, string>;
 }
 
 export interface ItemProps {

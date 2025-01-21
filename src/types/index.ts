@@ -1,18 +1,44 @@
 import type { Metadata } from './astro';
+import type { ImageMetadata } from 'astro';
 import type { CallToAction } from './widgets';
 
 export type Language = 'en' | 'nl' | 'de' | 'es';
+
+export interface BlogPost {
+  id: string;
+  slug: string;
+  permalink: string;
+  publishDate: Date;
+  title: string;
+  description: string;
+  body: string;
+  image?: string | ImageMetadata;
+  category?: {
+    slug: string;
+    title: string;
+  };
+  tags?: Array<{
+    slug: string;
+    title: string;
+  }>;
+  author?: string;
+  draft: boolean;
+  excerpt?: string;
+  readingTime?: number;
+  Content?: any;
+}
+
+export type Post = BlogPost;
 
 export type { Metadata };
 
 export interface ItemGridClasses {
   container?: string;
-  panel?: string;
-  icon?: string;
   title?: string;
   description?: string;
   action?: string;
   actionClass?: string;
+  items?: Record<string, string>;
 }
 
 export interface ItemProps {
