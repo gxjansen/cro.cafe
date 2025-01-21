@@ -4,7 +4,7 @@ import type { ImageMetadata } from 'astro';
 export interface WidgetProps {
   id?: string;
   isDark?: boolean;
-  classes?: Record<string, string>;
+  classes?: ItemGridClassesWithPanel;
   bg?: string;
 }
 
@@ -17,6 +17,11 @@ export interface ItemGridClasses {
   action?: string;
   actionClass?: string;
   items?: Record<string, string>;
+}
+
+export interface ItemGridClassesWithPanel extends ItemGridClasses {
+  panel?: string;
+  icon?: string;
 }
 
 export interface ItemProps {
@@ -106,6 +111,7 @@ export interface Content extends WidgetProps {
   isAfterContent?: boolean;
   callToAction?: CallToAction;
   columns?: number;
+  classes?: ItemGridClassesWithPanel;
 }
 
 export interface Features extends WidgetProps {
