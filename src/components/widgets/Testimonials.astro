@@ -51,10 +51,9 @@ const {
                     ) : (
                       <Image
                         class="h-10 w-10 rounded-full border border-slate-200 dark:border-slate-600 min-w-full min-h-full"
-                        width={40}
-                        height={40}
+                        width={typeof image === 'object' ? image.width : 40}
+                        height={typeof image === 'object' ? image.height : 40}
                         layout="fixed"
-                        {...(typeof image === 'object' ? image : {})}
                       />
                     )}
                   </div>

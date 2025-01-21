@@ -4,22 +4,18 @@ import type { ImageMetadata } from 'astro';
 export interface WidgetProps {
   id?: string;
   isDark?: boolean;
-  classes?: ItemGridClassesWithPanel;
+  classes?: ItemGridClasses;
   bg?: string;
 }
 
 export interface ItemGridClasses {
+  [key: string]: string | Record<string, string> | undefined;
   container?: string;
-  panel?: string;
-  icon?: string;
   title?: string;
   description?: string;
   action?: string;
   actionClass?: string;
   items?: Record<string, string>;
-}
-
-export interface ItemGridClassesWithPanel extends ItemGridClasses {
   panel?: string;
   icon?: string;
 }
@@ -111,7 +107,7 @@ export interface Content extends WidgetProps {
   isAfterContent?: boolean;
   callToAction?: CallToAction;
   columns?: number;
-  classes?: ItemGridClassesWithPanel;
+  classes?: ItemGridClasses;
 }
 
 export interface Features extends WidgetProps {

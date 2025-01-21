@@ -89,7 +89,8 @@ const currentPath = propPath || `/${trimSlash(new URL(Astro.url).pathname)}`;
         class="flex flex-col md:flex-row md:self-center w-full md:w-auto text-xl md:text-[0.9375rem] tracking-[0.01rem] font-medium md:justify-center"
       >
         {
-          links.map(({ text, href, links }: { text?: string; href?: string; links?: Array<{ text: string; href: string }> }) => (
+          links.map(({ text, href, links }: { text?: string; href?: string; links?: Array<{ text: string; href: string }> }) => {
+            return (
             <li class={links?.length ? 'dropdown group' : ''}>
               {links?.length ? (
                 <>
@@ -128,7 +129,8 @@ const currentPath = propPath || `/${trimSlash(new URL(Astro.url).pathname)}`;
                 </a>
               )}
             </li>
-          ))
+            );
+          })
         }
       </ul>
     </nav>
