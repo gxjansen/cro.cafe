@@ -130,8 +130,18 @@ export class TransistorAPI {
   }
 }
 
-// Export singleton instance
-export const transistorApi = new TransistorAPI(process.env.TRANSISTOR_API_KEY || '');
+// Factory function to create/get API instance
+let apiInstance: TransistorAPI | null = null;
+export function getTransistorApi(): TransistorAPI {
+  if (!apiInstance) {
+    const apiKey = process.env.TRANSISTOR_API_KEY;
+    if (!apiKey) {
+      throw new Error('TRANSISTOR_API_KEY environment variable is not set');
+    }
+    apiInstance = new TransistorAPI(apiKey);
+  }
+  return apiInstance;
+}
 
 // Show IDs for each language
 export const SHOW_IDS = {

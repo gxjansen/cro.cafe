@@ -2,15 +2,15 @@ import { writeFile, mkdir } from 'fs/promises';
 import { join } from 'path';
 import { existsSync } from 'fs';
 import { config } from 'dotenv';
-import { TransistorAPI, SHOW_IDS, getLanguageFromShowId } from '../src/utils/transistor-api.ts';
+import { getTransistorApi, SHOW_IDS, getLanguageFromShowId } from '../src/utils/transistor-api.ts';
 import type { TransistorEpisode } from '../src/types/transistor';
 import { extractGuests } from './extract-guests.ts';
 
 // Load environment variables
 config();
 
-// Initialize API with key from environment
-const transistorApi = new TransistorAPI(process.env.TRANSISTOR_API_KEY || '');
+// Get API instance
+const transistorApi = getTransistorApi();
 
 // Ensure content directory exists
 async function ensureContentDirectory(language: string) {
