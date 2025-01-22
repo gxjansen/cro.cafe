@@ -138,18 +138,25 @@ function processEpisodeFile(filePath: string): void {
   }
 }
 
-// Process all episode files in all language directories
-for (const dir of LANGUAGE_DIRS) {
-  try {
-    const episodeFiles = readdirSync(dir).filter((file) => file.endsWith('.json'));
-    console.log(`\nFound ${episodeFiles.length} episode files to process in ${dir}`);
+// Main function to process all episodes
+export async function processAllEpisodes() {
+  for (const dir of LANGUAGE_DIRS) {
+    try {
+      const episodeFiles = readdirSync(dir).filter((file) => file.endsWith('.json'));
+      console.log(`\nFound ${episodeFiles.length} episode files to process in ${dir}`);
 
-    for (const file of episodeFiles) {
-      processEpisodeFile(join(dir, file));
+      for (const file of episodeFiles) {
+        processEpisodeFile(join(dir, file));
+      }
+    } catch (error) {
+      console.error(`Error processing directory ${dir}:`, error);
     }
-  } catch (error) {
-    console.error(`Error processing directory ${dir}:`, error);
   }
+
+  console.log('\nGuest extraction complete!');
 }
 
-console.log('\nGuest extraction complete!');
+// Run if called directly
+if (import.meta.url === `file://${process.argv[1]}`) {
+  processAllEpisodes();
+}

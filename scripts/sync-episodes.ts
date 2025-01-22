@@ -4,7 +4,7 @@ import { existsSync } from 'fs';
 import { config } from 'dotenv';
 import { getTransistorApi, SHOW_IDS, getLanguageFromShowId } from '../src/utils/transistor-api.ts';
 import type { TransistorEpisode } from '../src/types/transistor';
-import { extractGuests } from './extract-guests.ts';
+import { extractGuests, processAllEpisodes } from './extract-guests.ts';
 
 // Load environment variables
 config();
@@ -79,11 +79,16 @@ async function syncShow(showId: string) {
 // Main sync function
 async function syncAllShows() {
   try {
+    // First sync all shows
     for (const [language, showId] of Object.entries(SHOW_IDS)) {
       console.log(`\nSyncing ${language.toUpperCase()} show...`);
       await syncShow(showId);
     }
     console.log('\nSync completed successfully!');
+
+    // Then process all episodes for guest extraction
+    console.log('\nStarting guest extraction...');
+    await processAllEpisodes();
   } catch (error) {
     console.error('Sync failed:', error);
     process.exit(1);
