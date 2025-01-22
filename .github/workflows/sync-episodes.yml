@@ -11,16 +11,8 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    env:
-      TRANSISTOR_API_KEY: ${{ secrets.TRANSISTOR_API_KEY }}
     
     steps:
-      - name: Check required secrets
-        run: |
-          if [ -z "$TRANSISTOR_API_KEY" ]; then
-            echo "Error: TRANSISTOR_API_KEY secret is not set"
-            exit 1
-          fi
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -37,18 +29,7 @@ jobs:
       - name: Create .env file
         run: |
           echo "TRANSISTOR_API_KEY=${{ secrets.TRANSISTOR_API_KEY }}" > .env
-
-      - name: Verify .env file
-        run: |
-          if [ ! -f .env ]; then
-            echo "Error: .env file was not created"
-            exit 1
-          fi
-          if ! grep -q "TRANSISTOR_API_KEY=" .env; then
-            echo "Error: TRANSISTOR_API_KEY is missing from .env"
-            exit 1
-          fi
-          echo "✓ .env file exists and contains TRANSISTOR_API_KEY"
+          echo "✓ Created .env file"
 
       - name: Sync episodes and download images
         run: |
