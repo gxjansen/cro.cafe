@@ -1,3 +1,7 @@
+cline_docs/
+.clinerules
+.editorconfig
+
 node_modules/
 dist/
 *.tsbuildinfo
