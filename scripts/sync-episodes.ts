@@ -112,7 +112,14 @@ if (isMainModule) {
       });
   } else {
     // Sync all episodes
-    syncAllShows();
+    syncAllShows()
+      .then(() => {
+        process.exit(0);
+      })
+      .catch((error) => {
+        console.error('Failed to sync all episodes:', error);
+        process.exit(1);
+      });
   }
 }
 
