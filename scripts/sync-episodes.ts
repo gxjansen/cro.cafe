@@ -1,13 +1,16 @@
+// Load environment variables first, before any other imports
+import { config } from 'dotenv';
+const result = config();
+console.log('Dotenv config result:', result);
+console.log('Env file loaded:', result.parsed ? 'Yes' : 'No');
+console.log('API key exists:', process.env.TRANSISTOR_API_KEY ? 'Yes' : 'No');
+
 import { writeFile, mkdir } from 'fs/promises';
 import { join } from 'path';
 import { existsSync } from 'fs';
-import { config } from 'dotenv';
 import { getTransistorApi, SHOW_IDS, getLanguageFromShowId } from '../src/utils/transistor-api.ts';
 import type { TransistorEpisode } from '../src/types/transistor';
 import { extractGuests, processAllEpisodes } from './extract-guests.ts';
-
-// Load environment variables
-config();
 
 // Get API instance
 const transistorApi = getTransistorApi();
