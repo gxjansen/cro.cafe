@@ -22,22 +22,16 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
+          cache-dependency-path: 'package-lock.json'
       
       - name: Install dependencies
         run: npm ci
       
-      - name: Create and verify .env file
+      - name: Create .env file
         run: |
           echo "TRANSISTOR_API_KEY=${{ secrets.TRANSISTOR_API_KEY }}" > .env
-          echo "✓ Created .env file"
-          echo "File contents (masked):"
-          cat .env | sed 's/TRANSISTOR_API_KEY=.*/TRANSISTOR_API_KEY=***/'
-          echo "File permissions:"
-          ls -l .env
 
       - name: Sync episodes and download images
-        env:
-          TRANSISTOR_API_KEY: ${{ secrets.TRANSISTOR_API_KEY }}
         run: |
           npm run sync-episodes
           npm run download-images

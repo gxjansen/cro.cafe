@@ -1,19 +1,13 @@
-// Load environment variables first, before any other imports
-import { config } from 'dotenv';
-const result = config();
-console.log('Dotenv config result:', result);
-console.log('Env file loaded:', result.parsed ? 'Yes' : 'No');
-console.log('API key exists:', process.env.TRANSISTOR_API_KEY ? 'Yes' : 'No');
-
 import { writeFile, mkdir } from 'fs/promises';
 import { join } from 'path';
 import { existsSync } from 'fs';
-import { getTransistorApi, SHOW_IDS, getLanguageFromShowId } from '../src/utils/transistor-api.ts';
+import { config } from 'dotenv';
+import { transistorApi, SHOW_IDS, getLanguageFromShowId } from '../src/utils/transistor-api.ts';
 import type { TransistorEpisode } from '../src/types/transistor';
-import { extractGuests, processAllEpisodes } from './extract-guests.ts';
+import { extractGuests } from './extract-guests.ts';
 
-// Get API instance
-const transistorApi = getTransistorApi();
+// Load environment variables
+config();
 
 // Ensure content directory exists
 async function ensureContentDirectory(language: string) {
@@ -82,16 +76,11 @@ async function syncShow(showId: string) {
 // Main sync function
 async function syncAllShows() {
   try {
-    // First sync all shows
     for (const [language, showId] of Object.entries(SHOW_IDS)) {
       console.log(`\nSyncing ${language.toUpperCase()} show...`);
       await syncShow(showId);
     }
     console.log('\nSync completed successfully!');
-
-    // Then process all episodes for guest extraction
-    console.log('\nStarting guest extraction...');
-    await processAllEpisodes();
   } catch (error) {
     console.error('Sync failed:', error);
     process.exit(1);
