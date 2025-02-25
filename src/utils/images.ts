@@ -61,6 +61,32 @@ export async function getGuestImage(
 }
 
 /**
+ * Get optimized host image URL
+ */
+export async function getHostImage(
+  imageUrl: string | undefined,
+  size: keyof typeof IMAGE_SIZES.guest // Reuse guest image sizes
+) {
+  if (!imageUrl) {
+    throw new Error('Image URL is required');
+  }
+
+  const { width, height } = IMAGE_SIZES.guest[size];
+  const optimizedImage = await getImage({
+    src: imageUrl,
+    width,
+    height,
+    format: 'webp',
+  });
+
+  return {
+    ...optimizedImage,
+    width,
+    height,
+  };
+}
+
+/**
  * Get optimized episode image URL with fallback
  */
 export async function getEpisodeImage(

@@ -5,6 +5,9 @@ export const translations = {
       "Join 15K+ subscribers for the world's most exciting, raw discussions on experimentation, CRO, user research and digital marketing from the industry leaders who live and breathe it\.",
     latestEpisodes: 'Latest Episodes',
     listenNow: 'Listen Now',
+    yourHost: 'Your Host',
+    yourHosts: 'Your Hosts',
+    episodeGuests: 'Episode Guests',
     languageButtons: {
       en: 'English Podcast',
       nl: 'Nederlandse Podcast',
@@ -22,6 +25,9 @@ export const translations = {
     description: 'Sluit je aan bij 15K+ CRO en digital marketing specialisten',
     latestEpisodes: 'Laatste Afleveringen',
     listenNow: 'Luister Nu',
+    yourHost: 'Uw Host',
+    yourHosts: 'Uw Hosts',
+    episodeGuests: 'Aflevering Gasten',
     languageButtons: {
       en: 'English Podcast',
       nl: 'Nederlandse Podcast',
@@ -40,6 +46,9 @@ export const translations = {
       'Werde Teil unserer 15K+ Abonnenten und begleite Branchenführer und Experten der Marketing-Szene in spannenden Diskussionen über digitales Marketing, CRO, Nutzerforschung und Testing.',
     latestEpisodes: 'Neueste Folgen',
     listenNow: 'Jetzt Anhören',
+    yourHost: 'Ihr Gastgeber',
+    yourHosts: 'Ihre Gastgeber',
+    episodeGuests: 'Folgen Gäste',
     languageButtons: {
       en: 'English Podcast',
       nl: 'Nederlandse Podcast',
@@ -59,6 +68,9 @@ export const translations = {
       'Únete a más de 15K+ profesionales y especialistas del marketing digital que ya están suscritos.',
     latestEpisodes: 'Últimos Episodios',
     listenNow: 'Escuchar Ahora',
+    yourHost: 'Su Anfitrión',
+    yourHosts: 'Sus Anfitriones',
+    episodeGuests: 'Invitados del Episodio',
     languageButtons: {
       en: 'English Podcast',
       nl: 'Nederlandse Podcast',

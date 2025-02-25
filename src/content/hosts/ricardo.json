@@ -1,0 +1,15 @@
+{
+  "id": "ricardo",
+  "name": "Ricardo Tayar",
+  "role": "Flat 101 CEO, UX Specialist",
+  "bio": "Flat 101 CEO, Especialista en UX, podcast host",
+  "image_url": "/src/assets/images/hosts/ricardo.jpeg",
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://www.linkedin.com/in/ricardotayar/en/?originalSubdomain=es"
+    }
+  ],
+  "languages": ["es"],
+  "type": "host"
+}

@@ -3,6 +3,7 @@ import PageLayout from '~/layouts/PageLayout.astro';
 import { getTranslations } from '~/utils/translations';
 import Hero from '~/components/widgets/Hero.astro';
 import LatestEpisodes from '~/components/widgets/LatestEpisodes.astro';
+import HostsSection from '~/components/host/HostsSection.astro';
 import type { MetaData } from '~/types';
 
 // Get English translations for the homepage
@@ -50,6 +51,10 @@ const availableLanguages = ['en', 'nl', 'de', 'es'] as const;
           </div>
         </Fragment>
       </Hero>
+    </div>
+
+    <div class="relative">
+      <HostsSection title="Meet the Hosts" showBio={false} />
     </div>
 
     <div class="relative">

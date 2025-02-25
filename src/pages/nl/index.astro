@@ -4,6 +4,7 @@ import PageLayout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Grid from '~/components/episode/Grid.astro';
 import PopularEpisodes from '~/components/episode/PopularEpisodes.astro';
+import HostsSection from '~/components/host/HostsSection.astro';
 import { getTranslations } from '~/utils/translations';
 
 const translations = getTranslations('nl');
@@ -34,6 +35,13 @@ const dutchShowId = '16113';
     title="Welkom bij CRO.CAFE"
     subtitle={translations.description}
   />
+
+  {/* Host Section */}
+  <section class="py-12 bg-gray-50 dark:bg-gray-900">
+    <div class="container mx-auto">
+      <HostsSection language="nl" title="Uw Host" />
+    </div>
+  </section>
 
   {/* Popular Episodes */}
   <section class="py-12" style="background-color: var(--color-accent-dark)">

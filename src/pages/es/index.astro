@@ -4,6 +4,7 @@ import PageLayout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Grid from '~/components/episode/Grid.astro';
 import PopularEpisodes from '~/components/episode/PopularEpisodes.astro';
+import HostsSection from '~/components/host/HostsSection.astro';
 import { getTranslations } from '~/utils/translations';
 
 const translations = getTranslations('es');
@@ -34,6 +35,13 @@ const spanishShowId = '16111';
     title="Bienvenido a CRO.CAFE"
     subtitle={translations.description}
   />
+
+  {/* Host Section */}
+  <section class="py-12 bg-gray-50 dark:bg-gray-900">
+    <div class="container mx-auto">
+      <HostsSection language="es" title="Su Anfitrión" />
+    </div>
+  </section>
 
   {/* Popular Episodes */}
   <section class="py-12" style="background-color: var(--color-accent-dark)">
