@@ -79,6 +79,14 @@ const episodeCollection = defineCollection({
       keywords_raw: z.string().optional(),
       local_image_url: z.string().optional(),
       featured: z.boolean().optional(),
+      guests: z
+        .array(
+          z.object({
+            name: z.string(),
+            slug: z.string(),
+          })
+        )
+        .optional(),
     }),
     relationships: z.object({
       show: z.object({

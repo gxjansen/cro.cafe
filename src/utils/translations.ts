@@ -8,6 +8,7 @@ export const translations = {
     yourHost: 'Your Host',
     yourHosts: 'Your Hosts',
     episodeGuests: 'Episode Guests',
+    meetTheGuests: 'Meet the Guests',
     languageButtons: {
       en: 'English Podcast',
       nl: 'Nederlandse Podcast',
@@ -28,6 +29,7 @@ export const translations = {
     yourHost: 'Uw Host',
     yourHosts: 'Uw Hosts',
     episodeGuests: 'Aflevering Gasten',
+    meetTheGuests: 'Ontmoet de Gasten',
     languageButtons: {
       en: 'English Podcast',
       nl: 'Nederlandse Podcast',
@@ -49,6 +51,7 @@ export const translations = {
     yourHost: 'Ihr Gastgeber',
     yourHosts: 'Ihre Gastgeber',
     episodeGuests: 'Folgen Gäste',
+    meetTheGuests: 'Treffen Sie die Gäste',
     languageButtons: {
       en: 'English Podcast',
       nl: 'Nederlandse Podcast',
@@ -71,6 +74,7 @@ export const translations = {
     yourHost: 'Su Anfitrión',
     yourHosts: 'Sus Anfitriones',
     episodeGuests: 'Invitados del Episodio',
+    meetTheGuests: 'Conozca a los Invitados',
     languageButtons: {
       en: 'English Podcast',
       nl: 'Nederlandse Podcast',

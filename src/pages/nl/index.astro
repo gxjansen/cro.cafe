@@ -5,6 +5,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Grid from '~/components/episode/Grid.astro';
 import PopularEpisodes from '~/components/episode/PopularEpisodes.astro';
 import HostsSection from '~/components/host/HostsSection.astro';
+import GuestsSection from '~/components/guest/GuestsSection.astro';
 import { getTranslations } from '~/utils/translations';
 
 const translations = getTranslations('nl');
@@ -40,6 +41,13 @@ const dutchShowId = '16113';
   <section class="py-12 bg-gray-50 dark:bg-gray-900">
     <div class="container mx-auto">
       <HostsSection language="nl" title="Uw Host" />
+    </div>
+  </section>
+
+  {/* Guest Section */}
+  <section class="py-12">
+    <div class="container mx-auto">
+      <GuestsSection language="nl" limit={8} />
     </div>
   </section>
 

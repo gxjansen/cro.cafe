@@ -1,0 +1,65 @@
+---
+import { getCollection } from 'astro:content';
+import GuestCard from './GuestCard.astro';
+import { getTranslations } from '~/utils/translations';
+
+interface Props {
+  title?: string;
+  language?: string;
+  showBio?: boolean;
+  limit?: number;
+}
+
+const { title, language, showBio = true, limit } = Astro.props;
+
+// Get translations for the current language
+const t = language ? getTranslations(language) : getTranslations('en');
+
+// Set default title based on language
+const defaultTitle = t.meetTheGuests;
+
+// Get all guests for the specified language
+const collectionName = language ? `${language}-guests` : 'en-guests';
+const allGuests = await getCollection(collectionName);
+
+// Define guest type
+type Guest = {
+  data: {
+    id: string;
+    name: string;
+    role: string;
+    bio: string;
+    image_url: string;
+    social_links: Array<{
+      platform: string;
+      url: string;
+    }>;
+    language: string;
+    type: 'guest';
+  };
+};
+
+// Apply limit if specified
+const guests = limit ? allGuests.slice(0, limit) : allGuests;
+---
+
+{guests.length > 0 && (
+  <section class="py-12 bg-gray-50 dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10 text-gray-900 dark:text-white">{title || defaultTitle}</h2>
+      <div class={`grid grid-cols-1 gap-6 ${
+        guests.length === 1 
+          ? 'md:grid-cols-1 lg:grid-cols-1 max-w-2xl mx-auto' 
+          : guests.length === 2 
+            ? 'md:grid-cols-2 lg:grid-cols-2 max-w-4xl mx-auto' 
+            : guests.length === 3 
+              ? 'md:grid-cols-3 lg:grid-cols-3' 
+              : 'md:grid-cols-2 lg:grid-cols-4'
+      }`}>
+        {guests.map((guest: Guest) => (
+          <GuestCard guest={guest.data} />
+        ))}
+      </div>
+    </div>
+  </section>
+)}
