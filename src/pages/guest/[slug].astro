@@ -3,21 +3,36 @@ export const prerender = true;
 import { getCollection, type CollectionEntry } from 'astro:content';
 import GuestLayout from '~/layouts/GuestLayout.astro';
 
+type GuestCollectionType = 'en-guests' | 'nl-guests' | 'de-guests' | 'es-guests';
+
 interface Props {
-  guest: CollectionEntry<'guests'>;
+  guest: CollectionEntry<GuestCollectionType>;
+  collection: GuestCollectionType;
 }
 
 export async function getStaticPaths() {
-  const guests = await getCollection('guests');
-  return guests.map((guest: CollectionEntry<'guests'>) => ({
-    params: { slug: guest.slug },
-    props: { guest },
-  }));
+  const collections: GuestCollectionType[] = ['en-guests', 'nl-guests', 'de-guests', 'es-guests'];
+  const allPaths = [];
+
+  for (const collection of collections) {
+    try {
+      const guests = await getCollection(collection);
+      const paths = guests.map((guest: CollectionEntry<GuestCollectionType>) => ({
+        params: { slug: guest.id },
+        props: { guest, collection },
+      }));
+      allPaths.push(...paths);
+    } catch (error) {
+      console.warn(`No guests found in collection: ${collection}`);
+    }
+  }
+
+  return allPaths;
 }
 
-const { guest } = Astro.props;
+const { guest, collection } = Astro.props;
 ---
-<GuestLayout guest={guest}>
+<GuestLayout guest={guest} collection={collection}>
   <main class="container mx-auto px-4 py-8">
     <h1 class="text-4xl font-bold mb-4">{guest.data.name}</h1>
     <div class="prose dark:prose-invert">

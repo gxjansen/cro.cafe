@@ -1,3 +1,4 @@
 import type { CollectionEntry } from 'astro:content';
 
-export type GuestEntry = CollectionEntry<'guests'>;
+export type GuestCollectionType = 'en-guests' | 'nl-guests' | 'de-guests' | 'es-guests';
+export type GuestEntry = CollectionEntry<GuestCollectionType>;

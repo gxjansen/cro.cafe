@@ -1,13 +1,23 @@
 ---
 import BaseLayout from './Layout.astro';
-import { getLanguageFromShowId } from '~/utils/permalinks';
-import type { GuestEntry } from '~/types/layouts';
+import type { GuestEntry, GuestCollectionType } from '~/types/layouts';
+import type { Language } from '~/types';
 
-const { guest } = Astro.props as { guest: GuestEntry };
+interface Props {
+  guest: GuestEntry;
+  collection?: GuestCollectionType;
+}
+
+const { guest, collection } = Astro.props as Props;
+
+// Extract language from collection name (e.g., 'en-guests' -> 'en')
+const langPrefix = collection ? collection.split('-')[0] : 'en';
+// Ensure it's a valid Language type
+const currentLang = (langPrefix as Language);
 ---
 
 <BaseLayout
-  currentLang={getLanguageFromShowId(guest.data.show_id)}
+  currentLang={currentLang}
   availableLanguages={['en', 'nl', 'de', 'es']}
 >
   <slot />
