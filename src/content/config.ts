@@ -116,6 +116,7 @@ const guestCollection = defineCollection({
     role: z.string().optional(),
     bio: z.string().optional(),
     image_url: z.string(),
+    company: z.string().optional(), // Add company field
     social_links: z
       .array(
         z.object({
