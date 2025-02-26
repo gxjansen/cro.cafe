@@ -1,27 +1,10 @@
 ---
-import PageLayout from '~/layouts/PageLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Grid from '~/components/guest/Grid.astro';
+// This is a redirect page that sends users to their preferred language
+import { getBrowserLanguage } from '~/utils/language';
 
-const metadata = {
-  title: 'Guests - CRO.CAFE',
-  description: 'Meet our expert guests from the CRO.CAFE podcast, sharing their knowledge and experiences in Conversion Rate Optimization.',
-  type: 'website' as const,
-  image: '/images/default.png',
-  canonicalUrl: Astro.url.href,
-};
+// Get the user's preferred language from the Accept-Language header
+const preferredLanguage = getBrowserLanguage(Astro.request.headers.get('accept-language'));
 
-import type { Language } from '~/types';
-
-const availableLanguages: readonly Language[] = ['en', 'de', 'es', 'nl'] as const;
+// Redirect to the appropriate language page
+return Astro.redirect(`/${preferredLanguage}/guests`);
 ---
-
-<PageLayout {...{ metadata, availableLanguages, currentLang: 'en' }}>
-  <Hero
-    tagline="Guests"
-    title="Our Expert Guests"
-    subtitle="Meet our expert guests from the CRO.CAFE podcast, sharing their knowledge and experiences in Conversion Rate Optimization."
-  />
-
-  <Grid language="en" />
-</PageLayout>

@@ -1,0 +1,25 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+import GuestOverviewLayout from '~/components/guest/GuestOverviewLayout.astro';
+import { getTranslations } from '~/utils/translations';
+
+const t = getTranslations('en');
+const metadata = {
+  title: `${t.allGuests} | ${t.title}`,
+  description: `Meet all the guests who have appeared on the ${t.title} podcast.`,
+  type: 'website' as const,
+  canonicalUrl: Astro.url.href,
+  alternateLanguages: {
+    en: '/en/guests',
+    de: '/de/guests',
+    es: '/es/guests',
+    nl: '/nl/guests',
+  },
+};
+
+const availableLanguages = ['en', 'de', 'es', 'nl'] as const;
+---
+
+<PageLayout {...{ metadata, availableLanguages, currentLang: 'en' }}>
+  <GuestOverviewLayout language="en" />
+</PageLayout>

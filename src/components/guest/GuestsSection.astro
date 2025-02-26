@@ -8,15 +8,19 @@ interface Props {
   language?: string;
   showBio?: boolean;
   limit?: number;
+  showViewAllButton?: boolean;
 }
 
-const { title, language, showBio = true, limit } = Astro.props;
+const { title, language, showBio = true, limit, showViewAllButton = false } = Astro.props;
 
 // Get translations for the current language
 const t = language ? getTranslations(language) : getTranslations('en');
 
 // Set default title based on language
 const defaultTitle = t.meetTheGuests;
+
+// Set view all button text
+const viewAllText = t.viewAllGuests || "View all guests";
 
 // Get all guests for the specified language
 const collectionName = language ? `${language}-guests` : 'en-guests';
@@ -60,6 +64,17 @@ const guests = limit ? allGuests.slice(0, limit) : allGuests;
           <GuestCard guest={guest.data} />
         ))}
       </div>
+      
+      {showViewAllButton && language && (
+        <div class="mt-10 text-center">
+          <a
+            href={`/${language}/guests`}
+            class="inline-block px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent-dark transition-colors duration-200 font-medium"
+          >
+            {viewAllText}
+          </a>
+        </div>
+      )}
     </div>
   </section>
 )}

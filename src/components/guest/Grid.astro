@@ -1,20 +1,38 @@
 ---
 import { LanguageSchema } from '~/utils/component-validation';
 import type { z } from 'zod';
+import { getGuestsByLanguage, sortGuestsByName } from '~/utils/guests';
+import GuestCard from './GuestCard.astro';
+import { getTranslations } from '~/utils/translations';
 
 interface Props {
   language: z.infer<typeof LanguageSchema>;
+  filterByEpisodes?: boolean;
+  showBio?: boolean;
 }
 
-// Language prop is required for future language-based filtering implementation
-// @see https://github.com/gxjansen/cro.cafe/issues/xyz
-const { language } = Astro.props;
+const { language, filterByEpisodes = true, showBio = true } = Astro.props;
+
+// Get translations for the current language
+const t = getTranslations(language);
+
+// Get all guests for the specified language
+const guests = await getGuestsByLanguage(language, filterByEpisodes);
+
+// Sort guests alphabetically by name
+const sortedGuests = sortGuestsByName(guests);
 ---
 
 <div class="mx-auto max-w-7xl px-4 sm:px-6 py-8">
-  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-    <div class="text-center">
-      <p class="text-muted">Guest list coming soon...</p>
+  {sortedGuests.length > 0 ? (
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      {sortedGuests.map((guest) => (
+        <GuestCard guest={guest.data} showBio={showBio} />
+      ))}
     </div>
-  </div>
+  ) : (
+    <div class="text-center py-12">
+      <p class="text-gray-600 dark:text-gray-400">No guests found for this language.</p>
+    </div>
+  )}
 </div>

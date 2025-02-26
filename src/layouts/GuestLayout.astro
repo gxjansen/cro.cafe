@@ -1,24 +1,45 @@
 ---
-import BaseLayout from './Layout.astro';
+import PageLayout from './PageLayout.astro';
 import type { GuestEntry, GuestCollectionType } from '~/types/layouts';
 import type { Language } from '~/types';
+import { getTranslations } from '~/utils/translations';
 
 interface Props {
   guest: GuestEntry;
   collection?: GuestCollectionType;
+  episodes?: any[];
 }
 
-const { guest, collection } = Astro.props as Props;
+const { guest, collection, episodes = [] } = Astro.props as Props;
 
 // Extract language from collection name (e.g., 'en-guests' -> 'en')
 const langPrefix = collection ? collection.split('-')[0] : 'en';
 // Ensure it's a valid Language type
 const currentLang = (langPrefix as Language);
+
+// Get translations
+const t = getTranslations(currentLang);
+
+// Prepare metadata
+const metadata = {
+  title: `${guest.data.name} | ${t.title}`,
+  description: guest.data.bio || `${guest.data.name} - ${guest.data.role || t.guest}`,
+  image: guest.data.image_url ? `/images/guests/${guest.data.image_url}` : '/images/default.png',
+  type: 'article' as const,
+  canonicalUrl: Astro.url.href,
+  alternateLanguages: {
+    en: `/guest/${guest.id}`,
+    de: `/guest/${guest.id}`,
+    es: `/guest/${guest.id}`,
+    nl: `/guest/${guest.id}`,
+  },
+};
 ---
 
-<BaseLayout
+<PageLayout
+  metadata={metadata}
   currentLang={currentLang}
   availableLanguages={['en', 'nl', 'de', 'es']}
 >
   <slot />
-</BaseLayout>
+</PageLayout>
