@@ -3,15 +3,16 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
+    "dev": "tsx scripts/copy-host-images.ts && astro dev",
+    "start": "tsx scripts/copy-host-images.ts && astro dev",
+    "build": "tsx scripts/copy-host-images.ts && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
     "sync-episodes": "tsx scripts/sync-episodes.ts",
-    "download-images": "tsx scripts/download-episode-images.ts"
+    "download-images": "tsx scripts/download-episode-images.ts",
+    "copy-host-images": "tsx scripts/copy-host-images.ts"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",

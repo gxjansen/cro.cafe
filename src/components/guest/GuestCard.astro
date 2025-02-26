@@ -1,6 +1,5 @@
 ---
 import { getGuestImage } from '~/utils/images';
-import { Image } from 'astro:assets';
 
 interface Props {
   guest: {
@@ -34,7 +33,7 @@ const image = await getGuestImage(image_url ? `/images/guests/${image_url}` : '/
         class="block focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 dark:focus:ring-offset-gray-900 rounded-full"
         aria-label={`View ${name}'s profile`}
       >
-        <Image
+        <img
           src={image.src}
           width={image.width}
           height={image.height}
