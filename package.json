@@ -51,6 +51,7 @@
     "@types/node": "^20.8.7",
     "@types/node-fetch": "^2.6.12",
     "@types/react": "^18.2.31",
+    "@types/react-dom": "^19.0.4",
     "@unpic/astro": "^0.1.0",
     "@vitest/ui": "^3.0.2",
     "eslint": "^8.52.0",
