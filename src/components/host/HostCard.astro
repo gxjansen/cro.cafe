@@ -1,5 +1,6 @@
 ---
 import { getHostImage } from '~/utils/images';
+import { Image } from 'astro:assets';
 
 interface Props {
   host: {
@@ -29,7 +30,7 @@ const image = await getHostImage(image_url, 'card');
   <div class="flex items-start gap-4">
     <div class="flex-shrink-0">
       <div class="block rounded-full">
-        <img
+        <Image
           src={image.src}
           width={image.width}
           height={image.height}

@@ -71,9 +71,18 @@ export async function getHostImage(
     throw new Error('Image URL is required');
   }
 
+  // Fix the path for host images
+  // If the path starts with /src/assets/images/hosts/, extract just the filename
+  let processedImageUrl = imageUrl;
+  if (imageUrl.startsWith('/src/assets/images/hosts/')) {
+    // Extract just the filename (e.g., "guido.webp" from "/src/assets/images/hosts/guido.webp")
+    const filename = imageUrl.split('/').pop();
+    processedImageUrl = `/images/hosts/${filename}`;
+  }
+
   const { width, height } = IMAGE_SIZES.guest[size];
   const optimizedImage = await getImage({
-    src: imageUrl,
+    src: processedImageUrl,
     width,
     height,
     format: 'webp',
