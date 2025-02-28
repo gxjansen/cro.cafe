@@ -14,34 +14,8 @@ import { extractGuests } from './extract-guests.ts';
 // Load environment variables from .env file (for local development)
 config();
 
-// Debug all environment variables (safely)
-console.log('Environment variables:');
-console.log('NODE_ENV:', process.env.NODE_ENV);
-console.log('All env vars:', Object.keys(process.env).join(', '));
-console.log('TRANSISTOR_API_KEY exists:', 'TRANSISTOR_API_KEY' in process.env);
-console.log('TRANSISTOR_API_KEY is empty:', !process.env.TRANSISTOR_API_KEY);
-
-// Check for API key in command line arguments first
-let apiKey = '';
-const apiKeyArgIndex = process.argv.findIndex((arg) => arg === '--api-key');
-if (apiKeyArgIndex !== -1 && process.argv.length > apiKeyArgIndex + 1) {
-  apiKey = process.argv[apiKeyArgIndex + 1];
-  console.log('Using API key from command line argument');
-  console.log('Command line API key length:', apiKey.length);
-  console.log('Command line API key is empty:', !apiKey);
-} else {
-  // Fall back to environment variable
-  apiKey = process.env.TRANSISTOR_API_KEY || '';
-  console.log('Using API key from environment variable');
-  console.log('Environment API key length:', apiKey.length);
-  console.log('Environment API key is empty:', !apiKey);
-}
-
-// Debug API key status
-console.log('API key available:', !!apiKey);
-if (apiKey) {
-  console.log('First few chars of API key:', apiKey.substring(0, 4) + '...');
-}
+// Get API key from environment variable and clean it up
+const apiKey = (process.env.TRANSISTOR_API_KEY || '').trim();
 
 // Update the API instance with the API key
 const api = updateTransistorApiKey(apiKey);

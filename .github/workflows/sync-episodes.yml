@@ -31,35 +31,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
-      - name: Debug environment
-        run: |
-          echo "Checking if TRANSISTOR_API_KEY is set (should show 'true')"
-          if [ -n "$TRANSISTOR_API_KEY" ]; then echo "true"; else echo "false"; fi
-          echo "First few characters of the key:"
-          echo "${TRANSISTOR_API_KEY:0:4}..."
-          echo "Checking GitHub secrets:"
-          echo "TRANSISTOR_API_KEY secret exists: ${{ secrets.TRANSISTOR_API_KEY != '' }}"
-        env:
-          TRANSISTOR_API_KEY: ${{ secrets.TRANSISTOR_API_KEY }}
-
       - name: Sync episodes and download images
         run: |
-          # Print Node.js environment variables
-          echo "Checking Node.js environment:"
-          node -e "console.log('TRANSISTOR_API_KEY set:', !!process.env.TRANSISTOR_API_KEY)"
-          node -e "if(process.env.TRANSISTOR_API_KEY) console.log('First few chars:', process.env.TRANSISTOR_API_KEY.substring(0, 4) + '...')"
-          
-          # Debug the secret value (safely)
-          echo "Secret value length: ${#TRANSISTOR_API_KEY}"
-          echo "Secret value is empty: $([[ -z \"$TRANSISTOR_API_KEY\" ]] && echo 'true' || echo 'false')"
-          
-          # Try using the API key directly in the environment
-          export TRANSISTOR_API_KEY="${{ secrets.TRANSISTOR_API_KEY }}"
-          
-          # Run sync-episodes without command-line argument, using environment variable
+          # Run sync-episodes script
           npx tsx scripts/sync-episodes.ts
           
-          # Run download-images (doesn't need API key)
+          # Run download-images script
           npm run download-images
         env:
           TRANSISTOR_API_KEY: ${{ secrets.TRANSISTOR_API_KEY }}
