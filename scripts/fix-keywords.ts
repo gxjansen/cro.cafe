@@ -1,55 +1,58 @@
-import { readFileSync, writeFileSync, readdirSync } from 'fs';
+import { readdir, readFile, writeFile } from 'fs/promises';
 import { join } from 'path';
 
-interface EpisodeContent {
-  attributes: {
-    keywords: string | string[];
-    [key: string]: any;
-  };
-  [key: string]: any;
-}
-
 // Language directories to process
-const langDirs = ['en-episodes', 'de-episodes', 'es-episodes', 'nl-episodes'];
+const LANGUAGES = ['en', 'de', 'nl', 'es'];
 
-// Process each language directory
-langDirs.forEach((langDir) => {
-  const dirPath = join('src/content', langDir);
+async function fixKeywordsInEpisodes() {
+  let totalFixed = 0;
 
-  try {
-    // Read all JSON files in the directory
-    const files = readdirSync(dirPath).filter((file) => file.endsWith('.json'));
+  for (const lang of LANGUAGES) {
+    const dir = join(process.cwd(), 'src', 'content', `${lang}-episodes`);
 
-    files.forEach((file) => {
-      const filePath = join(dirPath, file);
+    try {
+      console.log(`Processing ${lang.toUpperCase()} episodes...`);
+      const files = await readdir(dir);
 
-      try {
-        // Read and parse the JSON file
-        const content = JSON.parse(readFileSync(filePath, 'utf-8')) as EpisodeContent;
+      let langFixed = 0;
 
-        // Convert keywords string to array
-        if (content.attributes && typeof content.attributes.keywords === 'string') {
-          // If empty string, convert to empty array
-          if (content.attributes.keywords === '') {
-            content.attributes.keywords = [];
+      for (const file of files) {
+        if (!file.endsWith('.json')) continue;
+
+        const filePath = join(dir, file);
+        const content = await readFile(filePath, 'utf-8');
+        const episode = JSON.parse(content);
+
+        // Check if keywords is a string
+        if (typeof episode.attributes.keywords === 'string') {
+          // Convert to array
+          if (!episode.attributes.keywords) {
+            // Empty string becomes empty array
+            episode.attributes.keywords = [];
+            langFixed++;
           } else {
-            // Split comma-separated string into array and trim whitespace
-            content.attributes.keywords = content.attributes.keywords
+            // Non-empty string becomes array of trimmed keywords
+            episode.attributes.keywords = episode.attributes.keywords
               .split(',')
-              .map((keyword: string) => keyword.trim());
+              .map((keyword: string) => keyword.trim())
+              .filter((keyword: string) => keyword.length > 0);
+            langFixed++;
           }
 
-          // Write the updated content back to the file
-          writeFileSync(filePath, JSON.stringify(content, null, 2));
-          console.log(`Updated keywords in ${filePath}`);
+          // Write the updated file
+          await writeFile(filePath, JSON.stringify(episode, null, 2));
         }
-      } catch (err) {
-        console.error(`Error processing file ${filePath}:`, err);
       }
-    });
-  } catch (err) {
-    console.error(`Error reading directory ${dirPath}:`, err);
-  }
-});
 
-console.log('Finished updating keywords fields');
+      console.log(`Fixed ${langFixed} episodes in ${lang.toUpperCase()}`);
+      totalFixed += langFixed;
+    } catch (error) {
+      console.error(`Error processing ${lang} episodes:`, error);
+    }
+  }
+
+  console.log(`\nTotal episodes fixed: ${totalFixed}`);
+}
+
+// Run the script
+fixKeywordsInEpisodes().catch(console.error);

@@ -9,7 +9,14 @@
     "published_at": "2019-01-07T12:09:00.000Z",
     "duration": 1927,
     "explicit": false,
-    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/helene-hallebeek-over-cro-bij-transavia",
     "media_url": "https://media.transistor.fm/47b8016e/fadd41c3.mp3",
     "image_url": "https://img.transistor.fm/zsXa6w5Ilj5hcKchTEo7wsjm-L8X34v7yEsTyQyz1_s/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80MDFi/ZTI3ZmY4YjYzZDYx/OTk2MzM1OGE3MmMw/OGQzYy5qcGVn.webp",

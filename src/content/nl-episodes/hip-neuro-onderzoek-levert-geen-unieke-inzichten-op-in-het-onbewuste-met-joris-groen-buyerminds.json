@@ -9,7 +9,14 @@
     "published_at": "2019-03-31T22:39:00.000Z",
     "duration": 2577,
     "explicit": false,
-    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/hip-neuro-onderzoek-levert-geen-unieke-inzichten-op-in-het-onbewuste",
     "media_url": "https://media.transistor.fm/8edd3089/af291eae.mp3",
     "image_url": "https://img.transistor.fm/dlRi8ymC8fK_Tx0NGw37zwqcRaEJHpxsfPyJJvOWUXY/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iMTA4/YzZmYjg4N2JjMDEy/ZDYxMzM2MmYxYjJk/ZTM0OC5wbmc.webp",

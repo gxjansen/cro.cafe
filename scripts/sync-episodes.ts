@@ -58,6 +58,23 @@ async function saveEpisode(episode: TransistorEpisode, language: string) {
   episode.attributes.guests = allGuests;
   episode.attributes.clean_description = cleanDescription;
 
+  // Ensure keywords is always an array
+  if (typeof episode.attributes.keywords === 'string') {
+    // If it's an empty string, set it to an empty array
+    if (!episode.attributes.keywords) {
+      episode.attributes.keywords = [];
+    } else {
+      // If it's a non-empty string, split it by commas and trim each keyword
+      episode.attributes.keywords = episode.attributes.keywords
+        .split(',')
+        .map((keyword) => keyword.trim())
+        .filter((keyword) => keyword.length > 0);
+    }
+  } else if (episode.attributes.keywords === null || episode.attributes.keywords === undefined) {
+    // If it's null or undefined, set it to an empty array
+    episode.attributes.keywords = [];
+  }
+
   await writeFile(filePath, JSON.stringify(episode, null, 2));
 }
 

@@ -9,7 +9,14 @@
     "published_at": "2019-07-04T16:55:00.000Z",
     "duration": 855,
     "explicit": false,
-    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/experimenteren-tijdens-pieken",
     "media_url": "https://media.transistor.fm/c914bfef/296fc6f3.mp3",
     "image_url": "https://img.transistor.fm/76ska8ZDtO6oeMTtAE2s4UMMXjHqg7CZ2WGQQ4V3L2s/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kYTMx/MTE1ZTU1ZGQzZWU2/MzFiNjc3NjdhZTY5/YzZlZi5qcGVn.webp",

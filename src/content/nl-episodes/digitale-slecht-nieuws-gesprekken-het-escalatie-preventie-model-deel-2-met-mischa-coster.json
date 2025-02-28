@@ -9,7 +9,14 @@
     "published_at": "2019-01-14T01:16:00.000Z",
     "duration": 1584,
     "explicit": false,
-    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/digitale-slecht-nieuws-gesprekken-het-escalatie-preventie-model-2",
     "media_url": "https://media.transistor.fm/56028942/4506074b.mp3",
     "image_url": "https://img.transistor.fm/yKBvv21jNb0UqNa0DWywgXY7GjkV_XTONs0pmb5mJEQ/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kNmU0/MmE4NjVhZmEwODRl/Mjc1MjQ2NDAzMjg5/NzA4ZS5qcGVn.webp",

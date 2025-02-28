@@ -9,7 +9,14 @@
     "published_at": "2019-07-15T14:20:00.000Z",
     "duration": 2379,
     "explicit": false,
-    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "webshop",
+      "english"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/gebruikersonderzoek-met-fibeo",
     "media_url": "https://media.transistor.fm/36f7765c/21596a25.mp3",
     "image_url": "https://img.transistor.fm/i3JXmq2qiyX21MSaeImlgpVnSATANsPAJd60ZQjW2CY/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS85NTBh/MDc5YTg3Yzg1M2Yw/MDBkNmMyODJmMzQ2/YmM1NS5qcGVn.webp",

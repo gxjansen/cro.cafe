@@ -9,7 +9,15 @@
     "published_at": "2019-11-04T15:00:00.000Z",
     "duration": 4730,
     "explicit": false,
-    "keywords": "podcast, ecommerce, conversion, usability, dac19, moa, livestream",
+    "keywords": [
+      "podcast",
+      "ecommerce",
+      "conversion",
+      "usability",
+      "dac19",
+      "moa",
+      "livestream"
+    ],
     "alternate_url": "https://nl.cro.cafe/podcast/live-dac19-introductie-van-de-dag",
     "media_url": "https://media.transistor.fm/d4b17795/21740b0f.mp3",
     "image_url": "https://img.transistor.fm/SRGZcNrOPMoyLonAvgZbGLgx33biWEoMVngS5lE3D3w/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS84MzQ1/MDUwNDU1MDNiZTQx/MThjZDI4ZTRkYTk5/NjI2Ni5qcGVn.webp",
