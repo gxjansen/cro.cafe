@@ -14,16 +14,27 @@ import { extractGuests } from './extract-guests.ts';
 // Load environment variables from .env file (for local development)
 config();
 
+// Debug all environment variables (safely)
+console.log('Environment variables:');
+console.log('NODE_ENV:', process.env.NODE_ENV);
+console.log('All env vars:', Object.keys(process.env).join(', '));
+console.log('TRANSISTOR_API_KEY exists:', 'TRANSISTOR_API_KEY' in process.env);
+console.log('TRANSISTOR_API_KEY is empty:', !process.env.TRANSISTOR_API_KEY);
+
 // Check for API key in command line arguments first
 let apiKey = '';
 const apiKeyArgIndex = process.argv.findIndex((arg) => arg === '--api-key');
 if (apiKeyArgIndex !== -1 && process.argv.length > apiKeyArgIndex + 1) {
   apiKey = process.argv[apiKeyArgIndex + 1];
   console.log('Using API key from command line argument');
+  console.log('Command line API key length:', apiKey.length);
+  console.log('Command line API key is empty:', !apiKey);
 } else {
   // Fall back to environment variable
   apiKey = process.env.TRANSISTOR_API_KEY || '';
   console.log('Using API key from environment variable');
+  console.log('Environment API key length:', apiKey.length);
+  console.log('Environment API key is empty:', !apiKey);
 }
 
 // Debug API key status
@@ -116,9 +127,12 @@ async function syncAllShows() {
 // Run sync if called directly
 const isMainModule = import.meta.url === `file://${process.argv[1]}`;
 if (isMainModule) {
-  // Check if a specific episode ID is provided
-  const episodeId = process.argv[2];
-  if (episodeId) {
+  // Check if a specific episode ID is provided (but not if it's the --api-key flag)
+  const episodeId = process.argv.find(
+    (arg) => !arg.startsWith('--') && arg !== process.argv[0] && arg !== process.argv[1]
+  );
+
+  if (episodeId && episodeId !== '--api-key') {
     // Sync a single episode
     const showId = SHOW_IDS['en']; // Default to English show
     api

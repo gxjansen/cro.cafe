@@ -49,8 +49,15 @@ jobs:
           node -e "console.log('TRANSISTOR_API_KEY set:', !!process.env.TRANSISTOR_API_KEY)"
           node -e "if(process.env.TRANSISTOR_API_KEY) console.log('First few chars:', process.env.TRANSISTOR_API_KEY.substring(0, 4) + '...')"
           
-          # Run sync-episodes with API key as command-line argument
-          npx tsx scripts/sync-episodes.ts --api-key "$TRANSISTOR_API_KEY"
+          # Debug the secret value (safely)
+          echo "Secret value length: ${#TRANSISTOR_API_KEY}"
+          echo "Secret value is empty: $([[ -z \"$TRANSISTOR_API_KEY\" ]] && echo 'true' || echo 'false')"
+          
+          # Try using the API key directly in the environment
+          export TRANSISTOR_API_KEY="${{ secrets.TRANSISTOR_API_KEY }}"
+          
+          # Run sync-episodes without command-line argument, using environment variable
+          npx tsx scripts/sync-episodes.ts
           
           # Run download-images (doesn't need API key)
           npm run download-images
