@@ -1,0 +1,65 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import EpisodeCard from '~/components/episode/Card.astro';
+
+type EpisodeCollectionName = 'de-episodes';
+type EpisodeEntry = CollectionEntry<EpisodeCollectionName>;
+
+// Get all German episodes
+const deEpisodes = await getCollection('de-episodes');
+console.log(`Total German episodes: ${deEpisodes.length}`);
+
+// Filter episodes for Julian Kleinknecht
+const julianEpisodes = deEpisodes.filter((episode: EpisodeEntry) => {
+  const guests = episode.data.attributes.guests || [];
+  console.log(`Episode ${episode.id} guests:`, JSON.stringify(guests));
+  
+  // Check if Julian Kleinknecht is in the guests array
+  const isJulianGuest = guests.some((guest: { slug?: string; name?: string }) =>
+    guest.slug === 'julian-kleinknecht' ||
+    guest.name === 'Julian Kleinknecht'
+  );
+  
+  if (isJulianGuest) {
+    console.log(`Found Julian in episode ${episode.id}`);
+    return true;
+  }
+  
+  // Check if Julian is mentioned in the description
+  const description = episode.data.attributes.description || '';
+  if (description.includes('Julian Kleinknecht')) {
+    console.log(`Found Julian mentioned in description of episode ${episode.id}`);
+    return true;
+  }
+  
+  return false;
+});
+
+console.log(`Found ${julianEpisodes.length} episodes with Julian Kleinknecht`);
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Guest Episodes</title>
+</head>
+<body class="bg-gray-900 text-white">
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-6">Episodes with Julian Kleinknecht</h1>
+    
+    <p class="mb-4">Total German episodes: {deEpisodes.length}</p>
+    <p class="mb-8">Found {julianEpisodes.length} episodes with Julian Kleinknecht</p>
+    
+    {julianEpisodes.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {julianEpisodes.map((episode: EpisodeEntry) => (
+          <EpisodeCard episode={episode} />
+        ))}
+      </div>
+    ) : (
+      <p>No episodes found with Julian Kleinknecht</p>
+    )}
+  </div>
+</body>
+</html>

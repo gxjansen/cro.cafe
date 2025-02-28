@@ -1,0 +1,45 @@
+---
+import { getCollection } from 'astro:content';
+import GuestCard from './GuestCard.astro';
+import { getTranslations } from '~/utils/translations';
+import { getGuestsByLanguage, sortGuestsByName } from '~/utils/guests';
+
+interface Props {
+  title?: string;
+  language: string;
+  showBio?: boolean;
+  filterByEpisodes?: boolean;
+}
+
+const { title, language, showBio = true, filterByEpisodes = true } = Astro.props;
+
+// Get translations for the current language
+const t = getTranslations(language);
+
+// Set default title based on language
+const defaultTitle = t.allGuests || "All Guests";
+
+// Get all guests for the specified language
+const guests = await getGuestsByLanguage(language, filterByEpisodes);
+
+// Sort guests alphabetically by name
+const sortedGuests = sortGuestsByName(guests);
+---
+
+<section class="py-12 bg-gray-50 dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <h1 class="text-3xl font-bold text-center mb-10 text-gray-900 dark:text-white">{title || defaultTitle}</h1>
+    
+    {sortedGuests.length > 0 ? (
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {sortedGuests.map((guest) => (
+          <GuestCard guest={guest.data} showBio={showBio} />
+        ))}
+      </div>
+    ) : (
+      <div class="text-center text-gray-600 dark:text-gray-400 py-12">
+        <p>No guests found for this language.</p>
+      </div>
+    )}
+  </div>
+</section>

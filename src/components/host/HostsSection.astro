@@ -1,0 +1,58 @@
+---
+import { getCollection } from 'astro:content';
+import HostCard from './HostCard.astro';
+
+interface Props {
+  title?: string;
+  language?: string;
+  showBio?: boolean;
+}
+
+const { title = "Meet the Hosts", language, showBio = true } = Astro.props;
+
+// Get all hosts
+const allHosts = await getCollection('hosts');
+
+// Define host type
+type Host = {
+  data: {
+    id: string;
+    name: string;
+    role: string;
+    bio: string;
+    image_url: string;
+    social_links: Array<{
+      platform: string;
+      url: string;
+    }>;
+    languages: string[];
+    type: 'host';
+  };
+};
+
+// Filter hosts by language if specified
+const hosts = language
+  ? allHosts.filter((host: Host) => host.data.languages.includes(language))
+  : allHosts;
+---
+
+{hosts.length > 0 && (
+  <section class="py-12 bg-gray-50 dark:bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10 text-gray-900 dark:text-white">{title}</h2>
+      <div class={`grid grid-cols-1 gap-6 ${
+        hosts.length === 1
+          ? 'md:grid-cols-1 lg:grid-cols-1 max-w-2xl mx-auto'
+          : hosts.length === 2
+            ? 'md:grid-cols-2 lg:grid-cols-2 max-w-4xl mx-auto'
+            : hosts.length === 3
+              ? 'md:grid-cols-3 lg:grid-cols-3'
+              : 'md:grid-cols-2 lg:grid-cols-4'
+      }`}>
+        {hosts.map((host: Host) => (
+          <HostCard host={host.data} showBio={showBio} />
+        ))}
+      </div>
+    </div>
+  </section>
+)}

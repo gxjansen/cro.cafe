@@ -1,5 +1,27 @@
 import { defineCollection, z } from 'astro:content';
 
+// Host collection schema
+const hostCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    id: z.string(),
+    name: z.string(),
+    role: z.string().optional(),
+    bio: z.string(),
+    image_url: z.string(),
+    social_links: z
+      .array(
+        z.object({
+          platform: z.string(),
+          url: z.string(),
+        })
+      )
+      .optional(),
+    languages: z.array(z.string()),
+    type: z.literal('host'),
+  }),
+});
+
 // Blog collection schema
 const blogCollection = defineCollection({
   type: 'content',
@@ -57,6 +79,14 @@ const episodeCollection = defineCollection({
       keywords_raw: z.string().optional(),
       local_image_url: z.string().optional(),
       featured: z.boolean().optional(),
+      guests: z
+        .array(
+          z.object({
+            name: z.string(),
+            slug: z.string(),
+          })
+        )
+        .optional(),
     }),
     relationships: z.object({
       show: z.object({
@@ -86,6 +116,7 @@ const guestCollection = defineCollection({
     role: z.string().optional(),
     bio: z.string().optional(),
     image_url: z.string(),
+    company: z.string().optional(), // Add company field
     social_links: z
       .array(
         z.object({
@@ -144,4 +175,6 @@ export const collections = {
   'nl-quotes': quoteCollection,
   'de-quotes': quoteCollection,
   'es-quotes': quoteCollection,
+  // Hosts
+  'hosts': hostCollection,
 };

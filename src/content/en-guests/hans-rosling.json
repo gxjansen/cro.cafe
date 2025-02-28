@@ -6,5 +6,6 @@
   "image_url": "hans-rosling.jpeg",
   "social_links": [],
   "language": "en",
-  "type": "guest"
+  "type": "guest",
+  "company": "Gapminder Foundation"
 }

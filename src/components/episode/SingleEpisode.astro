@@ -3,9 +3,12 @@ import Player from './Player.astro';
 import StructuredData from '../common/StructuredData.astro';
 import ErrorBoundary from '../common/ErrorBoundary.astro';
 import GuestCard from '../guest/GuestCard.astro';
+import HostCard from '../host/HostCard.astro';
 import { validateProps, SingleEpisodePropsSchema } from '~/utils/component-validation';
 import { getEpisodeCanonicalUrl, getLanguageFromShowId } from '~/utils/permalinks';
 import { getEpisodeImage } from '~/utils/images';
+import { getCollection } from 'astro:content';
+import { getTranslations } from '~/utils/translations';
 
 interface Props {
   episode: {
@@ -33,6 +36,10 @@ interface Props {
         embed_html: string;
         embed_html_dark: string;
         slug: string;
+        guests?: Array<{
+          name: string;
+          slug: string;
+        }>;
       };
       relationships: {
         show: {
@@ -52,14 +59,114 @@ interface Props {
 const props = validateProps(SingleEpisodePropsSchema, Astro.props);
 const { episode, availableLanguages, loading = false } = props;
 
-// Get language and guests
+// Get language
 const language = getLanguageFromShowId(episode.data.relationships.show.data.id);
-const guests: {
-  id: string;
-  attributes: {
+
+// Define guest type
+type Guest = {
+  data: {
+    id: string;
     name: string;
+    role: string;
+    bio: string;
+    image_url: string;
+    social_links: Array<{
+      platform: string;
+      url: string;
+    }>;
+    language: string;
+    type: 'guest';
   };
-}[] = [];
+};
+
+// Get guests if available
+const episodeGuests = (episode.data.attributes as any).guests || [];
+console.log('Episode guests:', episodeGuests);
+console.log('Episode ID:', episode.data.id);
+console.log('Episode slug:', episode.data.attributes.slug);
+
+const guestCollection = `${language}-guests`;
+console.log('Guest collection:', guestCollection);
+
+const allGuests = await getCollection(guestCollection);
+console.log('All guests count:', allGuests.length);
+
+// First try to match guests from the episode's guests array
+let guests = allGuests.filter((guest: Guest) => {
+  return episodeGuests.some((episodeGuest: { slug: string; name: string }) => {
+    // Try different matching strategies
+    const matchBySlug = episodeGuest.slug === guest.data.id;
+    const matchBySlugWithoutPrefix = episodeGuest.slug === guest.data.id.replace(`${language}-`, '');
+    const matchByName = episodeGuest.name && guest.data.name &&
+      episodeGuest.name.toLowerCase() === guest.data.name.toLowerCase();
+    
+    console.log(`Checking guest ${guest.data.id} against episode guest ${episodeGuest.slug || episodeGuest.name}:`,
+      matchBySlug || matchBySlugWithoutPrefix || matchByName);
+    
+    return matchBySlug || matchBySlugWithoutPrefix || matchByName;
+  });
+});
+
+// If no guests found and we have a description, try to extract guests from the description
+if (guests.length === 0 && episode.data.attributes.description) {
+  const description = episode.data.attributes.description;
+  
+  // Look for guest mentions in the description
+  const guestMatches = description.match(/Guest\s*\d*\s*:\s*([^|\n<]+)/g) || [];
+  
+  if (guestMatches.length > 0) {
+    console.log('Found guest mentions in description:', guestMatches);
+    
+    // Extract guest names from matches
+    const guestNames = guestMatches.map(match => {
+      const name = match.replace(/Guest\s*\d*\s*:\s*/, '').trim();
+      return name;
+    });
+    
+    console.log('Extracted guest names:', guestNames);
+    
+    // Find guests by name
+    const guestsByName = allGuests.filter((guest: Guest) =>
+      guestNames.some(name =>
+        guest.data.name.toLowerCase() === name.toLowerCase() ||
+        name.toLowerCase().includes(guest.data.name.toLowerCase()) ||
+        guest.data.name.toLowerCase().includes(name.toLowerCase())
+      )
+    );
+    
+    console.log('Found guests by name:', guestsByName.map((g: Guest) => g.data.name));
+    
+    // Add these guests to our list
+    guests = [...guests, ...guestsByName];
+  }
+}
+
+console.log('Final matched guests count:', guests.length);
+console.log('Final matched guests:', guests.map((g: Guest) => g.data.id));
+
+// Get translations for the current language
+const t = getTranslations(language);
+
+// Define host type
+type Host = {
+  data: {
+    id: string;
+    name: string;
+    role: string;
+    bio: string;
+    image_url: string;
+    social_links: Array<{
+      platform: string;
+      url: string;
+    }>;
+    languages: string[];
+    type: 'host';
+  };
+};
+
+// Get hosts for this language
+const allHosts = await getCollection('hosts');
+const hosts = allHosts.filter((host: Host) => host.data.languages.includes(language));
 
 const {
   title,
@@ -187,23 +294,36 @@ const structuredData = {
 
           {guests?.length > 0 && (
             <div class="episode-guests mt-8">
-              <h2 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">Episode Guests</h2>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {guests.map((guest: { id: string; attributes: { name: string } }) => (
-                  <GuestCard guest={{
-                    id: guest.id,
-                    name: guest.attributes.name,
-                    role: '',
-                    bio: '',
-                    image_url: '',
-                    social_links: [],
-                    language: language,
-                    type: 'guest'
-                  }} />
+              <h2 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">{t.episodeGuests}</h2>
+              <div class={`grid grid-cols-1 gap-4 ${
+                guests.length === 1
+                  ? 'md:grid-cols-1 max-w-xl mx-auto'
+                  : 'md:grid-cols-2'
+              }`}>
+                {guests.map((guest: Guest) => (
+                  <GuestCard guest={guest.data} />
                 ))}
               </div>
             </div>
           )}
+
+          {hosts?.length > 0 && (
+            <div class="episode-hosts mt-8">
+              <h2 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">
+                {hosts.length > 1 ? t.yourHosts : t.yourHost}
+              </h2>
+              <div class={`grid grid-cols-1 gap-4 ${
+                hosts.length === 1
+                  ? 'md:grid-cols-1 max-w-xl mx-auto'
+                  : 'md:grid-cols-2'
+              }`}>
+                {hosts.map((host: Host) => (
+                  <HostCard host={host.data} />
+                ))}
+              </div>
+            </div>
+          )}
+          
           {transcript_url?.trim() && (
             <div class="mt-6">
               <a href={transcript_url} class="transcript-link">

@@ -61,6 +61,61 @@ export async function getGuestImage(
 }
 
 /**
+ * Get optimized host image URL
+ */
+export async function getHostImage(
+  imageUrl: string | undefined,
+  size: keyof typeof IMAGE_SIZES.guest // Reuse guest image sizes
+) {
+  if (!imageUrl) {
+    throw new Error('Image URL is required');
+  }
+
+  // For host images, we need to handle paths that start with /src/assets/images/hosts/
+  // These paths work locally but not on Netlify
+  let processedImageUrl = imageUrl;
+  
+  // If the path starts with /src/assets/images/hosts/, we need to handle it differently
+  if (imageUrl.startsWith('/src/assets/images/hosts/')) {
+    // For local development, use the original path
+    // For production (Netlify), we'll need to copy these files to the public directory
+    // during the build process
+    
+    // For now, let's use a hardcoded path to the public directory
+    const filename = imageUrl.split('/').pop();
+    processedImageUrl = `/images/hosts/${filename}`;
+    
+    // Log the path for debugging
+    console.log(`Host image path: ${imageUrl} -> ${processedImageUrl}`);
+  }
+
+  try {
+    const { width, height } = IMAGE_SIZES.guest[size];
+    const optimizedImage = await getImage({
+      src: processedImageUrl,
+      width,
+      height,
+      format: 'webp',
+    });
+
+    return {
+      ...optimizedImage,
+      width,
+      height,
+    };
+  } catch (error) {
+    console.error(`Error optimizing host image: ${processedImageUrl}`, error);
+    
+    // Fallback to using the original URL without optimization
+    return {
+      src: processedImageUrl,
+      width: IMAGE_SIZES.guest[size].width,
+      height: IMAGE_SIZES.guest[size].height,
+    };
+  }
+}
+
+/**
  * Get optimized episode image URL with fallback
  */
 export async function getEpisodeImage(

@@ -1,0 +1,15 @@
+{
+  "id": "yvonne",
+  "name": "Yvonne Teufel",
+  "role": "Conversion Rate Consultant",
+  "bio": "Als Conversion Rate Consultant unterstützte Yvonne zahlreiche Unternehmen dabei Daten auszuwerten und zu nutzen, um so das Online-Erlebnis von Kunden zu verbessern und den Geschäftserfolg nachhaltig zu steigern.",
+  "image_url": "/src/assets/images/hosts/yvonne.jpeg",
+  "social_links": [
+    {
+      "platform": "linkedin",
+      "url": "https://de.linkedin.com/in/yvonne-teufel-461768190"
+    }
+  ],
+  "languages": ["de"],
+  "type": "host"
+}
