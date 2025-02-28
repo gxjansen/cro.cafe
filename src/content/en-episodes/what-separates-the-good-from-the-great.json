@@ -1,0 +1,48 @@
+{
+  "id": "1148805",
+  "type": "episode",
+  "attributes": {
+    "title": "What separates the good from the great?",
+    "number": 4,
+    "season": 4,
+    "status": "published",
+    "published_at": "2022-12-29T14:10:31.793Z",
+    "duration": 2741,
+    "explicit": false,
+    "keywords": "",
+    "alternate_url": "https://www.cro.cafe/podcast/what-separates-the-good-from-the-great",
+    "media_url": "https://media.transistor.fm/1b6d6d9a/830b0ecd.mp3",
+    "image_url": "https://img.transistor.fm/iyM-9L5tWPc-u8kh0sys9KFZ8ps4o1jp3F71YfB9IJo/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mYWY5/ZjZkNWY4M2QzOWFh/MWEyZjAwMDAwODQ1/MGU0OC5qcGc.webp",
+    "video_url": "",
+    "author": "",
+    "summary": "Together with Colin Crowell (Senior Director @ Kameleoon) and Manuel Da Costa (Founder Effective Experiments) we discussed what separates the GOOD from the GREAT Experimentation programs.\r\n\r\n",
+    "description": "<div>Guest 1: Colin Crowell URL: https://www.cro.cafe/guest/colin-crowell | Guest 2: Manuel Da Costa URL: https://www.cro.cafe/guest/manuel-da-costa&nbsp;</div>",
+    "slug": "what-separates-the-good-from-the-great",
+    "created_at": "2022-12-29T14:10:31.794Z",
+    "updated_at": "2025-01-16T15:55:11.129Z",
+    "formatted_published_at": "December 29, 2022",
+    "duration_in_mmss": "45:41",
+    "share_url": "https://share.transistor.fm/s/1b6d6d9a",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Together with Colin Crowell (Senior Director @ Kameleoon) and Manuel Da Costa (Founder Effective Experiments) we discussed what separates the GOOD from the GREAT Experimentation programs.",
+    "formatted_description": "<div>Guest 1: Colin Crowell URL: https://www.cro.cafe/guest/colin-crowell | Guest 2: Manuel Da Costa URL: https://www.cro.cafe/guest/manuel-da-costa&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/1b6d6d9a\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/1b6d6d9a/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "Together with Colin Crowell (Senior Director @ Kameleoon) and Manuel Da Costa (Founder Effective Experiments) we discussed what separates the GOOD from the GREAT Experimentation programs.",
+    "local_image_url": "/images/episodes/en/what-separates-the-good-from-the-great.webp",
+    "transistor_image_url": "https://img.transistor.fm/iyM-9L5tWPc-u8kh0sys9KFZ8ps4o1jp3F71YfB9IJo/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mYWY5/ZjZkNWY4M2QzOWFh/MWEyZjAwMDAwODQ1/MGU0OC5qcGc.webp"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "5036",
+        "type": "show"
+      }
+    }
+  }
+}

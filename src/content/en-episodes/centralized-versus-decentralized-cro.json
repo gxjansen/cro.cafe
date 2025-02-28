@@ -9,7 +9,7 @@
     "published_at": "2020-05-25T06:00:00.000Z",
     "duration": 1766,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://www.cro.cafe/podcast/centralized-versus-decentralized-cro",
     "media_url": "https://media.transistor.fm/5a72bfe0/165faa05.mp3",
     "image_url": "https://img.transistor.fm/AwYJMIVb1JF1tm-PILmq5k8hoOIsGyIUBvo6iioQISo/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82ZDA0/ZjdhMDVhMGZiZWUx/MWRmNWQ0MjhiM2Uz/YTdiZS5wbmc.webp",
@@ -33,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "In this episode I talk with Andrea Corvi, Experimentation Manager at iTech Media. iTech is a company that works for a host of clients all owned by the same mother company so they sort of function as an inhouse agency for different inhouse clients. They help people make smart choices online by creating industry-leading experiences and comparison products. Today we talk about working with a centralized versus a decentralized CRO model."
+    "clean_description": "In this episode I talk with Andrea Corvi, Experimentation Manager at iTech Media. iTech is a company that works for a host of clients all owned by the same mother company so they sort of function as an inhouse agency for different inhouse clients. They help people make smart choices online by creating industry-leading experiences and comparison products.\r\n\r\nToday we talk about working with a centralized versus a decentralized CRO model.",
+    "local_image_url": "/images/episodes/en/centralized-versus-decentralized-cro.webp",
+    "transistor_image_url": "https://img.transistor.fm/AwYJMIVb1JF1tm-PILmq5k8hoOIsGyIUBvo6iioQISo/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82ZDA0/ZjdhMDVhMGZiZWUx/MWRmNWQ0MjhiM2Uz/YTdiZS5wbmc.webp"
   },
   "relationships": {
     "show": {

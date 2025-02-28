@@ -9,7 +9,7 @@
     "published_at": "2022-12-06T09:00:00.000Z",
     "duration": 1926,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://de.cro.cafe/podcast/mit-psychologischen-tricks-zu-verbessertem-marketing",
     "media_url": "https://media.transistor.fm/25fab4cf/e77b099b.mp3",
     "image_url": "https://img.transistor.fm/jQVeJ_9E2T6eYvDKhrTAcgEtoNMBoFU6wJTN_kkJtdE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzExMjM0MzQv/MTY3MDI2ODExMi1h/cnR3b3JrLmpwZw.webp",
@@ -33,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "In dieser Episode mit Dr. Dennis Vogt, erfährst du vieles rund um Verkaufs- &amp; Konsumpsychologie. Welche Trigger und Effekte kann man im Marketing einsetzen um mehr Erfolge zu erzielen?Einer von vielen interessanten Effekten der Verkaufspsychologie ist der ‚Handwriting Effekt‘. Eine Studie belegte, dass von Hand geschriebene Texte ein unterschwelliges Signal von Menschlichkeit transportieren, wodurch eine emotionale Verbindung zur Marke geschaffen werden kann. Genau diese Verbindung auf emotionaler Ebene, löst bei Konsumenten eine höhere Kaufbereitschaft aus.Haben wir dich neugierig gemacht? Dann unbedingt reinhören! 🎧"
+    "clean_description": "In dieser Episode mit Dr. Dennis Vogt, erfährst du vieles rund um Verkaufs- & Konsumpsychologie. Welche Trigger und Effekte kann man im Marketing einsetzen um mehr Erfolge zu erzielen?",
+    "local_image_url": "/images/episodes/de/wann-erregen-anzeigen-aufmerksamkeit-mit-psychologischen-tricks-zu-verbessertem-marketing.webp",
+    "transistor_image_url": "https://img.transistor.fm/jQVeJ_9E2T6eYvDKhrTAcgEtoNMBoFU6wJTN_kkJtdE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzExMjM0MzQv/MTY3MDI2ODExMi1h/cnR3b3JrLmpwZw.webp"
   },
   "relationships": {
     "show": {

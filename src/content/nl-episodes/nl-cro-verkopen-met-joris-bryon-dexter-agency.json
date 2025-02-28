@@ -9,14 +9,7 @@
     "published_at": "2020-03-08T23:00:00.000Z",
     "duration": 2988,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/cro-verkopen",
     "media_url": "https://media.transistor.fm/ba2fac76/306a8480.mp3",
     "image_url": "https://img.transistor.fm/bp-Ow9eztY3iXacnI3bXFjRVxaFVyN19z3zPzxEtb38/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80Yzg0/MWFjYzVlMzdjYmM3/NDJhZjgwMTY3Y2Q1/OTVmOC5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Vandaag spreek ik met Joris Bryon, oprichter en CEO van Dexter Agency. Hij is Belg, maar heeft het geluk om vanuit het zonnige Valencia te werken voor klanten in de US, UK, Nederland en België. Samen met z’n team heeft Joris de laatste 5 jaar meer dan 1000 A/B testen opgezet en die ervaring heeft tot z’n boek ‘Kill Your Conversion Killers with The Dexter Method’ geleid, een boek waarin hij op een pragmatische manier uitlegt hoe je de conversie van je webshop kunt verbeteren. Daarnaast is Joris ook gastdocent ‘Data-driven conversion optimisation’ aan de Hogeschool Gent in België en runt hij de ‘Ecommerce Excellence Podcast’. Vandaag gaan we het o.a. hebben over het verkopen van CRO als service aan klanten."
+    "clean_description": "Vandaag spreek ik met Joris Bryon, oprichter en CEO van Dexter Agency. Hij is Belg, maar heeft het geluk om vanuit het zonnige Valencia te werken voor klanten in de US, UK, Nederland en België.\r\n\r\nSamen met z’n team heeft Joris de laatste 5 jaar meer dan 1000 A/B testen opgezet en die ervaring heeft tot z’n boek ‘Kill Your Conversion Killers with The Dexter Method’ geleid, een boek waarin hij op een pragmatische manier uitlegt hoe je de conversie van je webshop kunt verbeteren.\r\n\r\nDaarnaast is Joris ook gastdocent ‘Data-driven conversion optimisation’ aan de Hogeschool Gent in België en runt hij de ‘Ecommerce Excellence Podcast’. Vandaag gaan we het o.a. hebben over het verkopen van CRO als service aan klanten.",
+    "local_image_url": "/images/episodes/nl/nl-cro-verkopen-met-joris-bryon-dexter-agency.webp",
+    "transistor_image_url": "https://img.transistor.fm/bp-Ow9eztY3iXacnI3bXFjRVxaFVyN19z3zPzxEtb38/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80Yzg0/MWFjYzVlMzdjYmM3/NDJhZjgwMTY3Y2Q1/OTVmOC5qcGVn.webp"
   },
   "relationships": {
     "show": {

@@ -9,14 +9,7 @@
     "published_at": "2019-02-03T23:06:00.000Z",
     "duration": 1987,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/rick-weij-tele2-cro-is-geen-quick-fix-maar-een-continue-process",
     "media_url": "https://media.transistor.fm/fd59edb6/068e0c32.mp3",
     "image_url": "https://img.transistor.fm/gRpBivwcZif4MLZI83KnlCOWYrxItNXQlY-dfobK7yQ/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS84MWYw/ZjE3YWM0MDcxOGY3/M2RjZDE4ZWJlOTIw/NmRkYi5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "In deze aflevering praat ik met Rick Weij van Tele2 over hoe hij de transitie heeft gemaakt van webanalist naar CRO specialist en hoe hij het CRO proces in 2 jaar tijd bij Tele2 heeft neergezet."
+    "clean_description": "In deze aflevering praat ik met Rick Weij van Tele2 over hoe hij de transitie heeft gemaakt van webanalist naar CRO specialist en hoe hij het CRO proces in 2 jaar tijd bij Tele2 heeft neergezet. ",
+    "local_image_url": "/images/episodes/nl/cro-is-geen-quick-fix-maar-een-continu-proces-met-rick-weij-tele2.webp",
+    "transistor_image_url": "https://img.transistor.fm/gRpBivwcZif4MLZI83KnlCOWYrxItNXQlY-dfobK7yQ/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS84MWYw/ZjE3YWM0MDcxOGY3/M2RjZDE4ZWJlOTIw/NmRkYi5qcGVn.webp"
   },
   "relationships": {
     "show": {

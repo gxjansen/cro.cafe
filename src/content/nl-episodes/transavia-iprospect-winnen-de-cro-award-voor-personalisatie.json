@@ -9,14 +9,7 @@
     "published_at": "2019-10-16T13:00:00.000Z",
     "duration": 607,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/transavia-iprospect-winnen-de-personalization-award",
     "media_url": "https://media.transistor.fm/65976005/473f927a.mp3",
     "image_url": "https://img.transistor.fm/Uu16FgS2H9z65xD5PCBbt7ZxK9cX_TdHT_mjZaWyhcE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9jNWJk/NGI4M2Q5YTkwMTll/NDE5ODdhYzAzMjc1/ZjUyMS5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "bonus",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Tijdens de DDMA Dutch CRO Awards op 3 oktober 2019 deden we live verslag vanaf het event. In dit onderdeel spreken we met Transavia over hun award winst!"
+    "clean_description": "Tijdens de DDMA Dutch CRO Awards op 3 oktober 2019 deden we live verslag vanaf het event.\r\n\r\nIn dit onderdeel spreken we met Transavia over hun award winst!",
+    "local_image_url": "/images/episodes/nl/transavia-iprospect-winnen-de-cro-award-voor-personalisatie.webp",
+    "transistor_image_url": "https://img.transistor.fm/Uu16FgS2H9z65xD5PCBbt7ZxK9cX_TdHT_mjZaWyhcE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9jNWJk/NGI4M2Q5YTkwMTll/NDE5ODdhYzAzMjc1/ZjUyMS5qcGVn.webp"
   },
   "relationships": {
     "show": {

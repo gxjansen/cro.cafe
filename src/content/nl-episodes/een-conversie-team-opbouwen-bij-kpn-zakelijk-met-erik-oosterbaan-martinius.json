@@ -9,14 +9,7 @@
     "published_at": "2019-03-03T22:55:00.000Z",
     "duration": 1882,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/conversie-team-bij-kpn-zakelijk",
     "media_url": "https://media.transistor.fm/f1f53330/282e556e.mp3",
     "image_url": "https://img.transistor.fm/jEUM7fMNZzWRcCpzIuFX5_QVjLv91v0WBv-ODL0BbM8/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80YzRl/NTEwN2JlMDdmZTE2/NzA0MWFmZmU0NWVk/YmQwNS5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "In deze aflevering praat ik met Erik Oosterbaan Martinius. 4 jaar geleden begon hij bij KPN als growth hacker en conversie specialist, heeft bij KPN zakelijk een heel CRO team opgebouwd en stuurt dat team nu aan in de rol van e-commerce manager. Zijn team bestaat uit een conversie specialist, online marketeer, content manager, online media manager, UX designer en een digital analist voor een totaal van 6FTE. Ik praat met hem over hoe hij dit team opgezet heeft, waar ze mee bezig zijn en wat hun grootste uitdagingen zijn."
+    "clean_description": "In deze aflevering praat ik met Erik Oosterbaan Martinius. 4 jaar geleden begon hij bij KPN als growth hacker en conversie specialist, heeft bij KPN zakelijk een heel CRO team opgebouwd en stuurt dat team nu aan in de rol van e-commerce manager. Zijn team bestaat uit een conversie specialist, online marketeer, content manager, online media manager, UX designer en een digital analist voor een totaal van 6FTE. Ik praat met hem over hoe hij dit team opgezet heeft, waar ze mee bezig zijn en wat hun grootste uitdagingen zijn.",
+    "local_image_url": "/images/episodes/nl/een-conversie-team-opbouwen-bij-kpn-zakelijk-met-erik-oosterbaan-martinius.webp",
+    "transistor_image_url": "https://img.transistor.fm/jEUM7fMNZzWRcCpzIuFX5_QVjLv91v0WBv-ODL0BbM8/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80YzRl/NTEwN2JlMDdmZTE2/NzA0MWFmZmU0NWVk/YmQwNS5qcGVn.webp"
   },
   "relationships": {
     "show": {

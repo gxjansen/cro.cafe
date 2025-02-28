@@ -9,7 +9,7 @@
     "published_at": "2021-04-15T09:00:00.000Z",
     "duration": 2311,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://nl.cro.cafe/podcast/starten-als-cro-freelancer",
     "media_url": "https://media.transistor.fm/30c41b54/d0c5f36e.mp3",
     "image_url": "https://img.transistor.fm/F3-g42FMUxcVTX4TngIT7UWz6sXE2w4DY7VvM1DhV3E/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82ZGNj/YTkyYTVjOGZhZmQ1/OTQ4NjcwOWU5OTVm/NjZjMy5qcGc.webp",
@@ -38,7 +38,9 @@
         "slug": "wesley-singh"
       }
     ],
-    "clean_description": "Van ervaringsdeskundige Wesley Singh leren we hoe je (ook nu) een carrière als CRO freelancer kan starten."
+    "clean_description": "Van ervaringsdeskundige Wesley Singh leren we hoe je (ook nu) een carrière als CRO freelancer kan starten.",
+    "local_image_url": "/images/episodes/nl/starten-als-cro-freelancer.webp",
+    "transistor_image_url": "https://img.transistor.fm/F3-g42FMUxcVTX4TngIT7UWz6sXE2w4DY7VvM1DhV3E/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82ZGNj/YTkyYTVjOGZhZmQ1/OTQ4NjcwOWU5OTVm/NjZjMy5qcGc.webp"
   },
   "relationships": {
     "show": {

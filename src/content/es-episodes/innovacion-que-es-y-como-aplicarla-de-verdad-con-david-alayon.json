@@ -9,7 +9,7 @@
     "published_at": "2022-05-31T23:24:18.728Z",
     "duration": 4406,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://es.cro.cafe/podcast/innovacion-que-es-y-como-aplicarla-de-verdad",
     "media_url": "https://media.transistor.fm/b9e9e637/eca15e35.mp3",
     "image_url": "https://img.transistor.fm/kalL-Oq_VjPaxXjJ9TUnLTq9jJGI_ulxVAhGWG1Ek7s/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kODVj/NjdlZTQ2YzM2ZjIz/YmM1MjQ2MGEwYzA4/MTY2My5qcGVn.webp",
@@ -38,7 +38,9 @@
         "slug": "david-alayon"
       }
     ],
-    "clean_description": "Todos oimos hablar constantemente de innovación y de cómo las empresas la utilizan para mejorar procesos y eficiencia... pero, ¿qué es exactamente la innovación?, ¿cómo emplearla en el día a día de una empresa para que se traduzca en mejora real?, ¿es palabrería o realmente una PYME puede innovar?, ¿qué características tiene?De todo esto y de mucho más (incluyendo Alan Moore, The Boys y mil cosas más) hablamos David Alayón y yo en este fantabuloso episodio. Dale al play!"
+    "clean_description": "¿Qué es la innovación?, ¿cómo aplicarla para mejorar DE VERDAD? A estas preguntas y otras responde David Alayón en este episodio.",
+    "local_image_url": "/images/episodes/es/innovacion-que-es-y-como-aplicarla-de-verdad-con-david-alayon.webp",
+    "transistor_image_url": "https://img.transistor.fm/kalL-Oq_VjPaxXjJ9TUnLTq9jJGI_ulxVAhGWG1Ek7s/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kODVj/NjdlZTQ2YzM2ZjIz/YmM1MjQ2MGEwYzA4/MTY2My5qcGVn.webp"
   },
   "relationships": {
     "show": {

@@ -9,7 +9,7 @@
     "published_at": "2020-11-01T23:09:51.474Z",
     "duration": 3482,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://www.cro.cafe/podcast/kaspersky",
     "media_url": "https://media.transistor.fm/c94477d2/fa5d78de.mp3",
     "image_url": "https://img.transistor.fm/bw0xilixF4ZiUtllo_c8XdpemGHhvowTrdTvK3IibrY/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9hZTgz/ZWE2NTQ5MjIwYTZl/MzczOWIwZjQwN2Ex/Mjc2Ni5qcGVn.webp",
@@ -33,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "We learn how Kaspersky approaches and combines CRO for B2B and B2C and how a movie critic might make you a great CRO!"
+    "clean_description": "We learn how Kaspersky approaches and combines CRO for B2B and B2C and how a movie critic might make you a great CRO!",
+    "local_image_url": "/images/episodes/en/kaspersky.webp",
+    "transistor_image_url": "https://img.transistor.fm/bw0xilixF4ZiUtllo_c8XdpemGHhvowTrdTvK3IibrY/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9hZTgz/ZWE2NTQ5MjIwYTZl/MzczOWIwZjQwN2Ex/Mjc2Ni5qcGVn.webp"
   },
   "relationships": {
     "show": {

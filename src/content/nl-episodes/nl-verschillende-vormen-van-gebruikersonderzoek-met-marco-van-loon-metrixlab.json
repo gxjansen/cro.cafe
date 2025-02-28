@@ -9,14 +9,7 @@
     "published_at": "2020-04-05T22:00:00.000Z",
     "duration": 2450,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/verschillende-vormen-van-gebruikersonderzoek",
     "media_url": "https://media.transistor.fm/70573f3a/249bf78a.mp3",
     "image_url": "https://img.transistor.fm/eedfmiwh2sio8nn_fkj41faX29b6mBZyBbVSX7GRis8/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83YTA2/ZjdiODY2Y2Y1YjQ5/Y2I0MWJhNWZhMGI5/MjM5MS5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Deze week spreek ik met Marco van Loon. Hij studeerde ooit economische psychologie in Tilburg, heeft ruim 20 jaar gewerkt voor Rabobank Nederland waarvan de laatste 5,5 jaar als senior UX Researcher. Vorig jaar besloot hij dat het tijd was voor een job aan de agency kant en werkt hij nu ruim een half jaar als Lead Usability Research bij Metrixlab. En we gaan het dan ook hebben over het doen van gebruikersonderzoek."
+    "clean_description": "Deze week spreek ik met Marco van Loon. Hij studeerde ooit economische psychologie in Tilburg, heeft ruim 20 jaar gewerkt voor Rabobank Nederland waarvan de laatste 5,5 jaar als senior UX Researcher. Vorig jaar besloot hij dat het tijd was voor een job aan de agency kant en werkt hij nu ruim een half jaar als Lead Usability Research bij Metrixlab. En we gaan het dan ook hebben over het doen van gebruikersonderzoek.",
+    "local_image_url": "/images/episodes/nl/nl-verschillende-vormen-van-gebruikersonderzoek-met-marco-van-loon-metrixlab.webp",
+    "transistor_image_url": "https://img.transistor.fm/eedfmiwh2sio8nn_fkj41faX29b6mBZyBbVSX7GRis8/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83YTA2/ZjdiODY2Y2Y1YjQ5/Y2I0MWJhNWZhMGI5/MjM5MS5qcGVn.webp"
   },
   "relationships": {
     "show": {

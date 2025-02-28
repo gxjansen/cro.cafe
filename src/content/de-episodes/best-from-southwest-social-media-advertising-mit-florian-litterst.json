@@ -9,7 +9,7 @@
     "published_at": "2022-09-06T09:00:00.000Z",
     "duration": 2045,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://de.cro.cafe/podcast/social-media-advertising-mit-florian-litterst",
     "media_url": "https://media.transistor.fm/28bd0df4/86a97201.mp3",
     "image_url": "https://img.transistor.fm/vKBzqYaTewdUgqQRN6cv2QjnzjDw4kgj6dZGZ5E_540/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lMTZh/ZmUwYzM0YjU0YzBk/N2E2NTkzOGYxYTc4/MTU1Mi5wbmc.webp",
@@ -38,7 +38,9 @@
         "slug": "florian-litterst"
       }
     ],
-    "clean_description": "Social Media Advertising hat mittlerweile einen enormen Stellenwert in den meisten Unternehmen. Deshalb haben wir für diese Episode Florian Litterst, Gründer von Adsventure GmbH & Experte für das Thema Social Media Ads, eingeladen. Seid gespannt auf wertvolle Tipps, um eine erfolgreiche Kampagne zu erstellen und erfahrt, warum ihr den meisten Effort in eure Creatives stecken solltet. Euer Ziel sollte es sein, mit allem, was ihr macht, messbare Ergebnisse zu erzielen - und wie schaffst du das? Sei da, wo deine Zielgruppe ist! Viel Spaß beim Hören!"
+    "clean_description": "Social Media Advertising hat mittlerweile einen enormen Stellenwert in den meisten Unternehmen. Deshalb haben wir für diese Episode Florian Litterst, Gründer von Adsventure GmbH & Experte für das Thema Social Media Ads, eingeladen. Seid gespannt auf wertvolle Tipps, um eine erfolgreiche Kampagne zu erstellen und erfahrt, warum ihr den meisten Effort in eure Creatives stecken solltet. Euer Ziel sollte es sein, mit allem, was ihr macht, messbare Ergebnisse zu erzielen - und wie schaffst du das? Sei da, wo deine Zielgruppe ist!\r\n\r\nViel Spaß beim Hören!",
+    "local_image_url": "/images/episodes/de/best-from-southwest-social-media-advertising-mit-florian-litterst.webp",
+    "transistor_image_url": "https://img.transistor.fm/vKBzqYaTewdUgqQRN6cv2QjnzjDw4kgj6dZGZ5E_540/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lMTZh/ZmUwYzM0YjU0YzBk/N2E2NTkzOGYxYTc4/MTU1Mi5wbmc.webp"
   },
   "relationships": {
     "show": {

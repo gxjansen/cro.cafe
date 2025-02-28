@@ -9,7 +9,7 @@
     "published_at": "2020-11-23T15:45:45.327Z",
     "duration": 2433,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://www.cro.cafe/podcast/experimentation-at-ecommerce-saas-company-shopify",
     "media_url": "https://media.transistor.fm/f772545e/162b2f80.mp3",
     "image_url": "https://img.transistor.fm/f2VbY6bZhW5meF5EcQV-Twm6FWTeRNwy0pQ79xMz45k/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8xMjJk/OTRiZDE0NzQ5NmQw/ZTc3YjUzOTVjMDQ1/NGM2OC5qcGVn.webp",
@@ -33,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "We learn how you can experiment on a SaaS product and learn how Shopify structures their optimization workflows."
+    "clean_description": "We learn how you can experiment on a SaaS product and learn how Shopify structures their optimization workflows.",
+    "local_image_url": "/images/episodes/en/experimentation-at-an-ecommerce-saas-company-shopify.webp",
+    "transistor_image_url": "https://img.transistor.fm/f2VbY6bZhW5meF5EcQV-Twm6FWTeRNwy0pQ79xMz45k/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8xMjJk/OTRiZDE0NzQ5NmQw/ZTc3YjUzOTVjMDQ1/NGM2OC5qcGVn.webp"
   },
   "relationships": {
     "show": {

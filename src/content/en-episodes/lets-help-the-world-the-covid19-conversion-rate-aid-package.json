@@ -9,7 +9,7 @@
     "published_at": "2020-05-03T22:00:00.000Z",
     "duration": 1729,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://www.cro.cafe/podcast/lets-help-the-world-the-covid19-conversion-rate-aid-package",
     "media_url": "https://media.transistor.fm/41957003/2a0248b4.mp3",
     "image_url": "https://img.transistor.fm/QPJ5nORgXYYxQfOfH8Kq2f5M8HNrtGXsjWsjb6budL0/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS81OGM0/OTgyOTk5M2IzMWNm/OTQzMzgzZmRlOGFk/YzY5Zi5wbmc.webp",
@@ -33,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "A lot of businesses have been hit hard. As group of global CRO specialits, we want to help. Maximising conversion rates on your website is important now more than ever. We're launching the COVID19 Conversion Rate Aid Package, better known as #COVIDCRAP. In this episode I talk to the person that kickstarted COVIDCRAP: Raoul Warren Doraiswamy and we’ll be talking about what covidcrap is and how you as a cro specialist or as a business can join."
+    "clean_description": "A lot of businesses have been hit hard. As group of global CRO specialits, we want to help. Maximising conversion rates on your website is important now more than ever. We're launching the COVID19 Conversion Rate Aid Package, better known as #COVIDCRAP.\r\n\r\nIn this episode I talk to the person that kickstarted COVIDCRAP: Raoul Warren Doraiswamy and we’ll be talking about what covidcrap is and how you as a cro specialist or as a business can join.",
+    "local_image_url": "/images/episodes/en/lets-help-the-world-the-covid19-conversion-rate-aid-package.webp",
+    "transistor_image_url": "https://img.transistor.fm/QPJ5nORgXYYxQfOfH8Kq2f5M8HNrtGXsjWsjb6budL0/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS81OGM0/OTgyOTk5M2IzMWNm/OTQzMzgzZmRlOGFk/YzY5Zi5wbmc.webp"
   },
   "relationships": {
     "show": {

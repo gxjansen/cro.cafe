@@ -9,14 +9,7 @@
     "published_at": "2020-02-23T23:00:00.000Z",
     "duration": 3341,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/samenwerking-tussen-analytics-en-cro",
     "media_url": "https://media.transistor.fm/1b011a2e/faf2be98.mp3",
     "image_url": "https://img.transistor.fm/6zXaSZ1dRo0B6OlWoxBGNM4clDB1eqp4lAxptHuTU9g/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS85Zjcx/ZDc2YTg2NTE1ZThl/NmY3YzcxNGVkM2My/Zjg4Ny5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Aan de hand van enkele cases praat ik met freelance business analist Jan Brooijmans over de samenwerking tussen hem en CRO/Optimalisatie."
+    "clean_description": "Aan de hand van enkele cases praat ik met freelance business analist Jan Brooijmans over de samenwerking tussen hem en CRO/Optimalisatie.",
+    "local_image_url": "/images/episodes/nl/nl-samenwerking-tussen-analytics-en-cro-met-jan-brooijmans.webp",
+    "transistor_image_url": "https://img.transistor.fm/6zXaSZ1dRo0B6OlWoxBGNM4clDB1eqp4lAxptHuTU9g/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS85Zjcx/ZDc2YTg2NTE1ZThl/NmY3YzcxNGVkM2My/Zjg4Ny5qcGVn.webp"
   },
   "relationships": {
     "show": {

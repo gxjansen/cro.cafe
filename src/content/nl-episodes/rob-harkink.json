@@ -9,7 +9,7 @@
     "published_at": "2021-03-14T23:00:00.000Z",
     "duration": 2717,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://nl.cro.cafe/podcast/van-losse-cro-initiatieven-naar-gebundelde-krachten",
     "media_url": "https://media.transistor.fm/fc5da4e5/54cae9a7.mp3",
     "image_url": "https://img.transistor.fm/ufy84dbN0u7Y8FLsHIWl-20YarG7-5QIU5qLEohe6G0/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8wMDEz/MGIyMzY1MjA4ZWU4/YWM3ZjY3YWZiODE4/ZTU2YS5qcGc.webp",
@@ -38,7 +38,9 @@
         "slug": "rob-harkink"
       }
     ],
-    "clean_description": "We leren hoe Tele2 stappen heeft gezet om losse CRO initiatieven te coördineren en te integreren in de organisatie"
+    "clean_description": "We leren hoe Tele2 stappen heeft gezet om losse CRO initiatieven te coördineren en te integreren in de organisatie",
+    "local_image_url": "/images/episodes/nl/rob-harkink.webp",
+    "transistor_image_url": "https://img.transistor.fm/ufy84dbN0u7Y8FLsHIWl-20YarG7-5QIU5qLEohe6G0/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8wMDEz/MGIyMzY1MjA4ZWU4/YWM3ZjY3YWZiODE4/ZTU2YS5qcGc.webp"
   },
   "relationships": {
     "show": {

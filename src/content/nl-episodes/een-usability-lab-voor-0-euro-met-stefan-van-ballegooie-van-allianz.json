@@ -9,14 +9,7 @@
     "published_at": "2019-08-19T06:23:00.000Z",
     "duration": 2594,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/een-usability-lab-voor-0-euro-met-stefan-van-ballegooie-van-allianz",
     "media_url": "https://media.transistor.fm/00403170/403c645d.mp3",
     "image_url": "https://img.transistor.fm/gzsmYGPeyN0UPNpY263GXQn7rm0H5fDR_6INmjaabD8/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8xZmE5/ZjIxMjYzYWQ4YTBl/ZWE1MzdkMGE1NGU2/NjhkZi5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Vandaag praat ik met Stefan van Ballegooie. Hij is ooit als student aan de slag gegaan bij Allianz, een van de grootste financiële dienstverleners ter wereld. Inmiddels werkt hij daar als conversie specialist en samen met een scrumteam werkt hij aan Allianz.nl. Stefan zat ook al even in de podcast tijdens de Emerce Conversion livestream en dat was een heel interessant onderwerp dus daar gaan we vandaag nog even dieper op in. In 2017 startte hij daar namelijk een eigen usabilitylab voor 0 euro. Dat bleek een gouden zet te zijn want het lab heeft inmiddels al duizenden euro’s opgeleverd en vandaag deelt Stefan met ons hoe iedereen dat intern zelf ook zou kunnen opzetten."
+    "clean_description": "Vandaag praat ik met Stefan van Ballegooie. Hij is ooit als student aan de slag gegaan bij Allianz, een van de grootste financiële dienstverleners ter wereld. Inmiddels werkt hij daar als conversie specialist en samen met een scrumteam werkt hij aan Allianz.nl. Stefan zat ook al even in de podcast tijdens de Emerce Conversion livestream en dat was een heel interessant onderwerp dus daar gaan we vandaag nog even dieper op in. In 2017 startte hij daar namelijk een eigen usabilitylab voor 0 euro. Dat bleek een gouden zet te zijn want het lab heeft inmiddels al duizenden euro’s opgeleverd en vandaag deelt Stefan met ons hoe iedereen dat intern zelf ook zou kunnen opzetten.",
+    "local_image_url": "/images/episodes/nl/een-usability-lab-voor-0-euro-met-stefan-van-ballegooie-van-allianz.webp",
+    "transistor_image_url": "https://img.transistor.fm/gzsmYGPeyN0UPNpY263GXQn7rm0H5fDR_6INmjaabD8/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8xZmE5/ZjIxMjYzYWQ4YTBl/ZWE1MzdkMGE1NGU2/NjhkZi5qcGVn.webp"
   },
   "relationships": {
     "show": {

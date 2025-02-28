@@ -9,7 +9,7 @@
     "published_at": "2021-04-27T22:00:00.000Z",
     "duration": 3875,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://es.cro.cafe/podcast/dirigir-un-e-commerce-bajo-objetivos-de-crecimiento-y-transformacion",
     "media_url": "https://media.transistor.fm/a45d1b67/e41a5e29.mp3",
     "image_url": "https://img.transistor.fm/6q7Y9DKJUTEvrBhCIdnumXGWFkcKJBFs3q7VcQmvqCE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iZmUz/ZThlNjdhYTY4YWNi/MzhhYzcxNzBkMzZi/NjZmOC5qcGc.webp",
@@ -38,7 +38,9 @@
         "slug": "sora-sans"
       }
     ],
-    "clean_description": "Charlamos con Sora Sans, CEO de Bulevip, sobre cómo dirigir un e-commerce en crecimiento y las principales palancas operativas que debemos tener en cuenta de cara a ser rentables y eficaces."
+    "clean_description": "Charlamos con Sora Sans, CEO de Bulevip, sobre cómo dirigir un e-commerce en crecimiento y las principales palancas operativas que debemos tener en cuenta de cara a ser rentables y eficaces.",
+    "local_image_url": "/images/episodes/es/dirigir-un-e-commerce-bajo-objetivos-de-crecimiento-y-transformacion-con-sora-sans.webp",
+    "transistor_image_url": "https://img.transistor.fm/6q7Y9DKJUTEvrBhCIdnumXGWFkcKJBFs3q7VcQmvqCE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iZmUz/ZThlNjdhYTY4YWNi/MzhhYzcxNzBkMzZi/NjZmOC5qcGc.webp"
   },
   "relationships": {
     "show": {

@@ -9,14 +9,7 @@
     "published_at": "2019-12-03T13:00:00.000Z",
     "duration": 3614,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/nieuw-boek-over-webpsychologie",
     "media_url": "https://media.transistor.fm/e26f5843/b32b190b.mp3",
     "image_url": "https://img.transistor.fm/JlN5QSqrx9knnebLIRUoLGStRRwWntWYy08ANO5A0Jc/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iMjk4/M2E1YTVmNDg5ZDcy/NTg0MTZiODE4ODU0/MDFkZS5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Tonny Loorbach specialiseert zich sinds 2007 in online marketing en richtte in 2010 de IMU op en is inmiddels ook eigenaar van 5 andere software- en online marketing bedrijven. Hij trainde al 120.000+ ondernemers en met zijn boek 'Doelgerichte SEO' scoorde hij een #1 besteller. Binnenkort brengt hij een nieuw boek uit over WebPsychologie; een combinatie van conversie optimalisatie, online gedragspychologie en neuromarketing. Daar ga ik hem over aan de tand voelen!"
+    "clean_description": "Tonny Loorbach specialiseert zich sinds 2007 in online marketing en richtte in 2010 de IMU op en is inmiddels ook eigenaar van 5 andere software- en online marketing bedrijven. Hij trainde al 120.000+ ondernemers en met zijn boek 'Doelgerichte SEO' scoorde hij een #1 besteller. Binnenkort brengt hij een nieuw boek uit over WebPsychologie; een combinatie van conversie optimalisatie, online gedragspychologie en neuromarketing. Daar ga ik hem over aan de tand voelen!",
+    "local_image_url": "/images/episodes/nl/een-nieuw-boek-over-webpsychologie-wat-komt-er-in-met-tonny-loorbach-imu.webp",
+    "transistor_image_url": "https://img.transistor.fm/JlN5QSqrx9knnebLIRUoLGStRRwWntWYy08ANO5A0Jc/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iMjk4/M2E1YTVmNDg5ZDcy/NTg0MTZiODE4ODU0/MDFkZS5qcGVn.webp"
   },
   "relationships": {
     "show": {
