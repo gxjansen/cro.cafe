@@ -133,6 +133,15 @@ export class TransistorAPI {
 // Export singleton instance
 export const transistorApi = new TransistorAPI(process.env.TRANSISTOR_API_KEY || '');
 
+// Add a method to update the API key
+export function updateTransistorApiKey(apiKey: string) {
+  if (apiKey) {
+    console.log(`Updating Transistor API key: ${apiKey.substring(0, 4)}...`);
+    return new TransistorAPI(apiKey);
+  }
+  return transistorApi;
+}
+
 // Show IDs for each language
 export const SHOW_IDS = {
   en: '5036',

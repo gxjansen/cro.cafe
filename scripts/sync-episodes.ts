@@ -2,12 +2,30 @@ import { writeFile, mkdir } from 'fs/promises';
 import { join } from 'path';
 import { existsSync } from 'fs';
 import { config } from 'dotenv';
-import { transistorApi, SHOW_IDS, getLanguageFromShowId } from '../src/utils/transistor-api.ts';
+import {
+  transistorApi,
+  SHOW_IDS,
+  getLanguageFromShowId,
+  updateTransistorApiKey,
+} from '../src/utils/transistor-api.ts';
 import type { TransistorEpisode } from '../src/types/transistor';
 import { extractGuests } from './extract-guests.ts';
 
 // Load environment variables
 config();
+
+// Debug environment variables
+console.log('Environment variables:');
+console.log('TRANSISTOR_API_KEY set:', !!process.env.TRANSISTOR_API_KEY);
+if (process.env.TRANSISTOR_API_KEY) {
+  console.log(
+    'First few chars of API key:',
+    process.env.TRANSISTOR_API_KEY.substring(0, 4) + '...'
+  );
+}
+
+// Update the API instance with the environment variable
+const api = updateTransistorApiKey(process.env.TRANSISTOR_API_KEY || '');
 
 // Ensure content directory exists
 async function ensureContentDirectory(language: string) {
@@ -56,7 +74,7 @@ async function syncShow(showId: string) {
   const language = getLanguageFromShowId(showId);
 
   try {
-    const episodes = await transistorApi.getAllEpisodes(showId);
+    const episodes = await api.getAllEpisodes(showId);
 
     // Save only published episodes
     for (const episode of episodes) {
@@ -95,7 +113,7 @@ if (isMainModule) {
   if (episodeId) {
     // Sync a single episode
     const showId = SHOW_IDS['en']; // Default to English show
-    transistorApi
+    api
       .getEpisode(episodeId)
       .then(async (episode) => {
         if (episode) {
