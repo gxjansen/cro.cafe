@@ -5,12 +5,18 @@ on:
     - cron: '0 0 * * *' # Runs every day at midnight UTC
   workflow_dispatch: # Allow manual triggering
 
+# Add explicit permissions for the GITHUB_TOKEN
+permissions:
+  contents: write
+
 jobs:
   sync-rss:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history for proper pushing
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -36,10 +42,7 @@ jobs:
           git diff --quiet && git diff --staged --quiet || git commit -m "chore: update RSS content [skip ci]"
 
       - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+        run: git push
 
       - name: Check for errors
         if: failure()
