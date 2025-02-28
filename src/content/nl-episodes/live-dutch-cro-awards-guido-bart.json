@@ -40,7 +40,9 @@
     "type": "bonus",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Partners:&nbsp;Effective Experiments: effectiveexperiments.comConvert: convert.com/featuresOnline Dialogue: onlinedialogue.nlBraingineers: braingineers.com"
+    "clean_description": "Partners:&nbsp;Effective Experiments: effectiveexperiments.comConvert: convert.com/featuresOnline Dialogue: onlinedialogue.nlBraingineers: braingineers.com",
+    "local_image_url": "/images/episodes/nl/live-dutch-cro-awards-guido-bart.webp",
+    "transistor_image_url": "https://img.transistor.fm/0wSQCzPBbue80MSYKdiabxmxeM579CHA4zhFfWmhHpo/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzM5NzY4NC8x/NjA1MDQxMDg3LWFy/dHdvcmsuanBn.webp"
   },
   "relationships": {
     "show": {

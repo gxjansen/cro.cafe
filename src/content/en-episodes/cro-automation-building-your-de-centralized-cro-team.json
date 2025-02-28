@@ -9,7 +9,7 @@
     "published_at": "2021-12-23T23:05:15.198Z",
     "duration": 1916,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://www.cro.cafe/podcast/cro-automation-building-your-de-centralized-cro-team",
     "media_url": "https://media.transistor.fm/c20cdd46/175a7ee5.mp3",
     "image_url": "https://img.transistor.fm/sCOG8Vi3rwn9quOBdV6IdQ3WC_Cc8_Xj-PQbR162-po/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iZTZk/ODAwNTJmM2FlZDA1/ZjdmMjk2YWI0NzJl/YTYzMS5qcGc.webp",
@@ -33,7 +33,9 @@
     "type": "bonus",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Live recorded at CH2021: We discuss some CRO automations and if you should build a centralized or decentralized CRO team"
+    "clean_description": "Live recorded at CH2021: We discuss some CRO automations and if you should build a centralized or decentralized CRO team",
+    "local_image_url": "/images/episodes/en/cro-automation-building-your-de-centralized-cro-team.webp",
+    "transistor_image_url": "https://img.transistor.fm/sCOG8Vi3rwn9quOBdV6IdQ3WC_Cc8_Xj-PQbR162-po/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iZTZk/ODAwNTJmM2FlZDA1/ZjdmMjk2YWI0NzJl/YTYzMS5qcGc.webp"
   },
   "relationships": {
     "show": {

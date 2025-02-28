@@ -9,14 +9,7 @@
     "published_at": "2020-03-23T13:00:00.000Z",
     "duration": 2047,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/optimaliseren-van-een-talent-acquisition-platform-saas",
     "media_url": "https://media.transistor.fm/747747cc/8aba7eba.mp3",
     "image_url": "https://img.transistor.fm/i0XpMSlWQs9jeyfUvLlxUU4xAvtfR1SLWTTyHshArIE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82ODZj/MDM2YjRlNjhmMTE0/MzA3ZDYyMDFhZTg3/NzZiYS5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Met Milan Meurs, psycholoog en Head of User Growth & Analytics bij Recruitee praat ik over het optimaliseren van hun Talent Acquisition Platform (SaaS)."
+    "clean_description": "Met Milan Meurs, psycholoog en Head of User Growth & Analytics bij Recruitee praat ik over het optimaliseren van hun Talent Acquisition Platform (SaaS).",
+    "local_image_url": "/images/episodes/nl/nl-optimaliseren-van-een-talent-acquisition-platform-saas-met-milan-meurs-recruitee.webp",
+    "transistor_image_url": "https://img.transistor.fm/i0XpMSlWQs9jeyfUvLlxUU4xAvtfR1SLWTTyHshArIE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82ODZj/MDM2YjRlNjhmMTE0/MzA3ZDYyMDFhZTg3/NzZiYS5qcGVn.webp"
   },
   "relationships": {
     "show": {

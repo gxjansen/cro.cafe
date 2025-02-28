@@ -9,14 +9,7 @@
     "published_at": "2020-08-23T22:00:00.000Z",
     "duration": 2640,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/soft-persuasion-katalyseren-ipv-overtuigen-nudge",
     "media_url": "https://media.transistor.fm/110c6ea3/8318e766.mp3",
     "image_url": "https://img.transistor.fm/yB4FisqWI-qvQ8duHEerjiAdy1p5lG190xpROPJBtDc/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS81ODM1/NDg1NTdmYTQ2MjU2/ZWQ0YWNhZGY3ZmM1/MzI1Ni5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Leer over de kunst van nudgen ofwel \"Soft Persuasion\" en waarom het beter is om gedrag te katalyseren dan mensen actief proberen te overtuigen."
+    "clean_description": "Leer over de kunst van nudgen ofwel \"Soft Persuasion\" en waarom het beter is om gedrag te katalyseren dan mensen actief proberen te overtuigen.",
+    "local_image_url": "/images/episodes/nl/nl-soft-persuasion-katalyseren-ipv-overtuigen-met-mischa-coster.webp",
+    "transistor_image_url": "https://img.transistor.fm/yB4FisqWI-qvQ8duHEerjiAdy1p5lG190xpROPJBtDc/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS81ODM1/NDg1NTdmYTQ2MjU2/ZWQ0YWNhZGY3ZmM1/MzI1Ni5qcGVn.webp"
   },
   "relationships": {
     "show": {

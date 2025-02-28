@@ -9,14 +9,7 @@
     "published_at": "2020-02-17T14:00:00.000Z",
     "duration": 1765,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/optimalisatie-van-een-filesharing-service-wetransfer",
     "media_url": "https://media.transistor.fm/d5be6cd4/7687fb6e.mp3",
     "image_url": "https://img.transistor.fm/fQmbvQN_2niTiauCvl2VR7jdwDdXSGzQbtTs3ojntGk/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8yOTY1/OWU0ZWY2MDQ3YWEx/NzhkMWM2ZmU3NjZi/MzY4Mi5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Optimalisatie voor B2C SaaS producten is toch net weer wat anders dan \"reguliere\" e-commerce en daarom daar 2 afleveringen over. Deze tweede gaat over WeTransfer en praat ik met Hélène van den Dries waar zij werkt als Lead User Insights. We praten o.a. onder gebruikersonderzoek, regionale verschillen"
+    "clean_description": "Optimalisatie voor B2C SaaS producten is toch net weer wat anders dan \"reguliere\" e-commerce en daarom daar 2 afleveringen over. Deze tweede gaat over WeTransfer en praat ik met Hélène van den Dries waar zij werkt als Lead User Insights. We praten o.a. onder gebruikersonderzoek, regionale verschillen",
+    "local_image_url": "/images/episodes/nl/nl-optimalisatie-van-een-filesharing-service-met-helene-van-den-dries-wetransfer.webp",
+    "transistor_image_url": "https://img.transistor.fm/fQmbvQN_2niTiauCvl2VR7jdwDdXSGzQbtTs3ojntGk/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8yOTY1/OWU0ZWY2MDQ3YWEx/NzhkMWM2ZmU3NjZi/MzY4Mi5qcGVn.webp"
   },
   "relationships": {
     "show": {

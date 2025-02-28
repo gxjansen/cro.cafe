@@ -9,14 +9,7 @@
     "published_at": "2019-12-13T15:00:00.000Z",
     "duration": 2695,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/rust-en-bezinning-met-mathijs-kok",
     "media_url": "https://media.transistor.fm/c3877466/f4e05344.mp3",
     "image_url": "https://img.transistor.fm/m3uskKS4Qs66mU6z9mBXhNaGgFRPJBT8V80Iql7RcvU/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8xMTAz/ODAzYTRiZGI1Y2Uy/NWUyNzg4ZmI3YjVj/ODhkMS5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "bonus",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Mathijs bezocht Emerce Engage als bezoeker en kwam even bijpraten bij ons in het café over de sessies die hij heeft bezocht."
+    "clean_description": "Mathijs bezocht Emerce Engage als bezoeker en kwam even bijpraten bij ons in het café over de sessies die hij heeft bezocht.",
+    "local_image_url": "/images/episodes/nl/rust-en-bezinning-met-mathijs-kok.webp",
+    "transistor_image_url": "https://img.transistor.fm/m3uskKS4Qs66mU6z9mBXhNaGgFRPJBT8V80Iql7RcvU/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8xMTAz/ODAzYTRiZGI1Y2Uy/NWUyNzg4ZmI3YjVj/ODhkMS5qcGVn.webp"
   },
   "relationships": {
     "show": {

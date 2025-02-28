@@ -9,14 +9,7 @@
     "published_at": "2020-03-29T22:00:00.000Z",
     "duration": 1774,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/data-science-voor-maatschappelijke-vraagstukken",
     "media_url": "https://media.transistor.fm/2f18229e/79426e94.mp3",
     "image_url": "https://img.transistor.fm/X27KkqwtTJ6eew_aGbbaoxHcEMmnloBms6oPFgXGedA/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8yYTNm/NTIyMTNkODMwZTFk/MTE1ZmE5MDAzODY2/MjhlNC5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Deze aflevering was vorig jaar al opgenomen maar juist in deze tijden zeer relevant: Hoe Data Science in te zetten voor maatschappelijke vraagstukken. Marieke Schulte is Data Science consultant bij Digital Power. Daarvoor heeft ze de Master Public Policy and Human Development in Maastricht gedaan en tijdens haar studie een passie ontwikkeld voor het inzetten van data voor maatschappelijke vraagstukken. Wellicht komt haar naam je al bekend voor: we hebben Marieke namelijk al eerder in de podcast gesproken, dat was tijdens een live opname tijdens het Digital Analytics Congres in oktober. Vandaag gaan we het hebben over het inzetten van data voor maatschappelijke vraagstukken aan de hand van een klantcase."
+    "clean_description": "Deze aflevering was vorig jaar al opgenomen maar juist in deze tijden zeer relevant: Hoe Data Science in te zetten voor maatschappelijke vraagstukken.\r\nMarieke Schulte is Data Science consultant bij Digital Power. Daarvoor heeft ze de Master Public Policy and Human Development in Maastricht gedaan en tijdens haar studie een passie ontwikkeld voor het inzetten van data voor maatschappelijke vraagstukken.\r\nWellicht komt haar naam je al bekend voor: we hebben Marieke namelijk al eerder in de podcast gesproken, dat was tijdens een live opname tijdens het Digital Analytics Congres in oktober. \r\nVandaag gaan we het hebben over het inzetten van data voor maatschappelijke vraagstukken aan de hand van een klantcase.",
+    "local_image_url": "/images/episodes/nl/nl-data-science-voor-maatschappelijke-vraagstukken-met-marieke-schulte-digital-power.webp",
+    "transistor_image_url": "https://img.transistor.fm/X27KkqwtTJ6eew_aGbbaoxHcEMmnloBms6oPFgXGedA/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8yYTNm/NTIyMTNkODMwZTFk/MTE1ZmE5MDAzODY2/MjhlNC5qcGVn.webp"
   },
   "relationships": {
     "show": {

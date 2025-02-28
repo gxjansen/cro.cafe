@@ -9,7 +9,7 @@
     "published_at": "2022-01-25T23:00:00.000Z",
     "duration": 1720,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://es.cro.cafe/podcast/parte-iii-principios-y-leyes-de-diseno-que-mejoran-experiencia-y-empujan-conversion",
     "media_url": "https://media.transistor.fm/b2234e43/375f2ae6.mp3",
     "image_url": "https://img.transistor.fm/tIRUcjYRYMOQPPfkHTVrEz1CmlmAfhF8IfECQZan7bw/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8yNjk2/MTAzMzBjYmJhNTMx/NWMyMzk1N2FmMjFl/ZDI4YS5qcGc.webp",
@@ -38,7 +38,9 @@
         "slug": "ricardo-tayar-lopez"
       }
     ],
-    "clean_description": "En este episodio hablamos de la ley de Parkinson, el efecto Zeigarnick o el efecto Veblen... dale al play y déjate llevar!"
+    "clean_description": "En este episodio hablamos de la ley de Parkinson, el efecto Zeigarnick o el efecto Veblen... dale al play y déjate llevar!",
+    "local_image_url": "/images/episodes/es/parte-iii-principios-y-leyes-de-diseno-que-mejoran-experiencia-y-empujan-conversion-con-ricardo-tayar.webp",
+    "transistor_image_url": "https://img.transistor.fm/tIRUcjYRYMOQPPfkHTVrEz1CmlmAfhF8IfECQZan7bw/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8yNjk2/MTAzMzBjYmJhNTMx/NWMyMzk1N2FmMjFl/ZDI4YS5qcGc.webp"
   },
   "relationships": {
     "show": {

@@ -9,14 +9,7 @@
     "published_at": "2020-02-07T12:00:00.000Z",
     "duration": 1557,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/de-revolutie-van-sonic-branding",
     "media_url": "https://media.transistor.fm/46bcd0c0/615082ee.mp3",
     "image_url": "https://img.transistor.fm/2o5vfVdlUP2PxLUtBTxT8B730eLYQ9xDmoKJGf-WdWA/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82YTNl/MjM5MTlhMGU4Mjkw/MDdjYjdlNzE0MGFm/YWE5YS5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "bonus",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Hoe klinkt jou merk? We leren hoe de belgische VRT/VAR dit toepast en welke varianten op sonic branding er allemaal zijn."
+    "clean_description": "Hoe klinkt jou merk? We leren hoe de belgische VRT/VAR dit toepast en welke varianten op sonic branding er allemaal zijn.",
+    "local_image_url": "/images/episodes/nl/de-revolutie-van-sonic-branding-met-dirk-soetens.webp",
+    "transistor_image_url": "https://img.transistor.fm/2o5vfVdlUP2PxLUtBTxT8B730eLYQ9xDmoKJGf-WdWA/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82YTNl/MjM5MTlhMGU4Mjkw/MDdjYjdlNzE0MGFm/YWE5YS5qcGVn.webp"
   },
   "relationships": {
     "show": {

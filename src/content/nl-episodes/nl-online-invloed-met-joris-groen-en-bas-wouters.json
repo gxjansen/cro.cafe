@@ -9,14 +9,7 @@
     "published_at": "2020-06-07T22:00:00.000Z",
     "duration": 2845,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/online-invloed",
     "media_url": "https://media.transistor.fm/b00bd3b0/99c66c58.mp3",
     "image_url": "https://img.transistor.fm/PtOQQeuZd3eBs2VP4YaqAanDfR1kYiCrSPZKoLMJBGQ/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kZTIx/OTUwNmMxOTVhZGQw/ZmFjZTcwOGMwOGJj/NWQxYy5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Joris Groen is psycholoog en user experience designer, gespecialiseerd in online overtuigen. Bij booking.com houdt hij zich bezig met conversie via conversational interfaces en je kent hem wellicht nog van een vorige podcast aflevering. Joris heeft een boek geschreven samen met Bas Wouters en Bas is overtuigingsexpert en oprichter van Onlineinvloed.nl. Als enige ter wereld mag hij zich Cialdini Method Certified Trainer én BJ Fogg Certified Tiny Habits coach noemen. Het boek dat de heren hebben geschreven heet Online Invloed en daar gaan we het vandaag dan ook uitgebreid over hebben!"
+    "clean_description": "Joris Groen is psycholoog en user experience designer, gespecialiseerd in online overtuigen. Bij booking.com houdt hij zich bezig met conversie via conversational interfaces en je kent hem wellicht nog van een vorige podcast aflevering. Joris heeft een boek geschreven samen met Bas Wouters en Bas is overtuigingsexpert en oprichter van Onlineinvloed.nl. Als enige ter wereld mag hij zich Cialdini Method Certified Trainer én BJ Fogg Certified Tiny Habits coach noemen. \r\nHet boek dat de heren hebben geschreven heet Online Invloed en daar gaan we het vandaag dan ook uitgebreid over hebben!",
+    "local_image_url": "/images/episodes/nl/nl-online-invloed-met-joris-groen-en-bas-wouters.webp",
+    "transistor_image_url": "https://img.transistor.fm/PtOQQeuZd3eBs2VP4YaqAanDfR1kYiCrSPZKoLMJBGQ/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kZTIx/OTUwNmMxOTVhZGQw/ZmFjZTcwOGMwOGJj/NWQxYy5qcGVn.webp"
   },
   "relationships": {
     "show": {

@@ -9,14 +9,7 @@
     "published_at": "2020-02-21T06:55:00.000Z",
     "duration": 1949,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/optimaliseren-en-automatiseren-van-je-analyses",
     "media_url": "https://media.transistor.fm/afeef27a/f9149ab3.mp3",
     "image_url": "https://img.transistor.fm/RuSV_XPgmWO7UXCLWFJihASwiuXCvetYuuThKyYxexo/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83NjZj/NmNlY2FlMmQ5OTlj/NGQ1NWE4N2ZhZWRj/ZGNhNC5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "bonus",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Live vanaf Emerce GAUC sprak ik met Annemarie Klaassen (VodafoneZiggo), Reinier Koolmees en Hans Nauta (beide Online Dialogue) over hun sessies over het optimaliseren en automatiseren van analyses."
+    "clean_description": "Live vanaf Emerce GAUC sprak ik met Annemarie Klaassen (VodafoneZiggo), Reinier Koolmees en Hans Nauta (beide Online Dialogue) over hun sessies over het optimaliseren en automatiseren van analyses.",
+    "local_image_url": "/images/episodes/nl/nl-optimaliseren-en-automatiseren-van-je-analyses-met-annemarie-klaassen-vodafoneziggo-reinier-koolmees-hans-nauta-online-dialogue.webp",
+    "transistor_image_url": "https://img.transistor.fm/RuSV_XPgmWO7UXCLWFJihASwiuXCvetYuuThKyYxexo/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83NjZj/NmNlY2FlMmQ5OTlj/NGQ1NWE4N2ZhZWRj/ZGNhNC5qcGVn.webp"
   },
   "relationships": {
     "show": {

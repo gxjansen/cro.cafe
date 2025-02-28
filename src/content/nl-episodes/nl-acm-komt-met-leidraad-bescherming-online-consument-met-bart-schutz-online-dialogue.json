@@ -9,14 +9,7 @@
     "published_at": "2020-01-05T23:00:00.000Z",
     "duration": 3761,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/acm-komt-met-leidraad-bescherming-online-consument",
     "media_url": "https://media.transistor.fm/44ce774d/0030d4ee.mp3",
     "image_url": "https://img.transistor.fm/H-7_ifITho9SMuxL9JiY6OYx60B_Q--ViL1d_ER_26E/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzM5NzcxMS8x/NjA1MDQxMTU0LWFy/dHdvcmsuanBn.webp",
@@ -40,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Bart Schutz consulteerde de ACM over de \"Leidraad bescherming online consument\" die volgende maand defintief moet worden. Tot 16 januari kun je daar nog op reageren, een goed moment om daar even wat dieper op in te gaan!"
+    "clean_description": "Bart Schutz consulteerde de ACM over de \"Leidraad bescherming online consument\" die volgende maand defintief moet worden. Tot 16 januari kun je daar nog op reageren, een goed moment om daar even wat dieper op in te gaan!",
+    "local_image_url": "/images/episodes/nl/nl-acm-komt-met-leidraad-bescherming-online-consument-met-bart-schutz-online-dialogue.webp",
+    "transistor_image_url": "https://img.transistor.fm/H-7_ifITho9SMuxL9JiY6OYx60B_Q--ViL1d_ER_26E/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzM5NzcxMS8x/NjA1MDQxMTU0LWFy/dHdvcmsuanBn.webp"
   },
   "relationships": {
     "show": {

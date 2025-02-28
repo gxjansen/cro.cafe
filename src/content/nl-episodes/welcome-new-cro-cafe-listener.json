@@ -9,14 +9,7 @@
     "published_at": "2018-11-08T15:09:00.000Z",
     "duration": 152,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "",
     "media_url": "https://media.transistor.fm/405fdded/3585ef2a.mp3",
     "image_url": "https://img.transistor.fm/2oYDHGg7bfZKNDkIeVK0vG8FU5RPfdevkLkfNEzvDjE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzM5NzYyOS8x/NjA1MDQwOTQ5LWFy/dHdvcmsuanBn.webp",
@@ -40,7 +33,9 @@
     "type": "trailer",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Teaser episode with info for new listeners!"
+    "clean_description": "Teaser episode with info for new listeners!",
+    "local_image_url": "/images/episodes/nl/welcome-new-cro-cafe-listener.webp",
+    "transistor_image_url": "https://img.transistor.fm/2oYDHGg7bfZKNDkIeVK0vG8FU5RPfdevkLkfNEzvDjE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzM5NzYyOS8x/NjA1MDQwOTQ5LWFy/dHdvcmsuanBn.webp"
   },
   "relationships": {
     "show": {

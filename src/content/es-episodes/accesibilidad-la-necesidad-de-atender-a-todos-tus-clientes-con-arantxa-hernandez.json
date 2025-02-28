@@ -9,7 +9,7 @@
     "published_at": "2022-02-22T23:00:00.000Z",
     "duration": 4363,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://es.cro.cafe/podcast/la-diferencia-cultural-entre-mexico-y-espana-y-su-peso-en-conversion",
     "media_url": "https://media.transistor.fm/103b6d3b/0498c2f8.mp3",
     "image_url": "https://img.transistor.fm/mLFGt9i_-Xxr6CppeA9adyTX1SB3ZYlN8eNYKqmnQ6Y/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9jMGQx/ZDJhNzQxNzRlZGY3/MTU0ZTIyZjllMjFm/YzJlOC5qcGc.webp",
@@ -38,7 +38,9 @@
         "slug": "vanesa-robles"
       }
     ],
-    "clean_description": "Vanesa Robles ha pasado los últimos tres años de su carrera profesional en Mexico, y ha vivido en su propia experiencia la importancia de diseñar mensajes y acciones específicamente pensados para el cliente mexicano, aunque procedas de España y hablemos el mismo lenguaje. De esa fractura cultural y de su importancia para conseguir comunicar con éxito hablamos en este episodio."
+    "clean_description": "Vanesa Robles ha pasado los últimos tres años de su carrera profesional en Mexico, y ha vivido en su propia experiencia la importancia de diseñar mensajes y acciones específicamente pensados para el cliente mexicano, aunque procedas de España y hablemos el mismo lenguaje. De esa fractura cultural y de su importancia para conseguir comunicar con éxito hablamos en este episodio.",
+    "local_image_url": "/images/episodes/es/accesibilidad-la-necesidad-de-atender-a-todos-tus-clientes-con-arantxa-hernandez.webp",
+    "transistor_image_url": "https://img.transistor.fm/mLFGt9i_-Xxr6CppeA9adyTX1SB3ZYlN8eNYKqmnQ6Y/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9jMGQx/ZDJhNzQxNzRlZGY3/MTU0ZTIyZjllMjFm/YzJlOC5qcGc.webp"
   },
   "relationships": {
     "show": {

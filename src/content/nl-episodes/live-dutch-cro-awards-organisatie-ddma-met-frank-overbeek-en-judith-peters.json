@@ -9,14 +9,7 @@
     "published_at": "2019-10-20T13:00:00.000Z",
     "duration": 414,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/live-dutch-cro-awards-organisatie-ddma",
     "media_url": "https://media.transistor.fm/0c12a724/b49d5645.mp3",
     "image_url": "https://img.transistor.fm/YVfn6j1ksivi84wXDkK9cWPPnXQFNKwUkm-aVDCyCe8/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mMjAx/NmI1YzNjODExOGZh/MjVkZWVlYzUxMjA4/YTlhMi5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "bonus",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Tijdens de DDMA Dutch CRO Awards op 3 oktober 2019 deden we live verslag vanaf het event. In deze clip spraken we met Judith en Frank van DDMA zelf over de organisatie van het event."
+    "clean_description": "Tijdens de DDMA Dutch CRO Awards op 3 oktober 2019 deden we live verslag vanaf het event.\r\n\r\nIn deze clip spraken we met Judith en Frank van DDMA zelf over de organisatie van het event.",
+    "local_image_url": "/images/episodes/nl/live-dutch-cro-awards-organisatie-ddma-met-frank-overbeek-en-judith-peters.webp",
+    "transistor_image_url": "https://img.transistor.fm/YVfn6j1ksivi84wXDkK9cWPPnXQFNKwUkm-aVDCyCe8/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mMjAx/NmI1YzNjODExOGZh/MjVkZWVlYzUxMjA4/YTlhMi5qcGVn.webp"
   },
   "relationships": {
     "show": {

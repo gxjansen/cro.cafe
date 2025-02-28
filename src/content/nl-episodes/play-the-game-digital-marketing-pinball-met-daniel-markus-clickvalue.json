@@ -9,14 +9,7 @@
     "published_at": "2019-02-28T07:18:00.000Z",
     "duration": 2860,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/digital-marketing-pinball",
     "media_url": "https://media.transistor.fm/bb151115/15e5b651.mp3",
     "image_url": "https://img.transistor.fm/ONqPm873kJosKEF-aFJFq_79hwAK9WNKk6hSwI-yRJ4/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82MjQ4/NDAwNzJkNmQxNzg1/NzJjOTUzNzc3MzZj/MTVjYi5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "In deze aflevering praat ik met Daniël Markus, webanalist en oprichter van Clickvalue. Dit bureau heeft hij sinds 2003 laten uitgroeien tot een data driven online marketing bureau dat sinds 2 jaar 1 van de 5 labels is van LevelUp Group. Daniël is binnen de groep verantwoordelijk voor innovatie van de dienstverlening en groei van klanten. Over de focus op groei heeft hij vorige maand een boek gepubliceerd: Digital Marketing Pinball. In dat boek speelt CRO uiteraard een grote rol, genoeg redenen dus om Daniël uit te nodigen in het CRO.CAFE."
+    "clean_description": "In deze aflevering praat ik met Daniël Markus, webanalist en oprichter van Clickvalue. Dit bureau heeft hij sinds 2003 laten uitgroeien tot een data driven online marketing bureau dat sinds 2 jaar 1 van de 5 labels is van LevelUp Group. Daniël is binnen de groep verantwoordelijk voor innovatie van de dienstverlening en groei van klanten. Over de focus op groei heeft hij vorige maand een boek gepubliceerd: Digital Marketing Pinball. In dat boek speelt CRO uiteraard een grote rol, genoeg redenen dus om Daniël uit te nodigen in het CRO.CAFE.",
+    "local_image_url": "/images/episodes/nl/play-the-game-digital-marketing-pinball-met-daniel-markus-clickvalue.webp",
+    "transistor_image_url": "https://img.transistor.fm/ONqPm873kJosKEF-aFJFq_79hwAK9WNKk6hSwI-yRJ4/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82MjQ4/NDAwNzJkNmQxNzg1/NzJjOTUzNzc3MzZj/MTVjYi5qcGVn.webp"
   },
   "relationships": {
     "show": {

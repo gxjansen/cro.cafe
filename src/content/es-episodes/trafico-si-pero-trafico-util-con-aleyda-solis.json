@@ -9,7 +9,7 @@
     "published_at": "2021-04-13T22:00:00.000Z",
     "duration": 4660,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://es.cro.cafe/podcast/trafico-si-pero-trafico-util",
     "media_url": "https://media.transistor.fm/8253f61d/342227a0.mp3",
     "image_url": "https://img.transistor.fm/W153UbIp-jnWm2kctVgg1hhE60CqtI1P9dtEOBwpjTg/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS85MDY2/YmI4MjRhMzViNzY4/NGI0YTY5ZGYwMjVm/YmUwZi5qcGc.webp",
@@ -38,7 +38,9 @@
         "slug": "aleyda-solis"
       }
     ],
-    "clean_description": "Hablamos con Aleyda Solis sobre la importancia de que las estrategias de captación de tráfico no se centren solo en el volumen, sino en la calidad transaccional del tráfico, con foco principal en el SEO, dado que suele ser el medio más empleado para las estrategias a medio y largo plazo."
+    "clean_description": "Hablamos con Aleyda Solis sobre la importancia de que las estrategias de captación de tráfico no se centren solo en el volumen, sino en la calidad transaccional del tráfico, con foco principal en el SEO, dado que suele ser el medio más empleado para las estrategias a medio y largo plazo.",
+    "local_image_url": "/images/episodes/es/trafico-si-pero-trafico-util-con-aleyda-solis.webp",
+    "transistor_image_url": "https://img.transistor.fm/W153UbIp-jnWm2kctVgg1hhE60CqtI1P9dtEOBwpjTg/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS85MDY2/YmI4MjRhMzViNzY4/NGI0YTY5ZGYwMjVm/YmUwZi5qcGc.webp"
   },
   "relationships": {
     "show": {

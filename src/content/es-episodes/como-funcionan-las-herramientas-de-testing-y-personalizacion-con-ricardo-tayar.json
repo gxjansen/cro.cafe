@@ -9,7 +9,7 @@
     "published_at": "2021-06-01T22:00:00.000Z",
     "duration": 1401,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://es.cro.cafe/podcast/como-funcionan-las-herramientas-de-testing-y-personalizacion",
     "media_url": "https://media.transistor.fm/6523651c/2229bb06.mp3",
     "image_url": "https://img.transistor.fm/2ZqHwuZ5btNliyuptjiNsM_k0O-_JI12aKA4MGK6-7E/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9hMTQ1/YjRlOGQ4M2EwNzli/NzJkMDZiODJiMzVk/NTYxMC5qcGc.webp",
@@ -38,7 +38,9 @@
         "slug": "ricardo-tayar-lopez"
       }
     ],
-    "clean_description": "Hablamos de manera clara y sencilla sobre como funcionan las herramientas de testing y personalización. Os quedará claro y meridiano como el agua cristalina."
+    "clean_description": "Hablamos de manera clara y sencilla sobre como funcionan las herramientas de testing y personalización. Os quedará claro y meridiano como el agua cristalina.",
+    "local_image_url": "/images/episodes/es/como-funcionan-las-herramientas-de-testing-y-personalizacion-con-ricardo-tayar.webp",
+    "transistor_image_url": "https://img.transistor.fm/2ZqHwuZ5btNliyuptjiNsM_k0O-_JI12aKA4MGK6-7E/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9hMTQ1/YjRlOGQ4M2EwNzli/NzJkMDZiODJiMzVk/NTYxMC5qcGc.webp"
   },
   "relationships": {
     "show": {

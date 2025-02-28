@@ -9,14 +9,7 @@
     "published_at": "2019-01-20T20:31:00.000Z",
     "duration": 3505,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/hoe-staat-onze-eigen-cro-industrie-er-voor",
     "media_url": "https://media.transistor.fm/69b15109/65145be4.mp3",
     "image_url": "https://img.transistor.fm/4pikncuEsr2aPSjUTZ0Duo7AVYws8zbKTBJMqcTOv5k/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS85MjAy/OWNjNTJmNGJlYmFl/NmU1MDk0YWUyYTE2/NDNjZS5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Roy, Rudger en Guido hebben het rapport “State of the Conversion Optimization Industry 2018” gelezen dat ConversionXL afgelopen december voor het 3e jaar op rij heeft uitgebracht. Hierin staan de resultaten van een vragenlijst met 26 vragen die is ingevuld door ruim 700 mensen wereldwijd en dat rapport gaan we in deze aflevering ontleden. We bespreken dit rapport en zijn (heel) kritisch over de staat van onze eigen CRO industry."
+    "clean_description": "Roy, Rudger en Guido hebben het rapport “State of the Conversion Optimization Industry 2018” gelezen dat ConversionXL afgelopen december voor het 3e jaar op rij heeft uitgebracht. Hierin staan de resultaten van een vragenlijst met 26 vragen die is ingevuld door ruim 700 mensen wereldwijd en dat rapport gaan we in deze aflevering ontleden. We bespreken dit rapport en zijn (heel) kritisch over de staat van onze eigen CRO industry.",
+    "local_image_url": "/images/episodes/nl/hoe-staat-onze-eigen-cro-industrie-er-voor-met-rudger-de-groot-en-roy-huiskes.webp",
+    "transistor_image_url": "https://img.transistor.fm/4pikncuEsr2aPSjUTZ0Duo7AVYws8zbKTBJMqcTOv5k/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS85MjAy/OWNjNTJmNGJlYmFl/NmU1MDk0YWUyYTE2/NDNjZS5qcGVn.webp"
   },
   "relationships": {
     "show": {

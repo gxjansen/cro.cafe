@@ -9,14 +9,7 @@
     "published_at": "2020-02-07T11:00:00.000Z",
     "duration": 1923,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/hoe-leer-je-iemand-om-te-programmeren",
     "media_url": "https://media.transistor.fm/3aed45d8/970d301f.mp3",
     "image_url": "https://img.transistor.fm/i_TdxHq0XMOutcgNaLqN49JB7oAGpCfTtytvw6eyVS8/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8xY2Rl/YmJkOTc3MzRiYzdj/MDk5ZDdiMDUwODhj/YjYzYi5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "bonus",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Felienne is universitair hoofddocent bij het Leiden Institute of Advanced Computer Science (LIACS) van de Universiteit van Leiden, waar ze de PERL-groep leidt die onderzoek doet naar programmeren voor iedereen. In deze bonusaflevering - live opgenomen op het Marketing Insights Event (#MIE20) - hebben we het over hoe je kinderen en studenten leert programmeren, Data Science, Python en uiteraard haar onderzoek."
+    "clean_description": "Felienne is universitair hoofddocent bij het Leiden Institute of Advanced Computer Science (LIACS) van de Universiteit van Leiden, waar ze de PERL-groep leidt die onderzoek doet naar programmeren voor iedereen. In deze bonusaflevering - live opgenomen op het Marketing Insights Event (#MIE20) - hebben we het over hoe je kinderen en studenten leert programmeren, Data Science, Python en uiteraard haar onderzoek.",
+    "local_image_url": "/images/episodes/nl/nl-hoe-leer-je-iemand-om-te-programmeren-met-felienne-hermans.webp",
+    "transistor_image_url": "https://img.transistor.fm/i_TdxHq0XMOutcgNaLqN49JB7oAGpCfTtytvw6eyVS8/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8xY2Rl/YmJkOTc3MzRiYzdj/MDk5ZDdiMDUwODhj/YjYzYi5qcGVn.webp"
   },
   "relationships": {
     "show": {

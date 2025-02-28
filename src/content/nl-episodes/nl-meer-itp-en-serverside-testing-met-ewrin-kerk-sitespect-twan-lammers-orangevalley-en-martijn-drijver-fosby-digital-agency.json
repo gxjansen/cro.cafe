@@ -9,14 +9,7 @@
     "published_at": "2020-02-25T23:00:00.000Z",
     "duration": 1044,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/meer-itp-en-serverside-testing",
     "media_url": "https://media.transistor.fm/3e9f4066/795ab432.mp3",
     "image_url": "https://img.transistor.fm/YQ8roL3jevit8JCv41xUq9qJBCQDOksiAchvNZyaoVM/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iMjcx/OWRlY2EyNzllMmQ2/NGQzOWNiNzZlZmUx/NzZkMC5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "bonus",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Live vanaf Emerce GAUC sprak ik met Erwin Kerk (SiteSpect), Twan Lammers (OrangeValley) en Martijn Drijver (Fosby Digital Agency) over het thema van de dag: ITP en serverside testing."
+    "clean_description": "Live vanaf Emerce GAUC sprak ik met Erwin Kerk (SiteSpect), Twan Lammers (OrangeValley) en Martijn Drijver (Fosby Digital Agency) over het thema van de dag: ITP en serverside testing.",
+    "local_image_url": "/images/episodes/nl/nl-meer-itp-en-serverside-testing-met-ewrin-kerk-sitespect-twan-lammers-orangevalley-en-martijn-drijver-fosby-digital-agency.webp",
+    "transistor_image_url": "https://img.transistor.fm/YQ8roL3jevit8JCv41xUq9qJBCQDOksiAchvNZyaoVM/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iMjcx/OWRlY2EyNzllMmQ2/NGQzOWNiNzZlZmUx/NzZkMC5qcGVn.webp"
   },
   "relationships": {
     "show": {

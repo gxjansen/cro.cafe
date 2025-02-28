@@ -9,14 +9,7 @@
     "published_at": "2019-03-20T17:56:00.000Z",
     "duration": 2168,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/beginnen-met-personaliseren-is-makkelijker-dan-je-denkt",
     "media_url": "https://media.transistor.fm/940d323b/efd0e74c.mp3",
     "image_url": "https://img.transistor.fm/5KkqCNejkiPwgKj3XFPNquMuPY1AhegpTHTTDJNJSTM/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9jMTBj/MzQ2NThkYjA5NDNh/M2M3MTFlYzZhMjFk/YjBhNC5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Deze week praat ik met Ruben Teunissen van Centraal Beheer Achmea over personaliseren: hoe je eenvoudig kan starten, waar je op moet letten (zoals interactie effecten) en hoe ze het bij Centraal Beheer Achmea doen. Ook deelt Ruben met ons de grootste uitdagingen bij het neerzetten van een experiment gedreven cultuur."
+    "clean_description": "Deze week praat ik met Ruben Teunissen van Centraal Beheer Achmea over personaliseren: hoe je eenvoudig kan starten, waar je op moet letten (zoals interactie effecten) en hoe ze het bij Centraal Beheer Achmea doen.\r\n\r\nOok deelt Ruben met ons de grootste uitdagingen bij het neerzetten van een experiment gedreven cultuur.",
+    "local_image_url": "/images/episodes/nl/beginnen-met-personaliseren-is-makkelijker-dan-je-denkt-met-ruben-teunissen-centraal-beheer.webp",
+    "transistor_image_url": "https://img.transistor.fm/5KkqCNejkiPwgKj3XFPNquMuPY1AhegpTHTTDJNJSTM/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9jMTBj/MzQ2NThkYjA5NDNh/M2M3MTFlYzZhMjFk/YjBhNC5qcGVn.webp"
   },
   "relationships": {
     "show": {

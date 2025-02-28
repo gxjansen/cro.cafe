@@ -9,7 +9,7 @@
     "published_at": "2019-10-20T13:00:00.000Z",
     "duration": 1767,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://www.cro.cafe/podcast/why-focussing-on-a-culture-of-experimentation-is-a-waste-of-time",
     "media_url": "https://media.transistor.fm/65c88289/d9718325.mp3",
     "image_url": "https://img.transistor.fm/j-NEp0W9gcASp2Cl1C_0jxfWRPEY8yc58s8EsOhs6iE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83NjM4/NjcyMDAwOGEyYTIw/ZWI1OTcwMzg1YTBl/NDRlYy5qcGVn.webp",
@@ -33,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Tijdens de DDMA Dutch CRO Awards op 3 oktober 2019 deden we live verslag vanaf het event. In deze clip spreken we met Manuel DaCosta van Effective Experiments en tevens spreker tijdens het event."
+    "clean_description": "Tijdens de DDMA Dutch CRO Awards op 3 oktober 2019 deden we live verslag vanaf het event.\r\n\r\nIn deze clip spreken we met Manuel DaCosta van Effective Experiments en tevens spreker tijdens het event.",
+    "local_image_url": "/images/episodes/en/live-dutch-cro-awards-manuel-dacosta.webp",
+    "transistor_image_url": "https://img.transistor.fm/j-NEp0W9gcASp2Cl1C_0jxfWRPEY8yc58s8EsOhs6iE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83NjM4/NjcyMDAwOGEyYTIw/ZWI1OTcwMzg1YTBl/NDRlYy5qcGVn.webp"
   },
   "relationships": {
     "show": {

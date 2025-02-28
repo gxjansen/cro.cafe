@@ -9,14 +9,7 @@
     "published_at": "2019-08-05T18:56:00.000Z",
     "duration": 3169,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/je-startup-sturen-op-kwalitatieve-data",
     "media_url": "https://media.transistor.fm/3191ece7/7c7403d1.mp3",
     "image_url": "https://img.transistor.fm/Y66-ktexIpfCyz9_a0c5ysDJjjlTCgFuS2oC7en1zEk/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83ZTcw/NmFmOGM3ODllNjE1/Y2U4MzA3YzZmNTNl/NDJhNy5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Vandaag praat ik met Rick Molenaar. Hij was voorheen Chief Marketing Officer bij HelloPrint en United Wardrobe en is de afgelopen maanden hard aan het werk geweest om afgelopen juli zijn nieuwe startup Instant te lanceren, een B2C bezorgplatform voor lokale versspecialisten. Met Rick praat ik over hoe ze bij Instant kwalitatieve data verzamelen en hoe ze dit inzetten om continu hun dienstverlening te verbeteren."
+    "clean_description": "Vandaag praat ik met Rick Molenaar. Hij was voorheen Chief Marketing Officer bij HelloPrint en United Wardrobe en is de afgelopen maanden hard aan het werk geweest om afgelopen juli zijn nieuwe startup Instant te lanceren, een B2C bezorgplatform voor lokale versspecialisten. Met Rick praat ik over hoe ze bij Instant kwalitatieve data verzamelen en hoe ze dit inzetten om continu hun dienstverlening te verbeteren.",
+    "local_image_url": "/images/episodes/nl/je-startup-sturen-op-kwalitatieve-data-met-rick-molenaar.webp",
+    "transistor_image_url": "https://img.transistor.fm/Y66-ktexIpfCyz9_a0c5ysDJjjlTCgFuS2oC7en1zEk/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83ZTcw/NmFmOGM3ODllNjE1/Y2U4MzA3YzZmNTNl/NDJhNy5qcGVn.webp"
   },
   "relationships": {
     "show": {

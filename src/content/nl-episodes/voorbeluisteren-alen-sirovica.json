@@ -9,7 +9,7 @@
     "published_at": "2021-02-26T09:00:00.000Z",
     "duration": 2124,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://nl.cro.cafe/podcast/samenwerking-tussen-agencies-en-opdrachtgevers",
     "media_url": "https://media.transistor.fm/38de3bc1/814f50fa.mp3",
     "image_url": "https://img.transistor.fm/WB1YH5BqYRhEyQsIz1k19vl_I7m-cvUatVnJ9IHElB8/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82ZTJk/Y2YyNWEwYzQ3MmY2/MTNmNjc4YjAyYjVh/Mzg5MS5qcGVn.webp",
@@ -38,7 +38,9 @@
         "slug": "alen-sirovica"
       }
     ],
-    "clean_description": "Vandaag leren we - vanuit het perspectief van een online burea - hoe we de samenwerking tussen agencies en opdrachtgevers kunnen verbeteren. Shownotes:"
+    "clean_description": "Vandaag leren we - vanuit het perspectief van een online burea - hoe we de samenwerking tussen agencies en opdrachtgevers kunnen verbeteren.\r\n\r\nShownotes: http://nl.cro.cafe/podcast/samenwerking-tussen-agencies-en-opdrachtgevers",
+    "local_image_url": "/images/episodes/nl/voorbeluisteren-alen-sirovica.webp",
+    "transistor_image_url": "https://img.transistor.fm/WB1YH5BqYRhEyQsIz1k19vl_I7m-cvUatVnJ9IHElB8/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS82ZTJk/Y2YyNWEwYzQ3MmY2/MTNmNjc4YjAyYjVh/Mzg5MS5qcGVn.webp"
   },
   "relationships": {
     "show": {

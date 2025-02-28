@@ -9,14 +9,7 @@
     "published_at": "2019-12-02T20:00:00.000Z",
     "duration": 1010,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/live-ch2019-kristof-nizet",
     "media_url": "https://media.transistor.fm/2a290bc1/2a846cf8.mp3",
     "image_url": "https://img.transistor.fm/k1aj87_ttKuUCn6txIlbIfIySRoCg2oCQzDCwCECT5A/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iMzdk/MWQ1NGY1YTkzZWJk/ZTIwMDBiN2RiMDlh/MDgxOC5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "bonus",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Op (The Conference Formerly Know As) Conversion Hotel sprak ik op de zaterdagavond met Kristof Nizet. Hij is freelance Conversion Optimization & E-commerce consultant en één van de mensen die een breakout sessie heeft gegeven. We spreken kort over zijn sessie - die ging over \"Yield growth beyond the local maximum\" - en de rest van de conferentie."
+    "clean_description": "Op (The Conference Formerly Know As) Conversion Hotel sprak ik op de zaterdagavond met Kristof Nizet. Hij is freelance Conversion Optimization & E-commerce consultant en één van de mensen die een breakout sessie heeft gegeven. We spreken kort over zijn sessie - die ging over \"Yield growth beyond the local maximum\" - en de rest van de conferentie.",
+    "local_image_url": "/images/episodes/nl/gebruik-ux-research-ter-verbreding-van-je-productportfolio-of-afzetmarkt-met-kristof-nizet.webp",
+    "transistor_image_url": "https://img.transistor.fm/k1aj87_ttKuUCn6txIlbIfIySRoCg2oCQzDCwCECT5A/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iMzdk/MWQ1NGY1YTkzZWJk/ZTIwMDBiN2RiMDlh/MDgxOC5qcGVn.webp"
   },
   "relationships": {
     "show": {

@@ -9,14 +9,7 @@
     "published_at": "2019-08-26T05:00:00.000Z",
     "duration": 3067,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/valideren-van-je-e-mail-marketing",
     "media_url": "https://media.transistor.fm/eadb4869/b9f07035.mp3",
     "image_url": "https://img.transistor.fm/pvSypkVHs8XOCyzMb9tXrrn_JEYGIIVyaow9ugbN0sU/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9jMWU4/MTg3NWQ2NmQ0NDI4/NWFmODBjYmZiOGM0/Zjk5Zi5qcGVn.webp",
@@ -40,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Vandaag een onderwerp waar ik al een tijdje naar uitkijk: we gaan het namelijk hebben over experimenteren met e-mail marketing, iets waar ik zelf tot op heden nog nauwelijks iets mee heb gedaan. Ik praat daar over met Monique Zwanenburg, E-mailmarketing Consultant bij ISM ecompany uit Rotterdam. In haar dagelijks werk helpt ze klanten zoals Tommy Teleshopping, Xd Design en Sanitairwinkel met doorlopend meer resultaat halen uit e-mailmarketing, voornamelijk door het uitvoeren van A/B testen."
+    "clean_description": "Vandaag een onderwerp waar ik al een tijdje naar uitkijk: we gaan het namelijk hebben over experimenteren met e-mail marketing, iets waar ik zelf tot op heden nog nauwelijks iets mee heb gedaan. Ik praat daar over met Monique Zwanenburg, E-mailmarketing Consultant bij ISM ecompany uit Rotterdam. In haar dagelijks werk helpt ze klanten zoals Tommy Teleshopping, Xd Design en Sanitairwinkel met doorlopend meer resultaat halen uit e-mailmarketing, voornamelijk door het uitvoeren van A/B testen.",
+    "local_image_url": "/images/episodes/nl/valideren-van-je-e-mail-marketing-met-monique-zwanenburg-ism-ecompany.webp",
+    "transistor_image_url": "https://img.transistor.fm/pvSypkVHs8XOCyzMb9tXrrn_JEYGIIVyaow9ugbN0sU/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9jMWU4/MTg3NWQ2NmQ0NDI4/NWFmODBjYmZiOGM0/Zjk5Zi5qcGVn.webp"
   },
   "relationships": {
     "show": {

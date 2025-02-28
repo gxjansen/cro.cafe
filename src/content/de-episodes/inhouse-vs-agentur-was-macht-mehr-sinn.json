@@ -9,7 +9,7 @@
     "published_at": "2022-08-09T08:01:29.560Z",
     "duration": 2115,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://de.cro.cafe/podcast/inhouse-vs-agentur-was-macht-mehr-sinn",
     "media_url": "https://media.transistor.fm/cca9fdde/a6e5c866.mp3",
     "image_url": "https://img.transistor.fm/wjvjhtHPf1raMTQBATWGxO0Yaw4Ic8m_I80Gd9Edd-M/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83N2Fi/NzFiODIyNWFmMWYy/YTkyNGNkMzhmNjA1/ZWExYy5wbmc.webp",
@@ -38,7 +38,9 @@
         "slug": "thomas-gruhle"
       }
     ],
-    "clean_description": "CRO ist ein zentraler Wertschöpfungsprozess, der in jedem Unternehmen eine hohe Priorität haben sollte. Oftmals fehlen jedoch die nötigen Ressourcen. Regelmäßig gibt es Diskussionen darüber, ob es sinnvoll ist, die Betreuung seines CRO-Programms auszulagern. Dabei gehen die Meinungen jedoch sehr weit auseinander. Wir sprechen mit Thomas Gruhle, Founder & CEO von LEAP, darüber, wie eine Agentur bei der Conversion Optimierung unterstützen kann und welche Kriterien für die Entscheidungsfindung wichtig ist. Viel Spaß beim Hören!"
+    "clean_description": "CRO ist ein zentraler Wertschöpfungsprozess, der in jedem Unternehmen eine hohe Priorität haben sollte. Oftmals fehlen jedoch die nötigen Ressourcen. Regelmäßig gibt es Diskussionen darüber, ob es sinnvoll ist, die Betreuung seines CRO-Programms auszulagern. Dabei gehen die Meinungen jedoch sehr weit auseinander. Wir sprechen mit Thomas Gruhle, Founder & CEO von LEAP, darüber, wie eine Agentur bei der Conversion Optimierung unterstützen kann und welche Kriterien für die Entscheidungsfindung wichtig ist.\r\n\r\nViel Spaß beim Hören!",
+    "local_image_url": "/images/episodes/de/inhouse-vs-agentur-was-macht-mehr-sinn.webp",
+    "transistor_image_url": "https://img.transistor.fm/wjvjhtHPf1raMTQBATWGxO0Yaw4Ic8m_I80Gd9Edd-M/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS83N2Fi/NzFiODIyNWFmMWYy/YTkyNGNkMzhmNjA1/ZWExYy5wbmc.webp"
   },
   "relationships": {
     "show": {

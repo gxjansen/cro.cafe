@@ -9,36 +9,33 @@
     "published_at": "2023-06-20T07:30:00.000Z",
     "duration": 2040,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://de.cro.cafe/podcast/hinter-den-kulissen-von-meta",
     "media_url": "https://media.transistor.fm/4e954550/99911d3b.mp3",
-    "image_url": "https://img.transistor.fm/NygemRrhng2DQ9Tzw_e-MwHGMZnBB3Tkdqq9VzG7foM/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mZjlj/NGQ4Yzc1NzMzZWJm/NWM4M2FlM2FjMGY3/YTA3ZC5wbmc.webp",
+    "image_url": "https://img.transistor.fm/e3Xs6xtnAYDpY5jKPW9q6Xq2lP17R-Ar58FP-T1JPbE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mMTgx/MDc2NjQ2MGUzZGY3/NGNkMDFmOGFkYTJh/M2I1ZS5wbmc.webp",
     "video_url": "",
     "author": "",
     "summary": null,
-    "description": "Michael Pietsch, MarTech Ecosystem &amp; Business Development Consultant bei Meta, berichtet über spannende Insights und seine langjährige Erfahrung bei dem millionenschweren Technologieunternehmen Meta.\n\n\n\n<!-- GUESTS START -->\nGuest: Michael Pietsch\nURL: https://de.cro.cafe/guest/michael-pietsch\n<!-- GUESTS END -->\n",
+    "description": "<div>Michael Pietsch, MarTech Ecosystem &amp; Business Development Consultant bei Meta, berichtet über spannende Insights und seine langjährige Erfahrung bei dem millionenschweren Technologieunternehmen Meta. Guest: Michael Pietsch URL: https://de.cro.cafe/guest/michael-pietsch&nbsp;</div>",
     "slug": "hinter-den-kulissen-von-dem-tech-giganten-meta-mit-michael-pietsch",
     "created_at": "2023-06-19T14:09:41.538Z",
-    "updated_at": "2025-01-13T00:28:53.792Z",
+    "updated_at": "2025-01-30T12:57:23.158Z",
     "formatted_published_at": "June 20, 2023",
     "duration_in_mmss": "34:00",
     "share_url": "https://share.transistor.fm/s/4e954550",
     "transcript_url": null,
     "transcripts": [],
-    "formatted_summary": "Michael Pietsch, MarTech Ecosystem & Business Development Consultant bei Meta, berichtet über spannende Insights und seine langjährige Erfahrung bei dem millionenschweren Technologieunternehmen Meta.\n\n\n\n\nGuest: Michael Pietsch\nURL: https://de.cro.cafe/guest/michael-pietsch",
-    "formatted_description": "Michael Pietsch, MarTech Ecosystem &amp; Business Development Consultant bei Meta, berichtet über spannende Insights und seine langjährige Erfahrung bei dem millionenschweren Technologieunternehmen Meta.\n\n\n\n<!-- GUESTS START -->\nGuest: Michael Pietsch\nURL: https://de.cro.cafe/guest/michael-pietsch\n<!-- GUESTS END -->",
+    "formatted_summary": "Michael Pietsch, MarTech Ecosystem & Business Development Consultant bei Meta, berichtet über spannende Insights und seine langjährige Erfahrung bei dem millionenschweren Technologieunternehmen Meta. Guest: Michael Pietsch URL: https://de.cro.cafe/guest/michael-pietsch ",
+    "formatted_description": "<div>Michael Pietsch, MarTech Ecosystem &amp; Business Development Consultant bei Meta, berichtet über spannende Insights und seine langjährige Erfahrung bei dem millionenschweren Technologieunternehmen Meta. Guest: Michael Pietsch URL: https://de.cro.cafe/guest/michael-pietsch&nbsp;</div>",
     "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/4e954550\"></iframe>",
     "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/4e954550/dark\"></iframe>",
     "audio_processing": false,
     "type": "full",
     "email_notifications": null,
-    "guests": [
-      {
-        "name": "Michael Pietsch",
-        "slug": "michael-pietsch"
-      }
-    ],
-    "clean_description": "Michael Pietsch, MarTech Ecosystem &amp; Business Development Consultant bei Meta, berichtet über spannende Insights und seine langjährige Erfahrung bei dem millionenschweren Technologieunternehmen Meta."
+    "guests": [],
+    "clean_description": "Michael Pietsch, MarTech Ecosystem & Business Development Consultant bei Meta, berichtet über spannende Insights und seine langjährige Erfahrung bei dem millionenschweren Technologieunternehmen Meta. Guest: Michael Pietsch URL: https://de.cro.cafe/guest/michael-pietsch ",
+    "local_image_url": "/images/episodes/de/hinter-den-kulissen-von-dem-tech-giganten-meta-mit-michael-pietsch.webp",
+    "transistor_image_url": "https://img.transistor.fm/e3Xs6xtnAYDpY5jKPW9q6Xq2lP17R-Ar58FP-T1JPbE/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9mMTgx/MDc2NjQ2MGUzZGY3/NGNkMDFmOGFkYTJh/M2I1ZS5wbmc.webp"
   },
   "relationships": {
     "show": {

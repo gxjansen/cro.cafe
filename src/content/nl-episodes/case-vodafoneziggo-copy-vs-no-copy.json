@@ -9,7 +9,7 @@
     "published_at": "2021-04-20T13:20:03.335Z",
     "duration": 1037,
     "explicit": false,
-    "keywords": [],
+    "keywords": "",
     "alternate_url": "https://nl.cro.cafe/podcast/case-vodafoneziggo-copy-vs-no-copy",
     "media_url": "https://media.transistor.fm/aed7b022/2f4c0def.mp3",
     "image_url": "https://img.transistor.fm/d58koMauYYMJs_a5212WQvFxcmqh-D8EdnWK_2Irqt0/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS84YmU4/MzY1MTljOWQxOGM4/YTM4ODEyZDk5Njhj/YmNjYi5qcGc.webp",
@@ -33,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Leer van de CRO Awards nieuwsbrief test van VodafoneZiggo waarbij het effect van de hoeveelheid copy op de CTR en engagement werd geoptimaliseerd."
+    "clean_description": "Leer van de CRO Awards nieuwsbrief test van VodafoneZiggo waarbij het effect van de hoeveelheid copy op de CTR en engagement werd geoptimaliseerd.",
+    "local_image_url": "/images/episodes/nl/case-vodafoneziggo-copy-vs-no-copy.webp",
+    "transistor_image_url": "https://img.transistor.fm/d58koMauYYMJs_a5212WQvFxcmqh-D8EdnWK_2Irqt0/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS84YmU4/MzY1MTljOWQxOGM4/YTM4ODEyZDk5Njhj/YmNjYi5qcGc.webp"
   },
   "relationships": {
     "show": {

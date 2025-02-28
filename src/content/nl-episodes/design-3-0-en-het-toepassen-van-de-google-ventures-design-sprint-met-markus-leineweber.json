@@ -9,14 +9,7 @@
     "published_at": "2019-12-18T12:00:00.000Z",
     "duration": 1067,
     "explicit": false,
-    "keywords": [
-      "podcast",
-      "ecommerce",
-      "conversion",
-      "usability",
-      "webshop",
-      "english"
-    ],
+    "keywords": "podcast, ecommerce, conversion, usability, webshop, english",
     "alternate_url": "https://nl.cro.cafe/podcast/slimmer-innoveren-met-google-ventures-design-sprint-design-3-0",
     "media_url": "https://media.transistor.fm/e8f8f16f/a2b58c61.mp3",
     "image_url": "https://img.transistor.fm/nHc8uy2J7Evi2MAPunzAt7kWQ79-jNIHDp6eIhNBnwc/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzM5NzcwNC8x/NjA1MDQxMTQwLWFy/dHdvcmsuanBn.webp",
@@ -40,7 +33,9 @@
     "type": "bonus",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Bedrijven moeten steeds sneller innoveren om de juiste connectie te maken met klanten. Agile, scrum, lean en design thinking zijn disciplines die niet meer weg zijn te denken. De Design Sprint (Google Ventures) is dé tool om binnen een vaste aanpak van 4-5 dagen producten en diensten te ontwikkelen die klanten raken en tegelijk zorgen voor duurzame groei. Stap in de wereld van de Design Sprint 3.0 en leer slimmer innoveren."
+    "clean_description": "Op Emerce Engage spraken we met Markus Leineweber van Perspective over Design 3.0 en het toepassen van de Google Ventures design sprint.",
+    "local_image_url": "/images/episodes/nl/design-3-0-en-het-toepassen-van-de-google-ventures-design-sprint-met-markus-leineweber.webp",
+    "transistor_image_url": "https://img.transistor.fm/nHc8uy2J7Evi2MAPunzAt7kWQ79-jNIHDp6eIhNBnwc/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzM5NzcwNC8x/NjA1MDQxMTQwLWFy/dHdvcmsuanBn.webp"
   },
   "relationships": {
     "show": {
