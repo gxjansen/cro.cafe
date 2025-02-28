@@ -1,9 +1,9 @@
-name: RSS Sync
+name: RSS Sync (Paused)
 
 on:
-  schedule:
-    - cron: '0 0 * * *' # Runs every day at midnight UTC
-  workflow_dispatch: # Allow manual triggering
+  # schedule:
+  #   - cron: '0 0 * * *' # Runs every day at midnight UTC (DISABLED)
+  workflow_dispatch: # Allow manual triggering only
 
 # Add explicit permissions for the GITHUB_TOKEN
 permissions:
