@@ -19,7 +19,7 @@ const RSS_FEEDS = {
 };
 
 // Directory to save the CSV files
-const CSV_DIR = path.join(__dirname, '..', '..', 'project', 'current-site-data');
+const CSV_DIR = path.join(__dirname, '..', '..', 'cline_docs', 'current-site-data');
 
 // Ensure the content directory exists
 function ensureDirectoryExists(dir: string) {
@@ -101,7 +101,7 @@ async function updateContentFromRSS() {
         const audioUrl = item.querySelector('enclosure')?.getAttribute('url') || '';
 
         // Find existing episode by title
-        const episodeDir = path.join('src', 'content', lang, 'episodes');
+        const episodeDir = path.join('src', 'content', `${lang}-episodes`);
         const files = fs.readdirSync(episodeDir);
         const normalizedTitle = normalizeTitle(title);
         const shortSlug = generateSlug(title);
@@ -144,6 +144,12 @@ async function updateContentFromRSS() {
           const durationSeconds = Number(duration);
           console.log(`Duration for ${title}: ${duration} -> ${durationSeconds} seconds`);
 
+          // Check if existingEpisode has the expected structure
+          if (!existingEpisode?.data?.attributes) {
+            console.error(`Episode file ${existingPath} has invalid structure`);
+            continue;
+          }
+
           // Create new episode object with updated duration
           const updatedEpisode: Episode = {
             id: shortSlug,
@@ -158,7 +164,7 @@ async function updateContentFromRSS() {
                 duration: durationSeconds,
                 media_url: existingEpisode.data.attributes.media_url || audioUrl,
               },
-              relationships: existingEpisode.data.relationships,
+              relationships: existingEpisode.data.relationships || {},
             },
           };
 
