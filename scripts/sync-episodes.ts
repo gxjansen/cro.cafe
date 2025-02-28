@@ -11,21 +11,29 @@ import {
 import type { TransistorEpisode } from '../src/types/transistor';
 import { extractGuests } from './extract-guests.ts';
 
-// Load environment variables
+// Load environment variables from .env file (for local development)
 config();
 
-// Debug environment variables
-console.log('Environment variables:');
-console.log('TRANSISTOR_API_KEY set:', !!process.env.TRANSISTOR_API_KEY);
-if (process.env.TRANSISTOR_API_KEY) {
-  console.log(
-    'First few chars of API key:',
-    process.env.TRANSISTOR_API_KEY.substring(0, 4) + '...'
-  );
+// Check for API key in command line arguments first
+let apiKey = '';
+const apiKeyArgIndex = process.argv.findIndex((arg) => arg === '--api-key');
+if (apiKeyArgIndex !== -1 && process.argv.length > apiKeyArgIndex + 1) {
+  apiKey = process.argv[apiKeyArgIndex + 1];
+  console.log('Using API key from command line argument');
+} else {
+  // Fall back to environment variable
+  apiKey = process.env.TRANSISTOR_API_KEY || '';
+  console.log('Using API key from environment variable');
 }
 
-// Update the API instance with the environment variable
-const api = updateTransistorApiKey(process.env.TRANSISTOR_API_KEY || '');
+// Debug API key status
+console.log('API key available:', !!apiKey);
+if (apiKey) {
+  console.log('First few chars of API key:', apiKey.substring(0, 4) + '...');
+}
+
+// Update the API instance with the API key
+const api = updateTransistorApiKey(apiKey);
 
 // Ensure content directory exists
 async function ensureContentDirectory(language: string) {

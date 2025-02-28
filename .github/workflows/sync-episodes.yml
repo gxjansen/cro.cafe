@@ -49,7 +49,10 @@ jobs:
           node -e "console.log('TRANSISTOR_API_KEY set:', !!process.env.TRANSISTOR_API_KEY)"
           node -e "if(process.env.TRANSISTOR_API_KEY) console.log('First few chars:', process.env.TRANSISTOR_API_KEY.substring(0, 4) + '...')"
           
-          npm run sync-episodes
+          # Run sync-episodes with API key as command-line argument
+          npx tsx scripts/sync-episodes.ts --api-key "$TRANSISTOR_API_KEY"
+          
+          # Run download-images (doesn't need API key)
           npm run download-images
         env:
           TRANSISTOR_API_KEY: ${{ secrets.TRANSISTOR_API_KEY }}
