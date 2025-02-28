@@ -2,8 +2,8 @@ name: Sync Episodes
 
 on:
   schedule:
-    # Run every hour
-    - cron: '0 * * * *'
+    # Run once a day at midnight UTC
+    - cron: '0 0 * * *'
   workflow_dispatch:  # Allow manual trigger
   repository_dispatch:
     types: [transistor-webhook]  # Triggered by webhook

@@ -29,30 +29,51 @@ const availableLanguages = ['en', 'nl', 'de', 'es'] as const;
 <PageLayout metadata={metadata} currentLang="en" availableLanguages={availableLanguages}>
   <div class="flex flex-col min-h-screen">
     <div class="relative">
-      <Hero
-        callToAction={{ text: t.listenNow, href: '#episodes', icon: 'tabler:player-play' }}
-        image="https://via.placeholder.com/1200x600"
-      >
-        <Fragment slot="title">
-          CRO.CAFE
-        </Fragment>
-        <Fragment slot="subtitle">
-          {t.description}
-        </Fragment>
-        <Fragment slot="actions">
-          <div class="flex flex-wrap justify-center gap-4">
-            {Object.entries(t.languageButtons).map(([lang, text]) => (
-              <a
-                href={`/${lang}`}
-                class="btn btn-primary px-6 py-3 text-white font-semibold shadow-lg"
-              >
-                {text}
-              </a>
-            ))}
-          </div>
-        </Fragment>
-      </Hero>
-    </div>
+          <Hero
+            image="https://via.placeholder.com/1200x600"
+          >
+            <Fragment slot="title">
+              CRO.CAFE
+            </Fragment>
+            <Fragment slot="subtitle">
+              {t.description}
+            </Fragment>
+            <Fragment slot="actions">
+              <div class="flex flex-nowrap justify-center gap-2">
+                {Object.entries(t.languageButtons).map(([lang, text]) => {
+                  let buttonClass = "";
+                  
+                  // Apply the same colors as language badges
+                  switch(lang) {
+                    case 'en':
+                      buttonClass = "bg-lang-en text-white";
+                      break;
+                    case 'nl':
+                      buttonClass = "bg-lang-nl text-white";
+                      break;
+                    case 'de':
+                      buttonClass = "bg-lang-de text-lang-de-text";
+                      break;
+                    case 'es':
+                      buttonClass = "bg-lang-es text-lang-es-text";
+                      break;
+                    default:
+                      buttonClass = "bg-primary text-white";
+                  }
+                  
+                  return (
+                    <a
+                      href={`/${lang}`}
+                      class={`btn ${buttonClass} px-4 py-2 font-semibold shadow-lg whitespace-nowrap text-sm`}
+                    >
+                      {text}
+                    </a>
+                  );
+                })}
+              </div>
+            </Fragment>
+          </Hero>
+        </div>
 
     <div class="relative">
       <HostsSection title="Meet the Hosts" showBio={false} />
