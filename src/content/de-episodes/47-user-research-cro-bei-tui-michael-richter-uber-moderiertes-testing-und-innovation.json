@@ -1,0 +1,48 @@
+{
+  "id": "2434086",
+  "type": "episode",
+  "attributes": {
+    "title": "#47 User Research & CRO bei TUI: Michael Richter über moderiertes Testing und Innovation",
+    "number": 47,
+    "season": 1,
+    "status": "published",
+    "published_at": "2025-04-15T12:01:20.496Z",
+    "duration": 2489,
+    "explicit": false,
+    "keywords": [],
+    "alternate_url": "",
+    "media_url": "https://media.transistor.fm/61f6a663/7f4fd273.mp3",
+    "image_url": "https://img.transistor.fm/6cPbcCa9fRro6ybTdwJ67B3RQhdjm7wLVTsH3lr-cCk/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9jMTI0/ODkxYzk5ZjNlOGQz/MTcwNzFhMjIwOGIz/ZWFlZi5qcGc.webp",
+    "video_url": "",
+    "author": "",
+    "summary": null,
+    "description": "<div>In dieser Folge von CRO CAFE Deutschland gibt Michael Richter, Manager CRO &amp; UX bei Robinson Club (TUI), Einblicke in die Praxis von UX-Experimentation, Testing und User Research. Im Gespräch mit Host Michael Witzenleiter verrät er, wie innovative Testmethoden bei TUI eingesetzt werden, um das Nutzererlebnis laufend zu optimieren. Ein kompakter Blick hinter die Kulissen einer Premiummarke der Reisebranche!</div>",
+    "slug": "47-user-research-cro-bei-tui-michael-richter-uber-moderiertes-testing-und-innovation",
+    "created_at": "2025-04-15T12:01:20.501Z",
+    "updated_at": "2025-04-15T12:02:01.510Z",
+    "formatted_published_at": "April 15, 2025",
+    "duration_in_mmss": "41:29",
+    "share_url": "https://share.transistor.fm/s/61f6a663",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "In dieser Folge von CRO CAFE Deutschland gibt Michael Richter, Manager CRO & UX bei Robinson Club (TUI), Einblicke in die Praxis von UX-Experimentation, Testing und User Research. Im Gespräch mit Host Michael Witzenleiter verrät er, wie innovative Testmethoden bei TUI eingesetzt werden, um das Nutzererlebnis laufend zu optimieren. Ein kompakter Blick hinter die Kulissen einer Premiummarke der Reisebranche!\n02:05 - Marker 03\n38:14 - Marker 04\n40:00 - Marker 01",
+    "formatted_description": "<div>In dieser Folge von CRO CAFE Deutschland gibt Michael Richter, Manager CRO &amp; UX bei Robinson Club (TUI), Einblicke in die Praxis von UX-Experimentation, Testing und User Research. Im Gespräch mit Host Michael Witzenleiter verrät er, wie innovative Testmethoden bei TUI eingesetzt werden, um das Nutzererlebnis laufend zu optimieren. Ein kompakter Blick hinter die Kulissen einer Premiummarke der Reisebranche!</div>\n<ul><li>(02:05) - Marker 03</li>\n<li>(38:14) - Marker 04</li>\n<li>(40:00) - Marker 01</li>\n</ul>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/61f6a663\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/61f6a663/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "In dieser Folge von CRO CAFE Deutschland gibt Michael Richter, Manager CRO & UX bei Robinson Club (TUI), Einblicke in die Praxis von UX-Experimentation, Testing und User Research. Im Gespräch mit Host Michael Witzenleiter verrät er, wie innovative Testmethoden bei TUI eingesetzt werden, um das Nutzererlebnis laufend zu optimieren. Ein kompakter Blick hinter die Kulissen einer Premiummarke der Reisebranche!\n02:05 - Marker 03\n38:14 - Marker 04\n40:00 - Marker 01",
+    "local_image_url": "/images/episodes/de/47-user-research-cro-bei-tui-michael-richter-uber-moderiertes-testing-und-innovation.webp",
+    "transistor_image_url": "https://img.transistor.fm/6cPbcCa9fRro6ybTdwJ67B3RQhdjm7wLVTsH3lr-cCk/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9jMTI0/ODkxYzk5ZjNlOGQz/MTcwNzFhMjIwOGIz/ZWFlZi5qcGc.webp"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "28592",
+        "type": "show"
+      }
+    }
+  }
+}
