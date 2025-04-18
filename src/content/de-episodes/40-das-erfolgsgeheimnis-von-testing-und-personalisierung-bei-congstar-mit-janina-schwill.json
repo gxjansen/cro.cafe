@@ -1,0 +1,48 @@
+{
+  "id": "1942880",
+  "type": "episode",
+  "attributes": {
+    "title": "#40 Das Erfolgsgeheimnis von Testing und Personalisierung bei congstar - mit Janina Schwill",
+    "number": 40,
+    "season": 1,
+    "status": "published",
+    "published_at": "2024-06-04T11:56:23.862Z",
+    "duration": 2033,
+    "explicit": false,
+    "keywords": [],
+    "alternate_url": "https://de.cro.cafe/podcast/das-erfolgsgeheimnis-von-testing-und-personalisierung-bei-congstar-mit-janina-schwill",
+    "media_url": "https://media.transistor.fm/c07e222a/6c5bc798.mp3",
+    "image_url": "https://img.transistor.fm/xfVR2v6RR1GVitVq-QUV5006wIVSC_nm70tx_DU7wJQ/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80YmM2/MjVjODQ5OTRiNDZm/MWE3ZmQ3NTZhYmNh/Y2M5Ni5qcGc.webp",
+    "video_url": "",
+    "author": "",
+    "summary": null,
+    "description": "<div>Das Unternehmen congstar hat jahrelange Erfahrung im Testing und profitiert mittlerweile von einer aufgeschlossenen Testing-Kultur. Janina Schwill, Senior Managerin im digitalen Kundenerlebnis bei congstar, erzählt uns in der heutigen Folge, wie sie es an diesen Punkt geschafft haben, wie das richtige Mindset aussehen sollte und welche Faktoren daran hindern, den vollen Nutzen aus der Conversion-Optimierung zu ziehen. Außerdem teilt sie Best Practices und Inspirationsquellen zum Thema CRO.Ihre Empfehlungen:</div><ul><li>Growth Ambassador Community</li><li>Events wie die “Experimentation Unite\" von Kameleoon,</li><li>Messen wie die “Growth Marketing Summit” von KonversionsKRAFT</li></ul><div>&nbsp;Guest: Janina Schwill URL: https://de.cro.cafe/guest/janina-schwill&nbsp;</div>",
+    "slug": "40-das-erfolgsgeheimnis-von-testing-und-personalisierung-bei-congstar-mit-janina-schwill",
+    "created_at": "2024-06-04T11:56:23.869Z",
+    "updated_at": "2025-04-17T07:00:45.438Z",
+    "formatted_published_at": "June 4, 2024",
+    "duration_in_mmss": "33:53",
+    "share_url": "https://share.transistor.fm/s/c07e222a",
+    "transcript_url": null,
+    "transcripts": [],
+    "formatted_summary": "Das Unternehmen congstar hat jahrelange Erfahrung im Testing und profitiert mittlerweile von einer aufgeschlossenen Testing-Kultur. Janina Schwill, Senior Managerin im digitalen Kundenerlebnis bei congstar, erzählt uns in der heutigen Folge, wie sie es an diesen Punkt geschafft haben, wie das richtige Mindset aussehen sollte und welche Faktoren daran hindern, den vollen Nutzen aus der Conversion-Optimierung zu ziehen. Außerdem teilt sie Best Practices und Inspirationsquellen zum Thema CRO.Ihre Empfehlungen:Growth Ambassador CommunityEvents wie die “Experimentation Unite\" von Kameleoon,Messen wie die “Growth Marketing Summit” von KonversionsKRAFT Guest: Janina Schwill URL: https://de.cro.cafe/guest/janina-schwill ",
+    "formatted_description": "<div>Das Unternehmen congstar hat jahrelange Erfahrung im Testing und profitiert mittlerweile von einer aufgeschlossenen Testing-Kultur. Janina Schwill, Senior Managerin im digitalen Kundenerlebnis bei congstar, erzählt uns in der heutigen Folge, wie sie es an diesen Punkt geschafft haben, wie das richtige Mindset aussehen sollte und welche Faktoren daran hindern, den vollen Nutzen aus der Conversion-Optimierung zu ziehen. Außerdem teilt sie Best Practices und Inspirationsquellen zum Thema CRO.Ihre Empfehlungen:</div><ul><li>Growth Ambassador Community</li><li>Events wie die “Experimentation Unite\" von Kameleoon,</li><li>Messen wie die “Growth Marketing Summit” von KonversionsKRAFT</li></ul><div>&nbsp;Guest: Janina Schwill URL: https://de.cro.cafe/guest/janina-schwill&nbsp;</div>",
+    "embed_html": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/c07e222a\"></iframe>",
+    "embed_html_dark": "<iframe width=\"100%\" height=\"180\" frameborder=\"no\" scrolling=\"no\" seamless src=\"https://share.transistor.fm/e/c07e222a/dark\"></iframe>",
+    "audio_processing": false,
+    "type": "full",
+    "email_notifications": null,
+    "guests": [],
+    "clean_description": "Das Unternehmen congstar hat jahrelange Erfahrung im Testing und profitiert mittlerweile von einer aufgeschlossenen Testing-Kultur. Janina Schwill, Senior Managerin im digitalen Kundenerlebnis bei congstar, erzählt uns in der heutigen Folge, wie sie es an diesen Punkt geschafft haben, wie das richtige Mindset aussehen sollte und welche Faktoren daran hindern, den vollen Nutzen aus der Conversion-Optimierung zu ziehen. Außerdem teilt sie Best Practices und Inspirationsquellen zum Thema CRO.Ihre Empfehlungen:Growth Ambassador CommunityEvents wie die “Experimentation Unite\" von Kameleoon,Messen wie die “Growth Marketing Summit” von KonversionsKRAFT Guest: Janina Schwill URL: https://de.cro.cafe/guest/janina-schwill ",
+    "local_image_url": "/images/episodes/de/40-das-erfolgsgeheimnis-von-testing-und-personalisierung-bei-congstar-mit-janina-schwill.webp",
+    "transistor_image_url": "https://img.transistor.fm/xfVR2v6RR1GVitVq-QUV5006wIVSC_nm70tx_DU7wJQ/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS80YmM2/MjVjODQ5OTRiNDZm/MWE3ZmQ3NTZhYmNh/Y2M5Ni5qcGc.webp"
+  },
+  "relationships": {
+    "show": {
+      "data": {
+        "id": "28592",
+        "type": "show"
+      }
+    }
+  }
+}
