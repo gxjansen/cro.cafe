@@ -40,9 +40,7 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "Samen met Lucas Vos bespreek ik de mogelijkheden en uitdagingen van het optimaliseren van een video-on-demand dienst: Videoland!",
-    "local_image_url": "/images/episodes/nl/nl-optimalisatie-van-video-on-demand-met-lucas-vos-videoland.webp",
-    "transistor_image_url": "https://img.transistor.fm/WLT-j_KhNquD1NSERi52DK15hkgsR3oGBt6p_4Hlvvw/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9hNTBk/Mzg1NTNiMWUyNmIw/NzgwYTZhOTNjMzdh/OGIyNC5qcGVn.webp"
+    "clean_description": "Samen met Lucas Vos bespreek ik de mogelijkheden en uitdagingen van het optimaliseren van een video-on-demand dienst: Videoland!"
   },
   "relationships": {
     "show": {
