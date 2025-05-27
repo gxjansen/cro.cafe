@@ -10,6 +10,9 @@
     "astro": "astro",
     "lint": "eslint .",
     "type-check": "tsc --noEmit",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
     "sync-episodes": "tsx scripts/sync-episodes.ts",
     "download-images": "tsx scripts/download-episode-images.ts",
     "copy-host-images": "tsx scripts/copy-host-images.ts"
