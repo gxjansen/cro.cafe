@@ -124,6 +124,16 @@ const {
       window.attachEvent = attachEvent;
 
       window.onload = function () {
+        // Theme toggle functionality
+        attachEvent('[data-aw-toggle-color-scheme]', 'click', function () {
+          if (document.documentElement.classList.contains('dark')) {
+            document.documentElement.classList.remove('dark');
+            localStorage.theme = 'light';
+          } else {
+            document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark';
+          }
+        });
         let lastKnownY = window.scrollY;
         let ticking = false;
 
