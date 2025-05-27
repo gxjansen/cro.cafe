@@ -4,7 +4,7 @@ import { GET } from './sitemap.xml';
 describe('GET /sitemap.xml', () => {
   it('should return a valid sitemap index', async () => {
     const response = await GET();
-    const sitemap = response.body;
+    const sitemap = await response.text();
 
     expect(response.headers.get('Content-Type')).toBe('application/xml');
     expect(response.headers.get('Cache-Control')).toBe('public max-age=3600');

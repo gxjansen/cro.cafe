@@ -1,0 +1,236 @@
+---
+import { Icon } from 'astro-icon/components';
+
+export interface Props {
+  currentLang: 'en' | 'de' | 'es' | 'nl';
+  placeholder?: string;
+}
+
+const { currentLang, placeholder } = Astro.props;
+
+// Multi-language search placeholders
+const searchPlaceholders = {
+  en: 'Search episodes, guests, topics...',
+  de: 'Episoden, Gäste, Themen suchen...',
+  es: 'Buscar episodios, invitados, temas...',
+  nl: 'Zoek afleveringen, gasten, onderwerpen...'
+};
+
+const searchLabels = {
+  en: 'Search',
+  de: 'Suchen',
+  es: 'Buscar',
+  nl: 'Zoeken'
+};
+
+const currentPlaceholder = placeholder || searchPlaceholders[currentLang];
+const searchLabel = searchLabels[currentLang];
+---
+
+<div class="search-container relative w-full max-w-2xl mx-auto">
+  <div class="relative">
+    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+      <Icon name="tabler:search" class="h-5 w-5 text-gray-400" />
+    </div>
+    <input
+      type="search"
+      id="pagefind-search"
+      class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm transition-colors duration-200"
+      placeholder="{currentPlaceholder}"
+      aria-label="{searchLabel}"
+      autocomplete="off"
+    />
+  </div>
+
+  <!-- Search Results Container -->
+  <div
+    id="pagefind-results"
+    class="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto hidden"
+  >
+    <!-- Results will be populated by PageFind -->
+  </div>
+</div>
+
+<!-- Loading indicator -->
+<div id="search-loading" class="hidden text-center py-4">
+  <div class="inline-flex items-center">
+    <div class="animate-spin rounded-full h-4 w-4 border-b-2 border-primary mr-2"></div>
+    <span class="text-sm text-gray-600">
+      {currentLang === 'en' && 'Searching...'} {currentLang === 'de' && 'Suche läuft...'}
+      {currentLang === 'es' && 'Buscando...'} {currentLang === 'nl' && 'Zoeken...'}
+    </span>
+  </div>
+</div>
+
+<script>
+  // Initialize PageFind search when the component loads
+  document.addEventListener('DOMContentLoaded', async () => {
+    try {
+      // Import PageFind dynamically
+      const pagefind = await import('/pagefind/pagefind.js');
+
+      const searchInput = document.getElementById('pagefind-search');
+      const resultsContainer = document.getElementById('pagefind-results');
+      const loadingIndicator = document.getElementById('search-loading');
+
+      if (!searchInput || !resultsContainer || !loadingIndicator) return;
+
+      let searchTimeout;
+
+      // Handle search input
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.trim();
+
+        // Clear previous timeout
+        clearTimeout(searchTimeout);
+
+        if (query.length < 2) {
+          resultsContainer.classList.add('hidden');
+          return;
+        }
+
+        // Debounce search
+        searchTimeout = setTimeout(async () => {
+          await performSearch(query);
+        }, 300);
+      });
+
+      // Handle click outside to close results
+      document.addEventListener('click', (e) => {
+        if (!searchInput.contains(e.target) && !resultsContainer.contains(e.target)) {
+          resultsContainer.classList.add('hidden');
+        }
+      });
+
+      // Handle escape key
+      searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          resultsContainer.classList.add('hidden');
+          searchInput.blur();
+        }
+      });
+
+      async function performSearch(query) {
+        try {
+          loadingIndicator.classList.remove('hidden');
+          resultsContainer.classList.add('hidden');
+
+          const search = await pagefind.search(query);
+
+          loadingIndicator.classList.add('hidden');
+
+          if (search.results.length === 0) {
+            showNoResults(query);
+            return;
+          }
+
+          // Get detailed results
+          const results = await Promise.all(
+            search.results.slice(0, 8).map((result) => result.data())
+          );
+
+          displayResults(results, query);
+        } catch (error) {
+          console.error('Search error:', error);
+          loadingIndicator.classList.add('hidden');
+          showError();
+        }
+      }
+
+      function displayResults(results, query) {
+        const currentLang = document.documentElement.lang || 'en';
+
+        const resultsHTML = results
+          .map((result) => {
+            const excerpt = result.excerpt || '';
+            const title = result.meta?.title || result.url;
+            const url = result.url;
+
+            return `
+            <div class="p-4 hover:bg-gray-50 border-b border-gray-100 last:border-b-0">
+              <a href="${url}" class="block group">
+                <h3 class="text-sm font-medium text-gray-900 group-hover:text-primary line-clamp-2">
+                  ${title}
+                </h3>
+                <p class="text-xs text-gray-600 mt-1 line-clamp-2">
+                  ${excerpt}
+                </p>
+                <span class="text-xs text-gray-400 mt-1 block">
+                  ${url}
+                </span>
+              </a>
+            </div>
+          `;
+          })
+          .join('');
+
+        resultsContainer.innerHTML = resultsHTML;
+        resultsContainer.classList.remove('hidden');
+      }
+
+      function showNoResults(query) {
+        const currentLang = document.documentElement.lang || 'en';
+        const noResultsMessages = {
+          en: `No results found for "${query}"`,
+          de: `Keine Ergebnisse für "${query}" gefunden`,
+          es: `No se encontraron resultados para "${query}"`,
+          nl: `Geen resultaten gevonden voor "${query}"`,
+        };
+
+        resultsContainer.innerHTML = `
+          <div class="p-4 text-center text-gray-500">
+            <p class="text-sm">${noResultsMessages[currentLang] || noResultsMessages.en}</p>
+          </div>
+        `;
+        resultsContainer.classList.remove('hidden');
+      }
+
+      function showError() {
+        const currentLang = document.documentElement.lang || 'en';
+        const errorMessages = {
+          en: 'Search temporarily unavailable',
+          de: 'Suche vorübergehend nicht verfügbar',
+          es: 'Búsqueda temporalmente no disponible',
+          nl: 'Zoeken tijdelijk niet beschikbaar',
+        };
+
+        resultsContainer.innerHTML = `
+          <div class="p-4 text-center text-red-500">
+            <p class="text-sm">${errorMessages[currentLang] || errorMessages.en}</p>
+          </div>
+        `;
+        resultsContainer.classList.remove('hidden');
+      }
+    } catch (error) {
+      console.error('Failed to initialize search:', error);
+    }
+  });
+</script>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Custom scrollbar for results */
+  #pagefind-results::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  #pagefind-results::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+  }
+
+  #pagefind-results::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+  }
+
+  #pagefind-results::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+  }
+</style>

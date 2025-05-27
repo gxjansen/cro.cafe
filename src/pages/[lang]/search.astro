@@ -1,0 +1,182 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import SearchComponent from '~/components/search/SearchComponent.astro';
+import { getStaticPaths } from '~/utils/blog';
+
+export { getStaticPaths };
+
+export interface Props {
+  lang: 'en' | 'de' | 'es' | 'nl';
+}
+
+const { lang } = Astro.props;
+
+// Multi-language metadata
+const metadata = {
+  en: {
+    title: 'Search Episodes - CRO.CAFE',
+    description: 'Search through our podcast episodes, guests, and topics to find exactly what you\'re looking for.',
+    heading: 'Search Episodes',
+    subheading: 'Find episodes, guests, and topics',
+  },
+  de: {
+    title: 'Episoden Suchen - CRO.CAFE',
+    description: 'Durchsuchen Sie unsere Podcast-Episoden, Gäste und Themen, um genau das zu finden, wonach Sie suchen.',
+    heading: 'Episoden Suchen',
+    subheading: 'Finden Sie Episoden, Gäste und Themen',
+  },
+  es: {
+    title: 'Buscar Episodios - CRO.CAFE',
+    description: 'Busque entre nuestros episodios de podcast, invitados y temas para encontrar exactamente lo que busca.',
+    heading: 'Buscar Episodios',
+    subheading: 'Encuentra episodios, invitados y temas',
+  },
+  nl: {
+    title: 'Zoek Afleveringen - CRO.CAFE',
+    description: 'Zoek door onze podcast afleveringen, gasten en onderwerpen om precies te vinden wat je zoekt.',
+    heading: 'Zoek Afleveringen',
+    subheading: 'Vind afleveringen, gasten en onderwerpen',
+  },
+};
+
+const currentMetadata = metadata[lang];
+---
+
+<Layout metadata={{
+  title: currentMetadata.title,
+  description: currentMetadata.description,
+  canonicalUrl: `https://www.cro.cafe/${lang}/search`,
+}}>
+  <main class="py-12 lg:py-20">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <!-- Header Section -->
+      <div class="mb-12 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading text-gray-900">
+          {currentMetadata.heading}
+        </h1>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          {currentMetadata.subheading}
+        </p>
+      </div>
+
+      <!-- Search Component -->
+      <div class="mb-12">
+        <SearchComponent currentLang={lang} />
+      </div>
+
+      <!-- Search Tips Section -->
+      <div class="bg-gray-50 rounded-lg p-8 mb-12">
+        <h2 class="text-2xl font-bold mb-6 text-gray-900">
+          {lang === 'en' && 'Search Tips'}
+          {lang === 'de' && 'Such-Tipps'}
+          {lang === 'es' && 'Consejos de Búsqueda'}
+          {lang === 'nl' && 'Zoektips'}
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">
+              {lang === 'en' && 'What you can search for:'}
+              {lang === 'de' && 'Was Sie suchen können:'}
+              {lang === 'es' && 'Lo que puedes buscar:'}
+              {lang === 'nl' && 'Wat je kunt zoeken:'}
+            </h3>
+            <ul class="text-gray-600 space-y-1">
+              <li>• {lang === 'en' && 'Episode titles and descriptions'}
+                     {lang === 'de' && 'Episodentitel und -beschreibungen'}
+                     {lang === 'es' && 'Títulos y descripciones de episodios'}
+                     {lang === 'nl' && 'Afleveringstitels en beschrijvingen'}</li>
+              <li>• {lang === 'en' && 'Guest names and companies'}
+                     {lang === 'de' && 'Gastnamen und Unternehmen'}
+                     {lang === 'es' && 'Nombres de invitados y empresas'}
+                     {lang === 'nl' && 'Gastnamen en bedrijven'}</li>
+              <li>• {lang === 'en' && 'Topics and keywords'}
+                     {lang === 'de' && 'Themen und Schlüsselwörter'}
+                     {lang === 'es' && 'Temas y palabras clave'}
+                     {lang === 'nl' && 'Onderwerpen en trefwoorden'}</li>
+              <li>• {lang === 'en' && 'Host names'}
+                     {lang === 'de' && 'Moderatorennamen'}
+                     {lang === 'es' && 'Nombres de presentadores'}
+                     {lang === 'nl' && 'Namen van presentatoren'}</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">
+              {lang === 'en' && 'Search examples:'}
+              {lang === 'de' && 'Suchbeispiele:'}
+              {lang === 'es' && 'Ejemplos de búsqueda:'}
+              {lang === 'nl' && 'Zoekvoorbeelden:'}
+            </h3>
+            <ul class="text-gray-600 space-y-1">
+              <li>• "A/B testing"</li>
+              <li>• "conversion optimization"</li>
+              <li>• "user experience"</li>
+              <li>• "analytics"</li>
+              <li>• "personalization"</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Popular Topics Section -->
+      <div class="text-center">
+        <h2 class="text-2xl font-bold mb-8 text-gray-900">
+          {lang === 'en' && 'Popular Topics'}
+          {lang === 'de' && 'Beliebte Themen'}
+          {lang === 'es' && 'Temas Populares'}
+          {lang === 'nl' && 'Populaire Onderwerpen'}
+        </h2>
+        
+        <div class="flex flex-wrap justify-center gap-3">
+          {['A/B Testing', 'Conversion Rate Optimization', 'User Experience', 'Analytics', 'Personalization', 'E-commerce', 'Mobile Optimization', 'Landing Pages'].map((topic) => (
+            <button
+              class="px-4 py-2 bg-white border border-gray-300 rounded-full text-sm text-gray-700 hover:bg-primary hover:text-white hover:border-primary transition-colors duration-200 cursor-pointer topic-button"
+              data-topic={topic}
+            >
+              {topic}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<script>
+  // Handle topic button clicks
+  document.addEventListener('DOMContentLoaded', () => {
+    const topicButtons = document.querySelectorAll('.topic-button');
+    
+    topicButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const topic = button.getAttribute('data-topic');
+        const searchInput = document.getElementById('pagefind-search');
+        
+        if (searchInput && topic) {
+          searchInput.value = topic;
+          searchInput.dispatchEvent(new Event('input'));
+          searchInput.focus();
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  /* Ensure search results are properly styled */
+  :global(#pagefind-results) {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  :global(#pagefind-results a) {
+    text-decoration: none;
+  }
+  
+  :global(#pagefind-results a:hover) {
+    background-color: #f9fafb;
+  }
+</style>

@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "tsx scripts/copy-host-images.ts && astro dev",
     "start": "tsx scripts/copy-host-images.ts && astro dev",
-    "build": "tsx scripts/copy-host-images.ts && astro check && astro build",
+    "build": "tsx scripts/copy-host-images.ts && astro check && astro build && node scripts/build-search.js",
+    "build:search": "node scripts/build-search.js",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint .",
@@ -62,6 +63,7 @@
     "eslint": "^8.52.0",
     "eslint-plugin-astro": "^0.29.1",
     "node-fetch": "^3.3.2",
+    "pagefind": "^1.3.0",
     "tsx": "^4.7.0",
     "typescript": "^5.7.3",
     "vitest": "^3.0.3"
