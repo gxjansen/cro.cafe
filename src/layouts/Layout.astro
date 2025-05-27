@@ -23,7 +23,6 @@ export interface Props {
   episode?: CollectionEntry<'en-episodes' | 'de-episodes' | 'es-episodes' | 'nl-episodes'>;
   seoType?: 'episode' | 'podcast' | 'homepage';
 }
-}
 
 const { metadata, currentLang, availableLanguages, episode, seoType = 'podcast' } = Astro.props;
 
