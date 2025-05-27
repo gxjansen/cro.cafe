@@ -41,7 +41,7 @@ const podcastInfo = {
   },
 };
 
-const currentPodcast = podcastInfo[currentLang];
+const currentPodcast = podcastInfo[currentLang] || podcastInfo.en;
 
 // Generate episode-specific structured data
 let episodeStructuredData = null;
