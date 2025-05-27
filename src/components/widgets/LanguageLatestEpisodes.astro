@@ -1,0 +1,102 @@
+---
+import { getCollection } from 'astro:content';
+import Card from '../episode/Card.astro';
+
+// Props
+interface Props {
+  language: string;
+  limit?: number;
+  title?: string;
+}
+
+const { 
+  language, 
+  limit = 4,
+  title
+} = Astro.props;
+
+// Language display names
+const langNames = {
+  en: 'English',
+  nl: 'Nederlands',
+  de: 'Deutsch',
+  es: 'Español',
+} as const;
+
+// Default titles based on language
+const defaultTitles = {
+  en: `Latest ${langNames.en} Episodes`,
+  nl: `Nieuwste ${langNames.nl} Afleveringen`,
+  de: `Neueste ${langNames.de} Folgen`,
+  es: `Últimos Episodios en ${langNames.es}`,
+};
+
+// Use provided title or default
+const sectionTitle = title || defaultTitles[language as keyof typeof defaultTitles] || `Latest ${language.toUpperCase()} Episodes`;
+
+// Array to store language-specific episodes
+let languageEpisodes = [];
+
+try {
+  // Get episodes from the specified language collection
+  console.log(`[DEBUG] LanguageLatestEpisodes: Fetching episodes for language: ${language}`);
+  const collectionName = `${language}-episodes`;
+  console.log(`[DEBUG] LanguageLatestEpisodes: Collection name: ${collectionName}`);
+  
+  const episodes = await getCollection(collectionName);
+  console.log(`[DEBUG] LanguageLatestEpisodes: Found ${episodes.length} episodes`);
+  
+  if (episodes.length > 0) {
+    console.log(`[DEBUG] LanguageLatestEpisodes: First episode:`, JSON.stringify(episodes[0].id));
+    console.log(`[DEBUG] LanguageLatestEpisodes: First episode data structure:`, JSON.stringify(episodes[0].data));
+  }
+  
+  // Sort episodes by date and get the latest ones
+  languageEpisodes = episodes
+    .sort((a, b) => {
+      const dateA = new Date(b.data.attributes.published_at);
+      const dateB = new Date(a.data.attributes.published_at);
+      return dateA.valueOf() - dateB.valueOf();
+    })
+    .slice(0, limit);
+  
+  console.log(`[DEBUG] LanguageLatestEpisodes: Processed ${languageEpisodes.length} episodes`);
+  if (languageEpisodes.length > 0) {
+    console.log(`[DEBUG] LanguageLatestEpisodes: First processed episode ID: ${languageEpisodes[0].id}`);
+    console.log(`[DEBUG] LanguageLatestEpisodes: First processed episode title: ${languageEpisodes[0].data.attributes.title}`);
+  }
+  
+  console.log(`[DEBUG] LanguageLatestEpisodes: Processed ${languageEpisodes.length} episodes`);
+  if (languageEpisodes.length > 0) {
+    console.log(`[DEBUG] LanguageLatestEpisodes: First processed episode:`, JSON.stringify(languageEpisodes[0].id));
+  }
+} catch (error) {
+  console.error(`Error in LanguageLatestEpisodes component for ${language}:`, error);
+}
+---
+
+<div class="bg-white dark:bg-gray-900">
+  <section
+    class="language-latest-episodes py-16 relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+  >
+    <h2 class="text-3xl font-bold mb-12 text-center text-gray-900 dark:text-white">
+      {sectionTitle}
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {languageEpisodes.length > 0 ? ( languageEpisodes.map((episode) => (
+      <Card episode="{episode}" />
+      )) ) : (
+      <div class="col-span-full text-center text-gray-500 dark:text-gray-400">
+        No episodes found
+      </div>
+      )}
+    </div>
+  </section>
+</div>
+
+<style>
+  .episode-card {
+    @apply hover:shadow-xl;
+  }
+</style>

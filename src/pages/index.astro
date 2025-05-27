@@ -29,9 +29,14 @@ const availableLanguages = ['en', 'nl', 'de', 'es'] as const;
 <PageLayout metadata={metadata} currentLang="en" availableLanguages={availableLanguages}>
   <div class="flex flex-col min-h-screen">
     <div class="relative">
-          <Hero
-            image="https://via.placeholder.com/1200x600"
-          >
+          <Hero>
+            <Fragment slot="image">
+              <img
+                src="/images/events/604fde2eab13d6b7abd9e197_5de14eecd41434f452d70637.jpg"
+                alt="CRO.CAFE Hero Image"
+                class="mx-auto rounded-lg shadow-lg w-full max-w-5xl"
+              />
+            </Fragment>
             <Fragment slot="title">
               CRO.CAFE
             </Fragment>

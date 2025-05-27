@@ -42,7 +42,10 @@ jobs:
           git diff --quiet && git diff --staged --quiet || git commit -m "chore: update RSS content [skip ci]"
 
       - name: Push changes
-        run: git push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
 
       - name: Check for errors
         if: failure()
