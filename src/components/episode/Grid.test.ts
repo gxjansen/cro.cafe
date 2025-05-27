@@ -4,6 +4,7 @@ import { validateProps, EpisodeGridPropsSchema } from '~/utils/component-validat
 describe('Grid Component Validation', () => {
   // Test validation schema directly
   const validProps = {
+    episodes: [],
     language: 'en',
     limit: 10,
     featured: false,
@@ -18,6 +19,7 @@ describe('Grid Component Validation', () => {
     // Only required prop
     expect(() =>
       validateProps(EpisodeGridPropsSchema, {
+        episodes: [],
         language: 'en',
       })
     ).not.toThrow();
@@ -30,6 +32,7 @@ describe('Grid Component Validation', () => {
     // Invalid language
     expect(() =>
       validateProps(EpisodeGridPropsSchema, {
+        episodes: [],
         language: 'fr', // Not in supported languages
       })
     ).toThrow();
@@ -38,6 +41,7 @@ describe('Grid Component Validation', () => {
     ['en', 'de', 'es', 'nl'].forEach((lang) => {
       expect(() =>
         validateProps(EpisodeGridPropsSchema, {
+          episodes: [],
           language: lang,
         })
       ).not.toThrow();
@@ -48,6 +52,7 @@ describe('Grid Component Validation', () => {
     // Invalid limit type
     expect(() =>
       validateProps(EpisodeGridPropsSchema, {
+        episodes: [],
         language: 'en',
         limit: '10', // Should be number
       })
@@ -56,6 +61,7 @@ describe('Grid Component Validation', () => {
     // Invalid featured type
     expect(() =>
       validateProps(EpisodeGridPropsSchema, {
+        episodes: [],
         language: 'en',
         featured: 'true', // Should be boolean
       })
@@ -64,6 +70,7 @@ describe('Grid Component Validation', () => {
     // Invalid showGuests type
     expect(() =>
       validateProps(EpisodeGridPropsSchema, {
+        episodes: [],
         language: 'en',
         showGuests: 1, // Should be boolean
       })
@@ -74,6 +81,7 @@ describe('Grid Component Validation', () => {
     // Invalid column number
     expect(() =>
       validateProps(EpisodeGridPropsSchema, {
+        episodes: [],
         language: 'en',
         columns: '5', // Should be '2', '3', or '4'
       })
@@ -83,6 +91,7 @@ describe('Grid Component Validation', () => {
     ['2', '3', '4'].forEach((cols) => {
       expect(() =>
         validateProps(EpisodeGridPropsSchema, {
+          episodes: [],
           language: 'en',
           columns: cols,
         })
@@ -94,6 +103,7 @@ describe('Grid Component Validation', () => {
     // Multiple optional props
     expect(() =>
       validateProps(EpisodeGridPropsSchema, {
+        episodes: [],
         language: 'en',
         limit: 5,
         featured: true,
@@ -104,6 +114,7 @@ describe('Grid Component Validation', () => {
     // All props with edge values
     expect(() =>
       validateProps(EpisodeGridPropsSchema, {
+        episodes: [],
         language: 'en',
         limit: 1,
         featured: false,
