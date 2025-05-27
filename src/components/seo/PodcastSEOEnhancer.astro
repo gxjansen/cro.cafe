@@ -147,8 +147,6 @@ const breadcrumbData = type === 'episode' && episode ? {
     <meta name="podcast:duration" content={episode.data.attributes.duration_in_mmss || ''} />
   </>
 )}
-  </>
-)}
 
 <!-- RSS Feed Discovery (complements Astro's existing feeds) -->
 <link rel="alternate" type="application/rss+xml" title={`${currentPodcast.name} RSS`} href={`https://feeds.transistor.fm/cro-cafe-${currentLang}`} />

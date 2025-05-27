@@ -5,6 +5,7 @@ import PageLayout from '~/layouts/PageLayout.astro';
 import Grid from '~/components/episode/Grid.astro';
 import LatestEpisodes from '~/components/widgets/LatestEpisodes.astro';
 import LanguageLatestEpisodes from '~/components/widgets/LanguageLatestEpisodes.astro';
+import HeroWithSearch from '~/components/widgets/HeroWithSearch.astro';
 import { SITE } from '~/config';
 
 type Episode = CollectionEntry<`${(typeof SITE.languages)[number]}-episodes`>;
@@ -89,19 +90,27 @@ const metadata = {
   currentLang={currentLang}
   availableLanguages={SITE.languages}
 >
+  <!-- Hero Section with Search -->
+  <HeroWithSearch
+    currentLang={currentLang}
+    showSearch={true}
+    title={`CRO.CAFE ${langNames[currentLang as keyof typeof langNames]}`}
+    subtitle={
+      currentLang === 'en' ? 'The leading podcast about Conversion Rate Optimization' :
+      currentLang === 'nl' ? 'De toonaangevende podcast over Conversion Rate Optimization' :
+      currentLang === 'de' ? 'Der führende Podcast über Conversion Rate Optimization' :
+      'El podcast líder sobre Conversion Rate Optimization'
+    }
+    tagline={
+      currentLang === 'en' ? 'DISCOVER EXPERT INSIGHTS' :
+      currentLang === 'nl' ? 'ONTDEK EXPERT INZICHTEN' :
+      currentLang === 'de' ? 'ENTDECKE EXPERTEN-EINBLICKE' :
+      'DESCUBRE INSIGHTS DE EXPERTOS'
+    }
+  />
+
   <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
     <section class="max-w-7xl mx-auto">
-      <header class="text-center mb-12">
-        <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
-          CRO.CAFE {langNames[currentLang as keyof typeof langNames]}
-        </h1>
-        <p class="text-xl text-gray-600 dark:text-gray-400">
-          {currentLang === 'en' && 'The podcast about Conversion Rate Optimization'}
-          {currentLang === 'nl' && 'De podcast over Conversion Rate Optimization'}
-          {currentLang === 'de' && 'Der Podcast über Conversion Rate Optimization'}
-          {currentLang === 'es' && 'El podcast sobre Conversion Rate Optimization'}
-        </p>
-      </header>
 
       <Grid
         episodes={latestEpisodes}

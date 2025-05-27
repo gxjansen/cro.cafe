@@ -1,0 +1,191 @@
+---
+import { Icon } from 'astro-icon/components';
+
+export interface Props {
+  currentLang: 'en' | 'de' | 'es' | 'nl';
+}
+
+const { currentLang } = Astro.props;
+
+// Multi-language search placeholders
+const searchPlaceholders = {
+  en: 'Search episodes...',
+  de: 'Episoden suchen...',
+  es: 'Buscar episodios...',
+  nl: 'Zoek afleveringen...'
+};
+
+const searchLabels = {
+  en: 'Search',
+  de: 'Suchen',
+  es: 'Buscar',
+  nl: 'Zoeken'
+};
+
+const currentPlaceholder = searchPlaceholders[currentLang];
+const searchLabel = searchLabels[currentLang];
+---
+
+<div class="header-search relative">
+  <!-- Search Button for Mobile -->
+  <button
+    id="header-search-toggle"
+    class="md:hidden p-2 text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-white"
+    aria-label="{searchLabel}"
+  >
+    <Icon name="tabler:search" class="w-5 h-5" />
+  </button>
+
+  <!-- Search Input for Desktop -->
+  <div class="hidden md:flex relative">
+    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+      <Icon name="tabler:search" class="h-4 w-4 text-gray-400" />
+    </div>
+    <input
+      type="search"
+      id="header-search-input"
+      class="block w-64 pl-9 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-primary focus:border-primary text-sm transition-colors duration-200"
+      placeholder="{currentPlaceholder}"
+      aria-label="{searchLabel}"
+      autocomplete="off"
+    />
+  </div>
+
+  <!-- Mobile Search Overlay -->
+  <div
+    id="mobile-search-overlay"
+    class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden md:hidden"
+  >
+    <div class="bg-white p-4 m-4 rounded-lg">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="text-lg font-semibold">
+          {currentLang === 'en' ? 'Search Episodes' : currentLang === 'de' ? 'Episoden Suchen' :
+          currentLang === 'es' ? 'Buscar Episodios' : 'Zoek Afleveringen'}
+        </h3>
+        <button
+          id="close-mobile-search"
+          class="p-2 text-gray-500 hover:text-gray-700"
+          aria-label="Close search"
+        >
+          <Icon name="tabler:x" class="w-5 h-5" />
+        </button>
+      </div>
+      <div class="relative">
+        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+          <Icon name="tabler:search" class="h-5 w-5 text-gray-400" />
+        </div>
+        <input
+          type="search"
+          id="mobile-search-input"
+          class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-primary focus:border-primary text-sm transition-colors duration-200"
+          placeholder="{currentPlaceholder}"
+          aria-label="{searchLabel}"
+          autocomplete="off"
+        />
+      </div>
+      <div id="mobile-search-results" class="mt-4 max-h-64 overflow-y-auto"></div>
+    </div>
+  </div>
+
+  <!-- Search Results Container (Desktop) -->
+  <div
+    id="header-search-results"
+    class="absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto hidden"
+  >
+    <!-- Results will be populated by PageFind -->
+  </div>
+</div>
+
+<!-- Loading indicator -->
+<div id="header-search-loading" class="hidden text-center py-2">
+  <div class="inline-flex items-center">
+    <div class="animate-spin rounded-full h-3 w-3 border-b-2 border-primary mr-2"></div>
+    <span class="text-xs text-gray-600">
+      {currentLang === 'en' ? 'Searching...' : currentLang === 'de' ? 'Suche läuft...' : currentLang
+      === 'es' ? 'Buscando...' : 'Zoeken...'}
+    </span>
+  </div>
+</div>
+
+<script>
+  // Initialize header search functionality
+  document.addEventListener('DOMContentLoaded', async () => {
+    try {
+      // Check if we're in production (PageFind available)
+      const isProduction =
+        window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
+
+      if (!isProduction) {
+        console.log('Development mode - search will be available after build');
+        showDevelopmentMessage();
+        return;
+      }
+
+      // Try to load PageFind (production only)
+      const script = document.createElement('script');
+      script.src = '/pagefind/pagefind.js';
+      script.onload = initializeSearch;
+      script.onerror = () => {
+        console.log('PageFind not available');
+        showDevelopmentMessage();
+      };
+      document.head.appendChild(script);
+    } catch (error) {
+      console.log('Search initialization failed:', error);
+      showDevelopmentMessage();
+    }
+  });
+
+  function showDevelopmentMessage() {
+    const searchInputs = document.querySelectorAll('#header-search-input, #mobile-search-input');
+    searchInputs.forEach((input) => {
+      if (input) {
+        input.placeholder = 'Search available after build...';
+        input.disabled = true;
+        input.style.opacity = '0.6';
+      }
+    });
+  }
+
+  function initializeSearch() {
+    // This will be called when PageFind is loaded in production
+    console.log('Search initialized');
+    // Add search functionality here when PageFind is available
+  }
+
+  // Mobile search toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('header-search-toggle');
+    const overlay = document.getElementById('mobile-search-overlay');
+    const closeButton = document.getElementById('close-mobile-search');
+
+    if (toggleButton && overlay) {
+      toggleButton.addEventListener('click', () => {
+        overlay.classList.remove('hidden');
+        const mobileInput = document.getElementById('mobile-search-input');
+        if (mobileInput) mobileInput.focus();
+      });
+    }
+
+    if (closeButton && overlay) {
+      closeButton.addEventListener('click', () => {
+        overlay.classList.add('hidden');
+      });
+    }
+
+    // Close on overlay click
+    if (overlay) {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+          overlay.classList.add('hidden');
+        }
+      });
+    }
+  });
+</script>
+
+<style>
+  .header-search input:disabled {
+    cursor: not-allowed;
+  }
+</style>

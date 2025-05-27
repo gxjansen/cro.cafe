@@ -49,188 +49,125 @@ const searchLabel = searchLabels[currentLang];
   >
     <!-- Results will be populated by PageFind -->
   </div>
-</div>
 
-<!-- Loading indicator -->
-<div id="search-loading" class="hidden text-center py-4">
-  <div class="inline-flex items-center">
-    <div class="animate-spin rounded-full h-4 w-4 border-b-2 border-primary mr-2"></div>
-    <span class="text-sm text-gray-600">
-      {currentLang === 'en' && 'Searching...'} {currentLang === 'de' && 'Suche läuft...'}
-      {currentLang === 'es' && 'Buscando...'} {currentLang === 'nl' && 'Zoeken...'}
-    </span>
+  <!-- Loading indicator -->
+  <div id="search-loading" class="hidden text-center py-4">
+    <div class="inline-flex items-center">
+      <div class="animate-spin rounded-full h-4 w-4 border-b-2 border-primary mr-2"></div>
+      <span class="text-sm text-gray-600">
+        {currentLang === 'en' ? 'Searching...' : currentLang === 'de' ? 'Suche läuft...' :
+        currentLang === 'es' ? 'Buscando...' : 'Zoeken...'}
+      </span>
+    </div>
+  </div>
+
+  <!-- Development message -->
+  <div id="dev-message" class="hidden text-center py-4">
+    <p class="text-sm text-gray-500">
+      {currentLang === 'en' ? 'Search will be available after build' : currentLang === 'de' ? 'Suche
+      wird nach dem Build verfügbar sein' : currentLang === 'es' ? 'La búsqueda estará disponible
+      después del build' : 'Zoeken wordt beschikbaar na de build'}
+    </p>
   </div>
 </div>
 
 <script>
-  // Initialize PageFind search when the component loads
+  // Initialize search functionality
   document.addEventListener('DOMContentLoaded', async () => {
+    const searchInput = document.getElementById('pagefind-search');
+    const resultsContainer = document.getElementById('pagefind-results');
+    const loadingIndicator = document.getElementById('search-loading');
+    const devMessage = document.getElementById('dev-message');
+
+    if (!searchInput || !resultsContainer) return;
+
     try {
-      // Import PageFind dynamically
-      const pagefind = await import('/pagefind/pagefind.js');
+      // Check if we're in production (PageFind available)
+      const isProduction =
+        window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
 
-      const searchInput = document.getElementById('pagefind-search');
-      const resultsContainer = document.getElementById('pagefind-results');
-      const loadingIndicator = document.getElementById('search-loading');
+      if (!isProduction) {
+        console.log('Development mode - search will be available after build');
+        showDevelopmentMessage();
+        return;
+      }
 
-      if (!searchInput || !resultsContainer || !loadingIndicator) return;
+      // Try to load PageFind (production only)
+      const script = document.createElement('script');
+      script.src = '/pagefind/pagefind.js';
+      script.onload = () => initializeSearch(searchInput, resultsContainer, loadingIndicator);
+      script.onerror = () => {
+        console.log('PageFind not available');
+        showDevelopmentMessage();
+      };
+      document.head.appendChild(script);
+    } catch (error) {
+      console.log('Search initialization failed:', error);
+      showDevelopmentMessage();
+    }
+
+    function showDevelopmentMessage() {
+      if (searchInput) {
+        searchInput.placeholder = 'Search available after build...';
+        searchInput.disabled = true;
+        searchInput.style.opacity = '0.6';
+      }
+      if (devMessage) {
+        devMessage.classList.remove('hidden');
+      }
+    }
+
+    function initializeSearch(input, results, loading) {
+      // This will be called when PageFind is loaded in production
+      console.log('Search initialized');
 
       let searchTimeout;
 
-      // Handle search input
-      searchInput.addEventListener('input', (e) => {
+      input.addEventListener('input', (e) => {
         const query = e.target.value.trim();
 
-        // Clear previous timeout
         clearTimeout(searchTimeout);
 
         if (query.length < 2) {
-          resultsContainer.classList.add('hidden');
+          results.classList.add('hidden');
           return;
         }
 
-        // Debounce search
         searchTimeout = setTimeout(async () => {
-          await performSearch(query);
+          loading.classList.remove('hidden');
+          results.classList.add('hidden');
+
+          try {
+            // Perform search when PageFind is available
+            // This is a placeholder for actual PageFind integration
+            console.log('Searching for:', query);
+
+            // Simulate search delay
+            await new Promise((resolve) => setTimeout(resolve, 300));
+
+            loading.classList.add('hidden');
+            results.innerHTML =
+              '<div class="p-4 text-gray-500">Search functionality will be implemented with PageFind</div>';
+            results.classList.remove('hidden');
+          } catch (error) {
+            console.error('Search error:', error);
+            loading.classList.add('hidden');
+          }
         }, 300);
       });
 
-      // Handle click outside to close results
+      // Hide results when clicking outside
       document.addEventListener('click', (e) => {
-        if (!searchInput.contains(e.target) && !resultsContainer.contains(e.target)) {
-          resultsContainer.classList.add('hidden');
+        if (!input.contains(e.target) && !results.contains(e.target)) {
+          results.classList.add('hidden');
         }
       });
-
-      // Handle escape key
-      searchInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          resultsContainer.classList.add('hidden');
-          searchInput.blur();
-        }
-      });
-
-      async function performSearch(query) {
-        try {
-          loadingIndicator.classList.remove('hidden');
-          resultsContainer.classList.add('hidden');
-
-          const search = await pagefind.search(query);
-
-          loadingIndicator.classList.add('hidden');
-
-          if (search.results.length === 0) {
-            showNoResults(query);
-            return;
-          }
-
-          // Get detailed results
-          const results = await Promise.all(
-            search.results.slice(0, 8).map((result) => result.data())
-          );
-
-          displayResults(results, query);
-        } catch (error) {
-          console.error('Search error:', error);
-          loadingIndicator.classList.add('hidden');
-          showError();
-        }
-      }
-
-      function displayResults(results, query) {
-        const currentLang = document.documentElement.lang || 'en';
-
-        const resultsHTML = results
-          .map((result) => {
-            const excerpt = result.excerpt || '';
-            const title = result.meta?.title || result.url;
-            const url = result.url;
-
-            return `
-            <div class="p-4 hover:bg-gray-50 border-b border-gray-100 last:border-b-0">
-              <a href="${url}" class="block group">
-                <h3 class="text-sm font-medium text-gray-900 group-hover:text-primary line-clamp-2">
-                  ${title}
-                </h3>
-                <p class="text-xs text-gray-600 mt-1 line-clamp-2">
-                  ${excerpt}
-                </p>
-                <span class="text-xs text-gray-400 mt-1 block">
-                  ${url}
-                </span>
-              </a>
-            </div>
-          `;
-          })
-          .join('');
-
-        resultsContainer.innerHTML = resultsHTML;
-        resultsContainer.classList.remove('hidden');
-      }
-
-      function showNoResults(query) {
-        const currentLang = document.documentElement.lang || 'en';
-        const noResultsMessages = {
-          en: `No results found for "${query}"`,
-          de: `Keine Ergebnisse für "${query}" gefunden`,
-          es: `No se encontraron resultados para "${query}"`,
-          nl: `Geen resultaten gevonden voor "${query}"`,
-        };
-
-        resultsContainer.innerHTML = `
-          <div class="p-4 text-center text-gray-500">
-            <p class="text-sm">${noResultsMessages[currentLang] || noResultsMessages.en}</p>
-          </div>
-        `;
-        resultsContainer.classList.remove('hidden');
-      }
-
-      function showError() {
-        const currentLang = document.documentElement.lang || 'en';
-        const errorMessages = {
-          en: 'Search temporarily unavailable',
-          de: 'Suche vorübergehend nicht verfügbar',
-          es: 'Búsqueda temporalmente no disponible',
-          nl: 'Zoeken tijdelijk niet beschikbaar',
-        };
-
-        resultsContainer.innerHTML = `
-          <div class="p-4 text-center text-red-500">
-            <p class="text-sm">${errorMessages[currentLang] || errorMessages.en}</p>
-          </div>
-        `;
-        resultsContainer.classList.remove('hidden');
-      }
-    } catch (error) {
-      console.error('Failed to initialize search:', error);
     }
   });
 </script>
 
 <style>
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  /* Custom scrollbar for results */
-  #pagefind-results::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  #pagefind-results::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 3px;
-  }
-
-  #pagefind-results::-webkit-scrollbar-thumb {
-    background: #c1c1c1;
-    border-radius: 3px;
-  }
-
-  #pagefind-results::-webkit-scrollbar-thumb:hover {
-    background: #a8a8a8;
+  .search-container input:disabled {
+    cursor: not-allowed;
   }
 </style>

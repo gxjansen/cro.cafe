@@ -5,6 +5,7 @@ import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
 import LanguageSwitcher from '~/components/common/LanguageSwitcher.astro';
 import Button from '~/components/ui/Button.astro';
+import HeaderSearch from '~/components/search/HeaderSearch.astro';
 
 import { getHomePermalink, trimSlash } from '~/utils/permalinks';
 import type { CallToAction } from '~/types';
@@ -140,7 +141,8 @@ const currentPath = propPath || `/${trimSlash(new URL(Astro.url).pathname)}`;
       ]}
     >
       <div class="items-center flex justify-between w-full md:w-auto">
-        <div class="flex items-center">
+        <div class="flex items-center space-x-4">
+          <HeaderSearch currentLang={currentLang} />
           <LanguageSwitcher currentLang={currentLang} currentPath={currentPath} />
         </div>
         <div class="flex items-center space-x-4 ml-8">
