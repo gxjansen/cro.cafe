@@ -95,6 +95,23 @@
     @apply badge bg-red-100 text-red-800 dark:bg-red-900/70 dark:text-red-100;
   }
 
+  /* Language badges */
+  .badge-en {
+    @apply badge bg-lang-en text-white font-bold;
+  }
+
+  .badge-nl {
+    @apply badge bg-lang-nl text-white font-bold;
+  }
+
+  .badge-de {
+    @apply badge bg-lang-de text-lang-de-text font-bold;
+  }
+
+  .badge-es {
+    @apply badge bg-lang-es text-lang-es-text font-bold;
+  }
+
   .alert {
     @apply p-4 mb-4 rounded-lg border text-sm flex items-start gap-2;
   }
