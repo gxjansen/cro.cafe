@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import Card from '../episode/Card.astro';
 
 // Props
@@ -8,6 +8,8 @@ interface Props {
   limit?: number;
   title?: string;
 }
+
+type EpisodeEntry = CollectionEntry<'en-episodes'> | CollectionEntry<'de-episodes'> | CollectionEntry<'es-episodes'> | CollectionEntry<'nl-episodes'>;
 
 const { 
   language, 
@@ -53,7 +55,7 @@ try {
   
   // Sort episodes by date and get the latest ones
   languageEpisodes = episodes
-    .sort((a, b) => {
+    .sort((a: EpisodeEntry, b: EpisodeEntry) => {
       const dateA = new Date(b.data.attributes.published_at);
       const dateB = new Date(a.data.attributes.published_at);
       return dateA.valueOf() - dateB.valueOf();
@@ -84,7 +86,7 @@ try {
     </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {languageEpisodes.length > 0 ? ( languageEpisodes.map((episode) => (
+      {languageEpisodes.length > 0 ? ( languageEpisodes.map((episode: EpisodeEntry) => (
       <Card episode="{episode}" />
       )) ) : (
       <div class="col-span-full text-center text-gray-500 dark:text-gray-400">

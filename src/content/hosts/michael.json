@@ -1,9 +1,9 @@
 {
   "id": "michael",
   "name": "Michael Witzenleiter",
-  "role": "CEO & Founder of Conversion Maker",
+  "role": "CEO und Gründer von Conversion Maker",
   "bio": "Michael ist CEO und Gründer von Conversion Maker, einem Technologie-Unternehmen für Conversion-Rate-Optimierung. Seit über 15 Jahren beschäftigt er sich mit Online Marketing – immer mit dem Fokus auf messbaren Ergebnissen.",
-  "image_url": "/src/assets/images/hosts/michael.jpeg",
+  "image_url": "/images/hosts/michael.jpeg",
   "social_links": [
     {
       "platform": "linkedin",
