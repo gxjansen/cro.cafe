@@ -1,0 +1,251 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+export interface Props {
+  episode?: CollectionEntry<'en-episodes' | 'de-episodes' | 'es-episodes' | 'nl-episodes'>;
+  podcast?: {
+    name: string;
+    description: string;
+    url: string;
+    image: string;
+    language: string;
+    category: string;
+    author: string;
+  };
+  type: 'episode' | 'podcast' | 'series';
+  currentLang: 'en' | 'de' | 'es' | 'nl';
+}
+
+const { episode, podcast, type, currentLang } = Astro.props;
+
+// Podcast series information by language
+const podcastInfo = {
+  en: {
+    name: 'CRO.CAFE Podcast',
+    description: 'The leading podcast for Conversion Rate Optimization professionals, featuring expert insights, case studies, and actionable strategies.',
+    url: 'https://www.cro.cafe/en',
+    image: 'https://www.cro.cafe/crocafe-logo.svg',
+    category: 'Business',
+    author: 'CRO.CAFE',
+    publisher: 'CRO.CAFE',
+  },
+  de: {
+    name: 'CRO.CAFE Podcast',
+    description: 'Der führende Podcast für Conversion Rate Optimization Profis mit Experteneinblicken, Fallstudien und umsetzbaren Strategien.',
+    url: 'https://www.cro.cafe/de',
+    image: 'https://www.cro.cafe/crocafe-logo.svg',
+    category: 'Business',
+    author: 'CRO.CAFE',
+    publisher: 'CRO.CAFE',
+  },
+  es: {
+    name: 'CRO.CAFE Podcast',
+    description: 'El podcast líder para profesionales de Optimización de Tasa de Conversión, con insights de expertos, casos de estudio y estrategias accionables.',
+    url: 'https://www.cro.cafe/es',
+    image: 'https://www.cro.cafe/crocafe-logo.svg',
+    category: 'Business',
+    author: 'CRO.CAFE',
+    publisher: 'CRO.CAFE',
+  },
+  nl: {
+    name: 'CRO.CAFE Podcast',
+    description: 'De toonaangevende podcast voor Conversion Rate Optimization professionals, met expert inzichten, case studies en uitvoerbare strategieën.',
+    url: 'https://www.cro.cafe/nl',
+    image: 'https://www.cro.cafe/crocafe-logo.svg',
+    category: 'Business',
+    author: 'CRO.CAFE',
+    publisher: 'CRO.CAFE',
+  },
+};
+
+const currentPodcastInfo = podcast || podcastInfo[currentLang];
+
+// Generate structured data based on type
+let structuredData = {};
+
+if (type === 'episode' && episode) {
+  const episodeData = episode.data;
+  const attributes = episodeData.attributes;
+  
+  // Extract guests information
+  const guests = episodeData.relationships?.guests || [];
+  
+  structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'PodcastEpisode',
+    '@id': `https://www.cro.cafe/${currentLang}/episodes/${attributes.slug}`,
+    name: attributes.title,
+    description: attributes.summary || attributes.description,
+    url: `https://www.cro.cafe/${currentLang}/episodes/${attributes.slug}`,
+    datePublished: attributes.published_at,
+    duration: attributes.duration_in_mmss,
+    episodeNumber: attributes.number,
+    seasonNumber: attributes.season,
+    image: attributes.image_url || attributes.local_image_url,
+    audio: {
+      '@type': 'AudioObject',
+      contentUrl: attributes.media_url,
+      duration: attributes.duration_in_mmss,
+      encodingFormat: 'audio/mpeg',
+    },
+    partOfSeries: {
+      '@type': 'PodcastSeries',
+      '@id': currentPodcastInfo.url,
+      name: currentPodcastInfo.name,
+      description: currentPodcastInfo.description,
+      url: currentPodcastInfo.url,
+      image: currentPodcastInfo.image,
+      author: {
+        '@type': 'Organization',
+        name: currentPodcastInfo.author,
+        url: currentPodcastInfo.url,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: currentPodcastInfo.publisher,
+        url: currentPodcastInfo.url,
+      },
+    },
+    keywords: attributes.keywords?.join(', ') || 'conversion rate optimization, CRO, digital marketing, analytics',
+    inLanguage: currentLang,
+    ...(guests.length > 0 && {
+      guest: guests.map(guest => ({
+        '@type': 'Person',
+        name: guest.id, // This would need to be resolved to actual guest name
+      })),
+    }),
+  };
+} else if (type === 'podcast' || type === 'series') {
+  structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'PodcastSeries',
+    '@id': currentPodcastInfo.url,
+    name: currentPodcastInfo.name,
+    description: currentPodcastInfo.description,
+    url: currentPodcastInfo.url,
+    image: currentPodcastInfo.image,
+    inLanguage: currentLang,
+    genre: currentPodcastInfo.category,
+    author: {
+      '@type': 'Organization',
+      name: currentPodcastInfo.author,
+      url: currentPodcastInfo.url,
+      logo: {
+        '@type': 'ImageObject',
+        url: currentPodcastInfo.image,
+      },
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: currentPodcastInfo.publisher,
+      url: currentPodcastInfo.url,
+      logo: {
+        '@type': 'ImageObject',
+        url: currentPodcastInfo.image,
+      },
+    },
+    potentialAction: {
+      '@type': 'SubscribeAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${currentPodcastInfo.url}/subscribe`,
+        actionPlatform: [
+          'https://schema.org/DesktopWebPlatform',
+          'https://schema.org/MobileWebPlatform',
+        ],
+      },
+    },
+  };
+}
+
+// Add breadcrumb structured data for episodes
+const breadcrumbData = type === 'episode' && episode ? {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: `https://www.cro.cafe/${currentLang}`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Episodes',
+      item: `https://www.cro.cafe/${currentLang}/episodes`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: episode.data.attributes.title,
+      item: `https://www.cro.cafe/${currentLang}/episodes/${episode.data.attributes.slug}`,
+    },
+  ],
+} : null;
+
+// Add FAQ structured data for common podcast questions
+const faqData = type === 'podcast' ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: currentLang === 'en' ? 'What is CRO.CAFE Podcast about?' :
+             currentLang === 'de' ? 'Worum geht es im CRO.CAFE Podcast?' :
+             currentLang === 'es' ? '¿De qué trata el Podcast CRO.CAFE?' :
+             'Waar gaat de CRO.CAFE Podcast over?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: currentPodcastInfo.description,
+      },
+    },
+    {
+      '@type': 'Question',
+      name: currentLang === 'en' ? 'How often are new episodes released?' :
+             currentLang === 'de' ? 'Wie oft werden neue Episoden veröffentlicht?' :
+             currentLang === 'es' ? '¿Con qué frecuencia se publican nuevos episodios?' :
+             'Hoe vaak worden nieuwe afleveringen uitgebracht?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: currentLang === 'en' ? 'New episodes are released weekly, featuring expert interviews and actionable CRO insights.' :
+               currentLang === 'de' ? 'Neue Episoden werden wöchentlich veröffentlicht, mit Experteninterviews und umsetzbaren CRO-Einblicken.' :
+               currentLang === 'es' ? 'Se publican nuevos episodios semanalmente, con entrevistas de expertos e insights accionables de CRO.' :
+               'Nieuwe afleveringen worden wekelijks uitgebracht, met expert interviews en uitvoerbare CRO inzichten.',
+      },
+    },
+  ],
+} : null;
+---
+
+<!-- Main Structured Data -->
+<script type="application/ld+json" set:html="{JSON.stringify(structuredData)}" />
+
+<!-- Breadcrumb Structured Data -->
+{breadcrumbData && (
+<script type="application/ld+json" set:html="{JSON.stringify(breadcrumbData)}" />
+)}
+
+<!-- FAQ Structured Data -->
+{faqData && (
+<script type="application/ld+json" set:html="{JSON.stringify(faqData)}" />
+)}
+
+<!-- Organization Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org',
+'@type': 'Organization', '@id': 'https://www.cro.cafe/#organization', name: 'CRO.CAFE', url:
+'https://www.cro.cafe', logo: { '@type': 'ImageObject', url:
+'https://www.cro.cafe/crocafe-logo.svg', width: 512, height: 512, }, description: 'Leading platform
+for Conversion Rate Optimization education, insights, and community.', sameAs: [
+'https://twitter.com/crocafe', 'https://linkedin.com/company/crocafe',
+'https://youtube.com/@crocafe', ], contactPoint: { '@type': 'ContactPoint', contactType: 'customer
+service', url: 'https://www.cro.cafe/contact', }, })} />
+
+<!-- Website Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org',
+'@type': 'WebSite', '@id': 'https://www.cro.cafe/#website', url: 'https://www.cro.cafe', name:
+'CRO.CAFE', description: 'The leading platform for Conversion Rate Optimization professionals.',
+publisher: { '@id': 'https://www.cro.cafe/#organization', }, potentialAction: { '@type':
+'SearchAction', target: { '@type': 'EntryPoint', urlTemplate:
+`https://www.cro.cafe/${currentLang}/search?q={search_term_string}`, }, 'query-input': 'required
+name=search_term_string', }, inLanguage: [currentLang], })} />

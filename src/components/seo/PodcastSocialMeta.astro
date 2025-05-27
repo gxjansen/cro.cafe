@@ -1,0 +1,209 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+export interface Props {
+  episode?: CollectionEntry<'en-episodes' | 'de-episodes' | 'es-episodes' | 'nl-episodes'>;
+  type: 'episode' | 'podcast' | 'homepage' | 'search';
+  currentLang: 'en' | 'de' | 'es' | 'nl';
+  title: string;
+  description: string;
+  image?: string;
+  canonicalUrl: string;
+}
+
+const { episode, type, currentLang, title, description, image, canonicalUrl } = Astro.props;
+
+// Default podcast images and branding
+const defaultImage = 'https://www.cro.cafe/crocafe-logo.svg';
+const podcastImage = image || defaultImage;
+
+// Generate episode-specific social content
+let socialTitle = title;
+let socialDescription = description;
+let socialImage = podcastImage;
+
+if (type === 'episode' && episode) {
+  const attributes = episode.data.attributes;
+  
+  // Enhanced episode title for social sharing
+  socialTitle = `🎧 ${attributes.title} | CRO.CAFE Podcast`;
+  
+  // Enhanced description with episode details
+  const episodeNumber = attributes.number ? `Episode ${attributes.number}` : '';
+  const duration = attributes.duration_in_mmss ? `${attributes.duration_in_mmss}` : '';
+  const seasonInfo = attributes.season ? `Season ${attributes.season}` : '';
+  
+  const episodeInfo = [episodeNumber, seasonInfo, duration].filter(Boolean).join(' • ');
+  
+  socialDescription = `${episodeInfo ? `${episodeInfo} | ` : ''}${attributes.summary || attributes.description}`;
+  
+  // Use episode-specific image if available
+  socialImage = attributes.image_url || attributes.local_image_url || podcastImage;
+}
+
+// Language-specific social content
+const socialContent = {
+  en: {
+    siteTitle: 'CRO.CAFE - Conversion Rate Optimization Podcast',
+    podcastTitle: '🎧 CRO.CAFE Podcast - Expert CRO Insights',
+    podcastDescription: 'The leading podcast for Conversion Rate Optimization professionals. Expert interviews, case studies, and actionable strategies.',
+    twitterHandle: '@crocafe',
+    keywords: 'conversion rate optimization, CRO, digital marketing, analytics, A/B testing, user experience',
+  },
+  de: {
+    siteTitle: 'CRO.CAFE - Conversion Rate Optimization Podcast',
+    podcastTitle: '🎧 CRO.CAFE Podcast - Experten CRO Einblicke',
+    podcastDescription: 'Der führende Podcast für Conversion Rate Optimization Profis. Experteninterviews, Fallstudien und umsetzbare Strategien.',
+    twitterHandle: '@crocafe',
+    keywords: 'conversion rate optimization, CRO, digital marketing, analytics, A/B testing, benutzererfahrung',
+  },
+  es: {
+    siteTitle: 'CRO.CAFE - Podcast de Optimización de Tasa de Conversión',
+    podcastTitle: '🎧 CRO.CAFE Podcast - Insights Expertos de CRO',
+    podcastDescription: 'El podcast líder para profesionales de Optimización de Tasa de Conversión. Entrevistas de expertos, casos de estudio y estrategias accionables.',
+    twitterHandle: '@crocafe',
+    keywords: 'optimización tasa conversión, CRO, marketing digital, analytics, pruebas A/B, experiencia usuario',
+  },
+  nl: {
+    siteTitle: 'CRO.CAFE - Conversion Rate Optimization Podcast',
+    podcastTitle: '🎧 CRO.CAFE Podcast - Expert CRO Inzichten',
+    podcastDescription: 'De toonaangevende podcast voor Conversion Rate Optimization professionals. Expert interviews, case studies en uitvoerbare strategieën.',
+    twitterHandle: '@crocafe',
+    keywords: 'conversion rate optimization, CRO, digital marketing, analytics, A/B testing, gebruikerservaring',
+  },
+};
+
+const currentContent = socialContent[currentLang];
+
+// Final social media content
+const finalTitle = type === 'podcast' ? currentContent.podcastTitle : socialTitle;
+const finalDescription = type === 'podcast' ? currentContent.podcastDescription : socialDescription;
+
+// Generate Twitter Card type based on content
+const twitterCardType = socialImage && socialImage !== defaultImage ? 'summary_large_image' : 'summary';
+
+// Audio-specific meta tags for episodes
+const audioMeta = type === 'episode' && episode ? {
+  audioUrl: episode.data.attributes.media_url,
+  duration: episode.data.attributes.duration_in_mmss,
+  episodeNumber: episode.data.attributes.number,
+  seasonNumber: episode.data.attributes.season,
+} : null;
+---
+
+<!-- Essential Meta Tags -->
+<meta name="description" content={finalDescription} />
+<meta name="keywords" content={currentContent.keywords} />
+<meta name="author" content="CRO.CAFE" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalUrl} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type === 'episode' ? 'music.song' : 'website'} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={finalTitle} />
+<meta property="og:description" content={finalDescription} />
+<meta property="og:image" content={socialImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={`${finalTitle} - CRO.CAFE Podcast`} />
+<meta property="og:site_name" content="CRO.CAFE" />
+<meta property="og:locale" content={currentLang === 'en' ? 'en_US' : currentLang === 'de' ? 'de_DE' : currentLang === 'es' ? 'es_ES' : 'nl_NL'} />
+
+<!-- Podcast-specific Open Graph -->
+{type === 'episode' && audioMeta && (
+  <>
+    <meta property="music:duration" content={audioMeta.duration} />
+    <meta property="music:musician" content="CRO.CAFE" />
+    <meta property="og:audio" content={audioMeta.audioUrl} />
+    <meta property="og:audio:type" content="audio/mpeg" />
+  </>
+)}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content={twitterCardType} />
+<meta name="twitter:url" content={canonicalUrl} />
+<meta name="twitter:title" content={finalTitle} />
+<meta name="twitter:description" content={finalDescription} />
+<meta name="twitter:image" content={socialImage} />
+<meta name="twitter:image:alt" content={`${finalTitle} - CRO.CAFE Podcast`} />
+<meta name="twitter:site" content={currentContent.twitterHandle} />
+<meta name="twitter:creator" content={currentContent.twitterHandle} />
+
+<!-- Podcast-specific Twitter meta -->
+{type === 'episode' && audioMeta && (
+  <>
+    <meta name="twitter:player" content={`https://www.cro.cafe/player/${episode?.data.attributes.slug}`} />
+    <meta name="twitter:player:width" content="480" />
+    <meta name="twitter:player:height" content="240" />
+  </>
+)}
+
+<!-- Apple Podcast meta -->
+{type === 'episode' && (
+  <>
+    <meta name="apple-itunes-app" content="app-id=YOUR_PODCAST_APP_ID" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  </>
+)}
+
+<!-- Spotify meta -->
+{type === 'episode' && episode && (
+  <meta property="spotify:episode_uri" content={`spotify:episode:${episode.data.attributes.slug}`} />
+)}
+
+<!-- Additional podcast platform meta -->
+<meta name="podcast:author" content="CRO.CAFE" />
+<meta name="podcast:category" content="Business" />
+<meta name="podcast:subcategory" content="Marketing" />
+<meta name="podcast:language" content={currentLang} />
+<meta name="podcast:explicit" content="false" />
+
+{type === 'episode' && audioMeta && (
+  <>
+    <meta name="podcast:episode" content={audioMeta.episodeNumber?.toString() || ''} />
+    <meta name="podcast:season" content={audioMeta.seasonNumber?.toString() || ''} />
+    <meta name="podcast:duration" content={audioMeta.duration || ''} />
+  </>
+)}
+
+<!-- RSS Feed Discovery -->
+<link rel="alternate" type="application/rss+xml" title={`CRO.CAFE Podcast (${currentLang.toUpperCase()})`} href={`https://www.cro.cafe/rss-${currentLang}.xml`} />
+
+<!-- Podcast Platform Links -->
+<link rel="alternate" type="application/json" title="Podcast JSON Feed" href={`https://www.cro.cafe/feed-${currentLang}.json`} />
+
+<!-- Preconnect to external domains for performance -->
+<link rel="preconnect" href="https://assets.transistor.fm" />
+<link rel="preconnect" href="https://media.transistor.fm" />
+
+<!-- DNS Prefetch for social platforms -->
+<link rel="dns-prefetch" href="//facebook.com" />
+<link rel="dns-prefetch" href="//twitter.com" />
+<link rel="dns-prefetch" href="//linkedin.com" />
+
+<!-- Language alternates for international SEO -->
+<link rel="alternate" hreflang="en" href={canonicalUrl.replace(`/${currentLang}/`, '/en/')} />
+<link rel="alternate" hreflang="de" href={canonicalUrl.replace(`/${currentLang}/`, '/de/')} />
+<link rel="alternate" hreflang="es" href={canonicalUrl.replace(`/${currentLang}/`, '/es/')} />
+<link rel="alternate" hreflang="nl" href={canonicalUrl.replace(`/${currentLang}/`, '/nl/')} />
+<link rel="alternate" hreflang="x-default" href={canonicalUrl.replace(`/${currentLang}/`, '/en/')} />
+
+<!-- Podcast-specific structured data in meta -->
+{type === 'episode' && episode && (
+  <>
+    <meta name="episode-title" content={episode.data.attributes.title} />
+    <meta name="episode-description" content={episode.data.attributes.summary || episode.data.attributes.description} />
+    <meta name="episode-publish-date" content={episode.data.attributes.published_at} />
+    <meta name="episode-duration" content={episode.data.attributes.duration_in_mmss || ''} />
+    <meta name="episode-audio-url" content={episode.data.attributes.media_url} />
+  </>
+)}
+
+<!-- Rich Snippets Support -->
+<meta name="application-name" content="CRO.CAFE" />
+<meta name="msapplication-TileColor" content="#2563eb" />
+<meta name="theme-color" content="#2563eb" />
