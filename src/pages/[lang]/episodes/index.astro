@@ -5,6 +5,7 @@ import PageLayout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Grid from '~/components/episode/Grid.astro';
 import { LanguageSchema } from '~/utils/component-validation';
+import { transformEpisodes } from '~/utils/episode-transformation';
 import type { z } from 'zod';
 export function getStaticPaths() {
   return [
@@ -19,8 +20,9 @@ const { lang } = Astro.params;
 const availableLanguages = ['en', 'de', 'es', 'nl'] as const;
 const currentLang = lang as z.infer<typeof LanguageSchema>;
 
-// Get episodes for current language
-const episodes = await getCollection(`${currentLang}-episodes`);
+// Get episodes for current language and transform them
+const rawEpisodes = await getCollection(`${currentLang}-episodes`);
+const episodes = transformEpisodes(rawEpisodes);
 
 const metadata = {
   title: 'Episodes - CRO.CAFE',

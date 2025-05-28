@@ -1,0 +1,102 @@
+---
+export const prerender = true;
+import { getCollection } from 'astro:content';
+import PageLayout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import EpisodeCard from '~/components/episode/Card.astro';
+import Pagination from '~/components/common/Pagination.astro';
+import { LanguageSchema } from '~/utils/component-validation';
+import { transformEpisodes } from '~/utils/episode-transformation';
+import { PAGINATION } from '~/config';
+import type { z } from 'zod';
+
+export async function getStaticPaths() {
+  const languages = ['en', 'de', 'es', 'nl'] as const;
+  const { EPISODES_PER_PAGE } = PAGINATION;
+  
+  const paths = [];
+  
+  for (const lang of languages) {
+    const episodes = await getCollection(`${lang}-episodes`);
+    const totalPages = Math.ceil(episodes.length / EPISODES_PER_PAGE);
+    
+    for (let i = 1; i <= totalPages; i++) {
+      paths.push({
+        params: { 
+          lang: lang,
+          page: i.toString() 
+        },
+        props: { 
+          currentPage: i, 
+          totalPages,
+          language: lang
+        },
+      });
+    }
+  }
+  
+  return paths;
+}
+
+const { lang, page } = Astro.params;
+const { currentPage, totalPages, language } = Astro.props;
+
+const availableLanguages = ['en', 'de', 'es', 'nl'] as const;
+const currentLang = lang as z.infer<typeof LanguageSchema>;
+
+// Get episodes for current language and transform them (same as working homepage)
+const rawEpisodes = await getCollection(`${currentLang}-episodes`);
+const episodes = transformEpisodes(rawEpisodes);
+
+// Sort episodes by date
+const sortedEpisodes = episodes
+  .sort((a, b) =>
+    new Date(b.data.attributes.published_at).valueOf() - 
+    new Date(a.data.attributes.published_at).valueOf()
+  );
+
+// Paginate episodes
+const { EPISODES_PER_PAGE } = PAGINATION;
+const startIndex = (currentPage - 1) * EPISODES_PER_PAGE;
+const endIndex = startIndex + EPISODES_PER_PAGE;
+const paginatedEpisodes = sortedEpisodes.slice(startIndex, endIndex);
+
+const metadata = {
+  title: `Episodes - Page ${currentPage} - CRO.CAFE`,
+  description: 'Listen to our podcast episodes about Conversion Rate Optimization, featuring expert insights and practical tips.',
+};
+---
+
+<PageLayout {...{ metadata, availableLanguages, currentLang }}>
+  <Hero
+    tagline="Episodes"
+    title="Latest Episodes"
+    subtitle="Listen to our podcast episodes about Conversion Rate Optimization, featuring expert insights and practical tips."
+  />
+
+  {/* Episodes Section - Using exact same pattern as working Spanish homepage */}
+  <section class="py-12">
+    <div class="container mx-auto">
+      {paginatedEpisodes.length > 0 ? (
+        <>
+          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-8">
+            {paginatedEpisodes.map((episode) => (
+              <EpisodeCard episode={episode} />
+            ))}
+          </div>
+          <div class="text-center">
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              basePath={`/${currentLang}/episodes`}
+            />
+          </div>
+        </>
+      ) : (
+        <div class="text-center py-8">
+          <p class="text-gray-600 dark:text-gray-400">No episodes available</p>
+        </div>
+      )}
+    </div>
+  </section>
+</PageLayout>

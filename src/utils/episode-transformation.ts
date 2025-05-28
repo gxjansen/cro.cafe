@@ -11,7 +11,12 @@ export function transformEpisode(episode: CollectionEntry<EpisodeCollection>): E
   return {
     id: episode.id,
     collection: episode.collection as EpisodeCollection,
-    data: episode.data as EpisodeData,
+    data: {
+      type: 'episode' as const,
+      id: episode.data.id,
+      attributes: episode.data.attributes,
+      relationships: episode.data.relationships,
+    },
     render: episode.render,
   };
 }
