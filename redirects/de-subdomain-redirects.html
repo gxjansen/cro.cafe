@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRO.CAFE - Deutsche Inhalte wurden verschoben</title>
+    <script>
+      // JavaScript redirects for de.cro.cafe
+      const path = window.location.pathname;
+      const baseUrl = 'https://www.cro.cafe';
+
+      // Episode redirects: /podcast/[slug] -> /de/episodes/[slug]
+      if (path.startsWith('/podcast/')) {
+        const slug = path.replace('/podcast/', '');
+        window.location.replace(`${baseUrl}/de/episodes/${slug}`);
+      }
+      // Guest redirects: /guest/[slug] -> /de/guests/[slug]
+      else if (path.startsWith('/guest/')) {
+        const slug = path.replace('/guest/', '');
+        window.location.replace(`${baseUrl}/de/guests/${slug}`);
+      }
+      // Subscribe redirects: /subscribe/[platform] -> /de/subscribe/
+      else if (path.startsWith('/subscribe/')) {
+        window.location.replace(`${baseUrl}/de/subscribe/`);
+      }
+      // Static page redirects
+      else if (path === '/about') {
+        window.location.replace(`${baseUrl}/de/about/`);
+      } else if (path === '/privacy-policy') {
+        window.location.replace(`${baseUrl}/de/privacy/`);
+      } else if (path === '/abonnieren') {
+        window.location.replace(`${baseUrl}/de/subscribe/`);
+      } else if (path === '/podcast') {
+        window.location.replace(`${baseUrl}/de/episodes/`);
+      } else if (path === '/search') {
+        window.location.replace(`${baseUrl}/search/`);
+      }
+      // Default: redirect to German homepage
+      else {
+        window.location.replace(`${baseUrl}/de/`);
+      }
+    </script>
+    <meta http-equiv="refresh" content="0; url=https://www.cro.cafe/de/" />
+  </head>
+  <body>
+    <h1>Deutsche CRO.CAFE Inhalte wurden verschoben</h1>
+    <p>
+      Die deutschen Inhalte von CRO.CAFE wurden nach
+      <a href="https://www.cro.cafe/de/">www.cro.cafe/de/</a> verschoben
+    </p>
+    <p>Sie werden automatisch weitergeleitet...</p>
+    <p>
+      <a href="https://www.cro.cafe/de/"
+        >Klicken Sie hier, falls Sie nicht automatisch weitergeleitet werden</a
+      >
+    </p>
+  </body>
+</html>

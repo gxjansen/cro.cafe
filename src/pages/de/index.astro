@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import PageLayout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Grid from '~/components/episode/Grid.astro';
+import EpisodeCard from '~/components/episode/Card.astro';
 import PopularEpisodes from '~/components/episode/PopularEpisodes.astro';
 import HostsSection from '~/components/host/HostsSection.astro';
 import GuestsSection from '~/components/guest/GuestsSection.astro';
@@ -61,19 +61,25 @@ const germanShowId = '28592';
   {/* Latest Episodes */}
   <section class="py-12">
     <div class="container mx-auto">
-      <h2 class="text-3xl font-bold mb-8 text-center">{translations.latestEpisodes}</h2>
-      <Grid
-        episodes={episodes}
-        limit={6}
-        showId={germanShowId}
-        orderBy="published_at"
-        orderDirection="desc"
-        button={{
-          show: true,
-          text: "Alle Episoden anzeigen",
-          link: "/de/episodes"
-        }}
-      />
+      <h2 class="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-white">{translations.latestEpisodes}</h2>
+      {episodes.length > 0 ? (
+        <>
+          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-8">
+            {episodes.slice(0, 6).map((episode) => (
+              <EpisodeCard episode={episode} />
+            ))}
+          </div>
+          <div class="text-center">
+            <a href="/de/episodes" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors">
+              Alle Episoden anzeigen
+            </a>
+          </div>
+        </>
+      ) : (
+        <div class="text-center py-8">
+          <p class="text-gray-600 dark:text-gray-400">Keine Episoden verfügbar</p>
+        </div>
+      )}
     </div>
   </section>
 </PageLayout>

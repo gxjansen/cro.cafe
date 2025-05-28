@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRO.CAFE - Contenido en español trasladado</title>
+    <script>
+      // JavaScript redirects for es.cro.cafe
+      const path = window.location.pathname;
+      const baseUrl = 'https://www.cro.cafe';
+
+      // Episode redirects: /podcast/[slug] -> /es/episodes/[slug]
+      if (path.startsWith('/podcast/')) {
+        const slug = path.replace('/podcast/', '');
+        window.location.replace(`${baseUrl}/es/episodes/${slug}`);
+      }
+      // Guest redirects: /invitados/[slug] -> /es/guests/[slug]
+      else if (path.startsWith('/invitados/')) {
+        const slug = path.replace('/invitados/', '');
+        window.location.replace(`${baseUrl}/es/guests/${slug}`);
+      }
+      // Subscribe redirects: /suscribete/[platform] -> /es/subscribe/
+      else if (path.startsWith('/suscribete/')) {
+        window.location.replace(`${baseUrl}/es/subscribe/`);
+      }
+      // Static page redirects
+      else if (path === '/about') {
+        window.location.replace(`${baseUrl}/es/about/`);
+      } else if (path === '/privacy-policy') {
+        window.location.replace(`${baseUrl}/es/privacy/`);
+      } else if (path === '/suscribirse') {
+        window.location.replace(`${baseUrl}/es/subscribe/`);
+      } else if (path === '/podcast') {
+        window.location.replace(`${baseUrl}/es/episodes/`);
+      } else if (path === '/search') {
+        window.location.replace(`${baseUrl}/search/`);
+      }
+      // Default: redirect to Spanish homepage
+      else {
+        window.location.replace(`${baseUrl}/es/`);
+      }
+    </script>
+    <meta http-equiv="refresh" content="0; url=https://www.cro.cafe/es/" />
+  </head>
+  <body>
+    <h1>Contenido en español de CRO.CAFE trasladado</h1>
+    <p>
+      El contenido en español de CRO.CAFE se ha trasladado a
+      <a href="https://www.cro.cafe/es/">www.cro.cafe/es/</a>
+    </p>
+    <p>Serás redirigido automáticamente...</p>
+    <p>
+      <a href="https://www.cro.cafe/es/">Haz clic aquí si no eres redirigido automáticamente</a>
+    </p>
+  </body>
+</html>

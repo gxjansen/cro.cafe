@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRO.CAFE - Nederlandse content verhuisd</title>
+    <script>
+      // JavaScript redirects for nl.cro.cafe
+      const path = window.location.pathname;
+      const baseUrl = 'https://www.cro.cafe';
+
+      // Episode redirects: /podcast/[slug] -> /nl/episodes/[slug]
+      if (path.startsWith('/podcast/')) {
+        const slug = path.replace('/podcast/', '');
+        window.location.replace(`${baseUrl}/nl/episodes/${slug}`);
+      }
+      // Guest redirects: /gast/[slug] -> /nl/guests/[slug]
+      else if (path.startsWith('/gast/')) {
+        const slug = path.replace('/gast/', '');
+        window.location.replace(`${baseUrl}/nl/guests/${slug}`);
+      }
+      // Subscribe redirects: /subscribe/[platform] -> /nl/subscribe/
+      else if (path.startsWith('/subscribe/')) {
+        window.location.replace(`${baseUrl}/nl/subscribe/`);
+      }
+      // Static page redirects
+      else if (path === '/about') {
+        window.location.replace(`${baseUrl}/nl/about/`);
+      } else if (path === '/privacy-policy') {
+        window.location.replace(`${baseUrl}/nl/privacy/`);
+      } else if (path === '/abonneren') {
+        window.location.replace(`${baseUrl}/nl/subscribe/`);
+      } else if (path === '/podcast') {
+        window.location.replace(`${baseUrl}/nl/episodes/`);
+      } else if (path === '/search') {
+        window.location.replace(`${baseUrl}/search/`);
+      }
+      // Default: redirect to Dutch homepage
+      else {
+        window.location.replace(`${baseUrl}/nl/`);
+      }
+    </script>
+    <meta http-equiv="refresh" content="0; url=https://www.cro.cafe/nl/" />
+  </head>
+  <body>
+    <h1>Nederlandse CRO.CAFE content is verhuisd</h1>
+    <p>
+      De Nederlandse content van CRO.CAFE is verhuisd naar
+      <a href="https://www.cro.cafe/nl/">www.cro.cafe/nl/</a>
+    </p>
+    <p>Je wordt automatisch doorgestuurd...</p>
+    <p>
+      <a href="https://www.cro.cafe/nl/">Klik hier als je niet automatisch wordt doorgestuurd</a>
+    </p>
+  </body>
+</html>
