@@ -26,11 +26,8 @@ export const onRequest = defineMiddleware(async (context, next) => {
     return redirect(`/en/episodes/${slug}`, 301);
   }
 
-  // Guest redirects: /guest/[slug] -> /en/guests/[slug]
-  if (pathname.startsWith('/guest/')) {
-    const slug = pathname.replace('/guest/', '');
-    return redirect(`/en/guests/${slug}`, 301);
-  }
+  // Guest redirects: /guest/[slug] -> /guest/[slug] (no redirect needed for new structure)
+  // This section can be removed as /guest/[slug] is the correct new structure
 
   // Subscribe platform redirects: /subscribe/[platform] -> /en/subscribe/
   if (pathname.startsWith('/subscribe/')) {
