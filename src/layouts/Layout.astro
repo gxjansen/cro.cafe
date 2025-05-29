@@ -2,6 +2,7 @@
 import CustomStyles from '~/components/CustomStyles.astro';
 import Favicons from '~/components/Favicons.astro';
 import PodcastSEOEnhancer from '~/components/seo/PodcastSEOEnhancer.astro';
+import ContrastValidator from '~/components/common/ContrastValidator.astro';
 
 // Import CSS
 import '~/assets/styles/tailwind.css';
@@ -181,6 +182,7 @@ const {
   </head>
 
   <body class="antialiased text-default bg-page tracking-tight">
+    <ContrastValidator />
     <slot />
   </body>
 </html>

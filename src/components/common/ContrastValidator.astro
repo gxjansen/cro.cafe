@@ -1,0 +1,206 @@
+---
+/**
+* ContrastValidator component for runtime color contrast validation
+* This component validates theme colors and reports any accessibility issues
+*/
+
+// Only run validation in development
+const isDev = import.meta.env.DEV;
+---
+
+{isDev && (
+<script>
+  // Inline contrast validation for development
+  function validateThemeContrast() {
+    // Define our theme colors from tailwind.config.js
+    const colors = {
+      primary: '#ff676d',
+      secondary: '#95c3c0',
+      accent: '#ff676d',
+      'accent-dark': '#7bfff8',
+      default: '#1f2937',
+      muted: '#6b7280',
+      heading: '#111827',
+      page: '#ffffff',
+      'lang-en': '#cf142b',
+      'lang-nl': '#21468B',
+      'lang-de': '#000000',
+      'lang-de-text': '#FFD700',
+      'lang-es': '#F1BF00',
+      'lang-es-text': '#AA151B',
+    };
+
+    // WCAG contrast ratio requirements
+    const CONTRAST_RATIOS = {
+      AA_NORMAL: 4.5,
+      AA_LARGE: 3,
+      AAA_NORMAL: 7,
+      AAA_LARGE: 4.5,
+    };
+
+    function hexToRgb(hex) {
+      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      return result
+        ? {
+            r: parseInt(result[1], 16),
+            g: parseInt(result[2], 16),
+            b: parseInt(result[3], 16),
+          }
+        : null;
+    }
+
+    function getLuminance(r, g, b) {
+      const [rs, gs, bs] = [r, g, b].map((c) => {
+        c = c / 255;
+        return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+      });
+      return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+    }
+
+    function getContrastRatio(color1, color2) {
+      const rgb1 = hexToRgb(color1);
+      const rgb2 = hexToRgb(color2);
+
+      if (!rgb1 || !rgb2) {
+        throw new Error('Invalid color format');
+      }
+
+      const lum1 = getLuminance(rgb1.r, rgb1.g, rgb1.b);
+      const lum2 = getLuminance(rgb2.r, rgb2.g, rgb2.b);
+
+      const brightest = Math.max(lum1, lum2);
+      const darkest = Math.min(lum1, lum2);
+
+      return (brightest + 0.05) / (darkest + 0.05);
+    }
+
+    const issues = [];
+
+    // Test common color combinations
+    const testCombinations = [
+      { fg: colors.primary, bg: colors.page, name: 'Primary on White' },
+      { fg: colors.secondary, bg: colors.page, name: 'Secondary on White' },
+      { fg: colors.accent, bg: colors.page, name: 'Accent on White' },
+      { fg: colors.default, bg: colors.page, name: 'Default on White' },
+      { fg: colors.heading, bg: colors.page, name: 'Heading on White' },
+      { fg: colors.muted, bg: colors.page, name: 'Muted on White' },
+      { fg: colors.page, bg: colors.default, name: 'White on Default' },
+      { fg: colors.page, bg: colors.heading, name: 'White on Heading' },
+      { fg: colors['lang-de-text'], bg: colors['lang-de'], name: 'German Badge' },
+      { fg: colors['lang-es-text'], bg: colors['lang-es'], name: 'Spanish Badge' },
+      { fg: colors.page, bg: colors['lang-en'], name: 'English Badge' },
+      { fg: colors.page, bg: colors['lang-nl'], name: 'Dutch Badge' },
+    ];
+
+    testCombinations.forEach(({ fg, bg, name }) => {
+      const ratio = getContrastRatio(fg, bg);
+
+      if (ratio < CONTRAST_RATIOS.AA_NORMAL) {
+        issues.push({
+          combination: name,
+          ratio: Math.round(ratio * 100) / 100,
+          grade: 'FAIL',
+          required: CONTRAST_RATIOS.AA_NORMAL,
+        });
+      }
+    });
+
+    return {
+      valid: issues.length === 0,
+      issues,
+    };
+  }
+
+  // Run validation when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runValidation);
+  } else {
+    runValidation();
+  }
+
+  function runValidation() {
+    try {
+      const contrastReport = validateThemeContrast();
+
+      if (contrastReport.valid) {
+        console.log('✅ All theme colors meet WCAG 2.1 AA contrast requirements');
+      } else {
+        console.warn('⚠️ Color contrast issues detected:');
+        contrastReport.issues.forEach((issue) => {
+          console.warn(`❌ ${issue.combination}: ${issue.ratio}:1 (requires ${issue.required}:1)`);
+        });
+
+        // Create a visual indicator for developers
+        const indicator = document.createElement('div');
+        indicator.style.cssText = `
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #ff4444;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 12px;
+            z-index: 9999;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            cursor: pointer;
+          `;
+        indicator.textContent = `⚠️ ${contrastReport.issues.length} contrast issues`;
+        indicator.title = 'Click to see details in console';
+        indicator.onclick = () => {
+          console.table(contrastReport.issues);
+        };
+        document.body.appendChild(indicator);
+
+        // Auto-remove after 10 seconds
+        setTimeout(() => {
+          if (indicator.parentNode) {
+            indicator.parentNode.removeChild(indicator);
+          }
+        }, 10000);
+      }
+    } catch (error) {
+      console.error('Error validating color contrast:', error);
+    }
+  }
+</script>
+)}
+
+<!-- Accessibility styles for proper contrast -->
+<style>
+  /* Ensure focus indicators have sufficient contrast */
+  :global(:focus-visible) {
+    outline: 2px solid #ff676d !important;
+    outline-offset: 2px !important;
+  }
+
+  /* Dark mode focus indicators */
+  :global(.dark :focus-visible) {
+    outline-color: #7bfff8 !important;
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    :global(*) {
+      border-color: ButtonText !important;
+    }
+
+    :global(a) {
+      text-decoration: underline !important;
+    }
+
+    :global(button) {
+      border: 1px solid ButtonText !important;
+    }
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    :global(*) {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>

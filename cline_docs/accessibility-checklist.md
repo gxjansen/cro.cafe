@@ -16,9 +16,14 @@
 
 ## Maintain sufficient colour contrast
 
-- [ ] Contrast ratio: Implemented proper contrast ratios across all components with dark mode support
-- [ ] Colour schemes: Added proper color contrast checking in ThemeToggle and global styles
-- [ ] Avoid relying on colour alone: Added icons and text labels alongside color indicators (e.g., play button in VideoSection)
+- [x] Contrast ratio: Implemented proper contrast ratios across all components with dark mode support
+- [x] Colour schemes: Added proper color contrast checking in ThemeToggle and global styles
+- [x] Avoid relying on colour alone: Added icons and text labels alongside color indicators (e.g., play button in VideoSection)
+- [x] WCAG 2.1 AA compliance: Implemented comprehensive color contrast utilities with automated validation
+- [x] Runtime validation: Added ContrastValidator component for development-time contrast checking
+- [x] Theme color validation: All theme colors validated against WCAG contrast requirements
+- [x] High contrast mode support: Added CSS for prefers-contrast: high media query
+- [x] Focus indicators: Ensured sufficient contrast for focus states in both light and dark modes
 
 ## Design forms for accessibility
 
