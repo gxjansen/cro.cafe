@@ -91,23 +91,7 @@ const metadata = {
   availableLanguages={SITE.languages}
 >
   <!-- Hero Section with Search -->
-  <HeroWithSearch
-    currentLang={currentLang}
-    showSearch={true}
-    title={`CRO.CAFE ${langNames[currentLang as keyof typeof langNames]}`}
-    subtitle={
-      currentLang === 'en' ? 'The leading podcast about Conversion Rate Optimization' :
-      currentLang === 'nl' ? 'De toonaangevende podcast over Conversion Rate Optimization' :
-      currentLang === 'de' ? 'Der führende Podcast über Conversion Rate Optimization' :
-      'El podcast líder sobre Conversion Rate Optimization'
-    }
-    tagline={
-      currentLang === 'en' ? 'DISCOVER EXPERT INSIGHTS' :
-      currentLang === 'nl' ? 'ONTDEK EXPERT INZICHTEN' :
-      currentLang === 'de' ? 'ENTDECKE EXPERTEN-EINBLICKE' :
-      'DESCUBRE INSIGHTS DE EXPERTOS'
-    }
-  />
+  <!-- Removed HeroWithSearch component to eliminate search box -->
 
   <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
     <section class="max-w-7xl mx-auto">
