@@ -30,6 +30,19 @@ Fixed issue where episode links on guest detail pages (like `/guest/abi-hough`) 
 
 **Status**: Fully operational host pages at `/hosts` and `/host/[slug]` with profile information, bio, and shows hosted. Successfully tested with Guido's profile showing 48 Dutch episodes hosted. All HostCard components across the site now link to host detail pages.
 
+## Fix host pages missing header and footer ✅ COMPLETED
+
+Fixed issue where host pages like `/host/guido` were missing the default header and footer components that are present on guest pages like `/guest/julia-rumpf`.
+
+**Root Cause**: The [`HostLayout.astro`](src/layouts/HostLayout.astro:40) was using the basic [`Layout.astro`](src/layouts/Layout.astro:1) component directly, while [`GuestLayout.astro`](src/layouts/GuestLayout.astro:39) correctly uses [`PageLayout.astro`](src/layouts/PageLayout.astro:40) which includes the [`Header`](src/components/widgets/Header.astro:1) and [`Footer`](src/components/widgets/Footer.astro:1) components.
+
+**Solution**: Updated [`HostLayout.astro`](src/layouts/HostLayout.astro:40) to use [`PageLayout`](src/layouts/PageLayout.astro:40) instead of the basic [`Layout`](src/layouts/Layout.astro:1) component.
+
+**Verification**: Tested both `/host/guido` and `/host/michael` pages - both now correctly display:
+- ✅ Header with CRO.CAFE logo, search bar, language selector, and theme toggle
+- ✅ Footer with navigation links, platform links, and copyright notice
+- ✅ All existing functionality preserved (profile info, bio, shows hosted)
+
 ## Show total # episodes and # guests on homepage
 
 ## Popular Episodes ✅ COMPLETED

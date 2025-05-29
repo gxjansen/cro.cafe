@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import Layout from './Layout.astro';
+import PageLayout from './PageLayout.astro';
 import type { ShowSummary } from '../utils/hosts';
 
 interface Props {
@@ -37,34 +37,35 @@ const structuredData = {
 const ogImage = new URL(`/og/host/${encodeURIComponent(name)}.png`, Astro.site);
 ---
 
-<Layout
+<PageLayout
   metadata={{
     title: title,
     description: description,
     canonicalUrl: canonical.toString(),
-    image: ogImage.toString()
+    image: ogImage.toString(),
+    type: 'profile'
   }}
   currentLang="en"
   availableLanguages={['en', 'nl', 'de', 'es']}
 >
   <Fragment slot="head">
     <!-- Structured Data -->
-    <script type="application/ld+json" set:html="{JSON.stringify(structuredData)}" />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
     <!-- Additional Meta Tags -->
     <meta property="og:type" content="profile" />
-    <meta property="profile:first_name" content={name.split(' ')[0]} /> <meta
-    property="profile:last_name" content={name.split(' ').slice(1).join(' ')} />
+    <meta property="profile:first_name" content={name.split(' ')[0]} />
+    <meta property="profile:last_name" content={name.split(' ').slice(1).join(' ')} />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{title}" />
-    <meta name="twitter:description" content="{description}" />
-    <meta name="twitter:image" content="{ogImage.toString()}" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage.toString()} />
 
     <!-- Canonical -->
-    <link rel="canonical" href="{canonical.toString()}" />
+    <link rel="canonical" href={canonical.toString()} />
   </Fragment>
 
   <slot />
-</Layout>
+</PageLayout>

@@ -74,7 +74,7 @@ export const getFooterData = (lang: string) => ({
       links: [
         { text: 'Episodes', href: withLang('/episodes', lang) },
         { text: 'Guests', href: withLang('/guests', lang) },
-        { text: 'Topics', href: withLang('/topics', lang) },
+        // { text: 'Topics', href: withLang('/topics', lang) },
       ],
     },
     {
