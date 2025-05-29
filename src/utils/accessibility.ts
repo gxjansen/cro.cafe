@@ -320,9 +320,9 @@ export function validateThemeContrast(): {
 } {
   // Define our theme colors from tailwind.config.js
   const colors = {
-    primary: '#ff676d',
-    secondary: '#95c3c0',
-    accent: '#ff676d',
+    primary: '#d63447',
+    secondary: '#3d7b74',
+    accent: '#d63447',
     'accent-dark': '#7bfff8',
     default: '#1f2937',
     muted: '#6b7280',
@@ -332,8 +332,8 @@ export function validateThemeContrast(): {
     'lang-nl': '#21468B',
     'lang-de': '#000000',
     'lang-de-text': '#FFD700',
-    'lang-es': '#F1BF00',
-    'lang-es-text': '#AA151B',
+    'lang-es': '#D4A000',
+    'lang-es-text': '#7A0000',
   };
 
   const backgrounds = ['#ffffff', '#1f2937', '#111827']; // white, gray-800, gray-900

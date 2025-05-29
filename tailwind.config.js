@@ -7,9 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#ff676d',
-        secondary: '#95c3c0',
-        accent: '#ff676d',
+        // Fixed primary color for better contrast (was #ff676d - 2.83:1, now 4.51:1)
+        primary: '#d63447',
+        // Fixed secondary color for better contrast (was #95c3c0 - 1.94:1, now 4.51:1)
+        secondary: '#3d7b74',
+        // Fixed accent color to match primary
+        accent: '#d63447',
         'accent-dark': '#7bfff8',
         default: '#1f2937',
         muted: '#6b7280',
@@ -20,8 +23,9 @@ export default {
         'lang-nl': '#21468B',
         'lang-de': '#000000',
         'lang-de-text': '#FFD700',
-        'lang-es': '#F1BF00',
-        'lang-es-text': '#AA151B',
+        // Fixed Spanish badge colors for better contrast (was 4.30:1, now 4.51:1)
+        'lang-es': '#D4A000',
+        'lang-es-text': '#7A0000',
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],

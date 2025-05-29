@@ -9,6 +9,12 @@
 
 # Next tasks:
 
+## Fix guest detail page episode links ✅ COMPLETED
+
+Fixed issue where episode links on guest detail pages (like `/guest/abi-hough`) were leading to `/en/episodes/undefined` instead of the actual episode pages. The problem was in `src/pages/guest/[slug].astro` line 139 where it was trying to access `episode.slug` instead of `episode.data.attributes.slug`.
+
+**Status**: Episode links now correctly navigate to proper episode pages (e.g., `/en/episodes/abi`).
+
 ## Show total # episodes and # guests on homepage
 
 ## Popular Episodes ✅ COMPLETED

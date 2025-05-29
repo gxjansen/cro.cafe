@@ -92,12 +92,12 @@ describe('Color Contrast Utilities', () => {
 
   describe('Theme Color Compliance', () => {
     it('should ensure primary color has sufficient contrast on white', () => {
-      const ratio = getContrastRatio('#ff676d', '#ffffff');
+      const ratio = getContrastRatio('#d63447', '#ffffff');
       expect(ratio).toBeGreaterThanOrEqual(CONTRAST_RATIOS.AA_NORMAL);
     });
 
     it('should ensure secondary color has sufficient contrast on white', () => {
-      const ratio = getContrastRatio('#95c3c0', '#ffffff');
+      const ratio = getContrastRatio('#3d7b74', '#ffffff');
       expect(ratio).toBeGreaterThanOrEqual(CONTRAST_RATIOS.AA_NORMAL);
     });
 
@@ -117,7 +117,7 @@ describe('Color Contrast Utilities', () => {
       expect(germanRatio).toBeGreaterThanOrEqual(CONTRAST_RATIOS.AA_NORMAL);
 
       // Spanish badge: red text on yellow
-      const spanishRatio = getContrastRatio('#AA151B', '#F1BF00');
+      const spanishRatio = getContrastRatio('#7A0000', '#D4A000');
       expect(spanishRatio).toBeGreaterThanOrEqual(CONTRAST_RATIOS.AA_NORMAL);
 
       // English badge: white text on red

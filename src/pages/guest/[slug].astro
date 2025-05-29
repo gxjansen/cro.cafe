@@ -136,7 +136,7 @@ const image = await getGuestImage(image_url ? `/images/guests/${image_url}` : '/
               {episodes.map((episode) => (
                 <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
                   <a 
-                    href={`/${language}/episodes/${episode.slug}`}
+                    href={`/${language}/episodes/${episode.data.attributes.slug}`}
                     class="block hover:text-accent transition-colors"
                   >
                     <h3 class="font-medium text-gray-900 dark:text-white mb-2">{episode.data.attributes.title}</h3>
