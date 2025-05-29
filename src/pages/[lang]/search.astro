@@ -15,7 +15,7 @@ export interface Props {
   lang: 'en' | 'de' | 'es' | 'nl';
 }
 
-const { lang } = Astro.props;
+const { lang } = Astro.params;
 
 // Multi-language metadata
 const metadata = {
