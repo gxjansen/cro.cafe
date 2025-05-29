@@ -118,7 +118,7 @@ if (guests.length === 0 && episode.data.attributes.description) {
     console.log('Found guest mentions in description:', guestMatches);
     
     // Extract guest names from matches
-    const guestNames = guestMatches.map(match => {
+    const guestNames = guestMatches.map((match: string) => {
       const name = match.replace(/Guest\s*\d*\s*:\s*/, '').trim();
       return name;
     });
@@ -127,7 +127,7 @@ if (guests.length === 0 && episode.data.attributes.description) {
     
     // Find guests by name
     const guestsByName = allGuests.filter((guest: Guest) =>
-      guestNames.some(name =>
+      guestNames.some((name: string) =>
         guest.data.name.toLowerCase() === name.toLowerCase() ||
         name.toLowerCase().includes(guest.data.name.toLowerCase()) ||
         guest.data.name.toLowerCase().includes(name.toLowerCase())

@@ -1,9 +1,15 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import SearchComponent from '~/components/search/SearchComponent.astro';
-import { getStaticPaths } from '~/utils/blog';
 
-export { getStaticPaths };
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'de' } },
+    { params: { lang: 'es' } },
+    { params: { lang: 'nl' } }
+  ];
+}
 
 export interface Props {
   lang: 'en' | 'de' | 'es' | 'nl';
@@ -39,14 +45,19 @@ const metadata = {
   },
 };
 
-const currentMetadata = metadata[lang];
+const currentMetadata = metadata[lang as keyof typeof metadata];
+const availableLanguages = ['en', 'nl', 'de', 'es'] as ('en' | 'nl' | 'de' | 'es')[];
 ---
 
-<Layout metadata={{
-  title: currentMetadata.title,
-  description: currentMetadata.description,
-  canonicalUrl: `https://www.cro.cafe/${lang}/search`,
-}}>
+<Layout
+  metadata={{
+    title: currentMetadata.title,
+    description: currentMetadata.description,
+    canonicalUrl: `https://www.cro.cafe/${lang}/search`,
+  }}
+  currentLang={lang}
+  availableLanguages={availableLanguages}
+>
   <main class="py-12 lg:py-20">
     <div class="mx-auto max-w-6xl px-4 sm:px-6">
       <!-- Header Section -->
@@ -151,7 +162,7 @@ const currentMetadata = metadata[lang];
     topicButtons.forEach(button => {
       button.addEventListener('click', () => {
         const topic = button.getAttribute('data-topic');
-        const searchInput = document.getElementById('pagefind-search');
+        const searchInput = document.getElementById('pagefind-search') as HTMLInputElement;
         
         if (searchInput && topic) {
           searchInput.value = topic;
@@ -180,3 +191,4 @@ const currentMetadata = metadata[lang];
     background-color: #f9fafb;
   }
 </style>
+export const prerender = true;

@@ -22,8 +22,8 @@ const searchLabels = {
   nl: 'Zoeken'
 };
 
-const currentPlaceholder = searchPlaceholders[currentLang];
-const searchLabel = searchLabels[currentLang];
+const currentPlaceholder = searchPlaceholders[currentLang as keyof typeof searchPlaceholders] || searchPlaceholders.en;
+const searchLabel = searchLabels[currentLang as keyof typeof searchLabels] || searchLabels.en;
 ---
 
 <div class="header-search relative">
@@ -139,7 +139,7 @@ const searchLabel = searchLabels[currentLang];
   function showDevelopmentMessage() {
     const searchInputs = document.querySelectorAll('#header-search-input, #mobile-search-input');
     searchInputs.forEach((input) => {
-      if (input) {
+      if (input && input instanceof HTMLInputElement) {
         input.placeholder = 'Search available after build...';
         input.disabled = true;
         input.style.opacity = '0.6';

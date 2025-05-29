@@ -35,7 +35,7 @@ const sortedGuests = sortGuestsByName(guests);
     {sortedGuests.length > 0 ? (
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       {sortedGuests.map((guest) => (
-      <GuestCard guest="{guest.data}" showBio="{showBio}" />
+      <GuestCard guest={guest.data} showBio={showBio} />
       ))}
     </div>
     ) : (

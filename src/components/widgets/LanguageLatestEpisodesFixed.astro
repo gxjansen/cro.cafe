@@ -86,7 +86,7 @@ try {
     </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {languageEpisodes.length > 0 ? ( languageEpisodes.map((episode) => /* prettier-ignore */
+      {languageEpisodes.length > 0 ? ( languageEpisodes.map((episode: any) => /* prettier-ignore */
       <Card episode={episode} />
       ) ) : (
       <div class="col-span-full text-center text-gray-500 dark:text-gray-400">

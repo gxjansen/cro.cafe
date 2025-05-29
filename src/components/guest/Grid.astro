@@ -14,7 +14,6 @@ interface Props {
 const { language, filterByEpisodes = true, showBio = true } = Astro.props;
 
 // Get translations for the current language
-const t = getTranslations(language);
 
 // Get all guests for the specified language
 const guests = await getGuestsByLanguage(language, filterByEpisodes);
@@ -27,7 +26,7 @@ const sortedGuests = sortGuestsByName(guests);
   {sortedGuests.length > 0 ? (
   <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
     {sortedGuests.map((guest) => (
-    <GuestCard guest="{guest.data}" showBio="{showBio}" />
+    <GuestCard guest={guest.data} showBio={showBio} />
     ))}
   </div>
   ) : (

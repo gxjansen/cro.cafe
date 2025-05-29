@@ -83,20 +83,22 @@ const image = await getHostImage(image_url, 'card');
   </div>
 </div>
 
-<script>
+<script is:inline>
   document.addEventListener('DOMContentLoaded', function() {
     const hostCards = document.querySelectorAll('.host-card[data-href]');
     hostCards.forEach(card => {
       card.addEventListener('click', function(e) {
         // Don't navigate if clicking on a link
-        if (e.target.closest('a')) return;
-        window.location.href = this.dataset.href;
+        if (e.target && e.target.closest && e.target.closest('a')) return;
+        const href = this.dataset.href;
+        if (href) window.location.href = href;
       });
       
       card.addEventListener('keydown', function(e) {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          window.location.href = this.dataset.href;
+          const href = this.dataset.href;
+          if (href) window.location.href = href;
         }
       });
     });

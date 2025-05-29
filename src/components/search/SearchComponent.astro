@@ -23,8 +23,8 @@ const searchLabels = {
   nl: 'Zoeken'
 };
 
-const currentPlaceholder = placeholder || searchPlaceholders[currentLang];
-const searchLabel = searchLabels[currentLang];
+const currentPlaceholder = placeholder || searchPlaceholders[currentLang as keyof typeof searchPlaceholders];
+const searchLabel = searchLabels[currentLang as keyof typeof searchLabels];
 ---
 
 <div class="search-container relative w-full max-w-2xl mx-auto">
@@ -64,9 +64,10 @@ const searchLabel = searchLabels[currentLang];
   <!-- Development message -->
   <div id="dev-message" class="hidden text-center py-4">
     <p class="text-sm text-gray-500">
-      {currentLang === 'en' ? 'Search will be available after build' : currentLang === 'de' ? 'Suche
-      wird nach dem Build verfügbar sein' : currentLang === 'es' ? 'La búsqueda estará disponible
-      después del build' : 'Zoeken wordt beschikbaar na de build'}
+      {currentLang === 'en' ? 'Search will be available after build' :
+       currentLang === 'de' ? 'Suche wird nach dem Build verfügbar sein' :
+       currentLang === 'es' ? 'La búsqueda estará disponible después del build' :
+       'Zoeken wordt beschikbaar na de build'}
     </p>
   </div>
 </div>
@@ -107,7 +108,7 @@ const searchLabel = searchLabels[currentLang];
     }
 
     function showDevelopmentMessage() {
-      if (searchInput) {
+      if (searchInput && searchInput instanceof HTMLInputElement) {
         searchInput.placeholder = 'Search available after build...';
         searchInput.disabled = true;
         searchInput.style.opacity = '0.6';
@@ -117,13 +118,13 @@ const searchLabel = searchLabels[currentLang];
       }
     }
 
-    function initializeSearch(input, results, loading) {
+    function initializeSearch(input: any, results: any, loading: any) {
       // This will be called when PageFind is loaded in production
       console.log('Search initialized');
 
-      let searchTimeout;
+      let searchTimeout: any;
 
-      input.addEventListener('input', (e) => {
+      input.addEventListener('input', (e: any) => {
         const query = e.target.value.trim();
 
         clearTimeout(searchTimeout);

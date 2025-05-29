@@ -25,7 +25,7 @@ const metadata = {
   },
 };
 
-const availableLanguages = ['en', 'nl', 'de', 'es'] as const;
+const availableLanguages = ['en', 'nl', 'de', 'es'] as ('en' | 'nl' | 'de' | 'es')[];
 ---
 
 <Layout metadata={metadata} currentLang={currentLang} availableLanguages={availableLanguages}>

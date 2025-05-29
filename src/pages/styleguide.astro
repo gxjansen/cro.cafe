@@ -13,7 +13,7 @@ const metadata = {
   description: 'A comprehensive guide to our website design principles, components, and best practices.',
 };
 
-const availableLanguages = ['en', 'nl', 'de', 'es'] as const;
+const availableLanguages = ['en', 'nl', 'de', 'es'] as ('en' | 'nl' | 'de' | 'es')[];
 
 const sections = [
   { id: 'colors', title: 'Colors', icon: 'tabler:palette' },
