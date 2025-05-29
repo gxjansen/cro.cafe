@@ -141,7 +141,7 @@ const image = await getGuestImage(image_url ? `/images/guests/${image_url}` : '/
                   >
                     <h3 class="font-medium text-gray-900 dark:text-white mb-2">{episode.data.attributes.title}</h3>
                     {episode.data.attributes.description && (
-                      <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">{episode.data.attributes.description}</p>
+                      <div class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2" set:html={episode.data.attributes.description}></div>
                     )}
                   </a>
                 </div>
