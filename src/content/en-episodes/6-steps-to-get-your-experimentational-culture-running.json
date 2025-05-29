@@ -33,7 +33,9 @@
     "type": "full",
     "email_notifications": null,
     "guests": [],
-    "clean_description": "In this episode I talk with Marianne Stjernvall from the TUI Group. Marianne did a presentation last week at Digital Elite Live about the 6 steps to create an experimental culture. I definitely wanted to follow up with her on that so here we are!"
+    "clean_description": "In this episode I talk with Marianne Stjernvall from the TUI Group. Marianne did a presentation last week at Digital Elite Live about the 6 steps to create an experimental culture. I definitely wanted to follow up with her on that so here we are!",
+    "local_image_url": "/images/episodes/en/6-steps-to-get-your-experimentational-culture-running.webp",
+    "transistor_image_url": "https://img.transistor.fm/oy8b6IjwpaUDXFuLvwWKw8c4243bbiG_7VWS1YFvJWQ/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9kNTdj/OGQwNzUyYjBlMjZh/ZWI4ZDY2ZGMzMzhm/NmQwMS5qcGVn.webp"
   },
   "relationships": {
     "show": {
