@@ -1,0 +1,70 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Layout from './Layout.astro';
+import type { ShowSummary } from '../utils/hosts';
+
+interface Props {
+  host: CollectionEntry<'hosts'>;
+  shows: ShowSummary[];
+}
+
+const { host, shows } = Astro.props;
+const { name, role, bio } = host.data;
+
+// SEO Meta
+const title = `${name} - ${role} | CRO.CAFE Host`;
+const description = `Learn about ${name}, ${role} and host of CRO.CAFE podcast. ${bio.substring(0, 150)}...`;
+const canonical = new URL(`/host/${host.data.id}`, Astro.site);
+
+// Structured Data
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": name,
+  "jobTitle": role,
+  "description": bio,
+  "image": host.data.image_url,
+  "sameAs": host.data.social_links?.map((link: any) => link.url) || [],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "CRO.CAFE",
+    "url": "https://www.cro.cafe"
+  },
+  "url": canonical.toString()
+};
+
+// Open Graph image
+const ogImage = new URL(`/og/host/${encodeURIComponent(name)}.png`, Astro.site);
+---
+
+<Layout
+  metadata={{
+    title: title,
+    description: description,
+    canonicalUrl: canonical.toString(),
+    image: ogImage.toString()
+  }}
+  currentLang="en"
+  availableLanguages={['en', 'nl', 'de', 'es']}
+>
+  <Fragment slot="head">
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html="{JSON.stringify(structuredData)}" />
+
+    <!-- Additional Meta Tags -->
+    <meta property="og:type" content="profile" />
+    <meta property="profile:first_name" content={name.split(' ')[0]} /> <meta
+    property="profile:last_name" content={name.split(' ').slice(1).join(' ')} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{title}" />
+    <meta name="twitter:description" content="{description}" />
+    <meta name="twitter:image" content="{ogImage.toString()}" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="{canonical.toString()}" />
+  </Fragment>
+
+  <slot />
+</Layout>

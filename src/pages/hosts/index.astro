@@ -1,0 +1,125 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HostCard from '../../components/host/HostCard.astro';
+import { getAllHosts, sortHostsByName } from '../../utils/hosts';
+
+const hosts = sortHostsByName(await getAllHosts());
+
+// SEO Meta
+const title = "Podcast Hosts | CRO.CAFE";
+const description = "Meet the hosts of CRO.CAFE podcast - experts in conversion rate optimization, user experience, and digital marketing from around the world.";
+const canonical = new URL('/hosts', Astro.site);
+
+// Structured Data
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "CRO.CAFE Podcast Hosts",
+  "description": description,
+  "url": canonical.toString(),
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": hosts.map((host, index) => ({
+      "@type": "Person",
+      "position": index + 1,
+      "name": host.data.name,
+      "jobTitle": host.data.role,
+      "description": host.data.bio,
+      "image": host.data.image_url,
+      "url": new URL(`/host/${host.data.id}`, Astro.site).toString()
+    }))
+  }
+};
+---
+
+<Layout
+  metadata={{
+    title: title,
+    description: description,
+    canonicalUrl: canonical.toString()
+  }}
+  currentLang="en"
+  availableLanguages={['en', 'nl', 'de', 'es']}
+>
+  <Fragment slot="head">
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    
+    <!-- Canonical -->
+    <link rel="canonical" href={canonical.toString()} />
+  </Fragment>
+
+  <main class="container mx-auto px-4 py-8">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Meet Our Hosts
+      </h1>
+      <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+        The experts behind CRO.CAFE podcast - sharing insights on conversion rate optimization, 
+        user experience, and digital marketing across multiple languages and regions.
+      </p>
+    </div>
+
+    <!-- Hosts Grid -->
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2 max-w-4xl mx-auto">
+      {hosts.map((host) => (
+        <a 
+          href={`/host/${host.data.id}`} 
+          class="block transform hover:scale-105 transition-transform duration-200"
+          aria-label={`View ${host.data.name}'s profile`}
+        >
+          <HostCard host={host.data} showBio={true} />
+        </a>
+      ))}
+    </div>
+
+    <!-- Call to Action -->
+    <div class="mt-16 text-center">
+      <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-8">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          Listen to Our Shows
+        </h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-6">
+          Explore episodes from our hosts across different languages and regions.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a 
+            href="/en/episodes" 
+            class="bg-accent hover:bg-accent-dark text-white px-6 py-3 rounded-lg font-medium transition-colors"
+          >
+            English Episodes
+          </a>
+          <a 
+            href="/nl/episodes" 
+            class="bg-accent hover:bg-accent-dark text-white px-6 py-3 rounded-lg font-medium transition-colors"
+          >
+            Dutch Episodes
+          </a>
+          <a 
+            href="/de/episodes" 
+            class="bg-accent hover:bg-accent-dark text-white px-6 py-3 rounded-lg font-medium transition-colors"
+          >
+            German Episodes
+          </a>
+          <a 
+            href="/es/episodes" 
+            class="bg-accent hover:bg-accent-dark text-white px-6 py-3 rounded-lg font-medium transition-colors"
+          >
+            Spanish Episodes
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

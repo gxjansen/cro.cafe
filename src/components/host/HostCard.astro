@@ -25,7 +25,13 @@ const { name, role, bio, image_url, social_links } = host;
 const image = await getHostImage(image_url, 'card');
 ---
 
-<div class="host-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden p-4 hover:shadow-lg transition-all duration-200">
+<div 
+  class="host-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden p-4 hover:shadow-lg hover:scale-105 transition-all duration-200 cursor-pointer"
+  data-href={`/host/${host.id}`}
+  tabindex="0"
+  role="button"
+  aria-label={`View ${name}'s profile`}
+>
   <div class="flex items-start gap-4">
     <div class="flex-shrink-0">
       <div class="block rounded-full">
@@ -51,7 +57,11 @@ const image = await getHostImage(image_url, 'card');
               href={url}
               target="_blank"
               rel="noopener noreferrer"
-              class="text-gray-600 dark:text-gray-400 hover:text-accent dark:hover:text-accent transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 dark:focus:ring-offset-gray-900 rounded"
+              class={`text-gray-600 dark:text-gray-400 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-gray-900 rounded ${
+                platform === 'linkedin'
+                  ? 'hover:text-[#0077B5] dark:hover:text-[#0077B5] focus:ring-[#0077B5]'
+                  : 'hover:text-accent dark:hover:text-accent focus:ring-accent'
+              }`}
               title={`Follow ${name} on ${platform}`}
               aria-label={`Follow ${name} on ${platform} (opens in new tab)`}
             >
@@ -72,3 +82,23 @@ const image = await getHostImage(image_url, 'card');
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const hostCards = document.querySelectorAll('.host-card[data-href]');
+    hostCards.forEach(card => {
+      card.addEventListener('click', function(e) {
+        // Don't navigate if clicking on a link
+        if (e.target.closest('a')) return;
+        window.location.href = this.dataset.href;
+      });
+      
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          window.location.href = this.dataset.href;
+        }
+      });
+    });
+  });
+</script>
