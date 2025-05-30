@@ -1,17 +1,24 @@
 ---
 interface Props {
-  currentLang: 'en' | 'de' | 'es' | 'nl';
+  currentLang: 'en' | 'de' | 'es' | 'nl' | 'international';
   currentPath?: string;
 }
 
 const { currentLang, currentPath = '' } = Astro.props;
 
+// Determine if we're on the international homepage
+const isInternationalPage = currentPath === '/' || currentPath === '';
+
 const languages = [
+  { code: 'international', label: 'International' },
   { code: 'en', label: 'English' },
   { code: 'de', label: 'Deutsch' },
   { code: 'es', label: 'Español' },
   { code: 'nl', label: 'Nederlands' },
 ];
+
+// Determine the actual current selection
+const actualCurrentLang = isInternationalPage ? 'international' : currentLang;
 
 // Remove leading language code if present
 const pathWithoutLang = currentPath.replace(/^\/(en|de|es|nl)\//, '/');
@@ -22,10 +29,10 @@ const pathWithoutLang = currentPath.replace(/^\/(en|de|es|nl)\//, '/');
   <select
     class="select-language"
     aria-label="Select language"
-    value={currentLang}
+    value={actualCurrentLang}
   >
     {languages.map(({ code, label }) => (
-      <option value={code} selected={code === currentLang}>
+      <option value={code} selected={code === actualCurrentLang}>
         {label}
       </option>
     ))}
@@ -35,8 +42,14 @@ const pathWithoutLang = currentPath.replace(/^\/(en|de|es|nl)\//, '/');
 <script define:vars={{ pathWithoutLang }} is:inline>
 document.querySelector('.select-language').addEventListener('change', (e) => {
   const code = e.target.value;
-  // Always redirect to the root page of the selected language
-  window.location.href = `/${code}/`;
+  
+  if (code === 'international') {
+    // Redirect to the international homepage
+    window.location.href = '/';
+  } else {
+    // Redirect to the language-specific page
+    window.location.href = `/${code}/`;
+  }
 });
 </script>
 

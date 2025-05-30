@@ -1,4 +1,4 @@
-export type Language = 'en' | 'nl' | 'de' | 'es';
+export type Language = 'en' | 'nl' | 'de' | 'es' | 'international';
 
 export interface Item {
   title: string;

@@ -18,7 +18,7 @@ const layoutProps = {
 };
 
 const headerProps = {
-  ...getHeaderData(currentLang),
+  ...getHeaderData(currentLang === 'international' ? 'en' : currentLang),
   isSticky: true,
   showToggleTheme: true,
   currentLang,
@@ -31,7 +31,7 @@ const headerProps = {
 };
 
 const footerProps = {
-  ...getFooterData(currentLang),
+  ...getFooterData(currentLang === 'international' ? 'en' : currentLang),
   currentLang,
   secondaryLinks: [], // Add empty array for secondary links
 };

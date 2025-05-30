@@ -18,7 +18,7 @@ const langPrefix = collection ? collection.split('-')[0] : 'en';
 const currentLang = (langPrefix as Language);
 
 // Get translations
-const t = getTranslations(currentLang);
+const t = getTranslations(currentLang as "en" | "nl" | "de" | "es");
 
 // Prepare metadata
 const metadata = {
