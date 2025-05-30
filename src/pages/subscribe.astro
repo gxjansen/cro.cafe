@@ -80,5 +80,85 @@ const sectionTitles = {
     </div>
   </section>
 
-  <!-- Additional sections for other languages (de, nl, es) would follow here -->
+  <section id="de" class="py-16 bg-gray-50 dark:bg-slate-800">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center text-primary-950 dark:text-white">{sectionTitles.de}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+        {dePlatforms.map((platform: Platform) => (
+          <a
+            href={platform.data.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-4 p-4 rounded-lg bg-white dark:bg-slate-800 hover:bg-primary-50 dark:hover:bg-primary-900 border border-primary-200 dark:border-primary-800 transition-all duration-200 hover:scale-105 hover:shadow-md"
+          >
+            <div class="w-12 h-12 flex items-center justify-center relative">
+              <img
+                src={`/images/platforms/${platform.id === 'podcast-republic' ? 'podcast-republic' : platform.id}.png`}
+                alt={platform.data.name}
+                width={48}
+                height={48}
+                class="object-contain"
+              />
+            </div>
+            <span class="text-lg font-medium text-primary-950 dark:text-white">{platform.data.name}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="nl" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center text-primary-950 dark:text-white">{sectionTitles.nl}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+        {nlPlatforms.map((platform: Platform) => (
+          <a
+            href={platform.data.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-4 p-4 rounded-lg bg-white dark:bg-slate-800 hover:bg-primary-50 dark:hover:bg-primary-900 border border-primary-200 dark:border-primary-800 transition-all duration-200 hover:scale-105 hover:shadow-md"
+          >
+            <div class="w-12 h-12 flex items-center justify-center relative">
+              <img
+                src={`/images/platforms/${platform.id === 'podcast-republic' ? 'podcast-republic' : platform.id}.png`}
+                alt={platform.data.name}
+                width={48}
+                height={48}
+                class="object-contain"
+              />
+            </div>
+            <span class="text-lg font-medium text-primary-950 dark:text-white">{platform.data.name}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="es" class="py-16 bg-gray-50 dark:bg-slate-800">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center text-primary-950 dark:text-white">{sectionTitles.es}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+        {esPlatforms.map((platform: Platform) => (
+          <a
+            href={platform.data.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-4 p-4 rounded-lg bg-white dark:bg-slate-800 hover:bg-primary-50 dark:hover:bg-primary-900 border border-primary-200 dark:border-primary-800 transition-all duration-200 hover:scale-105 hover:shadow-md"
+          >
+            <div class="w-12 h-12 flex items-center justify-center relative">
+              <img
+                src={`/images/platforms/${platform.id === 'podcast-republic' ? 'podcast-republic' : platform.id}.png`}
+                alt={platform.data.name}
+                width={48}
+                height={48}
+                class="object-contain"
+              />
+            </div>
+            <span class="text-lg font-medium text-primary-950 dark:text-white">{platform.data.name}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
 </PageLayout>
