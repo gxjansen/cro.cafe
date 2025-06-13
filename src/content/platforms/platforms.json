@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Spotify",
+    "urls": {
+      "en": "https://open.spotify.com/show/5TrJo8SegrE2haCeMDLB3M",
+      "nl": "https://open.spotify.com/show/2LwkAHzzFB19pNIgtL4fBs",
+      "de": "https://open.spotify.com/show/3uhdVQeyB94u666zuzh6Lo",
+      "es": "https://open.spotify.com/show/4x6PY0PeoxoR8hgOSZwVBF"
+    },
+    "logoUrl": "",
+    "displayOrder": 2,
+    "isActive": true,
+    "lastModified": "2025-06-13 10:09:29+00:00"
+  }
+]
